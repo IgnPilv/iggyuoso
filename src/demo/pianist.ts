@@ -3,6 +3,7 @@ import type { TimedSession } from '../engine/timedSession';
 import { computerKeys } from '../midi/computerKeys';
 import { midi } from '../midi/input';
 import { isBlack } from '../music/notes';
+import type { DemoAsk } from './demo';
 import type { FindSession, SequenceSession } from '../scoring/untimed';
 
 // The demo pianist plays exercises through the same MIDI path as a real keyboard. It plays mostly
@@ -52,6 +53,30 @@ export class Pianist {
         if (i === 6 && s.expected.length >= 9) return; // missed
       }
       this.playNote(note, g.time + s.opts.latencyMs + offset - now, g.durMs * 0.9);
+    });
+  }
+
+  /** Answers an ear, quiz or build question; slips on the second one. */
+  answer(a: DemoAsk) {
+    const slip = a.index === 1;
+    const t = a.waitMs + 700;
+    if (a.choose && a.correct !== undefined && a.choices) {
+      const pick = slip ? (a.correct + 1) % a.choices : a.correct;
+      this.at(t + 500, () => a.choose!(pick));
+      return;
+    }
+    const keys = a.keys ?? [];
+    if (!keys.length) return;
+    if (a.together) {
+      if (slip) this.playNote(nextWhite(keys[keys.length - 1]), t, 250);
+      this.playChord(keys, t + (slip ? 600 : 0), 900);
+      return;
+    }
+    let at = t;
+    keys.forEach((k, i) => {
+      if (slip && i === keys.length - 1) { this.playNote(nextWhite(k), at, 250); at += 450; if (keys.length === 1) return; }
+      this.playNote(k, at, 300);
+      at += 450;
     });
   }
 

@@ -122,3 +122,13 @@ never copied pages). Start small, adapt as we go.
   through `midi.inject(..., 'Computer keyboard')`, which also shows as an input. While it is on,
   on-screen keys show their letter (not in "find the key" drills) and setup offers a standard
   88-key piano instead of pressing the ends. The demo ignores real typing.
+- 2026-10-23: Year 1 engine kinds for the mastery curriculum (shapes agreed with the curriculum
+  thread, described in `content/README.md`): `tap` (rhythm only, any key; parsed into a timed
+  exercise with `pitchMatch: any`), `ear` (note, interval by key or by name, chord quality,
+  scale degree with cadence and resolution, melody echo, higher/lower; first answer counts; missed
+  items weigh +2, clean answers −0.5, never the same item twice running), `quiz` (buttons or
+  play, optional staff picture and sound), `build` (chord held together, interval any order,
+  scale in order; score = clean first tries; "Show me" spoils the first try). Scoring in
+  `src/engine/drills.ts`, theory in `src/music/theory.ts`. They have the same view toggle; answer
+  keys are never lit while a question sounds. The demo has a scene for each, using content
+  exercises when there are some and built-in samples until then.

@@ -27,6 +27,34 @@ several lessons.
   `pitchMatch: pitchClass` (any octave counts). Shown as falling notes; `display: staff` starts on
   sheet music instead (the player can switch).
 
+- `tap`: rhythm only, scored like `timed` but any key counts. `tempo`, `meter`, `countIn`, and
+  `rhythm` written as a note string with `x` for every note: `"x:q x:q x:h | x:e x:e x:q r:q"`.
+- `ear`: the app plays, the player answers. `cadence: C` (key of a I-IV-V-I played before each
+  question; leave out for none), `questions` (default 10), and `items`, a mixed pool. Missed
+  items come back more often. The first key (or button) is the answer. Item types:
+  - `{ type: note, pool: [C4, E4, G4] }`: press the key you heard.
+  - `{ type: interval, pool: [M3, P5], from: C4, direction: up|down|both, answer: play|name, together: true }`:
+    two notes (`together` = at once); press the second note, or (`answer: name`) pick the name.
+    Intervals: P1 m2 M2 m3 M3 P4 TT P5 m6 M6 m7 M7 P8.
+  - `{ type: chord, pool: [maj, min], root: C4 }`: name the chord with buttons
+    (maj min dim aug sus2 sus4 dom7 maj7 min7).
+  - `{ type: degree, key: C, pool: [1, 3, 5] }`: after the cadence in `key` (C, G, Am...),
+    press the degree you heard (any octave); then it resolves to the tonic (`resolve: false` to skip).
+    Degrees 1 to 7, also `b3`, `#4`.
+  - `{ type: melody, notes: "C4 D4 E4", plays: 2 }`: play the phrase back; each note's first key
+    counts. `plays` = how many times it can be heard.
+  - `{ type: compare, pool: [higher, lower, same], range: [C4, C5] }`: two notes, answer with buttons.
+- `quiz`: `questions`, each `{ ask, choices: [...], correct: <index from 0> }` or
+  `{ ask, play: "G4" }` (answer by playing these notes in order). Optional `staff: "G4:w"`
+  (a picture, with `clef`) and `sound: "C4:q E4:q"` (a play button). `shuffle: true` mixes the order.
+- `build`: untimed, `tasks`, each one of `chord: Cm` (held together unless `together: false`),
+  `interval: M3` + `from: D4` (+ `direction: down`), `scale: G major` (+ `octaves`), or
+  `notes: "C4 E4 G4"`; optional `octave` (default 4), `order: listed|any`, `ask` (own wording).
+  Scales: major, minor, harmonic minor, melodic minor, major/minor pentatonic, chromatic.
+  Score = tasks right first time; "Show me" reveals the keys but the task no longer counts.
+
+`ear`, `quiz` and `build` take `pitchMatch: pitchClass` too.
+
 Common fields: `hand` (`right`, `left`, `alternating`, later `together`), `display`
 (`keys` = light keys on the keyboard, `staff` = notation; with `clef: treble|bass`), `prompt`.
 

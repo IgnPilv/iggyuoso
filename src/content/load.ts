@@ -1,8 +1,11 @@
 import { parse as parseYaml } from 'yaml';
 import {
-  barLengths, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
+  barLengths, parsePitch, pitchToMidi, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
 } from '../music/notes';
-import type { Content, Exercise, FindTarget, Lesson, LessonStep, Unit } from './types';
+import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, parseKey, scaleNotes } from '../music/theory';
+import type {
+  BuildTask, Content, EarItem, Exercise, FindTarget, Lesson, LessonStep, QuizQuestion, Unit,
+} from './types';
 
 // Turns the YAML files under content/ into typed data, and reports every problem it finds with
 // the file it came from. The format is described in content/README.md.
@@ -120,7 +123,7 @@ const HANDS = ['right', 'left', 'alternating', 'together'] as const;
 
 export function parseExercise(raw: Raw): Exercise {
   const id = str(raw, 'id')!;
-  const kind = oneOf(raw, 'kind', ['find', 'sequence', 'timed'] as const);
+  const kind = oneOf(raw, 'kind', ['find', 'sequence', 'timed', 'tap', 'ear', 'quiz', 'build'] as const);
   if (!kind) throw new FieldError('missing "kind"');
   const base = {
     id,
@@ -148,6 +151,18 @@ export function parseExercise(raw: Raw): Exercise {
     }
     const position = raw.position ? parsePitchList(str(raw, 'position')!) : [];
     return { ...base, kind, notes, fingers, position, pitchMatch };
+  }
+
+  if (kind === 'ear') return parseEar(raw, base, pitchMatch);
+  if (kind === 'quiz') return parseQuiz(raw, base, pitchMatch);
+  if (kind === 'build') return parseBuild(raw, base, pitchMatch);
+  if (kind === 'tap') {
+    // Rhythm only: "x:q x:q x:h | ..." with x as the pitch placeholder; any key counts.
+    if (raw.right !== undefined || raw.left !== undefined) throw new FieldError('a tap exercise has "rhythm", not right/left notes');
+    const rhythm = str(raw, 'rhythm')!;
+    if (/(^|[\s|+])(?!x:|r:)[^\s|]+:/.test(` ${rhythm}`)) throw new FieldError('"rhythm" uses x for every note, like "x:q x:q x:h | r:q x:q x:h"');
+    raw = { ...raw, right: rhythm.replace(/(^|[\s|])x:/g, '$1C4:'), hand: raw.hand ?? 'right' };
+    base.hand = oneOf(raw, 'hand', HANDS);
   }
 
   const tempo = Number(raw.tempo);
@@ -191,8 +206,174 @@ export function parseExercise(raw: Raw): Exercise {
       throw new FieldError(`${fingers[h].length} ${h} fingers for ${countNotes(tokens)} ${h} notes`);
     }
   }
-  return { ...base, hand: hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind, tempo, meter, countIn, right, left, fingers, pitchMatch, bars };
+  return {
+    ...base, hand: hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, right, left, fingers,
+    pitchMatch: kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true } : {}),
+  };
 }
+
+type Base = Pick<Exercise, 'id' | 'prompt' | 'hand' | 'display' | 'clef'>;
+type Match = 'exact' | 'pitchClass';
+
+const list = (o: Raw, key: string): unknown[] => {
+  const v = o[key];
+  if (v === undefined) return [];
+  return Array.isArray(v) ? v : [v];
+};
+/** A pitch or a list of pitches: `C4`, `[C4, G4]` or "C4 G4". */
+const pitches = (o: Raw, key: string, fallback?: string): Pitch[] => {
+  const xs = list(o, key).flatMap((v) => String(v).trim().split(/\s+/));
+  if (!xs.length && fallback) return [parsePitch(fallback)];
+  return xs.map(parsePitch);
+};
+const strings = (o: Raw, key: string) => list(o, key).map(String);
+
+function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
+  if (!Array.isArray(raw.items) || !raw.items.length) throw new FieldError('"items" should be a non-empty list');
+  const cadence = str(raw, 'cadence', false);
+  if (cadence && cadence !== 'none') parseKey(cadence);
+  const questions = raw.questions === undefined ? 10 : Number(raw.questions);
+  if (!Number.isInteger(questions) || questions < 1 || questions > 50) throw new FieldError('"questions" should be 1 to 50');
+  const items = raw.items.map((r: unknown, i: number): EarItem => {
+    const o = (r ?? {}) as Raw;
+    try {
+      const type = oneOf(o, 'type', ['note', 'interval', 'chord', 'degree', 'melody', 'compare'] as const);
+      const need = <T>(xs: T[], what: string) => { if (!xs.length) throw new FieldError(`"${what}" should not be empty`); return xs; };
+      switch (type) {
+        case 'note': return { type, pool: need(pitches(o, 'pool'), 'pool') };
+        case 'interval': {
+          const pool = need(strings(o, 'pool'), 'pool');
+          pool.forEach(interval);
+          return {
+            type, pool, from: pitches(o, 'from', 'C4'),
+            direction: oneOf(o, 'direction', ['up', 'down', 'both'] as const) ?? 'up',
+            answer: oneOf(o, 'answer', ['play', 'name'] as const) ?? 'play',
+            together: o.together === true,
+          };
+        }
+        case 'chord': {
+          const pool = need(strings(o, 'pool'), 'pool');
+          pool.forEach(chordQuality);
+          return { type, pool, root: pitches(o, 'root', 'C4') };
+        }
+        case 'degree': {
+          const key = str(o, 'key', false) ?? cadence ?? 'C';
+          const k = parseKey(key);
+          const pool = need(strings(o, 'pool'), 'pool');
+          pool.forEach((d) => degreeSemitones(k, d));
+          return { type, key, pool, resolve: o.resolve !== false };
+        }
+        case 'melody': {
+          const notes = need(pitches(o, 'notes'), 'notes');
+          const plays = o.plays === undefined ? 2 : Number(o.plays);
+          if (!Number.isInteger(plays) || plays < 1 || plays > 5) throw new FieldError('"plays" should be 1 to 5');
+          return { type, notes, plays };
+        }
+        case 'compare': {
+          const pool = strings(o, 'pool');
+          const bad = pool.find((p) => !(COMPARE as readonly string[]).includes(p));
+          if (bad) throw new FieldError(`"${bad}" should be higher, lower or same`);
+          const range = pitches(o, 'range');
+          if (range.length && range.length !== 2) throw new FieldError('"range" should be two notes, like [C4, C5]');
+          const [lo, hi] = range.length ? range : [parsePitch('C4'), parsePitch('C5')];
+          if (pitchToMidi(hi) - pitchToMidi(lo) < 4) throw new FieldError('"range" should span at least a major 3rd');
+          return { type, pool: (pool.length ? pool : [...COMPARE]) as ('higher' | 'lower' | 'same')[], range: [lo, hi] };
+        }
+        default: throw new FieldError('missing "type"');
+      }
+    } catch (e) {
+      throw new FieldError(`item ${i + 1}: ${(e as Error).message}`);
+    }
+  });
+  return { ...base, kind: 'ear', cadence: cadence === 'none' ? undefined : cadence, questions, items, pitchMatch };
+}
+
+function parseQuiz(raw: Raw, base: Base, pitchMatch: Match): Exercise {
+  if (!Array.isArray(raw.questions) || !raw.questions.length) throw new FieldError('"questions" should be a non-empty list');
+  const questions = raw.questions.map((r: unknown, i: number): QuizQuestion => {
+    const o = (r ?? {}) as Raw;
+    try {
+      const q: QuizQuestion = { ask: str(o, 'ask')! };
+      const choices = strings(o, 'choices');
+      if (choices.length) {
+        if (choices.length < 2) throw new FieldError('"choices" needs at least two answers');
+        const correct = Number(o.correct);
+        if (!Number.isInteger(correct) || correct < 0 || correct >= choices.length) {
+          throw new FieldError(`"correct" should be the index of the right choice, 0 to ${choices.length - 1}`);
+        }
+        q.choices = choices;
+        q.correct = correct;
+      }
+      const play = pitches(o, 'play');
+      if (play.length) q.play = play;
+      if (!q.choices === !q.play) throw new FieldError('give either "choices" + "correct" or "play"');
+      if (o.staff !== undefined) q.staff = parseTimedNotes(str(o, 'staff')!);
+      if (o.sound !== undefined) q.sound = parseTimedNotes(str(o, 'sound')!);
+      const clef = oneOf(o, 'clef', ['treble', 'bass'] as const);
+      if (clef) q.clef = clef;
+      return q;
+    } catch (e) {
+      throw new FieldError(`question ${i + 1}: ${(e as Error).message}`);
+    }
+  });
+  return { ...base, kind: 'quiz', shuffle: raw.shuffle === true, questions, pitchMatch };
+}
+
+const octaveWords = (n: number) => (n === 1 ? 'one octave' : `${n} octaves`);
+
+function parseBuild(raw: Raw, base: Base, pitchMatch: Match): Exercise {
+  if (!Array.isArray(raw.tasks) || !raw.tasks.length) throw new FieldError('"tasks" should be a non-empty list');
+  const tasks = raw.tasks.map((r: unknown, i: number): BuildTask => {
+    const o = (r ?? {}) as Raw;
+    try {
+      const octave = o.octave === undefined ? 4 : Number(o.octave);
+      // A chord is held at once unless `together: false`; the rest are played one by one.
+      const mode = (fallback: BuildTask['mode']): BuildTask['mode'] =>
+        (o.together === true || (fallback === 'together' && o.together !== false))
+          ? 'together'
+          : (oneOf(o, 'order', ['listed', 'any'] as const) ?? (fallback === 'together' ? 'any' : fallback));
+      let t: BuildTask;
+      if (o.chord !== undefined) {
+        const sym = str(o, 'chord')!;
+        t = { ask: `Play ${articleFor(sym)} ${chordName(sym)} chord`, notes: chordNotes(sym, octave), mode: mode('together') };
+      } else if (o.interval !== undefined) {
+        const code = str(o, 'interval')!;
+        const from = parsePitch(str(o, 'from', false) ?? 'C4');
+        const down = o.direction === 'down';
+        const a = pitchToMidi(from);
+        const iv = interval(code);
+        t = {
+          ask: `Play a ${iv.name} ${down ? 'down' : 'up'} from ${str(o, 'from', false) ?? 'C4'}`,
+          notes: [a, down ? a - iv.semitones : a + iv.semitones],
+          mode: mode('any'),
+        };
+      } else if (o.scale !== undefined) {
+        const name = str(o, 'scale')!;
+        const octaves = o.octaves === undefined ? 1 : Number(o.octaves);
+        if (!Number.isInteger(octaves) || octaves < 1 || octaves > 4) throw new FieldError('"octaves" should be 1 to 4');
+        t = { ask: `Play the ${name} scale, ${octaveWords(octaves)} up`, notes: scaleNotes(name, octaves, octave), mode: mode('listed') };
+      } else if (o.notes !== undefined) {
+        t = { ask: 'Play these notes', notes: pitches(o, 'notes').map(pitchToMidi), mode: mode('listed') };
+      } else {
+        throw new FieldError('a task needs "chord", "interval", "scale" or "notes"');
+      }
+      const ask = str(o, 'ask', false);
+      if (ask) t.ask = ask;
+      return t;
+    } catch (e) {
+      throw new FieldError(`task ${i + 1}: ${(e as Error).message}`);
+    }
+  });
+  return { ...base, kind: 'build', tasks, pitchMatch };
+}
+
+/** "Cm" -> "C minor", "G7" -> "G dominant 7th". */
+function chordName(sym: string): string {
+  const m = /^([A-G](?:#|b)?)(.*)$/.exec(sym)!;
+  const names: Record<string, string> = { '': 'major', m: 'minor', dim: 'diminished', aug: 'augmented', sus2: 'sus2', sus4: 'sus4', 7: 'dominant 7th', maj7: 'major 7th', m7: 'minor 7th' };
+  return `${m[1]} ${names[m[2]] ?? m[2]}`;
+}
+const articleFor = (sym: string) => (/^[AEF]/.test(sym) ? 'an' : 'a');
 
 function countNotes(tokens: NoteToken[]): number {
   return tokens.filter((t) => t.pitches.length > 0).length;

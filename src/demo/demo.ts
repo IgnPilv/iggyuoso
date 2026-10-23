@@ -18,11 +18,28 @@ export const demo = {
   onTimed: undefined as ((s: TimedSession) => void) | undefined,
   onFind: undefined as ((s: FindSession) => void) | undefined,
   onSequence: undefined as ((s: SequenceSession) => void) | undefined,
+  /** Called by ear, quiz and build when a question is ready to answer. */
+  onAsk: undefined as ((a: DemoAsk) => void) | undefined,
   /** Called when a timed Listen or Play run ends. */
   onRunEnd: undefined as ((mode: 'listen' | 'play') => void) | undefined,
 };
 
+/** What the pianist needs to answer one question. */
+export interface DemoAsk {
+  /** Question number, from 0 (the pianist slips on one). */
+  index: number;
+  /** Device keys to play, in order (or all at once with `together`). */
+  keys?: number[];
+  together?: boolean;
+  /** The right button, and how to press one. */
+  correct?: number;
+  choices?: number;
+  choose?: (i: number) => void;
+  /** Wait this long (the prompt is still sounding). */
+  waitMs: number;
+}
+
 export function stopDemo() {
   demo.active = false;
-  demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = undefined;
+  demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onAsk = undefined;
 }
