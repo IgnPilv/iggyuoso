@@ -5,6 +5,6 @@ tempo: 66
 meter: 4/4
 countIn: 1
 right: "G4:q A4:q B4:h | D5:q C5:q B4:h | A4:q B4:q A4:q G4:q | G4:w"
-left:  "G2:w | G2:w | D3:w | G2:w"
+left:  "G3:w | G3:w | D4:w | G3:w"
 rightFingers: "1 2 3 5 4 3 2 3 2 1 1"
 leftFingers: "5 5 1 5"
