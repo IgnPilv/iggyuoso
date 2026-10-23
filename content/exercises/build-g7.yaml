@@ -1,4 +1,5 @@
 id: build-g7
+title: "Build G7, then back to C"
 kind: build
 tasks:
   - { chord: G7, octave: 3, ask: "Play G7 in full: G, B, D, F" }

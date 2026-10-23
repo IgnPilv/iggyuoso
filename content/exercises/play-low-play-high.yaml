@@ -1,4 +1,5 @@
 id: play-low-play-high
+title: "Play low, play high"
 kind: find
 prompt: Play a low key, then a high key, as the app asks.
 order: random

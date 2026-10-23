@@ -1,4 +1,5 @@
 id: find-all-d
+title: "Find every D"
 kind: find
 prompt: Find every D on the keyboard, from the bottom to the top.
 targets:

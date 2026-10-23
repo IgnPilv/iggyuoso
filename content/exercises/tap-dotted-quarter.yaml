@@ -1,4 +1,5 @@
 id: tap-dotted-quarter
+title: "Tap dotted quarters"
 kind: tap
 prompt: Long-short. The dotted quarter takes "1 and 2", the eighth takes "and".
 tempo: 66

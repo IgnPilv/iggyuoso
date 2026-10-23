@@ -1,4 +1,5 @@
 id: find-all-c
+title: "Find every C"
 kind: find
 prompt: Find every C on the keyboard, from the bottom to the top.
 targets:

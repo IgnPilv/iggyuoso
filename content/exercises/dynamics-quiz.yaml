@@ -1,4 +1,5 @@
 id: dynamics-quiz
+title: "Dynamics quiz"
 kind: quiz
 shuffle: true
 questions:

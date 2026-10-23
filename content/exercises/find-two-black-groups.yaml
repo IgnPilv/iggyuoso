@@ -1,4 +1,5 @@
 id: find-two-black-groups
+title: "Find the groups of two black keys"
 kind: find
 prompt: Press one key from every group of two black keys, from the bottom to the top.
 targets:

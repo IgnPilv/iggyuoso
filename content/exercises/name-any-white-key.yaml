@@ -1,4 +1,5 @@
 id: name-any-white-key
+title: "Play any white key the app names"
 kind: find
 prompt: Play the key the app names. Any octave is fine.
 order: random

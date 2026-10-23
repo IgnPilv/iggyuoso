@@ -1,4 +1,5 @@
 id: play-steps-and-skips
+title: "Play steps and skips"
 kind: build
 tasks:
   - { notes: "C4 D4", order: listed, ask: "Play a step up from C" }

@@ -1,4 +1,5 @@
 id: ear-echo-three
+title: "Echo three notes"
 kind: ear
 prompt: Listen to the little tune, then play it back. You can hear it twice.
 questions: 20

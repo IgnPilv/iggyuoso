@@ -1,4 +1,5 @@
 id: build-major-scales
+title: "Build major scales"
 kind: build
 tasks:
   - { scale: C major, ask: "Play C major up one octave (any fingers)" }
