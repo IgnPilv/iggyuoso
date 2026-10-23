@@ -32,6 +32,7 @@ src/scoring/        timed scoring (per hand, habits, feedback), find/sequence se
 src/progress/       localStorage store behind a swappable backend
 src/audio/          metronome click and guide notes
 src/demo/           demo mode: virtual keyboard and the demo pianist
+src/styles/         design tokens (light/dark); rules in docs/design.md
 src/ui/             views: demo tour, home, lesson, players, falling notes (canvas), sheet, calibration, settings, MIDI tester
 tests/              vitest
 ```

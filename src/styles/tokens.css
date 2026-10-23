@@ -1,0 +1,193 @@
+/*
+ * iggyuoso design tokens. Everything visual reads from these: CSS, SVG (keyboard, staff) and the
+ * falling-notes canvas (through src/ui/theme.ts). Never hard-code a colour in a component; add a
+ * token here, in both themes. Format and rules: docs/design.md.
+ *
+ * Theme selection: <html data-theme="light|dark"> is set before first paint (index.html) from the
+ * player's choice (System / Light / Dark). Dark is the reference look.
+ */
+
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+:root {
+  /* ---- type ---- */
+  --font-display: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-music: 'Noto Music', 'Bravura', 'Segoe UI Symbol', 'Apple Symbols', serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+  --text-hero: clamp(2.6rem, 1.6rem + 5vw, 5.25rem);
+
+  /* ---- space, shape, motion ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 480ms;
+
+  --content-width: 1040px;
+
+  /* ---- brand (same in both themes) ---- */
+  --brand-1: #ff6a3d; /* signal coral */
+  --brand-2: #ff3d8b; /* hot pink */
+  --brand-3: #8b5cf6; /* violet */
+  --brand-gradient: linear-gradient(115deg, var(--brand-1) 0%, var(--brand-2) 48%, var(--brand-3) 100%);
+}
+
+/* ---------------------------------------------------------------- dark (reference) */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #08070d;
+  --bg-glow-1: rgba(255, 61, 139, 0.16);
+  --bg-glow-2: rgba(139, 92, 246, 0.18);
+  --bg-glow-3: rgba(56, 189, 248, 0.08);
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.065);
+  --surface-solid: #121119;
+  --surface-sunken: rgba(0, 0, 0, 0.35);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --ink: #f5f3fa;
+  --ink-2: #c9c6d6;
+  --muted: #8e8a9e;
+  --on-accent: #fff;
+
+  --accent: #ff5f6d;
+  --accent-ink: #ff8a8f;
+  --accent-soft: rgba(255, 95, 109, 0.14);
+  --focus: #c4b5fd;
+
+  /* meaning */
+  --ok: #3ddc97;
+  --ok-soft: rgba(61, 220, 151, 0.14);
+  --bad: #ff4d6a;
+  --bad-soft: rgba(255, 77, 106, 0.14);
+  --warn: #ffb547;
+  --warn-soft: rgba(255, 181, 71, 0.13);
+  --target: #ffc53d;
+  --star: #ffc53d;
+
+  /* hands: right blue, left green (CLAUDE.md) */
+  --rh: #4f8cff;
+  --rh-bright: #a5c4ff;
+  --rh-key: #6ea1ff;
+  --rh-soft: rgba(79, 140, 255, 0.16);
+  --lh: #22d39a;
+  --lh-bright: #8ff0c8;
+  --lh-key: #45e0ad;
+  --lh-soft: rgba(34, 211, 154, 0.15);
+
+  /* instrument */
+  --key-white: #ecebf2;
+  --key-black: #15141c;
+  --key-stroke: #050409;
+  --key-label: #55526a;
+  --key-pos: #d9d2ff;
+  --key-pressed: #b9a8ff;
+  --middle-c: #ff6a3d;
+
+  --lane-bg: #0b0a12;
+  --lane-line: rgba(255, 255, 255, 0.03);
+  --lane-c: rgba(255, 255, 255, 0.075);
+  --lane-beat: rgba(255, 255, 255, 0.07);
+  --lane-bar: rgba(255, 255, 255, 0.24);
+  --lane-text: rgba(255, 255, 255, 0.42);
+  --lane-big: rgba(255, 255, 255, 0.94);
+  --lane-middle-c: rgba(139, 92, 246, 0.09);
+  --hit-line: #ff3d8b;
+  --note-ink: #07060b;
+
+  --staff-ink: #e9e7f1;
+  --staff-line: rgba(233, 231, 241, 0.55);
+  --staff-paper: transparent;
+
+  --shadow-1: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 10px 30px -12px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 10px 40px -10px rgba(255, 61, 139, 0.55);
+  --blur: saturate(160%) blur(18px);
+}
+
+/* ---------------------------------------------------------------- light */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f6f3ee;
+  --bg-glow-1: rgba(255, 106, 61, 0.14);
+  --bg-glow-2: rgba(139, 92, 246, 0.12);
+  --bg-glow-3: rgba(56, 189, 248, 0.08);
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-2: rgba(255, 255, 255, 0.95);
+  --surface-solid: #ffffff;
+  --surface-sunken: rgba(24, 20, 40, 0.045);
+  --line: rgba(24, 20, 40, 0.09);
+  --line-strong: rgba(24, 20, 40, 0.18);
+  --ink: #16131f;
+  --ink-2: #3b3749;
+  --muted: #6e6a7c;
+  --on-accent: #fff;
+
+  --accent: #f0364f;
+  --accent-ink: #d42a44;
+  --accent-soft: rgba(240, 54, 79, 0.1);
+  --focus: #7c3aed;
+
+  --ok: #0fa968;
+  --ok-soft: rgba(15, 169, 104, 0.11);
+  --bad: #e11d48;
+  --bad-soft: rgba(225, 29, 72, 0.09);
+  --warn: #c77700;
+  --warn-soft: rgba(245, 158, 11, 0.13);
+  --target: #f5a400;
+  --star: #f5a400;
+
+  --rh: #2f6fef;
+  --rh-bright: #7aa6ff;
+  --rh-key: #5b8dff;
+  --rh-soft: rgba(47, 111, 239, 0.12);
+  --lh: #0eb07c;
+  --lh-bright: #5fe0b1;
+  --lh-key: #2ec795;
+  --lh-soft: rgba(14, 176, 124, 0.12);
+
+  --key-white: #ffffff;
+  --key-black: #1b1924;
+  --key-stroke: #2a2734;
+  --key-label: #77738a;
+  --key-pos: #e4ddff;
+  --key-pressed: #a996ff;
+  --middle-c: #ea580c;
+
+  /* The falling-notes stage stays dark in both themes (lane tokens come from the dark set). */
+
+  --staff-ink: #16131f;
+  --staff-line: rgba(22, 19, 31, 0.6);
+  --staff-paper: transparent;
+
+  --shadow-1: 0 1px 2px rgba(24, 20, 40, 0.05), 0 12px 32px -16px rgba(24, 20, 40, 0.22);
+  --shadow-glow: 0 10px 34px -10px rgba(240, 54, 79, 0.45);
+  --blur: saturate(180%) blur(16px);
+}
