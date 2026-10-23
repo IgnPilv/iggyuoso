@@ -48,7 +48,8 @@ export function climb(rungs: number[], s: LadderState, score: number): { state: 
 
 /**
  * Bars `from` to `to` (0-based, inclusive) as an exercise of their own. A tie into the first bar
- * becomes a fresh note; a tie out of the last bar is dropped. Finger numbers follow the notes.
+ * becomes a fresh note; a tie out of the last bar is dropped. Finger numbers follow the notes;
+ * dynamics are left out.
  */
 export function sliceBars(ex: TimedExercise, from: number, to: number): TimedExercise {
   const fingers: Record<Hand, number[]> = { right: [], left: [] };
@@ -78,6 +79,8 @@ export function sliceBars(ex: TimedExercise, from: number, to: number): TimedExe
     fingers,
     bars: to - from + 1,
     pickup: from === 0 ? ex.pickup : 0,
+    // A loop is for the notes; its marks could start or end inside a hairpin.
+    dynamics: undefined,
   };
 }
 

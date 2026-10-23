@@ -442,3 +442,13 @@ never copied pages). Start small, adapt as we go.
   major and minor; modulation; secondary dominants; the modes; texture; the four eras tied to the
   app's pieces; and how to talk about a piece (form, Italian terms, analysis). Milestones 6–9 now
   also need these. Demo scene "Hearing harmony".
+- 2026-10-23: Dynamics scored from key velocity (audit gap 5). `dynamics:` on timed exercises, one mark
+  per bar (pp to ff, `<` / `>` hairpins, `-`), in `src/scoring/dynamics.ts`. Judged relatively, since
+  keyboards differ: a change of level must be heard as a change (median velocities, 7 per level, at
+  most 24) and a hairpin must grow or fade through its own notes. A fifth of the take score; not
+  scored (and said so) when every key has the same velocity, so the computer keyboard is never
+  marked down. Drawn under the staff (marks and wedges) and next to the bar numbers in falling notes;
+  the result card has a Dynamics line. Loops leave dynamics out. Content (`tools/content/expression.py`,
+  technique branch): forte and piano echoes, crescendo and diminuendo, terraced dynamics, shaping a
+  phrase; milestones 3, 4 and 6 need them. Demo scene "Loud and soft" (the pianist plays the
+  crescendo flat).

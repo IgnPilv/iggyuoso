@@ -1,0 +1,14 @@
+id: touch-echo-c
+title: Loud, then an echo
+kind: timed
+hand: right
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q D4:q E4:q F4:q | C4:q D4:q E4:q F4:q | G4:q F4:q E4:q D4:q | G4:q F4:q E4:q D4:q
+dynamics: f | p | f | p
+rightFingers: 1 2 3 4 1 2 3 4 5 4 3 2 5 4 3 2
+reps: 3
+days: 2

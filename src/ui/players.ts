@@ -5,7 +5,7 @@ import { generate } from '../engine/generate';
 import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
 import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
-import { expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
+import { expectedDynamics, expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
 import { CLEAN_SCORE, store, type Attempt, type RepsGoal, type RepsProgress, type Settings } from '../progress/store';
@@ -488,17 +488,17 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     if (view === 'falling' && !echo) {
       falling = new FallingView(lo, hi, cal,
         expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })),
-        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex) });
+        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex), dynamics: expectedDynamics(ex) });
       // The sheet music rides along above the lane (not for tap exercises: their notes are placeholders).
       if (!ex.tap) {
-        staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), key: ex.key });
+        staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
         strip = staffStrip(staff);
       }
       stage.append(strip?.el ?? '', falling.el);
       offHeld = () => {};
       idle();
     } else {
-      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), key: ex.key });
+      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
       stage.append(h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg), kb.el);
@@ -580,7 +580,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     const offPedal = midi.onPedal((e) => session.pedalChange(e.down, e.time));
     const offNotes = midi.onNote((e) => {
       if (e.type === 'off') { session.noteOff(e.note, e.time); return; }
-      const j = session.noteOn(e.note, e.time);
+      const j = session.noteOn(e.note, e.time, e.velocity);
       if (!j) return;
       const until = performance.now() + 900;
       if (j.kind === 'hit') {
@@ -784,6 +784,8 @@ function timedResult(r: TimedResult, ex: TimedExercise, tempo: number, cal: Cali
     h('div', { class: 'score' }, h('span', { class: 'stars' }, starText(r.stars)), ` ${r.score}`),
     h('ul', { class: 'hands' }, ...handLine,
       r.pedal ? h('li', {}, h('strong', {}, `Pedal ${r.pedal.score}`), ` · ${r.pedal.spans.filter((x) => !x.problems.length).length}/${r.pedal.spans.length} clean`) : null,
+      r.dynamics ? h('li', {}, h('strong', {}, r.dynamics.measured ? `Dynamics ${r.dynamics.score}` : 'Dynamics'),
+        r.dynamics.measured ? ` · ${r.dynamics.checks.filter((c) => c.ok).length}/${r.dynamics.checks.length} changes heard` : ' · not measured') : null,
       r.together ? h('li', {}, `Hands together: ${r.together.meanGapMs} ms apart on shared beats`) : null),
     h('ul', { class: 'feedback' }, ...r.feedback.map((f) => h('li', { class: f.habit }, f.message))),
     wrongKeys.length ? h('p', { class: 'small' }, `Wrong keys: ${wrongKeys.join(', ')}.`) : null,

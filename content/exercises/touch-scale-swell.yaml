@@ -1,0 +1,14 @@
+id: touch-scale-swell
+title: Scale that swells and fades
+kind: timed
+hand: together
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q D4:q E4:q F4:q | G4:q A4:q B4:q C5:q | C5:h G4:h | F4:q E4:q D4:q E4:q | C4:w
+left: C3:q D3:q E3:q F3:q | G3:q A3:q B3:q C4:q | C4:h G3:h | F3:q E3:q D3:q E3:q | C3:w
+dynamics: p | < | f | > | p
+reps: 3
+days: 2

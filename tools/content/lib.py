@@ -341,7 +341,7 @@ def ex(id, **d):
     return id
 
 def timed(id, title, right=None, left=None, meter='4/4', tempo=72, hand=None, prompt=None, key=None, display=None,
-          ladder=True, reps=None, days=None, pickup=None, fingers=None, rf=None, lf=None, pedal=None, clef=None, pitchMatch=None, check=True):
+          ladder=True, reps=None, days=None, pickup=None, fingers=None, rf=None, lf=None, pedal=None, clef=None, pitchMatch=None, check=True, dynamics=None):
     """A timed exercise with bar checks."""
     pk = 0.0
     if pickup:
@@ -366,6 +366,9 @@ def timed(id, title, right=None, left=None, meter='4/4', tempo=72, hand=None, pr
     if right: d['right'] = right
     if left: d['left'] = left
     if pedal: d['pedal'] = pedal
+    if dynamics:
+        assert len(dynamics.split('|')) == len((right or left).split('|')), f'{id}: dynamics bars'
+        d['dynamics'] = dynamics
     if fingers: d['fingers'] = fingers
     if rf: d['rightFingers'] = rf
     if lf: d['leftFingers'] = lf

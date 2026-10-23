@@ -1,4 +1,5 @@
 import type { Hand, Meter, NoteToken, PedalToken, Pitch } from '../music/notes';
+import type { DynamicMark } from '../scoring/dynamics';
 
 /** A staff picture in theory text or feedback. `grand` splits the notes at middle C. */
 export interface TheoryStaff {
@@ -122,6 +123,8 @@ export interface TimedExercise extends ExerciseBase {
   left?: NoteToken[];
   /** The sustain pedal, in the same bars as the notes. */
   pedal?: PedalToken[];
+  /** Loud and soft, one mark per bar (`dynamics: "p | - | < | f"`). */
+  dynamics?: DynamicMark[];
   /** Finger numbers per hand, one per note (chords take one number for the whole chord). */
   fingers: Record<Hand, number[]>;
   /** `any`: any key counts (tap); `side`: any key on the hand's side of middle C (two-hand tap). */

@@ -49,6 +49,18 @@ function sampleOf(kind: Exercise['kind'] | 'tap', yaml: string): Exercise {
 }
 
 const SAMPLES = {
+  dynamics: `
+id: demo-dynamics
+kind: timed
+title: Scale that swells and fades
+hand: together
+display: staff
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:q F4:q | G4:q A4:q B4:q C5:q | C5:h G4:h | F4:q E4:q D4:q E4:q | C4:w"
+left: "C3:q D3:q E3:q F3:q | G3:q A3:q B3:q C4:q | C4:h G3:h | F3:q E3:q D3:q E3:q | C3:w"
+dynamics: "p | < | f | > | p"`,
   harmony: `
 id: demo-ear-harmony
 kind: ear
@@ -372,6 +384,7 @@ function scenes(): Scene[] {
   out.push({ title: 'Upbeats, ties and triplets', caption: 'Note strings can start on an upbeat, tie notes across a bar line, and mix dotted notes, triplets and sixteenths. On the staff a tie is an arc, and the tied note is held, not played again.', run: exerciseScene(rhythms, { view: 'classic' }) });
   out.push({ title: 'Six-eight', caption: 'In 6/8 the click and the tempo count dotted quarters, two to a bar, as musicians count it.', run: exerciseScene(parseExercise(parse(SAMPLES.sixEight)), { view: 'falling' }) });
   out.push({ title: 'Key signatures', caption: 'Staff exercises can have a key signature (key: G). Notes are still written out in full; the staff only draws a sharp, flat or natural where a note differs from the key or from an earlier note in the bar.', run: exerciseScene(parseExercise(parse(SAMPLES.keys)), { view: 'classic' }) });
+  out.push({ title: 'Loud and soft', caption: 'Dynamics marks (p, f, crescendo and diminuendo wedges) sit under the staff and next to the bar numbers in the falling notes. The app hears how fast each key goes down: a change of mark must be heard as a change, and a crescendo must grow. Here the pianist plays the crescendo flat, and the result says so. A keyboard that sends one strength for every key (or the computer keyboard) is not marked down.', run: exerciseScene(parseExercise(parse(SAMPLES.dynamics)), { view: 'classic' }) });
   out.push({ title: 'Sustain pedal', caption: 'Pedal lines sit under the staff ("Ped.", a line while it is held, a notch at each change) and down the right edge of the falling notes. The pedal is scored too: here the pianist holds it through one chord change, and the result says so. With the computer keyboard, Space is the pedal.', run: exerciseScene(parseExercise(parse(SAMPLES.pedal)), { view: 'classic' }) });
   out.push({
     title: 'Tempo ladder and loops',

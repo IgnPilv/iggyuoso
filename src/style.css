@@ -480,6 +480,8 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .staff .stem, .staff .flag { stroke: var(--staff-ink); stroke-width: 1.3; fill: none; }
 .staff .tie { stroke: var(--staff-ink); stroke-width: 1.3; fill: none; }
 .staff .pedal-line { stroke: var(--staff-ink); stroke-width: 1.2; fill: none; }
+.staff .dyn-text { fill: var(--staff-ink); font: italic 700 14px var(--font-body); }
+.staff .dyn-line { stroke: var(--staff-ink); stroke-width: 1.2; fill: none; }
 .staff .pedal-text { fill: var(--staff-ink); font: italic 600 11px var(--font-body); }
 .staff .tuplet { fill: var(--staff-ink); font: italic 600 12px var(--font-body); text-anchor: middle; }
 .staff text { fill: var(--staff-ink); }

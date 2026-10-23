@@ -1,3 +1,4 @@
+import { dynamicSpans, LEVELS, type DynamicMark } from '../scoring/dynamics';
 import { parse as parseYaml } from 'yaml';
 import {
   barLengths, isTieEnd, parseDuration, parsePedal, parsePitch, pitchToMidi, type Meter, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
@@ -315,6 +316,7 @@ export function parseExercise(raw: Raw): Exercise {
     }
     bars = lens.length;
   }
+  const dynamics = raw.dynamics !== undefined ? parseDynamics(str(raw, 'dynamics')!, bars, meter.quarters) : undefined;
   const sides = kind === 'tap' && raw.rhythm === undefined; // a two-hand (or one-side) tap
   // A one-line tap without a hand shows no hand badge.
   const hand = kind === 'tap' && !sides ? 'right' : base.hand;
@@ -339,7 +341,7 @@ export function parseExercise(raw: Raw): Exercise {
     }
   }
   return {
-    ...base, hand: kind === 'tap' && !sides ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, ...(click && click !== 'on' ? { click } : {}), right, left, fingers, pickup, ...(pedal ? { pedal } : {}),
+    ...base, hand: kind === 'tap' && !sides ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, ...(click && click !== 'on' ? { click } : {}), right, left, fingers, pickup, ...(pedal ? { pedal } : {}), ...(dynamics ? { dynamics } : {}),
     ...(raw.tempoLadder !== undefined && raw.tempoLadder !== false ? { ladder: parseLadder(raw.tempoLadder) } : {}),
     pitchMatch: sides ? 'side' : kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true, ...(raw.echo === true ? { echo: true } : {}) } : {}),
   };
@@ -815,4 +817,13 @@ function parseImprovise(raw: Raw, base: Base): ImproviseExercise {
     ...(scale ? { scale } : {}), ...(chords ? { chords } : {}), ...(backing ? { backing } : {}), ...(call ? { call } : {}),
     ...(rhythm ? { rhythm } : {}), ...(example ? { example } : {}), rules,
   };
+}
+
+/** `dynamics: "p | - | < | f"`: one mark per bar (pp to ff, `<` crescendo, `>` diminuendo, `-` as before). */
+function parseDynamics(text: string, bars: number, barQuarters: number): DynamicMark[] {
+  const marks = text.split('|').map((b) => b.trim().replace(/^cresc\.?$/, '<').replace(/^dim\.?$/, '>') || '-');
+  for (const m of marks) if (!(LEVELS as readonly string[]).includes(m) && !['<', '>', '-'].includes(m)) throw new FieldError(`dynamics: unknown mark "${m}" (use pp p mp mf f ff, < > or -)`);
+  if (marks.length !== bars) throw new FieldError(`dynamics have ${marks.length} bars but the notes have ${bars}`);
+  try { dynamicSpans(marks as DynamicMark[], barQuarters); } catch (e) { throw new FieldError(`dynamics: ${(e as Error).message}`); }
+  return marks as DynamicMark[];
 }

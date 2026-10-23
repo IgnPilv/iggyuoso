@@ -1,0 +1,14 @@
+id: touch-mf-mp
+title: Not quite loud, not quite soft
+kind: timed
+hand: together
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h
+left: C3:w | C3:w | G2:w | C3:w
+dynamics: mf | mf | mp | mp
+reps: 3
+days: 2

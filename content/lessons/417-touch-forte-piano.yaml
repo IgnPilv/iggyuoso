@@ -1,0 +1,33 @@
+id: touch-forte-piano
+title: Loud and soft at the keys
+skills:
+- technique
+steps:
+- explain: |
+    A piano is loud or soft by **how fast the key goes down**, not by how long you hold it. For **forte** (f), let the
+    weight of your arm drop into the keys from a little above them. For **piano** (p), start with the fingertips resting
+    on the keys and press gently.
+  terms:
+  - forte
+  - piano
+  - touch
+  - arm weight
+  sound: C4:q D4:q E4:q F4:q | C4:q D4:q E4:q F4:q
+  callout: |
+    Fast key = loud. Slow key = soft.
+- explain: |
+    The app hears how fast each key goes down: that is how loud the note is. A keyboard that sends the same
+    strength for every key (or the computer keyboard) cannot be measured; then loud and soft are not scored. The marks sit under the music: **f** where it is loud, **p** where it is soft. Every exercise here
+            starts by playing a bar loud, then answering it softly, like an echo.
+  check:
+    ask: How do you play a note louder on the piano?
+    choices:
+    - Press the key down faster
+    - Hold it longer
+    - Press it further down
+    correct: 0
+    why: 'The speed of the hammer makes the sound: a faster key, a louder note.'
+- exercise: touch-echo-c
+- exercise: touch-echo-hands
+- exercise: touch-mf-mp
+recap: Loud is a fast key; soft is a slow one.
