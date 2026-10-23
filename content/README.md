@@ -73,6 +73,37 @@ days: 2   # spread over at least two days
   `notes: "C4 E4 G4"`; optional `octave` (default 4), `order: listed|any`, `ask` (own wording).
   Scales: major, minor, harmonic minor, melodic minor, major/minor pentatonic, chromatic.
   Score = tasks right first time; "Show me" reveals the keys but the task no longer counts.
+- `generated`: a drill made fresh every run, so it can be ground without learning the answers.
+  `generator` is one of:
+  - `read-notes`: a note on the staff; play it in the right octave (`answer: play`, default) or
+    name it with buttons (`answer: name`).
+  - `find-notes`: "Find F♯, any one"; any octave counts.
+  - `intervals`: two notes on the staff (one after the other or together); name the interval.
+    Needs `intervals: [M2, M3, P5]` (two or more).
+  - `rhythm-read`: a rhythm on the staff to tap on any key (like `tap`).
+  - `sight-read`: a short tune to play, mostly steps and some skips, ending on the key note.
+  The pool, at the top level or under `pool:`: `notes` (a range `C4-G5`, meaning every note of
+  the key in between, or a list `"C4 E4 G4"`; default `C4-G4`), `clef: treble|bass|grand` (grand
+  picks by the note), `keys: [C, G, F]` (one is picked per question or tune; default C).
+  `rhythm-read` and `sight-read` also take `durations: [q, h, e]` (eighths come in pairs; default
+  `[q, h]`), `meter` (default 4/4), `bars` (default 4), `tempo` (default 72) and `hand`. The last
+  bar is one long note.
+  `questions` (default 30) for the question drills. `mastery: { accuracy: 90, medianMs: 2500 }`:
+  reaching `accuracy` percent right counts as a clean take (score 92), and answering slower than
+  `medianMs` (the middle answer time) keeps the take below clean. Timed ones use accuracy only.
+  `reps` and `days` work as for any exercise.
+
+  ```yaml
+  id: read-treble-c-g
+  kind: generated
+  generator: read-notes
+  notes: C4-G5
+  keys: [C, G]
+  questions: 30
+  mastery: { accuracy: 90, medianMs: 2500 }
+  reps: 5
+  days: 3
+  ```
 
 `ear`, `quiz` and `build` take `pitchMatch: pitchClass` too. `ear` and `quiz` take
 `feedback: none` for checkpoints: no right / wrong after each question (and no resolution after a

@@ -1,6 +1,6 @@
 import { audio, loadPiano, piano, stopAll } from '../audio/audio';
 import { keyWindow, toDevice, type Calibration } from '../calibration';
-import type { BuildExercise, EarExercise, Exercise, QuizExercise } from '../content/types';
+import type { BuildExercise, DrillGoal, EarExercise, Exercise, QuizExercise } from '../content/types';
 import { demo } from '../demo/demo';
 import { BuildSession, EarSession, noteName, QuizSession, sequence, soundsEnd, type DrillOutcome, type DrillResult, type Sound } from '../engine/drills';
 import { midi } from '../midi/input';
@@ -9,7 +9,7 @@ import { h } from './dom';
 import { FallingView, type FallingNote, type Flash } from './falling';
 import { KeyboardView } from './keyboard';
 import {
-  animate, header, initialView, record, showHeld, starText, viewToggle, type OnDone, type ViewMode,
+  animate, header, initialView, record, regenerate, showHeld, starText, viewToggle, type OnDone, type ViewMode,
 } from './players';
 import { renderStaff } from './staff';
 
@@ -111,10 +111,16 @@ class AnswerStage {
 /** A question answered wrongly in a no-feedback checkpoint, listed on the result card. */
 type Review = { number: number; ask: string; answer: string };
 
-function drillResultView(r: DrillResult, unit: string, retry: () => void, review: Review[] = []) {
+const secs = (ms: number) => `${(ms / 1000).toFixed(1)} s`;
+
+function drillResultView(r: DrillResult & { medianMs?: number; slow?: boolean }, unit: string, retry: () => void, review: Review[] = [], goal?: DrillGoal) {
   return h('div', { class: 'result' },
     h('div', { class: 'score' }, h('span', { class: 'stars' }, starText(r.stars)), ` ${r.score}`),
     h('p', {}, r.right === r.total ? `All ${r.total} ${unit} right. Well done!` : `${r.right} of ${r.total} ${unit} right.`),
+    goal ? h('p', { class: 'small' },
+      `Goal: ${goal.accuracy}% right`, goal.medianMs ? `, answering in ${secs(goal.medianMs)} or less (middle answer time)` : '', '. ',
+      r.medianMs !== undefined ? `Your middle answer time: ${secs(r.medianMs)}. ` : '',
+      r.slow ? h('strong', {}, 'Right, but a bit slow for a clean take: aim to answer faster.') : '') : '',
     review.length ? h('ul', { class: 'review-list' }, ...review.map((x) => h('li', {}, `${x.number}. ${x.ask} `, h('strong', {}, x.answer)))) : '',
     h('button', { onclick: retry }, 'Try again'),
   );
@@ -373,11 +379,13 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
     const r = session.result();
     const reward = record(ex, r.score, r.stars, 0);
     ask.textContent = 'Done!';
-    result.replaceChildren(drillResultView(r, 'answers', restart, review), reward);
+    result.replaceChildren(drillResultView(r, 'answers', restart, review, ex.goal), reward);
     onDone(r);
   };
 
   const restart = () => {
+    const fresh = regenerate.get(ex);
+    if (fresh) return fresh();
     session = new QuizSession(ex, cal);
     review = [];
     result.replaceChildren();

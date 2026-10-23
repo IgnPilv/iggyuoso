@@ -38,6 +38,16 @@ interface ExerciseBase {
   reps: number;
   /** ...spread over at least this many different days. */
   days: number;
+  /**
+   * Set on the exercises a generated drill makes: reaching `accuracy` (percent right) counts as a
+   * clean take (92), and answering slower than `medianMs` (median per question) keeps it below.
+   */
+  goal?: DrillGoal;
+}
+
+export interface DrillGoal {
+  accuracy: number;
+  medianMs?: number;
 }
 
 export interface FindExercise extends ExerciseBase {
@@ -142,7 +152,35 @@ export interface BuildExercise extends ExerciseBase {
   pitchMatch: 'exact' | 'pitchClass';
 }
 
-export type Exercise = FindExercise | SequenceExercise | TimedExercise | EarExercise | QuizExercise | BuildExercise;
+export const GENERATORS = ['read-notes', 'find-notes', 'intervals', 'rhythm-read', 'sight-read'] as const;
+export type Generator = (typeof GENERATORS)[number];
+
+/** A drill made fresh every run from a pool (`kind: generated`); see src/engine/generate.ts. */
+export interface GeneratedExercise extends ExerciseBase {
+  kind: 'generated';
+  generator: Generator;
+  /** The notes to draw from: every note of the key from `range[0]` to `range[1]`, or these. */
+  range?: [Pitch, Pitch];
+  list?: Pitch[];
+  /** `grand` picks treble or bass by the note. */
+  clefs: 'treble' | 'bass' | 'grand';
+  /** Keys to pick from (spelling and signature); C when none. */
+  keys: string[];
+  /** Rhythm and sight-reading: note values to use, the meter, bars and tempo. */
+  durations: string[];
+  meter: string;
+  bars: number;
+  tempo: number;
+  /** Intervals to ask (interval codes like M3, P5). */
+  intervals: string[];
+  /** Questions per run (note, interval and find drills). */
+  questions: number;
+  /** Answer reading drills by playing the note, or by naming it with buttons. */
+  answer: 'play' | 'name';
+  mastery: DrillGoal;
+}
+
+export type Exercise = FindExercise | SequenceExercise | TimedExercise | EarExercise | QuizExercise | BuildExercise | GeneratedExercise;
 
 export interface Content {
   units: Unit[];

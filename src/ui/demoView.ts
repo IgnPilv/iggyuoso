@@ -135,6 +135,23 @@ meter: 4/4
 reps: 3
 right: "C4:q D4:q E4:q F4:q | G4:q F4:q E4:h"
 fingers: "1 2 3 4 5 4 3"`,
+  readNotes: `
+id: demo-read-notes
+kind: generated
+generator: read-notes
+prompt: Fresh every time. Play each note you see, in the right octave.
+notes: C4-C5
+keys: [C, G]
+questions: 8
+mastery: { accuracy: 90, medianMs: 2500 }`,
+  sightRead: `
+id: demo-sight-read
+kind: generated
+generator: sight-read
+notes: C4-G4
+durations: [q, h]
+bars: 4
+tempo: 76`,
   sixEight: `
 id: demo-six-eight
 kind: timed
@@ -250,6 +267,24 @@ function scenes(): Scene[] {
       };
       const cleanup = mountExercise(box, ex, DEMO_CALIBRATION, () => {});
       setView(box, 'falling');
+      timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({ title: 'Fresh drills', caption: 'Generated drills make new questions every run from a pool of notes, keys and intervals, so they can be played again and again without learning the answers by heart. The goal counts speed too: here 90% right, answering in 2.5 s or less (middle answer time), makes a clean take.', run: exerciseScene(parseExercise(parse(SAMPLES.readNotes)), { view: 'classic' }) });
+  out.push({
+    title: 'Sight-reading',
+    caption: 'A new tune every time, in the notes and note values the pupil knows so far, ending on the home note. "New tune" makes another one.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      let runs = 0;
+      demo.onTimed = (s) => p.playTimed(s);
+      demo.onRunEnd = (mode) => {
+        if (mode !== 'play') return;
+        if (++runs === 1) timers.push(window.setTimeout(() => { press(box, 'New tune'); timers.push(window.setTimeout(() => press(box, 'Play'), 1500)); }, 3500));
+        else timers.push(window.setTimeout(next, 4000));
+      };
+      const cleanup = mountExercise(box, parseExercise(parse(SAMPLES.sightRead)), DEMO_CALIBRATION, () => {});
       timers.push(window.setTimeout(() => press(box, 'Play'), 900));
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
