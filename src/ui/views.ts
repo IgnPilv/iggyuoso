@@ -4,13 +4,14 @@ import type { Exercise, Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
-import { lessonAdvice, lessonGoals, mastery, nodeOfLesson, type LessonAdvice } from '../progress';
+import { lessonAdvice, lessonGoals, mastery, type LessonAdvice } from '../progress';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
 import { markdown } from './markdown';
 import { explainBlock, playground } from './theory';
 import { mountExercise, repsText } from './players';
+import { pathMap } from './pathMap';
 import { todayCard } from './todayView';
 import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
 
@@ -59,7 +60,7 @@ export const homeView: View = (root) => {
   });
   const nextLesson = firstNotDone ? content.lessons.get(firstNotDone) : undefined;
   const title = h('h1', {}, 'Hands apart, ', h('span', { class: 'gradient-text' }, 'then together.'));
-  root.append(h('section', { class: 'card hero' },
+  root.append(h('section', { class: store.calibration ? 'card hero compact' : 'card hero' },
     heroKeys(),
     h('span', { class: 'eyebrow' }, 'Piano trainer · MIDI keyboard'),
     title,
@@ -75,30 +76,7 @@ export const homeView: View = (root) => {
   ));
   if (store.calibration) root.append(todayCard());
   root.append(progressCard());
-  for (const unit of content.units) {
-    const lessons = unit.lessons.map((id) => content.lessons.get(id)).filter((l): l is Lesson => !!l);
-    const done = lessons.filter((l) => store.lessonDone(lessonGoals(l))).length;
-    root.append(h('section', { class: 'card' },
-      h('div', { class: 'unit-head' },
-        h('h2', {}, unit.title),
-        h('span', { class: 'unit-progress' }, `${done} / ${lessons.length} done`)),
-      h('p', { class: 'small' }, unit.summary),
-      h('ol', { class: 'lessons' }, ...lessons.map((l) => {
-        const goals = lessonGoals(l);
-        const ahead = !lessonAdvice(l).ready;
-        const cls = store.lessonDone(goals) ? 'done' : l.id === firstNotDone && store.calibration ? 'next' : ahead ? 'ahead' : '';
-        const node = nodeOfLesson(l.id);
-        const state = node ? mastery.state(node.id) : undefined;
-        const exDone = goals.filter((e) => store.reps(e).done).length;
-        return h('li', { class: `${cls}${state ? ` state-${state}` : ''}` },
-          h('a', { href: `#/lesson/${l.id}` }, l.title,
-            exDone && exDone < goals.length ? h('span', { class: 'state-badge' }, `${exDone} / ${goals.length}`) : '',
-            node && mastery.isDue(node.id) ? h('span', { class: 'state-badge due' }, 'Review')
-              : state === 'solid' || state === 'mastered' ? h('span', { class: `state-badge ${state}` }, state === 'solid' ? 'Solid' : 'Mastered')
-                : ahead && cls !== 'next' && !store.lessonDone(goals) ? h('span', { class: 'state-badge ahead', title: 'Best after the lessons before it; open it any time' }, 'Ahead') : ''));
-      })),
-    ));
-  }
+  root.append(pathMap(store.calibration ? firstNotDone : undefined));
   if (contentErrors.length) {
     root.append(h('details', { class: 'card small' }, h('summary', {}, `${contentErrors.length} content problems`), h('pre', {}, contentErrors.join('\n'))));
   }
@@ -191,8 +169,8 @@ export const calibrateView: View = (root) => {
       check,
       h('div', { class: 'controls' },
         save,
-        h('button', { class: 'secondary', onclick: () => confirm(shiftMiddleC(c, -1), notes) }, 'The real middle C is one octave lower'),
-        h('button', { class: 'secondary', onclick: () => confirm(shiftMiddleC(c, 1), notes) }, 'one octave higher'),
+        h('button', { class: 'secondary', onclick: () => confirm(shiftMiddleC(c, -1), notes) }, 'Middle C is an octave lower'),
+        h('button', { class: 'secondary', onclick: () => confirm(shiftMiddleC(c, 1), notes) }, 'Middle C is an octave higher'),
         h('button', { class: 'secondary', onclick: () => { offTry(); ask(); } }, 'Start again'),
       ),
     );

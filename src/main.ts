@@ -46,7 +46,18 @@ showThemeBtn();
 const brandMark = h('span', { class: 'brand-mark' });
 brandMark.innerHTML = '<svg viewBox="0 0 16 16"><rect x="2" y="2" width="3" height="12" rx="1.5" fill="#fff"/><rect x="6.5" y="2" width="3" height="8" rx="1.5" fill="#fff"/><rect x="11" y="2" width="3" height="12" rx="1.5" fill="#fff"/></svg>';
 
-const navLinks = [h('a', { href: '#/profile' }, 'Profile'), h('a', { href: '#/demo' }, 'Demo'), h('a', { href: '#/settings' }, 'Settings')];
+// Nav links carry an icon; on a phone only the icons show.
+const NAV_ICONS: Record<string, string> = {
+  profile: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.8 4.2-5.6 7.5-5.6s6.3 1.8 7.5 5.6"/></svg>',
+  demo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor"/></svg>',
+  settings: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>',
+};
+const navLink = (route: string, label: string) => {
+  const icon = h('span', { class: 'nav-icon', 'aria-hidden': 'true' });
+  icon.innerHTML = NAV_ICONS[route];
+  return h('a', { href: `#/${route}`, title: label, 'aria-label': label }, icon, h('span', { class: 'nav-label' }, label));
+};
+const navLinks = [navLink('profile', 'Profile'), navLink('demo', 'Demo'), navLink('settings', 'Settings')];
 
 computerKeys.middleC = () => (demo.active ? DEMO_CALIBRATION : store.calibration)?.middleC ?? 60;
 computerKeys.allow = () => !demo.active;

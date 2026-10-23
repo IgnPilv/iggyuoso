@@ -490,7 +490,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   };
 
   const hud = h('div', { class: 'hud' });
-  const status = h('div', { class: 'ask' }, `${ex.meter.beats}/${ex.meter.unit} at ${ex.tempo} beats per minute. Press Listen to hear it, then Play.`);
+  const status = h('div', { class: 'status-line' }, 'Press Listen to hear it, then Play.');
   const result = h('div');
   const startPercent = loop.percent ?? (rungs ? rungs[ladder.rung] : 100);
   const steps = [...new Set([...TEMPO_STEPS, ...(rungs ?? [])])].sort((a, b) => a - b);
@@ -664,6 +664,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         progress.put(ladderKey, ladder);
         if (step.moved) {
           tempoSel.value = String(rungs[ladder.rung]);
+          showTempo();
           ladderNote = h('p', { class: 'reward' }, step.moved === 'up'
             ? `Tempo ladder: up to ${rungs[ladder.rung]}%.`
             : `Tempo ladder: back to ${rungs[ladder.rung]}% for now.`);
@@ -695,17 +696,29 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   playBtn.onclick = () => start('play');
   stopBtn.onclick = () => { run?.cancel(); clearTimeout(again); status.textContent = 'Stopped.'; idle(); };
 
+  // Transport up front (Listen, Play, Stop, view); tempo, click, guide and looping in a drawer.
+  const tempoChip = h('span', { class: 'meta-chip' });
+  const showTempo = () => {
+    tempoChip.textContent = `${ex.meter.beats}/${ex.meter.unit} · ${Math.round((ex.tempo * Number(tempoSel.value)) / 100)} bpm`;
+  };
+  showTempo();
+  tempoSel.addEventListener('change', showTempo);
+  const drawer = h('details', { class: 'drawer' },
+    h('summary', {}, 'Options', tempoChip),
+    h('div', { class: 'drawer-body' },
+      h('div', { class: 'controls' },
+        h('label', {}, 'Tempo ', tempoSel),
+        h('label', {}, metro, ' Click'),
+        h('label', {}, guide, ' Guide notes')),
+      loopControls));
   root.append(
     header(ex, ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
-    h('div', { class: 'controls top' },
-      listenBtn, playBtn, stopBtn,
-      h('label', {}, 'Tempo ', tempoSel),
-      h('label', {}, metro, ' Click'),
-      h('label', {}, guide, ' Guide notes'),
+    h('div', { class: 'transport' },
+      h('div', { class: 'transport-main' }, listenBtn, playBtn, stopBtn),
       toggle.el,
     ),
+    drawer,
     rungs ? ladderLine : '',
-    loopControls,
     status,
     hud,
     stage,

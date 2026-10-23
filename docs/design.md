@@ -51,6 +51,20 @@ Fonts are bundled from npm (`@fontsource-variable/*`), so nothing loads from a f
   `aria-pressed`.
 - **Toggle**: checkboxes are drawn as switches.
 - **Hand badge** (`.hand-badge.right|left|together|alternating`): a dot in the hand colour.
+- **Transport** (`.transport`): an exercise's first row is Listen, a large Play and Stop, plus the
+  view toggle. Everything else (tempo, click, guide notes, looping) sits in an **Options drawer**
+  (`details.drawer`), whose summary shows the meter and bpm. Status text is a small line
+  (`.status-line`), never a headline.
+- **Path map** (`src/ui/pathMap.ts`): the home page draws the mastery tree year by year as a road of
+  unit stations. Each station has a progress ring, and only the current unit is open. Lessons are tiles
+  with a strand dot. Badges appear only for things worth acting on or celebrating (Review, Solid, Mastered,
+  reps in progress); "not yet recommended" is a quieter tile, never a warning badge.
+- **Theory screen** (`src/ui/theory.ts` builds it, design styles it): large text (about 1.2–1.35 rem)
+  beside a picture panel (staff, lit keys, Hear it) on wide screens, stacked on phones. The rule is a
+  callout with a gradient edge, key terms are chips, and the check question is its own card with a gradient top
+  edge. In the playground the note name is set big in the display font.
+- **Phone** (≤ 560 px): icon-only nav, tighter gutters, a full-width transport. No page may scroll
+  sideways; wide music (the staff strip) clips or scrolls inside its own box.
 - **Lesson tiles** (`ol.lessons`): numbered tiles. `.done` shows a green tick and `.next` gets the gradient
   border. This is the seed of the mastery map.
 - **Big numbers** (score, live score, count-in) use the display font, tight and tabular.
