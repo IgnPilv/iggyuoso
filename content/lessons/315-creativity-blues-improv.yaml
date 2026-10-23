@@ -10,4 +10,13 @@ steps:
     notes: C4 Eb4 F4 F#4 G4 Bb4 C5
     labels: names
 - exercise: cr-blues-improv
+- explain: |
+    **Call and response** is the blues' own question and answer: a short phrase (the call), then a reply. In a blues
+    the same line often comes twice (bars 1–4 and 5–8, over different chords), then a new line answers it (bars 9–12).
+    This is called **AAB** form.
+  terms:
+  - call and response
+  - AAB form
+  - blues scale
+- exercise: cr-blues-head
 recap: Phrase, breathe, answer.

@@ -1,0 +1,15 @@
+id: compose-minor
+title: A tune in a minor key
+skills:
+- creativity
+steps:
+- explain: |
+    Minor keys use **i, iv and V**: in A minor, Am, Dm and E. The V chord is major, so its G becomes **G♯**, the leading
+    note that pulls up to A. Use G♯ over E, and G over the other chords.
+  keys:
+    notes: A4 B4 C5 D5 E5 F5 G#5
+    labels: names
+  sound: A3+C4+E4:h E4:q A4:q | D4+F4+A4:h F4:q A4:q | E4+G#4+B4:h G#4:q B4:q | A3+C4+E4:w
+- exercise: cmp-minor-4
+- exercise: cmp-minor-8
+recap: 'Minor: i, iv, V, and the leading note pulls home.'

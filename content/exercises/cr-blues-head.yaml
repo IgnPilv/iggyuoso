@@ -1,0 +1,23 @@
+id: cr-blues-head
+title: Write a blues head (AAB)
+kind: improvise
+hand: right
+prompt: 'A tune of your own over the blues: a four-bar line (with space in it), the same line again in bars 5–8, then a new
+  line that ends on C. Keep the best one in your Sketchbook.'
+key: C
+tempo: 84
+meter: 4/4
+countIn: 1
+bars: 12
+scale: C blues
+chords: C7 | F7 | C7 | C7 | F7 | F7 | C7 | C7 | G7 | F7 | C7 | G7
+backing: chords
+rules:
+- inScale
+- repeat:
+    bars: 4
+    at: 4
+- rests: 2
+- endOn: C
+reps: 3
+days: 2

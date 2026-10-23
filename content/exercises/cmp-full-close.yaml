@@ -1,0 +1,19 @@
+id: cmp-full-close
+title: End on home
+kind: improvise
+hand: right
+prompt: 'The app plays C, F, G, C. Make up a tune: on beat 1 of each bar pick a note of that bar''s chord, and end on C.'
+key: C
+tempo: 76
+meter: 4/4
+countIn: 1
+bars: 4
+scale: C major
+chords: C | F | G | C
+backing: chords
+rules:
+- inScale
+- chordTones
+- endOn: C
+reps: 3
+days: 2

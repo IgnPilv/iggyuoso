@@ -545,3 +545,26 @@ def first_notes(s, n):
         for p, _, _ in bar:
             if p != 'r': out.append(p.split('+')[-1])
     return out[:n]
+
+def improv(id, title, bars, rules, tempo=80, meter='4/4', key=None, scale=None, chords=None, backing=None, call=None, rhythm=None,
+           example=None, hand=None, prompt=None, reps=3, days=2, click=None):
+    """An improvising exercise (kind: improvise): the player makes up the notes inside a frame, and the take is checked by `rules`."""
+    for name, s in (('rhythm', rhythm), ('example', example), ('call', call)):
+        if s: check_bars(s, meter, 0.0, f'{id} {name}')
+    if rhythm: assert len(rhythm.split('|')) == bars, f'{id}: rhythm has {len(rhythm.split("|"))} bars, not {bars}'
+    if example: assert len(example.split('|')) == bars, f'{id}: example has {len(example.split("|"))} bars, not {bars}'
+    d = dict(title=title, kind='improvise')
+    if hand: d['hand'] = hand
+    if prompt: d['prompt'] = prompt
+    if key: d['key'] = key
+    d['tempo'] = tempo
+    d['meter'] = meter
+    d['countIn'] = 1
+    if click: d['click'] = click
+    d['bars'] = bars
+    for k, v in (('scale', scale), ('chords', chords), ('backing', backing), ('call', call), ('rhythm', rhythm), ('example', example)):
+        if v: d[k] = v
+    d['rules'] = rules
+    d['reps'] = reps
+    if days: d['days'] = days
+    return ex(id, **d)

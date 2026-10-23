@@ -1,11 +1,19 @@
 id: cr-black-keys-hands
 title: Black keys with a drum
-kind: tap
-prompt: 'Left hand: one low black key, like a drum. Right hand: your tune on the black keys above middle C.'
+kind: improvise
+hand: together
+prompt: 'Left hand: one low black key in half notes, like a drum. Right hand: your tune on the black keys above middle C,
+  in this rhythm.'
+key: F#
 tempo: 80
 meter: 4/4
 countIn: 1
-right: x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w
-left: x:h x:h | x:h x:h | x:h x:h | x:w
+bars: 4
+scale: C# D# F# G# A#
+rhythm: x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w
+rules:
+- inScale
+- rhythm
+- variety: 3
 reps: 2
 days: 1

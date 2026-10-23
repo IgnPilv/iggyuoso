@@ -1,0 +1,11 @@
+id: compose-two-hands
+title: Your own song, both hands
+skills:
+- creativity
+steps:
+- explain: |
+    Now you play the chords too. The left hand plays the **root** of each chord on beat 1 (and holds it, or plays root and
+    fifth); the right hand makes up the tune. Start slow: the hands have to think separately.
+- exercise: cmp-two-hands-c
+- exercise: cmp-two-hands-g
+recap: 'Roots below, your tune above: a song of your own.'

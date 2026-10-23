@@ -1,9 +1,18 @@
 id: pentatonic-rhythm-improv
-title: "Improvise on the black keys"
-kind: tap
+title: Improvise on the black keys
+kind: improvise
+hand: right
 prompt: Improvise! Play any black keys you like, in this rhythm. End on F sharp if you can.
+key: F#
 tempo: 80
-tempoLadder: true
 meter: 4/4
 countIn: 1
-rhythm: "x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:w"
+bars: 4
+scale: C# D# F# G# A#
+rhythm: x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:w
+rules:
+- inScale
+- rhythm
+- variety: 3
+- endOn: F#
+reps: 3

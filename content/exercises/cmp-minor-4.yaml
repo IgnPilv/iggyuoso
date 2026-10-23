@@ -1,0 +1,19 @@
+id: cmp-minor-4
+title: Four bars in A minor
+kind: improvise
+hand: right
+prompt: 'Over Am, Dm, E, Am: chord notes on the strong beats (G♯ over the E chord), home to A.'
+key: Am
+tempo: 72
+meter: 4/4
+countIn: 1
+bars: 4
+scale: A harmonic minor
+chords: Am | Dm | E | Am
+backing: chords
+rules:
+- inScale
+- chordTones
+- endOn: A
+reps: 3
+days: 2

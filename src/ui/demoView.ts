@@ -321,6 +321,7 @@ function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: View2
     demo.onSequence = (s) => p.playSequence(s);
     demo.onTimed = (s) => p.playTimed(s);
     demo.onAsk = (a) => p.answer(a);
+    if (ex.kind === 'improvise') demo.onRecord = (r) => p.improvise(r, ex);
     demo.onRunEnd = (mode) => {
       if (mode === 'listen') window.setTimeout(() => press(box, 'Play'), 800);
     };
@@ -331,7 +332,7 @@ function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: View2
       const other: View2 = opts.view === 'classic' ? 'falling' : 'classic';
       timers.push(window.setTimeout(() => setView(box, other), opts.switchAt));
     }
-    if (ex.kind === 'timed') timers.push(window.setTimeout(() => press(box, opts.listenFirst ? 'Listen' : 'Play'), 900));
+    if (ex.kind === 'timed' || ex.kind === 'improvise') timers.push(window.setTimeout(() => press(box, opts.listenFirst && ex.kind === 'timed' ? 'Listen' : 'Play'), 900));
     return () => { timers.forEach(clearTimeout); cleanup(); };
   };
 }
@@ -595,6 +596,12 @@ function scenes(): Scene[] {
       timers.push(window.setTimeout(() => press(box, 'Record'), 1200));
       return () => { timers.forEach(clearTimeout); demo.onRecord = undefined; cleanup?.(); };
     },
+  });
+  const improv = (content.exercises.get('cmp-full-close') ?? allExercises().find((e) => e.kind === 'improvise'));
+  if (improv) out.push({
+    title: 'Improvising that listens',
+    caption: 'Improvising and composing exercises give a frame (the notes to use, lit; the chords, played by the app and shown bar by bar; sometimes a rhythm or a phrase to answer) and the player makes up the tune. The app listens to the musical choices: notes from the scale, chord notes on the strong beats, ending at home, a question and its answer, a motif repeated or moved, space between phrases. The take is written on the staff and can be kept in the Sketchbook.',
+    run: exerciseScene(improv),
   });
   out.push({
     title: 'MIDI tester',

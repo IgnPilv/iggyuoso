@@ -1,0 +1,19 @@
+id: cmp-two-hands-c
+title: Two hands in C
+kind: improvise
+hand: together
+prompt: 'Left hand: C, F, G, C, low, on beat 1 of each bar. Right hand: your tune, chord notes on the strong beats, ending
+  on C.'
+key: C
+tempo: 66
+meter: 4/4
+countIn: 1
+bars: 4
+scale: C major
+chords: C | F | G | C
+rules:
+- bassRoots
+- chordTones
+- endOn: C
+reps: 3
+days: 2

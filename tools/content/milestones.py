@@ -19,11 +19,14 @@ def sight(id, title, keys, meter='4/4', left='fifths'):
 
 ADD_REQS = {
     'y1-checkpoint-a': ['technique-c-position-two-hands', 'rhythm-two-hands-together', 'piece-two-hand-hop', 'ear-echo-two'],
-    'y1-checkpoint-b': ['technique-positions-c-g-f', 'rhythm-two-hands-different', 'reading-two-hands-first', 'ear-five-keys', 'theory-time-signatures'],
-    'y1-exit': ['technique-scale-in-eighths', 'rhythm-eighths-two-hands', 'reading-two-hands-fifths', 'ear-octave-or-fifth', 'theory-road-map'],
-    'y2-checkpoint-a': ['technique-minor-scales-ht', 'rhythm-sixteenths-two-hands', 'reading-chords-sight', 'ear-seconds-thirds', 'theory-keys-two-and-three', 'piece-canon-theme'],
-    'y2-checkpoint-b': ['technique-cadences-first-keys', 'rhythm-triplet-patterns', 'reading-sight-many-keys', 'ear-triad-qualities', 'theory-interval-quality', 'piece-eine-kleine'],
-    'y2-exit': ['technique-positions-all-keys', 'rhythm-six-eight-hands', 'reading-other-meters', 'ear-all-intervals', 'theory-minor-key-signatures', 'piece-fur-elise'],
+    'y1-checkpoint-b': ['compose-motif', 'technique-positions-c-g-f', 'rhythm-two-hands-different', 'reading-two-hands-first', 'ear-five-keys', 'theory-time-signatures'],
+    'y1-exit': ['compose-sequence', 'technique-scale-in-eighths', 'rhythm-eighths-two-hands', 'reading-two-hands-fifths', 'ear-octave-or-fifth', 'theory-road-map'],
+    'y2-checkpoint-a': ['compose-endings', 'technique-minor-scales-ht', 'rhythm-sixteenths-two-hands', 'reading-chords-sight', 'ear-seconds-thirds', 'theory-keys-two-and-three', 'piece-canon-theme'],
+    'y2-checkpoint-b': ['compose-eight-bars', 'technique-cadences-first-keys', 'rhythm-triplet-patterns', 'reading-sight-many-keys', 'ear-triad-qualities', 'theory-interval-quality', 'piece-eine-kleine'],
+    'm7-flat-keys': ['compose-minor'],
+    'm8-arpeggios': ['compose-aba'],
+    'm9-form-and-blues': ['compose-modes'],
+    'y2-exit': ['compose-two-hands', 'technique-positions-all-keys', 'rhythm-six-eight-hands', 'reading-other-meters', 'ear-all-intervals', 'theory-minor-key-signatures', 'piece-fur-elise'],
 }
 
 def add_reqs(nodes):

@@ -20,6 +20,7 @@ import { demo } from '../demo/demo';
 import { h } from './dom';
 import { KeyboardView } from './keyboard';
 import { buildPlayer, earPlayer, quizPlayer } from './drills';
+import { improvisePlayer } from './improvise';
 import { renderStaff, type Clef, type StaffPart } from './staff';
 
 export interface PlayerResult {
@@ -43,6 +44,7 @@ export function mountExercise(root: HTMLElement, ex: Exercise, cal: Calibration,
   if (ex.kind === 'quiz') return quizPlayer(root, ex, cal, onDone);
   if (ex.kind === 'build') return buildPlayer(root, ex, cal, onDone);
   if (ex.kind === 'generated') return generatedHost(root, ex, cal, onDone);
+  if (ex.kind === 'improvise') return improvisePlayer(root, ex, cal, onDone);
   return timedHost(root, ex, cal, onDone);
 }
 

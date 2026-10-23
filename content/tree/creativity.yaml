@@ -1,7 +1,7 @@
 # The Creativity branch. Written by tools/content/build.py; format in content/README.md.
 branch: creativity
 title: Creativity
-summary: "Making your own music: rhythm conversations, improvising, bass lines, harmonising and moving tunes to new keys."
+summary: "Making your own music: improvising that listens to your notes, then composing: motifs, sequences, phrases, tunes over chords, song forms, minor keys and modes, the blues, harmonising and arranging."
 nodes:
   - { id: pentatonic-improv, stage: 2, lesson: pentatonic-improv, title: "Black-key improvising", requires: [sharps-flats-naturals] }
   - { id: improvise-over-drone, stage: 3, lesson: improvise-over-drone, title: "Improvise in C", requires: [pentatonic-improv, c-scale-hands-together] }
@@ -18,3 +18,13 @@ nodes:
   - { id: creativity-harmonise-minor, stage: 7, lesson: creativity-harmonise-minor, title: "Harmonising in minor", type: lesson, requires: [harmonise-i-iv-v, natural-minor, y2-exit] }
   - { id: creativity-minor-pentatonic, stage: 7, lesson: creativity-minor-pentatonic, title: "The minor pentatonic", type: lesson, requires: [creativity-harmonise-minor, creativity-question-answer] }
   - { id: creativity-blues-improv, stage: 9, lesson: creativity-blues-improv, title: "Improvising the blues", type: lesson, requires: [technique-blues-shapes, creativity-minor-pentatonic] }
+  - { id: compose-motif, stage: 2, lesson: compose-motif, title: "Your first motif", type: lesson, requires: [creativity-question-answer, c-d-e] }
+  - { id: compose-sequence, stage: 3, lesson: compose-sequence, title: "Sequences: the same shape, higher", type: lesson, requires: [compose-motif, c-scale-hands-together] }
+  - { id: compose-shape, stage: 3, lesson: compose-shape, title: "Steps, leaps and the shape of a tune", type: lesson, requires: [compose-sequence] }
+  - { id: compose-endings, stage: 4, lesson: compose-endings, title: "Endings: home, and half-way", type: lesson, requires: [compose-shape, chord-symbols, y1-exit] }
+  - { id: compose-over-chords, stage: 5, lesson: compose-over-chords, title: "A tune over chords", type: lesson, requires: [compose-endings, harmonise-i-iv-v, primary-triads] }
+  - { id: compose-eight-bars, stage: 5, lesson: compose-eight-bars, title: "An eight-bar song", type: lesson, requires: [compose-over-chords, theory-phrases-and-form] }
+  - { id: compose-two-hands, stage: 6, lesson: compose-two-hands, title: "Your own song, both hands", type: lesson, requires: [compose-eight-bars, accompaniment-patterns] }
+  - { id: compose-minor, stage: 7, lesson: compose-minor, title: "A tune in a minor key", type: lesson, requires: [compose-two-hands, creativity-harmonise-minor, harmonic-minor] }
+  - { id: compose-aba, stage: 8, lesson: compose-aba, title: "A B A: away and back", type: lesson, requires: [compose-minor, theory-phrases-and-form] }
+  - { id: compose-modes, stage: 9, lesson: compose-modes, title: "Modes: Dorian and Mixolydian", type: lesson, requires: [compose-aba, creativity-minor-pentatonic] }

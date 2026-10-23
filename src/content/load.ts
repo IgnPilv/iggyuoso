@@ -3,10 +3,10 @@ import {
   barLengths, isTieEnd, parseDuration, parsePedal, parsePitch, pitchToMidi, type Meter, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
 } from '../music/notes';
 import { DEFAULT_LADDER } from '../engine/practice';
-import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, scaleNotes } from '../music/theory';
+import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, scaleNotes, scalePitchClasses } from '../music/theory';
 import { GENERATORS } from './types';
 import type {
-  BuildTask, Content, EarItem, ExplainStep, Exercise, FindTarget, Lesson, LessonStep, PlaygroundStep, QuizQuestion, TheoryCheck,
+  BuildTask, Content, EarItem, ExplainStep, Exercise, FindTarget, ImproviseExercise, ImproviseRule, Lesson, LessonStep, PlaygroundStep, QuizQuestion, TheoryCheck,
   TheoryKeys, TheoryStaff,
 } from './types';
 
@@ -224,7 +224,7 @@ const HANDS = ['right', 'left', 'alternating', 'together'] as const;
 
 export function parseExercise(raw: Raw): Exercise {
   const id = str(raw, 'id')!;
-  const kind = oneOf(raw, 'kind', ['find', 'sequence', 'timed', 'tap', 'ear', 'quiz', 'build', 'generated'] as const);
+  const kind = oneOf(raw, 'kind', ['find', 'sequence', 'timed', 'tap', 'ear', 'quiz', 'build', 'generated', 'improvise'] as const);
   if (!kind) throw new FieldError('missing "kind"');
   const base = {
     id,
@@ -260,6 +260,7 @@ export function parseExercise(raw: Raw): Exercise {
   }
 
   if (kind === 'generated') return parseGenerated(raw, base);
+  if (kind === 'improvise') return parseImprovise(raw, base);
   if (kind === 'ear') return parseEar(raw, base, pitchMatch);
   if (kind === 'quiz') return parseQuiz(raw, base, pitchMatch);
   if (kind === 'build') return parseBuild(raw, base, pitchMatch);
@@ -669,3 +670,132 @@ function parseLadder(v: unknown): number[] {
 }
 
 const checkKey = (k: string) => (keySignature(k), k);
+
+// ---------------------------------------------------------------- improvise
+
+const RULE_NAMES = ['inScale', 'chordTones', 'startOn', 'endOn', 'questionAnswer', 'repeat', 'sequence', 'contrast', 'steps', 'rests', 'variety', 'range', 'rhythm', 'bassRoots', 'fill'] as const;
+
+/** Bar-by-bar note strings must fill whole bars of the meter. */
+function wholeBars(name: string, tokens: NoteToken[], meter: Meter): number {
+  const lens = barLengths(tokens);
+  lens.forEach((len, i) => {
+    if (Math.abs(len - meter.quarters) > 1e-6) throw new FieldError(`${name} bar ${i + 1} has ${round(len)} beats, but ${meter.beats}/${meter.unit} needs ${round(meter.quarters)}`);
+  });
+  return lens.length;
+}
+
+/** A chord's notes for the backing: held in the left hand, root between E2 and D#3 (roots) or around C3 (chords). */
+function backingFor(kind: string, chords: string[], bars: number, meter: Meter): NoteToken[] {
+  const out: NoteToken[] = [];
+  for (let b = 0; b < bars; b++) {
+    const sym = chords[b % chords.length];
+    const root = chordNotes(sym, 3)[0];
+    const pc = ((root % 12) + 12) % 12;
+    const notes = kind === 'roots'
+      ? [chordNotes(sym, pc >= 4 ? 2 : 3)[0]]
+      : chordNotes(sym, pc >= 7 ? 2 : 3);
+    const head = notes.map((m) => midiToPitch(m));
+    out.push({ pitches: head, beats: meter.quarters, bar: b, value: meter.quarters });
+  }
+  return out;
+}
+
+const midiToPitch = (m: number): Pitch => parsePitch(midiNameSharp(m));
+const midiNameSharp = (m: number) => `${['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'][((m % 12) + 12) % 12]}${Math.floor(m / 12) - 1}`;
+
+function parseImprovise(raw: Raw, base: Base): ImproviseExercise {
+  const tempo = Number(raw.tempo);
+  if (!(tempo >= 20 && tempo <= 300)) throw new FieldError('"tempo" should be a number of beats per minute (20 to 300)');
+  const meter = parseMeter(str(raw, 'meter', false) ?? '4/4');
+  const countIn = raw.countIn === undefined ? 1 : Number(raw.countIn);
+  if (!Number.isInteger(countIn) || countIn < 0 || countIn > 4) throw new FieldError('"countIn" should be 0 to 4 bars');
+  const click = oneOf(raw, 'click', ['on', 'count-in', 'off'] as const);
+  const bars = count(raw, 'bars', 4);
+  const key = base.key ?? 'C';
+  const tonic = parseKey(key).tonicPc;
+  let scale: ImproviseExercise['scale'];
+  if (raw.scale !== undefined) {
+    const text = str(raw, 'scale')!;
+    scale = /^[A-G](#|b)?\s+[a-z]/.test(text)
+      ? { name: text, pcs: scalePitchClasses(text) }
+      : { name: text, pcs: [...new Set(text.split(/\s+/).filter(Boolean).map((t) => parsePitchClass(t.replace(/-?\d+$/, ''))))] };
+  }
+  const chords = raw.chords !== undefined ? str(raw, 'chords')!.split('|').map((c) => c.trim()).filter(Boolean) : undefined;
+  chords?.forEach((c) => chordNotes(c));
+  const notesOf = (name: string) => {
+    if (raw[name] === undefined) return undefined;
+    const t = parseTimedNotes(str(raw, name)!);
+    wholeBars(name, t, meter);
+    return t;
+  };
+  const call = notesOf('call');
+  const example = notesOf('example');
+  let rhythm: NoteToken[] | undefined;
+  if (raw.rhythm !== undefined) {
+    const text = str(raw, 'rhythm')!;
+    if (/(^|[\s|+])(?!x:|r:)[^\s|]+:/.test(` ${text}`)) throw new FieldError('"rhythm" uses x for every note, like "x:q x:q x:h | r:q x:q x:h"');
+    rhythm = parseTimedNotes(text.replace(/(^|[\s|])x:/g, '$1C4:'));
+    if (wholeBars('rhythm', rhythm, meter) !== bars) throw new FieldError(`"rhythm" should have ${bars} bars, like "bars"`);
+  }
+  if (example && barLengths(example).length !== bars) throw new FieldError(`"example" should have ${bars} bars, like "bars"`);
+  let backing: NoteToken[] | undefined;
+  if (raw.backing !== undefined) {
+    const b = str(raw, 'backing')!;
+    if (b === 'chords' || b === 'roots') {
+      if (!chords) throw new FieldError(`backing: ${b} needs "chords"`);
+      backing = backingFor(b, chords, bars, meter);
+    } else if (b !== 'none') {
+      backing = parseTimedNotes(b);
+      if (wholeBars('backing', backing, meter) !== bars) throw new FieldError(`"backing" should have ${bars} bars, like "bars"`);
+    }
+  }
+  const rules: ImproviseRule[] = list(raw, 'rules').map((r): ImproviseRule => {
+    const o: Raw = typeof r === 'string' ? { rule: r } : (r as Raw);
+    const name = typeof r === 'object' && r && !('rule' in (r as Raw)) ? Object.keys(r as Raw)[0] : str(o, 'rule')!;
+    const arg = typeof r === 'object' && r && !('rule' in (r as Raw)) ? (r as Raw)[name] : undefined;
+    if (!(RULE_NAMES as readonly string[]).includes(name)) throw new FieldError(`rule "${name}" should be one of ${RULE_NAMES.join(', ')}`);
+    const num = (fallback: number) => {
+      const v = arg === undefined ? fallback : Number(arg);
+      if (!Number.isFinite(v) || v <= 0) throw new FieldError(`rule ${name} needs a positive number`);
+      return v;
+    };
+    switch (name) {
+      case 'inScale': if (!scale) throw new FieldError('rule inScale needs "scale"'); return { rule: name };
+      case 'chordTones': case 'bassRoots': if (!chords) throw new FieldError(`rule ${name} needs "chords"`); return { rule: name };
+      case 'rhythm': if (!rhythm) throw new FieldError('rule rhythm needs "rhythm"'); return { rule: name };
+      case 'startOn': case 'endOn': {
+        const text = arg === undefined || arg === 'tonic' ? key.replace(/m$/, '') : String(arg);
+        return { rule: name, pc: parsePitchClass(text), name: text.replace('b', '♭').replace('#', '♯') };
+      }
+      case 'questionAnswer': {
+        const split = num(Math.floor(bars / 2));
+        if (split >= bars) throw new FieldError('questionAnswer: the question needs fewer bars than the whole');
+        return { rule: name, split };
+      }
+      case 'repeat': case 'sequence': case 'contrast': {
+        // `repeat: 1`, or `repeat: { bars: 4, at: 8 }` (bar numbers from 0: "at" = where the copy starts).
+        const o2 = typeof arg === 'object' && arg ? (arg as Raw) : undefined;
+        const n = o2 ? Number(o2.bars ?? 1) : num(1);
+        const at = o2?.at !== undefined ? Number(o2.at) : n;
+        if (!(Number.isInteger(n) && n >= 1 && Number.isInteger(at) && at >= n)) throw new FieldError(`${name}: "bars" and "at" are whole numbers, "at" no earlier than the end of the first group`);
+        if (at + n > bars) throw new FieldError(`${name}: needs at least ${at + n} bars`);
+        return { rule: name, bars: n, at };
+      }
+      case 'steps': return { rule: name, percent: num(60) };
+      case 'rests': return { rule: name, beats: num(1) };
+      case 'variety': return { rule: name, notes: num(3) };
+      case 'range': {
+        const [lo, hi] = String(arg ?? '').split(/[\s-]+/).filter(Boolean).map((t) => pitchToMidi(parsePitch(t)));
+        if (lo === undefined || hi === undefined || lo >= hi) throw new FieldError('rule range is written like "range: C4-G4"');
+        return { rule: name, low: lo, high: hi };
+      }
+      default: return { rule: 'fill' };
+    }
+  });
+  if (!rules.some((r) => r.rule === 'fill')) rules.push({ rule: 'fill' });
+  return {
+    ...base, kind: 'improvise', tempo, meter, countIn, ...(click && click !== 'on' ? { click } : {}), bars, tonic,
+    ...(scale ? { scale } : {}), ...(chords ? { chords } : {}), ...(backing ? { backing } : {}), ...(call ? { call } : {}),
+    ...(rhythm ? { rhythm } : {}), ...(example ? { example } : {}), rules,
+  };
+}

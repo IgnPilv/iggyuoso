@@ -1,0 +1,20 @@
+id: cmp-sequence-tune
+title: A climbing tune
+kind: improvise
+hand: right
+prompt: 'A motif, then its sequence one step higher, then climb on and come home to a C. When a take comes out well, press
+  **Keep in Sketchbook**: composers keep notebooks of ideas, and so can you.'
+key: C
+tempo: 76
+meter: 4/4
+countIn: 1
+bars: 4
+scale: C major
+example: E4:e F4:e G4:q E4:h | F4:e G4:e A4:q F4:h | G4:q A4:q B4:q D5:q | C5:w
+rules:
+- inScale
+- sequence: 1
+- endOn: C
+- steps: 60
+reps: 3
+days: 2

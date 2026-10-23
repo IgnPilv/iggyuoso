@@ -1,13 +1,21 @@
 id: cr-blues-improv
 title: Twelve bars of your own
-kind: tap
-prompt: 'Left hand: low keys in quarters (try the boogie C G A G). Right hand: blues-scale notes, with rests between phrases.'
+kind: improvise
+hand: right
+prompt: 'The app plays the twelve-bar blues. Your right hand: notes of the C blues scale (lit), in short phrases with rests
+  between, like a singer breathing. End on C.'
+key: C
 tempo: 88
 meter: 4/4
 countIn: 1
-right: x:q x:q x:h | r:w | x:e x:e x:q x:h | r:w | x:q x:q x:h | r:w | x:e x:e x:q x:h | r:w | x:q x:q x:h | r:w | x:e x:e
-  x:q x:h | r:w
-left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q
-  x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q
+bars: 12
+scale: C blues
+chords: C7 | F7 | C7 | C7 | F7 | F7 | C7 | C7 | G7 | F7 | C7 | G7
+backing: chords
+rules:
+- inScale
+- rests: 2
+- variety: 4
+- endOn: C
 reps: 3
 days: 2

@@ -1,10 +1,19 @@
 id: cr-black-keys-1
 title: Black-key tune, right hand
-kind: tap
-prompt: Black keys only, any of them. Go up, then come home.
+kind: improvise
+hand: right
+prompt: Black keys only, any of them, in this rhythm. Go up, then come home to F♯ at the end.
+key: F#
 tempo: 84
 meter: 4/4
 countIn: 1
+bars: 4
+scale: C# D# F# G# A#
 rhythm: x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w
+rules:
+- inScale
+- rhythm
+- variety: 3
+- endOn: F#
 reps: 2
 days: 1

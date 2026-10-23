@@ -1,0 +1,20 @@
+id: cmp-arch
+title: An arch in C
+kind: improvise
+hand: right
+prompt: Four bars in C, mostly by step, rising to one high point and coming home to C. At least five different notes.
+key: C
+tempo: 76
+meter: 4/4
+countIn: 1
+bars: 4
+scale: C major
+example: C4:q D4:q E4:q F4:q | G4:q A4:q G4:h | F4:q E4:q D4:q E4:q | D4:h C4:h
+rules:
+- inScale
+- steps: 70
+- variety: 5
+- endOn: C
+- range: C4-C5
+reps: 3
+days: 2

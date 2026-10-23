@@ -1,0 +1,20 @@
+id: compose-modes
+title: 'Modes: Dorian and Mixolydian'
+skills:
+- creativity
+steps:
+- explain: |
+    The white keys from D to D make the **Dorian** mode: minor, but with a bright sixth (B). It is the sound of "Scarborough
+    Fair" and of a lot of jazz and folk. From G to G they make **Mixolydian**: major with a flat seventh (F), the sound of
+    rock and Celtic tunes.
+  keys:
+    notes: D4 E4 F4 G4 A4 B4 C5 D5
+    labels: names
+  sound: D4:q E4:q F4:q G4:q | A4:q B4:q C5:q D5:q
+  terms:
+  - mode
+  - Dorian
+  - Mixolydian
+- exercise: cmp-dorian
+- exercise: cmp-mixolydian
+recap: 'Modes: the white keys, a different home.'

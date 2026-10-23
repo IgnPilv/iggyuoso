@@ -1,0 +1,19 @@
+id: compose-eight-bars
+title: An eight-bar song
+skills:
+- creativity
+steps:
+- explain: |
+    Most songs are built from **phrases** of four bars. A classic eight-bar tune is a **question** (bars 1–4, ending half-way
+    on V) and an **answer** (bars 5–8, starting like the question, ending at home). This is called a **period**.
+  terms:
+  - phrase
+  - period
+  - antecedent
+  - consequent
+  sound: C4:q E4:q G4:q E4:q | F4:q A4:q G4:h | E4:q C4:q D4:q E4:q | D4:w | C4:q E4:q G4:q E4:q | F4:q A4:q G4:h | E4:q D4:q
+    B3:q D4:q | C4:w
+  callout: |
+    Question: ends on V. Answer: begins like the question, ends on I.
+- exercise: cmp-period
+recap: 'Question and answer, four bars each: a period.'

@@ -1,0 +1,21 @@
+id: cmp-period
+title: Your eight-bar song
+kind: improvise
+hand: right
+prompt: 'Bars 1–4: a question that ends on G or D (over the G chord). Bars 5–8: start the same way, end on C. Breathe between
+  them. When a take comes out well, press **Keep in Sketchbook**: composers keep notebooks of ideas, and so can you.'
+key: C
+tempo: 80
+meter: 4/4
+countIn: 1
+bars: 8
+scale: C major
+chords: C | F | C | G | C | F | G | C
+backing: chords
+rules:
+- inScale
+- chordTones
+- questionAnswer: 4
+- rests: 1
+reps: 3
+days: 2

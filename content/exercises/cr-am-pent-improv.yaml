@@ -1,11 +1,21 @@
 id: cr-am-pent-improv
 title: Improvise on A C D E G
-kind: tap
-prompt: 'Left hand: a low A each bar. Right hand: any of A C D E G, in this rhythm. End on A.'
+kind: improvise
+hand: together
+prompt: 'Left hand: a low A at the start of each bar. Right hand: any of A C D E G, in this rhythm. End on A.'
+key: Am
 tempo: 80
 meter: 4/4
 countIn: 1
-right: x:e x:e x:q x:q x:q | x:h x:h | x:e x:e x:q x:q x:q | x:w | x:e x:e x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w
-left: x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w
+bars: 8
+scale: A minor pentatonic
+chords: Am
+rhythm: x:e x:e x:q x:q x:q | x:h x:h | x:e x:e x:q x:q x:q | x:w | x:e x:e x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w
+rules:
+- inScale
+- rhythm
+- bassRoots
+- endOn: A
+- variety: 4
 reps: 3
 days: 2

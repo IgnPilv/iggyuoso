@@ -1,0 +1,19 @@
+id: cmp-half-close
+title: End half-way
+kind: improvise
+hand: right
+prompt: 'Over C, F, C, G: a tune that stops on D over the G chord. Hear how it waits for an answer?'
+key: C
+tempo: 76
+meter: 4/4
+countIn: 1
+bars: 4
+scale: C major
+chords: C | F | C | G
+backing: chords
+rules:
+- inScale
+- chordTones
+- endOn: D
+reps: 3
+days: 2
