@@ -1,4 +1,5 @@
 id: ear-higher-lower
+title: "Higher or lower?"
 kind: ear
 prompt: Listen to two notes. Was the second one higher or lower?
 questions: 20

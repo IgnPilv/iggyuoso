@@ -1,4 +1,5 @@
 id: scale-pattern-quiz
+title: "Major scale pattern quiz"
 kind: quiz
 shuffle: true
 questions:

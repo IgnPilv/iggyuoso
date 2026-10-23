@@ -1,4 +1,5 @@
 id: ear-major-minor-thirds
+title: "Major or minor third?"
 kind: ear
 prompt: Two notes, a third apart. Major third (bright) or minor third (darker)?
 questions: 20

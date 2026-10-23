@@ -1,4 +1,5 @@
 id: sharps-and-flats
+title: "Play sharps and flats"
 kind: build
 tasks:
   - { notes: "F#4", ask: "Play F sharp (the black key just right of F)" }

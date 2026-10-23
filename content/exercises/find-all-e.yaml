@@ -1,4 +1,5 @@
 id: find-all-e
+title: "Find every E"
 kind: find
 prompt: Find every E on the keyboard, from the bottom to the top.
 targets:

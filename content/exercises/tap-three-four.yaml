@@ -1,4 +1,5 @@
 id: tap-three-four
+title: "Tap it back in 3/4"
 kind: tap
 prompt: Listen, then tap the rhythm back on any key. Count 1, 2, 3.
 tempo: 80

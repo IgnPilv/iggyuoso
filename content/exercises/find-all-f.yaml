@@ -1,4 +1,5 @@
 id: find-all-f
+title: "Find every F"
 kind: find
 prompt: Find every F on the keyboard, from the bottom to the top.
 targets:
