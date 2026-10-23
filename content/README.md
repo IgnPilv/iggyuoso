@@ -53,10 +53,14 @@ several lessons.
   Scales: major, minor, harmonic minor, melodic minor, major/minor pentatonic, chromatic.
   Score = tasks right first time; "Show me" reveals the keys but the task no longer counts.
 
-`ear`, `quiz` and `build` take `pitchMatch: pitchClass` too.
+`ear`, `quiz` and `build` take `pitchMatch: pitchClass` too. `ear` and `quiz` take
+`feedback: none` for checkpoints: no right / wrong after each question (and no resolution after a
+degree), and the result card lists the missed questions with their answers.
 
-Common fields: `hand` (`right`, `left`, `alternating`, later `together`), `display`
-(`keys` = light keys on the keyboard, `staff` = notation; with `clef: treble|bass`), `prompt`.
+Common fields: `title` (a short name for headings and lists; without it the app uses the lesson's
+title and the exercise's number), `hand` (`right`, `left`, `alternating`, later `together`; a
+`tap` without `hand` shows no hand), `display` (`keys` = light keys on the keyboard, `staff` =
+notation; with `clef: treble|bass`), `prompt`.
 
 ## Note strings
 `<Note><octave>:<duration>` separated by spaces, bars separated by `|`. C4 is middle C.

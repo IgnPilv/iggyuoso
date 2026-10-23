@@ -1,6 +1,6 @@
 import { audio } from '../audio/audio';
-import { content } from '../content';
-import type { Exercise, TimedExercise } from '../content/types';
+import { content, exerciseTitle } from '../content';
+import type { EarExercise, Exercise, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
 import { parse } from 'yaml';
@@ -149,6 +149,9 @@ function scenes(): Scene[] {
     },
   });
   out.push({ title: 'Ear training', caption: 'The app plays a cadence to set the key, then a note, two notes or a phrase. The first key (or button) is the answer, and missed questions come back more often. The pianist gets one wrong.', run: exerciseScene(sampleOf('ear', SAMPLES.ear), { view: 'classic' }) });
+  const checkpoint = allExercises().find((e) => (e.kind === 'ear' || e.kind === 'quiz') && e.feedback === 'none')
+    ?? { ...(sampleOf('ear', SAMPLES.ear) as EarExercise), id: 'demo-checkpoint', feedback: 'none' as const };
+  out.push({ title: 'Checkpoint', caption: 'Checkpoints test without hints: each answer is only noted, and the result lists the ones that were wrong, with the right answers.', run: exerciseScene(checkpoint, { view: 'classic' }) });
   out.push({ title: 'Theory quiz', caption: 'Short theory questions, with a picture or a sound. Answer with a button, or by playing the answer.', run: exerciseScene(sampleOf('quiz', SAMPLES.quiz), { view: 'classic' }) });
   out.push({ title: 'Build it', caption: 'Play a named chord (hold it down), interval or scale, untimed. "Show me" lights the keys, but then it does not count as a first try.', run: exerciseScene(sampleOf('build', SAMPLES.build), { view: 'falling', switchAt: 6000 }) });
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
@@ -237,14 +240,14 @@ export const demoView: View = (root, arg) => {
       const ids = l.steps.flatMap((s) => ('exercise' in s ? [s.exercise] : []));
       exercises.append(h('div', { class: 'demo-lesson' },
         h('span', { class: 'small' }, l.title),
-        ...ids.map((id) => {
+        ...ids.map((id, i) => {
           const ex = content.exercises.get(id);
           if (!ex) return null;
           return h('button', { class: 'chip', onclick: () => {
             audio();
             window.scrollTo(0, 0);
-            show(-1, { title: id, caption: ex.prompt ?? 'The pianist plays this exercise.', run: exerciseScene(ex, { listenFirst: false }) });
-          } }, id);
+            show(-1, { title: exerciseTitle(ex), caption: ex.prompt ?? 'The pianist plays this exercise.', run: exerciseScene(ex, { listenFirst: false }) });
+          } }, ex.title ?? `Exercise ${i + 1}`);
         })));
     }
   }

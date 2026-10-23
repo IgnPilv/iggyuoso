@@ -160,3 +160,7 @@ never copied pages). Start small, adapt as we go.
   Ode to Joy) or our own (waltz in G, D minor song, call and answer). Improvising uses `tap`
   (any keys in a given rhythm) until there is a free-play kind. Ear checkpoints reuse normal
   `ear` exercises (no "no-feedback" mode yet).
+- 2026-10-23: Exercises can have a `title`; without one, headings use the lesson's title and the
+  exercise's number (never the raw id). A `tap` without `hand` shows no hand badge. `ear` and
+  `quiz` take `feedback: none` for checkpoints: answers are only noted (no colours, no
+  resolution), and the result lists the missed questions with their answers.

@@ -26,6 +26,8 @@ export type Display = 'keys' | 'staff';
 
 interface ExerciseBase {
   id: string;
+  /** A short name for lists and headings; falls back to the lesson's title. */
+  title?: string;
   prompt?: string;
   hand?: ExerciseHand;
   display: Display;
@@ -84,7 +86,11 @@ export interface EarExercise extends ExerciseBase {
   questions: number;
   items: EarItem[];
   pitchMatch: 'exact' | 'pitchClass';
+  /** 'none' for checkpoints: no right / wrong per question, answers shown at the end. */
+  feedback: Feedback;
 }
+
+export type Feedback = 'normal' | 'none';
 
 export interface QuizQuestion {
   ask: string;
@@ -105,6 +111,7 @@ export interface QuizExercise extends ExerciseBase {
   shuffle: boolean;
   questions: QuizQuestion[];
   pitchMatch: 'exact' | 'pitchClass';
+  feedback: Feedback;
 }
 
 export interface BuildTask {

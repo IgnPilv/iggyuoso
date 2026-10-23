@@ -217,3 +217,17 @@ questions:
     expect(s.clean).toEqual([true, false]);
   });
 });
+
+describe('exercise fields', () => {
+  it('reads title and feedback, and leaves a tap without a hand', () => {
+    const ear = parseExercise({ id: 'cp', kind: 'ear', title: 'Checkpoint', feedback: 'none', items: [{ type: 'note', pool: ['C4'] }] });
+    expect(ear.title).toBe('Checkpoint');
+    expect(ear.kind === 'ear' && ear.feedback).toBe('none');
+    const quiz = parseExercise({ id: 'q', kind: 'quiz', questions: [{ ask: 'a?', choices: ['x', 'y'], correct: 0 }] });
+    expect(quiz.kind === 'quiz' && quiz.feedback).toBe('normal');
+    expect(() => parseExercise({ id: 'q', kind: 'quiz', feedback: 'quiet', questions: [{ ask: 'a?', choices: ['x', 'y'], correct: 0 }] })).toThrow();
+    const tap = parseExercise({ id: 't', kind: 'tap', tempo: 80, meter: '4/4', rhythm: 'x:q x:q x:h' });
+    expect(tap.hand).toBeUndefined();
+    expect(parseExercise({ id: 't2', kind: 'tap', hand: 'left', tempo: 80, meter: '4/4', rhythm: 'x:q x:q x:h' }).hand).toBe('left');
+  });
+});

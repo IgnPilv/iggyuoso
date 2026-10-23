@@ -40,6 +40,8 @@ class AnswerStage {
   private shown: number[] = [];
   private done = new Map<number, string>();
   banner = '';
+  /** No right / wrong colours (checkpoints with `feedback: none`). */
+  silent = false;
 
   constructor(private cal: Calibration, private lo: number, private hi: number, ex: Exercise, private labels: 'c' | 'none' = 'c') {
     this.toggle = viewToggle(initialView(ex), (v) => this.build(v));
@@ -85,7 +87,7 @@ class AnswerStage {
   }
 
   flash(device: number, outcome: DrillOutcome) {
-    if (outcome === 'ignored') return;
+    if (outcome === 'ignored' || this.silent) return;
     const ok = outcome === 'correct';
     this.kb?.flash(device, ok ? 'hit' : 'wrong', ok ? 450 : 350);
     this.flashes.push({ device, kind: ok ? 'hit' : 'wrong', text: ok ? '✓' : '✗', until: performance.now() + 700 });
@@ -106,12 +108,25 @@ class AnswerStage {
   destroy() { this.stop(); }
 }
 
-function drillResultView(r: DrillResult, unit: string, retry: () => void) {
+/** A question answered wrongly in a no-feedback checkpoint, listed on the result card. */
+type Review = { number: number; ask: string; answer: string };
+
+function drillResultView(r: DrillResult, unit: string, retry: () => void, review: Review[] = []) {
   return h('div', { class: 'result' },
     h('div', { class: 'score' }, h('span', { class: 'stars' }, starText(r.stars)), ` ${r.score}`),
     h('p', {}, r.right === r.total ? `All ${r.total} ${unit} right. Well done!` : `${r.right} of ${r.total} ${unit} right.`),
+    review.length ? h('ul', { class: 'review-list' }, ...review.map((x) => h('li', {}, `${x.number}. ${x.ask} `, h('strong', {}, x.answer)))) : '',
     h('button', { onclick: retry }, 'Try again'),
   );
+}
+
+/** Note an answer without saying whether it was right. */
+function noteAnswer(feedback: HTMLElement, choices: HTMLElement, picked?: number) {
+  feedback.textContent = 'Answer noted.';
+  choices.querySelectorAll<HTMLButtonElement>('button.choice').forEach((b, i) => {
+    b.disabled = true;
+    b.classList.toggle('picked', i === picked);
+  });
 }
 
 const choiceButtons = (choices: string[], onPick: (i: number) => void) =>
@@ -138,6 +153,8 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
   void loadPiano(); // ear questions use the whole middle of the piano, and cadences go low
   const range = middleRange(cal, earNotes(ex));
   const stage = new AnswerStage(cal, range[0], range[1], ex);
+  const silent = (stage.silent = ex.feedback === 'none');
+  let review: Review[] = [];
   const ask = h('div', { class: 'ask' });
   const count = h('span', { class: 'small' });
   const feedback = h('p', { class: 'drill-feedback' });
@@ -180,22 +197,28 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
     if (!session.answered) return; // more notes of a phrase to come
     const q = session.current;
     const credit = session.credits[session.credits.length - 1];
-    if (q.choices && picked !== undefined) markChoices(choices, picked, q.correct!);
-    if (credit >= 1) {
-      feedback.textContent = '✓ Right!';
-      feedback.classList.add('ok');
+    if (silent) {
+      noteAnswer(feedback, choices, picked);
+      if (credit < 1) review.push({ number: session.number + 1, ask: q.ask, answer: q.answerText });
     } else {
-      feedback.textContent = `✗ It was ${q.answerText}.`;
-      feedback.classList.add('bad');
-      if (q.keys) stage.show(q.keys.expect);
+      if (q.choices && picked !== undefined) markChoices(choices, picked, q.correct!);
+      if (credit >= 1) {
+        feedback.textContent = '✓ Right!';
+        feedback.classList.add('ok');
+      } else {
+        feedback.textContent = `✗ It was ${q.answerText}.`;
+        feedback.classList.add('bad');
+        if (q.keys) stage.show(q.keys.expect);
+      }
     }
-    const afterEnds = q.after.length ? playSounds(q.after, 250) : 0;
+    // A resolution would give the answer away, so a checkpoint skips it.
+    const afterEnds = q.after.length && !silent ? playSounds(q.after, 250) : 0;
     if (session.done) {
       later(afterEnds + 900, finish);
       return;
     }
     nextBtn.hidden = false;
-    later(afterEnds + (credit >= 1 ? 1100 : 2600), next);
+    later(afterEnds + (silent || credit >= 1 ? 1100 : 2600), next);
   };
 
   const next = () => {
@@ -208,13 +231,14 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
     const r = session.result();
     const reward = record(ex, r.score, r.stars, 0);
     setAsk('Done!');
-    result.replaceChildren(drillResultView(r, ex.questions === 1 ? 'answer' : 'answers', restart), reward);
+    result.replaceChildren(drillResultView(r, ex.questions === 1 ? 'answer' : 'answers', restart, review), reward);
     onDone(r);
   };
 
   const restart = () => {
     clearTimers();
     session = new EarSession(ex, cal);
+    review = [];
     result.replaceChildren();
     present();
   };
@@ -263,6 +287,9 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
   const needsKeys = plays.length > 0;
   const range = middleRange(cal, plays);
   const stage = needsKeys ? new AnswerStage(cal, range[0], range[1], ex) : undefined;
+  const silent = ex.feedback === 'none';
+  if (stage) stage.silent = silent;
+  let review: Review[] = [];
   const ask = h('div', { class: 'ask' });
   const count = h('span', { class: 'small' });
   const picture = h('div', { class: 'quiz-picture' });
@@ -313,22 +340,27 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
     if (outcome === 'ignored' || !session.answered) return;
     const q = session.current;
     const credit = session.credits[session.credits.length - 1];
-    if (q.choices && picked !== undefined) markChoices(choices, picked, q.correct!);
-    if (credit >= 1) {
-      feedback.textContent = '✓ Right!';
-      feedback.classList.add('ok');
+    const answer = q.choices ? q.choices[q.correct!] : q.play!.map((p) => noteName(pitchToMidi(p))).join(' ');
+    if (silent) {
+      noteAnswer(feedback, choices, picked);
+      if (credit < 1) review.push({ number: session.index + 1, ask: q.ask, answer });
     } else {
-      const answer = q.choices ? q.choices[q.correct!] : q.play!.map((p) => noteName(pitchToMidi(p))).join(' ');
-      feedback.textContent = `✗ The answer is ${answer}.`;
-      feedback.classList.add('bad');
-      if (session.keys) stage?.show(session.keys.expect);
+      if (q.choices && picked !== undefined) markChoices(choices, picked, q.correct!);
+      if (credit >= 1) {
+        feedback.textContent = '✓ Right!';
+        feedback.classList.add('ok');
+      } else {
+        feedback.textContent = `✗ The answer is ${answer}.`;
+        feedback.classList.add('bad');
+        if (session.keys) stage?.show(session.keys.expect);
+      }
     }
     if (session.done) {
       timers.push(window.setTimeout(finish, 900));
       return;
     }
     nextBtn.hidden = false;
-    timers.push(window.setTimeout(next, credit >= 1 ? 1100 : 2600));
+    timers.push(window.setTimeout(next, silent || credit >= 1 ? 1100 : 2600));
   };
 
   const next = () => {
@@ -341,12 +373,13 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
     const r = session.result();
     const reward = record(ex, r.score, r.stars, 0);
     ask.textContent = 'Done!';
-    result.replaceChildren(drillResultView(r, 'answers', restart), reward);
+    result.replaceChildren(drillResultView(r, 'answers', restart, review), reward);
     onDone(r);
   };
 
   const restart = () => {
     session = new QuizSession(ex, cal);
+    review = [];
     result.replaceChildren();
     present();
   };

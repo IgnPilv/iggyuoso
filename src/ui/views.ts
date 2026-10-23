@@ -1,5 +1,5 @@
 import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibration';
-import { content, contentErrors, treeNodes } from '../content';
+import { content, contentErrors, exerciseTitle, treeNodes } from '../content';
 import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
@@ -275,7 +275,7 @@ export const exerciseView: View = (root, id?: string) => {
   const cal = needCalibration(root);
   if (!cal) return;
   const box = h('div');
-  root.append(h('section', { class: 'card' }, h('h2', {}, ex.id), box));
+  root.append(h('section', { class: 'card' }, h('h2', {}, exerciseTitle(ex)), box));
   return mountExercise(box, ex, cal, () => {});
 };
 
