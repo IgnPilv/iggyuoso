@@ -80,6 +80,8 @@ export interface Settings {
   computerKeys?: boolean;
   /** Tempo in percent the player last picked; the next exercise starts there too. */
   tempo?: number;
+  /** Count-in before timed exercises: a full bar, the last two beats ("3 4"), or none. */
+  countIn?: 'bar' | 'short' | 'none';
   /** Whether the exercise Options drawer was left open. */
   optionsOpen?: boolean;
 }

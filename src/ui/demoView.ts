@@ -369,7 +369,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Options carry over',
-    caption: 'Tempo, click, guide notes and whether Options is open are remembered: set 100% (or switch the click off) on one exercise, and the next one starts the same way.',
+    caption: 'Tempo, count-in, click, guide notes and whether Options is open are remembered: set 100%, a short count-in ("3 4" instead of "1 2 3 4") or no click on one exercise, and the next one starts the same way.',
     run: (box, next) => {
       resetDemoOptions();
       const timers: number[] = [];
@@ -383,15 +383,17 @@ function scenes(): Scene[] {
       };
       later(1200, () => { const d = box.querySelector('details.drawer') as HTMLDetailsElement | null; if (d) d.open = true; });
       later(2600, () => change('select[aria-label=tempo]', (el) => { el.value = '100'; }));
-      later(3800, () => change('.drawer input[type=checkbox]', (el) => { el.checked = false; }));
-      later(6000, () => {
+      later(3800, () => change('select[aria-label=count-in]', (el) => { el.value = 'short'; }));
+      later(5000, () => change('.drawer input[type=checkbox]', (el) => { el.checked = false; }));
+      later(6500, () => {
         cleanup();
         box.replaceChildren();
         const other = allExercises().find((e) => isTimed(e) && e.id !== first.id && !!e.ladder) ?? parseExercise(parse(SAMPLES.sixEight));
         cleanup = mountExercise(box, other, DEMO_CALIBRATION, () => {});
         setView(box, 'classic');
       });
-      later(11000, next);
+      later(8000, () => press(box, 'Listen'));
+      later(14000, next);
       return () => { timers.forEach(clearTimeout); cleanup(); resetDemoOptions(); };
     },
   });

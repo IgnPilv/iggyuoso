@@ -72,6 +72,10 @@ days: 2   # spread over at least two days
   held through a change, changed before the chord, pressed late, lifted early, lifted late before
   a rest. The pedal is a quarter of the take's score. Shown as falling notes; `display: staff` starts on
   sheet music instead (the player can switch).
+  `click: count-in` (timed and tap): the click sounds only during the count-in, then the player
+  keeps the pulse inside; `click: off`: no clicks at all (the count still shows on screen). The
+  player picks the count-in length in Options (a full bar of `countIn`, short = the last two beats,
+  or none); content does not set that.
 
 - `tap`: rhythm only, scored like `timed` but any key counts. `tempo`, `meter`, `countIn`, and
   `rhythm` written as a note string with `x` for every note: `"x:q x:q x:h | x:e x:e x:q r:q"`.

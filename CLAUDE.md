@@ -352,3 +352,8 @@ never copied pages). Start small, adapt as we go.
   Signing in adds the guest's progress to the account; signing out keeps it on the device as a
   guest. The sign-in link returns to the app with the session in the hash, turned into
   `#/profile`. Demo scene "Guest or account" (pretend server, never saves).
+- 2026-10-23: Count-in choice (Ignas: "the full 1 2 3 4 is a very long wait"): Options → Count-in
+  Full bar / Short / None, remembered like tempo (`settings.countIn`). Short = the last two beats of
+  the bar ("3 4"; one beat in 2/4, 6/8, 2/2), counted on screen as those beats; None = one silent
+  beat to get ready, no clicks. Content `click: count-in` (clicks only in the count-in, for the inner
+  pulse) and `click: off` on timed and tap. Demo scene "Options carry over" sets a short count-in.
