@@ -4,6 +4,7 @@ import {
 } from '../music/notes';
 import { DEFAULT_LADDER } from '../engine/practice';
 import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, scaleNotes } from '../music/theory';
+import { GENERATORS } from './types';
 import type {
   BuildTask, Content, EarItem, Exercise, FindTarget, Lesson, LessonStep, QuizQuestion, Unit,
 } from './types';
@@ -135,7 +136,7 @@ const HANDS = ['right', 'left', 'alternating', 'together'] as const;
 
 export function parseExercise(raw: Raw): Exercise {
   const id = str(raw, 'id')!;
-  const kind = oneOf(raw, 'kind', ['find', 'sequence', 'timed', 'tap', 'ear', 'quiz', 'build'] as const);
+  const kind = oneOf(raw, 'kind', ['find', 'sequence', 'timed', 'tap', 'ear', 'quiz', 'build', 'generated'] as const);
   if (!kind) throw new FieldError('missing "kind"');
   const base = {
     id,
@@ -143,7 +144,7 @@ export function parseExercise(raw: Raw): Exercise {
     prompt: str(raw, 'prompt', false),
     hand: oneOf(raw, 'hand', HANDS),
     display: oneOf(raw, 'display', ['keys', 'staff'] as const) ?? 'keys',
-    clef: oneOf(raw, 'clef', ['treble', 'bass'] as const),
+    clef: kind === 'generated' ? undefined : oneOf(raw, 'clef', ['treble', 'bass'] as const),
     ...(raw.key !== undefined ? { key: checkKey(str(raw, 'key')!) } : {}),
     reps: count(raw, 'reps', DEFAULT_REPS),
     days: count(raw, 'days', DEFAULT_DAYS),
@@ -170,6 +171,7 @@ export function parseExercise(raw: Raw): Exercise {
     return { ...base, kind, notes, fingers, position, pitchMatch };
   }
 
+  if (kind === 'generated') return parseGenerated(raw, base);
   if (kind === 'ear') return parseEar(raw, base, pitchMatch);
   if (kind === 'quiz') return parseQuiz(raw, base, pitchMatch);
   if (kind === 'build') return parseBuild(raw, base, pitchMatch);
@@ -347,6 +349,58 @@ function parseQuiz(raw: Raw, base: Base, pitchMatch: Match): Exercise {
     }
   });
   return { ...base, kind: 'quiz', shuffle: raw.shuffle === true, questions, pitchMatch, feedback: feedbackOf(raw) };
+}
+
+/**
+ * `kind: generated`: a drill made fresh each run. Pool fields can sit at the top level or under
+ * `pool:`. Notes are a range ("C4-G5": every note of the key in between) or a list.
+ */
+function parseGenerated(top: Raw, base: Base): Exercise {
+  const raw: Raw = { ...top, ...((top.pool ?? {}) as Raw) };
+  const generator = oneOf(raw, 'generator', GENERATORS);
+  if (!generator) throw new FieldError(`missing "generator" (${GENERATORS.join(', ')})`);
+  const notesText = raw.notes === undefined ? 'C4-G4' : Array.isArray(raw.notes) ? raw.notes.join(' ') : str(raw, 'notes')!;
+  const rangeMatch = /^\s*(\S+)\s*-\s*(\S+)\s*$/.exec(notesText);
+  let range: [Pitch, Pitch] | undefined;
+  let notes: Pitch[] | undefined;
+  if (rangeMatch) {
+    range = [parsePitch(rangeMatch[1]), parsePitch(rangeMatch[2])];
+    if (pitchToMidi(range[1]) - pitchToMidi(range[0]) < 2) throw new FieldError('"notes" range should span at least a 2nd, like C4-G4');
+  } else {
+    notes = parsePitchList(notesText);
+    if (notes.length < 2) throw new FieldError('"notes" should be a range like C4-G4 or at least two notes');
+  }
+  const keys = strings(raw, 'keys').flatMap((k) => k.split(/[\s,]+/)).filter(Boolean);
+  keys.forEach(checkKey);
+  const durations = strings(raw, 'durations').flatMap((d) => d.split(/\s+/)).filter(Boolean);
+  durations.forEach((d) => parseDuration(d.replace(/^r:/, '')));
+  if (durations.length && durations.every((d) => d.startsWith('r:'))) throw new FieldError('"durations" needs at least one note value, not only rests');
+  const meter = str(raw, 'meter', false) ?? '4/4';
+  parseMeter(meter);
+  const intervals = strings(raw, 'intervals').flatMap((d) => d.split(/[\s,]+/)).filter(Boolean);
+  intervals.forEach(interval);
+  if (generator === 'intervals' && intervals.length < 2) throw new FieldError('"intervals" should list at least two, like [M2, M3, P5]');
+  const m = (raw.mastery ?? {}) as Raw;
+  const accuracy = m.accuracy === undefined ? 90 : Number(m.accuracy);
+  if (!(accuracy >= 50 && accuracy <= 100)) throw new FieldError('"mastery.accuracy" should be a percentage from 50 to 100');
+  const timed = generator === 'rhythm-read' || generator === 'sight-read';
+  const medianMs = m.medianMs === undefined ? (timed ? undefined : 2500) : Number(m.medianMs);
+  if (medianMs !== undefined && !(medianMs >= 300)) throw new FieldError('"mastery.medianMs" should be milliseconds, 300 or more');
+  const questions = raw.questions === undefined ? 30 : Number(raw.questions);
+  if (!Number.isInteger(questions) || questions < 1 || questions > 200) throw new FieldError('"questions" should be a whole number from 1 to 200');
+  const bars = raw.bars === undefined ? 4 : Number(raw.bars);
+  if (!Number.isInteger(bars) || bars < 1 || bars > 32) throw new FieldError('"bars" should be a whole number from 1 to 32');
+  const tempo = raw.tempo === undefined ? 72 : Number(raw.tempo);
+  if (!(tempo >= 20 && tempo <= 240)) throw new FieldError('"tempo" should be beats per minute, 20 to 240');
+  return {
+    ...base, kind: 'generated', generator, ...(range ? { range } : { list: notes }),
+    clefs: oneOf(raw, 'clef', ['treble', 'bass', 'grand'] as const) ?? 'treble',
+    keys: keys.length ? keys : ['C'],
+    durations: durations.length ? durations : ['q', 'h'],
+    meter, bars, tempo, intervals, questions,
+    answer: oneOf(raw, 'answer', ['play', 'name'] as const) ?? 'play',
+    mastery: { accuracy, ...(medianMs !== undefined ? { medianMs } : {}) },
+  };
 }
 
 const octaveWords = (n: number) => (n === 1 ? 'one octave' : `${n} octaves`);

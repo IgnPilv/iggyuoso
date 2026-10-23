@@ -5,6 +5,7 @@ import { beatMs } from '../music/timeline';
 import {
   cadence, CHORD_QUALITIES, chordQuality, degreeSemitones, interval, parseKey, resolution, tonicIn,
 } from '../music/theory';
+import { applyGoal } from '../scoring/goal';
 import { stars } from '../scoring/stars';
 
 // State machines for the question kinds: ear, quiz and build. Like the other sessions they take
@@ -265,11 +266,14 @@ function buildEarQuestion(it: EarItem, value: string, ex: EarExercise, cal: Cali
 export class QuizSession {
   readonly questions: QuizQuestion[];
   readonly credits: number[] = [];
+  /** How long each answer took, from the question being shown. */
+  readonly times: number[] = [];
   index = 0;
   answered = false;
   keys?: KeyAnswer;
+  private askedAt = 0;
 
-  constructor(readonly ex: QuizExercise, readonly cal: Calibration, rng: Rng = Math.random) {
+  constructor(readonly ex: QuizExercise, readonly cal: Calibration, rng: Rng = Math.random, private clock: () => number = () => performance.now()) {
     this.questions = [...ex.questions];
     if (ex.shuffle) {
       for (let i = this.questions.length - 1; i > 0; i--) {
@@ -285,6 +289,7 @@ export class QuizSession {
 
   private setup() {
     const q = this.current;
+    this.askedAt = this.clock();
     this.keys = q?.play ? new KeyAnswer(q.play.map((p) => toDevice(this.cal, pitchToMidi(p))), matcher(this.ex.pitchMatch)) : undefined;
   }
 
@@ -292,6 +297,7 @@ export class QuizSession {
     if (this.answered || this.done || this.current.choices === undefined) return 'ignored';
     const ok = choice === this.current.correct;
     this.credits.push(ok ? 1 : 0);
+    this.times.push(this.clock() - this.askedAt);
     this.answered = true;
     return ok ? 'correct' : 'wrong';
   }
@@ -301,6 +307,7 @@ export class QuizSession {
     const out = this.keys.press(device);
     if (this.keys.done) {
       this.credits.push(this.keys.credit);
+      this.times.push(this.clock() - this.askedAt);
       this.answered = true;
     }
     return out;
@@ -313,7 +320,21 @@ export class QuizSession {
     this.setup();
   }
 
-  result(): DrillResult { return drillResult(this.credits, this.questions.length); }
+  /** The middle answer time, in ms (undefined before any answer). */
+  medianMs(): number | undefined {
+    if (!this.times.length) return undefined;
+    const xs = [...this.times].sort((a, b) => a - b);
+    const mid = Math.floor(xs.length / 2);
+    return Math.round(xs.length % 2 ? xs[mid] : (xs[mid - 1] + xs[mid]) / 2);
+  }
+
+  result(): DrillResult & { medianMs?: number; slow?: boolean } {
+    const r = drillResult(this.credits, this.questions.length);
+    if (!this.ex.goal) return r;
+    const medianMs = this.medianMs();
+    const g = applyGoal(r.score, this.ex.goal, medianMs);
+    return { ...r, score: g.score, stars: g.stars, medianMs, slow: g.slow };
+  }
 }
 
 // ---------------------------------------------------------------- build

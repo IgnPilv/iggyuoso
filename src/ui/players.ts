@@ -1,6 +1,8 @@
 import { audio, click, loadPiano, outputLatencyMs, piano, stopAll } from '../audio/audio';
 import { keyName, keyWindow, toDevice, type Calibration } from '../calibration';
-import type { Exercise, FindExercise, SequenceExercise, TimedExercise } from '../content/types';
+import type { Exercise, FindExercise, GeneratedExercise, SequenceExercise, TimedExercise } from '../content/types';
+import { generate } from '../engine/generate';
+import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
 import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
 import { expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
@@ -40,7 +42,33 @@ export function mountExercise(root: HTMLElement, ex: Exercise, cal: Calibration,
   if (ex.kind === 'ear') return earPlayer(root, ex, cal, onDone);
   if (ex.kind === 'quiz') return quizPlayer(root, ex, cal, onDone);
   if (ex.kind === 'build') return buildPlayer(root, ex, cal, onDone);
+  if (ex.kind === 'generated') return generatedHost(root, ex, cal, onDone);
   return timedHost(root, ex, cal, onDone);
+}
+
+/** For a run of a generated drill: makes the next run (players call it from "Try again"). */
+export const regenerate = new WeakMap<Exercise, () => void>();
+
+/** A generated drill: each run is made fresh; reading ones also get a "new one" button. */
+function generatedHost(root: HTMLElement, ex: GeneratedExercise, cal: Calibration, onDone: OnDone): () => void {
+  let cleanup = () => {};
+  const timed = ex.generator === 'rhythm-read' || ex.generator === 'sight-read';
+  const mount = () => {
+    cleanup();
+    root.replaceChildren();
+    const made = generate(ex);
+    regenerate.set(made, mount);
+    const box = h('div');
+    root.append(box);
+    if (timed) {
+      root.prepend(h('div', { class: 'controls generated-bar' },
+        h('span', { class: 'small' }, ex.generator === 'sight-read' ? 'A new tune every time.' : 'A new rhythm every time.'),
+        h('button', { class: 'secondary', onclick: mount }, ex.generator === 'sight-read' ? 'New tune' : 'New rhythm')));
+    }
+    cleanup = mountExercise(box, made, cal, onDone);
+  };
+  mount();
+  return () => cleanup();
 }
 
 /** A timed exercise, or a loop of some of its bars; "Loop" and "Whole piece" swap between them. */
@@ -565,7 +593,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       staff?.clear('current');
       expected.forEach((e, i) => {
         if (pos.beat >= e.beat && pos.beat < e.beat + e.beats) {
-          kb?.set(devices[i], 'target', true, e.finger ? String(e.finger) : '');
+          // Generated drills test reading: the keys stay dark while the player plays.
+          if (!(ex.goal && mode === 'play')) kb?.set(devices[i], 'target', true, e.finger ? String(e.finger) : '');
           staff?.mark(`${e.hand}:${e.index}`, 'current');
         }
         if (staff && mode === 'play') {
@@ -605,7 +634,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       stop();
       if (mode === 'listen') { status.textContent = 'Now you try: press Play.'; idle(); demo.onRunEnd?.('listen'); return; }
       status.textContent = '';
-      const r = session.result();
+      const raw = session.result();
+      const goal = applyGoal(raw.score, ex.goal);
+      const r = ex.goal ? { ...raw, score: goal.score, stars: goal.stars } : raw;
       for (const n of r.notes) staff?.mark(`${n.expected.hand}:${n.expected.index}`, n.outcome === 'hit' ? 'hit' : n.outcome);
       hud.replaceChildren();
       if (looping) {

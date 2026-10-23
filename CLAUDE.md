@@ -244,3 +244,12 @@ never copied pages). Start small, adapt as we go.
   current and best streak, a 12-week calendar, totals, each strand's nodes by state, and per-hand
   timing (last 10 timed takes against the 10 before). Node states are worked out with a memo per
   call (the requirement walk was exponential). Demo scene "Profile" uses made-up history.
+- 2026-10-23: Generated drills (`kind: generated`, `src/engine/generate.ts`): `read-notes`,
+  `find-notes`, `intervals`, `rhythm-read`, `sight-read`, drawn fresh each run from a pool
+  (notes as a range in the key or a list, clef treble/bass/grand, keys, durations, meter, bars,
+  tempo). Each run is built as raw content and parsed by the normal loader into a quiz or timed
+  exercise that saves under the drill's id; "Try again" (and "New tune / New rhythm") makes a new
+  one. Never the same note or interval twice running. `mastery: { accuracy, medianMs }` (defaults
+  90 and 2500 ms; timed ones accuracy only): reaching the accuracy scores 92 (a clean take), and a
+  middle answer time over `medianMs` caps the take at 91 (`src/scoring/goal.ts`). Quiz sessions
+  time each answer. Demo scenes "Fresh drills" and "Sight-reading".

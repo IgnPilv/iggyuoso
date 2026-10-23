@@ -97,8 +97,8 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
         const step = diatonicStep(p);
         const ny = y(step);
         // Ledger lines above or below the staff.
-        for (let st = bStep - 2; st >= step; st -= 2) g.append(s('line', { x1: x - 10, x2: x + 10, y1: y(st), y2: y(st), class: 'ledger' }));
-        for (let st = bStep + 10; st <= step; st += 2) g.append(s('line', { x1: x - 10, x2: x + 10, y1: y(st), y2: y(st), class: 'ledger' }));
+        for (let st = bStep - 2; st >= step; st -= 2) g.append(s('line', { x1: x - 12, x2: x + 12, y1: y(st), y2: y(st), class: 'ledger' }));
+        for (let st = bStep + 10; st <= step; st += 2) g.append(s('line', { x1: x - 12, x2: x + 12, y1: y(st), y2: y(st), class: 'ledger' }));
         const open = value !== undefined && value >= 2;
         g.append(s('ellipse', { cx: x, cy: ny, rx: 6.2, ry: 4.4, transform: `rotate(-20 ${x} ${ny})`, class: open ? 'head open' : 'head' }));
         const current = shown.get(step) ?? sig?.of[p.letter] ?? 0;
