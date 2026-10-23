@@ -1,0 +1,7 @@
+id: waltz-rh
+kind: timed
+hand: right
+tempo: 80
+meter: 3/4
+countIn: 1
+right: "C4:h. | E4:q D4:q C4:q | D4:h E4:q | C4:h."

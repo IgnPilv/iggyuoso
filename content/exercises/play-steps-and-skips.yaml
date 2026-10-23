@@ -1,0 +1,9 @@
+id: play-steps-and-skips
+kind: build
+tasks:
+  - { notes: "C4 D4", order: listed, ask: "Play a step up from C" }
+  - { notes: "C4 E4", order: listed, ask: "Play a skip up from C" }
+  - { notes: "G4 F4", order: listed, ask: "Play a step down from G" }
+  - { notes: "G4 E4", order: listed, ask: "Play a skip down from G" }
+  - { notes: "D4 F4", order: listed, ask: "Play a skip up from D" }
+  - { notes: "B3 A3", order: listed, ask: "Play a step down from B" }

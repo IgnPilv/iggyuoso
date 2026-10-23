@@ -1,0 +1,18 @@
+id: legato-and-non-legato
+title: "Detached and smooth"
+unit: steady-hands
+skills: [non-legato, legato]
+steps:
+  - explain: |
+      There are two basic ways to join notes.
+
+      **Detached** (non legato): lift each finger before the next note, so there is a tiny gap.
+      Let the weight of your arm drop into each key, then float up.
+  - exercise: detached-steps-rh
+  - explain: |
+      **Smooth** (legato): hold each key down until the very moment the next one goes down,
+      like walking: one foot lifts as the other lands. Music-school pupils learn detached first,
+      then smooth, and so do we.
+  - exercise: smooth-steps-rh
+  - exercise: smooth-steps-lh
+recap: "Detached = small gaps. Smooth (legato) = one note hands over to the next with no gap."

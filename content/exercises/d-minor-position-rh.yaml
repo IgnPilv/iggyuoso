@@ -1,0 +1,8 @@
+id: d-minor-position-rh
+kind: timed
+hand: right
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "D4:q E4:q F4:q G4:q | A4:w | A4:q G4:q F4:q E4:q | D4:w"
+fingers: "1 2 3 4 5 5 4 3 2 1"

@@ -1,0 +1,9 @@
+id: sharps-and-flats
+kind: build
+tasks:
+  - { notes: "F#4", ask: "Play F sharp (the black key just right of F)" }
+  - { notes: "Bb4", ask: "Play B flat (the black key just left of B)" }
+  - { notes: "C#4", ask: "Play C sharp" }
+  - { notes: "Eb4", ask: "Play E flat" }
+  - { notes: "G#4", ask: "Play G sharp" }
+  - { notes: "Db4", ask: "Play D flat. Notice: it's the same key as C sharp" }

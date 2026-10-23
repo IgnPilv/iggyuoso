@@ -1,0 +1,7 @@
+id: improvise-in-c
+kind: tap
+prompt: Improvise with the right hand on C D E F G, in this rhythm. Start and finish on C.
+tempo: 80
+meter: 4/4
+countIn: 1
+rhythm: "x:q x:q x:q x:q | x:h x:h | x:q x:e x:e x:q x:q | x:w | x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w"

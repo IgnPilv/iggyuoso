@@ -1,0 +1,12 @@
+id: key-of-g
+title: "One sharp: the key of G"
+unit: first-chords
+skills: [key-signatures, keys]
+steps:
+  - explain: |
+      A piece in **G major** uses G as home. To sound right it needs **F sharp** instead of F.
+      Rather than writing ♯ on every F, music puts one sharp at the very start of each line, on
+      the F line. That's the **key signature**: it means "every F is F sharp".
+  - exercise: key-of-g-quiz
+  - exercise: g-major-steps
+recap: "G major: one sharp, F sharp, shown in the key signature."

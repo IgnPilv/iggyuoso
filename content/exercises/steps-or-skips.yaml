@@ -1,0 +1,10 @@
+id: steps-or-skips
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "Step or skip?", staff: "C4:h D4:h", clef: treble, choices: [Step, Skip], correct: 0 }
+  - { ask: "Step or skip?", staff: "E4:h G4:h", clef: treble, choices: [Step, Skip], correct: 1 }
+  - { ask: "Step or skip?", staff: "F4:h E4:h", clef: treble, choices: [Step, Skip], correct: 0 }
+  - { ask: "Step or skip?", staff: "G4:h E4:h", clef: treble, choices: [Step, Skip], correct: 1 }
+  - { ask: "Step or skip?", staff: "C4:h B3:h", clef: bass, choices: [Step, Skip], correct: 0 }
+  - { ask: "Step or skip?", staff: "A3:h F3:h", clef: bass, choices: [Step, Skip], correct: 1 }

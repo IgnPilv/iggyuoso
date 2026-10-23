@@ -1,0 +1,15 @@
+id: first-pieces-alternating
+title: "First pieces"
+unit: steady-hands
+skills: [repertoire, hands-alternating]
+steps:
+  - explain: |
+      Real pieces now. **Hot Cross Buns** and **Mary Had a Little Lamb** are old folk songs
+      that every piano school starts with. Play them smoothly (legato) and count steadily.
+  - exercise: hot-cross-buns
+  - exercise: mary-lamb-rh
+  - explain: |
+      **Call and answer**: the right hand asks a question, the left hand answers.
+      While one hand plays, the other one waits on its keys, ready.
+  - exercise: call-and-answer
+recap: "You can play three pieces. Steady beat first, the right notes second, speed last."

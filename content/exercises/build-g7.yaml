@@ -1,0 +1,6 @@
+id: build-g7
+kind: build
+tasks:
+  - { chord: G7, octave: 3, ask: "Play G7 in full: G, B, D, F" }
+  - { notes: "B2 F3 G3", order: any, ask: "Now the easy left-hand G7: B, F, G (fingers 5, 2, 1)" }
+  - { notes: "C3 E3 G3", order: any, ask: "And back to C: C, E, G (fingers 5, 3, 1)" }

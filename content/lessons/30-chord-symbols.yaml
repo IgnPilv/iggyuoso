@@ -1,0 +1,15 @@
+id: chord-symbols
+title: "Chord symbols and numbers"
+unit: first-chords
+skills: [chord-symbols, roman-numerals, primary-chords]
+steps:
+  - explain: |
+      Musicians name chords two ways. **Chord symbols** use the root's letter: C, F, G.
+      **Roman numerals** count from the key's home note: in the key of C, C is **I**, F is **IV**
+      and G is **V**. These three are the **primary chords**; thousands of songs use only them.
+  - exercise: chord-symbols-quiz
+  - explain: |
+      **V7** (G7 in C) adds one more note on top: G B D **F**. It sounds like it wants to go home
+      to C. For the left hand there's a short version that sits right next to the C chord.
+  - exercise: build-g7
+recap: "I, IV and V are the primary chords. V7 pulls back home to I."

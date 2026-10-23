@@ -1,0 +1,15 @@
+id: y1-checkpoint-a
+title: "Checkpoint 1: steady hands"
+unit: steady-hands
+skills: [checkpoint]
+steps:
+  - explain: |
+      Checkpoint time. This mixes everything since the start: smooth playing, rhythm, your
+      ears and a piece. Take it whenever you feel ready, and as many times as you like.
+      It counts best on a different day from when you learned the skills, because that shows
+      they have really stuck.
+  - exercise: smooth-steps-lh
+  - exercise: tap-three-four
+  - exercise: ear-checkpoint-a
+  - exercise: mary-lamb-rh
+recap: "Checkpoint 1 done: you can play smoothly, keep a beat, hear direction and play a tune."

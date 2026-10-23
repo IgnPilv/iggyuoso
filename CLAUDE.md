@@ -155,3 +155,8 @@ never copied pages). Start small, adapt as we go.
   promotion 25, daily cap 300. The streak forgives one rest day. The result card shows the XP and
   state changes; home shows XP, streak, reviews due and Solid / Mastered / Review badges. The
   demo uses throwaway progress, so it shows rewards without saving anything.
+- 2026-10-23: Year 1 content complete (units 1–6, 51 lessons, 3 checkpoints, Year 1 exit exam),
+  every Year 1 tree node linked to its lesson. Pieces are public domain (folk tunes, Beethoven's
+  Ode to Joy) or our own (waltz in G, D minor song, call and answer). Improvising uses `tap`
+  (any keys in a given rhythm) until there is a free-play kind. Ear checkpoints reuse normal
+  `ear` exercises (no "no-feedback" mode yet).

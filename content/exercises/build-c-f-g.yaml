@@ -1,0 +1,8 @@
+id: build-c-f-g
+kind: build
+tasks:
+  - { chord: C, ask: "Play a C triad: C, E, G together" }
+  - { chord: F, ask: "Play an F triad: F, A, C together" }
+  - { chord: G, ask: "Play a G triad: G, B, D together" }
+  - { chord: C, octave: 3, ask: "C triad again, with the left hand" }
+  - { chord: G, octave: 3, ask: "G triad with the left hand" }

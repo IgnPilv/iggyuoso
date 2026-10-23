@@ -1,0 +1,10 @@
+id: held-lh-moving-rh
+kind: timed
+hand: together
+tempo: 66
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:q F4:q | G4:q F4:q E4:q D4:q | C4:w"
+left:  "C3:w | C3:w | C3:w"
+rightFingers: "1 2 3 4 5 4 3 2 1"
+leftFingers: "5 5 5"

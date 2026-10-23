@@ -1,0 +1,16 @@
+id: dynamics
+title: "Loud and soft"
+unit: two-hands-at-once
+skills: [dynamics, terms]
+steps:
+  - explain: |
+      **Dynamics** say how loud to play. The words are Italian, the language of early music printing.
+
+      - **p** (piano) = soft, **f** (forte) = loud
+      - **mp** (mezzo piano) = medium soft, **mf** (mezzo forte) = medium loud
+      - **<** crescendo = getting louder, **>** diminuendo = getting softer
+
+      Loud comes from more arm weight and a faster key, not from hitting harder.
+  - exercise: dynamics-quiz
+  - exercise: echo-loud-soft
+recap: "p soft, mp medium soft, mf medium loud, f loud. Crescendo grows, diminuendo fades."

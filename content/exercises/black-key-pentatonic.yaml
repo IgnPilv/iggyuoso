@@ -1,0 +1,7 @@
+id: black-key-pentatonic
+kind: build
+pitchMatch: pitchClass
+tasks:
+  - { notes: "F#4 G#4 A#4", order: listed, ask: "Play the group of three black keys, left to right" }
+  - { notes: "C#4 D#4", order: listed, ask: "Play the group of two black keys, left to right" }
+  - { notes: "F#4 G#4 A#4 C#5 D#5", order: listed, ask: "Now all five, from F sharp up" }
