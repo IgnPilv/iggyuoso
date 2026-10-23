@@ -33,7 +33,10 @@ never copied pages). Start small, adapt as we go.
 - **Calibration step** on first run (and from settings): the player presses the **lowest white key**
   and then the **highest key**. From that the app works out the key count and range, and where
   middle C is. Never hard-code middle C = MIDI 60; keyboards are often octave-shifted.
-- **MIDI input only for now.** No computer-keyboard input.
+- **MIDI keyboard first.** An optional **computer-keyboard emulator** (off by default, Settings →
+  Computer keyboard) plays notes through the same input path, for trying the app without a piano:
+  A S D F G H J K L ; ' = white keys from middle C, W E T Y U O P = black keys, Z / X = octave
+  down / up. It is for testing, not a replacement for real keys.
 - Use MIDI event timestamps for timing; sanity-check against `performance.now()`.
 - Treat near-simultaneous note-ons (~60 ms) as one chord hit, timed from the first note.
 - Keep a permanent MIDI tester page in settings (keys lighting up + raw message log).
@@ -113,6 +116,13 @@ never copied pages). Start small, adapt as we go.
 - 2026-10-23: Theme = Follow the device / Dark / Light (`settings.theme`, header button and
   Settings → Appearance), applied before first paint by `index.html`. The falling-notes stage
   stays dark in both themes. Demo scene "Dark and light" flips themes without saving.
+- 2026-10-23: Computer-keyboard emulator (Ignas: "use a to ' keys as white"), replacing "MIDI only".
+  Off by default; switch in Settings or from the "no MIDI keyboard / blocked" banner. Keys are read
+  by `KeyboardEvent.code` (layout independent), A = middle C of the current calibration, Z / X shift
+  by an octave (±4); key repeat, modifier combos and typing in form fields are ignored. Notes go
+  through `midi.inject(..., 'Computer keyboard')`, which also shows as an input. While it is on,
+  on-screen keys show their letter (not in "find the key" drills) and setup offers a standard
+  88-key piano instead of pressing the ends. The demo ignores real typing.
 - 2026-10-23: 5-year mastery curriculum designed from research (`docs/mastery-curriculum.md`,
   `docs/research/`): target ≈ ABRSM Grade 6 after 5 years; seven strands; path over a visible
   tree; 3 checkpoints a year; mastery states with a later-day retest and decay; XP for clean takes

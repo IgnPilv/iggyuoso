@@ -46,6 +46,8 @@ export interface Settings {
   view?: 'classic' | 'falling';
   /** Look of the app; 'system' follows the device. index.html reads this before first paint. */
   theme: 'system' | 'light' | 'dark';
+  /** Play with the computer keyboard (A S D F ... as white keys). Off unless switched on. */
+  computerKeys?: boolean;
 }
 
 const DEFAULT_SETTINGS: Settings = { latencyMs: 0, metronome: true, guide: false, theme: 'system' };

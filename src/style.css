@@ -557,3 +557,13 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 
 .setting-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
 .setting-row p { margin: 0; }
+
+/* ---------------------------------------------------------------- computer keyboard */
+
+.keys-pill { font-size: var(--text-xs); padding: 2px 10px; border-radius: var(--radius-pill); background: var(--accent-soft); color: var(--ink); text-decoration: none; font-family: var(--font-mono); white-space: nowrap; }
+.keys-pill[hidden] { display: none; }
+.keymap p { margin: 6px 0; }
+.keymap kbd { display: inline-block; min-width: 1.5em; text-align: center; margin: 0 2px; padding: 1px 6px; border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: var(--radius-sm); background: var(--surface-2); font-family: var(--font-mono); font-size: var(--text-sm); font-weight: 600; color: var(--ink); transition: background var(--dur-fast), color var(--dur-fast); }
+.keymap kbd.down { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.key text.hint { font-size: 10px; font-weight: 600; fill: var(--key-label); font-family: var(--font-mono); }
+.key.black text.hint { fill: var(--key-white); font-size: 8px; }

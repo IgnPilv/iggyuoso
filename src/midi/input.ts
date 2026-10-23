@@ -40,6 +40,8 @@ export class MidiInput {
   private rawListeners = new Set<Listener<RawEvent>>();
   private portListeners = new Set<() => void>();
   readonly held = new Set<number>();
+  /** Inputs that are not Web MIDI ports, such as the computer keyboard. */
+  private virtual = new Set<string>();
 
   static supported() {
     return typeof navigator !== 'undefined' && 'requestMIDIAccess' in navigator;
@@ -49,10 +51,18 @@ export class MidiInput {
     return !!this.access;
   }
 
+  /** The browser (or the player) refused MIDI access. */
+  blocked = false;
+
   async start(): Promise<void> {
     if (this.access) return;
     if (!MidiInput.supported()) throw new Error('This browser has no Web MIDI. Please use Chrome or Edge.');
-    this.access = await navigator.requestMIDIAccess({ sysex: false });
+    try {
+      this.access = await navigator.requestMIDIAccess({ sysex: false });
+    } catch (e) {
+      this.blocked = true;
+      throw e;
+    }
     this.access.onstatechange = () => {
       this.attach();
       this.portListeners.forEach((l) => l());
@@ -61,8 +71,15 @@ export class MidiInput {
   }
 
   inputNames(): string[] {
-    if (!this.access) return [];
-    return [...this.access.inputs.values()].filter((i) => i.state === 'connected').map((i) => i.name ?? 'MIDI input');
+    const ports = this.access ? [...this.access.inputs.values()].filter((i) => i.state === 'connected').map((i) => i.name ?? 'MIDI input') : [];
+    return [...ports, ...this.virtual];
+  }
+
+  setVirtual(name: string, on: boolean) {
+    if (on === this.virtual.has(name)) return;
+    if (on) this.virtual.add(name);
+    else this.virtual.delete(name);
+    this.portListeners.forEach((l) => l());
   }
 
   private attach() {
@@ -77,9 +94,9 @@ export class MidiInput {
     this.dispatch(Array.from(e.data), time, port, fallback);
   }
 
-  /** Play a key from software (the demo pianist), exactly as if it came from a keyboard. */
-  inject(type: 'on' | 'off', note: number, velocity = 80) {
-    this.dispatch(type === 'on' ? [0x90, note, velocity] : [0x80, note, 0], performance.now(), 'Demo pianist', false);
+  /** Play a key from software (demo pianist, computer keyboard), exactly as if it came from a keyboard. */
+  inject(type: 'on' | 'off', note: number, velocity = 80, port = 'Demo pianist') {
+    this.dispatch(type === 'on' ? [0x90, note, velocity] : [0x80, note, 0], performance.now(), port, false);
   }
 
   private dispatch(data: number[], time: number, port: string, fallback: boolean) {
