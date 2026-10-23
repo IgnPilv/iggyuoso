@@ -1,5 +1,5 @@
 import { audio, loadPiano, piano, stopAll } from '../audio/audio';
-import { toDevice, type Calibration } from '../calibration';
+import { keyWindow, toDevice, type Calibration } from '../calibration';
 import type { BuildExercise, EarExercise, Exercise, QuizExercise } from '../content/types';
 import { demo } from '../demo/demo';
 import { BuildSession, EarSession, noteName, QuizSession, sequence, soundsEnd, type DrillOutcome, type DrillResult, type Sound } from '../engine/drills';
@@ -7,7 +7,7 @@ import { midi } from '../midi/input';
 import { pitchToMidi } from '../music/notes';
 import { h } from './dom';
 import { FallingView, type FallingNote, type Flash } from './falling';
-import { KeyboardView, rangeAround } from './keyboard';
+import { KeyboardView } from './keyboard';
 import {
   animate, header, initialView, record, showHeld, starText, viewToggle, type OnDone, type ViewMode,
 } from './players';
@@ -140,10 +140,10 @@ function markChoices(box: HTMLElement, picked: number, correct: number) {
   });
 }
 
-/** Keys from C3 to C6 (written), cut to the keyboard. */
+/** Keys around these written notes (C3 to C6 if none), with middle C in view. */
 function middleRange(cal: Calibration, notes: number[] = []): [number, number] {
   const keys = notes.length ? notes.map((n) => toDevice(cal, n)) : [toDevice(cal, 48), toDevice(cal, 84)];
-  return rangeAround(keys, cal.low, cal.high);
+  return keyWindow(cal, keys);
 }
 
 // ---------------------------------------------------------------- ear

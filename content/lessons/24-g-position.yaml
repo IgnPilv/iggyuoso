@@ -5,8 +5,8 @@ skills: [five-finger-position, hands-together]
 steps:
   - explain: |
       Five-finger positions can start on any key. In **G position** the right thumb sits on the
-      G above middle C (G A B C D). The left little finger sits on the G an octave and a half lower,
-      so the left hand covers G A B C D too.
+      G above middle C (G A B C D). The left little finger sits on the G below middle C, so the
+      left hand covers G A B C D too, with its thumb on the D just above middle C.
   - exercise: g-position-rh
   - exercise: g-position-together
 recap: "G position: both hands cover G A B C D. Same shape as C position, new place."

@@ -90,11 +90,3 @@ export class KeyboardView {
     setTimeout(() => this.set(midi, cls, false), ms);
   }
 }
-
-/** A range of device keys around some notes, padded, for exercises that use part of the keyboard. */
-export function rangeAround(keys: number[], low: number, high: number, pad = 7): [number, number] {
-  if (!keys.length) return [low, high];
-  const lo = Math.max(low, Math.min(...keys) - pad);
-  const hi = Math.min(high, Math.max(...keys) + pad);
-  return [lo, Math.max(hi, Math.min(high, lo + 24))];
-}

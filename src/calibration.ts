@@ -62,3 +62,23 @@ export const toWritten = (c: Calibration, deviceMidi: number) => deviceMidi - c.
 export const inRange = (c: Calibration, deviceMidi: number) => deviceMidi >= c.low && deviceMidi <= c.high;
 /** Name of a device key in the player's terms, e.g. "C4" for their middle C. */
 export const keyName = (c: Calibration, deviceMidi: number) => midiName(toWritten(c, deviceMidi));
+
+/**
+ * The device keys to draw for an exercise that uses part of the keyboard: its keys padded by
+ * `pad`, always with middle C in view and room around it for its label (so the C in the middle of
+ * the picture is never mistaken for middle C), at least two octaves wide, starting and ending on
+ * white keys, cut to the keyboard. No keys = the whole keyboard.
+ */
+export function keyWindow(c: Calibration, keys: number[], pad = 7): [number, number] {
+  if (!keys.length) return [c.low, c.high];
+  let lo = Math.min(...keys, c.middleC) - pad;
+  let hi = Math.max(...keys, c.middleC) + pad;
+  const short = 24 - (hi - lo);
+  if (short > 0) {
+    lo -= Math.floor(short / 2);
+    hi += Math.ceil(short / 2);
+  }
+  while (isBlack(lo)) lo--;
+  while (isBlack(hi)) hi++;
+  return [Math.max(c.low, lo), Math.min(c.high, hi)];
+}
