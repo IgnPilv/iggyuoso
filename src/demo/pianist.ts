@@ -1,4 +1,5 @@
 import { toDevice } from '../calibration';
+import type { Recorder } from '../engine/recorder';
 import type { TimedSession } from '../engine/timedSession';
 import { computerKeys } from '../midi/computerKeys';
 import { midi } from '../midi/input';
@@ -74,6 +75,18 @@ export class Pianist {
       }
       if (sp.lift) this.at(at(sp.beat + sp.beats) - (i === s.pedalLine.length - 1 ? -200 : 30), () => this.setPedal(false));
     });
+  }
+
+  /**
+   * Plays its own idea into a take: `notes` are [written MIDI, beat, beats] from the first
+   * downbeat, with a little human wobble. Calls `done` a beat after the last note ends.
+   */
+  playIdea(r: Recorder, notes: [number, number, number][], done?: () => void) {
+    const now = performance.now();
+    const at = (beat: number) => r.t0 + r.opts.latencyMs + beat * r.beatMs - now;
+    notes.forEach(([m, beat, beats], i) => this.playNote(toDevice(r.cal, m), at(beat) + Math.round(Math.sin(i * 1.7) * 25), beats * r.beatMs * 0.9));
+    const end = Math.max(...notes.map(([, b, d]) => b + d));
+    if (done) this.at(at(end + 1), done);
   }
 
   /** Answers an ear, quiz or build question; slips on the second one. */

@@ -18,6 +18,7 @@ import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
 import { explainBlock, playground } from './theory';
 import { calibrateView, keyMap, testerView } from './views';
+import { sketchbookView } from './sketchbookView';
 
 // The no-keyboard showcase. Scenes are picked from the live content, so the demo always shows
 // what the app currently does. When a feature is added, add or extend a scene here.
@@ -569,6 +570,33 @@ function scenes(): Scene[] {
   out.push({ title: 'Rhythm echo', caption: 'Play sounds a rhythm you cannot see. After a bar of count-in it is your turn: tap it back on any key. Then the staff shows what it was, marked note by note. A new rhythm every run.', run: played(parseExercise(parse(SAMPLES.echo)), 5000) });
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
   out.push({
+    title: 'Sketchbook',
+    caption: 'Free play, written down. Press Record, and after a bar of count-in play anything: the Sketchbook writes it on the staff (right hand on the treble, left on the bass), plays it back with your own timing, and keeps the ideas you like, with a name and a note. A kept idea can be practised like any exercise, falling notes and all. Here the pianist plays a little tune over a bass and keeps it.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      // A four-bar idea: a tune that climbs and comes home, over C, F, G, C in the left hand.
+      const tune: [number, number, number][] = [
+        [64, 0, 1], [67, 1, 1], [72, 2, 2], [48, 0, 4],
+        [69, 4, 1], [67, 5, 0.5], [65, 5.5, 0.5], [64, 6, 2], [53, 4, 4],
+        [62, 8, 1], [64, 9, 1], [65, 10, 1], [67, 11, 1], [55, 8, 4],
+        [64, 12, 2], [60, 14, 2], [48, 12, 4],
+      ];
+      demo.onRecord = (r) => p.playIdea(r, tune, () => {
+        press(box, 'Stop');
+        timers.push(window.setTimeout(() => press(box, 'Play it back'), 1500));
+        timers.push(window.setTimeout(() => {
+          const name = box.querySelector<HTMLInputElement>('.sketch-take input[type=text]');
+          if (name) name.value = 'Climb and come home';
+          press(box, 'Keep it');
+        }, 9500));
+        timers.push(window.setTimeout(next, 14000));
+      });
+      const cleanup = sketchbookView(box);
+      timers.push(window.setTimeout(() => press(box, 'Record'), 1200));
+      return () => { timers.forEach(clearTimeout); demo.onRecord = undefined; cleanup?.(); };
+    },
+  });
+  out.push({
     title: 'MIDI tester',
     caption: 'In Settings, the MIDI tester shows each key you press and the raw MIDI messages, for checking that a keyboard is connected.',
     run: (box, next, p) => {
@@ -619,7 +647,7 @@ export const demoView: View = (root, arg) => {
     pianist.stop();
     cleanup?.();
     cleanup = undefined;
-    demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onAsk = undefined;
+    demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onRecord = demo.onAsk = undefined;
   };
 
   const show = (i: number, scene?: Scene) => {

@@ -141,6 +141,10 @@ export class Store {
   /** Other saved records (the mastery store keeps its own under these keys). */
   get<T>(key: string): T | undefined { return this.read<T>(key); }
   put(key: string, v: unknown) { this.write(key, v); }
+  /** Names of saved records that start with `prefix` (without the app's own prefix). */
+  keys(prefix: string): string[] {
+    return (this.backend.keys?.() ?? []).filter((k) => k.startsWith(PREFIX + prefix)).map((k) => k.slice(PREFIX.length));
+  }
 
   get calibration(): Calibration | undefined { return this.read('calibration'); }
   set calibration(c: Calibration | undefined) { this.write('calibration', c); }
