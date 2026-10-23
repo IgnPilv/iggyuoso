@@ -104,6 +104,16 @@ tempoLadder: [70, 85, 100]
 meter: 4/4
 right: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:e A4:e G4:e F4:e E4:q C4:q | C4:q G3:q C4:h"
 fingers: "1 2 3 1 3 4 5 5 5 4 3 3 1 1 1 1"`,
+  keys: `
+id: demo-key
+kind: timed
+display: staff
+hand: right
+prompt: G major. The sharp is in the key signature, so the F#s need no sign; the F natural does.
+key: G
+tempo: 72
+meter: 4/4
+right: "G4:q A4:q B4:q C5:q | D5:q F#5:q F5:q F#5:q | G5:h D5:h | G4:w"`,
   pedal: `
 id: demo-pedal
 kind: timed
@@ -178,6 +188,7 @@ function scenes(): Scene[] {
   const rhythms = parseExercise(parse(SAMPLES.rhythms));
   out.push({ title: 'Upbeats, ties and triplets', caption: 'Note strings can start on an upbeat, tie notes across a bar line, and mix dotted notes, triplets and sixteenths. On the staff a tie is an arc, and the tied note is held, not played again.', run: exerciseScene(rhythms, { view: 'classic' }) });
   out.push({ title: 'Six-eight', caption: 'In 6/8 the click and the tempo count dotted quarters, two to a bar, as musicians count it.', run: exerciseScene(parseExercise(parse(SAMPLES.sixEight)), { view: 'falling' }) });
+  out.push({ title: 'Key signatures', caption: 'Staff exercises can have a key signature (key: G). Notes are still written out in full; the staff only draws a sharp, flat or natural where a note differs from the key or from an earlier note in the bar.', run: exerciseScene(parseExercise(parse(SAMPLES.keys)), { view: 'classic' }) });
   out.push({ title: 'Sustain pedal', caption: 'Pedal lines sit under the staff ("Ped.", a line while it is held, a notch at each change) and down the right edge of the falling notes. The pedal is scored too: here the pianist holds it through one chord change, and the result says so. With the computer keyboard, Space is the pedal.', run: exerciseScene(parseExercise(parse(SAMPLES.pedal)), { view: 'classic' }) });
   out.push({
     title: 'Tempo ladder and loops',

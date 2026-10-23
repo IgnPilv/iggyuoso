@@ -1,4 +1,4 @@
-import { NoteParseError, parsePitch, parsePitchClass, pitchToMidi } from './notes';
+import { NoteParseError, parsePitch, parsePitchClass, pitchToMidi, type Letter } from './notes';
 
 // Intervals, chords, scales, keys and degrees, as written MIDI numbers (C4 = 60). Used by the
 // ear, quiz and build exercises. Spelling (C# vs Db) is not tracked; the keys are what count.
@@ -88,6 +88,34 @@ export function parseKey(text: string): Key {
   const m = /^([A-G](?:#|b)?)(m)?$/.exec(text.trim());
   if (!m) throw new NoteParseError(`"${text}" is not a key like C, G, F# or Am`);
   return { tonicPc: parsePitchClass(m[1]), minor: !!m[2], name: `${m[1]} ${m[2] ? 'minor' : 'major'}` };
+}
+
+// ---------------------------------------------------------------- key signatures
+
+const SHARP_KEYS = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#'];
+const FLAT_KEYS = ['C', 'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'Cb'];
+const SHARP_MINORS = ['A', 'E', 'B', 'F#', 'C#', 'G#', 'D#', 'A#'];
+const FLAT_MINORS = ['A', 'D', 'G', 'C', 'F', 'Bb', 'Eb', 'Ab'];
+export const SHARP_ORDER: Letter[] = ['F', 'C', 'G', 'D', 'A', 'E', 'B'];
+export const FLAT_ORDER: Letter[] = ['B', 'E', 'A', 'D', 'G', 'C', 'F'];
+
+export interface KeySignature {
+  /** Sharps (> 0) or flats (< 0), -7 to 7. */
+  count: number;
+  /** The accidental the signature gives each letter (0 for letters it leaves alone). */
+  of: Record<Letter, -1 | 0 | 1>;
+}
+
+/** The signature of a key written like C, G, Bb, F#m or Am. */
+export function keySignature(text: string): KeySignature {
+  const m = /^([A-G](?:#|b)?)(m)?$/.exec(text.trim());
+  if (!m) throw new NoteParseError(`"${text}" is not a key like C, G, Bb, F#m or Am`);
+  const [sharps, flats] = m[2] ? [SHARP_MINORS, FLAT_MINORS] : [SHARP_KEYS, FLAT_KEYS];
+  const count = sharps.includes(m[1]) ? sharps.indexOf(m[1]) : flats.includes(m[1]) ? -flats.indexOf(m[1]) : NaN;
+  if (Number.isNaN(count)) throw new NoteParseError(`"${text}" has no key signature; use the usual spelling, such as Eb rather than D#`);
+  const of = { C: 0, D: 0, E: 0, F: 0, G: 0, A: 0, B: 0 } as Record<Letter, -1 | 0 | 1>;
+  (count > 0 ? SHARP_ORDER : FLAT_ORDER).slice(0, Math.abs(count)).forEach((l) => { of[l] = count > 0 ? 1 : -1; });
+  return { count, of };
 }
 
 /** Tonic of a key as a written note in the octave of `ref` (C-based octave), e.g. G in octave 4 = G4. */

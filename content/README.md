@@ -66,7 +66,9 @@ several lessons.
 `feedback: none` for checkpoints: no right / wrong after each question (and no resolution after a
 degree), and the result card lists the missed questions with their answers.
 
-Common fields: `title` (a short name for headings and lists; without it the app uses the lesson's
+Common fields: `key` (a key signature for the staff: `G`, `Bb`, `F#m`, `Dm`...; notes are still
+written out in full, e.g. `F#4` in G, and the staff only draws a sign where a note differs from
+the key or from an earlier note on that line in the bar; quiz questions take `key` too), `title` (a short name for headings and lists; without it the app uses the lesson's
 title and the exercise's number), `hand` (`right`, `left`, `alternating`, later `together`; a
 `tap` without `hand` shows no hand), `display` (`keys` = light keys on the keyboard, `staff` =
 notation; with `clef: treble|bass`), `prompt`.

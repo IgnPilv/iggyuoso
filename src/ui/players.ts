@@ -265,7 +265,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       pos.forEach((k) => kb!.set(k, 'pos'));
       staff = ex.display === 'staff'
-        ? renderStaff([{ clef: clefFor(ex), notes: ex.notes.map((p, i) => ({ pitches: [p], key: String(i) })) }])
+        ? renderStaff([{ clef: clefFor(ex), notes: ex.notes.map((p, i) => ({ pitches: [p], key: String(i) })) }], { key: ex.key })
         : undefined;
       for (let i = 0; i < session.current; i++) staff?.mark(String(i), 'hit');
       const offHeld = showHeld(kb);
@@ -396,7 +396,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       offHeld = () => {};
       idle();
     } else {
-      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex) });
+      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), key: ex.key });
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
       stage.append(h('div', { class: 'staff-wrap' }, staff.svg), kb.el);

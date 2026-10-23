@@ -192,3 +192,8 @@ never copied pages). Start small, adapt as we go.
   score is 75% notes and 25% pedal. Drawn under the staff (Ped., line, change notches, lift tick)
   and as a strip down the right edge of the falling notes; the HUD shows a pedal light. Demo scene
   "Sustain pedal" (the pianist holds through one change).
+- 2026-10-23: Key signatures: `key:` on any exercise (and quiz questions) draws the signature after
+  the clef. Notes keep their full spelling (`F#4` in G); `key` changes only the drawing, never
+  what is played or scored. The staff follows bar rules: an accidental shows where a note differs
+  from the key or from an earlier note on that line or space in the bar, naturals included
+  (also without a key). Untimed reading drills treat each note on its own. Demo "Key signatures".

@@ -3,7 +3,7 @@ import {
   barLengths, isTieEnd, parseDuration, parsePedal, parsePitch, pitchToMidi, type Meter, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
 } from '../music/notes';
 import { DEFAULT_LADDER } from '../engine/practice';
-import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, parseKey, scaleNotes } from '../music/theory';
+import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, scaleNotes } from '../music/theory';
 import type {
   BuildTask, Content, EarItem, Exercise, FindTarget, Lesson, LessonStep, QuizQuestion, Unit,
 } from './types';
@@ -133,6 +133,7 @@ export function parseExercise(raw: Raw): Exercise {
     hand: oneOf(raw, 'hand', HANDS),
     display: oneOf(raw, 'display', ['keys', 'staff'] as const) ?? 'keys',
     clef: oneOf(raw, 'clef', ['treble', 'bass'] as const),
+    ...(raw.key !== undefined ? { key: checkKey(str(raw, 'key')!) } : {}),
   };
   const pitchMatch = raw.pitchMatch === 'pitchClass' ? 'pitchClass' : 'exact';
   if (raw.pitchMatch !== undefined && raw.pitchMatch !== 'pitchClass') throw new FieldError('"pitchMatch" can only be pitchClass');
@@ -325,6 +326,7 @@ function parseQuiz(raw: Raw, base: Base, pitchMatch: Match): Exercise {
       if (o.sound !== undefined) q.sound = parseTimedNotes(str(o, 'sound')!);
       const clef = oneOf(o, 'clef', ['treble', 'bass'] as const);
       if (clef) q.clef = clef;
+      if (o.key !== undefined) q.key = checkKey(str(o, 'key')!);
       return q;
     } catch (e) {
       throw new FieldError(`question ${i + 1}: ${(e as Error).message}`);
@@ -412,3 +414,5 @@ function parseLadder(v: unknown): number[] {
   }
   return rungs[rungs.length - 1] === 100 ? rungs : [...rungs, 100];
 }
+
+const checkKey = (k: string) => (keySignature(k), k);

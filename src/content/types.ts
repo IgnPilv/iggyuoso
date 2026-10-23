@@ -32,6 +32,8 @@ interface ExerciseBase {
   hand?: ExerciseHand;
   display: Display;
   clef?: 'treble' | 'bass';
+  /** Key signature for the staff (`key: G`, `Bb`, `Em`). Notes are still written out in full. */
+  key?: string;
 }
 
 export interface FindExercise extends ExerciseBase {
@@ -108,6 +110,8 @@ export interface QuizQuestion {
   /** A staff picture of these notes. */
   staff?: NoteToken[];
   clef?: 'treble' | 'bass';
+  /** Key signature for the picture. */
+  key?: string;
   /** A play button for these notes. */
   sound?: NoteToken[];
 }
