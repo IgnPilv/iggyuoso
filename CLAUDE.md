@@ -164,3 +164,5 @@ never copied pages). Start small, adapt as we go.
   exercise's number (never the raw id). A `tap` without `hand` shows no hand badge. `ear` and
   `quiz` take `feedback: none` for checkpoints: answers are only noted (no colours, no
   resolution), and the result lists the missed questions with their answers.
+- 2026-10-23: Checkpoint and exam ear exercises use `feedback: none` (`ear-checkpoint-a`,
+  `ear-checkpoint-b`, `ear-year-1-exit`); pieces and scales carry `title:`.

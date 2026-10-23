@@ -1,4 +1,5 @@
 id: call-and-answer
+title: "Call and answer"
 kind: timed
 hand: alternating
 display: staff
