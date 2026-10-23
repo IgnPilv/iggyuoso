@@ -1,0 +1,19 @@
+id: ear-function-g-f
+title: I, IV or V in G and F
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: function
+  key: G
+  pool:
+  - I
+  - IV
+  - V
+- type: function
+  key: F
+  pool:
+  - I
+  - IV
+  - V

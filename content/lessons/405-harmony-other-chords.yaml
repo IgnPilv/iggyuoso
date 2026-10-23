@@ -1,0 +1,39 @@
+id: harmony-other-chords
+title: 'The other chords: ii, iii and vi'
+skills:
+- theory
+steps:
+- explain: |
+    I, IV and V are the **primary** chords. The other three, **ii, iii and vi**, are minor (in a major key), and each is a
+    close relative of a primary chord: it shares two of its three notes.
+  sound: C3+C4+E4+G4:h A2+C4+E4+A4:h | F2+C4+F4+A4:h D3+D4+F4+A4:h
+  staff:
+    notes: C4+E4+G4:h A3+C4+E4:h | F3+A3+C4:h D4+F4+A4:h
+    labels: none
+  callout: |
+    vi shares two notes with I; ii shares two with IV; iii shares two with V (and with I).
+  terms:
+  - primary chord
+  - secondary chord
+  - relative
+- explain: |
+    So **vi can stand in for I**, and **ii for IV**: same job, a softer, sadder colour. Listen to "I IV V I" and then
+    "I ii V I": the second sounds like a hymn or a jazz standard.
+  sound: C3+C4+E4+G4:h F2+C4+F4+A4:h | G2+B3+D4+G4:h C3+C4+E4+G4:h | C3+C4+E4+G4:h D3+D4+F4+A4:h | G2+D4+G4+B4:h C3+E4+G4+C5:h
+  check:
+    ask: Which chord shares two notes with C major (C E G)?
+    choices:
+    - A minor (A C E)
+    - D minor (D F A)
+    - G major (G B D)
+    correct: 0
+    why: A C E and C E G share C and E.
+- explain: |
+    In a major key the pattern of chords is always the same: **I ii iii IV V vi vii°**: major, minor, minor, major, major,
+    minor, diminished. Learn it once and it works in every key.
+  callout: |
+    Major keys: I ii iii IV V vi vii°.
+- exercise: harmony-play-i-vi-iv-v
+- exercise: harmony-play-i-ii-v-i-g
+- exercise: harmony-other-chords-quiz
+recap: 'I ii iii IV V vi vii°: three major, three minor, one diminished.'

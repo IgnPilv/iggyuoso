@@ -170,3 +170,56 @@ export function resolution(key: Key, degreeMidi: number): number[] {
 
 export const COMPARE = ['higher', 'lower', 'same', 'different'] as const;
 export type Compare = (typeof COMPARE)[number];
+
+// ---------------------------------------------------------------- roman numerals
+
+/**
+ * A chord named by its degree in a key: upper case = major (V), lower case = minor (vi),
+ * ° = diminished (vii°), + = augmented; a 7 adds the seventh (V7 dominant, ii7 minor 7th,
+ * Imaj7). Notes in root position from the root nearest above the tonic in octave 4.
+ * In a minor key, V and vii° are built on the raised 7th (harmonic minor), VII on the natural one.
+ */
+export function romanChord(key: Key, numeral: string): number[] {
+  const m = /^(b|#)?(VII|VI|V|IV|III|II|I|vii|vi|v|iv|iii|ii|i)(°|\+)?(maj7|7)?$/.exec(numeral.trim());
+  if (!m) throw new NoteParseError(`"${numeral}" is not a chord numeral like I, ii, IV, V7 or vii°`);
+  const degree = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii'].indexOf(m[2].toLowerCase()) + 1;
+  const upper = m[2] === m[2].toUpperCase();
+  let root = degreeSemitones(key, degree) + (m[1] === 'b' ? -1 : m[1] === '#' ? 1 : 0);
+  if (key.minor && degree === 7 && !upper) root += 1; // vii° on the leading note
+  const third = upper ? 4 : 3;
+  const fifth = m[3] === '°' ? 6 : m[3] === '+' ? 8 : 7;
+  const steps = [0, third, fifth];
+  if (m[4] === 'maj7') steps.push(11);
+  else if (m[4] === '7') steps.push(upper && m[3] !== '°' ? 10 : m[3] === '°' ? 9 : 10);
+  const r = tonicIn(key, 4) + root;
+  return steps.map((s) => r + s);
+}
+
+/** "I vi IV V" -> ["I", "vi", "IV", "V"] (dashes and commas allowed between them). */
+export const numerals = (text: string) => text.split(/[\s,–-]+/).filter(Boolean);
+
+/**
+ * A progression voiced for listening: the bass on each root (octave 2–3) and the upper notes in
+ * close position, each chord's voicing chosen to move as little as possible from the last.
+ */
+export function voiceProgression(key: Key, chords: string[]): number[][] {
+  let prev: number[] | undefined;
+  return chords.map((c) => {
+    const tones = romanChord(key, c);
+    const pcs = tones.map((t) => ((t % 12) + 12) % 12);
+    let best: number[] = [];
+    let cost = Infinity;
+    for (let inv = 0; inv < tones.length; inv++) {
+      for (const shift of [-24, -12, 0, 12]) {
+        const v = tones.map((t, i) => t + shift + (i < inv ? 12 : 0)).sort((a, b) => a - b);
+        if (v[0] < 53 || v[v.length - 1] > 76) continue;
+        const d = prev ? v.reduce((a, n, i) => a + Math.abs(n - (prev![i] ?? prev![prev!.length - 1])), 0) : Math.abs(v[0] - 60);
+        if (d < cost) { cost = d; best = v; }
+      }
+    }
+    prev = best;
+    let bass = 36 + pcs[0];
+    if (bass > 47) bass -= 12;
+    return [bass, ...best];
+  });
+}

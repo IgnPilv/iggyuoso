@@ -23,10 +23,10 @@ ADD_REQS = {
     'y1-exit': ['compose-sequence', 'technique-scale-in-eighths', 'rhythm-eighths-two-hands', 'reading-two-hands-fifths', 'ear-octave-or-fifth', 'theory-road-map'],
     'y2-checkpoint-a': ['compose-endings', 'technique-minor-scales-ht', 'rhythm-sixteenths-two-hands', 'reading-chords-sight', 'ear-seconds-thirds', 'theory-keys-two-and-three', 'piece-canon-theme'],
     'y2-checkpoint-b': ['compose-eight-bars', 'technique-cadences-first-keys', 'rhythm-triplet-patterns', 'reading-sight-many-keys', 'ear-triad-qualities', 'theory-interval-quality', 'piece-eine-kleine'],
-    'm7-flat-keys': ['compose-minor'],
-    'm8-arpeggios': ['compose-aba'],
-    'm9-form-and-blues': ['compose-modes'],
-    'y2-exit': ['compose-two-hands', 'technique-positions-all-keys', 'rhythm-six-eight-hands', 'reading-other-meters', 'ear-all-intervals', 'theory-minor-key-signatures', 'piece-fur-elise'],
+    'm7-flat-keys': ['compose-minor', 'ear-progressions', 'musician-texture'],
+    'm8-arpeggios': ['compose-aba', 'harmony-modulation', 'musician-eras', 'ear-progressions-minor'],
+    'm9-form-and-blues': ['compose-modes', 'harmony-secondary-dominants', 'musician-talk', 'harmony-modes'],
+    'y2-exit': ['compose-two-hands', 'technique-positions-all-keys', 'rhythm-six-eight-hands', 'reading-other-meters', 'ear-all-intervals', 'theory-minor-key-signatures', 'piece-fur-elise', 'harmony-progressions', 'ear-chord-function'],
 }
 
 def add_reqs(nodes):

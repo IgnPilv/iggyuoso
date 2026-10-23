@@ -115,6 +115,13 @@ days: 2   # spread over at least two days
     The tempo counts the meter's beat (dotted quarters in 6/8). At least two rhythms.
   - `{ type: loudness, pool: [loud, soft], notes: "C4 E4 G4" }`: the phrase (default one C4) is
     played twice; "The second time: louder or softer?" (`loud` = the second is louder).
+  - `{ type: function, key: C, pool: [I, IV, V, vi] }`: after the cadence, one chord in the key; name it by its
+    Roman numeral, then it resolves to I (i in minor). Numerals: upper case major, lower case minor, `°`
+    diminished, `+` augmented, `7` / `maj7`, `b` / `#` in front for borrowed roots (`bVII`); in minor, `vii°`
+    sits on the raised 7th.
+  - `{ type: progression, key: [C, G, F], pool: ["I IV V I", "I V vi IV", "vi ii V I"], choices: 4 }`: a key
+    from the list, then the progression's chords one a second (bass plus a smooth close voicing); pick
+    it from the right one and up to `choices − 1` others from the pool.
 - `quiz`: `questions`, each `{ ask, choices: [...], correct: <index from 0> }` or
   `{ ask, play: "G4" }` (answer by playing these notes in order). Optional `staff: "G4:w"`
   (a picture, with `clef`) and `sound: "C4:q E4:q"` (a play button). `shuffle: true` mixes the order.

@@ -1,0 +1,13 @@
+id: ear-function-c
+title: I, IV or V in C
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: function
+  key: C
+  pool:
+  - I
+  - IV
+  - V

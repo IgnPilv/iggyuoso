@@ -1,0 +1,120 @@
+id: musician-eras-quiz
+title: 'The eras: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: J. S. Bach belongs to the...
+  choices:
+  - Classical era
+  - Romantic era
+  - Modern era
+  - Baroque era
+  correct: 3
+  why: He died in 1750, the end of the Baroque.
+- ask: Mozart belongs to the...
+  choices:
+  - Modern era
+  - Romantic era
+  - Baroque era
+  - Classical era
+  correct: 3
+  why: 1756–1791.
+- ask: Chopin belongs to the...
+  choices:
+  - Baroque era
+  - Romantic era
+  - Modern era
+  - Classical era
+  correct: 1
+  why: '1810–1849: nocturnes, ballades, rubato.'
+- ask: Debussy belongs to the...
+  choices:
+  - Baroque era
+  - Modern era (Impressionism)
+  - Romantic era
+  - Classical era
+  correct: 1
+  why: Colour, modes and whole-tone scales.
+- ask: Beethoven bridges...
+  choices:
+  - Classical and Romantic
+  - Baroque and Romantic
+  - Romantic and Modern
+  - Baroque and Classical
+  correct: 0
+  why: He started like Haydn and ended a Romantic.
+- ask: Alberti bass and balanced question-and-answer phrases are typical of the...
+  choices:
+  - Baroque era
+  - Modern era
+  - Classical era
+  correct: 2
+  why: Mozart and Haydn.
+- ask: Rubato, rich pedalling and character pieces are typical of the...
+  choices:
+  - Baroque era
+  - Classical era
+  - Romantic era
+  correct: 2
+  why: Chopin and Schumann.
+- ask: '"Terraced" dynamics (loud and soft in blocks) are typical of the...'
+  choices:
+  - Romantic era
+  - Baroque era
+  - Classical era
+  correct: 1
+  why: The harpsichord could not crescendo.
+- ask: Sonata form was developed in the...
+  choices:
+  - Baroque era
+  - Modern era
+  - Classical era
+  correct: 2
+  why: Haydn, Mozart, Beethoven.
+- ask: Which instrument was new and exciting in the Classical era?
+  choices:
+  - The synthesiser
+  - The organ
+  - The harpsichord
+  - The piano (fortepiano)
+  correct: 3
+  why: It could play soft (piano) and loud (forte).
+- ask: Satie's Gymnopédie No. 1 (1888) points to...
+  choices:
+  - The calm, modern style of the 1900s
+  - The Classical era
+  - The Baroque
+  correct: 0
+  why: Simple chords, modal colour, no drama.
+- ask: Swing, blue notes and seventh chords come from...
+  choices:
+  - Jazz and blues
+  - The Baroque
+  - The Classical era
+  correct: 0
+  why: American music of the 1900s.
+- ask: Pachelbel's Canon is...
+  choices:
+  - Classical
+  - Romantic
+  - Baroque
+  correct: 2
+  why: About 1680, a canon over a repeating bass.
+- ask: Für Elise is by...
+  choices:
+  - Bach
+  - Chopin
+  - Beethoven
+  - Mozart
+  correct: 2
+  why: Written around 1810.
+- ask: Eine kleine Nachtmusik is by...
+  choices:
+  - Handel
+  - Mozart
+  - Haydn
+  - Beethoven
+  correct: 1
+  why: '1787.'

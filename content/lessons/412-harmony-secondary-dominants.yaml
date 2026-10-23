@@ -1,0 +1,30 @@
+id: harmony-secondary-dominants
+title: 'Borrowed fifths: secondary dominants'
+skills:
+- theory
+steps:
+- explain: |
+    Any chord can have its own V. In C major, the V of G is **D (or D7)**: it borrows F♯ and pulls to G like a little
+    cadence. This is a **secondary dominant**, written **V/V** ("five of five").
+  sound: C2+C4+E4+G4:h D2+C4+F#4+A4:h | G2+B3+D4+G4:w
+  terms:
+  - secondary dominant
+  - V/V
+  - chromatic chord
+  callout: |
+    V/V = the dominant of the dominant. In C: D7.
+- explain: |
+    **V/vi** (E7 in C) pulls to A minor, and **V/ii** (A7) to D minor. Whenever a sharp appears in a C major piece, it is
+    often the leading note of the chord that comes next.
+  sound: C2+C4+E4+G4:h E2+B3+D4+G#4:h | A2+A3+C4+E4:w
+  check:
+    ask: In C major, which chord is V/V?
+    choices:
+    - D major (or D7)
+    - G major
+    - F major
+    - A minor
+    correct: 0
+    why: The V of G is D.
+- exercise: harmony-secondary-quiz
+recap: Every chord can have its own V.

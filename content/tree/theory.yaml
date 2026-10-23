@@ -54,3 +54,11 @@ nodes:
   - { id: theory-writing-melodies, stage: 9, lesson: theory-writing-melodies, title: "How melodies work", type: lesson, requires: [theory-passing-notes, cadence-types] }
   - { id: theory-scale-spelling, stage: 5, lesson: theory-scale-spelling, title: "Spelling scales", type: lesson, requires: [theory-keys-two-and-three, harmonic-minor] }
   - { id: theory-spelling-intervals, stage: 6, lesson: theory-spelling-intervals, title: "Spelling intervals", type: lesson, requires: [theory-interval-quality, theory-scale-spelling] }
+  - { id: harmony-other-chords, stage: 5, lesson: harmony-other-chords, title: "The other chords: ii, iii and vi", type: lesson, requires: [primary-triads, triads-on-every-degree] }
+  - { id: harmony-progressions, stage: 5, lesson: harmony-progressions, title: "Progressions everyone uses", type: lesson, requires: [harmony-other-chords, cadence-in-f] }
+  - { id: harmony-modulation, stage: 7, lesson: harmony-modulation, title: "Changing key: modulation", type: lesson, requires: [harmony-progressions, circle-of-fifths, relative-minor] }
+  - { id: harmony-secondary-dominants, stage: 8, lesson: harmony-secondary-dominants, title: "Borrowed fifths: secondary dominants", type: lesson, requires: [harmony-modulation, dominant-seventh-theory] }
+  - { id: harmony-modes, stage: 9, lesson: harmony-modes, title: "The modes", type: lesson, requires: [harmony-secondary-dominants, compose-modes] }
+  - { id: musician-texture, stage: 6, lesson: musician-texture, title: "Texture: melody, chords and voices", type: lesson, requires: [theory-phrases-and-form, accompaniment-patterns] }
+  - { id: musician-eras, stage: 7, lesson: musician-eras, title: "Four hundred years in four eras", type: lesson, requires: [musician-texture, theory-tempo-words] }
+  - { id: musician-talk, stage: 8, lesson: musician-talk, title: "Talking about a piece", type: lesson, requires: [musician-eras, cadence-types, harmony-modulation] }

@@ -57,3 +57,30 @@ describe('theory blocks', () => {
     expect(q.questions[1].why).toBeUndefined();
   });
 });
+
+import { romanChord as rc, voiceProgression as vp, parseKey as pk } from '../src/music/theory';
+
+describe('roman numerals', () => {
+  it('builds chords on the degrees of a key', () => {
+    expect(rc(pk('C'), 'I')).toEqual([60, 64, 67]);
+    expect(rc(pk('C'), 'vi')).toEqual([69, 72, 76]);
+    expect(rc(pk('C'), 'ii')).toEqual([62, 65, 69]);
+    expect(rc(pk('C'), 'V7')).toEqual([67, 71, 74, 77]);
+    expect(rc(pk('C'), 'vii°')).toEqual([71, 74, 77]);
+    expect(rc(pk('G'), 'IV')).toEqual([72, 76, 79]);
+    expect(rc(pk('Am'), 'V')).toEqual([76, 80, 83]);
+    expect(rc(pk('Am'), 'iv')).toEqual([74, 77, 81]);
+    expect(rc(pk('Am'), 'VII')).toEqual([79, 83, 86]);
+    expect(rc(pk('C'), 'bVII')).toEqual([70, 74, 77]);
+    expect(() => rc(pk('C'), 'VIII')).toThrow();
+  });
+
+  it('voices a progression smoothly over a bass', () => {
+    const v = vp(pk('C'), ['I', 'vi', 'IV', 'V']);
+    expect(v.map((c) => c[0] % 12)).toEqual([0, 9, 5, 7]);
+    for (let i = 1; i < v.length; i++) {
+      const moves = v[i].slice(1).map((n, k) => Math.abs(n - v[i - 1][k + 1]));
+      expect(Math.max(...moves)).toBeLessThanOrEqual(5);
+    }
+  });
+});

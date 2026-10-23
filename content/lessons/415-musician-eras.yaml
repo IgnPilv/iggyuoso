@@ -1,0 +1,38 @@
+id: musician-eras
+title: Four hundred years in four eras
+skills:
+- theory
+steps:
+- explain: |
+    Musicians place a piece by its **era**. **Baroque** (about 1600–1750): Bach, Handel, Vivaldi, Scarlatti. Harpsichord and
+    organ, busy counterpoint, steady driving rhythm, ornaments, loud and soft in blocks ("terraced" dynamics). In the app:
+    Bach's Prelude in C, the Minuet in G (Petzold), Pachelbel's Canon.
+  terms:
+  - Baroque
+  - Classical
+  - Romantic
+  - Modern
+  - era
+- explain: |
+    **Classical** (about 1750–1820): Haydn, Mozart, young Beethoven, Clementi. Clear balanced phrases (question and answer),
+    tune and accompaniment (Alberti bass), sonata form, the new piano with real crescendos. In the app: Eine kleine
+    Nachtmusik, the Turkish March, the Sonatina in C, Ode to Joy.
+- explain: |
+    **Romantic** (about 1820–1900): late Beethoven, Schubert, Chopin, Schumann, Liszt, Brahms, Tchaikovsky. Big feeling, rich
+    chords, the sustain pedal, **rubato** (stretching the time), short **character pieces** (nocturnes, songs without
+    words). In the app: Für Elise sits on the border; the Nocturne and the Evening Song are in this style.
+- explain: |
+    **Modern** (1900 on): Debussy and Ravel (colour, modes, whole-tone scales), Satie (calm and simple), Stravinsky and Bartók
+    (rhythm, folk music, clashes), and **jazz and popular** music (swing, blues, seventh chords). In the app: Gymnopédie
+    No. 1, the blues.
+  check:
+    ask: Steady counterpoint, ornaments and a harpsichord point to...
+    choices:
+    - Baroque
+    - Classical
+    - Romantic
+    - Modern
+    correct: 0
+    why: Bach's world.
+- exercise: musician-eras-quiz
+recap: 'Baroque, Classical, Romantic, Modern: place a piece by its sound.'

@@ -3,7 +3,7 @@ import type { BuildExercise, BuildTask, EarExercise, EarItem, QuizExercise, Quiz
 import { pitchClass, pitchToMidi, type NoteToken, type Pitch } from '../music/notes';
 import { beatMs } from '../music/timeline';
 import {
-  cadence, CHORD_QUALITIES, chordQuality, degreeSemitones, interval, parseKey, resolution, tonicIn,
+  cadence, CHORD_QUALITIES, chordQuality, degreeSemitones, interval, numerals, parseKey, resolution, tonicIn, voiceProgression,
 } from '../music/theory';
 import { applyGoal } from '../scoring/goal';
 import { stars } from '../scoring/stars';
@@ -155,7 +155,7 @@ export class EarSession {
     this.last = slot;
     const it = this.ex.items[item];
     const q = buildEarQuestion(it, value, this.ex, this.cal, this.rng);
-    const cadenceKey = it.type === 'degree' ? it.key : this.ex.cadence;
+    const cadenceKey = it.type === 'degree' || it.type === 'function' ? it.key : this.ex.cadence;
     const intro = cadenceKey ? cadenceSounds(cadenceKey) : [];
     const offset = intro.length ? soundsEnd(intro) + 450 : 0;
     return { ...q, slot, play: [...intro, ...q.prompt.map((s) => ({ ...s, at: s.at + offset }))] };
@@ -371,6 +371,28 @@ function buildEarQuestion(it: EarItem, value: string, ex: EarExercise, cal: Cali
         ask: 'Which rhythm did you hear?', prompt: [...clicks, ...notes], plays: Infinity, after: [],
         choices: shown.map((_, j) => `Rhythm ${j + 1}`), pictures: shown.map((i) => it.pool[i]), pictureBar: it.meter.quarters,
         correct: shown.indexOf(k), answerText: `rhythm ${shown.indexOf(k) + 1}`,
+      };
+    }
+    case 'progression': {
+      const key = parseKey(pick(it.keys, rng));
+      const chords = voiceProgression(key, numerals(value));
+      const prompt = chords.map((notes, i) => ({ notes, at: i * 1000, dur: i === chords.length - 1 ? 1500 : 950 }));
+      // The right one and up to `choices - 1` others, in a fixed order so the buttons stay put.
+      const others = it.pool.filter((p) => p !== value).sort(() => rng() - 0.5).slice(0, it.choices - 1);
+      const shown = it.pool.filter((p) => p === value || others.includes(p));
+      const label = (p: string) => numerals(p).join(' – ');
+      return {
+        ask: `Which progression was that? (${key.name})`, prompt, plays: Infinity, after: [],
+        choices: shown.map(label), correct: shown.indexOf(value), answerText: label(value),
+      };
+    }
+    case 'function': {
+      const key = parseKey(it.key);
+      const [chord, home] = voiceProgression(key, [value, key.minor ? 'i' : 'I']);
+      return {
+        ask: `In ${key.name}: which chord was that?`, prompt: [{ notes: chord, at: 0, dur: 1400 }], plays: Infinity,
+        after: [{ notes: chord, at: 0, dur: 700 }, { notes: home, at: 800, dur: 1200 }],
+        choices: it.pool, correct: it.pool.indexOf(value), answerText: value,
       };
     }
     case 'loudness': {

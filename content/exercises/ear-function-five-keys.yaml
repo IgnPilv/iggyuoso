@@ -1,0 +1,31 @@
+id: ear-function-five-keys
+title: Five chords, three keys
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: function
+  key: G
+  pool:
+  - I
+  - ii
+  - IV
+  - V
+  - vi
+- type: function
+  key: F
+  pool:
+  - I
+  - ii
+  - IV
+  - V
+  - vi
+- type: function
+  key: D
+  pool:
+  - I
+  - ii
+  - IV
+  - V
+  - vi

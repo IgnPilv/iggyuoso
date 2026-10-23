@@ -1,0 +1,31 @@
+id: harmony-modulation
+title: 'Changing key: modulation'
+skills:
+- theory
+steps:
+- explain: |
+    Longer pieces travel: they **modulate** to a new key, stay a while, and come home. The nearest keys are next door on
+    the circle of fifths: from C major, **G major** (the dominant), **F major** (the subdominant) and **A minor** (the
+    relative minor).
+  terms:
+  - modulation
+  - dominant key
+  - relative minor
+  - pivot chord
+  callout: |
+    Most classical pieces in a major key go to the dominant; most in a minor key go to the relative major.
+- explain: |
+    How does the ear know the key has changed? A new **sharp or flat** appears (F♯ for G major), and a **cadence** in the
+    new key confirms it: D7 to G. A **pivot chord** belongs to both keys and slips the music across: Am is vi in C and ii in G.
+  sound: C3+C4+E4+G4:h A2+C4+E4+A4:h | D2+D4+F#4+A4+C5:h G2+D4+G4+B4:h | G2+D4+G4+B4:w
+  check:
+    ask: A piece in C major starts using F♯ and ends a phrase D7 – G. Where has it gone?
+    choices:
+    - F major
+    - G major
+    - A minor
+    - E minor
+    correct: 1
+    why: 'F♯ plus a cadence on G: the dominant key.'
+- exercise: harmony-modulation-quiz
+recap: 'Modulation: a new accidental, a cadence, a new home for a while.'

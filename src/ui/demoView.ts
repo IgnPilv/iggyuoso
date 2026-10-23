@@ -49,6 +49,15 @@ function sampleOf(kind: Exercise['kind'] | 'tap', yaml: string): Exercise {
 }
 
 const SAMPLES = {
+  harmony: `
+id: demo-ear-harmony
+kind: ear
+title: Hearing harmony
+prompt: Which chord is it, and which progression? The bass shows the way.
+questions: 4
+items:
+  - { type: function, key: C, pool: [I, IV, V, vi] }
+  - { type: progression, key: [C, G], pool: [I IV V I, I V vi IV, I vi IV V, vi ii V I] }`,
   earSteps: `
 id: demo-ear-steps
 kind: ear
@@ -552,6 +561,7 @@ function scenes(): Scene[] {
   });
   out.push({ title: 'First ear steps', caption: 'Ear training for someone who hears no pitch yet: same or different, which way a tune goes (arrows), a step or a leap, how many notes sound at once, louder or softer the second time. Note questions can light the keys to choose from and play a named note first; a melody can light the keys it uses.', run: exerciseScene(parseExercise(parse(SAMPLES.earSteps)), { view: 'classic' }) });
   out.push({ title: 'Hearing rhythms', caption: 'A bar of clicks, then a rhythm played on one note. The answers are rhythm pictures: pick the one you heard.', run: exerciseScene(parseExercise(parse(SAMPLES.earRhythm)), { view: 'classic' }) });
+  out.push({ title: 'Hearing harmony', caption: 'A cadence sets the key, then one chord: is it I, IV, V or vi? After the answer it goes home, so its pull can be heard. Progression questions play four chords and ask which famous progression it was (I V vi IV, ii V I...). Lessons also teach ii, iii and vi, modulation, secondary dominants, modes, texture and the eras of music, so the player can talk about a piece like a music student.', run: exerciseScene(parseExercise(parse(SAMPLES.harmony)), { view: 'classic' }) });
   out.push({ title: 'Ear training', caption: 'The app plays a cadence to set the key, then a note, two notes or a phrase. The first key (or button) is the answer, and missed questions come back more often. The pianist gets one wrong.', run: exerciseScene(sampleOf('ear', SAMPLES.ear), { view: 'classic' }) });
   const checkpoint = allExercises().find((e) => (e.kind === 'ear' || e.kind === 'quiz') && e.feedback === 'none')
     ?? { ...(sampleOf('ear', SAMPLES.ear) as EarExercise), id: 'demo-checkpoint', feedback: 'none' as const };

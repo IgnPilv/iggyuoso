@@ -155,7 +155,11 @@ export type EarItem =
   /** A rhythm on one note after a bar of clicks; pick it from rhythm pictures. */
   | { type: 'rhythm'; pool: NoteToken[][]; meter: Meter; tempo: number; pitch: Pitch }
   /** A note or phrase twice: was the second time louder or softer? */
-  | { type: 'loudness'; pool: ('loud' | 'soft')[]; notes: Pitch[] };
+  | { type: 'loudness'; pool: ('loud' | 'soft')[]; notes: Pitch[] }
+  /** A chord progression in one of `keys` ("I vi IV V"); pick it from the pool (up to `choices` shown). */
+  | { type: 'progression'; keys: string[]; pool: string[]; choices: number }
+  /** After the cadence, one chord: name its numeral (I, IV, V, vi...); then it goes home to I. */
+  | { type: 'function'; key: string; pool: string[] };
 
 export interface EarExercise extends ExerciseBase {
   kind: 'ear';
