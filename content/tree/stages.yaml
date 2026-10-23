@@ -18,3 +18,12 @@ stages:
   - stage: 6
     title: Pedal and four kinds of piece
     summary: The sustain pedal, more keys, syncopation and 3/8, and an etude, a minuet, variations and a song without words.
+  - stage: 7
+    title: Flat keys and compound time
+    summary: B flat and E flat, C and G minor, two-octave arpeggios, and music in 6/8, 9/8 and 12/8.
+  - stage: 8
+    title: Arpeggios and the dominant seventh
+    summary: Arpeggios in more keys, the dominant seventh and where it pulls, four kinds of cadence, three against two.
+  - stage: 9
+    title: Form, sonatinas and the blues
+    summary: How pieces are built, a sonatina, a twelve-bar blues with shell chords, and keys to four sharps and flats.

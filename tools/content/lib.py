@@ -15,7 +15,15 @@ yaml.add_representer(Lit, lambda d, s: d.represent_scalar('tag:yaml.org,2002:str
 
 def txt(t): return Lit(textwrap.dedent(t).strip() + "\n")
 
+def lits(o):
+    """Multi-line strings as | blocks, everywhere in a structure."""
+    if isinstance(o, dict): return {k: lits(v) for k, v in o.items()}
+    if isinstance(o, list): return [lits(v) for v in o]
+    if isinstance(o, str) and not isinstance(o, Lit) and '\n' in o: return Lit(o if o.endswith('\n') else o + '\n')
+    return o
+
 def dump(path, d):
+    d = lits(d)
     s = yaml.dump(d, sort_keys=False, allow_unicode=True, width=120, default_flow_style=None)
     with open(path, 'w') as f: f.write(s)
 
@@ -181,7 +189,7 @@ def check_bars(s, meter, pickup=0.0, where=''):
     bars = tokens(s)
     for i, b in enumerate(bars):
         L = bar_len(b)
-        want = q - pickup if i == 0 and pickup else q
+        want = pickup if i == 0 and pickup else q
         if i == len(bars) - 1 and pickup and abs(L - (q - pickup)) < 1e-6: continue
         assert abs(L - want) < 1e-6, f'{where}: bar {i+1} has {L}, wants {want}: {s}'
     return len(bars)
@@ -240,7 +248,7 @@ def accompany(chords, meter, style='root', pickup=0.0, last='hold'):
     prev = None
     compound = meter in ('6/8', '9/8', '12/8')
     for i, syms in enumerate(bars):
-        length = q - pickup if (i == 0 and pickup) else q
+        length = pickup if (i == 0 and pickup) else (q - pickup if (pickup and i == nb - 1) else q)
         if i == 0 and pickup:
             out.append(held('r', length) if syms == ['-'] or syms == ['r'] else held('r', length))
             continue
@@ -474,7 +482,7 @@ def gen(id, title, generator, reps=3, days=2, **kw):
     d['reps'] = reps; d['days'] = min(days, reps)
     return ex(id, **d)
 
-def build(id, title, tasks, prompt=None, reps=3, days=1):
+def build_ex(id, title, tasks, prompt=None, reps=3, days=1):
     d = {'title': title, 'kind': 'build'}
     if prompt: d['prompt'] = prompt
     d['tasks'] = tasks
