@@ -5,6 +5,7 @@ import { demo, DEMO_CALIBRATION } from './demo/demo';
 import { store } from './progress/store';
 import { h, type View } from './ui/dom';
 import { demoView } from './ui/demoView';
+import { profileView } from './ui/profileView';
 import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './ui/theme';
 import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './ui/views';
 
@@ -14,6 +15,7 @@ const routes: Record<string, View> = {
   lesson: lessonView,
   exercise: exerciseView,
   settings: settingsView,
+  profile: profileView,
   midi: testerView,
   demo: demoView,
 };
@@ -42,7 +44,7 @@ showThemeBtn();
 const brandMark = h('span', { class: 'brand-mark' });
 brandMark.innerHTML = '<svg viewBox="0 0 16 16"><rect x="2" y="2" width="3" height="12" rx="1.5" fill="#fff"/><rect x="6.5" y="2" width="3" height="8" rx="1.5" fill="#fff"/><rect x="11" y="2" width="3" height="12" rx="1.5" fill="#fff"/></svg>';
 
-const navLinks = [h('a', { href: '#/demo' }, 'Demo'), h('a', { href: '#/settings' }, 'Settings')];
+const navLinks = [h('a', { href: '#/profile' }, 'Profile'), h('a', { href: '#/demo' }, 'Demo'), h('a', { href: '#/settings' }, 'Settings')];
 
 computerKeys.middleC = () => (demo.active ? DEMO_CALIBRATION : store.calibration)?.middleC ?? 60;
 computerKeys.allow = () => !demo.active;

@@ -614,3 +614,39 @@ ol.lessons li.locked a:hover { transform: none; }
 .staff-strip { position: relative; overflow: hidden; background: var(--staff-paper); border-radius: var(--radius-md) var(--radius-md) 0 0; margin-bottom: -2px; }
 .staff-strip .staff { display: block; height: auto; will-change: transform; }
 .strip-head { position: absolute; top: 8px; bottom: 8px; width: 2px; background: var(--accent); opacity: 0.6; border-radius: 1px; pointer-events: none; }
+
+/* Profile: level, practice calendar, skills per strand, timing per hand. */
+.profile { display: grid; gap: var(--space-5); }
+.profile .stats { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin-top: var(--space-4); }
+.profile .stat { display: grid; }
+.profile .stat strong { font-family: var(--font-display); font-size: var(--text-2xl); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.profile .stat span { color: var(--muted); font-size: var(--text-sm); }
+.profile-level { display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap; }
+.level-badge { display: grid; place-items: center; width: 96px; height: 96px; border-radius: 50%; background: var(--brand-gradient); color: var(--on-accent); box-shadow: var(--shadow-glow); flex: none; }
+.level-badge span { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: -10px; }
+.level-badge strong { font-family: var(--font-display); font-size: var(--text-3xl); line-height: 1; }
+.level-main { flex: 1; min-width: 220px; }
+.level-bar { height: 12px; border-radius: var(--radius-pill); background: var(--surface-sunken); overflow: hidden; }
+.level-bar span { display: block; height: 100%; background: var(--brand-gradient); border-radius: inherit; }
+.cal-grid { display: grid; grid-template-rows: repeat(7, 14px); grid-auto-flow: column; grid-auto-columns: 14px; gap: 4px; overflow-x: auto; padding-bottom: var(--space-1); }
+.cal-day { display: inline-block; width: 14px; height: 14px; border-radius: 4px; background: var(--surface-sunken); }
+.cal-day.empty { visibility: hidden; }
+.cal-day.s1 { background: color-mix(in srgb, var(--accent) 30%, transparent); }
+.cal-day.s2 { background: color-mix(in srgb, var(--accent) 55%, transparent); }
+.cal-day.s3 { background: color-mix(in srgb, var(--accent) 80%, transparent); }
+.cal-day.s4 { background: var(--accent); }
+.cal-day.today { outline: 2px solid var(--focus); outline-offset: 1px; }
+.cal-legend { display: flex; align-items: center; gap: var(--space-1); margin-top: var(--space-2); color: var(--muted); }
+.cal-legend .key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-left: var(--space-2); }
+.strands { display: grid; gap: var(--space-2); margin-top: var(--space-3); }
+.strand { display: grid; grid-template-columns: 7.5em 1fr 4em; gap: var(--space-3); align-items: center; }
+.strand-bar { display: flex; height: 10px; border-radius: var(--radius-pill); background: var(--surface-sunken); overflow: hidden; }
+.strand-count { text-align: right; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--ink-2); }
+.strand-bar .mastered, .key.mastered { background: var(--accent); }
+.strand-bar .solid, .key.solid { background: var(--ok); }
+.strand-bar .practised, .key.practised { background: color-mix(in srgb, var(--ok) 40%, transparent); }
+.timing-hands { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-4); }
+.timing-hand { padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); background: var(--surface-sunken); border-left: 4px solid var(--rh); }
+.timing-hand.left { border-left-color: var(--lh); }
+.timing-hand h3 { margin: 0; font-size: var(--text-sm); color: var(--muted); }
+.timing-big { margin: var(--space-1) 0; font-family: var(--font-display); font-size: var(--text-xl); }

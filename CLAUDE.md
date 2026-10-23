@@ -236,3 +236,11 @@ never copied pages). Start small, adapt as we go.
   Mastery states themselves are unchanged. The result card says "n of m clean takes"; the recap
   and the locked-lesson card list each exercise's count. Settings → Defaults "Open every lesson"
   skips the order for trying things out. Demo scene "Clean takes and locks".
+- 2026-10-23: Player profile (`#/profile`, header link; `src/progress/profile.ts`,
+  `src/ui/profileView.ts`). Level from XP: level L starts at 50·L·(L−1) XP (100, 300, 600, …).
+  Practice log per day (`profile.days`: XP, takes, clean takes, time); time = gaps between takes
+  up to 5 min, plus 1 min for the first take of a sitting. Timed takes save each hand's mean
+  offset and spread (`Attempt.timing`, last 200 in `profile.timing`). The page shows level, XP,
+  current and best streak, a 12-week calendar, totals, each strand's nodes by state, and per-hand
+  timing (last 10 timed takes against the 10 before). Node states are worked out with a memo per
+  call (the requirement walk was exponential). Demo scene "Profile" uses made-up history.

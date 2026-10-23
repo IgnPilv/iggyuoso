@@ -6,7 +6,7 @@ import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
 import { expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
-import { CLEAN_SCORE, store, type RepsGoal, type RepsProgress } from '../progress/store';
+import { CLEAN_SCORE, store, type Attempt, type RepsGoal, type RepsProgress } from '../progress/store';
 import { treeNodes } from '../content';
 import { RECORD_TEMPO_FRACTION } from '../scoring/stars';
 import type { TimedResult } from '../scoring/timed';
@@ -89,10 +89,10 @@ function untimedResult(r: UntimedResult, retry: () => void) {
  * Save an attempt and update the mastery tree. Returns a line for the result card (XP, a node
  * going up or down), or '' when there is nothing to tell. The demo uses throwaway progress.
  */
-export function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>): HTMLElement {
+export function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>, timing?: Attempt['timing']): HTMLElement {
   const p = demo.active ? demoProgress() : { store, mastery };
   const written = ex.kind === 'timed' ? ex.tempo : tempo;
-  const a = { at: new Date().toISOString(), score, stars, tempo, hands, counts: tempo >= RECORD_TEMPO_FRACTION * written };
+  const a: Attempt = { at: new Date().toISOString(), score, stars, tempo, hands, timing, counts: tempo >= RECORD_TEMPO_FRACTION * written };
   const before = p.store.exercise(ex.id).best?.stars ?? 0;
   const wasDone = p.store.reps(ex).done;
   p.store.record(ex.id, a);
@@ -617,7 +617,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         return;
       }
       const handScores = Object.fromEntries(r.hands.map((hr) => [hr.hand, hr.score]));
-      const reward = record(ex, r.score, r.stars, tempo, handScores);
+      const timing = Object.fromEntries(r.hands.filter((hr) => hr.meanOffsetMs !== null)
+        .map((hr) => [hr.hand, { mean: Math.round(hr.meanOffsetMs!), spread: hr.spreadMs === null ? null : Math.round(hr.spreadMs) }]));
+      const reward = record(ex, r.score, r.stars, tempo, handScores, timing);
       let ladderNote: HTMLElement | '' = '';
       if (rungs && Number(tempoSel.value) === rungs[ladder.rung]) {
         const step = climb(rungs, ladder, r.score);

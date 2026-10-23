@@ -106,6 +106,7 @@ export const homeView: View = (root) => {
 function progressCard(): HTMLElement | '' {
   const m = mastery.meta;
   const due = mastery.reviewQueue();
+  const streak = mastery.currentStreak();
   if (!m.xp && !due.length) return '';
   const link = (nodeId: string) => {
     const n = treeNodes.get(nodeId);
@@ -114,8 +115,9 @@ function progressCard(): HTMLElement | '' {
   return h('section', { class: 'card progress-card' },
     h('div', { class: 'progress-stats' },
       h('span', {}, h('strong', {}, String(m.xp)), ' XP'),
-      m.streak ? h('span', {}, h('strong', {}, String(m.streak)), m.streak === 1 ? ' day in a row' : ' days in a row') : '',
-      h('span', {}, h('strong', {}, String(due.length)), due.length === 1 ? ' review due' : ' reviews due')),
+      streak ? h('span', {}, h('strong', {}, String(streak)), streak === 1 ? ' day in a row' : ' days in a row') : '',
+      h('span', {}, h('strong', {}, String(due.length)), due.length === 1 ? ' review due' : ' reviews due'),
+      h('a', { href: '#/profile', class: 'small' }, 'Profile')),
     due.length ? h('p', { class: 'small' }, 'Due for review: ', ...due.slice(0, 5).flatMap((id, i) => [i ? ', ' : '', link(id)])) : '');
 }
 

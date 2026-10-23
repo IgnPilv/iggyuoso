@@ -1,5 +1,6 @@
 import type { TreeNode } from '../content/tree';
 import { STAR_THRESHOLDS } from '../scoring/stars';
+import { Profile } from './profile';
 import type { Attempt, Store } from './store';
 
 // Mastery on the tree (docs/mastery-curriculum.md): each node climbs
@@ -36,6 +37,8 @@ export interface MasteryMeta {
   xpToday: number;
   streak: number;
   streakDay?: string;
+  /** Longest streak so far. */
+  bestStreak?: number;
 }
 
 export interface AttemptOutcome {
@@ -51,12 +54,22 @@ const daysBetween = (a: string, b: string) => Math.round((Date.parse(b) - Date.p
 const rank = (s: NodeState) => STATES.indexOf(s);
 
 export class Mastery {
+  readonly profile: Profile;
   constructor(
     private store: Store,
     private nodes: ReadonlyMap<string, TreeNode>,
     /** Exercise ids of a lesson. */
     private exercisesOf: (lessonId: string) => string[],
-  ) {}
+  ) {
+    this.profile = new Profile(store);
+  }
+
+  /** The streak as it stands today: it lapses once more days pass than the grace allows. */
+  currentStreak(now = new Date()): number {
+    const m = this.meta;
+    if (!m.streakDay) return 0;
+    return daysBetween(m.streakDay, dayOf(now)) <= 1 + STREAK_GRACE_DAYS ? m.streak : 0;
+  }
 
   private rec(id: string): NodeRecord {
     return this.store.get<NodeRecord>(`mastery.${id}`) ?? { state: 'introduced', box: 0 };
@@ -183,8 +196,10 @@ export class Mastery {
       const gap = m.streakDay ? daysBetween(m.streakDay, today) : Infinity;
       m.streak = gap <= 1 + STREAK_GRACE_DAYS ? m.streak + 1 : 1;
       m.streakDay = today;
+      m.bestStreak = Math.max(m.bestStreak ?? 0, m.streak);
     }
     this.meta = m;
+    this.profile.log(a, xp, clean, today);
     out.xp = xp;
     return out;
   }
