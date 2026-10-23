@@ -234,11 +234,40 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
   return () => { off(); stopView(); };
 }
 
+// ---------------------------------------------------------------- sheet strip
+
+/**
+ * The staff as a strip above the falling notes, scrolling so the music being played stays a
+ * third of the way in from the left, with a playhead there.
+ */
+export function staffStrip(staff: ReturnType<typeof renderStaff>) {
+  staff.svg.style.width = `${staff.width}px`;
+  staff.svg.style.minWidth = '0';
+  const head = h('div', { class: 'strip-head' });
+  const el = h('div', { class: 'staff-strip' }, staff.svg, head);
+  let last = NaN;
+  return {
+    el,
+    follow(at: number) {
+      const x = staff.xOf(at);
+      if (Math.abs(x - last) < 0.5) return;
+      last = x;
+      const lead = el.clientWidth / 3;
+      const shift = Math.max(0, Math.min(x - lead, staff.width - el.clientWidth));
+      staff.svg.style.transform = `translateX(${-shift}px)`;
+      head.style.left = `${x - shift}px`;
+    },
+  };
+}
+
 // ---------------------------------------------------------------- sequence
 
 export function clefFor(ex: Exercise, hand?: Hand): Clef {
   return ex.clef ?? (hand === 'left' || ex.hand === 'left' ? 'bass' : 'treble');
 }
+
+const sequenceStaff = (ex: SequenceExercise) =>
+  renderStaff([{ clef: clefFor(ex), notes: ex.notes.map((p, i) => ({ pitches: [p], key: String(i) })) }], { key: ex.key });
 
 function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibration, onDone: OnDone) {
   let session = new SequenceSession(ex, cal);
@@ -264,9 +293,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
     if (v === 'classic') {
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       pos.forEach((k) => kb!.set(k, 'pos'));
-      staff = ex.display === 'staff'
-        ? renderStaff([{ clef: clefFor(ex), notes: ex.notes.map((p, i) => ({ pitches: [p], key: String(i) })) }], { key: ex.key })
-        : undefined;
+      staff = ex.display === 'staff' ? sequenceStaff(ex) : undefined;
       for (let i = 0; i < session.current; i++) staff?.mark(String(i), 'hit');
       const offHeld = showHeld(kb);
       stage.append(staff ? h('div', { class: 'staff-wrap' }, staff.svg) : '', kb.el);
@@ -275,11 +302,16 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
       // Wait mode: the next note falls to the keyboard and waits there until it is played.
       const notes = session.keys.map((device, i) => ({ device, beat: i, beats: 0.9, hand, finger: ex.fingers[i] }));
       const fv = new FallingView(lo, hi, cal, notes, { lookahead: 4, barQuarters: 1000, totalBeats: 0 });
-      stage.append(fv.el);
+      // Reading exercises keep the music in view: a staff strip above the lane.
+      staff = ex.display === 'staff' ? sequenceStaff(ex) : undefined;
+      const strip = staff ? staffStrip(staff) : undefined;
+      for (let i = 0; i < session.current; i++) staff?.mark(String(i), 'hit');
+      stage.append(strip?.el ?? '', fv.el);
       let shown = session.current;
       const stop = animate((now) => {
         shown += (session.current - shown) * 0.18;
         if (Math.abs(session.current - shown) < 0.01) shown = session.current;
+        strip?.follow(shown);
         fv.draw({
           beat: shown, held: midi.held, flashes, now, marked: posMarks,
           noteState: (i) => (i < session.current ? 'hit' : i === session.current ? 'now' : 'coming'),
@@ -381,18 +413,24 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   const stage = h('div', { class: 'stage' });
   let falling: FallingView | undefined;
   let staff: ReturnType<typeof renderStaff> | undefined;
+  let strip: ReturnType<typeof staffStrip> | undefined;
   let kb: KeyboardView | undefined;
   let offHeld = () => {};
   const buildView = (view: ViewMode) => {
     falling?.destroy();
     offHeld();
     stage.replaceChildren();
-    falling = undefined; staff = undefined; kb = undefined;
+    falling = undefined; staff = undefined; kb = undefined; strip = undefined;
     if (view === 'falling') {
       falling = new FallingView(lo, hi, cal,
         expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })),
         { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex) });
-      stage.append(falling.el);
+      // The sheet music rides along above the lane (not for tap exercises: their notes are placeholders).
+      if (!ex.tap) {
+        staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), key: ex.key });
+        strip = staffStrip(staff);
+      }
+      stage.append(strip?.el ?? '', falling.el);
       offHeld = () => {};
       idle();
     } else {
@@ -505,6 +543,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         beat: pos.beat, count: pos.phase === 'count-in' ? pos.count : undefined, held: midi.held, noteState, flashes, now, pedalDown: midi.pedalDown,
         banner: pos.phase === 'waiting' ? 'Get ready' : undefined,
       });
+      strip?.follow(Math.max(0, pos.beat));
       if (kb) {
         kb.clear('target');
         kb.clearLabels();

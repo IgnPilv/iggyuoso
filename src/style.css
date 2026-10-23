@@ -599,3 +599,8 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .progress-stats strong { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
 .reward { margin: var(--space-3) 0 0; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--accent-soft); }
 .reward .xp { color: var(--accent-ink); }
+
+/* The sheet music strip above the falling notes. */
+.staff-strip { position: relative; overflow: hidden; background: var(--staff-paper); border-radius: var(--radius-md) var(--radius-md) 0 0; margin-bottom: -2px; }
+.staff-strip .staff { display: block; height: auto; will-change: transform; }
+.strip-head { position: absolute; top: 8px; bottom: 8px; width: 2px; background: var(--accent); opacity: 0.6; border-radius: 1px; pointer-events: none; }

@@ -223,3 +223,7 @@ never copied pages). Start small, adapt as we go.
   songbook lessons (`songbook-1` to `songbook-4`: Au clair de la lune, Go Tell Aunt Rhody, Frère
   Jacques, Jingle Bells, When the Saints, London Bridge, and a Frère Jacques canon), which the
   checkpoints require. Generated daily drills come next.
+- 2026-10-23: After Ignas's "falling notes should also visualise the sheet music": in falling notes,
+  timed exercises (not `tap`) and step-by-step reading exercises (`display: staff`) show the staff
+  as a strip above the lane. It scrolls so the music being played sits a third of the way in, with
+  a playhead, and marks notes like the sheet view.
