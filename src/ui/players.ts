@@ -4,7 +4,10 @@ import type { Exercise, FindExercise, SequenceExercise, TimedExercise } from '..
 import { midi } from '../midi/input';
 import type { Hand, NoteToken } from '../music/notes';
 import { expectedNotes, totalBeats } from '../music/timeline';
+import { demoProgress, mastery } from '../progress';
+import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
 import { store } from '../progress/store';
+import { treeNodes } from '../content';
 import { RECORD_TEMPO_FRACTION } from '../scoring/stars';
 import type { TimedResult } from '../scoring/timed';
 import { TimedSession } from '../engine/timedSession';
@@ -54,10 +57,31 @@ function untimedResult(r: UntimedResult, retry: () => void) {
   );
 }
 
-export function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>) {
-  if (demo.active) return; // the demo pianist's playing is not your progress
+/**
+ * Save an attempt and update the mastery tree. Returns a line for the result card (XP, a node
+ * going up or down), or '' when there is nothing to tell. The demo uses throwaway progress.
+ */
+export function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>): HTMLElement | '' {
+  const p = demo.active ? demoProgress() : { store, mastery };
   const written = ex.kind === 'timed' ? ex.tempo : tempo;
-  store.record(ex.id, { at: new Date().toISOString(), score, stars, tempo, hands, counts: tempo >= RECORD_TEMPO_FRACTION * written });
+  const a = { at: new Date().toISOString(), score, stars, tempo, hands, counts: tempo >= RECORD_TEMPO_FRACTION * written };
+  const before = p.store.exercise(ex.id).best?.stars ?? 0;
+  p.store.record(ex.id, a);
+  return rewardLine(p.mastery.onAttempt(ex.id, a, before), p.mastery);
+}
+
+const STATE_LABEL: Record<NodeState, string> = { locked: 'Locked', introduced: 'Introduced', practised: 'Practised', solid: 'Solid', mastered: 'Mastered' };
+
+function rewardLine(o: AttemptOutcome, m: Mastery): HTMLElement | '' {
+  const title = (id: string) => treeNodes.get(id)?.title ?? id;
+  const parts: (string | HTMLElement)[] = [];
+  if (o.xp) parts.push(h('strong', { class: 'xp' }, `+${o.xp} XP`));
+  for (const p of o.promoted) parts.push(`“${title(p.node)}” is now ${STATE_LABEL[p.to]}.`);
+  for (const id of o.reviewed) parts.push(`Review of “${title(id)}” done.`);
+  for (const d of o.dropped) parts.push(`“${title(d.node)}” slipped back to ${STATE_LABEL[d.to]}: play it again soon.`);
+  if (!parts.length) return '';
+  const meta = m.meta;
+  return h('p', { class: 'reward' }, ...parts.flatMap((x) => [x, ' ']), meta.streak > 1 ? h('span', { class: 'small' }, `${meta.streak}-day streak`) : '');
 }
 
 /** Lights held keys and returns the unsubscribe function. */
@@ -170,8 +194,8 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
     update();
     if (session.done) {
       const r = session.result();
-      record(ex, r.score, r.stars, 0);
-      result.replaceChildren(untimedResult(r, restart));
+      const reward = record(ex, r.score, r.stars, 0);
+      result.replaceChildren(untimedResult(r, restart), reward);
       onDone(r);
     }
   });
@@ -279,8 +303,8 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
     update();
     if (session.done) {
       const r = session.result();
-      record(ex, r.score, r.stars, 0);
-      result.replaceChildren(untimedResult(r, restart));
+      const reward = record(ex, r.score, r.stars, 0);
+      result.replaceChildren(untimedResult(r, restart), reward);
       onDone(r);
     }
   });
@@ -461,9 +485,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       const r = session.result();
       for (const n of r.notes) staff?.mark(`${n.expected.hand}:${n.expected.index}`, n.outcome === 'hit' ? 'hit' : n.outcome);
       const handScores = Object.fromEntries(r.hands.map((hr) => [hr.hand, hr.score]));
-      record(ex, r.score, r.stars, tempo, handScores);
+      const reward = record(ex, r.score, r.stars, tempo, handScores);
       hud.replaceChildren();
-      result.replaceChildren(timedResult(r, ex, tempo, cal));
+      result.replaceChildren(timedResult(r, ex, tempo, cal), reward);
       onDone(r);
       demo.onRunEnd?.('play');
     };

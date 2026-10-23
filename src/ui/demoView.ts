@@ -132,7 +132,7 @@ function scenes(): Scene[] {
   const seq = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys' && e.fingers.length > 0);
   if (seq) out.push({ title: 'Finger numbers', caption: 'In falling notes, each note falls to the keyboard and waits until you play it, with the finger number on it. The pianist stumbles once, then the view switches back to the keyboard.', run: exerciseScene(seq, { view: 'falling', switchAt: 4200 }) });
   const oneHand = pick(isTimed, (e) => !!e.right !== !!e.left && e.display === 'keys' && noteCount(e) >= 9 && e.fingers[e.right ? 'right' : 'left'].length > 0, (e) => !!e.right !== !!e.left && noteCount(e) >= 9);
-  if (oneHand) out.push({ title: 'Falling notes', caption: 'Listen first: the app plays the tune and lights each key. Then the pianist plays it, with one wrong key, one late note and one missed note. The score and the mistakes show up live.', run: exerciseScene(oneHand, { listenFirst: true, view: 'falling' }) });
+  if (oneHand) out.push({ title: 'Falling notes', caption: 'Listen first: the app plays the tune and lights each key. Then the pianist plays it, with one wrong key, one late note and one missed note. The score and the mistakes show up live. The result card shows the XP earned (clean takes, new stars and promotions only).', run: exerciseScene(oneHand, { listenFirst: true, view: 'falling' }) });
   const twoHands = pick(isTimed, (e) => !!(e.right && e.left));
   if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score.', run: exerciseScene(twoHands, { view: 'falling' }) });
   const sheet = pick(isTimed, (e) => e.display === 'staff' && !(e.right && e.left));

@@ -88,6 +88,10 @@ export class Store {
     this.backend.set(PREFIX + key, JSON.stringify(v));
   }
 
+  /** Other saved records (the mastery store keeps its own under these keys). */
+  get<T>(key: string): T | undefined { return this.read<T>(key); }
+  put(key: string, v: unknown) { this.write(key, v); }
+
   get calibration(): Calibration | undefined { return this.read('calibration'); }
   set calibration(c: Calibration | undefined) { this.write('calibration', c); }
 

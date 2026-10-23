@@ -146,6 +146,15 @@ never copied pages). Start small, adapt as we go.
   `public/piano/CREDITS.txt`), 30 samples a minor third apart, cut to 3.5 s mono 96 kb/s (1.3 MB
   in all). Samples load on first use; a note whose sample is not ready yet uses the synth tone.
   Metronome clicks stay synthetic.
+- 2026-10-23: Mastery store (`src/progress/mastery.ts`, saved as `mastery.<node>` and
+  `mastery.meta`): Locked until every required node is Practised; Practised = every exercise of
+  the node's lesson ★ at a counting tempo; Solid = every best ★★★ (92+), reached on a clean take;
+  Mastered = a pass on a later day than Solid. Review boxes of 2/4/8/16/32/64 days; freshness =
+  2^(−days/box), due at ½; a pass on a due node moves up a box (+10 XP), a fail drops one state
+  and resets the box, and climbing back needs a fresh take. XP: clean take 10, each new star 5,
+  promotion 25, daily cap 300. The streak forgives one rest day. The result card shows the XP and
+  state changes; home shows XP, streak, reviews due and Solid / Mastered / Review badges. The
+  demo uses throwaway progress, so it shows rewards without saving anything.
 - 2026-10-23: Year 1 content complete (units 1–6, 51 lessons, 3 checkpoints, Year 1 exit exam),
   every Year 1 tree node linked to its lesson. Pieces are public domain (folk tunes, Beethoven's
   Ode to Joy) or our own (waltz in G, D minor song, call and answer). Improvising uses `tap`

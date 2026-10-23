@@ -579,3 +579,14 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .drill-feedback.ok { color: var(--ok); }
 .drill-feedback.bad { color: var(--bad); }
 .quiz-picture .staff { max-width: 420px; min-width: 0; }
+
+/* ---------------------------------------------------------------- mastery */
+
+.state-badge { margin-left: auto; padding: 1px 8px; border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; white-space: nowrap; background: var(--surface-sunken); color: var(--ink-2); }
+.state-badge.solid { background: var(--ok-soft); color: var(--ok); }
+.state-badge.mastered { background: var(--accent-soft); color: var(--accent-ink); }
+.state-badge.due { background: var(--warn-soft); color: var(--warn); }
+.progress-stats { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); font-size: var(--text-lg); }
+.progress-stats strong { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
+.reward { margin: var(--space-3) 0 0; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--accent-soft); }
+.reward .xp { color: var(--accent-ink); }
