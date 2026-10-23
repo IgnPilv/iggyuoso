@@ -166,7 +166,7 @@ finger count that doesn't match, missing lesson or exercise id).
 
 ```yaml
 year: 1
-title: Hands apart, then together
+title: First steps
 level: ABRSM Initial–Grade 1, RCM Prep–Level 1
 goal: What the player can do at the end of the year.
 units:                 # in path order

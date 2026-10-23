@@ -1,7 +1,7 @@
 # iggyuoso
 
 A browser piano tutor for adult beginners with a MIDI keyboard: short exercises that each train
-one skill, hands apart first, then together, scored per hand. See `CLAUDE.md` for the full brief.
+one skill, scored per hand. See `CLAUDE.md` for the full brief.
 
 Live: https://ignpilv.github.io/iggyuoso/ (Chrome or Edge; Web MIDI needs https).
 No keyboard? Open https://ignpilv.github.io/iggyuoso/#/demo to watch the app play itself, or switch

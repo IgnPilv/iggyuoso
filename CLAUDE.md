@@ -6,7 +6,7 @@
 A browser-based piano tutor (iggy + virtuoso) for an adult beginner who is "not musical", using a
 MIDI keyboard. Not a song player; a **trainer**: short exercises that each isolate one skill,
 hands apart first, then together. Each hand is scored separately and the feedback says which hand
-or which habit gave way. Slogan: *hands apart, then together.*
+or which habit gave way. Slogan: *easy as C D E.*
 
 The curriculum teaches from scratch, like a first-year music-school pupil: music theory and playing
 go hand in hand, following the order of standard music-school piano textbooks (our own wording,
@@ -319,3 +319,6 @@ never copied pages). Start small, adapt as we go.
   starts. A remembered tempo wins over the tempo ladder's step (the ladder line still says which
   tempo counts); a ladder moving by itself does not change the remembered tempo. The demo keeps
   its own options and never saves them. Demo scene "Options carry over".
+- 2026-10-23: Slogan is now "Easy as C D E" (Ignas: "lose the hands apart then together slogan,
+  easy as C D E is better"), in the home hero and the header tagline. Practising hands apart stays
+  as teaching advice in lessons.

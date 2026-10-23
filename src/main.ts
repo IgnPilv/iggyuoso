@@ -76,7 +76,7 @@ const main = h('main');
 document.getElementById('app')!.append(
   h('header', {},
     h('a', { href: '#/', class: 'brand' }, brandMark, 'iggyuoso'),
-    h('span', { class: 'tagline' }, 'hands apart, then together'),
+    h('span', { class: 'tagline' }, 'easy as C D E'),
     h('nav', {}, keysPill, ...navLinks, themeBtn),
   ),
   main,
