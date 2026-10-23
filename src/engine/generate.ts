@@ -143,10 +143,28 @@ function rhythm(ex: GeneratedExercise, rng: Rng): string[][] {
   return out;
 }
 
+const tapText = (bars: string[][]) => bars.map((bar) => bar.map((d) => (d.startsWith('r:') ? d : `x:${d}`)).join(' ')).join(' | ');
+
+/** One rhythm line, or two (`hands: both`): the left hand moves in the longer values, and never only rests. */
+function rhythmLines(ex: GeneratedExercise, rng: Rng): Raw {
+  if (ex.hands !== 'both') return { rhythm: tapText(rhythm(ex, rng)) };
+  const long = ex.durations.filter((d) => !d.startsWith('r:') && parseDuration(d).beats >= 1);
+  const leftEx = { ...ex, durations: long.length ? [...new Set([...long, ...ex.durations.filter((d) => d.startsWith('r:') && parseDuration(d.slice(2)).beats >= 1)])] : ex.durations };
+  return { right: tapText(rhythm(ex, rng)), left: tapText(rhythm(leftEx, rng)) };
+}
+
 function rhythmRead(ex: GeneratedExercise, rng: Rng): Raw {
-  const bars = rhythm(ex, rng);
-  const text = bars.map((bar) => bar.map((d) => (d.startsWith('r:') ? d : `x:${d}`)).join(' ')).join(' | ');
-  return { kind: 'tap', display: 'staff', tempo: ex.tempo, meter: ex.meter, rhythm: text, prompt: ex.prompt ?? 'Read the rhythm and tap it on any key.' };
+  return {
+    kind: 'tap', display: 'staff', tempo: ex.tempo, meter: ex.meter, ...rhythmLines(ex, rng),
+    prompt: ex.prompt ?? (ex.hands === 'both' ? 'Read both lines and tap them: right hand from middle C up, left hand below.' : 'Read the rhythm and tap it on any key.'),
+  };
+}
+
+function rhythmEcho(ex: GeneratedExercise, rng: Rng): Raw {
+  return {
+    kind: 'tap', echo: true, tempo: ex.tempo, meter: ex.meter, ...rhythmLines(ex, rng),
+    prompt: ex.prompt ?? (ex.hands === 'both' ? 'Listen, then tap it back: high notes with the right hand from middle C up, low notes with the left.' : 'Listen to the rhythm, then tap it back on any key.'),
+  };
 }
 
 function sightRead(ex: GeneratedExercise, rng: Rng): Raw {
@@ -270,7 +288,7 @@ function leftBar(c: BarChord, part: 'roots' | 'fifths' | 'chords', { quarters, p
   return fill(quarters, pulse).map((d) => `${pitchText(root)}:${d}`).join(' ');
 }
 
-const MAKERS = { 'read-notes': readNotes, 'find-notes': findNotes, intervals, 'rhythm-read': rhythmRead, 'sight-read': sightRead } as const;
+const MAKERS = { 'read-notes': readNotes, 'find-notes': findNotes, intervals, 'rhythm-read': rhythmRead, 'rhythm-echo': rhythmEcho, 'sight-read': sightRead } as const;
 
 /** This run of a generated drill, as a playable exercise that saves under the drill's id. */
 export function generate(ex: GeneratedExercise, rng: Rng = Math.random): Exercise {

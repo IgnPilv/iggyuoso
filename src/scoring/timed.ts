@@ -17,7 +17,8 @@ export interface PlayedNote {
 
 export interface TimedScoreOptions {
   tempo: number;
-  pitchMatch: 'exact' | 'pitchClass' | 'any';
+  /** `side`: written notes from middle C up match each other, and those below it (two-hand tap). */
+  pitchMatch: 'exact' | 'pitchClass' | 'any' | 'side';
 }
 
 export type Outcome = 'hit' | 'miss' | 'wrong';
@@ -105,7 +106,7 @@ export function scoreTimed(expected: ExpectedNote[], playedRaw: PlayedNote[], op
   const played = playedRaw.filter((p) => p.on >= -win);
   const handsPresent = (['right', 'left'] as const).filter((h) => expected.some((e) => e.hand === h));
   const samePitch = (a: number, b: number) =>
-    opts.pitchMatch === 'any' || (opts.pitchMatch === 'pitchClass' ? pitchClass(a) === pitchClass(b) : a === b);
+    opts.pitchMatch === 'any' || (opts.pitchMatch === 'side' ? (a >= 60) === (b >= 60) : opts.pitchMatch === 'pitchClass' ? pitchClass(a) === pitchClass(b) : a === b);
   const time = (e: ExpectedNote) => e.beat * bMs;
 
   // 1. Hits: pair expected and played notes of the same pitch, closest in time first.

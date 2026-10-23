@@ -282,10 +282,21 @@ export function parseExercise(raw: Raw): Exercise {
   if (kind === 'build') return parseBuild(raw, base, pitchMatch);
   if (kind === 'tap') {
     // Rhythm only: "x:q x:q x:h | ..." with x as the pitch placeholder; any key counts.
-    if (raw.right !== undefined || raw.left !== undefined) throw new FieldError('a tap exercise has "rhythm", not right/left notes');
-    const rhythm = str(raw, 'rhythm')!;
-    if (/(^|[\s|+])(?!x:|r:)[^\s|]+:/.test(` ${rhythm}`)) throw new FieldError('"rhythm" uses x for every note, like "x:q x:q x:h | r:q x:q x:h"');
-    raw = { ...raw, right: rhythm.replace(/(^|[\s|])x:/g, '$1C4:') };
+    // Two hands: `right` and `left` rhythms; keys from middle C up are the right hand, below the left.
+    const xs = (name: string, text: string, at: string) => {
+      if (/(^|[\s|+])(?!x:|r:)[^\s|]+:/.test(` ${text}`)) throw new FieldError(`"${name}" uses x for every note, like "x:q x:q x:h | r:q x:q x:h"`);
+      return text.replace(/(^|[\s|])x:/g, `$1${at}:`);
+    };
+    if (raw.right !== undefined || raw.left !== undefined) {
+      if (raw.rhythm !== undefined) throw new FieldError('a tap exercise has either "rhythm" (any key) or "right" / "left" rhythms (one per hand)');
+      raw = {
+        ...raw,
+        ...(raw.right !== undefined ? { right: xs('right', str(raw, 'right')!, 'C4') } : {}),
+        ...(raw.left !== undefined ? { left: xs('left', str(raw, 'left')!, 'C3') } : {}),
+      };
+    } else {
+      raw = { ...raw, right: xs('rhythm', str(raw, 'rhythm')!, 'C4') };
+    }
   }
 
   const tempo = Number(raw.tempo);
@@ -320,7 +331,9 @@ export function parseExercise(raw: Raw): Exercise {
     }
     bars = lens.length;
   }
-  const hand = kind === 'tap' ? 'right' : base.hand; // a tap without a hand shows no hand badge
+  const sides = kind === 'tap' && raw.rhythm === undefined; // a two-hand (or one-side) tap
+  // A one-line tap without a hand shows no hand badge.
+  const hand = kind === 'tap' && !sides ? 'right' : base.hand;
   if ((hand === 'right' && !right) || (hand === 'left' && !left)) throw new FieldError(`hand is ${hand} but there are no ${hand} notes`);
   if ((hand === 'alternating' || hand === 'together') && !(right && left)) throw new FieldError(`hand ${hand} needs both right and left notes`);
   // `fingers` for a one-hand exercise; `rightFingers` / `leftFingers` when both hands play.
@@ -342,9 +355,9 @@ export function parseExercise(raw: Raw): Exercise {
     }
   }
   return {
-    ...base, hand: kind === 'tap' ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, ...(click && click !== 'on' ? { click } : {}), right, left, fingers, pickup, ...(pedal ? { pedal } : {}),
+    ...base, hand: kind === 'tap' && !sides ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, ...(click && click !== 'on' ? { click } : {}), right, left, fingers, pickup, ...(pedal ? { pedal } : {}),
     ...(raw.tempoLadder !== undefined && raw.tempoLadder !== false ? { ladder: parseLadder(raw.tempoLadder) } : {}),
-    pitchMatch: kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true } : {}),
+    pitchMatch: sides ? 'side' : kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true, ...(raw.echo === true ? { echo: true } : {}) } : {}),
   };
 }
 
@@ -560,7 +573,9 @@ function parseGenerated(top: Raw, base: Base): Exercise {
   const m = (raw.mastery ?? {}) as Raw;
   const accuracy = m.accuracy === undefined ? 90 : Number(m.accuracy);
   if (!(accuracy >= 50 && accuracy <= 100)) throw new FieldError('"mastery.accuracy" should be a percentage from 50 to 100');
-  const timed = generator === 'rhythm-read' || generator === 'sight-read';
+  const timed = generator === 'rhythm-read' || generator === 'rhythm-echo' || generator === 'sight-read';
+  const hands = oneOf(raw, 'hands', ['one', 'both'] as const) ?? 'one';
+  if (hands === 'both' && !generator.startsWith('rhythm-')) throw new FieldError('"hands: both" is for rhythm-read and rhythm-echo');
   const medianMs = m.medianMs === undefined ? (timed ? undefined : 2500) : Number(m.medianMs);
   if (medianMs !== undefined && !(medianMs >= 300)) throw new FieldError('"mastery.medianMs" should be milliseconds, 300 or more');
   const questions = raw.questions === undefined ? 30 : Number(raw.questions);
@@ -576,6 +591,7 @@ function parseGenerated(top: Raw, base: Base): Exercise {
     durations: durations.length ? durations : ['q', 'h'],
     meter, bars, tempo, intervals, questions,
     answer: oneOf(raw, 'answer', ['play', 'name'] as const) ?? 'play',
+    hands,
     leftPart: leftPartOf(raw, generator, base.hand),
     mastery: { accuracy, ...(medianMs !== undefined ? { medianMs } : {}) },
   };

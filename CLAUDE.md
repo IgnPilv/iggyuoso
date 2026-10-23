@@ -357,3 +357,9 @@ never copied pages). Start small, adapt as we go.
   the bar ("3 4"; one beat in 2/4, 6/8, 2/2), counted on screen as those beats; None = one silent
   beat to get ready, no clicks. Content `click: count-in` (clicks only in the count-in, for the inner
   pulse) and `click: off` on timed and tap. Demo scene "Options carry over" sets a short count-in.
+- 2026-10-23: Two-hand tapping and rhythm echo (tree thread asks 9, 11, 12): `tap` with `right:` /
+  `left:` rhythms (placeholders C4 / C3, `pitchMatch: side`: any key from middle C up is the right
+  hand, below the left; scored per hand). Generated `rhythm-read` takes `hands: both`. New generator
+  `rhythm-echo` (`tap` with `echo: true`): Play sounds the rhythm unseen, a full bar of count-in,
+  the player taps it back (no Listen button, no falling notes, no lit keys, no loops); the staff
+  appears on the result, marked. Demo scenes "Two-hand tapping" and "Rhythm echo".

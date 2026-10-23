@@ -54,6 +54,29 @@ rhythm: "x:q x:q x:h | x:q x:e x:e x:h"`);
     expect(r.score).toBe(100);
   });
 
+  it('taps with two hands: right from middle C up, left below, scored per hand', () => {
+    const t = ex<Parameters<typeof expectedNotes>[0] & { hand: string; pitchMatch: string }>(`
+id: t2
+kind: tap
+tempo: 60
+meter: 4/4
+right: "x:q x:q x:h"
+left: "x:h x:h"`);
+    expect(t).toMatchObject({ kind: 'timed', tap: true, pitchMatch: 'side', hand: 'together' });
+    const want = expectedNotes(t);
+    expect(want.map((n) => n.midi).sort()).toEqual([48, 48, 60, 60, 60]);
+    // Right hand on any keys above middle C, left hand anywhere below; one left beat on the wrong side.
+    const played = [
+      { midi: 72, on: 0, off: 900 }, { midi: 65, on: 1000, off: 1900 }, { midi: 61, on: 2000, off: 3900 },
+      { midi: 40, on: 0, off: 1900 }, { midi: 62, on: 2000, off: 3900 },
+    ];
+    const r = scoreTimed(want, played, { tempo: 60, pitchMatch: 'side' });
+    expect(r.hands.find((h) => h.hand === 'right')!.score).toBe(100);
+    expect(r.hands.find((h) => h.hand === 'left')!.score).toBeLessThan(100);
+    expect(() => ex(`{id: t, kind: tap, tempo: 60, meter: 4/4, rhythm: "x:w", right: "x:w"}`)).toThrow(/either/);
+    expect(() => ex(`{id: t, kind: tap, tempo: 60, meter: 4/4, right: "x:w", left: "C3:w"}`)).toThrow(/x for every note/);
+  });
+
   it('parses build shorthands', () => {
     const b = ex<BuildExercise>(`
 id: b
