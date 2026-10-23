@@ -11,10 +11,9 @@ import { mountExercise, resetDemoOptions } from './players';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
 import { demoProgress, lessonGoals, lessonExercises, nodeOfLesson } from '../progress';
-import { Mastery } from '../progress/mastery';
-import { memoryBackend, Store as StoreClass } from '../progress/store';
-import { dayOf } from '../progress/mastery';
-import type { Store } from '../progress/store';
+import { dayOf, Mastery } from '../progress/mastery';
+import { memoryBackend, Store } from '../progress/store';
+import { demoAccount } from '../sync';
 import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
 import { explainBlock, playground } from './theory';
@@ -118,6 +117,21 @@ prompt: Rhythm only. Tap the rhythm on any key.
 tempo: 84
 meter: 4/4
 rhythm: "x:q x:q x:h | x:e x:e x:q x:h"`,
+  tapBoth: `
+id: demo-tap-both
+kind: generated
+generator: rhythm-read
+hands: both
+durations: [q, h, e]
+bars: 2
+tempo: 72`,
+  echo: `
+id: demo-echo
+kind: generated
+generator: rhythm-echo
+durations: [q, h, e, r:q]
+bars: 2
+tempo: 80`,
   rhythms: `
 id: demo-rhythms
 kind: timed
@@ -370,7 +384,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Options carry over',
-    caption: 'Tempo, click, guide notes and whether Options is open are remembered: set 100% (or switch the click off) on one exercise, and the next one starts the same way.',
+    caption: 'Tempo, count-in, click, guide notes and whether Options is open are remembered: set 100%, a short count-in ("3 4" instead of "1 2 3 4") or no click on one exercise, and the next one starts the same way.',
     run: (box, next) => {
       resetDemoOptions();
       const timers: number[] = [];
@@ -384,15 +398,17 @@ function scenes(): Scene[] {
       };
       later(1200, () => { const d = box.querySelector('details.drawer') as HTMLDetailsElement | null; if (d) d.open = true; });
       later(2600, () => change('select[aria-label=tempo]', (el) => { el.value = '100'; }));
-      later(3800, () => change('.drawer input[type=checkbox]', (el) => { el.checked = false; }));
-      later(6000, () => {
+      later(3800, () => change('select[aria-label=count-in]', (el) => { el.value = 'short'; }));
+      later(5000, () => change('.drawer input[type=checkbox]', (el) => { el.checked = false; }));
+      later(6500, () => {
         cleanup();
         box.replaceChildren();
         const other = allExercises().find((e) => isTimed(e) && e.id !== first.id && !!e.ladder) ?? parseExercise(parse(SAMPLES.sixEight));
         cleanup = mountExercise(box, other, DEMO_CALIBRATION, () => {});
         setView(box, 'classic');
       });
-      later(11000, next);
+      later(8000, () => press(box, 'Listen'));
+      later(14000, next);
       return () => { timers.forEach(clearTimeout); cleanup(); resetDemoOptions(); };
     },
   });
@@ -493,6 +509,34 @@ function scenes(): Scene[] {
       return () => clearTimeout(t);
     },
   });
+  out.push({
+    title: 'Guest or account',
+    caption: 'Without an account you play as a guest: progress is saved on this device only, and the profile says so. Sign in with an emailed link (no password) and the guest progress goes into the account, which carries it to every device. Here the pianist signs in and the practice from their other device arrives. (Accounts switch on once the account server is set up; the demo uses a pretend one.)',
+    run: (box, next) => {
+      const timers: number[] = [];
+      const email = 'pianist@example.com';
+      const { server, account, data } = demoAccount();
+      // The "other device": seven weeks of made-up practice already in the account.
+      const other = sampleProgress().store;
+      const keys = ['profile.days', 'profile.timing', 'mastery.meta', ...[...treeNodes.keys()].map((id) => `mastery.${id}`)];
+      void server.push({ userId: `user:${email}`, email, accessToken: '', refreshToken: '', expiresAt: 0 },
+        keys.flatMap((key) => { const value = other.get(key); return value === undefined ? [] : [{ key, value, schema: 1 }]; }));
+      const local = new Store(data);
+      const progress = { store: local, mastery: new Mastery(local, treeNodes, (l) => { const x = content.lessons.get(l); return x ? lessonGoals(x).map((e) => e.id) : []; }) };
+      const draw = () => box.replaceChildren(renderProfile(progress, new Date(), account));
+      draw();
+      const off = account.onChange((changed) => { if (changed) draw(); });
+      timers.push(window.setTimeout(() => {
+        const input = box.querySelector<HTMLInputElement>('.account-form input');
+        if (!input) return;
+        [...email].forEach((_, i) => timers.push(window.setTimeout(() => { input.value = email.slice(0, i + 1); input.dispatchEvent(new Event('input')); }, i * 60)));
+        timers.push(window.setTimeout(() => box.querySelector<HTMLFormElement>('.account-form')?.requestSubmit(), email.length * 60 + 500));
+      }, 4500));
+      timers.push(window.setTimeout(() => void account.completeSignIn(`#memory-sign-in=${email}`), 10500));
+      timers.push(window.setTimeout(next, 19000));
+      return () => { timers.forEach(clearTimeout); off(); };
+    },
+  });
   const looks = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys');
   if (looks) out.push({
     title: 'Dark and light',
@@ -513,6 +557,16 @@ function scenes(): Scene[] {
   out.push({ title: 'Theory screens', caption: 'Theory comes with pictures: a staff (with note names), lit keys with fingers, a sound to hear, the rule in a box and its key terms. A quick check holds Next until it is answered right; a wrong answer explains why. Then a playground: press any key and see it on the staff.', run: theoryScene });
   out.push({ title: 'Theory quiz', caption: 'Short theory questions, with a picture or a sound. Answer with a button, or by playing the answer. After each answer the quiz says why, with a picture, and waits for Next.', run: exerciseScene(parseExercise(parse(SAMPLES.quiz)), { view: 'classic' }) });
   out.push({ title: 'Build it', caption: 'Play a named chord (hold it down), interval or scale, untimed. "Show me" lights the keys, but then it does not count as a first try.', run: exerciseScene(sampleOf('build', SAMPLES.build), { view: 'falling', switchAt: 6000 }) });
+  const played = (ex: Exercise, wait = 4000): Scene['run'] => (box, next, p) => {
+    const timers: number[] = [];
+    demo.onTimed = (s) => p.playTimed(s);
+    demo.onRunEnd = (mode) => { if (mode === 'play') timers.push(window.setTimeout(next, wait)); };
+    const cleanup = mountExercise(box, ex, DEMO_CALIBRATION, () => {});
+    timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+    return () => { timers.forEach(clearTimeout); cleanup(); };
+  };
+  out.push({ title: 'Two-hand tapping', caption: 'Rhythm for both hands: the right hand taps any key from middle C up, the left hand any key below, and each hand is scored on its own. Here a fresh two-line rhythm to read (rhythm-read with hands: both).', run: played(parseExercise(parse(SAMPLES.tapBoth))) });
+  out.push({ title: 'Rhythm echo', caption: 'Play sounds a rhythm you cannot see. After a bar of count-in it is your turn: tap it back on any key. Then the staff shows what it was, marked note by note. A new rhythm every run.', run: played(parseExercise(parse(SAMPLES.echo)), 5000) });
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
   out.push({
     title: 'MIDI tester',
@@ -629,7 +683,7 @@ export const demoView: View = (root, arg) => {
  * early ones Solid), milestone 1 passed, two songs learned. Throwaway: nothing is saved.
  */
 function sampleTreeProgress() {
-  const s = new StoreClass(memoryBackend());
+  const s = new Store(memoryBackend());
   const exercisesOf = (id: string) => { const l = content.lessons.get(id); return l ? lessonExercises(l) : []; };
   const m = new Mastery(s, treeNodes, exercisesOf);
   const day = dayOf(new Date(Date.now() - 3 * 86_400_000));

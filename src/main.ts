@@ -3,6 +3,7 @@ import { midi, MidiInput } from './midi/input';
 import { computerKeys } from './midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from './demo/demo';
 import { store } from './progress/store';
+import { account, isSignInReturn } from './sync';
 import { h, type View } from './ui/dom';
 import { demoView } from './ui/demoView';
 import { profileView } from './ui/profileView';
@@ -88,6 +89,7 @@ document.getElementById('app')!.append(
 
 let cleanup: (() => void) | void;
 function render() {
+  signInReturn();
   cleanup?.();
   main.replaceChildren();
   const [name = '', arg] = location.hash.replace(/^#\/?/, '').split('/');
@@ -95,6 +97,21 @@ function render() {
   cleanup = (routes[name] ?? homeView)(main, arg && decodeURIComponent(arg));
   window.scrollTo(0, 0);
 }
+
+// A sign-in link comes back with the sign-in in the hash: finish it on the profile page.
+function signInReturn() {
+  if (!isSignInReturn(location.hash)) return;
+  const hash = location.hash;
+  history.replaceState(null, '', '#/profile');
+  void account.completeSignIn(hash);
+}
+signInReturn();
+account.start();
+// Progress from another device: redraw pages that show progress (never a running exercise).
+account.onChange((changed) => {
+  const name = location.hash.replace(/^#\/?/, '').split('/')[0];
+  if (changed && !demo.active && ['', 'today', 'lesson', 'profile'].includes(name)) render();
+});
 
 window.addEventListener('hashchange', render);
 if (MidiInput.supported()) {

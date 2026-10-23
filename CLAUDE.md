@@ -333,3 +333,33 @@ never copied pages). Start small, adapt as we go.
   `sight-read` with `hand: together` writes a tune over a left hand on I, IV, V (`left: roots |
   fifths | chords`), grand staff, each bar's first tune note a chord note (`progression`,
   `src/engine/generate.ts`). Demo scene "Sight-reading, both hands".
+- 2026-10-23: Guest and accounts (Ignas: "use an account to track across devices or just use a
+  guest session which is local"; no import/export). Guest is the default: progress on this
+  device only, and the profile opens with a "Guest" card saying so. A signed-in account copies
+  progress to a server and back (`src/sync/`, `docs/accounts.md`); the app always plays from the
+  device's copy, so it works offline. Backend: **Supabase free plan**, over plain HTTPS (no SDK),
+  email-link sign-in, one `progress` table (one row per store key, `jsonb` value, `schema`,
+  server `updated_at`) under row-level security (`docs/supabase.sql`). The server sits behind
+  `SyncProvider`, so it can be swapped. Config from repository variables `SUPABASE_URL` /
+  `SUPABASE_ANON_KEY` at build time; without them the app is guest only ("accounts are
+  coming"). Every `iggyuoso.*` record syncs except `schema`, `calibration`, `settings`,
+  `account`, `sync.*` (new records sync with no change). Changes are stamped by a wrapper on the
+  store's backend; sync = pull rows changed since the last pull (1 min overlap), merge records
+  changed on both sides (exercise records, practice log, timing, XP keep the most of both, so
+  counts never double but can undercount if both devices practise offline at once; everything
+  else newer wins), push local changes. Rows from a newer schema are skipped with a reload
+  prompt; older ones run `Store.upgradeFrom`, so migration steps must accept upgraded data.
+  Signing in adds the guest's progress to the account; signing out keeps it on the device as a
+  guest. The sign-in link returns to the app with the session in the hash, turned into
+  `#/profile`. Demo scene "Guest or account" (pretend server, never saves).
+- 2026-10-23: Count-in choice (Ignas: "the full 1 2 3 4 is a very long wait"): Options → Count-in
+  Full bar / Short / None, remembered like tempo (`settings.countIn`). Short = the last two beats of
+  the bar ("3 4"; one beat in 2/4, 6/8, 2/2), counted on screen as those beats; None = one silent
+  beat to get ready, no clicks. Content `click: count-in` (clicks only in the count-in, for the inner
+  pulse) and `click: off` on timed and tap. Demo scene "Options carry over" sets a short count-in.
+- 2026-10-23: Two-hand tapping and rhythm echo (tree thread asks 9, 11, 12): `tap` with `right:` /
+  `left:` rhythms (placeholders C4 / C3, `pitchMatch: side`: any key from middle C up is the right
+  hand, below the left; scored per hand). Generated `rhythm-read` takes `hands: both`. New generator
+  `rhythm-echo` (`tap` with `echo: true`): Play sounds the rhythm unseen, a full bar of count-in,
+  the player taps it back (no Listen button, no falling notes, no lit keys, no loops); the staff
+  appears on the result, marked. Demo scenes "Two-hand tapping" and "Rhythm echo".

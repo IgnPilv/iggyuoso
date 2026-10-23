@@ -6,6 +6,9 @@ import { demoProgress, lessonExercises, lessonGoals, mastery } from '../progress
 import { dayOf, Mastery, type NodeState } from '../progress/mastery';
 import { levelOf, strandMastery, type DayLog, type TimingEntry } from '../progress/profile';
 import { memoryBackend, store, Store } from '../progress/store';
+import { account, demoAccount } from '../sync';
+import type { Account } from '../sync/account';
+import { accountCard } from './accountView';
 import { h, type View } from './dom';
 
 // The player profile (#/profile): level and XP, the practice calendar, totals, mastery per
@@ -25,7 +28,8 @@ function timingWords(mean: number) {
   return Math.abs(mean) < 15 ? 'right on the beat' : `${ms(mean)} on average`;
 }
 
-export function renderProfile(p: { store: Store; mastery: Mastery }, now = new Date()): HTMLElement {
+/** The profile page; with an account, its card (guest or signed in) comes first. */
+export function renderProfile(p: { store: Store; mastery: Mastery }, now = new Date(), acct?: Account): HTMLElement {
   const today = dayOf(now);
   const meta = p.mastery.meta;
   const lv = levelOf(meta.xp);
@@ -120,7 +124,7 @@ export function renderProfile(p: { store: Store; mastery: Mastery }, now = new D
           ` From the last ${Math.min(s.takes, 10)} timed ${s.takes === 1 ? 'take' : 'takes'}.`));
     })) : h('p', { class: 'small' }, 'Play a timed exercise to see how each hand keeps time.'));
 
-  return h('div', { class: 'profile' }, levelCard, calendarCard, skillsCard, timingCard);
+  return h('div', { class: 'profile' }, acct ? accountCard(acct) : null, levelCard, calendarCard, skillsCard, timingCard);
 }
 
 /**
@@ -157,5 +161,5 @@ export function sampleProgress(now = new Date()): { store: Store; mastery: Maste
 }
 
 export const profileView: View = (root) => {
-  root.append(renderProfile(demo.active ? demoProgress() : { store, mastery }));
+  root.append(demo.active ? renderProfile(demoProgress(), new Date(), demoAccount().account) : renderProfile({ store, mastery }, new Date(), account));
 };

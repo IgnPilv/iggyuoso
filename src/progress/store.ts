@@ -1,22 +1,29 @@
 import type { Calibration } from '../calibration';
 import { STAR_THRESHOLDS } from '../scoring/stars';
+import { tracked } from '../sync/tracker';
 
-// Progress lives in localStorage for now. Everything goes through a small key-value backend so
-// it can be swapped for an account later.
+// Progress lives on the device (localStorage), as a guest. Everything goes through a small
+// key-value backend; the real store's backend notes each change so a signed-in account can copy
+// it to the server and back (src/sync/).
 
 export interface Backend {
   get(key: string): string | null;
   set(key: string, value: string): void;
+  /** Every key saved, for sync. */
+  keys?(): string[];
 }
 
 export const localBackend: Backend = {
   get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* storage full or blocked */ } },
+  keys: () => {
+    try { return Array.from({ length: localStorage.length }, (_, i) => localStorage.key(i)!).filter(Boolean); } catch { return []; }
+  },
 };
 
 export function memoryBackend(): Backend {
   const m = new Map<string, string>();
-  return { get: (k) => m.get(k) ?? null, set: (k, v) => void m.set(k, v) };
+  return { get: (k) => m.get(k) ?? null, set: (k, v) => void m.set(k, v), keys: () => [...m.keys()] };
 }
 
 export interface Attempt {
@@ -73,6 +80,8 @@ export interface Settings {
   computerKeys?: boolean;
   /** Tempo in percent the player last picked; the next exercise starts there too. */
   tempo?: number;
+  /** Count-in before timed exercises: a full bar, the last two beats ("3 4"), or none. */
+  countIn?: 'bar' | 'short' | 'none';
   /** Whether the exercise Options drawer was left open. */
   optionsOpen?: boolean;
 }
@@ -102,8 +111,16 @@ export class Store {
   }
 
   private migrate() {
-    let v = this.read<number>('schema') ?? 0;
+    const v = this.read<number>('schema') ?? 0;
     if (v > SCHEMA_VERSION) return; // saved by a newer app; leave it alone
+    this.upgradeFrom(v);
+  }
+
+  /**
+   * Run the upgrade steps after version `v`. Also used when sync brings in records saved by an
+   * older app, so every step must leave records that are already upgraded as they are.
+   */
+  upgradeFrom(v: number) {
     while (v < SCHEMA_VERSION) {
       v++;
       MIGRATIONS[v]?.(this);
@@ -170,4 +187,6 @@ export class Store {
   }
 }
 
-export const store = new Store();
+/** This device's saved data, with changes noted for sync. */
+export const deviceData = tracked(localBackend);
+export const store = new Store(deviceData);

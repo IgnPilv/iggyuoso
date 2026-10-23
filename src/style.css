@@ -641,6 +641,20 @@ ol.lessons li.ahead a:hover { opacity: 1; }
 .profile .stat { display: grid; }
 .profile .stat strong { font-family: var(--font-display); font-size: var(--text-2xl); font-variant-numeric: tabular-nums; line-height: 1.1; }
 .profile .stat span { color: var(--muted); font-size: var(--text-sm); }
+.account-head { display: flex; gap: var(--space-4); align-items: center; margin-bottom: var(--space-3); }
+.account-head h2 { margin: 0; overflow-wrap: anywhere; }
+.account-avatar { display: grid; place-items: center; width: 52px; height: 52px; flex: none; border-radius: 50%; background: var(--brand-gradient); color: var(--on-accent); font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600; }
+.account-avatar.guest { background: var(--surface-sunken); color: var(--ink-2); border: 1px dashed var(--line-strong); }
+.account-form { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.account-form input { flex: 1 1 220px; min-width: 0; font: inherit; font-size: var(--text-sm); color: var(--ink); background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: var(--radius-pill); padding: 8px 14px; }
+.account-form input:focus { outline: 2px solid var(--focus); outline-offset: 1px; }
+.account-sent { display: grid; gap: var(--space-2); justify-items: start; }
+.account-error { color: var(--bad); font-size: var(--text-sm); }
+.sync-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); vertical-align: middle; }
+.sync-dot.synced { background: var(--ok); }
+.sync-dot.syncing { background: var(--accent); }
+.sync-dot.offline { background: var(--warn); }
+.sync-dot.error { background: var(--bad); }
 .profile-level { display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap; }
 .level-badge { display: grid; place-items: center; width: 96px; height: 96px; border-radius: 50%; background: var(--brand-gradient); color: var(--on-accent); box-shadow: var(--shadow-glow); flex: none; }
 .level-badge span { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: -10px; }
