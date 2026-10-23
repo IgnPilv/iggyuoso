@@ -22,6 +22,19 @@ export interface TimedSessionOptions {
   /** Audio output latency plus the player's own adjustment. */
   latencyMs: number;
   mode: 'listen' | 'play';
+  /** The player's count-in: a full bar (the exercise's `countIn` bars), the last two beats, or none. */
+  countIn?: CountIn;
+}
+
+export type CountIn = 'bar' | 'short' | 'none';
+export const COUNT_INS: CountIn[] = ['bar', 'short', 'none'];
+
+/** Quarter beats of count-in. "none" still leaves one silent beat to get ready. */
+export function countInBeats({ meter, countIn }: Pick<TimedExercise, 'meter' | 'countIn'>, choice: CountIn = 'bar'): number {
+  const pulses = Math.round(meter.quarters / meter.pulse);
+  if (choice === 'none') return meter.pulse;
+  if (choice === 'short') return (pulses <= 2 ? 1 : 2) * meter.pulse;
+  return Math.max(1, countIn) * meter.quarters;
 }
 
 export type Phase = 'waiting' | 'count-in' | 'playing' | 'done';
@@ -85,20 +98,27 @@ export class TimedSession {
     // The tempo counts the meter's beat (a dotted quarter in 6/8); timing works in quarters.
     this.quarterTempo = opts.tempo * ex.meter.pulse;
     this.beatMs = beatMs(this.quarterTempo);
-    this.countBeats = Math.max(1, ex.countIn) * ex.meter.quarters;
+    this.countBeats = countInBeats(ex, opts.countIn);
     this.totalBeats = totalBeats(ex);
     this.t0 = opts.startAt + this.countBeats * this.beatMs;
     this.windowMs = hitWindowMs(this.quarterTempo);
     this.end = this.t0 + this.totalBeats * this.beatMs + this.windowMs + opts.latencyMs + 200;
   }
 
-  /** Count-in clicks always; beat clicks while playing only with the metronome on. */
+  /**
+   * Count-in clicks (unless the count-in is none, or the exercise says `click: off`); beat clicks
+   * while playing only with the metronome on, and never with `click: count-in` or `off`.
+   */
   clicks(metronome: boolean): Click[] {
     const { quarters: q, pulse } = this.ex.meter;
     const out: Click[] = [];
+    // Accents on the bar lines, counted back from the first downbeat ("3 4" leads into "1").
     const accent = (b: number) => Math.abs(b / q - Math.round(b / q)) < 1e-6;
-    for (let b = 0; b < this.countBeats - 1e-6; b += pulse) out.push({ time: this.opts.startAt + b * this.beatMs, accent: accent(b) });
-    if (metronome) for (let b = 0; b < this.totalBeats - 1e-6; b += pulse) out.push({ time: this.t0 + b * this.beatMs, accent: accent(b) });
+    const click = this.ex.click ?? 'on';
+    if (click !== 'off' && this.opts.countIn !== 'none') {
+      for (let b = 0; b < this.countBeats - 1e-6; b += pulse) out.push({ time: this.opts.startAt + b * this.beatMs, accent: accent(b - this.countBeats) });
+    }
+    if (metronome && click === 'on') for (let b = 0; b < this.totalBeats - 1e-6; b += pulse) out.push({ time: this.t0 + b * this.beatMs, accent: accent(b) });
     return out;
   }
 
@@ -115,9 +135,11 @@ export class TimedSession {
     if (now >= this.end) return { phase: 'done', beat };
     if (heard < this.opts.startAt) return { phase: 'waiting', beat };
     if (beat < 0) {
+      if (this.opts.countIn === 'none') return { phase: 'count-in', beat };
       const { quarters, pulse } = this.ex.meter;
-      const q = (heard - this.opts.startAt) / this.beatMs;
-      return { phase: 'count-in', beat, count: Math.floor((q % quarters) / pulse + 1e-6) + 1 };
+      // Counted as beats of the bar before the downbeat: a short count-in in 4/4 says "3, 4".
+      const q = (((beat % quarters) + quarters) % quarters);
+      return { phase: 'count-in', beat, count: Math.floor(q / pulse + 1e-6) + 1 };
     }
     return { phase: 'playing', beat };
   }

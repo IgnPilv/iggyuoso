@@ -119,6 +119,8 @@ export interface TimedExercise extends ExerciseBase {
   tempo: number;
   meter: Meter;
   countIn: number;
+  /** `count-in`: clicks only during the count-in (keep the pulse inside); `off`: no clicks at all. */
+  click?: 'on' | 'count-in' | 'off';
   /** Length of an upbeat bar in quarter beats (0 = none). Bar 1 is that long. */
   pickup: number;
   /** Tempo ladder rungs in percent of `tempo`, ending at 100 (from `tempoLadder`). */

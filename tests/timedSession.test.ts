@@ -21,6 +21,25 @@ describe('TimedSession', () => {
     expect(x.guide().map((g) => g.time)).toEqual([5000, 6000, 7000]);
   });
 
+  it('takes a short count-in ("3 4") or none, and the click: count-in / off settings', () => {
+    const short = new TimedSession(ex, cal(21, 108), { tempo: 60, startAt: 1000, latencyMs: 0, mode: 'play', countIn: 'short' });
+    expect(short.t0).toBe(3000);
+    expect(short.clicks(false).map((c) => c.accent)).toEqual([false, false]);
+    expect(short.position(1000)).toMatchObject({ phase: 'count-in', count: 3 });
+    expect(short.position(2000)).toMatchObject({ phase: 'count-in', count: 4 });
+    const none = new TimedSession(ex, cal(21, 108), { tempo: 60, startAt: 1000, latencyMs: 0, mode: 'play', countIn: 'none' });
+    expect(none.t0).toBe(2000); // one silent beat to get ready
+    expect(none.clicks(false)).toEqual([]);
+    expect(none.position(1500).count).toBeUndefined();
+    const six = timed('id: t\nkind: timed\nhand: right\ntempo: 60\nmeter: 6/8\nright: "C4:q. D4:q."');
+    expect(new TimedSession(six, cal(21, 108), { tempo: 60, startAt: 0, latencyMs: 0, mode: 'play', countIn: 'short' }).clicks(false)).toHaveLength(1);
+    const inner = timed('id: t\nkind: timed\nhand: right\ntempo: 60\nmeter: 4/4\nclick: count-in\nright: "C4:q D4:q E4:h"');
+    expect(new TimedSession(inner, cal(21, 108), { tempo: 60, startAt: 0, latencyMs: 0, mode: 'play' }).clicks(true)).toHaveLength(4);
+    const off = timed('id: t\nkind: tap\ntempo: 60\nmeter: 4/4\nclick: off\nrhythm: "x:q x:q x:h"');
+    expect(new TimedSession(off, cal(21, 108), { tempo: 60, startAt: 0, latencyMs: 0, mode: 'play' }).clicks(true)).toEqual([]);
+    expect(() => timed('id: t\nkind: timed\nhand: right\ntempo: 60\nmeter: 4/4\nclick: loud\nright: "C4:w"')).toThrow();
+  });
+
   it('counts in and follows the music as the player hears it (shifted by latency)', () => {
     const x = s();
     expect(x.position(500).phase).toBe('waiting');

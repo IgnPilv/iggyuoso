@@ -293,6 +293,7 @@ export function parseExercise(raw: Raw): Exercise {
   const meter = parseMeter(str(raw, 'meter')!);
   const countIn = raw.countIn === undefined ? 1 : Number(raw.countIn);
   if (!Number.isInteger(countIn) || countIn < 0 || countIn > 4) throw new FieldError('"countIn" should be 0 to 4 bars');
+  const click = oneOf(raw, 'click', ['on', 'count-in', 'off'] as const);
   const right = raw.right !== undefined ? parseTimedNotes(str(raw, 'right')!) : undefined;
   const left = raw.left !== undefined ? parseTimedNotes(str(raw, 'left')!) : undefined;
   if (!right && !left) throw new FieldError('a timed exercise needs "right" and/or "left" notes');
@@ -341,7 +342,7 @@ export function parseExercise(raw: Raw): Exercise {
     }
   }
   return {
-    ...base, hand: kind === 'tap' ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, right, left, fingers, pickup, ...(pedal ? { pedal } : {}),
+    ...base, hand: kind === 'tap' ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, ...(click && click !== 'on' ? { click } : {}), right, left, fingers, pickup, ...(pedal ? { pedal } : {}),
     ...(raw.tempoLadder !== undefined && raw.tempoLadder !== false ? { ladder: parseLadder(raw.tempoLadder) } : {}),
     pitchMatch: kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true } : {}),
   };

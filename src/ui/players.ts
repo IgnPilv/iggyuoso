@@ -12,7 +12,7 @@ import { CLEAN_SCORE, store, type Attempt, type RepsGoal, type RepsProgress, typ
 import { treeNodes } from '../content';
 import { RECORD_TEMPO_FRACTION } from '../scoring/stars';
 import type { TimedResult } from '../scoring/timed';
-import { TimedSession } from '../engine/timedSession';
+import { COUNT_INS, TimedSession, type CountIn } from '../engine/timedSession';
 import { climb, LADDER, LADDER_START, sliceBars, trickyBars, type LadderState } from '../engine/practice';
 import { FallingView, type Flash } from './falling';
 import { FindSession, positionKeys, SequenceSession, type UntimedResult } from '../scoring/untimed';
@@ -446,7 +446,7 @@ const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 // Exercise options (tempo, click, guide notes, the Options drawer) carry over: what the player
 // picked last is where the next exercise starts. The demo keeps its own, never saved.
 let demoOptions: Partial<Settings> = {};
-type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'optionsOpen'>;
+type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen'>;
 export const exerciseOptions = (): ExerciseOptions => (demo.active ? { ...store.settings, ...demoOptions } : store.settings);
 export function setExerciseOptions(o: Partial<ExerciseOptions>) {
   if (demo.active) demoOptions = { ...demoOptions, ...o };
@@ -535,6 +535,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   metro.addEventListener('change', () => setExerciseOptions({ metronome: metro.checked }));
   guide.addEventListener('change', () => setExerciseOptions({ guide: guide.checked }));
   tempoSel.addEventListener('change', () => setExerciseOptions({ tempo: Number(tempoSel.value) }));
+  const COUNT_IN_LABELS: Record<CountIn, string> = { bar: 'Full bar', short: 'Short', none: 'None' };
+  const countSel = h('select', { 'aria-label': 'count-in' }, ...COUNT_INS.map((c) => h('option', { value: c, selected: c === (settings.countIn ?? 'bar') }, COUNT_IN_LABELS[c])));
+  countSel.addEventListener('change', () => setExerciseOptions({ countIn: countSel.value as CountIn }));
   const toggle = viewToggle(initialView(ex), (v) => buildView(v));
   const listenBtn = h('button', { class: 'secondary' }, 'Listen');
   const playBtn = h('button', {}, 'Play');
@@ -559,6 +562,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     const tempo = Math.round((ex.tempo * Number(tempoSel.value)) / 100);
     const session = new TimedSession(ex, cal, {
       tempo, mode, startAt: performance.now() + 600, latencyMs: outputLatencyMs() + store.settings.latencyMs,
+      countIn: countSel.value as CountIn,
     });
     for (const c of session.clicks(metro.checked)) click(c.time, c.accent);
     if (mode === 'listen' || guide.checked) for (const g of session.guide()) piano(g.midi, g.time, g.durMs);
@@ -601,7 +605,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       const now = performance.now();
       const pos = session.position(now);
       const noteState = (i: number) => session.liveState(expected[i], pos.beat);
-      status.textContent = pos.phase === 'count-in' ? `Count in… ${pos.count}` : pos.phase === 'playing' ? (mode === 'listen' ? 'Listen and watch the keys…' : 'Play!') : pos.phase === 'waiting' ? 'Get ready…' : '';
+      status.textContent = pos.phase === 'count-in' ? (pos.count ? `Count in… ${pos.count}` : 'Get ready…') : pos.phase === 'playing' ? (mode === 'listen' ? 'Listen and watch the keys…' : 'Play!') : pos.phase === 'waiting' ? 'Get ready…' : '';
       falling?.draw({
         beat: pos.beat, count: pos.phase === 'count-in' ? pos.count : undefined, held: midi.held, noteState, flashes, now, pedalDown: midi.pedalDown,
         banner: pos.phase === 'waiting' ? 'Get ready' : undefined,
@@ -723,6 +727,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     h('div', { class: 'drawer-body' },
       h('div', { class: 'controls' },
         h('label', {}, 'Tempo ', tempoSel),
+        h('label', {}, 'Count-in ', countSel),
         h('label', {}, metro, ' Click'),
         h('label', {}, guide, ' Guide notes')),
       loopControls));
