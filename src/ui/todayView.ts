@@ -49,7 +49,10 @@ export function todayCard(p: { store: Store; mastery: Mastery } = { store, maste
       ? h('p', { class: 'banner ok' }, `That's today done. Come back tomorrow: the streak counts days, not hours.`)
       : h('div', { class: 'controls' },
         h('button', { onclick: () => { location.hash = href; } }, st.done.some(Boolean) ? "Continue today's practice" : "Start today's practice"),
-        h('span', { class: 'small' }, `${DAILY_MINUTES} minutes a day: reviews first, then the next lesson, then drills.`)));
+        h('span', { class: 'small' }, st.minutes < DAILY_MINUTES - 5
+          // Early on there is nothing to review and no drills yet, so the day is short.
+          ? `Short today: as you learn more, reviews and drills fill the day up to about ${DAILY_MINUTES} minutes. Take your time with the lesson.`
+          : `${DAILY_MINUTES} minutes a day: reviews first, then the next lesson, then drills.`)));
 }
 
 /** Plays today's items in order, one at a time. */

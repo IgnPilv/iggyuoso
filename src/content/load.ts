@@ -6,7 +6,8 @@ import { DEFAULT_LADDER } from '../engine/practice';
 import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, scaleNotes } from '../music/theory';
 import { GENERATORS } from './types';
 import type {
-  BuildTask, Content, EarItem, Exercise, FindTarget, Lesson, LessonStep, QuizQuestion, Unit,
+  BuildTask, Content, EarItem, ExplainStep, Exercise, FindTarget, Lesson, LessonStep, PlaygroundStep, QuizQuestion, TheoryCheck,
+  TheoryKeys, TheoryStaff, Unit,
 } from './types';
 
 // Turns the YAML files under content/ into typed data, and reports every problem it finds with
@@ -103,13 +104,117 @@ function parseLesson(raw: Raw): Lesson {
   if (!Array.isArray(raw.steps)) throw new FieldError('"steps" should be a list');
   const steps: LessonStep[] = raw.steps.map((s: unknown, i: number) => {
     const step = s as Raw;
-    if (step && typeof step.explain === 'string') return { explain: step.explain };
-    if (step && typeof step.exercise === 'string') return { exercise: step.exercise };
-    throw new FieldError(`step ${i + 1} should be "explain:" or "exercise:"`);
+    try {
+      if (step && typeof step.explain === 'string') return parseExplain(step);
+      if (step && typeof step.exercise === 'string') return { exercise: step.exercise };
+      if (step && step.playground !== undefined) return parsePlayground(step);
+    } catch (e) {
+      throw new FieldError(`step ${i + 1}: ${(e as Error).message}`);
+    }
+    throw new FieldError(`step ${i + 1} should be "explain:", "exercise:" or "playground:"`);
   });
   const skills = Array.isArray(raw.skills) ? raw.skills.map(String) : [];
   return {
     id: str(raw, 'id')!, title: str(raw, 'title')!, unit: str(raw, 'unit')!, skills, steps, recap: str(raw, 'recap', false) ?? '',
+  };
+}
+
+const obj = (v: unknown, what: string): Raw => {
+  if (!v || typeof v !== 'object' || Array.isArray(v)) throw new FieldError(`"${what}" should be a map`);
+  return v as Raw;
+};
+const GRAND = ['treble', 'bass', 'grand'] as const;
+
+/** `staff:` in theory: a note string, or { notes, clef, key, labels }. */
+function parseTheoryStaff(v: unknown): TheoryStaff {
+  const o = typeof v === 'string' ? { notes: v } : obj(v, 'staff');
+  try {
+    const notes = parseTimedNotes(Array.isArray(o.notes) ? o.notes.join(' ') : str(o, 'notes')!);
+    return {
+      notes,
+      clef: oneOf(o, 'clef', GRAND) ?? 'treble',
+      labels: oneOf(o, 'labels', ['names', 'none'] as const) ?? 'none',
+      ...(o.key !== undefined ? { key: checkKey(str(o, 'key')!) } : {}),
+    };
+  } catch (e) {
+    throw new FieldError(`staff: ${(e as Error).message}`);
+  }
+}
+
+/** `keys:` in theory: a pitch list, or { notes, labels, fingers }. */
+function parseTheoryKeys(v: unknown): TheoryKeys {
+  const o = typeof v === 'string' || Array.isArray(v) ? { notes: v } : obj(v, 'keys');
+  try {
+    const notes = pitches(o, 'notes');
+    if (!notes.length) throw new FieldError('missing "notes"');
+    const fingers = o.fingers !== undefined ? parseFingers(o.fingers as string) : undefined;
+    if (fingers && fingers.length !== notes.length) throw new FieldError('"fingers" needs one number per key');
+    const labels = oneOf(o, 'labels', ['names', 'fingers', 'none'] as const) ?? (fingers ? 'fingers' : 'none');
+    if (labels === 'fingers' && !fingers) throw new FieldError('labels: fingers needs "fingers"');
+    return { notes, labels, ...(fingers ? { fingers } : {}) };
+  } catch (e) {
+    throw new FieldError(`keys: ${(e as Error).message}`);
+  }
+}
+
+/** Answer choices: plain text, or { text, why } for a reason shown when that choice is picked. */
+function parseChoices(o: Raw): { choices: string[]; whys: (string | undefined)[] } | undefined {
+  const raw = list(o, 'choices');
+  if (!raw.length) return undefined;
+  const items = raw.map((c) => (c && typeof c === 'object' ? { text: str(c as Raw, 'text')!, why: str(c as Raw, 'why', false) } : { text: String(c), why: undefined }));
+  if (items.length < 2) throw new FieldError('"choices" needs at least two answers');
+  const correct = Number(o.correct);
+  if (!Number.isInteger(correct) || correct < 0 || correct >= items.length) {
+    throw new FieldError(`"correct" should be the index of the right choice, 0 to ${items.length - 1}`);
+  }
+  return { choices: items.map((c) => c.text), whys: items.map((c) => c.why) };
+}
+
+function parseCheck(v: unknown): TheoryCheck {
+  const o = obj(v, 'check');
+  try {
+    const c: TheoryCheck = { ask: str(o, 'ask')!, pitchMatch: o.pitchMatch === 'pitchClass' ? 'pitchClass' : 'exact' };
+    const ch = parseChoices(o);
+    if (ch) { c.choices = ch.choices; c.correct = Number(o.correct); }
+    const play = pitches(o, 'play');
+    if (play.length) c.play = play;
+    if (!c.choices === !c.play) throw new FieldError('give either "choices" + "correct" or "play"');
+    const why = str(o, 'why', false);
+    if (why) c.why = why;
+    if (o.staff !== undefined) c.staff = parseTheoryStaff(o.staff);
+    if (o.keys !== undefined) c.keys = parseTheoryKeys(o.keys);
+    return c;
+  } catch (e) {
+    throw new FieldError(`check: ${(e as Error).message}`);
+  }
+}
+
+function parseExplain(o: Raw): ExplainStep {
+  const step: ExplainStep = { explain: String(o.explain) };
+  if (o.staff !== undefined) step.staff = parseTheoryStaff(o.staff);
+  if (o.keys !== undefined) step.keys = parseTheoryKeys(o.keys);
+  if (o.sound !== undefined) step.sound = parseTimedNotes(str(o, 'sound')!);
+  const callout = str(o, 'callout', false);
+  if (callout) step.callout = callout;
+  const terms = strings(o, 'terms');
+  if (terms.length) step.terms = terms;
+  if (o.check !== undefined) step.check = parseCheck(o.check);
+  return step;
+}
+
+function parsePlayground(o: Raw): PlaygroundStep {
+  const p = o.playground === null || o.playground === true ? {} : obj(o.playground, 'playground');
+  const text = str(p, 'notes', false) ?? 'C4-C5';
+  const m = /^\s*(\S+)\s*-\s*(\S+)\s*$/.exec(text);
+  if (!m) throw new FieldError('playground "notes" should be a range like C4-G5');
+  const range: [ReturnType<typeof parsePitch>, ReturnType<typeof parsePitch>] = [parsePitch(m[1]), parsePitch(m[2])];
+  if (pitchToMidi(range[1]) <= pitchToMidi(range[0])) throw new FieldError('playground "notes" should go from low to high');
+  return {
+    playground: {
+      clef: oneOf(p, 'clef', GRAND) ?? 'treble', range,
+      ...(p.prompt !== undefined ? { prompt: str(p, 'prompt')! } : {}),
+      ...(p.key !== undefined ? { key: checkKey(str(p, 'key')!) } : {}),
+    },
   };
 }
 
@@ -325,16 +430,16 @@ function parseQuiz(raw: Raw, base: Base, pitchMatch: Match): Exercise {
     const o = (r ?? {}) as Raw;
     try {
       const q: QuizQuestion = { ask: str(o, 'ask')! };
-      const choices = strings(o, 'choices');
-      if (choices.length) {
-        if (choices.length < 2) throw new FieldError('"choices" needs at least two answers');
-        const correct = Number(o.correct);
-        if (!Number.isInteger(correct) || correct < 0 || correct >= choices.length) {
-          throw new FieldError(`"correct" should be the index of the right choice, 0 to ${choices.length - 1}`);
-        }
-        q.choices = choices;
-        q.correct = correct;
+      const ch = parseChoices(o);
+      if (ch) {
+        q.choices = ch.choices;
+        q.correct = Number(o.correct);
+        if (ch.whys.some(Boolean)) q.choiceWhy = ch.whys;
       }
+      const why = str(o, 'why', false);
+      if (why) q.why = why;
+      if (o.whyStaff !== undefined) q.whyStaff = parseTheoryStaff(o.whyStaff);
+      if (o.whyKeys !== undefined) q.whyKeys = parseTheoryKeys(o.whyKeys);
       const play = pitches(o, 'play');
       if (play.length) q.play = play;
       if (!q.choices === !q.play) throw new FieldError('give either "choices" + "correct" or "play"');

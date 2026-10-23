@@ -283,3 +283,17 @@ never copied pages). Start small, adapt as we go.
   progress rings → lesson tiles with strand dots, only the current unit open, no "Ahead" badges)
   and a shorter hero for returning players; the practice calendar has month and weekday labels.
 
+- 2026-10-23: Theory blocks (after Ignas's "theory should be bigger, there should be quizzes";
+  shape agreed with the curriculum thread, in `content/README.md`). An `explain` step can carry
+  `staff` (picture, clef treble/bass/grand, `labels: names`), `keys` (lit keys, names or fingers),
+  `sound` (play button), `callout` (rule box), `terms` (chips) and `check` (inline question by
+  button or key; Next waits for the right answer; a wrong one shows `why` and can be retried).
+  New step kind `playground` (press any key, see it on the staff, named). Drawn by
+  `src/ui/theory.ts`. Quiz questions take `why` (shown after any answer; with one, the quiz waits
+  for Next, which now sits under the feedback), per-choice `why` (`{ text, why }`) and a picture
+  (`whyStaff`, `whyKeys`). Also from the UX audit: finger numbers on the sheet (over the upper
+  staff, under the lower or bass one), quizzes with staff pictures always open on the sheet, the
+  timed result card has Try again (and New tune for generated ones), the "Ahead of your path"
+  note sits small under the first step only, and a short day-one Today's practice says why.
+  Demo scenes "Theory screens" and "Theory quiz". The home path map, tree view and exercise
+  controls drawer belong to the design thread.

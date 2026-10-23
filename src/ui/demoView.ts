@@ -1,10 +1,10 @@
 import { audio } from '../audio/audio';
 import { content, exerciseTitle, tree } from '../content';
-import type { EarExercise, Exercise, TimedExercise } from '../content/types';
+import type { EarExercise, Exercise, ExplainStep, PlaygroundStep, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
 import { parse } from 'yaml';
-import { parseExercise } from '../content/load';
+import { loadContent, parseExercise } from '../content/load';
 import { h, type View } from './dom';
 import { pathMap } from './pathMap';
 import { mountExercise } from './players';
@@ -15,6 +15,7 @@ import { dayOf } from '../progress/mastery';
 import type { Store } from '../progress/store';
 import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
+import { explainBlock, playground } from './theory';
 import { calibrateView, keyMap, testerView } from './views';
 
 // The no-keyboard showcase. Scenes are picked from the live content, so the demo always shows
@@ -66,10 +67,13 @@ questions:
     staff: "C4:h C4:h"
     choices: ["1", "2", "4"]
     correct: 1
+    why: A half note is half of a whole note (4 beats), so it lasts **2 beats**. Its head is open, with a stem.
   - ask: Which note is this?
     staff: "G4:w"
-    choices: [E, G, B]
+    choices: [E, { text: G }, { text: B, why: "B sits on the middle line, one line higher." }]
     correct: 1
+    why: The treble clef curls round the second line from the bottom, and that line is **G**.
+    whyKeys: { notes: G4, labels: names }
   - ask: Play the note shown.
     staff: "E4:w"
     play: E4`,
@@ -198,9 +202,60 @@ function pathDemo() {
       item('Five-finger tune', 'next'),
       item('Skips', 'ahead'),
       item('Checkpoint: first tunes', 'ahead')),
-    h('div', { class: 'banner advice' }, h('p', {}, h('strong', {}, 'Ahead of your path. '),
+    h('div', { class: 'advice small' }, h('p', {}, h('strong', {}, 'Ahead of your path. '),
       'Recommended first: Five-finger tune. You can play this now; your takes count all the same.')));
 }
+
+const THEORY = `
+id: demo-theory
+title: The treble staff
+unit: demo
+steps:
+  - explain: |
+      Music is written on a **staff**: five lines, and the four spaces between them. The higher a
+      note sits, the higher it sounds. These three notes climb from middle C.
+    staff: { notes: "C4:q E4:q G4:h", clef: treble, labels: names }
+    keys: { notes: "C4 E4 G4", fingers: "1 3 5" }
+    sound: "C4:q E4:q G4:h"
+    callout: "**Rule.** Lines and spaces count from the bottom up."
+    terms: [staff, treble clef, ledger line]
+    check: { ask: "Which note sits on the bottom line?", choices: [C, E, G], correct: 1, why: "Middle C hangs below the staff on its own short ledger line; the bottom line is **E**." }
+  - playground: { clef: treble, notes: C4-C5, prompt: "Try it: press any key and watch where it sits on the staff." }
+`;
+
+/** A lesson's theory steps, answered by the pianist (one slip), then the playground. */
+const theoryScene: Scene['run'] = (box, next, p) => {
+  const lesson = loadContent({ 'content/lessons/demo-theory.yaml': THEORY }).content.lessons.get('demo-theory')!;
+  const [step, pg] = lesson.steps as [ExplainStep, PlaygroundStep];
+  const timers: number[] = [];
+  const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+  demo.onCheck = (c) => {
+    if (c.choose && c.correct !== undefined) {
+      later(2600, () => c.choose!((c.correct! + 1) % 3));
+      later(5200, () => c.choose!(c.correct!));
+    } else if (c.keys) c.keys.forEach((k, i) => p.playNote(k, 1500 + i * 450, 300));
+  };
+  let destroy = () => {};
+  const nextBtn = h('button', { disabled: true }, 'Next');
+  const card = h('div');
+  const block = explainBlock(step, DEMO_CALIBRATION, () => {
+    nextBtn.disabled = false;
+    later(2500, () => {
+      block.destroy();
+      const play = playground(pg, DEMO_CALIBRATION);
+      destroy = play.destroy;
+      card.replaceChildren(play.el);
+      nextBtn.remove();
+      [60, 64, 67, 72].forEach((m, i) => p.playNote(m, 900 + i * 1100, 800));
+      p.playChord([60, 64, 67], 900 + 4 * 1100, 1400);
+      later(8000, next);
+    });
+  });
+  destroy = block.destroy;
+  card.append(block.el);
+  box.append(h('section', { class: 'card' }, h('h2', {}, lesson.title), card, h('div', { class: 'controls' }, nextBtn)));
+  return () => { timers.forEach(clearTimeout); destroy(); demo.onCheck = undefined; };
+};
 
 const press = (box: HTMLElement, label: string) =>
   [...box.querySelectorAll('button')].find((b) => b.textContent === label)?.click();
@@ -373,7 +428,8 @@ function scenes(): Scene[] {
   const checkpoint = allExercises().find((e) => (e.kind === 'ear' || e.kind === 'quiz') && e.feedback === 'none')
     ?? { ...(sampleOf('ear', SAMPLES.ear) as EarExercise), id: 'demo-checkpoint', feedback: 'none' as const };
   out.push({ title: 'Checkpoint', caption: 'Checkpoints test without hints: each answer is only noted, and the result lists the ones that were wrong, with the right answers.', run: exerciseScene(checkpoint, { view: 'classic' }) });
-  out.push({ title: 'Theory quiz', caption: 'Short theory questions, with a picture or a sound. Answer with a button, or by playing the answer.', run: exerciseScene(sampleOf('quiz', SAMPLES.quiz), { view: 'classic' }) });
+  out.push({ title: 'Theory screens', caption: 'Theory comes with pictures: a staff (with note names), lit keys with fingers, a sound to hear, the rule in a box and its key terms. A quick check holds Next until it is answered right; a wrong answer explains why. Then a playground: press any key and see it on the staff.', run: theoryScene });
+  out.push({ title: 'Theory quiz', caption: 'Short theory questions, with a picture or a sound. Answer with a button, or by playing the answer. After each answer the quiz says why, with a picture, and waits for Next.', run: exerciseScene(parseExercise(parse(SAMPLES.quiz)), { view: 'classic' }) });
   out.push({ title: 'Build it', caption: 'Play a named chord (hold it down), interval or scale, untimed. "Show me" lights the keys, but then it does not count as a first try.', run: exerciseScene(sampleOf('build', SAMPLES.build), { view: 'falling', switchAt: 6000 }) });
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
   out.push({
