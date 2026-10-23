@@ -104,6 +104,16 @@ tempoLadder: [70, 85, 100]
 meter: 4/4
 right: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:e A4:e G4:e F4:e E4:q C4:q | C4:q G3:q C4:h"
 fingers: "1 2 3 1 3 4 5 5 5 4 3 3 1 1 1 1"`,
+  pedal: `
+id: demo-pedal
+kind: timed
+display: staff
+prompt: Legato pedal. Lift as each chord sounds, then press again.
+tempo: 60
+meter: 4/4
+right: "E4:h G4:h | A4:h G4:h | F4:h E4:h | D4:w"
+left: "C3+G3:h C3+G3:h | F2+C3:h C3+G3:h | G2+D3:h C3+G3:h | G2+D3:w"
+pedal: "x:h x:h | x:h x:h | x:h x:h | x:w"`,
   sixEight: `
 id: demo-six-eight
 kind: timed
@@ -168,6 +178,7 @@ function scenes(): Scene[] {
   const rhythms = parseExercise(parse(SAMPLES.rhythms));
   out.push({ title: 'Upbeats, ties and triplets', caption: 'Note strings can start on an upbeat, tie notes across a bar line, and mix dotted notes, triplets and sixteenths. On the staff a tie is an arc, and the tied note is held, not played again.', run: exerciseScene(rhythms, { view: 'classic' }) });
   out.push({ title: 'Six-eight', caption: 'In 6/8 the click and the tempo count dotted quarters, two to a bar, as musicians count it.', run: exerciseScene(parseExercise(parse(SAMPLES.sixEight)), { view: 'falling' }) });
+  out.push({ title: 'Sustain pedal', caption: 'Pedal lines sit under the staff ("Ped.", a line while it is held, a notch at each change) and down the right edge of the falling notes. The pedal is scored too: here the pianist holds it through one chord change, and the result says so. With the computer keyboard, Space is the pedal.', run: exerciseScene(parseExercise(parse(SAMPLES.pedal)), { view: 'classic' }) });
   out.push({
     title: 'Tempo ladder and loops',
     caption: 'Exercises can climb a tempo ladder: three clean takes (92+) on a step move up, two failed takes in a row move down. After a take, the result points at the bars with the most mistakes, and "Loop" plays just those bars round and round (loop takes are not saved).',

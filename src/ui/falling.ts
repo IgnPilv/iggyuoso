@@ -2,6 +2,7 @@ import { keyName, type Calibration } from '../calibration';
 import { computerKeys } from '../midi/computerKeys';
 import type { LiveState } from '../engine/timedSession';
 import { isBlack, pitchClass, type Hand } from '../music/notes';
+import type { PedalSpan } from '../music/timeline';
 import { palette, tokenColor, type Palette } from './theme';
 
 // Synthesia-style view: notes fall towards the keyboard and reach it on their beat. Drawn on a
@@ -32,6 +33,8 @@ export interface FrameState {
   now: number;
   /** Keys to tint when nothing else lights them (hand position, keys already found): a colour or a CSS token name such as '--ok'. */
   marked?: ReadonlyMap<number, string>;
+  /** The sustain pedal is down now (drawn at the foot of the pedal line). */
+  pedalDown?: boolean;
 }
 
 // All colours come from the design tokens (styles/tokens.css) through palette().
@@ -60,7 +63,8 @@ export class FallingView {
     low: number, high: number,
     private cal: Calibration,
     private notes: FallingNote[],
-    private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c'; /** Quarters per beat line (1.5 in 6/8). */ pulse?: number },
+    private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c'; /** Quarters per beat line (1.5 in 6/8). */ pulse?: number;
+      /** A pedal line, drawn as a strip down the right edge. */ pedal?: PedalSpan[] },
   ) {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
@@ -145,6 +149,27 @@ export class FallingView {
         ctx.textAlign = 'left';
         ctx.fillText(`BAR ${Math.round(b / barQ) + 1}`, 8, y - 5);
       }
+    }
+
+    // The pedal line: a strip down the right edge, broken where the pedal changes.
+    if (this.opts.pedal?.length) {
+      const accent = tokenColor('--accent');
+      const px = width - 16;
+      ctx.fillStyle = accent;
+      for (const sp of this.opts.pedal) {
+        const bottom = Math.min(laneH, yOf(sp.beat) - (sp.change ? 2 : 0));
+        const top = Math.max(0, yOf(sp.beat + sp.beats));
+        if (bottom <= top) continue;
+        ctx.globalAlpha = 0.85;
+        ctx.fillRect(px, top, 7, bottom - top);
+      }
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = s.pedalDown ? accent : p.laneLine;
+      ctx.fillRect(px - 3, laneH - 10, 13, 8);
+      ctx.fillStyle = s.pedalDown ? accent : p.laneText;
+      ctx.font = `600 10px ${p.fontMono}`;
+      ctx.textAlign = 'right';
+      ctx.fillText('PED', px - 7, laneH - 3);
     }
 
     // Notes: white-key notes first so black-key notes sit on top.

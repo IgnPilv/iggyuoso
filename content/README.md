@@ -28,7 +28,12 @@ several lessons.
   `tempo`) or `tempoLadder: [60, 80, 100]`: the tempo starts on the player's step, three clean
   takes (92+) on it move up a step, two failed takes in a row move down. Any timed exercise of two
   bars or more can loop a few bars (the player picks them, or the result card suggests the bars
-  with the most mistakes); loop takes are practice and are not saved. Shown as falling notes; `display: staff` starts on
+  with the most mistakes); loop takes are practice and are not saved.
+  `pedal: "x:h x:h | x:h x:h"`: the sustain pedal, in the bars of the notes. `x:<duration>` =
+  pedal down for that long, pressed again at its start; `r:<duration>` = pedal up. Two `x` in a row
+  is a change (legato pedal: lift as the new chord sounds, press just after). Scored per stretch:
+  held through a change, changed before the chord, pressed late, lifted early, lifted late before
+  a rest. The pedal is a quarter of the take's score. Shown as falling notes; `display: staff` starts on
   sheet music instead (the player can switch).
 
 - `tap`: rhythm only, scored like `timed` but any key counts. `tempo`, `meter`, `countIn`, and

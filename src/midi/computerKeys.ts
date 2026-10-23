@@ -2,7 +2,8 @@ import { midi } from './input';
 
 // Play the app from the computer keyboard, for testing without a MIDI keyboard. The home row is
 // the white keys from C up (A = C, S = D, ... ' = F an octave up), the row above is the black
-// keys, and Z / X move an octave down / up. Notes go through the same path as a real keyboard.
+// keys, Z / X move an octave down / up, and Space is the sustain pedal. Notes go through the same
+// path as a real keyboard.
 
 export const PORT = 'Computer keyboard';
 
@@ -37,6 +38,7 @@ export class ComputerKeys {
   private _shift = 0;
   /** Key code -> the note it started, so an octave change mid-hold still releases the right key. */
   private down = new Map<string, number>();
+  private pedal = false;
   private listeners = new Set<() => void>();
   /** Where middle C is on the current keyboard (calibration or demo). */
   middleC: () => number = () => 60;
@@ -80,6 +82,10 @@ export class ComputerKeys {
 
   /** Press a key by code. Also used by the demo to show the mode without real typing. */
   press(code: string): boolean {
+    if (code === 'Space') {
+      if (!this.pedal) { this.pedal = true; midi.injectPedal(true, PORT); }
+      return true;
+    }
     if (code === 'KeyZ' || code === 'KeyX') {
       this.setShift(this._shift + (code === 'KeyZ' ? -1 : 1));
       return true;
@@ -93,6 +99,10 @@ export class ComputerKeys {
   }
 
   release(code: string) {
+    if (code === 'Space') {
+      if (this.pedal) { this.pedal = false; midi.injectPedal(false, PORT); }
+      return;
+    }
     const n = this.down.get(code);
     if (n === undefined) return;
     this.down.delete(code);
@@ -101,6 +111,7 @@ export class ComputerKeys {
 
   releaseAll = () => {
     for (const code of [...this.down.keys()]) this.release(code);
+    this.release('Space');
   };
 
   onChange(l: () => void) {
@@ -115,7 +126,7 @@ export class ComputerKeys {
   private keydown = (e: KeyboardEvent) => {
     if (e.ctrlKey || e.metaKey || e.altKey || typing(e.target) || !this.allow()) return;
     if (e.repeat) {
-      if (KEY_SEMITONES[e.code] !== undefined) e.preventDefault();
+      if (KEY_SEMITONES[e.code] !== undefined || e.code === 'Space') e.preventDefault();
       return;
     }
     if (this.press(e.code)) e.preventDefault(); // ' opens quick find in Firefox

@@ -1,4 +1,5 @@
 import { diatonicStep, type Pitch } from '../music/notes';
+import type { PedalSpan } from '../music/timeline';
 import { s } from './dom';
 
 // A plain SVG staff: one clef or a grand staff, note heads, stems, rests and bar lines.
@@ -35,14 +36,15 @@ const STAFF_H = 4 * GAP;
 const BOTTOM_STEP: Record<Clef, number> = { treble: 4 * 7 + 2, bass: 2 * 7 + 4 }; // E4, G2
 
 /** `startQuarter`: where in the first bar the music starts (the beats an upbeat leaves out). */
-export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number } = {}) {
+export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[] } = {}) {
   const timed = parts.some((p) => p.notes.some((n) => n.beats !== undefined));
   const length = Math.max(
     ...parts.map((p) => (timed ? p.notes.reduce((a, n) => a + (n.beats ?? 1), 0) : p.notes.length)),
   );
   const width = LEFT + length * (timed ? BEAT_W : UNTIMED_W) + 20;
   const staffTop = (i: number) => 40 + i * (STAFF_H + 70);
-  const height = staffTop(parts.length - 1) + STAFF_H + 50;
+  const pedalY = staffTop(parts.length - 1) + STAFF_H + 48;
+  const height = pedalY + (opts.pedal?.length ? 22 : 2);
   const svg = s('svg', { viewBox: `0 0 ${width} ${height}`, class: 'staff', role: 'img', 'aria-label': 'music staff' });
   const els = new Map<string, SVGGElement>();
 
@@ -116,6 +118,22 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
     }
   });
   if (parts.length === 2) svg.append(s('line', { x1: 10, x2: 10, y1: staffTop(0), y2: staffTop(1) + STAFF_H, class: 'bar' }));
+
+  // Pedal marks under the music: "Ped." where it goes down, a line while it is held, a notch
+  // where it changes and a tick where it comes up.
+  if (timed && opts.pedal?.length) {
+    const px = (beat: number) => LEFT + (beat - (opts.startQuarter ?? 0)) * BEAT_W + 8;
+    const g = s('g', { class: 'pedal' });
+    for (const sp of opts.pedal) {
+      const a = px(sp.beat);
+      const b = px(sp.beat + sp.beats);
+      if (sp.change) g.append(s('path', { d: `M${a - 5} ${pedalY} L${a} ${pedalY - 7} L${a + 5} ${pedalY}`, class: 'pedal-line' }));
+      else g.append(s('text', { x: a - 4, y: pedalY + 1, class: 'pedal-text' }, 'Ped.'));
+      g.append(s('line', { x1: sp.change ? a + 5 : a + 26, x2: sp.lift ? b - 4 : b - 5, y1: pedalY, y2: pedalY, class: 'pedal-line' }));
+      if (sp.lift) g.append(s('line', { x1: b - 4, x2: b - 4, y1: pedalY, y2: pedalY - 8, class: 'pedal-line' }));
+    }
+    svg.append(g);
+  }
 
   return {
     svg,

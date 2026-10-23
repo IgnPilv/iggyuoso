@@ -359,7 +359,7 @@ export function keyMap() {
   return h('div', { class: 'keymap small' },
     h('p', {}, 'White keys from middle C up: ', ...codes.filter((c) => !black.includes(KEY_SEMITONES[c])).map(cap)),
     h('p', {}, 'Black keys: ', ...codes.filter((c) => black.includes(KEY_SEMITONES[c])).map(cap)),
-    h('p', {}, cap('KeyZ'), ' one octave down, ', cap('KeyX'), ' one octave up. The keys show their letter on the on-screen keyboard.'));
+    h('p', {}, cap('KeyZ'), ' one octave down, ', cap('KeyX'), ' one octave up, ', h('kbd', {}, 'Space'), ' the sustain pedal. The keys show their letter on the on-screen keyboard.'));
 }
 
 function viewPref() {
@@ -389,6 +389,10 @@ export const testerView: View = (root) => {
   const offNote = midi.onNote((e) => {
     kb.set(e.note, 'pressed', e.type === 'on', e.type === 'on' && c ? keyName(c, e.note) : '');
   });
+  const pedal = h('span', { class: 'pedal-pill' }, 'Sustain pedal');
+  const showPedal = () => pedal.classList.toggle('down', midi.pedalDown);
+  showPedal();
+  const offPedal = midi.onPedal(showPedal);
   const offRaw = midi.onRaw((e) => {
     const hex = e.data.map((b) => b.toString(16).padStart(2, '0')).join(' ');
     const skew = Math.round(performance.now() - e.time);
@@ -396,8 +400,8 @@ export const testerView: View = (root) => {
     lines.length = Math.min(lines.length, 200);
     log.textContent = lines.join('\n');
   });
-  root.append(h('section', { class: 'card' }, h('h2', {}, 'MIDI tester'), midiBanner() ?? '', ports, kb.el, log));
-  return () => { offPorts(); offNote(); offRaw(); };
+  root.append(h('section', { class: 'card' }, h('h2', {}, 'MIDI tester'), midiBanner() ?? '', ports, h('p', {}, pedal), kb.el, log));
+  return () => { offPorts(); offNote(); offRaw(); offPedal(); };
 };
 
 function describe(d: number[], c?: Calibration): string {

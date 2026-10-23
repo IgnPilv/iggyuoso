@@ -3,7 +3,7 @@ import { keyName, toDevice, type Calibration } from '../calibration';
 import type { Exercise, FindExercise, SequenceExercise, TimedExercise } from '../content/types';
 import { midi } from '../midi/input';
 import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
-import { expectedNotes, pickupOffset, totalBeats } from '../music/timeline';
+import { expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
 import { store } from '../progress/store';
@@ -391,12 +391,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     if (view === 'falling') {
       falling = new FallingView(lo, hi, cal,
         expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })),
-        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse });
+        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex) });
       stage.append(falling.el);
       offHeld = () => {};
       idle();
     } else {
-      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex) });
+      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex) });
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
       stage.append(h('div', { class: 'staff-wrap' }, staff.svg), kb.el);
@@ -461,9 +461,11 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     });
     for (const c of session.clicks(metro.checked)) click(c.time, c.accent);
     if (mode === 'listen' || guide.checked) for (const g of session.guide()) piano(g.midi, g.time, g.durMs);
+    session.pedalStart(midi.pedalDown);
     if (mode === 'play') demo.onTimed?.(session);
 
     let lastMessage = '';
+    const offPedal = midi.onPedal((e) => session.pedalChange(e.down, e.time));
     const offNotes = midi.onNote((e) => {
       if (e.type === 'off') { session.noteOff(e.note, e.time); return; }
       const j = session.noteOn(e.note, e.time);
@@ -488,7 +490,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     const scoreEl = h('span', { class: 'live-score' });
     const countsEl = h('span', { class: 'live-counts' });
     const msgEl = h('span', { class: 'live-msg' });
-    if (mode === 'play') hud.append(scoreEl, countsEl, msgEl);
+    const pedalEl = h('span', { class: 'pedal-pill' }, 'Pedal');
+    if (mode === 'play') hud.append(scoreEl, countsEl, ...(session.pedalLine.length ? [pedalEl] : []), msgEl);
     let lastHud = 0;
     let missedSeen = 0;
 
@@ -499,7 +502,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       const noteState = (i: number) => session.liveState(expected[i], pos.beat);
       status.textContent = pos.phase === 'count-in' ? `Count in… ${pos.count}` : pos.phase === 'playing' ? (mode === 'listen' ? 'Listen and watch the keys…' : 'Play!') : pos.phase === 'waiting' ? 'Get ready…' : '';
       falling?.draw({
-        beat: pos.beat, count: pos.phase === 'count-in' ? pos.count : undefined, held: midi.held, noteState, flashes, now,
+        beat: pos.beat, count: pos.phase === 'count-in' ? pos.count : undefined, held: midi.held, noteState, flashes, now, pedalDown: midi.pedalDown,
         banner: pos.phase === 'waiting' ? 'Get ready' : undefined,
       });
       if (kb) {
@@ -519,6 +522,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       });
       if (mode === 'play' && now - lastHud > 100) {
         lastHud = now;
+        pedalEl.classList.toggle('down', midi.pedalDown);
         const live = session.liveScore(now);
         scoreEl.textContent = String(live.score);
         scoreEl.className = `live-score ${live.score >= 92 ? 's3' : live.score >= 80 ? 's2' : live.score >= 65 ? 's1' : 's0'}`;
@@ -533,6 +537,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     const stop = () => {
       cancelAnimationFrame(raf);
       offNotes();
+      offPedal();
       stopAll();
       kb?.clear('target');
       kb?.clearLabels();
@@ -627,6 +632,7 @@ function timedResult(r: TimedResult, ex: TimedExercise, tempo: number, cal: Cali
   return h('div', { class: 'result' },
     h('div', { class: 'score' }, h('span', { class: 'stars' }, starText(r.stars)), ` ${r.score}`),
     h('ul', { class: 'hands' }, ...handLine,
+      r.pedal ? h('li', {}, h('strong', {}, `Pedal ${r.pedal.score}`), ` · ${r.pedal.spans.filter((x) => !x.problems.length).length}/${r.pedal.spans.length} clean`) : null,
       r.together ? h('li', {}, `Hands together: ${r.together.meanGapMs} ms apart on shared beats`) : null),
     h('ul', { class: 'feedback' }, ...r.feedback.map((f) => h('li', { class: f.habit }, f.message))),
     wrongKeys.length ? h('p', { class: 'small' }, `Wrong keys: ${wrongKeys.join(', ')}.`) : null,

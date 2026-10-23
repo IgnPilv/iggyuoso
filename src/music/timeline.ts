@@ -41,6 +41,29 @@ export function expectedNotes(ex: TimedExercise): ExpectedNote[] {
   return out.sort((a, b) => a.beat - b.beat || (a.hand === b.hand ? 0 : a.hand === 'left' ? -1 : 1));
 }
 
+/**
+ * One stretch of pedal down, in beats like the notes. `change`: it follows another stretch
+ * directly, so the pedal is lifted and pressed again at `beat` (legato pedal); otherwise it is
+ * pressed from up. `lift`: the pedal goes up at its end (a rest or the end follows).
+ */
+export interface PedalSpan {
+  beat: number;
+  beats: number;
+  change: boolean;
+  lift: boolean;
+}
+
+export function expectedPedal(ex: TimedExercise): PedalSpan[] {
+  if (!ex.pedal) return [];
+  const out: PedalSpan[] = [];
+  let beat = pickupOffset(ex);
+  ex.pedal.forEach((t, i) => {
+    if (t.down) out.push({ beat, beats: t.beats, change: !!ex.pedal![i - 1]?.down, lift: !ex.pedal![i + 1]?.down });
+    beat += t.beats;
+  });
+  return out;
+}
+
 /** Silent beats before an upbeat, so that it ends on the first full bar's downbeat. */
 export const pickupOffset = (ex: TimedExercise) => (ex.pickup ? ex.meter.quarters - ex.pickup : 0);
 export const totalBeats = (ex: TimedExercise) => ex.bars * ex.meter.quarters;
