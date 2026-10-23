@@ -1,0 +1,11 @@
+id: gen-rhythm-triplets
+title: "Read the rhythm: triplets"
+kind: generated
+generator: rhythm-read
+prompt: "Tap the rhythm. Tri-po-let."
+durations: [q, e, e3, h]
+bars: 4
+tempo: 60
+mastery: { accuracy: 90 }
+reps: 5
+days: 2

@@ -1,0 +1,14 @@
+id: gen-sight-read-c-lh
+title: "Sight-read in C position: left hand"
+kind: generated
+generator: sight-read
+prompt: "A new tune each time, on the bass staff."
+hand: left
+clef: bass
+notes: C3-G3
+durations: [q, h]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 5
+days: 3

@@ -1,0 +1,12 @@
+id: gen-name-notes-grand
+title: "Name notes on both staves"
+kind: generated
+generator: read-notes
+prompt: "Name each note with the buttons."
+answer: name
+clef: grand
+notes: C3-C5
+questions: 30
+mastery: { accuracy: 90, medianMs: 2500 }
+reps: 5
+days: 3

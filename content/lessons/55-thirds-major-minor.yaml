@@ -16,4 +16,7 @@ steps:
   - explain: |
       Now by ear, starting from different notes, and sometimes with both notes at once.
   - exercise: ear-thirds-any-root
+  - explain: |
+      The same with 3rds.
+  - exercise: gen-intervals-thirds
 recap: "Major 3rd = 4 semitones, minor 3rd = 3. The bottom 3rd decides major or minor."

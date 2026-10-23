@@ -1,0 +1,11 @@
+id: gen-rhythm-sixteenths
+title: "Read the rhythm: sixteenths"
+kind: generated
+generator: rhythm-read
+prompt: "Tap the rhythm. 1-e-and-a."
+durations: [q, e, s, h]
+bars: 4
+tempo: 60
+mastery: { accuracy: 90 }
+reps: 5
+days: 2

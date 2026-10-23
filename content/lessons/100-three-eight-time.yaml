@@ -11,4 +11,7 @@ steps:
       and a sixteenth make a skipping *long-short*.
   - exercise: tap-three-eight
   - exercise: little-jig
+  - explain: |
+      New 3/8 rhythms every time.
+  - exercise: gen-rhythm-three-eight
 recap: "3/8: three eighths to a bar, felt as one swing."

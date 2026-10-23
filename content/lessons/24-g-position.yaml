@@ -9,4 +9,7 @@ steps:
       left hand covers G A B C D too, with its thumb on the D just above middle C.
   - exercise: g-position-rh
   - exercise: g-position-together
+  - explain: |
+      Endless short tunes in G position.
+  - exercise: gen-sight-read-g-rh
 recap: "G position: both hands cover G A B C D. Same shape as C position, new place."

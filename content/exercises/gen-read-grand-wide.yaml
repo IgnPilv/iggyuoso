@@ -1,0 +1,12 @@
+id: gen-read-grand-wide
+title: "Read both staves: three octaves"
+kind: generated
+generator: read-notes
+prompt: "Play the note shown, in the right octave."
+clef: grand
+keys: [C, G, F, D]
+notes: G2-C6
+questions: 30
+mastery: { accuracy: 90, medianMs: 2500 }
+reps: 5
+days: 3

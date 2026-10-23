@@ -11,4 +11,7 @@ steps:
       Keep the fingers close to the keys; fast notes are small movements.
   - exercise: tap-sixteenths
   - exercise: sixteenths-rh
+  - explain: |
+      Fresh rhythms with sixteenth notes.
+  - exercise: gen-rhythm-sixteenths
 recap: "Four sixteenths to a beat: 1-e-and-a. Small, close movements."

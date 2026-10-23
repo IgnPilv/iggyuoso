@@ -11,4 +11,7 @@ steps:
       2 + 1 = **3 beats**. In 3/4 it fills the whole bar.
   - exercise: waltz-rh
   - exercise: waltz-lh
+  - explain: |
+      New 3/4 rhythms every time. Feel the strong first beat.
+  - exercise: gen-rhythm-three-four
 recap: "3/4 = three beats a bar, strong on 1. A dotted half note lasts 3 beats."

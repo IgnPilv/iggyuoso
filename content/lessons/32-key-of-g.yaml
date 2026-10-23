@@ -9,4 +9,7 @@ steps:
       the F line. That's the **key signature**: it means "every F is F sharp".
   - exercise: key-of-g-quiz
   - exercise: g-major-steps
+  - explain: |
+      Notes with the G major key signature: every F is F#.
+  - exercise: gen-read-key-of-g
 recap: "G major: one sharp, F sharp, shown in the key signature."

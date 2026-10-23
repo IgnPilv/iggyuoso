@@ -13,4 +13,7 @@ steps:
   - explain: |
       Put the two staffs together and you have the **grand staff** that piano music uses:
       treble on top for the right hand, bass below for the left. Middle C is in between, shared by both.
+  - explain: |
+      The same on the bass staff, from the C below middle C up to middle C.
+  - exercise: gen-read-bass-c-c
 recap: Bass clef is for the left hand. Middle C sits above the bass staff; B and A are just below it.

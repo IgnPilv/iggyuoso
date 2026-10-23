@@ -13,4 +13,7 @@ steps:
   - exercise: a-minor-position-rh
   - exercise: d-minor-position-rh
   - exercise: d-minor-position-lh
+  - explain: |
+      Short tunes in A minor position.
+  - exercise: gen-sight-read-a-minor
 recap: "Minor = lower third. A minor is C major's relative: same notes, different home."

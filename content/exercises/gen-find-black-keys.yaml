@@ -1,0 +1,10 @@
+id: gen-find-black-keys
+title: "Find sharps and flats"
+kind: generated
+generator: find-notes
+prompt: "Find the key the app names, any octave."
+notes: "C#4 Eb4 F#4 Ab4 Bb4 Db4 D#4 Gb4 G#4 A#4"
+questions: 30
+mastery: { accuracy: 95, medianMs: 2500 }
+reps: 5
+days: 2

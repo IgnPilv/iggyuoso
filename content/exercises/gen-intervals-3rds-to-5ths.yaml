@@ -1,0 +1,13 @@
+id: gen-intervals-3rds-to-5ths
+title: "Read 3rds, 4ths and 5ths"
+kind: generated
+generator: intervals
+prompt: "Name the interval on the staff."
+clef: grand
+keys: [C, G, F]
+notes: C3-C5
+intervals: [m3, M3, P4, P5]
+questions: 30
+mastery: { accuracy: 90, medianMs: 3000 }
+reps: 5
+days: 2

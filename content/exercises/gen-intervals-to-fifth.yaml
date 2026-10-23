@@ -1,0 +1,12 @@
+id: gen-intervals-to-fifth
+title: "Name the interval: 2nd to 5th"
+kind: generated
+generator: intervals
+prompt: "Two notes on the staff. How far apart?"
+clef: treble
+notes: C4-C5
+intervals: [M2, M3, P4, P5]
+questions: 30
+mastery: { accuracy: 90, medianMs: 3500 }
+reps: 5
+days: 2

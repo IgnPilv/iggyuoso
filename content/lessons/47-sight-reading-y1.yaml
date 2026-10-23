@@ -10,4 +10,11 @@ steps:
   - exercise: sight-read-g-position
   - exercise: sight-read-waltz
   - exercise: sight-read-d-minor-lh
+  - explain: |
+      The real thing: any of your keys, any five-finger position, with eighth notes. A little
+      every day.
+  - exercise: gen-sight-read-y1-rh
+  - explain: |
+      And the left hand.
+  - exercise: gen-sight-read-y1-lh
 recap: "Look first (key, time, start note), then keep going no matter what."

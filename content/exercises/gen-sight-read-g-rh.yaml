@@ -1,0 +1,15 @@
+id: gen-sight-read-g-rh
+title: "Sight-read in G position"
+kind: generated
+generator: sight-read
+prompt: "A new tune in G each time. Remember F#."
+hand: right
+clef: treble
+keys: [G]
+notes: G4-D5
+durations: [q, h]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 5
+days: 2

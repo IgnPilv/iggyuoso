@@ -1,0 +1,15 @@
+id: gen-sight-read-y1-lh
+title: "Sight-read anything: left hand"
+kind: generated
+generator: sight-read
+prompt: "C, G or F major, bass staff."
+hand: left
+clef: bass
+keys: [C, G, F]
+notes: C3-C4
+durations: [q, h]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 7
+days: 4

@@ -1,0 +1,10 @@
+id: gen-find-c-d-e
+title: "Find C, D and E: speed run"
+kind: generated
+generator: find-notes
+prompt: "Find the key the app names, anywhere on the keyboard."
+notes: "C4 D4 E4"
+questions: 30
+mastery: { accuracy: 95, medianMs: 2500 }
+reps: 5
+days: 2

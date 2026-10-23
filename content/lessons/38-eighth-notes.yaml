@@ -10,4 +10,7 @@ steps:
       Many teachers say **ta** for a quarter and **ti-ti** for two eighths.
   - exercise: tap-eighths
   - exercise: hot-cross-buns-eighths
+  - explain: |
+      Fresh rhythms with eighth notes. Count 1-and-2-and under your breath.
+  - exercise: gen-rhythm-eighths
 recap: "Eighth = half a beat. Two eighths = one beat: ti-ti."

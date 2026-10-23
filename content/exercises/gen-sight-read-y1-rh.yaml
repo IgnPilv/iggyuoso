@@ -1,0 +1,15 @@
+id: gen-sight-read-y1-rh
+title: "Sight-read anything: right hand"
+kind: generated
+generator: sight-read
+prompt: "C, G or F major. Eighths too."
+hand: right
+clef: treble
+keys: [C, G, F]
+notes: C4-C5
+durations: [q, h, e]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 7
+days: 4

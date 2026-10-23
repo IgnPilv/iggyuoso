@@ -1,0 +1,13 @@
+id: gen-intervals-thirds
+title: "Read 3rds: major or minor?"
+kind: generated
+generator: intervals
+prompt: "Two notes on the staff. Major or minor 3rd?"
+clef: treble
+keys: [C, G, F]
+notes: C4-C5
+intervals: [m3, M3]
+questions: 30
+mastery: { accuracy: 90, medianMs: 3500 }
+reps: 3
+days: 2

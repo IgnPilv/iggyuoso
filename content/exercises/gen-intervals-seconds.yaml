@@ -1,0 +1,13 @@
+id: gen-intervals-seconds
+title: "Read 2nds: major or minor?"
+kind: generated
+generator: intervals
+prompt: "Two notes on the staff. Major or minor 2nd?"
+clef: treble
+keys: [C, G, F]
+notes: C4-C5
+intervals: [m2, M2]
+questions: 30
+mastery: { accuracy: 90, medianMs: 3500 }
+reps: 3
+days: 2

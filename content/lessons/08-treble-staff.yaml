@@ -13,4 +13,7 @@ steps:
       **D** hangs just under the bottom line. **E** sits on the bottom line.
   - exercise: read-c-d-e-treble
   - exercise: read-c-d-e-treble-rhythm
+  - explain: |
+      Note-reading only gets fast with lots of reps. Play each note you see, in the right place.
+  - exercise: gen-read-treble-c-g
 recap: Five lines, four spaces. Treble clef is for the right hand. Middle C is on a ledger line below it.
