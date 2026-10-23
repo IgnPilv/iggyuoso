@@ -1,0 +1,70 @@
+id: touch-marks-quiz
+title: 'Dynamics marks: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: 'Which is louder: mf or mp?'
+  choices:
+  - They are the same
+  - mp
+  - mf
+  correct: 2
+  why: mezzo forte (medium loud) is louder than mezzo piano (medium soft).
+- ask: What does ff mean?
+  choices:
+  - Fast
+  - Very loud (fortissimo)
+  - Repeat
+  - Very soft
+  correct: 1
+  why: 'Two f''s: fortissimo.'
+- ask: What does pp mean?
+  choices:
+  - Play
+  - Pedal
+  - Very loud
+  - Very soft (pianissimo)
+  correct: 3
+  why: 'Two p''s: pianissimo.'
+- ask: An opening wedge (<) means...
+  choices:
+  - Accent
+  - Diminuendo
+  - 'Crescendo: get gradually louder'
+  - Slow down
+  correct: 2
+  why: It opens like the sound growing.
+- ask: '"dim." is short for...'
+  choices:
+  - Dimly lit
+  - Slow down
+  - Diminished chord
+  - 'Diminuendo: get gradually softer'
+  correct: 3
+  why: The same as a closing wedge.
+- ask: 'From softest to loudest:'
+  choices:
+  - mp p pp mf f ff
+  - pp mp p f mf ff
+  - pp p mp mf f ff
+  - p pp mp mf ff f
+  correct: 2
+  why: pianissimo, piano, mezzo piano, mezzo forte, forte, fortissimo.
+- ask: Where should a crescendo be loudest?
+  choices:
+  - 'Nowhere: it stays the same'
+  - At its start
+  - At its end, on the next mark
+  - In the middle
+  correct: 2
+  why: It grows all the way to where it is going.
+- ask: What makes a note loud on the piano?
+  choices:
+  - A long press
+  - Pressing harder after it sounds
+  - The pedal
+  - A fast key
+  correct: 3
+  why: Once the hammer has struck, pressing harder changes nothing.

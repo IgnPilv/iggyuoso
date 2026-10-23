@@ -82,3 +82,7 @@ nodes:
   - { id: ks-c-sharp-minor, stage: 9, lesson: ks-c-sharp-minor, title: "Key study: C♯ minor", type: drill, requires: [technique-scales-ab-db, ks-f-minor] }
   - { id: ks-b-flat-minor, stage: 9, lesson: ks-b-flat-minor, title: "Key study: B♭ minor", type: drill, requires: [technique-positions-all-keys, ks-c-sharp-minor] }
   - { id: ks-e-flat-minor, stage: 9, lesson: ks-e-flat-minor, title: "Key study: E♭ minor", type: drill, requires: [technique-positions-all-keys, ks-b-flat-minor] }
+  - { id: touch-forte-piano, stage: 2, lesson: touch-forte-piano, title: "Loud and soft at the keys", type: lesson, requires: [dynamics, technique-c-position-two-hands] }
+  - { id: touch-crescendo, stage: 3, lesson: touch-crescendo, title: "Growing and fading: crescendo and diminuendo", type: lesson, requires: [touch-forte-piano, c-scale-hands-together] }
+  - { id: touch-terraced, stage: 4, lesson: touch-terraced, title: "Echoes: terraced dynamics", type: lesson, requires: [touch-crescendo] }
+  - { id: touch-shaping, stage: 5, lesson: touch-shaping, title: "Shaping a phrase", type: lesson, requires: [touch-terraced, theory-phrases-and-form] }

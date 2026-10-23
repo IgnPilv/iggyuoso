@@ -1,0 +1,15 @@
+id: touch-chord-swell
+title: Chords that grow
+kind: timed
+hand: together
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:q C4+E4+G4:q C4+E4+G4:q C4+E4+G4:q | C4+F4+A4:q C4+F4+A4:q C4+F4+A4:q C4+F4+A4:q | B3+D4+G4:q B3+D4+G4:q B3+D4+G4:q
+  B3+D4+G4:q | B3+D4+F4:q B3+D4+F4:q B3+D4+F4:q B3+D4+F4:q | C4+E4+G4:w
+left: C3:h C3:h | F2:h F2:h | G2:h G2:h | G2:h G2:h | C3:w
+dynamics: p | < | f | > | p
+reps: 3
+days: 2

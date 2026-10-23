@@ -1,0 +1,14 @@
+id: touch-echo-hands
+title: Echo with both hands
+kind: timed
+hand: together
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:h | C4:q E4:q G4:h | G4:q F4:q E4:q D4:q | C4:w
+left: C3:q E3:q G3:h | C3:q E3:q G3:h | G3:q F3:q E3:q D3:q | C3:w
+dynamics: f | p | f | p
+reps: 3
+days: 2

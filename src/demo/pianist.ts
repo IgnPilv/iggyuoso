@@ -28,8 +28,8 @@ export class Pianist {
   }
 
   /** Press a key `startIn` ms from now and hold it. */
-  playNote(note: number, startIn: number, holdMs: number) {
-    this.at(startIn, () => { midi.inject('on', note); this.held.add(note); });
+  playNote(note: number, startIn: number, holdMs: number, velocity = 80) {
+    this.at(startIn, () => { midi.inject('on', note, velocity); this.held.add(note); });
     this.at(startIn + holdMs, () => { midi.inject('off', note); this.held.delete(note); });
   }
 
@@ -52,9 +52,22 @@ export class Pianist {
     this.setPedal(false);
   }
 
-  /** Plays along with a timed run: one wrong key, one late note, one missed note, small jitter. */
+  /**
+   * Plays along with a timed run: one wrong key, one late note, one missed note, small jitter.
+   * Follows the loud and soft marks, but plays the first crescendo flat.
+   */
   playTimed(s: TimedSession, opts: { slips: boolean } = { slips: true }) {
     const now = performance.now();
+    const firstHairpin = s.dynamics.find((d) => d.hairpin);
+    const velocity = (beat: number) => {
+      const i = s.dynamics.findIndex((d) => beat >= d.beat - 1e-6 && beat < d.beat + d.beats - 1e-6);
+      const d = s.dynamics[i];
+      if (!d) return 80;
+      const v = (level: number) => 30 + level * 16; // pp 30 … ff 110
+      if (!d.hairpin || (opts.slips && d === firstHairpin)) return v(d.level);
+      const to = s.dynamics[i + 1]?.level ?? d.level;
+      return Math.round(v(d.level) + (v(to) - v(d.level)) * ((beat - d.beat) / d.beats));
+    };
     s.guide().forEach((g, i) => {
       let note = toDevice(s.cal, g.midi);
       let offset = Math.round(Math.sin(i * 2.3) * 22); // a human-ish wobble, ±22 ms
@@ -63,7 +76,8 @@ export class Pianist {
         if (i === 4) offset = 140;                  // late
         if (i === 6 && s.expected.length >= 9) return; // missed
       }
-      this.playNote(note, g.time + s.opts.latencyMs + offset - now, g.durMs * 0.9);
+      const wobble = Math.round(Math.sin(i * 1.7) * 4);
+      this.playNote(note, g.time + s.opts.latencyMs + offset - now, g.durMs * 0.9, Math.max(1, Math.min(127, velocity(g.note.beat) + wobble)));
     });
     // Legato pedal: lift as each chord sounds and press again just after. Holds through the
     // second change, so the pedal feedback has something to show.

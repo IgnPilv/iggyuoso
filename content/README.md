@@ -72,6 +72,12 @@ days: 2   # spread over at least two days
   held through a change, changed before the chord, pressed late, lifted early, lifted late before
   a rest. The pedal is a quarter of the take's score. Shown as falling notes; `display: staff` starts on
   sheet music instead (the player can switch).
+  `dynamics: "p | - | < | f"`: loud and soft, one mark per bar: `pp p mp mf f ff`, `<` (or `cresc.`)
+  crescendo and `>` (or `dim.`) diminuendo towards the next level, `-` as before. Bar 1 needs a level.
+  Scored from key velocity, relatively (keyboards differ): each change of level must be heard as a
+  change between the stretches' middle velocities (7 per level, at most 24), and a hairpin must grow or
+  fade from its first third of notes to its last. A fifth of the take's score when the level changes;
+  not scored when every key comes in at the same strength (computer keyboard, fixed velocity).
   `click: count-in` (timed and tap): the click sounds only during the count-in, then the player
   keeps the pulse inside; `click: off`: no clicks at all (the count still shows on screen). The
   player picks the count-in length in Options (a full bar of `countIn`, short = the last two beats,

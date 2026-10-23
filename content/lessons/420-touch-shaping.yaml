@@ -1,0 +1,27 @@
+id: touch-shaping
+title: Shaping a phrase
+skills:
+- technique
+steps:
+- explain: |
+    A phrase is like a sentence: it leans towards its most important note and relaxes after it. Musicians call this
+    **shaping**. Even with no marks, a phrase usually grows a little towards its high point and fades at its cadence.
+  terms:
+  - phrase
+  - shaping
+  - climax
+  - cantabile
+- explain: |
+    Here is Ode to Joy with its shape written in: the first phrase soft and growing, the answer louder, and a crescendo
+    into the last phrase.
+  check:
+    ask: Where is a phrase usually softest?
+    choices:
+    - At its highest note
+    - In the middle of a bar
+    - At its cadence, as it comes to rest
+    - Always at the start
+    correct: 2
+    why: 'Cadences relax: the phrase breathes out.'
+- exercise: touch-ode-shaped
+recap: Lean towards the high point, relax into the cadence.

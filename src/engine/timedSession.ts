@@ -1,7 +1,8 @@
 import { toWritten, type Calibration } from '../calibration';
 import type { TimedExercise } from '../content/types';
 import { pitchClass } from '../music/notes';
-import { beatMs, expectedNotes, expectedPedal, totalBeats, type ExpectedNote, type PedalSpan } from '../music/timeline';
+import { beatMs, expectedDynamics, expectedNotes, expectedPedal, totalBeats, type ExpectedNote, type PedalSpan } from '../music/timeline';
+import { DYNAMICS_WEIGHT, dynamicsMessages, hasDynamics, scoreDynamics, type DynamicSpan } from '../scoring/dynamics';
 import { PEDAL_WEIGHT, pedalMessages, scorePedal, type PedalPress } from '../scoring/pedal';
 import { stars } from '../scoring/stars';
 import { hitWindowMs, scoreTimed, type PlayedNote, type TimedResult } from '../scoring/timed';
@@ -86,6 +87,8 @@ export class TimedSession {
   readonly windowMs: number;
   readonly played: PlayedNote[] = [];
   readonly pedalLine: PedalSpan[];
+  /** Loud and soft marks (empty when the exercise has none, or only one level). */
+  readonly dynamics: DynamicSpan[];
   /** Pedal presses and lifts, in song time. */
   readonly pedal: PedalPress[] = [];
   /** Whether the pedal was already down when the run started. */
@@ -95,6 +98,8 @@ export class TimedSession {
   constructor(readonly ex: TimedExercise, readonly cal: Calibration, readonly opts: TimedSessionOptions) {
     this.expected = expectedNotes(ex);
     this.pedalLine = expectedPedal(ex);
+    const dyn = expectedDynamics(ex);
+    this.dynamics = hasDynamics(dyn) ? dyn : [];
     // The tempo counts the meter's beat (a dotted quarter in 6/8); timing works in quarters.
     this.quarterTempo = opts.tempo * ex.meter.pulse;
     this.beatMs = beatMs(this.quarterTempo);
@@ -149,9 +154,9 @@ export class TimedSession {
     return time - this.t0 - this.opts.latencyMs;
   }
 
-  noteOn(device: number, time: number): PressJudgement | undefined {
+  noteOn(device: number, time: number, velocity?: number): PressJudgement | undefined {
     if (this.opts.mode !== 'play') return undefined;
-    const n: PlayedNote = { midi: toWritten(this.cal, device), on: this.songTime(time) };
+    const n: PlayedNote = { midi: toWritten(this.cal, device), on: this.songTime(time), ...(velocity !== undefined ? { velocity } : {}) };
     this.played.push(n);
     this.open.set(n.midi, n);
     if (n.on < -this.windowMs) return undefined; // count-in
@@ -236,12 +241,22 @@ export class TimedSession {
   }
 
   result(): TimedResult {
-    const r = scoreTimed(this.expected, this.played, { tempo: this.quarterTempo, pitchMatch: this.ex.pitchMatch });
-    if (!this.pedalLine.length) return r;
-    const pedal = scorePedal(this.pedalLine, this.pedal, { beatMs: this.beatMs, windowMs: this.windowMs, initialDown: this.pedalAtStart });
-    const score = Math.round((1 - PEDAL_WEIGHT) * r.score + PEDAL_WEIGHT * pedal.score);
-    const messages = pedalMessages(pedal).map((message) => ({ habit: 'pedal' as const, message }));
-    const feedback = messages.length ? [...r.feedback.filter((f) => f.habit !== 'clean'), ...messages] : r.feedback;
-    return { ...r, score, stars: stars(score), feedback, pedal };
+    let r = scoreTimed(this.expected, this.played, { tempo: this.quarterTempo, pitchMatch: this.ex.pitchMatch });
+    const extra = (habit: 'pedal' | 'dynamics', weight: number, part: number, messages: string[]) => {
+      const score = Math.round((1 - weight) * r.score + weight * part);
+      const fb = messages.map((message) => ({ habit, message }));
+      const feedback = fb.length ? [...r.feedback.filter((f) => f.habit !== 'clean'), ...fb] : r.feedback;
+      return { ...r, score, stars: stars(score), feedback };
+    };
+    if (this.pedalLine.length) {
+      const pedal = scorePedal(this.pedalLine, this.pedal, { beatMs: this.beatMs, windowMs: this.windowMs, initialDown: this.pedalAtStart });
+      r = { ...extra('pedal', PEDAL_WEIGHT, pedal.score, pedalMessages(pedal)), pedal };
+    }
+    if (this.dynamics.length) {
+      const dynamics = scoreDynamics(this.dynamics, this.played, { beatMs: this.beatMs, windowMs: this.windowMs });
+      // A keyboard that cannot play loud and soft is not marked down for it.
+      r = { ...extra('dynamics', dynamics.measured ? DYNAMICS_WEIGHT : 0, dynamics.score, dynamicsMessages(dynamics)), dynamics };
+    }
+    return r;
   }
 }

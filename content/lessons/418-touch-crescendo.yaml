@@ -1,0 +1,31 @@
+id: touch-crescendo
+title: 'Growing and fading: crescendo and diminuendo'
+skills:
+- technique
+steps:
+- explain: |
+    **Crescendo** (cresc., or an opening wedge **<**) means getting gradually louder; **diminuendo** (dim., or a closing
+    wedge **>**) gradually softer. Each note is a little louder (or softer) than the one before, with no sudden jump.
+  terms:
+  - crescendo
+  - diminuendo
+  - hairpin
+  sound: C4:q D4:q E4:q F4:q | G4:q A4:q B4:q C5:q
+  callout: |
+    < grows, > fades. A hairpin always ends on the next mark.
+- explain: |
+    Music often grows as it climbs and fades as it comes down. Plan the top: save your loudest for the high point, and
+    start the crescendo softly enough to have somewhere to go.
+  check:
+    ask: What does a closing wedge (>) under the music mean?
+    choices:
+    - Getting gradually louder
+    - Getting gradually softer
+    - An accent on one note
+    - Slowing down
+    correct: 1
+    why: It is a diminuendo (or decrescendo).
+- exercise: touch-scale-swell
+- exercise: touch-chord-swell
+- exercise: touch-marks-quiz
+recap: Cresc. grows to the next mark; dim. fades to it.

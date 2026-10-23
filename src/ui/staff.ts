@@ -1,6 +1,7 @@
 import { diatonicStep, type Letter, type Pitch } from '../music/notes';
 import { keySignature } from '../music/theory';
 import type { PedalSpan } from '../music/timeline';
+import { LEVELS, type DynamicSpan } from '../scoring/dynamics';
 import { s } from './dom';
 
 // A plain SVG staff: one clef or a grand staff, note heads, stems, rests and bar lines.
@@ -53,7 +54,7 @@ const ACCIDENTAL = { 1: '♯', [-1]: '♭', 0: '♮' } as const;
  * `key`: a key signature (G, Bb, Em...). Notes are written out in full; an accidental is drawn
  * only where the note differs from the signature or from an earlier note on that line in the bar.
  */
-export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; key?: string } = {}) {
+export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; dynamics?: DynamicSpan[]; key?: string } = {}) {
   const timed = parts.some((p) => p.notes.some((n) => n.beats !== undefined));
   const length = Math.max(
     ...parts.map((p) => (timed ? p.notes.reduce((a, n) => a + (n.beats ?? 1), 0) : p.notes.length)),
@@ -63,8 +64,11 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
   const left = LEFT + (sigCount ? sigCount * SIG_W + 6 : 0);
   const width = left + length * (timed ? BEAT_W : UNTIMED_W) + 20;
   const staffTop = (i: number) => 40 + i * (STAFF_H + 70);
-  const pedalY = staffTop(parts.length - 1) + STAFF_H + 48;
-  const height = pedalY + (opts.pedal?.length ? 22 : 2);
+  // Dynamics sit under the music (between the staves of a grand staff), the pedal below them.
+  const dyn = timed && (opts.dynamics?.length ?? 0) > 0;
+  const dynY = parts.length === 2 ? staffTop(0) + STAFF_H + 38 : staffTop(0) + STAFF_H + 44;
+  const pedalY = staffTop(parts.length - 1) + STAFF_H + 48 + (dyn && parts.length === 1 ? 24 : 0);
+  const height = Math.max(pedalY + (opts.pedal?.length ? 22 : 2), dyn ? dynY + 10 : 0);
   const svg = s('svg', { viewBox: `0 0 ${width} ${height}`, class: 'staff', role: 'img', 'aria-label': 'music staff' });
   const els = new Map<string, SVGGElement>();
 
@@ -179,6 +183,20 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
       else g.append(s('text', { x: a - 4, y: pedalY + 1, class: 'pedal-text' }, 'Ped.'));
       g.append(s('line', { x1: sp.change ? a + 5 : a + 26, x2: sp.lift ? b - 4 : b - 5, y1: pedalY, y2: pedalY, class: 'pedal-line' }));
       if (sp.lift) g.append(s('line', { x1: b - 4, x2: b - 4, y1: pedalY, y2: pedalY - 8, class: 'pedal-line' }));
+    }
+    svg.append(g);
+  }
+
+  // Loud and soft: the mark at the start of its bars; a hairpin as an opening or closing wedge.
+  if (dyn) {
+    const dx = (beat: number) => left + (beat - (opts.startQuarter ?? 0)) * BEAT_W + 8;
+    const g = s('g', { class: 'dynamics' });
+    for (const d of opts.dynamics!) {
+      const a = Math.max(left - 6, dx(d.beat));
+      const b = dx(d.beat + d.beats) - 10;
+      if (!d.hairpin) { g.append(s('text', { x: a, y: dynY + 4, class: 'dyn-text' }, LEVELS[d.level])); continue; }
+      const [wide, narrow] = d.hairpin > 0 ? [b, a] : [a, b];
+      g.append(s('path', { d: `M${wide} ${dynY - 5} L${narrow} ${dynY} L${wide} ${dynY + 5}`, class: 'dyn-line' }));
     }
     svg.append(g);
   }

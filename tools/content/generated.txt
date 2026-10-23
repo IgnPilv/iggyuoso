@@ -1553,6 +1553,14 @@ content/exercises/theory-tempo-words-quiz.yaml
 content/exercises/theory-time-signatures-quiz.yaml
 content/exercises/theory-transposition-quiz.yaml
 content/exercises/ties-ht.yaml
+content/exercises/touch-chord-swell.yaml
+content/exercises/touch-echo-c.yaml
+content/exercises/touch-echo-hands.yaml
+content/exercises/touch-marks-quiz.yaml
+content/exercises/touch-mf-mp.yaml
+content/exercises/touch-ode-shaped.yaml
+content/exercises/touch-scale-swell.yaml
+content/exercises/touch-terraced-g.yaml
 content/exercises/triad-a-flat.yaml
 content/exercises/triad-a-minor.yaml
 content/exercises/triad-a.yaml
@@ -1877,3 +1885,7 @@ content/lessons/413-harmony-modes.yaml
 content/lessons/414-musician-texture.yaml
 content/lessons/415-musician-eras.yaml
 content/lessons/416-musician-talk.yaml
+content/lessons/417-touch-forte-piano.yaml
+content/lessons/418-touch-crescendo.yaml
+content/lessons/419-touch-terraced.yaml
+content/lessons/420-touch-shaping.yaml

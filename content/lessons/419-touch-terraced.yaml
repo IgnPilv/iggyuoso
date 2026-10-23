@@ -1,0 +1,16 @@
+id: touch-terraced
+title: 'Echoes: terraced dynamics'
+skills:
+- technique
+steps:
+- explain: |
+    Harpsichords could not play louder or softer by touch, so Baroque music changes level in **terraces**: a phrase
+    forte, then the same phrase piano, like an echo across a hall. On the piano, make each terrace even and the step
+    between them clear.
+  terms:
+  - terraced dynamics
+  - echo
+  callout: |
+    Same phrase, a new level: f, then p.
+- exercise: touch-terraced-g
+recap: 'Baroque echoes: even terraces, a clear step.'

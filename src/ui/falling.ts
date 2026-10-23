@@ -3,6 +3,7 @@ import { computerKeys } from '../midi/computerKeys';
 import type { LiveState } from '../engine/timedSession';
 import { isBlack, pitchClass, type Hand } from '../music/notes';
 import type { PedalSpan } from '../music/timeline';
+import { LEVELS, type DynamicSpan } from '../scoring/dynamics';
 import { palette, tokenColor, type Palette } from './theme';
 
 // Synthesia-style view: notes fall towards the keyboard and reach it on their beat. Drawn on a
@@ -64,7 +65,8 @@ export class FallingView {
     private cal: Calibration,
     private notes: FallingNote[],
     private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c'; /** Quarters per beat line (1.5 in 6/8). */ pulse?: number;
-      /** A pedal line, drawn as a strip down the right edge. */ pedal?: PedalSpan[] },
+      /** A pedal line, drawn as a strip down the right edge. */ pedal?: PedalSpan[];
+      /** Loud and soft marks, written next to the bar numbers. */ dynamics?: DynamicSpan[] },
   ) {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
@@ -147,7 +149,15 @@ export class FallingView {
         ctx.fillStyle = p.laneText;
         ctx.font = `500 10px ${p.fontMono}`;
         ctx.textAlign = 'left';
-        ctx.fillText(`BAR ${Math.round(b / barQ) + 1}`, 8, y - 5);
+        const n = Math.round(b / barQ) + 1;
+        const d = this.opts.dynamics?.find((x) => x.bars[0] === n);
+        const mark = d ? (d.hairpin ? (d.hairpin > 0 ? 'cresc.' : 'dim.') : LEVELS[d.level]) : '';
+        ctx.fillText(`BAR ${n}`, 8, y - 5);
+        if (mark) {
+          ctx.font = `italic 700 13px ${p.fontBody}`;
+          ctx.fillStyle = p.laneText;
+          ctx.fillText(mark, 56, y - 5);
+        }
       }
     }
 

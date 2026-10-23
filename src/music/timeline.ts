@@ -1,4 +1,5 @@
 import type { TimedExercise } from '../content/types';
+import { dynamicSpans, type DynamicSpan } from '../scoring/dynamics';
 import { pitchToMidi, type Hand, type NoteToken } from './notes';
 
 // Flattens a timed exercise into the notes each hand should play, in beats from the downbeat
@@ -62,6 +63,11 @@ export function expectedPedal(ex: TimedExercise): PedalSpan[] {
     beat += t.beats;
   });
   return out;
+}
+
+/** The exercise's loud and soft marks as spans (bar 1 starts at the upbeat's padding, like the bar lines). */
+export function expectedDynamics(ex: TimedExercise): DynamicSpan[] {
+  return ex.dynamics ? dynamicSpans(ex.dynamics, ex.meter.quarters) : [];
 }
 
 /** Silent beats before an upbeat, so that it ends on the first full bar's downbeat. */
