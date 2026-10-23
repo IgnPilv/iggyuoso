@@ -2,6 +2,7 @@ id: a-minor-position-rh
 kind: timed
 hand: right
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "A4:q B4:q C5:q D5:q | E5:w | E5:q D5:q C5:q B4:q | A4:w"

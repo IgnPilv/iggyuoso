@@ -6,6 +6,7 @@ prompt: "Hold each tied note through the bar line. Don't play it again."
 display: staff
 clef: treble
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:q E4:q G4:h~ | G4:q F4:q E4:h | D4:h~ D4:q E4:q | C4:w"

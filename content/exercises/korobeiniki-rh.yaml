@@ -6,6 +6,8 @@ display: staff
 clef: treble
 key: Am
 tempo: 88
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "E5:q B4:e C5:e D5:q C5:e B4:e | A4:q A4:e C5:e E5:q D5:e C5:e | B4:q. C5:e D5:q E5:q | C5:q A4:q A4:h | D5:q. F5:e A5:q G5:e F5:e | E5:q. C5:e E5:q D5:e C5:e | B4:q B4:e C5:e D5:q E5:q | C5:q A4:q A4:h"
+days: 2

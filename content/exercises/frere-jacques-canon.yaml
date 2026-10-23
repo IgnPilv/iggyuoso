@@ -1,0 +1,13 @@
+id: frere-jacques-canon
+kind: timed
+title: "Frère Jacques as a canon"
+hand: together
+prompt: "The left hand starts the same tune two bars later, an octave lower. Two voices, one song."
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:q C4:q | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | E4:q F4:q G4:h | G4:e A4:e G4:e F4:e E4:q C4:q | G4:e A4:e G4:e F4:e E4:q C4:q | C4:q G3:q C4:h | C4:q G3:q C4:h | r:w | r:w"
+left: "r:w | r:w | C3:q D3:q E3:q C3:q | C3:q D3:q E3:q C3:q | E3:q F3:q G3:h | E3:q F3:q G3:h | G3:e A3:e G3:e F3:e E3:q C3:q | G3:e A3:e G3:e F3:e E3:q C3:q | C3:q G2:q C3:h | C3:q G2:q C3:h"
+days: 2

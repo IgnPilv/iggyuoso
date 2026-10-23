@@ -1,7 +1,7 @@
 id: ear-echo-four
 kind: ear
 prompt: Four notes now, from C to G. Listen twice, then play it back.
-questions: 8
+questions: 20
 items:
   - { type: melody, notes: "C4 E4 G4 E4", plays: 2 }
   - { type: melody, notes: "C4 D4 E4 C4", plays: 2 }

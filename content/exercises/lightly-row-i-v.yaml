@@ -10,3 +10,4 @@ tempoLadder: true
 right: "G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q D4:q E4:q F4:q | G4:q G4:q G4:h | G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q E4:q G4:q G4:q | C4:w"
 left: "C3+E3+G3:w | B2+F3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | B2+F3+G3:w | C3+E3+G3:w | C3+E3+G3:w"
 rightFingers: "5 3 3 4 2 2 1 2 3 4 5 5 5 5 3 3 4 2 2 1 3 5 5 1"
+days: 2

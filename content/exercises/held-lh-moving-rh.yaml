@@ -2,6 +2,7 @@ id: held-lh-moving-rh
 kind: timed
 hand: together
 tempo: 66
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:q D4:q E4:q F4:q | G4:q F4:q E4:q D4:q | C4:w"

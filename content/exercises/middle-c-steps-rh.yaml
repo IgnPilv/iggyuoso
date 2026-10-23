@@ -2,6 +2,7 @@ id: middle-c-steps-rh
 kind: timed
 hand: right
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:q D4:q E4:q F4:q | G4:h F4:q E4:q | D4:h C4:h | C4:w"

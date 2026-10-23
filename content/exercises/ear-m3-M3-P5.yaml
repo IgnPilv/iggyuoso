@@ -2,6 +2,6 @@ id: ear-m3-M3-P5
 title: "Minor 3rd, major 3rd or 5th?"
 kind: ear
 prompt: "Two notes, one after the other. Name the interval."
-questions: 12
+questions: 20
 items:
   - { type: interval, pool: [m3, M3, P5], from: [C4, D4, F4, G4, A3], direction: up, answer: name }

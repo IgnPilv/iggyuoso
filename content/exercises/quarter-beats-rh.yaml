@@ -2,6 +2,7 @@ id: quarter-beats-rh
 kind: timed
 hand: right
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 pitchMatch: pitchClass   # any C counts; pitch reading comes later

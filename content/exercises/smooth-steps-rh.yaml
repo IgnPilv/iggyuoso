@@ -2,6 +2,7 @@ id: smooth-steps-rh
 kind: timed
 hand: right
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:h D4:h | E4:h F4:h | G4:h F4:h | E4:h D4:h | C4:w"

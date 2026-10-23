@@ -3,6 +3,7 @@ title: "Sixteenths in C position"
 kind: timed
 hand: right
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:s D4:s E4:s F4:s G4:q G4:h | G4:s F4:s E4:s D4:s C4:q C4:h | E4:s F4:s G4:s F4:s E4:s D4:s E4:s D4:s C4:h"

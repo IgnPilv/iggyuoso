@@ -1,0 +1,13 @@
+id: frere-jacques-lh
+kind: timed
+title: "Frère Jacques (left hand)"
+hand: left
+display: staff
+clef: bass
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: "C3:q D3:q E3:q C3:q | C3:q D3:q E3:q C3:q | E3:q F3:q G3:h | E3:q F3:q G3:h"
+fingers: "5 4 3 5 5 4 3 5 3 2 1 3 2 1"
+days: 2

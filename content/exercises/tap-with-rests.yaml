@@ -2,6 +2,7 @@ id: tap-with-rests
 kind: tap
 prompt: Rests too. Keep counting through the silence.
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 rhythm: "x:q r:q x:q r:q | x:h x:q r:q | x:q x:q x:h | x:w"
