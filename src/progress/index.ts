@@ -1,5 +1,6 @@
 import { content, treeNodes } from '../content';
 import type { Exercise, Lesson } from '../content/types';
+import type { PlanInput } from './daily';
 import { Mastery } from './mastery';
 import { memoryBackend, Store, store } from './store';
 
@@ -16,13 +17,16 @@ export type LessonLock =
   /** The lesson before it in the unit is not done yet. */
   | { locked: true; reason: 'previous'; lesson: Lesson }
   /** Its tree node needs other nodes first (Practised; Mastered for a checkpoint). */
-  | { locked: true; reason: 'tree'; nodes: string[]; checkpoint: boolean };
+  | { locked: true; reason: 'tree'; nodes: string[]; checkpoint: boolean }
+  /** A new lesson waits until today's reviews are done. */
+  | { locked: true; reason: 'reviews'; due: string[] };
 
 /**
  * Whether a lesson can be opened. Lessons in a unit open one by one: the next opens when the one
- * before is done. A lesson whose tree node is still Locked stays closed too.
+ * before is done. A lesson whose tree node is still Locked stays closed too. A lesson never played
+ * waits while reviews are due (unless `ignoreReviews`).
  */
-export function lessonLock(l: Lesson, p: { store: Store; mastery: Mastery } = { store, mastery }): LessonLock {
+export function lessonLock(l: Lesson, p: { store: Store; mastery: Mastery } = { store, mastery }, ignoreReviews = false): LessonLock {
   if (p.store.settings.openAll) return { locked: false };
   const order = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
   const prev = content.lessons.get(order[order.indexOf(l.id) - 1]);
@@ -31,7 +35,18 @@ export function lessonLock(l: Lesson, p: { store: Store; mastery: Mastery } = { 
   if (node && p.mastery.state(node.id) === 'locked') {
     return { locked: true, reason: 'tree', nodes: p.mastery.missing(node), checkpoint: node.type === 'checkpoint' };
   }
+  if (!ignoreReviews) {
+    const goals = lessonGoals(l);
+    const fresh = goals.every((e) => !p.store.exercise(e.id).attempts);
+    const due = fresh && goals.length ? p.mastery.reviewQueue() : [];
+    if (due.length) return { locked: true, reason: 'reviews', due };
+  }
   return { locked: false };
+}
+
+/** Today's practice plan and progress, for the real progress or the demo's. */
+export function dailyInput(p: { store: Store; mastery: Mastery } = { store, mastery }): PlanInput {
+  return { content, nodes: treeNodes, store: p.store, mastery: p.mastery, locked: (l) => lessonLock(l, p, true).locked, lessonGoals };
 }
 
 const exercisesOf = (lessonId: string) => {

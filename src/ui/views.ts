@@ -10,6 +10,7 @@ import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
 import { markdown } from './markdown';
 import { mountExercise, repsText } from './players';
+import { todayCard } from './todayView';
 import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
 
 export const go = (path: string) => { location.hash = path; };
@@ -71,6 +72,7 @@ export const homeView: View = (root) => {
       h('button', { class: 'secondary', onclick: () => go('/demo') }, 'Watch the demo'),
       h('span', { class: 'small' }, 'The demo needs no keyboard.')),
   ));
+  if (store.calibration) root.append(todayCard());
   root.append(progressCard());
   for (const unit of content.units) {
     const lessons = unit.lessons.map((id) => content.lessons.get(id)).filter((l): l is Lesson => !!l);
@@ -289,13 +291,17 @@ function repsTable(goals: Exercise[]) {
 
 function lockedCard(l: Lesson, lock: Extract<LessonLock, { locked: true }>) {
   const title = (id: string) => treeNodes.get(id)?.title ?? id;
+  const links = (ids: string[]) => ids.flatMap((id, i) => {
+    const n = treeNodes.get(id);
+    return [i ? ', ' : '', n?.lesson ? h('a', { href: `#/lesson/${n.lesson}` }, title(id)) : title(id)];
+  });
   const why = lock.reason === 'previous'
     ? h('p', {}, 'This lesson opens when ', h('a', { href: `#/lesson/${lock.lesson.id}` }, lock.lesson.title), ' is done: every exercise in it played clean (★★★) enough times.')
-    : h('p', {}, lock.checkpoint ? 'A checkpoint opens when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ' : 'This lesson opens after: ',
-      ...lock.nodes.flatMap((id, i) => {
-        const n = treeNodes.get(id);
-        return [i ? ', ' : '', n?.lesson ? h('a', { href: `#/lesson/${n.lesson}` }, title(id)) : title(id)];
-      }), '.');
+    : lock.reason === 'reviews'
+      ? h('p', {}, 'Reviews first: something you learned is fading. New lessons open once today\'s reviews are done. ',
+        h('a', { href: '#/today' }, 'Start today\'s practice'), ' (due: ', ...links(lock.due.slice(0, 5)), ').')
+      : h('p', {}, lock.checkpoint ? 'A checkpoint opens when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ' : 'This lesson opens after: ',
+        ...links(lock.nodes), '.');
   return h('section', { class: 'card' }, h('span', { class: 'eyebrow' }, 'Locked'), h('h2', {}, l.title), why,
     lock.reason === 'previous' ? repsTable(lessonGoals(lock.lesson)) : '',
     h('div', { class: 'controls' }, h('button', { class: 'secondary', onclick: () => go('/') }, 'Home')));

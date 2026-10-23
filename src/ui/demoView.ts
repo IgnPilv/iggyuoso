@@ -8,6 +8,10 @@ import { parseExercise } from '../content/load';
 import { h, type View } from './dom';
 import { mountExercise } from './players';
 import { renderProfile, sampleProgress } from './profileView';
+import { runToday, todayCard } from './todayView';
+import { demoProgress, lessonGoals, nodeOfLesson } from '../progress';
+import { dayOf } from '../progress/mastery';
+import type { Store } from '../progress/store';
 import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
 import { calibrateView, keyMap, testerView } from './views';
@@ -162,6 +166,26 @@ meter: 6/8
 right: "C4:e D4:e E4:e F4:q E4:e | D4:q. G4:q. | E4:e F4:e G4:e A4:q F4:e | E4:q. C4:q."`,
 };
 
+/** Two lessons learned a week ago, Solid and now due for review; a fresh plan for today. */
+function seedReviews(s: Store) {
+  const old = new Date(Date.now() - 7 * 86_400_000);
+  const first = [...content.units].sort((a, b) => a.order - b.order)[0]?.lessons.slice(0, 2) ?? [];
+  for (const id of first) {
+    const lesson = content.lessons.get(id);
+    const node = lesson && nodeOfLesson(id);
+    if (!lesson || !node) continue;
+    // Enough clean takes, on enough days, for the lesson to be done.
+    for (const ex of lessonGoals(lesson)) {
+      for (let i = 0; i < ex.reps; i++) {
+        const at = new Date(old.getTime() - (i % ex.days) * 86_400_000).toISOString();
+        s.record(ex.id, { at, score: 95, stars: 3, tempo: 999, counts: true });
+      }
+    }
+    s.put(`mastery.${node.id}`, { state: 'solid', box: 0, lastGood: dayOf(old), solidDay: dayOf(old) });
+  }
+  s.put('daily.plan', undefined);
+}
+
 /** A unit's lesson list as it looks on home: one done, the next just opened, the rest locked. */
 function lockDemo() {
   const item = (title: string, cls: string, badge?: string) =>
@@ -287,6 +311,29 @@ function scenes(): Scene[] {
       const cleanup = mountExercise(box, parseExercise(parse(SAMPLES.sightRead)), DEMO_CALIBRATION, () => {});
       timers.push(window.setTimeout(() => press(box, 'Play'), 900));
       return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: "Today's practice",
+    caption: "About 20 minutes a day, in a teacher's order: first the reviews that are fading, then the next lesson, then fresh drills from what is already learned. New lessons wait until the reviews are done. Here two lessons learned a week ago are due; the pianist starts on the first review.",
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const progress = demoProgress();
+      seedReviews(progress.store);
+      box.append(todayCard(progress, '#/demo'));
+      demo.onFind = (s) => p.playFind(s);
+      demo.onSequence = (s) => p.playSequence(s);
+      demo.onTimed = (s) => p.playTimed(s);
+      demo.onAsk = (a) => p.answer(a);
+      demo.onRunEnd = () => {};
+      let cleanup: (() => void) | undefined;
+      timers.push(window.setTimeout(() => {
+        box.replaceChildren();
+        cleanup = runToday(box, DEMO_CALIBRATION, progress);
+        if (box.querySelector('.kind-timed')) timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+        timers.push(window.setTimeout(next, 16000));
+      }, 5000));
+      return () => { timers.forEach(clearTimeout); cleanup?.(); };
     },
   });
   out.push({

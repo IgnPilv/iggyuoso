@@ -253,3 +253,11 @@ never copied pages). Start small, adapt as we go.
   90 and 2500 ms; timed ones accuracy only): reaching the accuracy scores 92 (a clean take), and a
   middle answer time over `medianMs` caps the take at 91 (`src/scoring/goal.ts`). Quiz sessions
   time each answer. Demo scenes "Fresh drills" and "Sight-reading".
+- 2026-10-23: Today's practice (`src/progress/daily.ts`, `src/ui/todayView.ts`, `#/today` and a
+  card at the top of home). About 20 minutes, made once a day and saved (`daily.plan`): first the
+  due reviews (for each faded node, its exercise with the weakest best take; up to 10 minutes),
+  then the next open lesson on the path (estimated from the clean takes it still needs), then
+  generated drills from lessons already reached. A review counts as done once the node is fresh
+  again; the lesson once it was played today. A lesson never played stays locked while reviews
+  are due (`lessonLock` reason `reviews`). Minutes per exercise are estimated from its kind,
+  bars and tempo or number of questions. Demo scene "Today's practice".

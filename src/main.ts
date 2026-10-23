@@ -6,6 +6,7 @@ import { store } from './progress/store';
 import { h, type View } from './ui/dom';
 import { demoView } from './ui/demoView';
 import { profileView } from './ui/profileView';
+import { todayView } from './ui/todayView';
 import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './ui/theme';
 import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './ui/views';
 
@@ -16,6 +17,7 @@ const routes: Record<string, View> = {
   exercise: exerciseView,
   settings: settingsView,
   profile: profileView,
+  today: todayView,
   midi: testerView,
   demo: demoView,
 };
