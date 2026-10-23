@@ -1,6 +1,6 @@
 import { parse as parseYaml } from 'yaml';
 import {
-  barLengths, parsePitch, pitchToMidi, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
+  barLengths, isTieEnd, parseDuration, parsePitch, pitchToMidi, type Meter, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
 } from '../music/notes';
 import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, parseKey, scaleNotes } from '../music/theory';
 import type {
@@ -173,13 +173,21 @@ export function parseExercise(raw: Raw): Exercise {
   const right = raw.right !== undefined ? parseTimedNotes(str(raw, 'right')!) : undefined;
   const left = raw.left !== undefined ? parseTimedNotes(str(raw, 'left')!) : undefined;
   if (!right && !left) throw new FieldError('a timed exercise needs "right" and/or "left" notes');
+  const pickup = parsePickup(raw.pickup, meter);
   let bars = -1;
   for (const [name, tokens] of [['right', right], ['left', left]] as const) {
     if (!tokens) continue;
     const lens = barLengths(tokens);
+    const same = (a: number, b: number) => Math.abs(a - b) < 1e-6;
     lens.forEach((len, i) => {
-      if (Math.abs(len - meter.quarters) > 1e-9) {
-        throw new FieldError(`${name} hand bar ${i + 1} has ${len} beats, but ${meter.beats}/${meter.unit} needs ${meter.quarters}`);
+      if (pickup && i === 0) {
+        if (!same(len, pickup)) throw new FieldError(`${name} hand: the upbeat bar has ${round(len)} beats, but "pickup" says ${round(pickup)}`);
+        return;
+      }
+      // After an upbeat, the last bar may be short by the upbeat's length.
+      if (pickup && i > 0 && i === lens.length - 1 && same(len, meter.quarters - pickup)) return;
+      if (!same(len, meter.quarters)) {
+        throw new FieldError(`${name} hand bar ${i + 1} has ${round(len)} beats, but ${meter.beats}/${meter.unit} needs ${round(meter.quarters)}`);
       }
     });
     if (bars >= 0 && lens.length !== bars) throw new FieldError(`right and left hands have different bar counts (${bars} vs ${lens.length})`);
@@ -207,7 +215,7 @@ export function parseExercise(raw: Raw): Exercise {
     }
   }
   return {
-    ...base, hand: kind === 'tap' ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, right, left, fingers,
+    ...base, hand: kind === 'tap' ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, right, left, fingers, pickup,
     pitchMatch: kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true } : {}),
   };
 }
@@ -377,5 +385,15 @@ function chordName(sym: string): string {
 const articleFor = (sym: string) => (/^[AEF]/.test(sym) ? 'an' : 'a');
 
 function countNotes(tokens: NoteToken[]): number {
-  return tokens.filter((t) => t.pitches.length > 0).length;
+  return tokens.filter((t, i) => t.pitches.length > 0 && !isTieEnd(tokens, i)).length;
+}
+
+const round = (n: number) => Math.round(n * 1000) / 1000;
+
+/** `pickup: q` (a duration, or a sum like "e e") or a number of quarter beats. */
+function parsePickup(v: unknown, meter: Meter): number {
+  if (v === undefined) return 0;
+  const beats = typeof v === 'number' ? v : String(v).trim().split(/\s+/).reduce((a, d) => a + parseDuration(d).beats, 0);
+  if (!(beats > 0 && beats < meter.quarters - 1e-6)) throw new FieldError('"pickup" should be shorter than a bar, like q or "e e"');
+  return beats;
 }

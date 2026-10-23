@@ -64,9 +64,16 @@ notation; with `clef: treble|bass`), `prompt`.
 
 ## Note strings
 `<Note><octave>:<duration>` separated by spaces, bars separated by `|`. C4 is middle C.
-Durations: `w` whole (4), `h` half (2), `q` quarter (1), `e` eighth (0.5); a dot adds half
-(`h.` = 3). Rest: `r:q`. Chord: join notes with `+`, e.g. `C4+E4+G4:w`. Sharps and flats: `F#4`, `Bb3`.
+Durations: `w` whole (4), `h` half (2), `q` quarter (1), `e` eighth (0.5), `s` sixteenth (0.25);
+a dot adds half (`h.` = 3, `e.` = 0.75). Triplets: add `3` (`e3 e3 e3` = one beat, `q3 q3 q3` = two
+beats, `s3` too). Rest: `r:q`. Chord: join notes with `+`, e.g. `C4+E4+G4:w`. Sharps and flats:
+`F#4`, `Bb3`. Tie: put `~` after the duration and repeat the note: `E4:h~ | E4:q` is one E held
+for three beats (also across a bar line; it is played once, and takes one finger number).
 Each bar must add up to the meter; in a two-hand exercise both hands have the same bar count.
+Upbeat: `pickup: q` (a duration, a sum like `"e e"`, or quarter beats) makes bar 1 that short; the
+last bar may then be short by the same amount. Meters: any `n/2`, `n/4` or `n/8`. `tempo` counts
+the meter's beat: quarters in 4/4 and 3/4, halves in 2/2, eighths in 3/8, and dotted quarters in
+6/8, 9/8 and 12/8 (6/8 at `tempo: 60` = one click a second, two to a bar).
 Note names are mapped to the player's real keys through calibration, never to fixed MIDI numbers.
 
 `npm test` loads every file here and fails on any problem (bad note, bar that doesn't add up,

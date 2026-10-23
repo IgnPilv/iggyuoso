@@ -2,8 +2,8 @@ import { audio, click, loadPiano, outputLatencyMs, piano, stopAll } from '../aud
 import { keyName, toDevice, type Calibration } from '../calibration';
 import type { Exercise, FindExercise, SequenceExercise, TimedExercise } from '../content/types';
 import { midi } from '../midi/input';
-import type { Hand, NoteToken } from '../music/notes';
-import { expectedNotes, totalBeats } from '../music/timeline';
+import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
+import { expectedNotes, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
 import { store } from '../progress/store';
@@ -321,7 +321,11 @@ function staffParts(ex: TimedExercise): StaffPart[] {
     let index = 0;
     return {
       clef,
-      notes: tokens.map((t, ti) => ({ pitches: t.pitches, beats: t.beats, key: t.pitches.length ? `${hand}:${index++}` : `${hand}:r${ti}` })),
+      notes: tokens.map((t, ti) => ({
+        pitches: t.pitches, beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie,
+        // A tied note's second half shares the note's number; it is not marked on its own.
+        key: !t.pitches.length ? `${hand}:r${ti}` : isTieEnd(tokens, ti) ? `${hand}:t${ti}` : `${hand}:${index++}`,
+      })),
     };
   };
   if (ex.right && ex.left) return [part('right', ex.right, 'treble'), part('left', ex.left, 'bass')];
@@ -352,12 +356,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     if (view === 'falling') {
       falling = new FallingView(lo, hi, cal,
         expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })),
-        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex) });
+        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse });
       stage.append(falling.el);
       offHeld = () => {};
       idle();
     } else {
-      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters });
+      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex) });
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
       stage.append(h('div', { class: 'staff-wrap' }, staff.svg), kb.el);

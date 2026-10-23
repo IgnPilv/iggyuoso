@@ -84,6 +84,24 @@ prompt: Rhythm only. Tap the rhythm on any key.
 tempo: 84
 meter: 4/4
 rhythm: "x:q x:q x:h | x:e x:e x:q x:h"`,
+  rhythms: `
+id: demo-rhythms
+kind: timed
+display: staff
+hand: right
+prompt: An upbeat, a dotted rhythm, a triplet, a tie and sixteenths.
+tempo: 66
+meter: 4/4
+pickup: q
+right: "G4:q | C5:q. D5:e E5:e3 F5:e3 E5:e3 D5:q~ | D5:q C5:s D5:s E5:e C5:h"`,
+  sixEight: `
+id: demo-six-eight
+kind: timed
+hand: right
+prompt: Six-eight, counted in two.
+tempo: 50
+meter: 6/8
+right: "C4:e D4:e E4:e F4:q E4:e | D4:q. G4:q. | E4:e F4:e G4:e A4:q F4:e | E4:q. C4:q."`,
 };
 
 const press = (box: HTMLElement, label: string) =>
@@ -137,6 +155,9 @@ function scenes(): Scene[] {
   if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score.', run: exerciseScene(twoHands, { view: 'falling' }) });
   const sheet = pick(isTimed, (e) => e.display === 'staff' && !(e.right && e.left));
   if (sheet) out.push({ title: 'Sheet music', caption: 'The same exercise on "Keyboard & sheet": the staff, with notes turning green or red as they are played.', run: exerciseScene(sheet, { view: 'classic' }) });
+  const rhythms = parseExercise(parse(SAMPLES.rhythms));
+  out.push({ title: 'Upbeats, ties and triplets', caption: 'Note strings can start on an upbeat, tie notes across a bar line, and mix dotted notes, triplets and sixteenths. On the staff a tie is an arc, and the tied note is held, not played again.', run: exerciseScene(rhythms, { view: 'classic' }) });
+  out.push({ title: 'Six-eight', caption: 'In 6/8 the click and the tempo count dotted quarters, two to a bar, as musicians count it.', run: exerciseScene(parseExercise(parse(SAMPLES.sixEight)), { view: 'falling' }) });
   const looks = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys');
   if (looks) out.push({
     title: 'Dark and light',

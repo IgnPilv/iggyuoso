@@ -13,6 +13,12 @@ export interface StaffNote {
   beats?: number;
   /** Used to find the element later, e.g. "right:3". */
   key: string;
+  /** The written value (q = 1) when it differs from `beats` (dots, triplets). */
+  value?: number;
+  dotted?: boolean;
+  triplet?: boolean;
+  /** Tied to the next note: drawn with an arc. */
+  tie?: boolean;
 }
 
 export interface StaffPart {
@@ -28,7 +34,8 @@ const LEFT = 64;
 const STAFF_H = 4 * GAP;
 const BOTTOM_STEP: Record<Clef, number> = { treble: 4 * 7 + 2, bass: 2 * 7 + 4 }; // E4, G2
 
-export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number } = {}) {
+/** `startQuarter`: where in the first bar the music starts (the beats an upbeat leaves out). */
+export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number } = {}) {
   const timed = parts.some((p) => p.notes.some((n) => n.beats !== undefined));
   const length = Math.max(
     ...parts.map((p) => (timed ? p.notes.reduce((a, n) => a + (n.beats ?? 1), 0) : p.notes.length)),
@@ -52,23 +59,32 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number } =
     );
 
     let pos = 0;
-    let barPos = 0;
+    let barPos = opts.startQuarter ?? 0;
+    let tripletPos = 0; // beats into the current triplet group
     for (const n of part.notes) {
       const x = LEFT + (timed ? pos * BEAT_W : pos * UNTIMED_W) + 14;
       const g = s('g', { class: 'note' });
-      if (!n.pitches.length) g.append(rest(x, top, n.beats ?? 1));
+      const value = n.value ?? n.beats;
+      const dotted = n.dotted ?? (n.beats !== undefined && [0.375, 0.75, 1.5, 3, 6].includes(n.beats));
+      if (!n.pitches.length) g.append(rest(x, top, value ?? 1));
       for (const p of n.pitches) {
         const step = diatonicStep(p);
         const ny = y(step);
         // Ledger lines above or below the staff.
         for (let st = bStep - 2; st >= step; st -= 2) g.append(s('line', { x1: x - 10, x2: x + 10, y1: y(st), y2: y(st), class: 'ledger' }));
         for (let st = bStep + 10; st <= step; st += 2) g.append(s('line', { x1: x - 10, x2: x + 10, y1: y(st), y2: y(st), class: 'ledger' }));
-        const open = n.beats !== undefined && n.beats >= 2;
+        const open = value !== undefined && value >= 2;
         g.append(s('ellipse', { cx: x, cy: ny, rx: 6.2, ry: 4.4, transform: `rotate(-20 ${x} ${ny})`, class: open ? 'head open' : 'head' }));
         if (p.accidental) g.append(s('text', { x: x - 18, y: ny + 5, class: 'accidental' }, p.accidental > 0 ? '♯' : '♭'));
-        if (n.beats !== undefined && [0.75, 1.5, 3, 6].includes(n.beats)) g.append(s('circle', { cx: x + 11, cy: ny - (step % 2 === bStep % 2 ? HALF : 0), r: 1.6 }));
+        if (dotted) g.append(s('circle', { cx: x + 11, cy: ny - (step % 2 === bStep % 2 ? HALF : 0), r: 1.6 }));
+        if (n.tie && n.beats !== undefined) {
+          const x2 = x + n.beats * BEAT_W;
+          const below = step < bStep + 4;
+          const ty = ny + (below ? 7 : -7);
+          g.append(s('path', { d: `M${x + 4} ${ty} Q ${(x + x2) / 2} ${ty + (below ? 9 : -9)} ${x2 - 4} ${ty}`, class: 'tie' }));
+        }
       }
-      if (n.pitches.length && n.beats !== undefined && n.beats < 4) {
+      if (n.pitches.length && value !== undefined && value < 4) {
         const steps = n.pitches.map(diatonicStep);
         const up = Math.max(...steps) < bStep + 4;
         const ys = steps.map(y);
@@ -76,13 +92,23 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number } =
         const y1 = up ? Math.max(...ys) : Math.min(...ys);
         const y2 = up ? Math.min(...ys) - 34 : Math.max(...ys) + 34;
         g.append(s('line', { x1: x2, x2, y1, y2, class: 'stem' }));
-        if (n.beats <= 0.75) g.append(s('path', { d: `M${x2} ${y2} q 8 ${up ? 10 : -10} 9 ${up ? 22 : -22}`, class: 'flag' }));
+        const flags = value <= 0.25 ? 2 : value <= 0.5 ? 1 : 0;
+        for (let f = 0; f < flags; f++) {
+          const fy = y2 + (up ? 8 : -8) * f;
+          g.append(s('path', { d: `M${x2} ${fy} q 8 ${up ? 10 : -10} 9 ${up ? 22 : -22}`, class: 'flag' }));
+        }
       }
+      if (n.triplet && value !== undefined) {
+        // A "3" over the middle of each group of three.
+        if (tripletPos < 1e-6) g.append(s('text', { x: x + ((2 * value) / 3) * BEAT_W, y: top - 14, class: 'tuplet' }, '3'));
+        tripletPos += n.beats ?? 0;
+        if (tripletPos >= value * 2 - 1e-6) tripletPos = 0;
+      } else tripletPos = 0;
       svg.append(g);
       els.set(n.key, g);
       pos += timed ? (n.beats ?? 1) : 1;
       barPos += n.beats ?? 0;
-      if (timed && opts.barQuarters && Math.abs(barPos - opts.barQuarters) < 1e-9) {
+      if (timed && opts.barQuarters && Math.abs(barPos - opts.barQuarters) < 1e-6) {
         barPos = 0;
         const bx = LEFT + pos * BEAT_W + 2;
         svg.append(s('line', { x1: bx, x2: bx, y1: top, y2: bottom, class: 'bar' }));
@@ -109,5 +135,5 @@ function rest(x: number, top: number, beats: number): SVGElement {
     const y = top + 6;
     return s('path', { d: `M${x - 3} ${y} l6 7 l-5 6 l6 7 c-6 -3 -8 2 -4 6 c-7 -3 -6 -9 0 -7 l-6 -7 l5 -6 z`, class: 'rest' });
   }
-  return s('text', { x: x - 5, y: top + 26, class: 'rest-glyph' }, '\u{1D13E}');
+  return s('text', { x: x - 5, y: top + 26, class: 'rest-glyph' }, beats <= 0.25 ? '\u{1D13F}' : '\u{1D13E}');
 }
