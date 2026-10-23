@@ -1,0 +1,72 @@
+id: rhythm-toolkit-quiz
+title: Counting any rhythm quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: How many quarter notes make a whole note?
+  choices: [Two, Eight, Four]
+  correct: 2
+  why: 1 + 1 + 1 + 1 = 4.
+- ask: How many eighth notes make a whole note?
+  choices: [Four, Eight, Six]
+  correct: 1
+  why: Two per beat, four beats.
+- ask: How long is a dotted half note?
+  choices: [2½ beats, 3 beats, 4 beats]
+  correct: 1
+  why: 2 + 1.
+- ask: How long is a dotted quarter?
+  choices: [1½ beats, 1¼ beats, 2 beats]
+  correct: 0
+  why: 1 + ½.
+- ask: Which rest lasts one beat?
+  choices: [Half rest, Whole rest, Quarter rest]
+  correct: 2
+  why: It matches the quarter note.
+- ask: Which rest sits on the middle line like a hat?
+  choices: [Quarter rest, Whole rest, Half rest]
+  correct: 2
+  why: Half rest sits; whole rest hangs.
+- ask: In 2/4, how many beats per bar?
+  choices: [Two, Three, Four]
+  correct: 0
+  why: The top number.
+- ask: In 3/4, which note fills a whole bar?
+  choices: [Half note, Whole note, Dotted half]
+  correct: 2
+  why: 3 beats exactly.
+- ask: How many beats in this bar?
+  choices: [Four, Five, Three]
+  correct: 0
+  why: 1½ + ½ + ½ + ½ + 1 = 4.
+  staff: C5:q. C5:e C5:e C5:e C5:q
+- ask: How many beats in this bar?
+  choices: [Three, Four, Two]
+  correct: 0
+  why: 2 + ½ + ½ = 3.
+  staff: C5:h C5:e C5:e
+- ask: How many beats in this bar?
+  choices: [Two, Three, One]
+  correct: 0
+  why: ½ + ½ + 1 = 2.
+  staff: C5:e C5:e r:q
+- ask: What time signature fits this bar?
+  choices: [4/4, 3/4, 2/4]
+  correct: 1
+  why: 1 + ½ + ½ + 1 = 3 beats.
+  staff: C5:q C5:e C5:e C5:q
+- ask: What time signature fits this bar?
+  choices: [2/4, 4/4, 3/4]
+  correct: 0
+  why: 1½ + ½ = 2 beats.
+  staff: C5:q. C5:e
+- ask: A note on beat 2 lasts until the next note on beat 4. How long is it?
+  choices: [3 beats, 2 beats, 1 beat]
+  correct: 1
+  why: 'From 2 to 4 is two beats: a half note.'
+- ask: The bottom 4 of a time signature means...
+  choices: [Four beats, Four bars, The beat is a quarter note]
+  correct: 2
+  why: The top counts beats; the bottom names the beat.

@@ -1,0 +1,50 @@
+id: interval-map
+title: 'Big idea: the interval map'
+unit: inversions
+skills: [intervals, interval-quality]
+steps:
+- explain: |
+    You have met 2nds, 3rds, 4ths and 5ths. This lesson is the full map, up to the octave, so you can name any interval in two steps.
+  sound: C4+D4:h C4+E4:h C4+F4:h C4+G4:h C4+A4:h C4+B4:h C4+C5:h
+  terms: [interval]
+- explain: |
+    **Step 1, the number:** count the letters, both ends included. C to A is C D E F G A = a **6th**.
+    **Step 2, the quality:** count the semitones and look it up.
+  staff: {notes: 'C4:h A4:h', labels: names}
+  callout: |
+    Number from letters. Quality from semitones.
+- explain: |
+    From C, the white keys give you the **major and perfect** intervals:
+    - major 2nd (2), major 3rd (4), perfect 4th (5), perfect 5th (7), major 6th (9), major 7th (11), octave (12)
+  keys: {notes: C4 D4 E4 F4 G4 A4 B4 C5, labels: names}
+  terms: [major, perfect]
+- explain: |
+    Make a major interval one semitone smaller and it becomes **minor**: minor 2nd (1), minor 3rd (3), minor 6th (8), minor 7th (10).
+    Perfect intervals don't go minor: one semitone smaller is **diminished**, one bigger is **augmented**.
+    The one in the middle, 6 semitones, is the **tritone** (augmented 4th or diminished 5th).
+  terms: [minor, diminished, augmented, tritone]
+  check:
+    ask: C up to A♭ is a...
+    choices: [Major 6th, Minor 6th, Perfect 5th]
+    correct: 1
+    why: 'C to A is a 6th (6 letters). C–A is 9 semitones (major); A♭ is one less: minor 6th.'
+    staff: {notes: 'C4:h Ab4:h'}
+- explain: |
+    **Turning an interval upside down** (inverting it): the numbers add up to 9 and the quality flips.
+    Major ↔ minor, perfect stays perfect. A major 3rd (C–E) upside down (E–C) is a minor 6th.
+  staff: {notes: 'C4:h E4:h | E4:h C5:h', labels: names}
+  callout: |
+    Inversions add to 9. Major ↔ minor. Perfect ↔ perfect.
+  check:
+    ask: A perfect 4th turned upside down becomes a...
+    choices: [Perfect 5th, Perfect 4th, Major 5th]
+    correct: 0
+    why: 4 + 5 = 9, and perfect stays perfect.
+- explain: |
+    Explore: hold one note down and play others over it. Watch the staff and say each interval's name before you check it.
+- playground: {clef: treble, notes: C4-C6, prompt: 'Play C4, then any note above it up to C5. Name the interval
+      from the staff.'}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: interval-map-quiz}
+recap: Count letters for the number, semitones for the quality. Inversions add up to 9 and swap major and minor.

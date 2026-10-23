@@ -51,6 +51,7 @@ units:
       - { id: close-position-chords, type: lesson, strand: technique, lesson: close-position-chords, title: "Chords that move smoothly", requires: [second-inversion] }
       - { id: staccato, type: lesson, strand: technique, lesson: staccato, title: "Staccato", requires: [y2-checkpoint-a] }
       - { id: perfect-intervals, type: lesson, strand: theory, lesson: perfect-intervals, title: "Perfect 4ths and 5ths", requires: [y2-checkpoint-a] }
+      - { id: interval-map, type: lesson, strand: theory, lesson: interval-map, title: "Big idea: the interval map", requires: [perfect-intervals] }
       - { id: ear-melodic-intervals, type: drill, strand: ear, lesson: ear-melodic-intervals, title: "Hearing 3rds, 4ths and 5ths", requires: [perfect-intervals] }
       - { id: staccato-march, type: piece, strand: repertoire, lesson: staccato-march, title: "Toy-soldier march", requires: [staccato, close-position-chords] }
   - id: harmonising
@@ -72,6 +73,7 @@ units:
       - { id: chromatic-scale, type: lesson, strand: technique, lesson: chromatic-scale, title: "The chromatic scale", requires: [y2-checkpoint-b] }
       - { id: scales-d-major-e-minor, type: lesson, strand: technique, lesson: scales-d-major-e-minor, title: "D major and E minor", requires: [y2-checkpoint-b] }
       - { id: scales-a-major-g-minor, type: lesson, strand: technique, lesson: scales-a-major-g-minor, title: "A major and G minor", requires: [scales-d-major-e-minor] }
+      - { id: circle-of-fifths, type: lesson, strand: theory, lesson: circle-of-fifths, title: "Big idea: the circle of fifths", requires: [scales-a-major-g-minor] }
       - { id: syncopation, type: lesson, strand: rhythm, lesson: syncopation, title: "Syncopation", requires: [y2-checkpoint-b] }
       - { id: three-eight-time, type: lesson, strand: rhythm, lesson: three-eight-time, title: "3/8 time", requires: [syncopation] }
       - { id: ear-spot-the-change, type: drill, strand: ear, lesson: ear-spot-the-change, title: "Spot the change", requires: [y2-checkpoint-b] }

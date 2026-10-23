@@ -1,0 +1,46 @@
+id: rhythm-toolkit
+title: 'Big idea: counting any rhythm'
+unit: scales-and-eighths
+skills: [note-values, time-signature, rests, counting]
+steps:
+- explain: |
+    You now know whole, half, quarter and eighth notes, dots and rests. This lesson puts them on one chart,
+    so any rhythm becomes a counting problem you can solve.
+  terms: [note values]
+- explain: |
+    **The note tree.** Each note is worth two of the next: 1 whole = 2 halves = 4 quarters = 8 eighths.
+  staff: {notes: 'C5:w | C5:h C5:h | C5:q C5:q C5:q C5:q | C5:e C5:e C5:e C5:e C5:e C5:e C5:e C5:e'}
+  check:
+    ask: How many eighth notes make a half note?
+    choices: [Two, Four, Eight]
+    correct: 1
+    why: A half note is 2 beats, and each beat holds 2 eighths.
+- explain: |
+    **Every note has a rest of the same length.** Whole rest hangs, half rest sits, quarter rest zigzags, eighth rest has a little flag.
+  staff: {notes: 'r:w | r:h r:h | r:q r:q r:e r:e r:q'}
+  terms: [rest values]
+- explain: |
+    **A dot adds half.** Dotted half = 3, dotted quarter = 1½.
+  staff: {notes: 'C5:h. C5:q | C5:q. C5:e C5:h'}
+  callout: |
+    Half of the note's own value, never a fixed amount.
+- explain: |
+    **The time signature** sets the bar: the top number counts the beats, the bottom number names the note that gets one beat
+    (4 = quarter). 2/4 is two beats (a march), 3/4 three (a waltz), 4/4 four (most songs).
+  terms: [2/4, 3/4, 4/4]
+  check:
+    ask: In 2/4, how many quarter notes fill a bar?
+    choices: [Two, Four, Three]
+    correct: 0
+    why: The top 2 counts two quarter-note beats.
+- explain: |
+    **How to count any bar:** write the beats under it (1 and 2 and...), put each note where it starts, and hold it until the next one.
+    Say the counts out loud while you tap.
+  staff: {notes: 'C5:q. C5:e C5:e C5:e C5:q'}
+  sound: C5:q. C5:e C5:e C5:e C5:q
+  callout: |
+    1 (2) and | 3 and | 4: dotted quarter, eighth, two eighths, quarter.
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: rhythm-toolkit-quiz}
+recap: Each note is worth two of the next; rests match notes; a dot adds half; the time signature sets the bar.

@@ -1,0 +1,71 @@
+id: keys-quiz
+title: Keys quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A key is...
+  choices: [A black key, A single note, A family of notes with one home note]
+  correct: 2
+  why: Seven notes, one of them home.
+- ask: Which key has no sharps or flats?
+  choices: [F major, G major, C major]
+  correct: 2
+  why: The pattern fits the white keys from C.
+- ask: Which key has one sharp?
+  choices: [G major, D major, F major]
+  correct: 0
+  why: F♯.
+- ask: Which key has one flat?
+  choices: [G major, B♭ major, F major]
+  correct: 2
+  why: B♭.
+- ask: The key signature is written...
+  choices: [At the start of every line, Before every note, Only at the start of the piece]
+  correct: 0
+  why: After the clef, on each line.
+- ask: A key signature with F♯ changes...
+  choices: ['Every F, in every octave', Only the first F, Only the F on that line]
+  correct: 0
+  why: It holds for the whole piece.
+- ask: What key is this in?
+  choices: [F major, C major, G major]
+  correct: 2
+  why: One sharp, built on G.
+  staff: G4:q B4:q D5:q G5:q
+  clef: treble
+  key: G
+- ask: What key is this in?
+  choices: [G major, F major, C major]
+  correct: 1
+  why: One flat, built on F.
+  staff: F4:q A4:q C5:q F5:q
+  clef: treble
+  key: F
+- ask: Which note is this?
+  choices: [F, F♯, G]
+  correct: 1
+  why: The key signature makes every F an F♯.
+  staff: F4:w
+  clef: treble
+  key: G
+- ask: Which note is this?
+  choices: [A, B♭, B]
+  correct: 1
+  why: The key signature makes every B a B♭.
+  staff: B4:w
+  clef: treble
+  key: F
+- ask: Moving a tune from C to G, which note changes?
+  choices: [C to C♯, B to B♭, F to F♯]
+  correct: 2
+  why: G major's only sharp.
+- ask: The home note of a key is called the...
+  choices: [Dominant, Leading note, Tonic]
+  correct: 2
+  why: Degree 1.
+- {ask: Play the G major scale up from the G above middle C., play: G4 A4 B4 C5 D5 E5 F#5 G5, why: 'One black key:
+    F♯.'}
+- {ask: Play the F major scale up from the F above middle C., play: F4 G4 A4 Bb4 C5 D5 E5 F5, why: 'One black key:
+    B♭.'}

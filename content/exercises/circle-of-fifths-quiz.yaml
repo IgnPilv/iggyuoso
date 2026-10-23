@@ -1,0 +1,73 @@
+id: circle-of-fifths-quiz
+title: Circle of fifths quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Going up a 5th from C adds...
+  choices: [Nothing, One sharp, One flat]
+  correct: 1
+  why: 'C → G: F♯.'
+- ask: Going down a 5th from C adds...
+  choices: [One flat, Two flats, One sharp]
+  correct: 0
+  why: 'C → F: B♭.'
+- ask: The order of sharps is...
+  choices: [F C G D A E B, B E A D G C F, C G D A E B F]
+  correct: 0
+  why: Father Charles Goes Down And Ends Battle.
+- ask: The order of flats is...
+  choices: [B E A D G C F, F C G D A E B, B E D A G C F]
+  correct: 0
+  why: The sharps backwards.
+- ask: Which key has three sharps?
+  choices: [E major, D major, A major]
+  correct: 2
+  why: 'C G D A: the third step.'
+- ask: Which key has three flats?
+  choices: [B♭ major, A♭ major, E♭ major]
+  correct: 2
+  why: 'C F B♭ E♭: the third step.'
+- ask: Which key comes after D on the sharp side?
+  choices: [E, G, A]
+  correct: 2
+  why: Up a 5th from D is A.
+- ask: Which key comes after F on the flat side?
+  choices: [E♭, C, B♭]
+  correct: 2
+  why: Down a 5th from F is B♭.
+- ask: The last sharp is C♯. The major key is...
+  choices: [C♯ major, D major, A major]
+  correct: 1
+  why: One semitone above C♯.
+- ask: The flats are B♭ and E♭. The major key is...
+  choices: [B♭ major, E♭ major, F major]
+  correct: 0
+  why: The second-to-last flat.
+- ask: The relative minor of D major is...
+  choices: [F♯ minor, B minor, D minor]
+  correct: 1
+  why: D down 3 semitones.
+- ask: The relative minor of B♭ major is...
+  choices: [D minor, B♭ minor, G minor]
+  correct: 2
+  why: B♭ down 3 semitones.
+- ask: What key is this in?
+  choices: [G major, D major, A major]
+  correct: 1
+  why: Two sharps, built on D.
+  staff: D4:q F#4:q A4:q D5:q
+  clef: treble
+  key: D
+- ask: What key is this in?
+  choices: [A major, E major, D major]
+  correct: 0
+  why: Three sharps, built on A.
+  staff: A4:q C#5:q E5:q A5:q
+  clef: treble
+  key: A
+- ask: The new sharp in each key is that key's...
+  choices: [Tonic, 5th note, '7th note, the leading note']
+  correct: 2
+  why: F♯ in G, C♯ in D, G♯ in A.
