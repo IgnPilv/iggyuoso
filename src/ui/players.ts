@@ -10,6 +10,7 @@ import type { TimedResult } from '../scoring/timed';
 import { TimedSession } from '../engine/timedSession';
 import { FallingView, type Flash } from './falling';
 import { FindSession, positionKeys, SequenceSession, type UntimedResult } from '../scoring/untimed';
+import { demo } from '../demo/demo';
 import { h } from './dom';
 import { KeyboardView, rangeAround } from './keyboard';
 import { renderStaff, type Clef, type StaffPart } from './staff';
@@ -50,6 +51,7 @@ function untimedResult(r: UntimedResult, retry: () => void) {
 }
 
 function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>) {
+  if (demo.active) return; // the demo pianist's playing is not your progress
   const written = ex.kind === 'timed' ? ex.tempo : tempo;
   store.record(ex.id, { at: new Date().toISOString(), score, stars, tempo, hands, counts: tempo >= RECORD_TEMPO_FRACTION * written });
 }
@@ -66,6 +68,7 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
   const ask = h('div', { class: 'ask' });
   const result = h('div');
   let session = new FindSession(ex, cal);
+  queueMicrotask(() => demo.onFind?.(session));
 
   const update = () => {
     if (session.done) ask.textContent = 'All found!';
@@ -74,6 +77,7 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
   };
   const restart = () => {
     session = new FindSession(ex, cal);
+    demo.onFind?.(session);
     kb.clear('hit');
     result.replaceChildren();
     update();
@@ -110,6 +114,7 @@ function clefFor(ex: Exercise, hand?: Hand): Clef {
 
 function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibration, onDone: OnDone) {
   let session = new SequenceSession(ex, cal);
+  queueMicrotask(() => demo.onSequence?.(session));
   const pos = positionKeys(ex, cal);
   const [lo, hi] = rangeAround([...session.keys, ...pos], cal.low, cal.high);
   const kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
@@ -137,6 +142,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
   };
   const restart = () => {
     session = new SequenceSession(ex, cal);
+    demo.onSequence?.(session);
     staff?.clear('hit');
     result.replaceChildren();
     update();
@@ -248,6 +254,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     });
     for (const c of session.clicks(metro.checked)) click(c.time, c.accent);
     if (mode === 'listen' || guide.checked) for (const g of session.guide()) tone(g.midi, g.time, g.durMs);
+    if (mode === 'play') demo.onTimed?.(session);
 
     let lastMessage = '';
     const offNotes = midi.onNote((e) => {
@@ -331,7 +338,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
     const finish = () => {
       stop();
-      if (mode === 'listen') { status.textContent = 'Now you try: press Play.'; idle(); return; }
+      if (mode === 'listen') { status.textContent = 'Now you try: press Play.'; idle(); demo.onRunEnd?.('listen'); return; }
       status.textContent = '';
       const r = session.result();
       for (const n of r.notes) staff?.mark(`${n.expected.hand}:${n.expected.index}`, n.outcome === 'hit' ? 'hit' : n.outcome);
@@ -340,6 +347,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       hud.replaceChildren();
       result.replaceChildren(timedResult(r, ex, tempo, cal));
       onDone(r);
+      demo.onRunEnd?.('play');
     };
 
     listenBtn.disabled = playBtn.disabled = true;
