@@ -171,3 +171,5 @@ never copied pages). Start small, adapt as we go.
   (`Meter.pulse` = 1.5 quarters in 6/8, 9/8, 12/8; 2 in 2/2), and clicks and the count-in follow
   it. Timing inside the engine stays in quarter beats. The staff draws ties, triplet 3s, sixteenth
   flags and rests.
+- 2026-10-23: Checkpoint and exam ear exercises use `feedback: none` (`ear-checkpoint-a`,
+  `ear-checkpoint-b`, `ear-year-1-exit`); pieces and scales carry `title:`.
