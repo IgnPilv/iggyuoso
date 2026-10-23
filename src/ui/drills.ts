@@ -1,4 +1,4 @@
-import { audio, stopAll, tone } from '../audio/audio';
+import { audio, loadPiano, piano, stopAll } from '../audio/audio';
 import { toDevice, type Calibration } from '../calibration';
 import type { BuildExercise, EarExercise, Exercise, QuizExercise } from '../content/types';
 import { demo } from '../demo/demo';
@@ -22,7 +22,7 @@ import { renderStaff } from './staff';
 function playSounds(sounds: Sound[], delay = 0): number {
   audio();
   const start = performance.now() + 80 + delay;
-  for (const s of sounds) for (const n of s.notes) tone(n, start + s.at, s.dur, 0.3 / Math.sqrt(s.notes.length));
+  for (const s of sounds) for (const n of s.notes) piano(n, start + s.at, s.dur, 0.7 / Math.sqrt(s.notes.length));
   return 80 + delay + soundsEnd(sounds);
 }
 
@@ -135,6 +135,7 @@ function middleRange(cal: Calibration, notes: number[] = []): [number, number] {
 
 export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, onDone: OnDone) {
   let session = new EarSession(ex, cal);
+  void loadPiano(); // ear questions use the whole middle of the piano, and cadences go low
   const range = middleRange(cal, earNotes(ex));
   const stage = new AnswerStage(cal, range[0], range[1], ex);
   const ask = h('div', { class: 'ask' });
@@ -257,6 +258,7 @@ function earNotes(ex: EarExercise): number[] {
 
 export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration, onDone: OnDone) {
   let session = new QuizSession(ex, cal);
+  void loadPiano(ex.questions.flatMap((q) => (q.sound ?? []).flatMap((t) => t.pitches.map(pitchToMidi))));
   const plays = ex.questions.flatMap((q) => q.play?.map(pitchToMidi) ?? []);
   const needsKeys = plays.length > 0;
   const range = middleRange(cal, plays);
@@ -370,6 +372,7 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
 
 export function buildPlayer(root: HTMLElement, ex: BuildExercise, cal: Calibration, onDone: OnDone) {
   let session = new BuildSession(ex, cal);
+  void loadPiano(ex.tasks.flatMap((t) => t.notes));
   const range = middleRange(cal, ex.tasks.flatMap((t) => t.notes));
   const stage = new AnswerStage(cal, range[0], range[1], ex);
   const ask = h('div', { class: 'ask' });

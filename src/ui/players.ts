@@ -1,4 +1,4 @@
-import { audio, click, outputLatencyMs, stopAll, tone } from '../audio/audio';
+import { audio, click, loadPiano, outputLatencyMs, piano, stopAll } from '../audio/audio';
 import { keyName, toDevice, type Calibration } from '../calibration';
 import type { Exercise, FindExercise, SequenceExercise, TimedExercise } from '../content/types';
 import { midi } from '../midi/input';
@@ -310,6 +310,7 @@ const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onDone: OnDone) {
   const settings = store.settings;
   const expected = expectedNotes(ex);
+  void loadPiano(expected.map((e) => e.midi));
   const devices = expected.map((e) => toDevice(cal, e.midi));
   const [lo, hi] = rangeAround(devices, cal.low, cal.high);
 
@@ -370,7 +371,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       tempo, mode, startAt: performance.now() + 600, latencyMs: outputLatencyMs() + store.settings.latencyMs,
     });
     for (const c of session.clicks(metro.checked)) click(c.time, c.accent);
-    if (mode === 'listen' || guide.checked) for (const g of session.guide()) tone(g.midi, g.time, g.durMs);
+    if (mode === 'listen' || guide.checked) for (const g of session.guide()) piano(g.midi, g.time, g.durMs);
     if (mode === 'play') demo.onTimed?.(session);
 
     let lastMessage = '';
