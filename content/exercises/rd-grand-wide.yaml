@@ -1,0 +1,12 @@
+id: rd-grand-wide
+title: Anywhere on the grand staff
+kind: generated
+generator: read-notes
+clef: grand
+notes: C2-C6
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3500
+reps: 4
+days: 2

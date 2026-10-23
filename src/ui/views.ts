@@ -1,17 +1,17 @@
 import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibration';
-import { content, contentErrors, exerciseTitle, treeNodes } from '../content';
+import { content, contentErrors, exerciseTitle, nodeOfLesson, stages, treeNodes } from '../content';
 import type { Exercise, Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
-import { lessonAdvice, lessonGoals, mastery, type LessonAdvice } from '../progress';
+import { lessonAdvice, lessonGoals, mastery, nextLesson, type LessonAdvice } from '../progress';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
 import { markdown } from './markdown';
 import { explainBlock, playground } from './theory';
 import { mountExercise, repsText } from './players';
-import { pathMap } from './pathMap';
+import { BRANCH_LABEL, currentStage, growingNow, growingTree, snapshot, songsCard, stageList } from './treeView';
 import { todayCard } from './todayView';
 import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
 
@@ -54,11 +54,7 @@ export const homeView: View = (root) => {
   showBanner();
   const off = midi.onPorts(showBanner);
   root.append(banner);
-  const firstNotDone = content.units.flatMap((u) => u.lessons).find((id) => {
-    const l = content.lessons.get(id);
-    return l && !store.lessonDone(lessonGoals(l));
-  });
-  const nextLesson = firstNotDone ? content.lessons.get(firstNotDone) : undefined;
+  const next = nextLesson();
   const title = h('h1', {}, 'Easy as ', h('span', { class: 'gradient-text' }, 'C D E.'));
   root.append(h('section', { class: store.calibration ? 'card hero compact' : 'card hero' },
     heroKeys(),
@@ -70,13 +66,22 @@ export const homeView: View = (root) => {
     h('div', { class: 'controls' },
       !store.calibration
         ? h('button', { onclick: () => go('/calibrate') }, 'Set up the keyboard')
-        : nextLesson ? h('button', { onclick: () => go(`/lesson/${nextLesson.id}`) }, `Continue: ${nextLesson.title}`) : null,
+        : next ? h('button', { onclick: () => go(`/lesson/${next.id}`) }, `Continue: ${next.title}`) : null,
       h('button', { class: 'secondary', onclick: () => go('/demo') }, 'Watch the demo'),
       h('span', { class: 'small' }, 'The demo needs no keyboard.')),
   ));
   if (store.calibration) root.append(todayCard());
   root.append(progressCard());
-  root.append(pathMap(store.calibration ? firstNotDone : undefined));
+  const snap = snapshot();
+  root.append(h('section', { class: 'card tree-card' },
+    h('div', { class: 'unit-head' },
+      h('h2', {}, 'Your tree'),
+      h('span', { class: 'unit-progress' }, `Stage ${currentStage(snap).stage} of ${stages.length} · ${currentStage(snap).title}`)),
+    growingTree(snap, (b) => go(`/branch/${b}`)),
+    h('p', { class: 'small tree-caption' }, 'Each branch grows a leaf for every lesson you practise, and a bud shows where something new is open. Milestones add rings to the trunk and open new songs. Tap a branch to see all of it.')));
+  root.append(growingNow(snap));
+  root.append(songsCard(snap));
+  root.append(stageList(snap));
   if (contentErrors.length) {
     root.append(h('details', { class: 'card small' }, h('summary', {}, `${contentErrors.length} content problems`), h('pre', {}, contentErrors.join('\n'))));
   }
@@ -256,13 +261,24 @@ export const lessonView: View = (root, id?: string) => {
     body.append(p, h('p', { class: done ? 'banner ok' : 'banner' },
       done ? 'Lesson done: every exercise has its clean takes. On to the next one.'
         : `${goals.filter((e) => store.reps(e).done).length} of ${goals.length} exercises done. Each one needs clean takes (★★★, 92 or more, at full tempo); the lesson is done when all are. You can go on to the next lesson any time.`),
-      repsTable(goals));    const order = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
-    const nextId = order[order.indexOf(l.id) + 1];
-    nav.append(nextId ? h('button', { onclick: () => go(`/lesson/${nextId}`) }, 'Next lesson') : h('button', { onclick: () => go('/') }, 'Home'));
+      repsTable(goals));
+    const node = nodeOfLesson(l.id);
+    // A milestone opens songs: point at them once it is passed.
+    if (node?.type === 'checkpoint' && mastery.state(node.id) !== 'introduced' && mastery.state(node.id) !== 'locked') {
+      body.append(h('p', { class: 'banner ok' }, 'Milestone passed: new songs are open in the songbook. ', h('a', { href: '#/songs' }, 'Open the songbook')));
+    }
+    const after = nextLesson();
+    nav.append(after && after.id !== l.id
+      ? h('button', { onclick: () => go(`/lesson/${after.id}`) }, `Next: ${after.title}`)
+      : h('button', { onclick: () => go('/') }, 'Your tree'));
+    if (node) nav.append(h('button', { class: 'secondary', onclick: () => go(node.branch === 'songs' ? '/songs' : `/branch/${node.branch}`) }, node.branch === 'songs' ? 'Songbook' : `${BRANCH_LABEL[node.branch]} branch`));
   };
 
   const adviceNote = advice.ready ? h('div') : adviceBanner(advice);
-  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('h2', {}, lesson.title), progress), bar, body, nav));
+  const node = nodeOfLesson(lesson.id);
+  const where = node ? h('a', { class: 'lesson-branch small', href: node.branch === 'songs' ? '#/songs' : `#/branch/${node.branch}` },
+    h('span', { class: `strand-dot strand-${node.strand}` }), node.branch === 'songs' ? 'Song' : `${BRANCH_LABEL[node.branch]} · stage ${node.stage}`) : '';
+  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('div', {}, where, h('h2', {}, lesson.title)), progress), bar, body, nav));
   show();
   return () => cleanup?.();
 };
@@ -284,14 +300,11 @@ function adviceBanner(advice: Extract<LessonAdvice, { ready: false }>) {
     const title = n?.title ?? id;
     return [i ? ', ' : '', n?.lesson ? h('a', { href: `#/lesson/${n.lesson}` }, title) : title];
   });
-  const why = advice.reason === 'previous'
-    ? ['Recommended first: ', h('a', { href: `#/lesson/${advice.lesson.id}` }, advice.lesson.title), ' (every exercise in it played clean enough times).']
-    : advice.checkpoint
-      ? ['A checkpoint works best when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ', ...links(advice.nodes), '.']
-      : ['Recommended first: ', ...links(advice.nodes), '.'];
+  const why = advice.checkpoint
+    ? ['A milestone works best when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ', ...links(advice.nodes), '.']
+    : ['It grows after: ', ...links(advice.nodes), ' (each played to ★ at least once).'];
   return h('div', { class: 'advice small' },
-    h('p', {}, h('strong', {}, 'Ahead of your path. '), ...why, ' You can play this now; your takes count all the same.'),
-    advice.reason === 'previous' ? h('details', { class: 'small' }, h('summary', {}, `Where you are in ${advice.lesson.title}`), repsTable(lessonGoals(advice.lesson))) : '');
+    h('p', {}, h('strong', {}, 'Not grown yet. '), ...why, ' You can play this now; your takes count all the same.'));
 }
 
 export const exerciseView: View = (root, id?: string) => {

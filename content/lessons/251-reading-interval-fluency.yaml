@@ -1,0 +1,11 @@
+id: reading-interval-fluency
+title: Intervals at a glance
+skills:
+- reading
+steps:
+- explain: |
+    Intervals in both clefs and in keys, fast.
+- exercise: rd-intervals-bass-wide
+- exercise: rd-intervals-keys
+- exercise: rd-intervals-fast
+recap: Read the distance in a glance.

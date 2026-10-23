@@ -1,0 +1,77 @@
+id: ks-d-minor-triads
+title: Chords of D minor
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: In D minor, the triad on degree 1 (D F A) is...
+  choices:
+  - Major
+  - Diminished
+  - Minor
+  correct: 2
+  why: 'D F A: minor 3rd + major 3rd, so minor. Roman numeral: i.'
+  whyStaff:
+    notes: D4+F4+A4:w
+    key: Dm
+- ask: In D minor, the triad on degree 2 (E G B♭) is...
+  choices:
+  - Major
+  - Minor
+  - Diminished
+  correct: 2
+  why: 'E G B♭: two minor 3rds, so diminished. Roman numeral: ii°.'
+  whyStaff:
+    notes: E4+G4+Bb4:w
+    key: Dm
+- ask: In D minor, the triad on degree 3 (F A C♯) is...
+  choices:
+  - Major
+  - Minor
+  - Augmented
+  correct: 2
+  why: 'F A C♯: two major 3rds, so augmented. Roman numeral: III+.'
+  whyStaff:
+    notes: F4+A4+C#5:w
+    key: Dm
+- ask: In D minor, the triad on degree 4 (G B♭ D) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 0
+  why: 'G B♭ D: minor 3rd + major 3rd, so minor. Roman numeral: iv.'
+  whyStaff:
+    notes: G4+Bb4+D5:w
+    key: Dm
+- ask: In D minor, the triad on degree 5 (A C♯ E) is...
+  choices:
+  - Diminished
+  - Minor
+  - Major
+  correct: 2
+  why: 'A C♯ E: major 3rd + minor 3rd, so major. Roman numeral: V.'
+  whyStaff:
+    notes: A4+C#5+E5:w
+    key: Dm
+- ask: In D minor, the triad on degree 6 (B♭ D F) is...
+  choices:
+  - Minor
+  - Diminished
+  - Major
+  correct: 2
+  why: 'B♭ D F: major 3rd + minor 3rd, so major. Roman numeral: VI.'
+  whyStaff:
+    notes: Bb4+D5+F5:w
+    key: Dm
+- ask: In D minor, the triad on degree 7 (C♯ E G) is...
+  choices:
+  - Diminished
+  - Minor
+  - Major
+  correct: 0
+  why: 'C♯ E G: two minor 3rds, so diminished. Roman numeral: vii°.'
+  whyStaff:
+    notes: C#5+E5+G5:w
+    key: Dm

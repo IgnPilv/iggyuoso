@@ -1,0 +1,19 @@
+id: m8-arpeggios
+title: 'Milestone 8: arpeggios and the dominant seventh'
+skills:
+- technique
+- reading
+- rhythm
+- theory
+- ear
+- repertoire
+steps:
+- explain: |
+    **Milestone 8.** Two-octave scales and arpeggios, dominant 7ths, three against two, eight-bar sight-reading and
+    Bach's Prelude in C.
+- exercise: m8-theory-paper
+- exercise: arp-d-2
+- exercise: scale-a-flat-1-m8
+- exercise: m8-ear-test
+- exercise: m8-sight-reading
+recap: 'Milestone 8 passed: arpeggios and sevenths.'

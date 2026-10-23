@@ -1,0 +1,11 @@
+id: ear-contour-four
+title: Four-note shapes
+skills:
+- ear
+steps:
+- explain: |
+    Longer shapes: four notes, three moves. Draw each one in the air as you listen.
+  sound: C4:q E4:q D4:q G4:q
+- exercise: ear-contour-4
+- exercise: ear-contour-4-steps
+recap: 'Four notes, three moves: the shape is the first thing you remember of a tune.'

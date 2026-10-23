@@ -1,0 +1,15 @@
+id: ear-echo-two
+title: Echo two notes
+skills:
+- ear
+steps:
+- explain: |
+    Two notes, one after the other. Play them back. The keys you need are lit, so you only have to
+    hear which comes first.
+  keys:
+    notes: C4 D4 E4
+    labels: names
+  sound: C4:q E4:q | E4:q D4:q
+- exercise: ear-echo-two-lit
+- exercise: ear-echo-two-wider
+recap: 'Hear it, then play it: the echo is the heart of the ear branch.'

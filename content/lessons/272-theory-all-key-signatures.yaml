@@ -1,0 +1,21 @@
+id: theory-all-key-signatures
+title: Every key signature
+skills:
+- theory
+steps:
+- explain: |
+    The full set: up to seven sharps (C♯ major) or flats (C♭ major). In practice you meet up to six. The circle of fifths
+    puts them in order: each step clockwise adds a sharp, each step anticlockwise a flat.
+  staff:
+    notes: E4:w
+    key: E
+  check:
+    ask: Four sharps is...
+    choices:
+    - A major
+    - B major
+    - E major
+    correct: 2
+    why: 'F♯ C♯ G♯ D♯: D♯ + half step = E.'
+- exercise: theory-all-signatures-quiz
+recap: All the keys, in circle order.

@@ -1,0 +1,18 @@
+id: ks-e-flat-degrees
+title: Every degree of E♭ major
+kind: ear
+cadence: Eb
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Eb
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

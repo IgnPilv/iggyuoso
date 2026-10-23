@@ -1,0 +1,14 @@
+id: creativity-minor-pentatonic
+title: The minor pentatonic
+skills:
+- creativity
+steps:
+- explain: |
+    A C D E G: the **A minor pentatonic**. Five notes, no clashes, the sound of rock solos and folk songs.
+  keys:
+    notes: A4 C5 D5 E5 G5
+    labels: names
+  sound: A4:q C5:q D5:q E5:q | G5:q A5:q G5:h
+- exercise: cr-am-pent-scale
+- exercise: cr-am-pent-improv
+recap: Five notes for a lifetime of solos.

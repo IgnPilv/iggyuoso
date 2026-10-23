@@ -1,0 +1,13 @@
+id: ks-d-flat-broken
+title: 'D♭ major: broken chords'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with broken chords in the left hand.
+key: Db
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:h Ab4:h | Gb4:h Bb4:h | Eb4:h C4:h | Db4:w
+left: Db3:e Ab3:e F3:e Ab3:e Db3:e Ab3:e F3:e Ab3:e | Gb2:e Db3:e Bb2:e Db3:e Gb2:e Db3:e Bb2:e Db3:e | Ab2:e Eb3:e C3:e Eb3:e
+  Ab2:e Eb3:e C3:e Eb3:e | Db3+F3+Ab3:w

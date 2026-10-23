@@ -1,0 +1,14 @@
+id: scale-c-sharp-minor-1
+title: C♯ minor harmonic scale, one octave
+kind: timed
+hand: together
+prompt: 'Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.'
+key: C#m
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#4:q D#4:q E4:q F#4:q | G#4:q A4:q B#4:q C#5:q | B#4:q A4:q G#4:q F#4:q | E4:q D#4:q C#4:h
+left: C#3:q D#3:q E3:q F#3:q | G#3:q A3:q B#3:q C#4:q | B#3:q A3:q G#3:q F#3:q | E3:q D#3:q C#3:h
+rightFingers: 3 4 1 2 3 1 2 3 2 1 3 2 1 4 3
+leftFingers: 3 2 1 4 3 2 1 3 1 2 3 4 1 2 3

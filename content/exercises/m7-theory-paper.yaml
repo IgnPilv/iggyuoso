@@ -1,0 +1,98 @@
+id: m7-theory-paper
+title: Theory paper
+kind: quiz
+prompt: 'A theory paper: answers are only noted, and the results list what to revise.'
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: B♭ major has how many flats?
+  choices:
+  - '2'
+  - '1'
+  - '3'
+  - '4'
+  correct: 0
+  why: B♭ and E♭.
+- ask: E♭ major has how many flats?
+  choices:
+  - '3'
+  - '4'
+  - '2'
+  - '1'
+  correct: 0
+  why: B♭, E♭, A♭.
+- ask: The relative minor of B♭ major is...
+  choices:
+  - C minor
+  - D minor
+  - G minor
+  correct: 2
+  why: 'Down a minor 3rd from B♭: G.'
+- ask: The relative minor of E♭ major is...
+  choices:
+  - F minor
+  - C minor
+  - G minor
+  correct: 1
+  why: 'Down a minor 3rd from E♭: C.'
+- ask: 9/8 has how many beats?
+  choices:
+  - '4'
+  - '9'
+  - '2'
+  - '3'
+  correct: 3
+  why: Three dotted quarters.
+- ask: 12/8 has how many beats?
+  choices:
+  - '3'
+  - '6'
+  - '4'
+  - '12'
+  correct: 2
+  why: Four dotted quarters.
+- ask: V7 in B♭ major is...
+  choices:
+  - B♭ D F A♭
+  - F A C E♭
+  - F A C E
+  correct: 1
+  why: Degree 5 of B♭ is F; its minor 7th is E♭.
+- ask: V7 in C minor is...
+  choices:
+  - C E♭ G B♭
+  - G B D F
+  - G B♭ D F
+  correct: 1
+  why: 'Minor keys raise the 7th: B♮.'
+- ask: In V7–I, the 7th of the chord usually...
+  choices:
+  - Rises a step
+  - Stays
+  - Falls a step
+  correct: 2
+  why: F → E in G7–C.
+- ask: A perfect cadence in E♭ major is...
+  choices:
+  - A♭ to E♭
+  - B♭ to E♭
+  - E♭ to B♭
+  correct: 1
+  why: V to I.
+- ask: Which is compound time?
+  choices:
+  - 4/4
+  - 2/4
+  - 3/4
+  - 6/8
+  correct: 3
+  why: Beats in three eighths.
+- ask: The key with one flat in its signature, minor, is...
+  choices:
+  - D minor
+  - A minor
+  - G minor
+  correct: 0
+  why: Relative of F major.

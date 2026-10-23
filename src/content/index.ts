@@ -7,7 +7,7 @@ const files = import.meta.glob('../../content/**/*.yaml', { query: '?raw', impor
 export const { content, errors: contentErrors } = loadContent(files);
 if (contentErrors.length) console.warn('Content problems:\n' + contentErrors.join('\n'));
 
-export const { years: tree, nodes: treeNodes, errors: treeErrors } = loadTree(files, content.lessons);
+export const { stages, branches, nodes: treeNodes, errors: treeErrors } = loadTree(files, content.lessons);
 if (treeErrors.length) console.warn('Mastery tree problems:\n' + treeErrors.join('\n'));
 
 /** The lesson an exercise belongs to, and its number there (1-based). */
@@ -27,3 +27,11 @@ export function exerciseTitle(ex: Exercise): string {
   if (!at) return ex.id;
   return at.of > 1 ? `${at.lesson.title}: exercise ${at.n} of ${at.of}` : at.lesson.title;
 }
+
+/** The tree node a lesson is placed at. */
+export const nodeOfLesson = (lessonId: string) => lessonNode.get(lessonId);
+const lessonNode = new Map([...treeNodes.values()].filter((n) => n.lesson).map((n) => [n.lesson!, n]));
+
+/** Lessons in path order: by stage, then branch, as the tree lists them. */
+export const pathLessons = (): Lesson[] =>
+  [...treeNodes.values()].map((n) => (n.lesson ? content.lessons.get(n.lesson) : undefined)).filter((l): l is Lesson => !!l);

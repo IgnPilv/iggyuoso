@@ -1,0 +1,13 @@
+id: rhythm-three-against-two
+title: Three against two
+skills:
+- rhythm
+steps:
+- explain: |
+    Three even notes in one hand, two in the other, in the same beat. They meet on the beat; in between, the
+    order is right, left, right: say "**nice** cup of **tea**" (nice = both, cup = right, of = left, tea = right).
+  callout: |
+    Slow it right down at first. Both hands meet on every beat.
+- exercise: rt-3v2-1
+- exercise: rt-3v2-2
+recap: 'Three against two: "nice cup of tea".'

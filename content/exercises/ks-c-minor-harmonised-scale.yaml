@@ -1,0 +1,13 @@
+id: ks-c-minor-harmonised-scale
+title: 'C minor: the scale with chords'
+kind: timed
+hand: together
+prompt: 'The scale in the right hand, the chords under it in the left: the scale turned into music.'
+key: Cm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q D4:q Eb4:q F4:q | G4:q Ab4:q B4:q C5:q | B4:q Ab4:q G4:q F4:q | Eb4:q D4:q C4:h
+left: C3+Eb3+G3:w | C3+Eb3+G3:h B2+D3+G3:h | B2+D3+G3:w | C3+Eb3+G3:w
+rightFingers: 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1

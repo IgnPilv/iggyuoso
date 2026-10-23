@@ -1,0 +1,10 @@
+id: ear-degrees-f-dm
+title: Every degree in F major and D minor
+skills:
+- ear
+steps:
+- explain: |
+    Degrees in two new keys, all seven notes.
+- exercise: ear-degrees-f-all
+- exercise: ear-degrees-dm-all
+recap: Every note of a key, major and minor.

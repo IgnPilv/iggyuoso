@@ -1,23 +1,32 @@
 id: syncopation
 title: Syncopation
-unit: pedal-and-genres
-skills: [rhythm, syncopation]
+skills:
+- rhythm
+- syncopation
 steps:
 - explain: |
     Normally the strong notes fall on the beats. **Syncopation** puts a strong, long note *between*
     them, so it feels like a little push or a surprise. Jazz, ragtime and pop are full of it.
   sound: C4:q E4:h G4:q | C4:e E4:q E4:e G4:h
-  terms: [syncopation]
+  terms:
+  - syncopation
 - explain: |
     The secret is to keep counting steadily underneath. In *short-long-short* (quarter, half,
     quarter), the half note starts on beat 2 and is held through beat 3; you feel beat 3 go by
     without playing it.
-  staff: {notes: 'C4:q E4:h G4:q | C4:e E4:q E4:e G4:h'}
+  staff:
+    notes: C4:q E4:h G4:q | C4:e E4:q E4:e G4:h
   check:
     ask: In quarter–half–quarter, on beat 3 you...
-    choices: [Hold the half note, Play a new note, Rest]
+    choices:
+    - Hold the half note
+    - Play a new note
+    - Rest
     correct: 0
     why: The half note started on 2 and is still sounding on 3.
-- {exercise: tap-syncopation}
-- {exercise: syncopation-rh}
+- exercise: tap-syncopation
+- exercise: syncopation-rh
+- explain: |
+    The left hand plays straight on the beat; the right hand pushes off it. Hearing them disagree is the point.
+- exercise: syncopation-ht
 recap: 'Syncopation: long notes off the beat. Count through them; never stop the pulse.'

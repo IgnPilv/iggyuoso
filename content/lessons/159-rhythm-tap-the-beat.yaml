@@ -1,0 +1,21 @@
+id: rhythm-tap-the-beat
+title: Tap the beat
+skills:
+- rhythm
+steps:
+- explain: |
+    **Rhythm comes first.** Before any note names, you can make music by tapping in time. Every
+    piece has a **beat**: a steady pulse, like a heartbeat or footsteps. The app clicks the beat;
+    tap **any key** on every click.
+  terms:
+  - beat
+  - pulse
+  sound: C5:q C5:q C5:q C5:q
+  callout: |
+    Any key counts here. Only the timing is scored.
+- exercise: rt-beat-60
+- explain: |
+    A little faster. Let your wrist stay loose; tap from the knuckle, not the shoulder.
+- exercise: rt-beat-84
+- exercise: rt-beat-8-bars
+recap: The beat is steady and never waits for anyone. Tap on it and you are already making music.

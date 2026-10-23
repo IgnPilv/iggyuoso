@@ -1,0 +1,15 @@
+id: piece-gymnopedie-lh
+title: 'Gymnopédie No. 1: the opening: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: D
+tempo: 66
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h | G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h | G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h |
+  G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h
+reps: 2
+days: 1

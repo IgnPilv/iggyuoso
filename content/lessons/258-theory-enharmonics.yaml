@@ -1,0 +1,25 @@
+id: theory-enharmonics
+title: One key, two names
+skills:
+- theory
+steps:
+- explain: |
+    Every black key has two names: the one above C is **C♯** (C raised) or **D♭** (D lowered). Same key, same sound:
+    these names are **enharmonic**. Which one is used depends on the key the music is in.
+  keys:
+    notes: C#4 Eb4 F#4 Ab4 Bb4
+    labels: names
+  terms:
+  - enharmonic
+  check:
+    ask: G♭ is also called...
+    choices:
+    - G♯
+    - A♭
+    - F♯
+    correct: 2
+    why: 'The black key between F and G: F♯ or G♭.'
+- explain: |
+    Even white keys have second names: **E♯ = F**, **B♯ = C**, **F♭ = E**, **C♭ = B**, because there is no black key between them.
+- exercise: theory-enharmonics-quiz
+recap: Same key, two names; the key of the music decides.

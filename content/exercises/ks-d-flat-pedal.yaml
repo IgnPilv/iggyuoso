@@ -1,0 +1,13 @@
+id: ks-d-flat-pedal
+title: 'D♭ major: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: Db
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:h Ab4:h | Gb4:h Bb4:h | Eb4:h C4:h | Db4:w
+left: Db3:q Ab3:q Db4:q Ab3:q | Gb2:q Db3:q Gb3:q Db3:q | Ab2:q Eb3:q Ab3:q Eb3:q | Db3+F3+Ab3:w
+pedal: x:w | x:w | x:w | x:w

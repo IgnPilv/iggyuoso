@@ -1,0 +1,11 @@
+id: lh-close-c
+title: Smooth left-hand chords in C major
+kind: timed
+hand: together
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:h F5:h | D5:h C5:h | E5:q F5:q G5:q E5:q | D5:h C5:h
+left: C3+E3+G3:h C3+F3+A3:h | B2+D3+G3:h C3+E3+G3:h | C3+E3+G3:w | B2+D3+G3:h C3+E3+G3:h

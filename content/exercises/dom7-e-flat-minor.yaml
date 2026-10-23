@@ -1,0 +1,12 @@
+id: dom7-e-flat-minor
+title: The dominant 7th in E♭ minor
+kind: timed
+hand: together
+prompt: Four notes of the dominant 7th, then the chord, then it resolves home.
+key: Ebm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Bb4:q D5:q F5:q Ab5:q | Bb5:h D5+F5+Ab5:h | Eb5:q Gb5:q Bb5:q Gb5:q | Eb5+Gb5+Bb5:w
+left: Bb2:w | Bb2:w | Eb3:w | Eb3:w

@@ -1,0 +1,9 @@
+id: rt-groove-pop
+title: Pop ballad
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:w
+left: x:q. x:e x:h | x:q. x:e x:h | x:q. x:e x:h | x:w

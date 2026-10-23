@@ -1,0 +1,14 @@
+id: song-brahms-lullaby-tap-hands
+title: 'Lullaby: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 76
+meter: 3/4
+pickup: e e
+countIn: 1
+right: x:e x:e | x:h x:e x:e | x:h x:e x:e | x:q x:q. x:e | x:q x:q x:e x:e | x:q x:q x:e x:e | x:h x:e x:e | x:q x:q x:q
+  | x:q x:q x:e x:e | x:h x:e x:e | x:h x:e x:e | x:q x:q x:q | x:h x:e x:e | x:h x:e x:e | x:h x:e x:e | x:q x:q x:q | x:h
+left: r:q | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h
+reps: 2
+days: 1

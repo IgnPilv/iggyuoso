@@ -1,0 +1,17 @@
+id: song-silent-night-arp-lh
+title: 'Silent Night, flowing: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q
+  | G2:q B2+D3+G3:q B2+D3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q
+  C3+F3+A3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q
+  E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3:q E3+G3:q E3+G3:q
+  | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3+E3+G3:h.
+reps: 2
+days: 1

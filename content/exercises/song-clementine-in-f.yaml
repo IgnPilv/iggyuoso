@@ -1,0 +1,18 @@
+id: song-clementine-in-f
+title: Oh My Darling, Clementine in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: F4:e F4:e | F4:q C4:q A4:e A4:e | A4:q F4:q F4:e A4:e | C5:q. Bb4:e A4:e G4:e | G4:h G4:e A4:e | Bb4:q Bb4:q A4:e G4:e
+  | A4:q F4:q F4:e A4:e | G4:q. C4:e E4:e G4:e | F4:h
+left: r:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q E3+G3:q |
+  C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q E3+G3:q | C3+F3+A3:h
+reps: 2
+days: 1

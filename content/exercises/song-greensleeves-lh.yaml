@@ -1,0 +1,17 @@
+id: song-greensleeves-lh
+title: 'Greensleeves: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+key: Am
+tempo: 84
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | A2:h. | C3:h. | G2:h. | E3:h. | A2:h. | E3:h. | E3:h. | E3:h. | A2:h. | C3:h. | G2:h. | E3:h. | A2:h. | E3:h.
+  | A2:h. | C3:h. | G2:h. | G2:h. | E3:h. | A2:h. | E3:h. | E3:h. | E3:h. | C3:h. | G2:h. | G2:h. | E3:h. | A2:h. | E3:h.
+  | A2:h
+reps: 2
+days: 1

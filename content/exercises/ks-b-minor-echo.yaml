@@ -1,0 +1,37 @@
+id: ks-b-minor-echo
+title: Echo phrases in B minor
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: B4 C#5 D5 C#5 B4
+  plays: 2
+- type: melody
+  notes: F#5 E5 D5 C#5 B4
+  plays: 2
+- type: melody
+  notes: B4 D5 F#5 D5 B4
+  plays: 2
+- type: melody
+  notes: D5 E5 F#5 E5 D5
+  plays: 2
+- type: melody
+  notes: B4 C#5 D5 E5 F#5
+  plays: 2
+- type: melody
+  notes: F#5 G5 F#5 E5 D5
+  plays: 2
+- type: melody
+  notes: B5 A#5 G5 F#5
+  plays: 2
+- type: melody
+  notes: D5 C#5 B4 A#5 B4
+  plays: 2
+- type: melody
+  notes: B4 F#5 D5 B4
+  plays: 2
+- type: melody
+  notes: F#5 D5 E5 C#5 B4
+  plays: 2

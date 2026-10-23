@@ -1,0 +1,14 @@
+id: arp-d-minor-1
+title: D minor arpeggio, one octave
+kind: timed
+hand: together
+prompt: Stretch the hand over the chord; keep the wrist loose.
+key: Dm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q F4:q A4:q D5:q | A4:q F4:q D4:h
+left: D3:q F3:q A3:q D4:q | A3:q F3:q D3:h
+rightFingers: 1 2 3 5 3 2 1
+leftFingers: 5 4 2 1 2 4 5

@@ -1,0 +1,15 @@
+id: piece-etude-chromatic
+title: Chromatic Study
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:e B4:e Bb4:e A4:e Ab4:e G4:e F#4:e F4:e | E4:h G4:h | A4:e Bb4:e B4:e C5:e C#5:e D5:e D#5:e E5:e | F5:h D5:h | E5:e
+  Eb5:e D5:e Db5:e C5:e B4:e Bb4:e A4:e | G4:h F4:h | E4:q G4:q D4:q B3:q | C4:w
+left: C3+E3+G3:w | C3+E3+G3:w | C3+F3+A3:w | D3+F3+A3:w | C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:h B2+D3+G3:h | C3+E3+G3:w
+reps: 3
+days: 2

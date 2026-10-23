@@ -1,0 +1,31 @@
+id: ear-echo-scale-four
+title: Four-note scale fragments
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: C4 D4 E4 F4
+  plays: 2
+- type: melody
+  notes: G4 F4 E4 D4
+  plays: 2
+- type: melody
+  notes: E4 F4 G4 A4
+  plays: 2
+- type: melody
+  notes: A4 G4 F4 E4
+  plays: 2
+- type: melody
+  notes: D4 E4 F4 G4
+  plays: 2
+- type: melody
+  notes: C5 B4 A4 G4
+  plays: 2
+- type: melody
+  notes: F4 E4 D4 C4
+  plays: 2
+- type: melody
+  notes: G4 A4 B4 C5
+  plays: 2

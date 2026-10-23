@@ -7,7 +7,7 @@ import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignat
 import { GENERATORS } from './types';
 import type {
   BuildTask, Content, EarItem, ExplainStep, Exercise, FindTarget, Lesson, LessonStep, PlaygroundStep, QuizQuestion, TheoryCheck,
-  TheoryKeys, TheoryStaff, Unit,
+  TheoryKeys, TheoryStaff,
 } from './types';
 
 // Turns the YAML files under content/ into typed data, and reports every problem it finds with
@@ -45,7 +45,6 @@ function fileBase(path: string): string {
 
 export function loadContent(files: Record<string, string>): LoadResult {
   const errors: string[] = [];
-  const units: Unit[] = [];
   const lessons = new Map<string, Lesson>();
   const exercises = new Map<string, Exercise>();
 
@@ -61,9 +60,7 @@ export function loadContent(files: Record<string, string>): LoadResult {
       continue;
     }
     try {
-      if (path.includes('/units/')) {
-        units.push(parseUnit(raw, Number(/(\d+)-/.exec(fileBase(path))?.[1] ?? 0)));
-      } else if (path.includes('/lessons/')) {
+      if (path.includes('/lessons/')) {
         const l = parseLesson(raw);
         if (lessons.has(l.id)) throw new FieldError(`duplicate lesson id "${l.id}"`);
         lessons.set(l.id, l);
@@ -78,26 +75,12 @@ export function loadContent(files: Record<string, string>): LoadResult {
     }
   }
 
-  units.sort((a, b) => a.order - b.order);
-  for (const u of units) {
-    for (const id of u.lessons) {
-      const l = lessons.get(id);
-      if (!l) errors.push(`unit ${u.id}: lesson "${id}" not found`);
-      else if (l.unit !== u.id) errors.push(`lesson ${id}: unit is "${l.unit}" but it is listed in unit "${u.id}"`);
-    }
-  }
   for (const l of lessons.values()) {
     for (const s of l.steps) {
       if ('exercise' in s && !exercises.has(s.exercise)) errors.push(`lesson ${l.id}: exercise "${s.exercise}" not found`);
     }
   }
-  return { content: { units, lessons, exercises }, errors };
-}
-
-function parseUnit(raw: Raw, order: number): Unit {
-  const lessons = raw.lessons;
-  if (!Array.isArray(lessons)) throw new FieldError('"lessons" should be a list of lesson ids');
-  return { id: str(raw, 'id')!, title: str(raw, 'title')!, summary: str(raw, 'summary', false) ?? '', lessons: lessons.map(String), order };
+  return { content: { lessons, exercises }, errors };
 }
 
 function parseLesson(raw: Raw): Lesson {
@@ -115,7 +98,7 @@ function parseLesson(raw: Raw): Lesson {
   });
   const skills = Array.isArray(raw.skills) ? raw.skills.map(String) : [];
   return {
-    id: str(raw, 'id')!, title: str(raw, 'title')!, unit: str(raw, 'unit')!, skills, steps, recap: str(raw, 'recap', false) ?? '',
+    id: str(raw, 'id')!, title: str(raw, 'title')!, skills, steps, recap: str(raw, 'recap', false) ?? '',
   };
 }
 

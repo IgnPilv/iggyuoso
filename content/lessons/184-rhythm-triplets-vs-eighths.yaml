@@ -1,0 +1,11 @@
+id: rhythm-triplets-vs-eighths
+title: Switching between twos and threes
+skills:
+- rhythm
+steps:
+- explain: |
+    Switch between eighths, triplets and sixteenths without the beat moving. Two, three, four to a beat.
+- exercise: rt-subdiv-ladder
+- exercise: rt-subdiv-hands
+- exercise: ear-rt-subdiv
+recap: 'Two, three, four: the beat stays put.'

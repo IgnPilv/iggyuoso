@@ -1,0 +1,77 @@
+id: ks-e-triads
+title: Chords of E major
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: In E major, the triad on degree 1 (E G♯ B) is...
+  choices:
+  - Minor
+  - Diminished
+  - Major
+  correct: 2
+  why: 'E G♯ B: major 3rd + minor 3rd, so major. Roman numeral: I.'
+  whyStaff:
+    notes: E4+G#4+B4:w
+    key: E
+- ask: In E major, the triad on degree 2 (F♯ A C♯) is...
+  choices:
+  - Minor
+  - Diminished
+  - Major
+  correct: 0
+  why: 'F♯ A C♯: minor 3rd + major 3rd, so minor. Roman numeral: ii.'
+  whyStaff:
+    notes: F#4+A4+C#5:w
+    key: E
+- ask: In E major, the triad on degree 3 (G♯ B D♯) is...
+  choices:
+  - Major
+  - Minor
+  - Diminished
+  correct: 1
+  why: 'G♯ B D♯: minor 3rd + major 3rd, so minor. Roman numeral: iii.'
+  whyStaff:
+    notes: G#4+B4+D#5:w
+    key: E
+- ask: In E major, the triad on degree 4 (A C♯ E) is...
+  choices:
+  - Major
+  - Diminished
+  - Minor
+  correct: 0
+  why: 'A C♯ E: major 3rd + minor 3rd, so major. Roman numeral: IV.'
+  whyStaff:
+    notes: A4+C#5+E5:w
+    key: E
+- ask: In E major, the triad on degree 5 (B D♯ F♯) is...
+  choices:
+  - Minor
+  - Diminished
+  - Major
+  correct: 2
+  why: 'B D♯ F♯: major 3rd + minor 3rd, so major. Roman numeral: V.'
+  whyStaff:
+    notes: B4+D#5+F#5:w
+    key: E
+- ask: In E major, the triad on degree 6 (C♯ E G♯) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 0
+  why: 'C♯ E G♯: minor 3rd + major 3rd, so minor. Roman numeral: vi.'
+  whyStaff:
+    notes: C#5+E5+G#5:w
+    key: E
+- ask: In E major, the triad on degree 7 (D♯ F♯ A) is...
+  choices:
+  - Major
+  - Minor
+  - Diminished
+  correct: 2
+  why: 'D♯ F♯ A: two minor 3rds, so diminished. Roman numeral: vii°.'
+  whyStaff:
+    notes: D#5+F#5+A5:w
+    key: E

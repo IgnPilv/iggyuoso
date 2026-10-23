@@ -1,0 +1,23 @@
+id: piece-canon-theme
+title: 'Canon in D: the theme'
+skills:
+- repertoire
+steps:
+- explain: |
+    **Canon in D: the theme** · Johann Pachelbel, around 1690 (opening, arranged)
+
+    Pachelbel's Canon is built on eight bass notes repeated over and over while the upper voices weave above them. This is the opening: the bass and the first melody.
+  staff:
+    notes: F#5:h E5:h  |  D5:h C#5:h
+    key: D
+  sound: F#5:h E5:h  |  D5:h C#5:h  |  B4:h A4:h  |  B4:h C#5:h
+- explain: |
+    **How to learn it.** The left hand plays the famous bass: D A B F♯ G D G A. Learn it until you can play it with your eyes closed.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-canon-theme-tap
+- exercise: piece-canon-theme-rh
+- exercise: piece-canon-theme-lh
+- exercise: piece-canon-theme
+- exercise: piece-canon-theme-polish
+recap: 'Canon in D: the theme: learned hands alone, then together, then performed.'

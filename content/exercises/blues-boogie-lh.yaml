@@ -1,0 +1,10 @@
+id: blues-boogie-lh
+title: Boogie left hand
+kind: timed
+hand: together
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4+Bb4:w | E4+Bb4:w | A4+Eb5:w | E4+Bb4:w
+left: C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | F2:q C3:q D3:q C3:q | C3:q G3:q A3:q G3:q

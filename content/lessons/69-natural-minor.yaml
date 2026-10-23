@@ -1,13 +1,18 @@
 id: natural-minor
 title: The natural minor scale
-unit: minor-keys
-skills: [theory, scales, minor]
+skills:
+- theory
+- scales
+- minor
 steps:
 - explain: |
     The **natural minor** scale is just the relative major's notes started from the 6th degree.
-  staff: {notes: 'A3:q B3:q C4:q D4:q | E4:q F4:q G4:q A4:q', labels: names}
+  staff:
+    notes: A3:q B3:q C4:q D4:q | E4:q F4:q G4:q A4:q
+    labels: names
   sound: A3:q B3:q C4:q D4:q E4:q F4:q G4:q A4:q
-  terms: [natural minor]
+  terms:
+  - natural minor
 - explain: |
     Its pattern of steps is: **T S T T S T T** (tone, semitone, tone, tone, semitone, tone, tone).
     The semitones fall between 2–3 and 5–6.
@@ -15,17 +20,23 @@ steps:
     Major: T T S T T T S. Natural minor: T S T T S T T.
   check:
     ask: In A natural minor, where is the first semitone?
-    choices: [B–C (degrees 2–3), A–B, C–D]
+    choices:
+    - B–C (degrees 2–3)
+    - A–B
+    - C–D
     correct: 0
     why: 'T S: A–B is a tone, B–C a semitone.'
 - explain: |
     The thing your ear notices most is the **minor 3rd** between degrees 1 and 3 (A to C). That
     is the same minor 3rd that makes a minor chord sound minor.
   sound: A3+C4+E4:h | C4+E4+G4:h
-- {exercise: build-natural-minor}
-- {exercise: a-natural-minor-rh}
-- {exercise: major-or-minor-scale}
+- exercise: build-natural-minor
+- exercise: a-natural-minor-rh
+- explain: |
+    Both hands, an octave apart. The left hand starts on finger 5.
+- exercise: a-natural-minor-ht
+- exercise: major-or-minor-scale
 - explain: |
     Short tunes in A, E and D minor.
-- {exercise: gen-sight-read-minor}
+- exercise: gen-sight-read-minor
 recap: Natural minor = the relative major's notes from degree 6. The minor 3rd gives it its colour.

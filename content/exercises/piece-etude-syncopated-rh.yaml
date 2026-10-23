@@ -1,0 +1,14 @@
+id: piece-etude-syncopated-rh
+title: 'Syncopated Study: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: F
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:e A4:q C5:e r:e A4:e C5:q | Bb4:e D5:q Bb4:e r:e G4:e Bb4:q | A4:e C5:q A4:e r:e F4:e A4:q | G4:e E4:q C4:e F4:h
+reps: 2
+days: 1

@@ -1,0 +1,9 @@
+id: rt-cut-hands
+title: Cut time, two hands
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 2/2
+countIn: 1
+right: x:q x:q x:q x:q | x:q x:q x:h | x:e x:e x:e x:e x:q x:q | x:w
+left: x:h x:h | x:h x:h | x:h x:h | x:w

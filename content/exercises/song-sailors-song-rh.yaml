@@ -1,0 +1,15 @@
+id: song-sailors-song-rh
+title: 'Sailor''s Song in D Minor: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Dm
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q F4:q A4:q A4:q | G4:q F4:q E4:h | C4:q E4:q G4:q G4:q | F4:q E4:q D4:h | A4:q A4:q A4:q F4:q | G4:q G4:q G4:q
+  E4:q | F4:q E4:q D4:q C#4:q | D4:w
+reps: 2
+days: 1

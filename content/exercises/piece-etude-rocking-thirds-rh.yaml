@@ -1,0 +1,14 @@
+id: piece-etude-rocking-thirds-rh
+title: 'Rocking Thirds: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: G
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4+D5:q G4+B4:q B4+D5:q G4+B4:q | C5+E5:q A4+C5:q C5+E5:q A4+C5:q | A4+C5:q F#4+A4:q A4+C5:q F#4+A4:q | G4+B4:w
+reps: 2
+days: 1

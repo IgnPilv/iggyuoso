@@ -1,0 +1,14 @@
+id: piece-canon-theme-lh
+title: 'Canon in D: the theme: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D3:h A2:h | B2:h F#2:h | G2:h D2:h | G2:h A2:h | D3:h A2:h | B2:h F#2:h | G2:h D2:h | G2:h A2:h | D2+A2+D3:w
+reps: 2
+days: 1

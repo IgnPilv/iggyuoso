@@ -1,0 +1,13 @@
+id: technique-positions-c-g-f
+title: Positions in C, G and F
+skills:
+- technique
+steps:
+- explain: |
+    Every key has its five-finger position. The shape is always the same: whole step, whole step, half step,
+    whole step. Here are C, G and F with both hands, parallel and in the mirror.
+- exercise: pos-g
+- exercise: pos-f
+- exercise: mirror-g
+- exercise: mirror-f
+recap: One shape, three places.

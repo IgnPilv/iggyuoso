@@ -1,0 +1,12 @@
+id: ear-intervals-by-playing
+title: Play the interval you hear
+skills:
+- ear
+steps:
+- explain: |
+    Now answer on the keys: you hear two notes, the first one is shown; play the second. Starting notes change, so you
+    have to hear the **distance**, not remember a key.
+- exercise: ear-play-2-3
+- exercise: ear-play-4-5
+- exercise: ear-play-mixed
+recap: Hear the distance, find it from any key.

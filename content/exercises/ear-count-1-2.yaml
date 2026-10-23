@@ -1,0 +1,14 @@
+id: ear-count-1-2
+title: One note or two?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: count
+  pool:
+  - 1
+  - 2
+  range:
+  - C3
+  - C5

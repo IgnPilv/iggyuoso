@@ -1,0 +1,24 @@
+id: ks-a
+title: 'Key study: A major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: A major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in A major. Its chords: **A**, **D** and **E7**.
+  staff:
+    notes: A4:q B4:q C#5:q D5:q E5:q F#5:q G#5:q A5:q
+    key: A
+  sound: A4:q B4:q C#5:q D5:q E5:q F#5:q G#5:q A5:q
+- exercise: ks-a-thirds
+- exercise: scale-a-2-e
+- exercise: scale-a-contrary
+- exercise: ks-a-pedal
+- exercise: ks-a-harmonised-scale
+- exercise: ks-a-chord-pattern
+- exercise: ks-a-inversions
+- exercise: ks-a-broken
+- exercise: ks-a-alberti
+- exercise: ks-a-pulse
+- exercise: ks-a-waltz
+recap: A major under both hands.

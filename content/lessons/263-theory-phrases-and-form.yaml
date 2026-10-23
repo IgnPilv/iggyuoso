@@ -1,0 +1,23 @@
+id: theory-phrases-and-form
+title: Phrases and form
+skills:
+- theory
+steps:
+- explain: |
+    Music is built from **phrases**, like sentences, usually four bars. A **question** phrase ends away from home;
+    the **answer** ends on the tonic. Phrases group into sections, named with letters: **AB** (binary), **ABA** (ternary).
+  sound: C4:q D4:q E4:q F4:q | G4:h D4:h | C4:q D4:q E4:q F4:q | E4:h C4:h
+  terms:
+  - phrase
+  - binary
+  - ternary
+  - motif
+  check:
+    ask: In the sound, the first phrase ends on...
+    choices:
+    - 'C: finished'
+    - 'D: unfinished'
+    correct: 1
+    why: D (degree 2) sounds like a question.
+- exercise: theory-form-quiz
+recap: Phrases are sentences; form is the shape of the story.

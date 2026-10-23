@@ -1,0 +1,15 @@
+id: ear-count-2-3-4
+title: Two, three or four notes?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: count
+  pool:
+  - 2
+  - 3
+  - 4
+  range:
+  - C3
+  - C5

@@ -1,0 +1,17 @@
+id: ear-rt-long-short
+title: Which rhythm did you hear?
+kind: ear
+questions: 15
+reps: 2
+days: 2
+items:
+- type: rhythm
+  pool:
+  - x:q x:q x:h
+  - x:h x:q x:q
+  - x:q x:q x:q x:q
+  - x:h x:h
+  - x:q x:h x:q
+  - x:w
+  meter: 4/4
+  tempo: 80

@@ -1,0 +1,10 @@
+id: rt-3v2-2
+title: Two against three
+kind: tap
+tempo: 40
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:h | x:e x:e x:e x:e x:e x:e x:e x:e | x:w
+left: x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 | x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:h | x:e3 x:e3 x:e3 x:e3
+  x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 | x:w

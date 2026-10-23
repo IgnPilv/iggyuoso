@@ -1,0 +1,9 @@
+id: rt-24-drum
+title: Drum and fife
+kind: tap
+tempo: 100
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: x:q x:q | x:q x:q | x:q x:q | x:h
+left: x:h | x:h | x:h | x:h

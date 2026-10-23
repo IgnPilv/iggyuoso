@@ -1,0 +1,14 @@
+id: ks-b-read
+title: Read in B major
+kind: generated
+generator: read-notes
+clef: treble
+notes: C4-A5
+keys:
+- B
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 3
+days: 2

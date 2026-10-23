@@ -1,0 +1,14 @@
+id: mirror-d-flat
+title: 'D♭ major: mirror image'
+kind: timed
+hand: together
+prompt: Both thumbs on the key note; the hands move apart and back. Same finger in both hands every time.
+key: Db
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Db4:q Eb4:q F4:q Gb4:q | Ab4:q Gb4:q F4:q Eb4:q | Db4:h F4:h | Db4:w
+left: Db3:q C3:q Bb2:q Ab2:q | Gb2:q Ab2:q Bb2:q C3:q | Db3:h Bb2:h | Db3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 1
+leftFingers: 1 2 3 4 5 4 3 2 1 3 1

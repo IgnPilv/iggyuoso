@@ -1,0 +1,15 @@
+id: song-row-your-boat-swap
+title: 'Row, Row, Row Your Boat: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C4+E4+G4:h. | C4+E4+G4:h. | C4+E4+G4:q. B3+D4+G4:q. | C4+E4+G4:h. | C4+E4+G4:h. | C4+E4+G4:h. | B3+D4+G4:h. | C4+E4+G4:h.
+left: C3:q. C3:q. | C3:q D3:e E3:q. | E3:q D3:e E3:q F3:e | G3:h. | C4:e C4:e C4:e G3:e G3:e G3:e | E3:e E3:e E3:e C3:e C3:e
+  C3:e | G3:q F3:e E3:q D3:e | C3:h.
+reps: 2
+days: 1

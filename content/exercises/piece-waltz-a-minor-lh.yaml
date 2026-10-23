@@ -1,0 +1,15 @@
+id: piece-waltz-a-minor-lh
+title: 'Little Waltz in A minor: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: Am
+tempo: 108
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: A2:q C3+E3:q C3+E3:q | A2:q C3+E3:q C3+E3:q | E3:q G#3:q G#3:q | E3:q G#3:q G#3:q | A2:q C3+E3+A3:q C3+E3+A3:q | A2:q
+  C3+E3+A3:q C3+E3+A3:q | E3:q G#3:q G#3:q | C3+E3+A3:h.
+reps: 2
+days: 1

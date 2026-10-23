@@ -1,0 +1,15 @@
+id: song-drunken-sailor-arranged
+title: What Shall We Do with the Drunken Sailor?, full arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:h A4:h | A4:q D4:q F4:q A4:q | G4:h G4:h | G4:q C4:q E4:q G4:q | A4:h A4:h | A4:q B4:q C5:q D5:q | C5:q A4:q G4:q
+  E4:q | D4:h D4:h
+left: D3+F3+A3:w | D3+F3+A3:w | C3+E3+G3:w | C3+E3+G3:w | D3+F3+A3:w | D3+F3+A3:w | C3+E3+G3:h C3+E3+A3:h | D3+F3+A3:w
+reps: 3
+days: 2

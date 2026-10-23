@@ -1,0 +1,17 @@
+id: rd-sight-c-rh
+title: Right hand in C position
+kind: generated
+generator: sight-read
+hand: right
+prompt: Look at the first note, then follow the steps and skips.
+clef: treble
+tempo: 66
+notes: C4-G4
+durations:
+- q
+- h
+bars: 4
+mastery:
+  accuracy: 90
+reps: 4
+days: 2

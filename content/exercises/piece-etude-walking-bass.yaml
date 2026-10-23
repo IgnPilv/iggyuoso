@@ -1,0 +1,16 @@
+id: piece-etude-walking-bass
+title: Walking Bass
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4+G4:h E4+G4:h | F4+A4:h F4+A4:h | D4+F4:h D4+G4:h | E4+G4:w | E4+G4:h E4+G4:h | F4+A4:h F4+A4:h | D4+F4:h B3+D4:h
+  | C4+E4:w
+left: C3:q D3:q E3:q G3:q | F3:q E3:q D3:q C3:q | B2:q G2:q A2:q B2:q | C3:q G2:q E2:q G2:q | C3:q D3:q E3:q G3:q | F3:q A3:q
+  G3:q F3:q | G3:q F3:q D3:q G2:q | C3:w
+reps: 3
+days: 2

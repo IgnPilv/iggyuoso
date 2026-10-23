@@ -1,0 +1,15 @@
+id: piece-turkish-march-rh
+title: 'Turkish March: the opening: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: Am
+tempo: 60
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: B4:s A4:s G#4:s A4:s C5:e r:e | D5:s C5:s B4:s C5:s E5:e r:e | F5:s E5:s D#5:s E5:s B5:s A5:s G#5:s A5:s | B5:s A5:s
+  G#5:s A5:s C6:q
+reps: 2
+days: 1

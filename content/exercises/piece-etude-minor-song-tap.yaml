@@ -1,0 +1,14 @@
+id: piece-etude-minor-song-tap
+title: 'Song in A minor: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 72
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w
+left: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e
+  x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e |
+  x:w
+reps: 2
+days: 1

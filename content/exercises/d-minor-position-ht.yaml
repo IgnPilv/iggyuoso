@@ -1,0 +1,12 @@
+id: d-minor-position-ht
+title: D minor position, hands together
+kind: timed
+hand: together
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q E4:q F4:q G4:q | A4:w | A4:q G4:q F4:q E4:q | D4:w
+left: D3:q E3:q F3:q G3:q | A3:w | A3:q G3:q F3:q E3:q | D3:w
+rightFingers: 1 2 3 4 5 5 4 3 2 1
+leftFingers: 5 4 3 2 1 1 2 3 4 5

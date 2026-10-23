@@ -1,0 +1,24 @@
+id: ks-f
+title: 'Key study: F major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: F major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in F major. Its chords: **F**, **B♭** and **C7**.
+  staff:
+    notes: F4:q G4:q A4:q Bb4:q C5:q D5:q E5:q F5:q
+    key: F
+  sound: F4:q G4:q A4:q Bb4:q C5:q D5:q E5:q F5:q
+- exercise: ks-f-thirds
+- exercise: scale-f-1
+- exercise: scale-f-contrary
+- exercise: ks-f-pedal
+- exercise: ks-f-harmonised-scale
+- exercise: ks-f-chord-pattern
+- exercise: ks-f-inversions
+- exercise: ks-f-broken
+- exercise: ks-f-alberti
+- exercise: ks-f-pulse
+- exercise: ks-f-waltz
+recap: F major under both hands.

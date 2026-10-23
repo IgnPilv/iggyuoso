@@ -1,0 +1,28 @@
+id: ks-a-flat
+title: 'Key study: A♭ major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: A♭ major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in A♭ major. Its chords: **A♭**, **D♭** and **E♭7**.
+  staff:
+    notes: Ab4:q Bb4:q C5:q Db5:q Eb5:q F5:q G5:q Ab5:q
+    key: Ab
+  sound: Ab4:q Bb4:q C5:q Db5:q Eb5:q F5:q G5:q Ab5:q
+- exercise: ks-a-flat-thirds
+- exercise: mirror-a-flat
+- exercise: triad-a-flat
+- exercise: dom7-a-flat
+- exercise: scale-a-flat-1-e
+- exercise: scale-a-flat-2-e
+- exercise: scale-a-flat-contrary
+- exercise: ks-a-flat-pedal
+- exercise: ks-a-flat-harmonised-scale
+- exercise: ks-a-flat-chord-pattern
+- exercise: ks-a-flat-inversions
+- exercise: ks-a-flat-broken
+- exercise: ks-a-flat-alberti
+- exercise: ks-a-flat-pulse
+- exercise: ks-a-flat-waltz
+recap: A♭ major under both hands.

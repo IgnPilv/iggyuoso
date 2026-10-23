@@ -1,0 +1,16 @@
+id: song-drunken-sailor-in-f
+title: What Shall We Do with the Drunken Sailor? in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:h D5:h | D5:q G4:q Bb4:q D5:q | C5:h C5:h | C5:q F4:q A4:q C5:q | D5:h D5:h | D5:q E5:q F5:q G5:q | F5:q D5:q C5:q
+  A4:q | G4:h G4:h
+left: D3+G3+Bb3:w | D3+G3+Bb3:w | C3+F3+A3:w | C3+F3+A3:w | D3+G3+Bb3:w | D3+G3+Bb3:w | C3+F3+A3:h D3+F3+A3:h | D3+G3+Bb3:w
+reps: 2
+days: 1

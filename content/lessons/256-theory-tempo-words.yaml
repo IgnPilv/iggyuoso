@@ -1,0 +1,30 @@
+id: theory-tempo-words
+title: Tempo and expression words
+skills:
+- theory
+steps:
+- explain: |
+    Music uses **Italian** words for speed and character. Speed words from slow to fast: **largo, adagio, andante,
+    moderato, allegro, presto**. "Andante" means walking, so it's in the middle.
+  terms:
+  - tempo
+  - allegro
+  - andante
+  - adagio
+  check:
+    ask: Which is faster?
+    choices:
+    - Allegro
+    - Andante
+    - Adagio
+    correct: 0
+    why: Allegro is lively; andante walks; adagio is slow.
+- explain: |
+    Changes: **ritardando** slows down, **accelerando** speeds up, **a tempo** goes back. **Crescendo** grows louder,
+    **diminuendo** softer. A **fermata** (𝄐) holds a note longer than written.
+  terms:
+  - ritardando
+  - crescendo
+  - fermata
+- exercise: theory-tempo-words-quiz
+recap: Largo to presto, and how to change on the way.

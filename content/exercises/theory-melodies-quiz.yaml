@@ -1,0 +1,91 @@
+id: theory-melodies-quiz
+title: Melody quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A good melody mostly moves...
+  choices:
+  - By step, with a few leaps
+  - Only by leaps
+  - Only on one note
+  correct: 0
+  why: Steps sing; leaps add interest.
+- ask: After a big leap, a melody usually...
+  choices:
+  - Stops
+  - Steps back in the other direction
+  - Leaps again the same way
+  correct: 1
+  why: Filling the gap feels natural.
+- ask: A melody that sounds finished ends on...
+  choices:
+  - The tonic
+  - The leading note
+  - The 2nd
+  correct: 0
+  why: Home.
+- ask: The highest point of a phrase is called...
+  choices:
+  - The climax
+  - The motif
+  - The cadence
+  correct: 0
+  why: Usually only once per phrase.
+- ask: A question phrase often ends on...
+  choices:
+  - '1'
+  - 2 or 5
+  - '8'
+  correct: 1
+  why: Away from home.
+- ask: Repeating a motif higher is a...
+  choices:
+  - Canon
+  - Cadence
+  - Sequence
+  correct: 2
+  why: Repetition gives unity.
+- ask: Over a C chord on beat 1, a good melody note is...
+  choices:
+  - F
+  - B
+  - E
+  correct: 2
+  why: A chord note on the strong beat.
+- ask: Two balanced phrases of 4 bars make...
+  choices:
+  - A rondo
+  - A sonata
+  - An 8-bar period
+  correct: 2
+  why: Question + answer = period.
+- ask: The leading note (7) usually goes to...
+  choices:
+  - 8 (the tonic)
+  - '6'
+  - '5'
+  correct: 0
+  why: It leads up by a half step.
+- ask: A melody with too much repetition sounds...
+  choices:
+  - Exciting
+  - Dull
+  - Unfinished
+  correct: 1
+  why: Repeat, then vary.
+- ask: In 4/4, the strongest beats are...
+  choices:
+  - All equal
+  - 1 and 3
+  - 2 and 4
+  correct: 1
+  why: Beat 1 strongest, 3 next.
+- ask: A rhythm motif can unify a melody by...
+  choices:
+  - Coming back with different notes
+  - Changing every bar
+  - Never repeating
+  correct: 0
+  why: Same rhythm, new pitches.

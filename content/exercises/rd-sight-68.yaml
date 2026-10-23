@@ -1,0 +1,22 @@
+id: rd-sight-68
+title: In 6/8
+kind: generated
+generator: sight-read
+hand: right
+clef: treble
+tempo: 56
+meter: 6/8
+notes: C4-C5
+durations:
+- q
+- e
+- q.
+bars: 4
+mastery:
+  accuracy: 90
+keys:
+- C
+- G
+- F
+reps: 4
+days: 2

@@ -1,0 +1,15 @@
+id: ear-4-5-6
+title: Fourth, fifth or sixth?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - P4
+  - P5
+  - M6
+  from: C4
+  direction: up
+  answer: name

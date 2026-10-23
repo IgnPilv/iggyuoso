@@ -1,0 +1,25 @@
+id: ks-e-musicianship
+title: Reading and hearing E major
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: E major, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: E4:q F#4:q G#4:q A4:q B4:q C#5:q D#5:q E5:q
+    key: E
+  sound: E4:q F#4:q G#4:q A4:q B4:q C#5:q D#5:q E5:q
+- exercise: ks-e-quiz
+- exercise: ks-e-triads
+- exercise: ks-e-read
+- exercise: ks-e-read-bass
+- exercise: ks-e-sight
+- exercise: ks-e-sight-rh
+- exercise: ks-e-sight-lh
+- exercise: ks-e-intervals
+- exercise: ks-e-degrees
+- exercise: ks-e-echo
+recap: E major for the eyes and ears.

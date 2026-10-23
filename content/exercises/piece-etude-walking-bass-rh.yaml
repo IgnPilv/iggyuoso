@@ -1,0 +1,14 @@
+id: piece-etude-walking-bass-rh
+title: 'Walking Bass: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4+G4:h E4+G4:h | F4+A4:h F4+A4:h | D4+F4:h D4+G4:h | E4+G4:w | E4+G4:h E4+G4:h | F4+A4:h F4+A4:h | D4+F4:h B3+D4:h
+  | C4+E4:w
+reps: 2
+days: 1

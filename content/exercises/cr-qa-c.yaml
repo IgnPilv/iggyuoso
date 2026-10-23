@@ -1,0 +1,10 @@
+id: cr-qa-c
+title: Question and answer in C
+kind: tap
+prompt: White keys C to G. End bar 2 on D or G, bar 4 on C.
+tempo: 80
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:h x:h
+reps: 3
+days: 2

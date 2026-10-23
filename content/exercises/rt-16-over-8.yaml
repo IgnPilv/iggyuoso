@@ -1,0 +1,10 @@
+id: rt-16-over-8
+title: Sixteenths over eighths
+kind: tap
+tempo: 52
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:s x:s x:s x:s x:q x:s x:s x:s x:s x:q | x:e x:s x:s x:e x:s x:s x:h | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s
+  x:s x:q | x:w
+left: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:w

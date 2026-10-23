@@ -1,0 +1,18 @@
+id: ear-degrees-dm-all
+title: D minor, every degree
+kind: ear
+cadence: Dm
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Dm
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

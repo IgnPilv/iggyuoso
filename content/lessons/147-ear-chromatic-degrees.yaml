@@ -1,0 +1,10 @@
+id: ear-chromatic-degrees
+title: Notes from outside the key
+skills:
+- ear
+steps:
+- explain: |
+    Music borrows notes from outside the key: the **♭3** (a touch of minor in major) and the **♯4** (a lift
+    towards 5).
+- exercise: ear-degrees-chromatic
+recap: Outside notes, heard against the key.

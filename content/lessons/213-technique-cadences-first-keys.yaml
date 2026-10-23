@@ -1,0 +1,16 @@
+id: technique-cadences-first-keys
+title: Chord progressions in seven keys
+skills:
+- technique
+steps:
+- explain: |
+    I, IV, V7, I: the most common chord progression. The right hand moves to the **nearest** shape each time,
+    the left hand plays the roots. Learn it in C, then in every key: the shape stays, the keys change.
+- exercise: cadence-c
+- exercise: cadence-g
+- exercise: cadence-f
+- exercise: cadence-d
+- exercise: cadence-a-minor
+- exercise: cadence-d-minor
+- exercise: cadence-e-minor
+recap: One progression, seven keys.

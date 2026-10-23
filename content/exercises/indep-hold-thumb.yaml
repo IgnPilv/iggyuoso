@@ -1,0 +1,11 @@
+id: indep-hold-thumb
+title: Thumb holds, fingers play
+kind: timed
+hand: together
+prompt: Right thumb holds middle C for four bars. The left hand walks.
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:w | C4:w | C4:w | C4:w
+left: C3:q D3:q E3:q F3:q | G3:q F3:q E3:q D3:q | C3:q E3:q G3:q E3:q | C3:w

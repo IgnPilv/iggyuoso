@@ -1,0 +1,16 @@
+id: song-old-macdonald-in-f
+title: Old MacDonald Had a Farm in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:q F4:q F4:q C4:q | D4:q D4:q C4:h | A4:q A4:q G4:q G4:q | F4:h. C4:q | F4:q F4:q F4:q C4:q | D4:q D4:q C4:h | A4:q
+  A4:q G4:q G4:q | F4:w
+left: F2+C3:w | Bb2+F3:h F2+C3:h | F2+C3:h C3+G3:h | F2+C3:w | F2+C3:w | Bb2+F3:h F2+C3:h | F2+C3:h C3+G3:h | F2+C3:w
+reps: 2
+days: 1

@@ -1,0 +1,19 @@
+id: ks-c-minor-sight-rh
+title: Sight-read the right hand in C minor
+kind: generated
+generator: sight-read
+hand: right
+clef: treble
+tempo: 66
+notes: C4-C5
+keys:
+- Cm
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

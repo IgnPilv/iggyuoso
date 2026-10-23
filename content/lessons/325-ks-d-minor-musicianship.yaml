@@ -1,0 +1,25 @@
+id: ks-d-minor-musicianship
+title: Reading and hearing D minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: D minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: D4:q E4:q F4:q G4:q A4:q Bb4:q C#5:q D5:q
+    key: Dm
+  sound: D4:q E4:q F4:q G4:q A4:q Bb4:q C#5:q D5:q
+- exercise: ks-d-minor-quiz
+- exercise: ks-d-minor-triads
+- exercise: ks-d-minor-read
+- exercise: ks-d-minor-read-bass
+- exercise: ks-d-minor-sight
+- exercise: ks-d-minor-sight-rh
+- exercise: ks-d-minor-sight-lh
+- exercise: ks-d-minor-intervals
+- exercise: ks-d-minor-degrees
+- exercise: ks-d-minor-echo
+recap: D minor for the eyes and ears.

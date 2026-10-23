@@ -1,0 +1,25 @@
+id: rd-sight-six-keys
+title: Six keys, both hands
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: C4-D5
+durations:
+- q
+- h
+- e
+bars: 4
+mastery:
+  accuracy: 90
+keys:
+- C
+- G
+- F
+- D
+- Am
+- Dm
+left: fifths
+reps: 4
+days: 2

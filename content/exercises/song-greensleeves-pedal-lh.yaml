@@ -1,0 +1,18 @@
+id: song-greensleeves-pedal-lh
+title: 'Greensleeves, with pedal: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+key: Am
+tempo: 76
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | A2:e E3:e C3:e E3:e A2:q | C3:e G3:e E3:e G3:e C3:q | G2:e D3:e B2:e D3:e G2:q | E3:e B3:e G3:e B3:e E3:q | A2:e
+  E3:e C3:e E3:e A2:q | E3:e B3:e G#3:e B3:e E3:q | E3:e B3:e G#3:e B3:e E3:q | E3:e B3:e G#3:e B3:e E3:q | A2:e E3:e C3:e
+  E3:e A2:q | C3:e G3:e E3:e G3:e C3:q | G2:e D3:e B2:e D3:e G2:q | E3:e B3:e G3:e B3:e E3:q | A2:e E3:e C3:e E3:e A2:q |
+  E3:e B3:e G#3:e B3:e E3:q | A2:e E3:e C3:e E3:e A2:q | A2+C3+E3:h
+reps: 2
+days: 1

@@ -1,0 +1,37 @@
+id: ks-f-minor-echo
+title: Echo phrases in F minor
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: F4 G4 Ab4 G4 F4
+  plays: 2
+- type: melody
+  notes: C5 Bb4 Ab4 G4 F4
+  plays: 2
+- type: melody
+  notes: F4 Ab4 C5 Ab4 F4
+  plays: 2
+- type: melody
+  notes: Ab4 Bb4 C5 Bb4 Ab4
+  plays: 2
+- type: melody
+  notes: F4 G4 Ab4 Bb4 C5
+  plays: 2
+- type: melody
+  notes: C5 Db5 C5 Bb4 Ab4
+  plays: 2
+- type: melody
+  notes: F5 E5 Db5 C5
+  plays: 2
+- type: melody
+  notes: Ab4 G4 F4 E5 F4
+  plays: 2
+- type: melody
+  notes: F4 C5 Ab4 F4
+  plays: 2
+- type: melody
+  notes: C5 Ab4 Bb4 G4 F4
+  plays: 2

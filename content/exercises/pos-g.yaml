@@ -1,0 +1,14 @@
+id: pos-g
+title: G major position, hands together
+kind: timed
+hand: together
+prompt: 'Thumbs on different notes: right thumb on G, left little finger on G.'
+key: G
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q A4:q B4:q C5:q | D5:q C5:q B4:q A4:q | G4:q B4:q D5:q B4:q | G4:w
+left: G3:q A3:q B3:q C4:q | D4:q C4:q B3:q A3:q | G3:q B3:q D4:q B3:q | G3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 5 3 1
+leftFingers: 5 4 3 2 1 2 3 4 5 3 1 3 5

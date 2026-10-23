@@ -1,0 +1,37 @@
+id: ks-e-echo
+title: Echo phrases in E major
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: E4 F#4 G#4 F#4 E4
+  plays: 2
+- type: melody
+  notes: B4 A4 G#4 F#4 E4
+  plays: 2
+- type: melody
+  notes: E4 G#4 B4 G#4 E4
+  plays: 2
+- type: melody
+  notes: G#4 A4 B4 A4 G#4
+  plays: 2
+- type: melody
+  notes: E4 F#4 G#4 A4 B4
+  plays: 2
+- type: melody
+  notes: B4 C#5 B4 A4 G#4
+  plays: 2
+- type: melody
+  notes: E5 D#5 C#5 B4
+  plays: 2
+- type: melody
+  notes: G#4 F#4 E4 D#5 E4
+  plays: 2
+- type: melody
+  notes: E4 B4 G#4 E4
+  plays: 2
+- type: melody
+  notes: B4 G#4 A4 F#4 E4
+  plays: 2

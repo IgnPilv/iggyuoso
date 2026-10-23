@@ -1,0 +1,9 @@
+id: rt-diff-3
+title: Two rhythms in 3/4
+kind: tap
+tempo: 88
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: x:q x:q x:q | x:q x:q x:q | x:h x:q | x:h.
+left: x:h. | x:h x:q | x:q x:q x:q | x:h.

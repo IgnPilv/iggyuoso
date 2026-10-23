@@ -1,0 +1,25 @@
+id: ks-b-flat-minor-musicianship
+title: Reading and hearing B♭ minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: B♭ minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: Bb4:q C5:q Db5:q Eb5:q F5:q Gb5:q A5:q Bb5:q
+    key: Bbm
+  sound: Bb4:q C5:q Db5:q Eb5:q F5:q Gb5:q A5:q Bb5:q
+- exercise: ks-b-flat-minor-quiz
+- exercise: ks-b-flat-minor-triads
+- exercise: ks-b-flat-minor-read
+- exercise: ks-b-flat-minor-read-bass
+- exercise: ks-b-flat-minor-sight
+- exercise: ks-b-flat-minor-sight-rh
+- exercise: ks-b-flat-minor-sight-lh
+- exercise: ks-b-flat-minor-intervals
+- exercise: ks-b-flat-minor-degrees
+- exercise: ks-b-flat-minor-echo
+recap: B♭ minor for the eyes and ears.

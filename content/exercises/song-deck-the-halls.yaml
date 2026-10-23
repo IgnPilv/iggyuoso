@@ -1,0 +1,18 @@
+id: song-deck-the-halls
+title: Deck the Halls
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q. F4:e E4:q D4:q | C4:q D4:q E4:q C4:q | D4:e E4:e F4:e D4:e E4:q. D4:e | C4:q B3:q C4:h | G4:q. F4:e E4:q D4:q
+  | C4:q D4:q E4:q C4:q | D4:e E4:e F4:e D4:e E4:q. D4:e | C4:q B3:q C4:h | D4:q. E4:e F4:q D4:q | E4:q. F4:e G4:q D4:q |
+  E4:e F#4:e G4:q A4:e B4:e C5:q | B4:q A4:q G4:h | G4:q. F4:e E4:q D4:q | C4:q D4:q E4:q C4:q | A4:e A4:e A4:e A4:e G4:q.
+  F4:e | E4:q D4:q C4:h
+left: C3:w | C3:w | G2:h C3:h | G2:h C3:h | C3:w | C3:w | G2:h C3:h | G2:h C3:h | G2:w | C3:h G2:h | A2:h D3:h | G2:w | C3:w
+  | C3:w | F2:w | G2:h C3:h
+reps: 3
+days: 2

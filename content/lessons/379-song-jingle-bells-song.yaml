@@ -1,0 +1,31 @@
+id: song-jingle-bells-song
+title: Jingle Bells
+skills:
+- songs
+steps:
+- explain: |
+    **Jingle Bells** · James Lord Pierpont, 1857
+
+    Written for a Thanksgiving concert in 1857, it became the best-known winter song in the world.
+  staff:
+    notes: E4:q E4:q E4:h  |  E4:q E4:q E4:h
+  sound: E4:q E4:q E4:h  |  E4:q E4:q E4:h  |  E4:q G4:q C4:q. D4:e  |  E4:w
+- explain: |
+    **Before you play.** Three E's, three E's: count them. The last line climbs to G before coming home.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 112
+- exercise: song-jingle-bells-song-tap
+- exercise: song-jingle-bells-song-tap-hands
+- exercise: song-jingle-bells-song-by-ear
+- exercise: song-jingle-bells-song-rh
+- exercise: song-jingle-bells-song-lh
+- exercise: song-jingle-bells-song
+- exercise: song-jingle-bells-song-arranged
+- exercise: song-jingle-bells-song-swap
+- exercise: song-jingle-bells-song-in-g
+- exercise: song-jingle-bells-song-oompah
+- exercise: song-jingle-bells-song-performance
+- exercise: song-jingle-bells-song-in-f
+recap: 'Jingle Bells: tune, left hand, together. Come back to it any time; songs are for fun.'

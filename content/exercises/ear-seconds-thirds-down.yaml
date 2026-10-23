@@ -1,0 +1,16 @@
+id: ear-seconds-thirds-down
+title: Seconds and thirds, going down
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - m2
+  - M2
+  - m3
+  - M3
+  from: C5
+  direction: down
+  answer: name

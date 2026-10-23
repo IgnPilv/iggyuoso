@@ -1,0 +1,25 @@
+id: ks-a-minor
+title: 'Key study: A minor'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: A minor, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in A minor. Its chords: **Am**, **Dm** and **E7**.
+  staff:
+    notes: A4:q B4:q C5:q D5:q E5:q F5:q G#5:q A5:q
+    key: Am
+  sound: A4:q B4:q C5:q D5:q E5:q F5:q G#5:q A5:q
+- exercise: ks-a-minor-thirds
+- exercise: pos-a-minor
+- exercise: scale-a-minor-1-e
+- exercise: scale-a-minor-contrary
+- exercise: ks-a-minor-pedal
+- exercise: ks-a-minor-harmonised-scale
+- exercise: ks-a-minor-chord-pattern
+- exercise: ks-a-minor-inversions
+- exercise: ks-a-minor-broken
+- exercise: ks-a-minor-alberti
+- exercise: ks-a-minor-pulse
+- exercise: ks-a-minor-waltz
+recap: A minor under both hands.

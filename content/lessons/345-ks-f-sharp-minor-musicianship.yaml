@@ -1,0 +1,25 @@
+id: ks-f-sharp-minor-musicianship
+title: Reading and hearing F♯ minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: F♯ minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: F#4:q G#4:q A4:q B4:q C#5:q D5:q E#5:q F#5:q
+    key: F#m
+  sound: F#4:q G#4:q A4:q B4:q C#5:q D5:q E#5:q F#5:q
+- exercise: ks-f-sharp-minor-quiz
+- exercise: ks-f-sharp-minor-triads
+- exercise: ks-f-sharp-minor-read
+- exercise: ks-f-sharp-minor-read-bass
+- exercise: ks-f-sharp-minor-sight
+- exercise: ks-f-sharp-minor-sight-rh
+- exercise: ks-f-sharp-minor-sight-lh
+- exercise: ks-f-sharp-minor-intervals
+- exercise: ks-f-sharp-minor-degrees
+- exercise: ks-f-sharp-minor-echo
+recap: F♯ minor for the eyes and ears.

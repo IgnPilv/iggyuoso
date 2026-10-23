@@ -1,0 +1,12 @@
+id: triplets-ht
+title: Triplets over the beat
+kind: timed
+hand: together
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:e3 D4:e3 E4:e3 F4:e3 G4:e3 F4:e3 E4:h | D4:e3 E4:e3 F4:e3 E4:e3 D4:e3 C4:e3 D4:h | C4:e3 D4:e3 E4:e3 F4:e3 G4:e3
+  F4:e3 E4:e3 D4:e3 C4:e3 D4:q | C4:w
+left: C3:q C3:q C3:h | G2:q G2:q G2:h | C3:q C3:q G2:q G2:q | C3:w
+rightFingers: 1 2 3 4 5 4 3 2 3 4 3 2 1 2 1 2 3 4 5 4 3 2 1 2 1

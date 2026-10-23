@@ -1,0 +1,28 @@
+id: ks-f-minor
+title: 'Key study: F minor'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: F minor, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in F minor. Its chords: **Fm**, **B♭m** and **C7**.
+  staff:
+    notes: F4:q G4:q Ab4:q Bb4:q C5:q Db5:q E5:q F5:q
+    key: Fm
+  sound: F4:q G4:q Ab4:q Bb4:q C5:q Db5:q E5:q F5:q
+- exercise: ks-f-minor-thirds
+- exercise: mirror-f-minor
+- exercise: triad-f-minor
+- exercise: dom7-f-minor
+- exercise: scale-f-minor-1-e
+- exercise: scale-f-minor-2-e
+- exercise: scale-f-minor-contrary
+- exercise: ks-f-minor-pedal
+- exercise: ks-f-minor-harmonised-scale
+- exercise: ks-f-minor-chord-pattern
+- exercise: ks-f-minor-inversions
+- exercise: ks-f-minor-broken
+- exercise: ks-f-minor-alberti
+- exercise: ks-f-minor-pulse
+- exercise: ks-f-minor-waltz
+recap: F minor under both hands.

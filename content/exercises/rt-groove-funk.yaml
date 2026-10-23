@@ -1,0 +1,9 @@
+id: rt-groove-funk
+title: Funk
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:q x:s x:s r:s x:s r:q x:e x:e | r:q x:s x:s r:s x:s r:q x:e x:e | r:q x:s x:s r:s x:s x:q x:q | x:w
+left: x:e. x:s r:e x:e x:e. x:s r:e x:e | x:e. x:s r:e x:e x:e. x:s r:e x:e | x:e. x:s r:e x:e x:h | x:w

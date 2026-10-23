@@ -1,0 +1,23 @@
+id: piece-etude-g-position
+title: Study in G position
+skills:
+- repertoire
+steps:
+- explain: |
+    **Study in G position** · Our own study
+
+    Both hands in G position: the right hand walks, the left hand holds the roots.
+  staff:
+    notes: G4:q A4:q B4:q C5:q  |  D5:h B4:h
+    key: G
+  sound: G4:q A4:q B4:q C5:q  |  D5:h B4:h  |  C5:q B4:q A4:q G4:q  |  A4:w
+- explain: |
+    **How to learn it.** Find F♯ before you start: it comes in bar 7.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-g-position-tap
+- exercise: piece-etude-g-position-rh
+- exercise: piece-etude-g-position-lh
+- exercise: piece-etude-g-position
+- exercise: piece-etude-g-position-polish
+recap: 'Study in G position: learned hands alone, then together, then performed.'

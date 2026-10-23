@@ -1,0 +1,13 @@
+id: ks-e-flat-alberti
+title: 'E♭ major: an Alberti bass'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with an Alberti bass in the left hand.
+key: Eb
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:h Bb4:h | Ab4:h C5:h | F4:h D4:h | Eb4:w
+left: Eb3:e Bb3:e G3:e Bb3:e Eb3:e Bb3:e G3:e Bb3:e | C3:e Ab3:e Eb3:e Ab3:e C3:e Ab3:e Eb3:e Ab3:e | Bb2:e Ab3:e D3:e Ab3:e
+  Bb2:e Ab3:e D3:e Ab3:e | Bb2+Eb3+G3:w

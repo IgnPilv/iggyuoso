@@ -1,0 +1,14 @@
+id: piece-canon-theme-rh
+title: 'Canon in D: the theme: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#5:h E5:h | D5:h C#5:h | B4:h A4:h | B4:h C#5:h | F#5:h E5:h | D5:h C#5:h | B4:h A4:h | B4:h C#5:h | D5:w
+reps: 2
+days: 1

@@ -1,0 +1,37 @@
+id: ks-e-flat-echo
+title: Echo phrases in E♭ major
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: Eb4 F4 G4 F4 Eb4
+  plays: 2
+- type: melody
+  notes: Bb4 Ab4 G4 F4 Eb4
+  plays: 2
+- type: melody
+  notes: Eb4 G4 Bb4 G4 Eb4
+  plays: 2
+- type: melody
+  notes: G4 Ab4 Bb4 Ab4 G4
+  plays: 2
+- type: melody
+  notes: Eb4 F4 G4 Ab4 Bb4
+  plays: 2
+- type: melody
+  notes: Bb4 C5 Bb4 Ab4 G4
+  plays: 2
+- type: melody
+  notes: Eb5 D5 C5 Bb4
+  plays: 2
+- type: melody
+  notes: G4 F4 Eb4 D5 Eb4
+  plays: 2
+- type: melody
+  notes: Eb4 Bb4 G4 Eb4
+  plays: 2
+- type: melody
+  notes: Bb4 G4 Ab4 F4 Eb4
+  plays: 2

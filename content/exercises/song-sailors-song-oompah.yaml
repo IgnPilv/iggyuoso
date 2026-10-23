@@ -1,0 +1,17 @@
+id: song-sailors-song-oompah
+title: Sailor's Song in D Minor, with bass, then chord
+kind: timed
+hand: together
+prompt: 'Another left hand: bass, then chord.'
+display: staff
+key: Dm
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q F4:q A4:q A4:q | G4:q F4:q E4:h | C4:q E4:q G4:q G4:q | F4:q E4:q D4:h | A4:q A4:q A4:q F4:q | G4:q G4:q G4:q
+  E4:q | F4:q E4:q D4:q C#4:q | D4:w
+left: D3:q F3+A3:q A3:q F3+A3:q | D3:q F3+A3:q A2:q C#3+E3+A3:q | C3:q E3+G3:q G3:q E3+G3:q | D3:q F3+A3:q A3:q F3+A3:q |
+  D3:q F3+A3:q A3:q F3+A3:q | C3:q E3+G3:q G3:q E3+G3:q | D3:q F3+A3:q A2:q C#3+E3+A3:q | D3+F3+A3:w
+reps: 2
+days: 1

@@ -1,0 +1,13 @@
+id: arp-c-1
+title: C major arpeggio, one octave
+kind: timed
+hand: together
+prompt: Stretch the hand over the chord; keep the wrist loose.
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:q C5:q | G4:q E4:q C4:h
+left: C3:q E3:q G3:q C4:q | G3:q E3:q C3:h
+rightFingers: 1 2 3 5 3 2 1
+leftFingers: 5 4 2 1 2 4 5

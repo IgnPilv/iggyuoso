@@ -1,0 +1,14 @@
+id: gen-echo-q-h
+title: 'Echo: quarters and halves'
+kind: generated
+generator: rhythm-echo
+tempo: 72
+meter: 4/4
+durations:
+- q
+- h
+bars: 2
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

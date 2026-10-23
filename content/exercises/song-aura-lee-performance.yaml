@@ -1,0 +1,14 @@
+id: song-aura-lee-performance
+title: 'Aura Lee: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 76
+meter: 4/4
+countIn: 1
+right: G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q A4:q B4:q | C5:w | G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q
+  A4:q B4:q | C5:w
+left: C3+E3+G3:w | A2+D3+F#3:w | B2+D3+G3:w | C3+E3+G3:w | C3+E3+G3:w | A2+D3+F#3:w | B2+D3+G3:w | C3+E3+G3:w
+reps: 2
+days: 2

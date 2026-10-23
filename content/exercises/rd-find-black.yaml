@@ -1,0 +1,11 @@
+id: rd-find-black
+title: Find the black keys
+kind: generated
+generator: find-notes
+notes: C#4 D#4 F#4 G#4 A#4 Db4 Eb4 Gb4 Ab4 Bb4
+questions: 30
+mastery:
+  accuracy: 95
+  medianMs: 2500
+reps: 3
+days: 2

@@ -1,0 +1,13 @@
+id: ks-b-flat-broken
+title: 'B♭ major: broken chords'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with broken chords in the left hand.
+key: Bb
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:h F5:h | Eb5:h G5:h | C5:h A4:h | Bb4:w
+left: Bb2:e F3:e D3:e F3:e Bb2:e F3:e D3:e F3:e | Eb3:e Bb3:e G3:e Bb3:e Eb3:e Bb3:e G3:e Bb3:e | F2:e C3:e A2:e C3:e F2:e
+  C3:e A2:e C3:e | Bb2+D3+F3:w

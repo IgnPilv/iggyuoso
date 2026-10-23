@@ -1,0 +1,12 @@
+id: cadence-c-minor
+title: 'C minor: i, iv, V7, i'
+kind: timed
+hand: together
+prompt: 'The right hand barely moves: keep the common notes, slide the others to the nearest key.'
+key: Cm
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+Eb4+G4:h C4+F4+Ab4:h | B3+F4+G4:h C4+Eb4+G4:h | C4+Eb4+G4:h C4+F4+Ab4:h | B3+F4+G4:h C4+Eb4+G4:h
+left: C3:h F2:h | G2:h C3:h | C3:h F2:h | G2:h C3:h

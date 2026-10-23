@@ -1,0 +1,120 @@
+id: theory-enharmonics-quiz
+title: Enharmonics quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: C♯ is the same key as...
+  choices:
+  - B♭
+  - D♭
+  - G♭
+  - E♭
+  correct: 1
+  why: 'C♯ and D♭ are two names for the same black key: they are **enharmonic**.'
+  whyKeys:
+    notes: C#4
+    labels: names
+- ask: D♯ is the same key as...
+  choices:
+  - G♭
+  - B♭
+  - E♭
+  - D♭
+  correct: 2
+  why: 'D♯ and E♭ are two names for the same black key: they are **enharmonic**.'
+  whyKeys:
+    notes: D#4
+    labels: names
+- ask: F♯ is the same key as...
+  choices:
+  - A♭
+  - E♭
+  - G♭
+  - D♭
+  correct: 2
+  why: 'F♯ and G♭ are two names for the same black key: they are **enharmonic**.'
+  whyKeys:
+    notes: F#4
+    labels: names
+- ask: G♯ is the same key as...
+  choices:
+  - G♭
+  - E♭
+  - D♭
+  - A♭
+  correct: 3
+  why: 'G♯ and A♭ are two names for the same black key: they are **enharmonic**.'
+  whyKeys:
+    notes: G#4
+    labels: names
+- ask: A♯ is the same key as...
+  choices:
+  - G♭
+  - B♭
+  - D♭
+  - A♭
+  correct: 1
+  why: 'A♯ and B♭ are two names for the same black key: they are **enharmonic**.'
+  whyKeys:
+    notes: A#4
+    labels: names
+- ask: E♯ is the same key as...
+  choices:
+  - F♯
+  - E
+  - F
+  - D♯
+  correct: 2
+  why: There is no black key between E and F, so E♯ is the white key F.
+- ask: C♭ is the same key as...
+  choices:
+  - B
+  - C
+  - D♭
+  - B♭
+  correct: 0
+  why: 'No black key between B and C: C♭ is the white key B.'
+- ask: B♯ is the same key as...
+  choices:
+  - A♯
+  - C
+  - C♯
+  - B
+  correct: 1
+  why: B♯ is the white key C.
+- ask: F♭ is the same key as...
+  choices:
+  - F
+  - G♭
+  - E♭
+  - E
+  correct: 3
+  why: F♭ is the white key E.
+- ask: Two names for the same key are called...
+  choices:
+  - Relative
+  - Enharmonic
+  - Chromatic
+  correct: 1
+  why: 'Enharmonic: same sound, different spelling.'
+- ask: In G major, the black key between F and G is written...
+  choices:
+  - F♯
+  - G♭
+  correct: 0
+  why: G major has F♯ in its key signature, so it is spelled F♯.
+- ask: In F major, the black key between A and B is written...
+  choices:
+  - B♭
+  - A♯
+  correct: 0
+  why: 'F major has B♭: every letter used once, so it is B♭, not A♯.'
+- ask: Why can a scale not use both F and F♯?
+  choices:
+  - Each letter appears once in a scale
+  - They clash
+  - It can, often
+  correct: 0
+  why: A major or minor scale uses each letter once; that decides the spelling.

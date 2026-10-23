@@ -1,0 +1,14 @@
+id: song-old-macdonald-lh
+title: 'Old MacDonald Had a Farm: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+key: G
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: G2:w | C3:h G2:h | G2:h D3:h | G2:w | G2:w | C3:h G2:h | G2:h D3:h | G2:w
+reps: 2
+days: 1

@@ -1,0 +1,14 @@
+id: song-hot-cross-buns-swap
+title: 'Hot Cross Buns: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:w | C4+E4+G4:w | C4+E4+G4:h B3+D4+G4:h | C4+E4+G4:w
+left: E3:q D3:q C3:h | E3:q D3:q C3:h | C3:e C3:e C3:e C3:e D3:e D3:e D3:e D3:e | E3:q D3:q C3:h
+reps: 2
+days: 1

@@ -1,0 +1,16 @@
+id: gen-workout-9-echo
+title: Hear it, tap it back
+kind: generated
+generator: rhythm-echo
+tempo: 66
+meter: 2/2
+durations:
+- q
+- h
+- e
+- q.
+bars: 2
+mastery:
+  accuracy: 90
+reps: 3
+days: 3

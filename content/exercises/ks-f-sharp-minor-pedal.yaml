@@ -1,0 +1,13 @@
+id: ks-f-sharp-minor-pedal
+title: 'F♯ minor: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: F#m
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:h C#5:h | B4:h D5:h | G#4:h E#4:h | F#4:w
+left: F#2:q C#3:q F#3:q C#3:q | B2:q F#3:q B3:q F#3:q | C#3:q G#3:q C#4:q G#3:q | C#3+F#3+A3:w
+pedal: x:w | x:w | x:w | x:w

@@ -1,0 +1,13 @@
+id: piece-etude-legato-pedal-tap
+title: 'Evening Bells: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 60
+meter: 4/4
+countIn: 1
+right: x:h x:h | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:q x:q x:q x:q | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q
+  x:q x:q | x:w
+reps: 2
+days: 1

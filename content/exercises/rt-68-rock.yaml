@@ -1,0 +1,9 @@
+id: rt-68-rock
+title: Rocking bass
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: x:q x:e x:q x:e | x:e x:e x:e x:q. | x:q x:e x:q x:e | x:q. x:q.
+left: x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q.

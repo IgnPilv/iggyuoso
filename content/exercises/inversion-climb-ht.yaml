@@ -1,0 +1,11 @@
+id: inversion-climb-ht
+title: Climbing the inversions with a bass
+kind: timed
+hand: together
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:q E4+G4+C5:q G4+C5+E5:q C5+E5+G5:q | G4+C5+E5:q E4+G4+C5:q C4+E4+G4:h | F4+A4+C5:q A4+C5+F5:q C5+F5+A5:q A4+C5+F5:q
+  | F4+A4+C5:w
+left: C3:w | C3:h C3:h | F2:w | F2:w

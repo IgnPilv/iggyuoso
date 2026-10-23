@@ -1,0 +1,18 @@
+id: ear-sd-closer
+title: 'Same or different: closer'
+kind: ear
+prompt: Closer now. Listen to both notes to the end.
+questions: 20
+reps: 3
+days: 2
+items:
+- type: compare
+  pool:
+  - same
+  - different
+  range:
+  - C3
+  - C6
+  gap:
+  - 3
+  - 6

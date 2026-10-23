@@ -1,29 +1,39 @@
 id: two-octave-c-together
 title: Two octaves, hands together
-unit: two-octave-scales
-skills: [scales, hands-together, contrary-motion]
+skills:
+- scales
+- hands-together
+- contrary-motion
 steps:
 - explain: |
     Hands together is easiest first in **contrary motion**: the hands move away from each other,
     like a mirror. Then the same fingers play at the same time in both hands, and both thumbs pass
     under together.
   sound: C4+C5:e B3+D5:e A3+E5:e G3+F5:e F3+G5:e E3+A5:e D3+B5:e C3+C6:q
-  terms: [contrary motion]
+  terms:
+  - contrary motion
 - explain: |
     Start with the left hand's thumb on middle C and the right hand's thumb on the C above it.
-  keys: {notes: C4 C5, labels: fingers, fingers: 1 1}
+  keys:
+    notes: C4 C5
+    labels: fingers
+    fingers: 1 1
   check:
     ask: In contrary motion, when the right thumb passes under, the left hand...
-    choices: [Passes its thumb under too, Crosses 3 over, Stays still]
+    choices:
+    - Passes its thumb under too
+    - Crosses 3 over
+    - Stays still
     correct: 0
     why: In a mirror, both hands do the same thing at the same time.
-- {exercise: c-contrary-2oct}
+- exercise: c-contrary-2oct
 - explain: |
     Now **parallel motion**: both hands go the same way, an octave apart. The thumbs no longer
     cross together, so this is the hard one. Say the left hand's fingers out loud if it helps.
-    If one hand stumbles, go back to hands apart for a minute: *hands apart, then together*.
-  terms: [parallel motion]
+    If one hand stumbles, play it alone for a minute, then join the other hand again.
+  terms:
+  - parallel motion
   callout: |
     Hard spots: where one hand's thumb tucks under and the other hand crosses over.
-- {exercise: c-scale-2oct-ht}
+- exercise: c-scale-2oct-ht
 recap: Contrary motion is a mirror; parallel motion needs each hand to know its own crossings.

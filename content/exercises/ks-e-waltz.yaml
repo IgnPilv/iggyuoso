@@ -1,0 +1,12 @@
+id: ks-e-waltz
+title: 'E major: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: E
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G#4:h B4:q | A4:h C#5:q | F#4:h D#4:q | E4:h.
+left: E3:q G#3+B3:q G#3+B3:q | A2:q C#3+E3+A3:q C#3+E3+A3:q | B2:q D#3+A3:q D#3+A3:q | B2+E3+G#3:h.

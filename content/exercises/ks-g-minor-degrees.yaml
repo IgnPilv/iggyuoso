@@ -1,0 +1,18 @@
+id: ks-g-minor-degrees
+title: Every degree of G minor
+kind: ear
+cadence: Gm
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Gm
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

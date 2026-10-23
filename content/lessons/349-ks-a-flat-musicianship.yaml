@@ -1,0 +1,25 @@
+id: ks-a-flat-musicianship
+title: Reading and hearing A♭ major
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: A♭ major, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: Ab4:q Bb4:q C5:q Db5:q Eb5:q F5:q G5:q Ab5:q
+    key: Ab
+  sound: Ab4:q Bb4:q C5:q Db5:q Eb5:q F5:q G5:q Ab5:q
+- exercise: ks-a-flat-quiz
+- exercise: ks-a-flat-triads
+- exercise: ks-a-flat-read
+- exercise: ks-a-flat-read-bass
+- exercise: ks-a-flat-sight
+- exercise: ks-a-flat-sight-rh
+- exercise: ks-a-flat-sight-lh
+- exercise: ks-a-flat-intervals
+- exercise: ks-a-flat-degrees
+- exercise: ks-a-flat-echo
+recap: A♭ major for the eyes and ears.

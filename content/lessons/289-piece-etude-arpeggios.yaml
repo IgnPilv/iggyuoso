@@ -1,0 +1,23 @@
+id: piece-etude-arpeggios
+title: Arpeggio Study
+skills:
+- repertoire
+steps:
+- explain: |
+    **Arpeggio Study** · Our own piece
+
+    Arpeggios across two octaves of the right hand, over a slow bass: C, A minor, F, G, C.
+  staff:
+    notes: C4:e E4:e G4:e C5:e E5:e C5:e G4:e E4:e  |  A3:e C4:e E4:e A4:e C5:e A4:e E4:e C4:e
+  sound: C4:e E4:e G4:e C5:e E5:e C5:e G4:e E4:e  |  A3:e C4:e E4:e A4:e C5:e A4:e E4:e C4:e  |  F3:e A3:e C4:e F4:e A4:e
+    F4:e C4:e A3:e  |  G3:e B3:e D4:e G4:e B4:e G4:e D4:e B3:e
+- explain: |
+    **How to learn it.** Thumb under after the third note going up; let the wrist glide.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-arpeggios-tap
+- exercise: piece-etude-arpeggios-rh
+- exercise: piece-etude-arpeggios-lh
+- exercise: piece-etude-arpeggios
+- exercise: piece-etude-arpeggios-polish
+recap: 'Arpeggio Study: learned hands alone, then together, then performed.'

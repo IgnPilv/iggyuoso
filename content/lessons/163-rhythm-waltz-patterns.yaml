@@ -1,0 +1,15 @@
+id: rhythm-waltz-patterns
+title: Waltz rhythms in 3/4
+skills:
+- rhythm
+steps:
+- explain: |
+    In 3/4 every bar has three beats: **ONE** two three. A waltz puts a low note on ONE and two
+    light chords on two and three: **oom-pah-pah**.
+  sound: C3:q E4+G4:q E4+G4:q | C3:q E4+G4:q E4+G4:q
+- exercise: rt-waltz-1
+- exercise: rt-waltz-oompah
+- exercise: rt-waltz-melody
+- exercise: ear-rt-waltz
+- exercise: gen-read-waltz-hands
+recap: 'ONE two three: the feel of every waltz.'

@@ -1,0 +1,12 @@
+id: dom7-d-flat
+title: The dominant 7th in D♭ major
+kind: timed
+hand: together
+prompt: Four notes of the dominant 7th, then the chord, then it resolves home.
+key: Db
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Ab4:q C5:q Eb5:q Gb5:q | Ab5:h C5+Eb5+Gb5:h | Db5:q F5:q Ab5:q F5:q | Db5+F5+Ab5:w
+left: Ab2:w | Ab2:w | Db3:w | Db3:w

@@ -1,0 +1,13 @@
+id: ks-a-broken
+title: 'A major: broken chords'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with broken chords in the left hand.
+key: A
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#5:h E5:h | D5:h F#5:h | B4:h G#4:h | A4:w
+left: A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | E3:e B3:e G#3:e B3:e E3:e B3:e
+  G#3:e B3:e | A2+C#3+E3:w

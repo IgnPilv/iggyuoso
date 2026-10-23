@@ -1,0 +1,12 @@
+id: piece-etude-left-hand-melody-tap
+title: 'Left-Hand Song: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 80
+meter: 4/4
+countIn: 1
+right: x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w
+left: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w
+reps: 2
+days: 1

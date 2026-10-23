@@ -1,0 +1,14 @@
+id: scale-c-sharp-minor-1-e
+title: C♯ minor harmonic scale, one octave, eighths
+kind: timed
+hand: together
+prompt: 'Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.'
+key: C#m
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#4:e D#4:e E4:e F#4:e G#4:e A4:e B#4:e C#5:e | B#4:e A4:e G#4:e F#4:e E4:e D#4:e C#4:q
+left: C#3:e D#3:e E3:e F#3:e G#3:e A3:e B#3:e C#4:e | B#3:e A3:e G#3:e F#3:e E3:e D#3:e C#3:q
+rightFingers: 3 4 1 2 3 1 2 3 2 1 3 2 1 4 3
+leftFingers: 3 2 1 4 3 2 1 3 1 2 3 4 1 2 3

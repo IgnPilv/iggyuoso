@@ -1,0 +1,16 @@
+id: gen-workout-4-read-long
+title: Read eight bars
+kind: generated
+generator: rhythm-read
+tempo: 60
+meter: 4/4
+durations:
+- q
+- q.
+- e
+- s
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 3

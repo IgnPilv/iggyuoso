@@ -1,0 +1,9 @@
+id: rt-together-h-over-q
+title: Right halves, left quarters
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:h x:h | x:h x:h | x:h x:h | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w

@@ -1,0 +1,25 @@
+id: ear-dom7-maj7-min7
+title: Three seventh chords
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: chord
+  pool:
+  - dom7
+  - maj7
+  - min7
+  root: C4
+- type: chord
+  pool:
+  - dom7
+  - maj7
+  - min7
+  root: F3
+- type: chord
+  pool:
+  - dom7
+  - maj7
+  - min7
+  root: G3

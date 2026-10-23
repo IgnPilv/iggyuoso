@@ -1,0 +1,16 @@
+id: song-sailors-song-in-am
+title: Sailor's Song in D Minor in A minor
+kind: timed
+hand: together
+prompt: 'The same song moved to A minor: think in degrees, and mind the key signature.'
+display: staff
+key: Am
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A3:q C4:q E4:q E4:q | D4:q C4:q B3:h | G3:q B3:q D4:q D4:q | C4:q B3:q A3:h | E4:q E4:q E4:q C4:q | D4:q D4:q D4:q
+  B3:q | C4:q B3:q A3:q G#3:q | A3:w
+left: A2:w | A2:h E3:h | G2:w | A2:w | A2:w | G2:w | A2:h E3:h | A2:w
+reps: 2
+days: 1

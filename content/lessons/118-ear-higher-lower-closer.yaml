@@ -1,0 +1,13 @@
+id: ear-higher-lower-closer
+title: Higher or lower, closer and closer
+skills:
+- ear
+steps:
+- explain: |
+    You can tell high from low when the notes are far apart. Now the notes come closer: a few
+    keys apart, then neighbours. Sing or hum the two notes if it helps: your voice knows which way it moved.
+  sound: C4:h D4:h | E4:h D4:h
+- exercise: ear-hl-medium
+- exercise: ear-hl-steps
+- exercise: ear-hl-same-too
+recap: 'Up, down or the same: the three things a melody can do from one note to the next.'

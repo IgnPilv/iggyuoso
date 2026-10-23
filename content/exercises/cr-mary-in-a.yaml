@@ -1,0 +1,15 @@
+id: cr-mary-in-a
+title: Mary in A major
+kind: timed
+hand: together
+display: staff
+key: A
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#5:q B4:q A4:q B4:q | C#5:q C#5:q C#5:h | B4:q B4:q B4:h | C#5:q E5:q E5:h | C#5:q B4:q A4:q B4:q | C#5:q C#5:q C#5:q
+  C#5:q | B4:q B4:q C#5:q B4:q | A4:w
+left: A2+C#3+E3:w | A2+C#3+E3:w | B2+E3+G#3:w | C#3+E3+A3:w | C#3+E3+A3:w | C#3+E3+A3:w | B2+E3+G#3:w | C#3+E3+A3:w
+reps: 2
+days: 1

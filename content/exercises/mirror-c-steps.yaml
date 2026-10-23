@@ -1,0 +1,12 @@
+id: mirror-c-steps
+title: Mirror steps
+kind: timed
+hand: together
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:h D4:h | E4:h D4:h | C4:h D4:h | C4:w
+left: C3:h B2:h | A2:h B2:h | C3:h B2:h | C3:w
+rightFingers: 1 2 3 2 1 2 1
+leftFingers: 1 2 3 2 1 2 1

@@ -1,0 +1,15 @@
+id: cr-mary-in-e
+title: Mary in E major
+kind: timed
+hand: together
+display: staff
+key: E
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G#4:q F#4:q E4:q F#4:q | G#4:q G#4:q G#4:h | F#4:q F#4:q F#4:h | G#4:q B4:q B4:h | G#4:q F#4:q E4:q F#4:q | G#4:q G#4:q
+  G#4:q G#4:q | F#4:q F#4:q G#4:q F#4:q | E4:w
+left: E3+G#3+B3:w | E3+G#3+B3:w | D#3+F#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | D#3+F#3+B3:w | E3+G#3+B3:w
+reps: 2
+days: 1

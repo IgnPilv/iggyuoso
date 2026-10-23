@@ -1,0 +1,16 @@
+id: technique-triads-c-f-g
+title: Three chords, both hands
+skills:
+- technique
+steps:
+- explain: |
+    A **triad** is three notes a skip apart: fingers 1, 3 and 5. Play it **broken** (one at a time),
+    then **blocked** (all at once), while the left hand plays the root and the fifth.
+  keys:
+    notes: C4 E4 G4
+    fingers: 1 3 5
+  sound: C4:q E4:q G4:q E4:q | C4+E4+G4:w
+- exercise: triad-c
+- exercise: triad-f
+- exercise: triad-g
+recap: 'Broken and blocked: the two ways to play a chord.'

@@ -1,0 +1,27 @@
+id: ks-e-flat
+title: 'Key study: E♭ major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: E♭ major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in E♭ major. Its chords: **E♭**, **A♭** and **B♭7**.
+  staff:
+    notes: Eb4:q F4:q G4:q Ab4:q Bb4:q C5:q D5:q Eb5:q
+    key: Eb
+  sound: Eb4:q F4:q G4:q Ab4:q Bb4:q C5:q D5:q Eb5:q
+- exercise: ks-e-flat-thirds
+- exercise: triad-e-flat
+- exercise: dom7-e-flat
+- exercise: scale-e-flat-1-e
+- exercise: scale-e-flat-2-e
+- exercise: scale-e-flat-contrary
+- exercise: ks-e-flat-pedal
+- exercise: ks-e-flat-harmonised-scale
+- exercise: ks-e-flat-chord-pattern
+- exercise: ks-e-flat-inversions
+- exercise: ks-e-flat-broken
+- exercise: ks-e-flat-alberti
+- exercise: ks-e-flat-pulse
+- exercise: ks-e-flat-waltz
+recap: E♭ major under both hands.

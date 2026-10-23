@@ -1,0 +1,163 @@
+id: reading-lines-spaces-quiz
+title: Lines, spaces, steps and skips
+kind: quiz
+shuffle: true
+reps: 2
+days: 1
+questions:
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 0
+  why: The line runs through the middle of the note.
+  staff: E4:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 1
+  why: The note sits between two lines.
+  staff: A4:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 0
+  why: The line runs through the middle of the note.
+  staff: G4:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 1
+  why: The note sits between two lines.
+  staff: C5:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 0
+  why: The line runs through the middle of the note.
+  staff: B4:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 1
+  why: The note sits between two lines.
+  staff: F4:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 0
+  why: The line runs through the middle of the note.
+  staff: D5:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 1
+  why: The note sits between two lines.
+  staff: E5:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 0
+  why: The line runs through the middle of the note.
+  staff: F5:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 1
+  why: The note sits between two lines.
+  staff: A4:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 0
+  why: The line runs through the middle of the note.
+  staff: G4:w
+  clef: treble
+- ask: Line or space?
+  choices:
+  - On a line
+  - In a space
+  correct: 0
+  why: The line runs through the middle of the note.
+  staff: E4:w
+  clef: treble
+- ask: Where does the second note go?
+  choices:
+  - Up a step
+  - Up a skip
+  - Down a step
+  - Down a skip
+  correct: 1
+  why: A step goes from a line to the next space (or space to line); a skip goes line to line or space to space.
+  staff: E4:h G4:h
+  clef: treble
+- ask: Where does the second note go?
+  choices:
+  - Up a step
+  - Up a skip
+  - Down a step
+  - Down a skip
+  correct: 3
+  why: A step goes from a line to the next space (or space to line); a skip goes line to line or space to space.
+  staff: G4:h E4:h
+  clef: treble
+- ask: Where does the second note go?
+  choices:
+  - Up a step
+  - Up a skip
+  - Down a step
+  - Down a skip
+  correct: 0
+  why: A step goes from a line to the next space (or space to line); a skip goes line to line or space to space.
+  staff: C5:h D5:h
+  clef: treble
+- ask: Where does the second note go?
+  choices:
+  - Up a step
+  - Up a skip
+  - Down a step
+  - Down a skip
+  correct: 3
+  why: A step goes from a line to the next space (or space to line); a skip goes line to line or space to space.
+  staff: F5:h D5:h
+  clef: treble
+- ask: Where does the second note go?
+  choices:
+  - Up a step
+  - Up a skip
+  - Down a step
+  - Down a skip
+  correct: 0
+  why: A step goes from a line to the next space (or space to line); a skip goes line to line or space to space.
+  staff: A4:h B4:h
+  clef: treble
+- ask: Where does the second note go?
+  choices:
+  - Up a step
+  - Up a skip
+  - Down a step
+  - Down a skip
+  correct: 3
+  why: A step goes from a line to the next space (or space to line); a skip goes line to line or space to space.
+  staff: B4:h G4:h
+  clef: treble

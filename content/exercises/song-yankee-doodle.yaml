@@ -1,0 +1,15 @@
+id: song-yankee-doodle
+title: Yankee Doodle
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q C4:q D4:q E4:q | C4:q E4:q D4:q G3:q | C4:q C4:q D4:q E4:q | C4:h B3:h | C4:q C4:q D4:q E4:q | F4:q E4:q D4:q
+  C4:q | B3:q G3:q A3:q B3:q | C4:h C4:h
+left: C3:w | C3:h G2:h | C3:w | C3:h G2:h | C3:w | F2:h G2:h | G2:w | C3:w
+reps: 3
+days: 2

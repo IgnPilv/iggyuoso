@@ -1,0 +1,10 @@
+id: cr-answer-long-short
+title: 'Your answer: long and short'
+kind: tap
+prompt: 'Any keys, this rhythm. Try ending on a low key: it sounds finished.'
+tempo: 80
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:h | x:q x:q x:h | x:h x:q x:q | x:w
+reps: 2
+days: 1

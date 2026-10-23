@@ -1,0 +1,12 @@
+id: lh-close-g
+title: Smooth left-hand chords in G major
+kind: timed
+hand: together
+display: staff
+key: G
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4:h C5:h | A4:h G4:h | B4:q C5:q D5:q B4:q | A4:h G4:h
+left: D3+G3+B3:h C3+E3+G3:h | A2+D3+F#3:h B2+D3+G3:h | B2+D3+G3:w | A2+D3+F#3:h B2+D3+G3:h

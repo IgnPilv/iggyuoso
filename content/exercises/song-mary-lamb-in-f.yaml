@@ -1,0 +1,16 @@
+id: song-mary-lamb-in-f
+title: Mary Had a Little Lamb in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q G4:q F4:q G4:q | A4:q A4:q A4:h | G4:q G4:q G4:h | A4:q C5:q C5:h | A4:q G4:q F4:q G4:q | A4:q A4:q A4:q A4:q
+  | G4:q G4:q A4:q G4:q | F4:w
+left: F2+C3:w | F2+C3:w | C3+G3:w | F2+C3:w | F2+C3:w | F2+C3:w | C3+G3:w | F2+C3:w
+reps: 2
+days: 1

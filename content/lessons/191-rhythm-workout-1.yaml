@@ -1,0 +1,14 @@
+id: rhythm-workout-1
+title: 'Rhythm workout: first values'
+skills:
+- rhythm
+steps:
+- explain: |
+    Fresh rhythms every time, read and by ear, one hand and two. Five minutes a day keeps the reading sharp.
+- exercise: gen-workout-1-read
+- exercise: gen-workout-1-echo
+- exercise: gen-workout-1-read-hands
+- exercise: gen-workout-1-echo-hands
+- exercise: gen-workout-1-read-long
+- exercise: gen-workout-1-echo-long
+recap: 'A daily workout: new rhythms every run.'

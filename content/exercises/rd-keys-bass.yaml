@@ -1,0 +1,17 @@
+id: rd-keys-bass
+title: Bass clef with key signatures
+kind: generated
+generator: read-notes
+clef: bass
+notes: C2-C4
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3500
+keys:
+- G
+- D
+- F
+- Bb
+reps: 4
+days: 2

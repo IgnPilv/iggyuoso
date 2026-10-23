@@ -1,0 +1,31 @@
+id: song-mary-lamb
+title: Mary Had a Little Lamb
+skills:
+- songs
+steps:
+- explain: |
+    **Mary Had a Little Lamb** · Tune by Lowell Mason, words by Sarah Josepha Hale, 1830
+
+    A poem about a real girl whose lamb followed her to school, set to a simple tune in 1830.
+  staff:
+    notes: E4:q D4:q C4:q D4:q  |  E4:q E4:q E4:h
+  sound: E4:q D4:q C4:q D4:q  |  E4:q E4:q E4:h  |  D4:q D4:q D4:h  |  E4:q G4:q G4:h
+- explain: |
+    **Before you play.** Right thumb on C. Only the left hand moves, once, to G in bar 3 and bar 7.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 96
+- exercise: song-mary-lamb-tap
+- exercise: song-mary-lamb-tap-hands
+- exercise: song-mary-lamb-by-ear
+- exercise: song-mary-lamb-rh
+- exercise: song-mary-lamb-lh
+- exercise: song-mary-lamb
+- exercise: song-mary-lamb-arranged
+- exercise: song-mary-lamb-swap
+- exercise: song-mary-lamb-in-g
+- exercise: song-mary-lamb-oompah
+- exercise: song-mary-lamb-performance
+- exercise: song-mary-lamb-in-f
+recap: 'Mary Had a Little Lamb: tune, left hand, together. Come back to it any time; songs are for fun.'

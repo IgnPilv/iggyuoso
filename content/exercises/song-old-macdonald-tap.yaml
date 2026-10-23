@@ -1,0 +1,11 @@
+id: song-old-macdonald-tap
+title: 'Old MacDonald Had a Farm: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 100
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:h. x:q | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w
+reps: 2
+days: 1

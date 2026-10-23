@@ -1,0 +1,15 @@
+id: piece-etude-chords-in-eb-lh
+title: 'Chorale in E♭: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: Eb
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: Eb3+G3+Bb3:w | Eb3+G3+Bb3:w | C3+Eb3+Ab3:h Bb2+Eb3+G3:h | Bb2+D3+Ab3:h Bb2+Eb3+G3:h | Bb2+Eb3+G3:h Bb2+D3+F3:h | Bb2+Eb3+G3:h
+  C3+Eb3+Ab3:h | Bb2+Eb3+G3:h Bb2+D3+Ab3:h | Bb2+Eb3+G3:w
+reps: 2
+days: 1

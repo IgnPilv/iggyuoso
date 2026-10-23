@@ -1,0 +1,24 @@
+id: theory-passing-notes
+title: Chord notes and passing notes
+skills:
+- theory
+steps:
+- explain: |
+    A melody mixes **chord notes** with notes that join them. A **passing note** steps between two chord notes;
+    a **neighbour note** steps away from one and comes back.
+  staff:
+    notes: C4:q D4:q E4:q F4:q | G4:h E4:h
+  terms:
+  - passing note
+  - neighbour note
+  - chord note
+  check:
+    ask: 'Over C: C D E. D is...'
+    choices:
+    - A chord note
+    - A neighbour note
+    - A passing note
+    correct: 2
+    why: C and E are in the chord; D passes between.
+- exercise: theory-passing-notes-quiz
+recap: Chord notes on the beat, passing notes between.

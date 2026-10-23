@@ -1,0 +1,14 @@
+id: song-hot-cross-buns
+title: Hot Cross Buns
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q D4:q C4:h | E4:q D4:q C4:h | C4:e C4:e C4:e C4:e D4:e D4:e D4:e D4:e | E4:q D4:q C4:h
+left: C3:w | C3:w | C3:h G2:h | C3:w
+reps: 3
+days: 2

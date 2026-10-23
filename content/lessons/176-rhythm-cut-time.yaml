@@ -1,0 +1,14 @@
+id: rhythm-cut-time
+title: Cut time
+skills:
+- rhythm
+steps:
+- explain: |
+    **Cut time** (2/2, written ¢) counts **half notes** as the beat: two big beats a bar. The music looks
+    like 4/4 but feels twice as relaxed, like a quick march.
+  terms:
+  - cut time
+- exercise: rt-cut-1
+- exercise: rt-cut-hands
+- exercise: gen-read-cut
+recap: 'Cut time: the half note gets the beat.'

@@ -1,0 +1,117 @@
+id: theory-minor-signatures-quiz
+title: Minor keys quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: The relative minor of C major is...
+  choices:
+  - A minor
+  - E♭ minor
+  - B minor
+  - B♭ minor
+  correct: 0
+  why: 'Go down three half steps (a minor 3rd) from C: A. They share a key signature: No sharps or flats.'
+- ask: The relative minor of G major is...
+  choices:
+  - G minor
+  - A minor
+  - E minor
+  - G♯ minor
+  correct: 2
+  why: 'Go down three half steps (a minor 3rd) from G: E. They share a key signature: F♯.'
+- ask: The relative minor of D major is...
+  choices:
+  - B♭ minor
+  - B minor
+  - E minor
+  - C minor
+  correct: 1
+  why: 'Go down three half steps (a minor 3rd) from D: B. They share a key signature: F♯, C♯.'
+- ask: The relative minor of F major is...
+  choices:
+  - B♭ minor
+  - E♭ minor
+  - F♯ minor
+  - D minor
+  correct: 3
+  why: 'Go down three half steps (a minor 3rd) from F: D. They share a key signature: B♭.'
+- ask: The relative minor of B♭ major is...
+  choices:
+  - E♭ minor
+  - B minor
+  - A minor
+  - G minor
+  correct: 3
+  why: 'Go down three half steps (a minor 3rd) from B♭: G. They share a key signature: B♭, E♭.'
+- ask: The relative minor of A major is...
+  choices:
+  - C♯ minor
+  - F♯ minor
+  - B minor
+  - G minor
+  correct: 1
+  why: 'Go down three half steps (a minor 3rd) from A: F♯. They share a key signature: F♯, C♯, G♯.'
+- ask: The relative minor of E♭ major is...
+  choices:
+  - A minor
+  - C minor
+  - F♯ minor
+  - D minor
+  correct: 1
+  why: 'Go down three half steps (a minor 3rd) from E♭: C. They share a key signature: B♭, E♭, A♭.'
+- ask: The relative minor of E major is...
+  choices:
+  - D minor
+  - C♯ minor
+  - B minor
+  - E minor
+  correct: 1
+  why: 'Go down three half steps (a minor 3rd) from E: C♯. They share a key signature: F♯, C♯, G♯, D♯.'
+- ask: The key signature of E minor is...
+  choices:
+  - F♯
+  - B♭
+  - No sharps or flats
+  - B♭, E♭
+  correct: 0
+  why: E minor borrows the signature of its relative major, G major.
+- ask: The key signature of D minor is...
+  choices:
+  - No sharps or flats
+  - F♯
+  - F♯, C♯
+  - B♭
+  correct: 3
+  why: D minor borrows the signature of its relative major, F major.
+- ask: The key signature of B minor is...
+  choices:
+  - F♯
+  - F♯, C♯, G♯
+  - B♭
+  - F♯, C♯
+  correct: 3
+  why: B minor borrows the signature of its relative major, D major.
+- ask: The key signature of G minor is...
+  choices:
+  - B♭, E♭
+  - F♯
+  - F♯, C♯
+  - B♭
+  correct: 0
+  why: G minor borrows the signature of its relative major, B♭ major.
+- ask: A piece has one sharp and ends on E. Its key is probably...
+  choices:
+  - E major
+  - E minor
+  - G major
+  correct: 1
+  why: One sharp is G major or E minor; ending on E points to E minor.
+- ask: A piece has one flat and its melody has C♯ in it. The key is probably...
+  choices:
+  - C major
+  - D minor
+  - F major
+  correct: 1
+  why: C♯ is the raised 7th of D minor (harmonic minor).

@@ -1,0 +1,16 @@
+id: gen-echo-dotted
+title: Echo dotted rhythms
+kind: generated
+generator: rhythm-echo
+tempo: 72
+meter: 4/4
+durations:
+- q
+- q.
+- e
+- h
+bars: 2
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

@@ -1,0 +1,49 @@
+id: theory-minor-spelling-quiz
+title: Spell the minor scales
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Spell the A minor harmonic scale.
+  choices:
+  - A B C D E F G
+  - A B C♯ D E F♯ G♯
+  - A B C D E F G♯
+  correct: 2
+  why: 'Natural minor with the 7th raised: A B C D E F G♯.'
+- ask: Spell the E minor harmonic scale.
+  choices:
+  - E F♯ G A B C D♯
+  - E F♯ G♯ A B C♯ D♯
+  - E F♯ G A B C D
+  correct: 0
+  why: 'Natural minor with the 7th raised: E F♯ G A B C D♯.'
+- ask: Spell the D minor harmonic scale.
+  choices:
+  - D E F♯ G A B C♯
+  - D E F G A B♭ C♯
+  - D E F G A B♭ C
+  correct: 1
+  why: 'Natural minor with the 7th raised: D E F G A B♭ C♯.'
+- ask: Spell the G minor harmonic scale.
+  choices:
+  - G A B♭ C D E♭ F
+  - G A B♭ C D E♭ F♯
+  - G A B C D E F♯
+  correct: 1
+  why: 'Natural minor with the 7th raised: G A B♭ C D E♭ F♯.'
+- ask: Spell the B minor harmonic scale.
+  choices:
+  - B C♯ D E F♯ G A♯
+  - B C♯ D♯ E F♯ G♯ A♯
+  - B C♯ D E F♯ G A
+  correct: 0
+  why: 'Natural minor with the 7th raised: B C♯ D E F♯ G A♯.'
+- ask: Spell the C minor harmonic scale.
+  choices:
+  - C D E F G A B
+  - C D E♭ F G A♭ B♭
+  - C D E♭ F G A♭ B
+  correct: 2
+  why: 'Natural minor with the 7th raised: C D E♭ F G A♭ B.'

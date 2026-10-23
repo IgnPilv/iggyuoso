@@ -1,0 +1,12 @@
+id: rd-high-treble
+title: High in the treble
+kind: generated
+generator: read-notes
+clef: treble
+notes: C5-C6
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 4
+days: 2

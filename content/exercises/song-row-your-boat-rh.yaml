@@ -1,0 +1,14 @@
+id: song-row-your-boat-rh
+title: 'Row, Row, Row Your Boat: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C4:q. C4:q. | C4:q D4:e E4:q. | E4:q D4:e E4:q F4:e | G4:h. | C5:e C5:e C5:e G4:e G4:e G4:e | E4:e E4:e E4:e C4:e C4:e
+  C4:e | G4:q F4:e E4:q D4:e | C4:h.
+reps: 2
+days: 1

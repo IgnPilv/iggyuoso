@@ -1,0 +1,12 @@
+id: m9-octaves
+title: Octaves
+kind: timed
+hand: together
+tempo: 72
+meter: 4/4
+countIn: 1
+right: C4+C5:q D4+D5:q E4+E5:q F4+F5:q | G4+G5:q A4+A5:q B4+B5:q C5+C6:q | B4+B5:q A4+A5:q G4+G5:q F4+F5:q | E4+E5:q D4+D5:q
+  C4+C5:h
+left: C3:w | C3:w | G2:w | C3:w
+reps: 1
+days: 1

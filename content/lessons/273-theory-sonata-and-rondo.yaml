@@ -1,0 +1,24 @@
+id: theory-sonata-and-rondo
+title: Rondo and sonata form
+skills:
+- theory
+steps:
+- explain: |
+    Bigger forms. **Rondo**: A B A C A, the main theme returns between episodes. **Sonata form**: an **exposition**
+    (two themes, the second in a new key), a **development** (the themes travel), a **recapitulation** (both themes at home).
+  terms:
+  - rondo
+  - sonata form
+  - exposition
+  - development
+  - recapitulation
+  check:
+    ask: In sonata form, the themes come home in the...
+    choices:
+    - Recapitulation
+    - Exposition
+    - Development
+    correct: 0
+    why: 'Recap = recap: everything returns in the tonic.'
+- exercise: theory-big-forms-quiz
+recap: Themes leave and come home.

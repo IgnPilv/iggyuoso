@@ -1,0 +1,24 @@
+id: cadence-types
+title: Four cadences
+skills:
+- theory
+steps:
+- explain: |
+    A **cadence** is the chord pair that ends a phrase. **Perfect** V–I (full stop), **plagal** IV–I ("Amen"), **imperfect**
+    ends on V (comma), **interrupted** V–vi (surprise).
+  sound: C4+E4+G4:h G3+B3+D4:h | C4+E4+G4:w
+  terms:
+  - perfect
+  - plagal
+  - imperfect
+  - interrupted
+  check:
+    ask: A phrase ending on V is...
+    choices:
+    - Perfect
+    - Imperfect
+    - Plagal
+    correct: 1
+    why: Ending on the dominant leaves it open.
+- exercise: theory-cadences-quiz
+recap: Full stop, Amen, comma, surprise.

@@ -1,0 +1,11 @@
+id: dom7-c
+title: The dominant 7th in C major
+kind: timed
+hand: together
+prompt: Four notes of the dominant 7th, then the chord, then it resolves home.
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q B4:q D5:q F5:q | G5:h B4+D5+F5:h | C5:q E5:q G5:q E5:q | C5+E5+G5:w
+left: G2:w | G2:w | C3:w | C3:w

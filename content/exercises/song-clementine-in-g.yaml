@@ -1,0 +1,17 @@
+id: song-clementine-in-g
+title: Oh My Darling, Clementine in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: G4:e G4:e | G4:q D4:q B4:e B4:e | B4:q G4:q G4:e B4:e | D5:q. C5:e B4:e A4:e | A4:h A4:e B4:e | C5:q C5:q B4:e A4:e
+  | B4:q G4:q G4:e B4:e | A4:q. D4:e F#4:e A4:e | G4:h
+left: r:q | G2:h. | G2:h. | G2:h. | D3:h. | D3:h. | G2:h. | D3:h. | G2:h
+reps: 2
+days: 1

@@ -1,0 +1,15 @@
+id: ear-rt-68
+title: Which 6/8 bar?
+kind: ear
+questions: 15
+reps: 2
+days: 2
+items:
+- type: rhythm
+  pool:
+  - x:q x:e x:q x:e
+  - x:e x:e x:e x:e x:e x:e
+  - x:q. x:q.
+  - x:q x:e x:e x:e x:e
+  meter: 6/8
+  tempo: 60

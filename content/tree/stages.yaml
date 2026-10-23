@@ -1,0 +1,29 @@
+# The trunk of the tree: the stages between milestones. Format: content/README.md, "Mastery tree".
+stages:
+  - stage: 1
+    title: First notes
+    summary: Find your way round the keys, read your first notes, keep a steady beat, and start hearing high and low.
+  - stage: 2
+    title: Two hands
+    summary: Both hands at once, first chords, the keys of G and F, and hearing home and away.
+  - stage: 3
+    title: Scales and eighths
+    summary: Thumb under, scales in C, G and F, eighth and dotted notes, minor five-finger positions and a first recital.
+  - stage: 4
+    title: Two octaves and minor keys
+    summary: Two-octave scales, reading hands together, ties and sixteenths, and the three minor scales.
+  - stage: 5
+    title: Chords and harmony
+    summary: Inversions, the primary chords, harmonising a melody, triplets and accompaniment patterns.
+  - stage: 6
+    title: Pedal and four kinds of piece
+    summary: The sustain pedal, more keys, syncopation and 3/8, and an etude, a minuet, variations and a song without words.
+  - stage: 7
+    title: Flat keys and compound time
+    summary: B flat and E flat, C and G minor, two-octave arpeggios, and music in 6/8, 9/8 and 12/8.
+  - stage: 8
+    title: Arpeggios and the dominant seventh
+    summary: Arpeggios in more keys, the dominant seventh and where it pulls, four kinds of cadence, three against two.
+  - stage: 9
+    title: Form, sonatinas and the blues
+    summary: How pieces are built, a sonatina, a twelve-bar blues with shell chords, and keys to four sharps and flats.

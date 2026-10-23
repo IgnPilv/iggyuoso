@@ -1,0 +1,11 @@
+id: rt-ties-across
+title: Ties across the bar
+kind: timed
+hand: together
+prompt: Right hand on C5, left hand on C3 and G2.
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:q C5:q C5:h~ | C5:q C5:q C5:h | C5:h. C5:q~ | C5:w
+left: C3:w | G2:w | C3:w | C3:w

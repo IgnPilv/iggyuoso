@@ -1,0 +1,13 @@
+id: ks-c-sharp-minor-pedal
+title: 'C♯ minor: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: C#m
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:h G#4:h | F#4:h A4:h | D#4:h B#3:h | C#4:w
+left: C#3:q G#3:q C#4:q G#3:q | F#2:q C#3:q F#3:q C#3:q | G#2:q D#3:q G#3:q D#3:q | C#3+E3+G#3:w
+pedal: x:w | x:w | x:w | x:w

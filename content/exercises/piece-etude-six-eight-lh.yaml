@@ -1,0 +1,15 @@
+id: piece-etude-six-eight-lh
+title: 'Study in 6/8: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e
+  A3:e F#3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3+G3+B3:h.
+reps: 2
+days: 1

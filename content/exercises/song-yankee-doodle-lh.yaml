@@ -1,0 +1,13 @@
+id: song-yankee-doodle-lh
+title: 'Yankee Doodle: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:w | C3:h G2:h | C3:w | C3:h G2:h | C3:w | F2:h G2:h | G2:w | C3:w
+reps: 2
+days: 1

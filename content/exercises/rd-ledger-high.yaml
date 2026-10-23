@@ -1,0 +1,12 @@
+id: rd-ledger-high
+title: High ledger lines
+kind: generated
+generator: read-notes
+clef: treble
+notes: A5-E6
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 4
+days: 2

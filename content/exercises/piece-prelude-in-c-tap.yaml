@@ -1,0 +1,15 @@
+id: piece-prelude-in-c-tap
+title: 'Prelude in C: the opening: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 60
+meter: 4/4
+countIn: 1
+right: r:e x:s x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s | r:e x:s x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s |
+  r:e x:s x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s | r:e x:s x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s | r:e
+  x:s x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s | r:e x:s x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s | r:e x:s
+  x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s | r:e x:s x:s x:s x:s x:s x:s r:e x:s x:s x:s x:s x:s x:s
+left: x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:h x:h
+reps: 2
+days: 1

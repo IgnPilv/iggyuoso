@@ -1,0 +1,18 @@
+id: technique-positions-all-keys
+title: Positions in every key
+skills:
+- technique
+steps:
+- explain: |
+    The five-finger shape in the rest of the twelve keys. Find the key note, then trust the shape: whole, whole, half, whole.
+- exercise: pos-b
+- exercise: pos-f-sharp
+- exercise: pos-b-flat
+- exercise: pos-e-flat
+- exercise: pos-a-flat
+- exercise: pos-d-flat
+- exercise: pos-b-minor
+- exercise: pos-f-sharp-minor
+- exercise: pos-c-minor
+- exercise: pos-f-minor
+recap: Every key has the same five-finger shape.

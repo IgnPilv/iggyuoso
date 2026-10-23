@@ -1,0 +1,12 @@
+id: rhythm-shuffle
+title: Swing and shuffle
+skills:
+- rhythm
+steps:
+- explain: |
+    **Swing**: pairs of eighths played long-short, like a triplet with the middle note tied. Blues, jazz and
+    rock and roll all shuffle. Here it is written out as quarter-triplet plus eighth-triplet.
+  sound: C5:q3 C5:e3 C5:q3 C5:e3 C5:q3 C5:e3 C5:q3 C5:e3
+- exercise: rt-shuffle-1
+- exercise: rt-shuffle-hands
+recap: 'Swing: long-short, the feel of the blues.'

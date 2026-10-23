@@ -1,0 +1,14 @@
+id: piece-eine-kleine-rh
+title: 'Eine kleine Nachtmusik: the opening: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: G
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q r:e D4:e G4:q r:e D4:e | G4:e D4:e G4:e B4:e D5:h | C5:q r:e A4:e C5:q r:e A4:e | C5:e A4:e F#4:e A4:e D4:h
+reps: 2
+days: 1

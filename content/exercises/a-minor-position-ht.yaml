@@ -1,0 +1,12 @@
+id: a-minor-position-ht
+title: A minor position, hands together
+kind: timed
+hand: together
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q B4:q C5:q D5:q | E5:w | E5:q D5:q C5:q B4:q | A4:w
+left: A3:q B3:q C4:q D4:q | E4:w | E4:q D4:q C4:q B3:q | A3:w
+rightFingers: 1 2 3 4 5 5 4 3 2 1
+leftFingers: 5 4 3 2 1 1 2 3 4 5

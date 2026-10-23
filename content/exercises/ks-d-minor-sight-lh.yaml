@@ -1,0 +1,18 @@
+id: ks-d-minor-sight-lh
+title: Sight-read the left hand in D minor
+kind: generated
+generator: sight-read
+hand: left
+clef: bass
+tempo: 66
+notes: D3-D4
+keys:
+- Dm
+durations:
+- q
+- h
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

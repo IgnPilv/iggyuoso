@@ -1,0 +1,11 @@
+id: ear-loudness-one
+title: 'Louder or softer: one note'
+kind: ear
+questions: 12
+reps: 2
+days: 1
+items:
+- type: loudness
+  pool:
+  - loud
+  - soft

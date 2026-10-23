@@ -1,0 +1,14 @@
+id: ear-rt-subdiv
+title: Two, three or four to a beat?
+kind: ear
+questions: 15
+reps: 2
+days: 2
+items:
+- type: rhythm
+  pool:
+  - x:e x:e x:e x:e x:e x:e x:e x:e
+  - x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3
+  - x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s
+  meter: 4/4
+  tempo: 60

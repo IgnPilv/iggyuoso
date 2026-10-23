@@ -1,0 +1,9 @@
+id: rt-offbeat-1
+title: Right on the "and"
+kind: tap
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:e x:e r:e x:e r:e x:e r:e x:e | r:e x:e r:e x:e r:e x:e r:e x:e | r:e x:e r:e x:e x:h | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:h | x:w

@@ -1,0 +1,12 @@
+id: ear-scale-steps
+title: 'One, two, three: steps of the scale'
+skills:
+- ear
+steps:
+- explain: |
+    After the chords that set the key, you hear degree 1, 2 or 3 of the scale: C, D or E in C major.
+    1 sounds like home, 2 wants to move, 3 sounds sweet and stable.
+  sound: C4:q D4:q E4:h
+- exercise: ear-degrees-123
+- exercise: ear-degrees-12345
+recap: In a key, every note has a feeling. Learn the feeling and the note follows.

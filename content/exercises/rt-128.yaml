@@ -1,0 +1,10 @@
+id: rt-128
+title: A 12/8 groove
+kind: tap
+tempo: 50
+tempoLadder: true
+meter: 12/8
+countIn: 1
+right: x:q x:e x:q x:e x:q x:e x:q x:e | x:e x:e x:e x:q. x:e x:e x:e x:q. | x:q x:e x:q x:e x:q x:e x:q x:e | x:q. x:q. x:q.
+  x:q.
+left: x:q. x:q. x:q. x:q. | x:q. x:q. x:q. x:q. | x:q. x:q. x:q. x:q. | x:q. x:q. x:q. x:q.

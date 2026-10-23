@@ -1,0 +1,16 @@
+id: technique-mirror-all-keys
+title: The mirror in every key
+skills:
+- technique
+steps:
+- explain: |
+    Contrary motion from the key note in eight keys.
+- exercise: mirror-d
+- exercise: mirror-a
+- exercise: mirror-e
+- exercise: mirror-b-flat
+- exercise: mirror-e-flat
+- exercise: mirror-e-minor
+- exercise: mirror-g-minor
+- exercise: mirror-c-minor
+recap: The mirror works everywhere.

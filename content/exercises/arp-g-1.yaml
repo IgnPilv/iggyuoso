@@ -1,0 +1,14 @@
+id: arp-g-1
+title: G major arpeggio, one octave
+kind: timed
+hand: together
+prompt: Stretch the hand over the chord; keep the wrist loose.
+key: G
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q B4:q D5:q G5:q | D5:q B4:q G4:h
+left: G3:q B3:q D4:q G4:q | D4:q B3:q G3:h
+rightFingers: 1 2 3 5 3 2 1
+leftFingers: 5 4 2 1 2 4 5

@@ -1,0 +1,22 @@
+id: piece-etude-left-hand-melody
+title: Left-Hand Song
+skills:
+- repertoire
+steps:
+- explain: |
+    **Left-Hand Song** · Our own study
+
+    This time the left hand sings and the right hand holds soft chords.
+  staff:
+    notes: E4+G4:w  |  F4+A4:w
+  sound: E4+G4:w  |  F4+A4:w  |  D4+G4:w  |  E4+G4:w
+- explain: |
+    **How to learn it.** Bring the left hand out; keep the right-hand chords quiet.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-left-hand-melody-tap
+- exercise: piece-etude-left-hand-melody-rh
+- exercise: piece-etude-left-hand-melody-lh
+- exercise: piece-etude-left-hand-melody
+- exercise: piece-etude-left-hand-melody-polish
+recap: 'Left-Hand Song: learned hands alone, then together, then performed.'

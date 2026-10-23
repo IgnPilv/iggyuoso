@@ -1,0 +1,12 @@
+id: lh-close-eb
+title: Smooth left-hand chords in E♭ major
+kind: timed
+hand: together
+display: staff
+key: Eb
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:h Ab4:h | F4:h Eb4:h | G4:q Ab4:q Bb4:q G4:q | F4:h Eb4:h
+left: Eb3+G3+Bb3:h C3+Eb3+Ab3:h | Bb2+D3+Ab3:h Bb2+Eb3+G3:h | Bb2+Eb3+G3:w | Bb2+D3+Ab3:h Bb2+Eb3+G3:h

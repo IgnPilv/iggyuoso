@@ -1,0 +1,15 @@
+id: cr-mary-in-g
+title: Mary in G major
+kind: timed
+hand: together
+display: staff
+key: G
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4:q A4:q G4:q A4:q | B4:q B4:q B4:h | A4:q A4:q A4:h | B4:q D5:q D5:h | B4:q A4:q G4:q A4:q | B4:q B4:q B4:q B4:q
+  | A4:q A4:q B4:q A4:q | G4:w
+left: D3+G3+B3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w
+reps: 2
+days: 1

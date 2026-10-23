@@ -1,0 +1,14 @@
+id: piece-etude-rocking-thirds-lh
+title: 'Rocking Thirds: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: G
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: G2:w | C3:w | D3:w | G2:w
+reps: 2
+days: 1

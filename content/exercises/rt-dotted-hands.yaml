@@ -1,0 +1,9 @@
+id: rt-dotted-hands
+title: Dotted over a steady bass
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q. x:e x:q x:q | x:q. x:e x:h | x:q. x:e x:q. x:e | x:w
+left: x:h x:h | x:h x:h | x:h x:h | x:w

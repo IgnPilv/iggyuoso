@@ -1,0 +1,22 @@
+id: piece-blues-in-c
+title: Blues in C
+skills:
+- repertoire
+steps:
+- explain: |
+    **Blues in C** · Our own piece
+
+    Twelve bars of blues: a boogie left hand and a right hand built from the blues scale.
+  staff:
+    notes: G4:q Bb4:q C5:h  |  G4:q Bb4:q C5:q Eb5:q
+  sound: G4:q Bb4:q C5:h  |  G4:q Bb4:q C5:q Eb5:q  |  C5:q Bb4:q G4:h  |  Bb4:q G4:q C5:h
+- explain: |
+    **How to learn it.** Learn the left hand until it runs by itself. Then the right hand can talk over it.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-blues-in-c-tap
+- exercise: piece-blues-in-c-rh
+- exercise: piece-blues-in-c-lh
+- exercise: piece-blues-in-c
+- exercise: piece-blues-in-c-polish
+recap: 'Blues in C: learned hands alone, then together, then performed.'

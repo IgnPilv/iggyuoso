@@ -1,0 +1,15 @@
+id: song-joy-to-the-world-tap-hands
+title: 'Joy to the World: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 88
+meter: 4/4
+countIn: 1
+right: x:h x:q. x:e | x:h. x:q | x:h x:h | x:h. x:q | x:h. x:q | x:h. x:q | x:h. x:q | x:q x:q x:q x:q | x:q. x:e x:q x:q
+  | x:q x:q x:q x:q | x:q. x:e x:q x:q | x:q x:q x:q x:e x:e | x:h. x:e x:e | x:q x:q x:q x:e x:e | x:h. x:e x:e | x:q x:h
+  x:q | x:q. x:e x:q x:q | x:h x:h | x:w
+left: x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:h x:h
+  | x:w
+reps: 2
+days: 1

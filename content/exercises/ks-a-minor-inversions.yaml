@@ -1,0 +1,13 @@
+id: ks-a-minor-inversions
+title: 'A minor: climbing the inversions'
+kind: timed
+hand: together
+prompt: 'Root position, first inversion, second inversion, octave: the same chord climbing. The left hand holds the root.'
+key: Am
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4+C5+E5:q C5+E5+A5:q E5+A5+C6:q A5+C6+E6:q | E5+A5+C6:q C5+E5+A5:q A4+C5+E5:h | D5+F5+A5:q F5+A5+D6:q A5+D6+F6:q D6+F6+A6:q
+  | A4+C5+E5:w
+left: A2:w | A2:w | D3:w | A2:w

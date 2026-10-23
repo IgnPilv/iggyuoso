@@ -1,0 +1,14 @@
+id: creativity-black-key-tunes
+title: Tunes on the black keys
+skills:
+- creativity
+steps:
+- explain: |
+    The five black keys make a scale that always sounds good together: the **pentatonic scale**. Play any of them
+    in the given rhythm. Make your tune go up, then come back down.
+  keys:
+    notes: C#4 D#4 F#4 G#4 A#4
+  sound: F#4:q G#4:q A#4:q C#5:q | A#4:h F#4:h
+- exercise: cr-black-keys-1
+- exercise: cr-black-keys-hands
+recap: 'Black keys: a scale with no wrong notes.'

@@ -1,0 +1,117 @@
+id: theory-note-values-quiz
+title: Note values quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A half note plus a quarter note last how many beats (in 4/4)?
+  choices:
+  - '4'
+  - '3'
+  - 2½
+  - '6'
+  correct: 1
+  why: 2 + 1 = 3.
+- ask: A quarter note plus a quarter note last how many beats (in 4/4)?
+  choices:
+  - '2'
+  - '3'
+  - '4'
+  - 1½
+  correct: 0
+  why: 1 + 1 = 2.
+- ask: A whole note plus a half note last how many beats (in 4/4)?
+  choices:
+  - '6'
+  - 5½
+  - '12'
+  - '7'
+  correct: 0
+  why: 4 + 2 = 6.
+- ask: A dotted half note plus a quarter note last how many beats (in 4/4)?
+  choices:
+  - '8'
+  - '4'
+  - '5'
+  - 3½
+  correct: 1
+  why: 3 + 1 = 4.
+- ask: A eighth note plus a eighth note last how many beats (in 4/4)?
+  choices:
+  - '3'
+  - '2'
+  - '1'
+  correct: 2
+  why: ½ + ½ = 1.
+- ask: A dotted quarter note plus a eighth note last how many beats (in 4/4)?
+  choices:
+  - '4'
+  - '3'
+  - '2'
+  - 1½
+  correct: 2
+  why: 1½ + ½ = 2.
+- ask: A half note plus a half note last how many beats (in 4/4)?
+  choices:
+  - '4'
+  - '8'
+  - 3½
+  - '5'
+  correct: 0
+  why: 2 + 2 = 4.
+- ask: A quarter note plus a eighth note last how many beats (in 4/4)?
+  choices:
+  - '1'
+  - 1½
+  - '3'
+  - 2½
+  correct: 1
+  why: 1 + ½ = 1½.
+- ask: How many eighth notes fill one quarter note?
+  choices:
+  - '2'
+  - '1'
+  - '4'
+  - '3'
+  correct: 0
+  why: Two eighths = one quarter.
+- ask: How many quarter notes fill a whole note?
+  choices:
+  - '2'
+  - '8'
+  - '4'
+  - '3'
+  correct: 2
+  why: A whole note is four beats.
+- ask: A dot after a note adds...
+  choices:
+  - Double its value
+  - Half its value
+  - One beat
+  correct: 1
+  why: A dotted half = 2 + 1 = 3 beats; a dotted quarter = 1 + ½.
+- ask: This bar in 4/4 is missing one note. Which?
+  choices:
+  - An eighth note
+  - A whole note
+  - A quarter note
+  - A half note
+  correct: 2
+  why: '2 + 1 = 3 beats so far: one more beat is needed.'
+  staff: C5:h C5:q
+- ask: This bar in 3/4 is missing one note. Which?
+  choices:
+  - A half note
+  - A quarter note
+  - A dotted half note
+  correct: 0
+  why: 'One beat so far: two more.'
+  staff: C5:q
+- ask: A half rest lasts...
+  choices:
+  - 2 beats
+  - 1 beat
+  - 4 beats
+  correct: 0
+  why: Rests have the same values as the notes they match.

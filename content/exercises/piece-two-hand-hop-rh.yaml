@@ -1,0 +1,14 @@
+id: piece-two-hand-hop-rh
+title: 'Two-Hand Hop: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:h | r:w | G4:q F4:q E4:q D4:q | C4:w
+fingers: 1 3 5 5 4 3 2 1
+reps: 2
+days: 1

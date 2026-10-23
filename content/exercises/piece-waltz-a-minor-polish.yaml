@@ -1,0 +1,15 @@
+id: piece-waltz-a-minor-polish
+title: 'Little Waltz in A minor: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+key: Am
+tempo: 108
+meter: 3/4
+countIn: 1
+right: E5:h C5:q | B4:h A4:q | G#4:h A4:q | B4:h. | C5:h D5:q | E5:h A4:q | B4:q C5:q B4:q | A4:h.
+left: A2:q C3+E3:q C3+E3:q | A2:q C3+E3:q C3+E3:q | E3:q G#3:q G#3:q | E3:q G#3:q G#3:q | A2:q C3+E3+A3:q C3+E3+A3:q | A2:q
+  C3+E3+A3:q C3+E3+A3:q | E3:q G#3:q G#3:q | C3+E3+A3:h.
+reps: 3
+days: 3

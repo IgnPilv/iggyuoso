@@ -1,0 +1,16 @@
+id: song-clementine-performance
+title: 'Oh My Darling, Clementine: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 104
+meter: 3/4
+pickup: e e
+countIn: 1
+right: C4:e C4:e | C4:q G3:q E4:e E4:e | E4:q C4:q C4:e E4:e | G4:q. F4:e E4:e D4:e | D4:h D4:e E4:e | F4:q F4:q E4:e D4:e
+  | E4:q C4:q C4:e E4:e | D4:q. G3:e B3:e D4:e | C4:h
+left: r:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | G2:q B2+D3+G3:q
+  B2+D3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3+E3+G3:h
+reps: 2
+days: 2

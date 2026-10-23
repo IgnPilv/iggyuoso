@@ -1,0 +1,8 @@
+id: rt-dotted-8th-1
+title: Snappy rhythms
+kind: tap
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:e. x:s x:e. x:s x:q x:q | x:e. x:s x:q x:e. x:s x:q | x:q x:e. x:s x:h | x:w

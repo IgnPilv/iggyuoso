@@ -1,0 +1,15 @@
+id: gen-workout-2-echo-long
+title: Hear four bars, tap them back
+kind: generated
+generator: rhythm-echo
+tempo: 80
+meter: 3/4
+durations:
+- q
+- h
+- r:q
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 3

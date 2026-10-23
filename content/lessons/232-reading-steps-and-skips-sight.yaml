@@ -1,0 +1,12 @@
+id: reading-steps-and-skips-sight
+title: Reading by steps and skips
+skills:
+- reading
+steps:
+- explain: |
+    Short tunes in C position, a new one every time. Find the first note, then read only the **direction and
+    distance**: step up, skip down. Keep going even if you slip.
+- exercise: rd-sight-c-rh
+- exercise: rd-sight-c-lh
+- exercise: rd-c-position-bass
+recap: Read the shape, not every letter.

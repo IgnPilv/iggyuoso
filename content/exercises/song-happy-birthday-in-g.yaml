@@ -1,0 +1,17 @@
+id: song-happy-birthday-in-g
+title: Happy Birthday in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 100
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: D4:e D4:e | E4:q D4:q G4:q | F#4:h D4:e D4:e | E4:q D4:q A4:q | G4:h D4:e D4:e | D5:q B4:q G4:q | F#4:q E4:q C5:e C5:e
+  | B4:q G4:q A4:q | G4:h
+left: r:q | G2:h. | D3:h. | D3:h. | G2:h. | G2:h. | C3:h. | G2:q. D3:q. | G2:h
+reps: 2
+days: 1

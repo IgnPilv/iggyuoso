@@ -1,28 +1,40 @@
 id: transposing
 title: Moving a tune to a new key
-unit: harmonising
-skills: [creativity, transposition, keys]
+skills:
+- creativity
+- transposition
+- keys
 steps:
 - explain: |
     To **transpose** is to play the same tune starting on a different note. Every interval stays
     the same, so it sounds like the same song, just higher or lower.
   sound: G4:q E4:q E4:h | D5:q B4:q B4:h
-  terms: [transpose]
+  terms:
+  - transpose
 - explain: |
     The easy way on the piano: think in **degrees**, not letters. Lightly Row starts on degree 5
     and goes 5 3 3, 4 2 2, 1 2 3 4, 5 5 5.
     In G, degree 5 is D. In F, it's C, and degree 4 is **B♭**. Same fingers, new key.
-  staff: {notes: 'D5:q B4:q B4:h | C5:q A4:q A4:h', key: G}
+  staff:
+    notes: D5:q B4:q B4:h | C5:q A4:q A4:h
+    key: G
   callout: |
     Degrees travel; letters don't.
   check:
     ask: Lightly Row in F starts on degree 5. Which note?
-    choices: [F, C, B♭]
+    choices:
+    - F
+    - C
+    - B♭
     correct: 1
     why: 'F G A B♭ C: degree 5 is C.'
-- {exercise: lightly-row-in-g}
-- {exercise: lightly-row-in-f}
+- exercise: lightly-row-in-g
+- exercise: lightly-row-in-f
+- explain: |
+    A moved tune needs moved chords too. In G the chords are G and D7; in F they are F and C7.
+- exercise: lightly-row-g-ht
+- exercise: lightly-row-f-ht
 - explain: |
     Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
-- {exercise: transposing-quiz}
+- exercise: transposing-quiz
 recap: Think in degrees, and any tune can move to any key.

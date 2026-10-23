@@ -1,0 +1,135 @@
+id: theory-tempo-words-quiz
+title: Italian words quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Allegro means...
+  choices:
+  - Very slow and broad
+  - At a moderate speed
+  - Fast and lively
+  - In a singing style
+  correct: 2
+  why: 'Allegro: fast and lively.'
+- ask: Andante means...
+  choices:
+  - Gradually softer
+  - At a walking pace
+  - Slow
+  - Smoothly connected
+  correct: 1
+  why: 'Andante: at a walking pace.'
+- ask: Adagio means...
+  choices:
+  - Fast and lively
+  - Very slow and broad
+  - Slow
+  - Hold the note longer
+  correct: 2
+  why: 'Adagio: slow.'
+- ask: Moderato means...
+  choices:
+  - Gradually faster
+  - Hold the note longer
+  - At a moderate speed
+  - Short and detached
+  correct: 2
+  why: 'Moderato: at a moderate speed.'
+- ask: Presto means...
+  choices:
+  - Very fast
+  - Gradually slower
+  - Sweetly
+  - Fast and lively
+  correct: 0
+  why: 'Presto: very fast.'
+- ask: Largo means...
+  choices:
+  - Smoothly connected
+  - In a singing style
+  - Very slow and broad
+  - At a moderate speed
+  correct: 2
+  why: 'Largo: very slow and broad.'
+- ask: Ritardando (rit.) means...
+  choices:
+  - Gradually softer
+  - At a walking pace
+  - Short and detached
+  - Gradually slower
+  correct: 3
+  why: 'Ritardando (rit.): gradually slower.'
+- ask: Accelerando means...
+  choices:
+  - At a moderate speed
+  - Gradually faster
+  - Very fast
+  - Sweetly
+  correct: 1
+  why: 'Accelerando: gradually faster.'
+- ask: A tempo means...
+  choices:
+  - At a moderate speed
+  - Very fast
+  - Gradually softer
+  - Back to the speed before
+  correct: 3
+  why: 'A tempo: back to the speed before.'
+- ask: Crescendo (cresc.) means...
+  choices:
+  - Gradually louder
+  - Very slow and broad
+  - Smoothly connected
+  - Back to the speed before
+  correct: 0
+  why: 'Crescendo (cresc.): gradually louder.'
+- ask: Diminuendo (dim.) means...
+  choices:
+  - Smoothly connected
+  - In a singing style
+  - Gradually softer
+  - At a walking pace
+  correct: 2
+  why: 'Diminuendo (dim.): gradually softer.'
+- ask: Legato means...
+  choices:
+  - In a singing style
+  - Smoothly connected
+  - At a walking pace
+  - Gradually faster
+  correct: 1
+  why: 'Legato: smoothly connected.'
+- ask: Staccato means...
+  choices:
+  - Slow
+  - Short and detached
+  - In a singing style
+  - Gradually louder
+  correct: 1
+  why: 'Staccato: short and detached.'
+- ask: Fermata means...
+  choices:
+  - Gradually louder
+  - Gradually faster
+  - Smoothly connected
+  - Hold the note longer
+  correct: 3
+  why: 'Fermata: hold the note longer.'
+- ask: Dolce means...
+  choices:
+  - Gradually softer
+  - Gradually faster
+  - Sweetly
+  - At a walking pace
+  correct: 2
+  why: 'Dolce: sweetly.'
+- ask: Cantabile means...
+  choices:
+  - Very fast
+  - Very slow and broad
+  - In a singing style
+  - Fast and lively
+  correct: 2
+  why: 'Cantabile: in a singing style.'

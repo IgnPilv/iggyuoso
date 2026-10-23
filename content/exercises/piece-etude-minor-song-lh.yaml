@@ -1,0 +1,16 @@
+id: piece-etude-minor-song-lh
+title: 'Song in A minor: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: Am
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: A2:e E3:e C3:e E3:e A2:e E3:e C3:e E3:e | D3:e A3:e F3:e A3:e E3:e B3:e G#3:e B3:e | A2:e E3:e C3:e E3:e E3:e B3:e G#3:e
+  B3:e | A2:e E3:e C3:e E3:e A2:e E3:e C3:e E3:e | A2:e E3:e C3:e E3:e A2:e E3:e C3:e E3:e | A2:e E3:e C3:e E3:e A2:e E3:e
+  C3:e E3:e | E3:e B3:e G#3:e B3:e E3:e B3:e G#3:e B3:e | A2+C3+E3:w
+reps: 2
+days: 1

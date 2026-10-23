@@ -1,0 +1,17 @@
+id: ear-hl-steps
+title: 'Higher or lower: neighbours'
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: compare
+  pool:
+  - higher
+  - lower
+  range:
+  - C3
+  - C5
+  gap:
+  - 1
+  - 2

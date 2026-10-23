@@ -1,0 +1,91 @@
+id: theory-aug-dim-quiz
+title: Triad types quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: C diminished is...
+  choices:
+  - C E♭ G♭
+  - C E G
+  - C E♭ G
+  correct: 0
+  why: 'Diminished: two minor 3rds (the 5th lowered).'
+- ask: C augmented is...
+  choices:
+  - C E♭ G
+  - C E G
+  - C E G♯
+  correct: 2
+  why: 'Augmented: two major 3rds (the 5th raised).'
+- ask: B diminished is...
+  choices:
+  - B D♯ F♯
+  - B D F
+  - B D F♯
+  correct: 1
+  why: 'Diminished: two minor 3rds (the 5th lowered).'
+- ask: F augmented is...
+  choices:
+  - F A C♯
+  - F A C
+  - F A♭ C
+  correct: 0
+  why: 'Augmented: two major 3rds (the 5th raised).'
+- ask: D diminished is...
+  choices:
+  - D F A
+  - D F A♭
+  - D F♯ A
+  correct: 1
+  why: 'Diminished: two minor 3rds (the 5th lowered).'
+- ask: G augmented is...
+  choices:
+  - G B D♯
+  - G B D
+  - G B♭ D
+  correct: 0
+  why: 'Augmented: two major 3rds (the 5th raised).'
+- ask: E♭ augmented is...
+  choices:
+  - E♭ G♭ B♭
+  - E♭ G B
+  - E♭ G B♭
+  correct: 1
+  why: 'Augmented: two major 3rds (the 5th raised).'
+- ask: F♯ diminished is...
+  choices:
+  - F♯ A♯ C♯
+  - F♯ A C♯
+  - F♯ A C
+  correct: 2
+  why: 'Diminished: two minor 3rds (the 5th lowered).'
+- ask: The triad on the leading note in a major key is...
+  choices:
+  - Augmented
+  - Diminished
+  - Minor
+  correct: 1
+  why: 'B D F in C major: two minor 3rds.'
+- ask: An augmented triad is made of...
+  choices:
+  - Two major 3rds
+  - A 4th and a 3rd
+  - Two minor 3rds
+  correct: 0
+  why: 'C E G♯: 4 + 4 half steps.'
+- ask: Which triad appears in the harmonic minor on degree 3?
+  choices:
+  - Diminished
+  - Augmented
+  - Major
+  correct: 1
+  why: C E G♯ in A harmonic minor.
+- ask: A diminished triad sounds...
+  choices:
+  - Tense and squeezed
+  - Bright and stable
+  - Dreamy and stretched
+  correct: 0
+  why: Its 5th is a tritone.

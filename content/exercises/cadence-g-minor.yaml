@@ -1,0 +1,12 @@
+id: cadence-g-minor
+title: 'G minor: i, iv, V7, i'
+kind: timed
+hand: together
+prompt: 'The right hand barely moves: keep the common notes, slide the others to the nearest key.'
+key: Gm
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4+Bb4+D5:h G4+C5+Eb5:h | F#4+C5+D5:h G4+Bb4+D5:h | G4+Bb4+D5:h G4+C5+Eb5:h | F#4+C5+D5:h G4+Bb4+D5:h
+left: G2:h C3:h | D3:h G2:h | G2:h C3:h | D3:h G2:h

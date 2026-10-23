@@ -1,0 +1,13 @@
+id: ks-c-sharp-minor-broken
+title: 'C♯ minor: broken chords'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with broken chords in the left hand.
+key: C#m
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:h G#4:h | F#4:h A4:h | D#4:h B#3:h | C#4:w
+left: C#3:e G#3:e E3:e G#3:e C#3:e G#3:e E3:e G#3:e | F#2:e C#3:e A2:e C#3:e F#2:e C#3:e A2:e C#3:e | G#2:e D#3:e B#2:e D#3:e
+  G#2:e D#3:e B#2:e D#3:e | C#3+E3+G#3:w

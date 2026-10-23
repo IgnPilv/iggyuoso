@@ -1,0 +1,27 @@
+id: rd-sight-eight-chords
+title: Eight bars over chords
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: C4-E5
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+keys:
+- C
+- G
+- D
+- F
+- Bb
+- Am
+- Em
+- Dm
+left: chords
+reps: 5
+days: 3

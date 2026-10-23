@@ -1,0 +1,25 @@
+id: ks-d-flat-musicianship
+title: Reading and hearing D♭ major
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: D♭ major, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: Db4:q Eb4:q F4:q Gb4:q Ab4:q Bb4:q C5:q Db5:q
+    key: Db
+  sound: Db4:q Eb4:q F4:q Gb4:q Ab4:q Bb4:q C5:q Db5:q
+- exercise: ks-d-flat-quiz
+- exercise: ks-d-flat-triads
+- exercise: ks-d-flat-read
+- exercise: ks-d-flat-read-bass
+- exercise: ks-d-flat-sight
+- exercise: ks-d-flat-sight-rh
+- exercise: ks-d-flat-sight-lh
+- exercise: ks-d-flat-intervals
+- exercise: ks-d-flat-degrees
+- exercise: ks-d-flat-echo
+recap: D♭ major for the eyes and ears.

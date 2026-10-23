@@ -1,0 +1,15 @@
+id: ear-motion-all
+title: The same, a step or a leap?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: motion
+  pool:
+  - same
+  - step
+  - leap
+  range:
+  - C3
+  - C5

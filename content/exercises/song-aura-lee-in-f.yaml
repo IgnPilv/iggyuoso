@@ -1,0 +1,16 @@
+id: song-aura-lee-in-f
+title: Aura Lee in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:q F5:q E5:q F5:q | G5:q D5:q G5:h | F5:q E5:q D5:q E5:q | F5:w | C5:q F5:q E5:q F5:q | G5:q D5:q G5:h | F5:q E5:q
+  D5:q E5:q | F5:w
+left: C3+F3+A3:w | B2+D3+G3:w | C3+E3+G3:w | C3+F3+A3:w | C3+F3+A3:w | B2+D3+G3:w | C3+E3+G3:w | C3+F3+A3:w
+reps: 2
+days: 1

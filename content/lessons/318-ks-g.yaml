@@ -1,0 +1,24 @@
+id: ks-g
+title: 'Key study: G major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: G major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in G major. Its chords: **G**, **C** and **D7**.
+  staff:
+    notes: G4:q A4:q B4:q C5:q D5:q E5:q F#5:q G5:q
+    key: G
+  sound: G4:q A4:q B4:q C5:q D5:q E5:q F#5:q G5:q
+- exercise: ks-g-thirds
+- exercise: scale-g-1
+- exercise: scale-g-contrary
+- exercise: ks-g-pedal
+- exercise: ks-g-harmonised-scale
+- exercise: ks-g-chord-pattern
+- exercise: ks-g-inversions
+- exercise: ks-g-broken
+- exercise: ks-g-alberti
+- exercise: ks-g-pulse
+- exercise: ks-g-waltz
+recap: G major under both hands.

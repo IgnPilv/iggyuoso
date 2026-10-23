@@ -1,0 +1,12 @@
+id: song-row-your-boat-tap
+title: 'Row, Row, Row Your Boat: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 60
+meter: 6/8
+countIn: 1
+rhythm: x:q. x:q. | x:q x:e x:q. | x:q x:e x:q x:e | x:h. | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:q x:e x:q
+  x:e | x:h.
+reps: 2
+days: 1

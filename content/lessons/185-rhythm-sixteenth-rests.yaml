@@ -1,0 +1,10 @@
+id: rhythm-sixteenth-rests
+title: Sixteenths with gaps
+skills:
+- rhythm
+steps:
+- explain: |
+    Sixteenth rests make funk and Latin rhythms: the gaps are as important as the taps.
+- exercise: rt-16-rests
+- exercise: rt-16-rests-hands
+recap: Gaps make the groove.

@@ -1,0 +1,18 @@
+id: ks-b-degrees
+title: Every degree of B major
+kind: ear
+cadence: B
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: B
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

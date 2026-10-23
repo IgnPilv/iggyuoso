@@ -1,13 +1,5 @@
 import type { Hand, Meter, NoteToken, PedalToken, Pitch } from '../music/notes';
 
-export interface Unit {
-  id: string;
-  title: string;
-  summary: string;
-  lessons: string[];
-  order: number;
-}
-
 /** A staff picture in theory text or feedback. `grand` splits the notes at middle C. */
 export interface TheoryStaff {
   notes: NoteToken[];
@@ -60,7 +52,6 @@ export type LessonStep = ExplainStep | { exercise: string } | PlaygroundStep;
 export interface Lesson {
   id: string;
   title: string;
-  unit: string;
   skills: string[];
   steps: LessonStep[];
   recap: string;
@@ -259,7 +250,6 @@ export interface GeneratedExercise extends ExerciseBase {
 export type Exercise = FindExercise | SequenceExercise | TimedExercise | EarExercise | QuizExercise | BuildExercise | GeneratedExercise;
 
 export interface Content {
-  units: Unit[];
   lessons: Map<string, Lesson>;
   exercises: Map<string, Exercise>;
 }

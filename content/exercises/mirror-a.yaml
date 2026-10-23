@@ -1,0 +1,14 @@
+id: mirror-a
+title: 'A major: mirror image'
+kind: timed
+hand: together
+prompt: Both thumbs on the key note; the hands move apart and back. Same finger in both hands every time.
+key: A
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q B4:q C#5:q D5:q | E5:q D5:q C#5:q B4:q | A4:h C#5:h | A4:w
+left: A3:q G#3:q F#3:q E3:q | D3:q E3:q F#3:q G#3:q | A3:h F#3:h | A3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 1
+leftFingers: 1 2 3 4 5 4 3 2 1 3 1

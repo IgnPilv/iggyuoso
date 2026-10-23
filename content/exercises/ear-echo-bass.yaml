@@ -1,0 +1,31 @@
+id: ear-echo-bass
+title: Echo the bass
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: C3 G2 C3
+  plays: 3
+- type: melody
+  notes: C3 F2 G2 C3
+  plays: 3
+- type: melody
+  notes: A2 D3 E3 A2
+  plays: 3
+- type: melody
+  notes: G2 C3 D3 G2
+  plays: 3
+- type: melody
+  notes: C3 A2 F2 G2
+  plays: 3
+- type: melody
+  notes: F2 Bb2 C3 F2
+  plays: 3
+- type: melody
+  notes: D3 G2 A2 D3
+  plays: 3
+- type: melody
+  notes: E2 A2 B2 E2
+  plays: 3

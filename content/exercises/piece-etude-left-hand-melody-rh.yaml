@@ -1,0 +1,13 @@
+id: piece-etude-left-hand-melody-rh
+title: 'Left-Hand Song: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4+G4:w | F4+A4:w | D4+G4:w | E4+G4:w | E4+G4:w | F4+A4:w | D4+F4:w | E4+G4:w
+reps: 2
+days: 1

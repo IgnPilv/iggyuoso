@@ -1,0 +1,19 @@
+id: ks-d-flat-sight-rh
+title: Sight-read the right hand in D♭ major
+kind: generated
+generator: sight-read
+hand: right
+clef: treble
+tempo: 66
+notes: Db4-Db5
+keys:
+- Db
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

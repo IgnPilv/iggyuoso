@@ -1,18 +1,18 @@
 import { audio } from '../audio/audio';
-import { content, exerciseTitle, tree, treeNodes } from '../content';
+import { content, exerciseTitle, pathLessons, treeNodes } from '../content';
 import type { EarExercise, Exercise, ExplainStep, PlaygroundStep, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
 import { parse } from 'yaml';
 import { loadContent, parseExercise } from '../content/load';
 import { h, type View } from './dom';
-import { pathMap } from './pathMap';
+import { branchPage, growingNow, growingTree, snapshot, songsCard, songsPage, stageList } from './treeView';
 import { mountExercise, resetDemoOptions } from './players';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
-import { demoProgress, lessonGoals, nodeOfLesson } from '../progress';
+import { demoProgress, lessonGoals, lessonExercises, nodeOfLesson } from '../progress';
 import { dayOf, Mastery } from '../progress/mastery';
-import { Store } from '../progress/store';
+import { memoryBackend, Store } from '../progress/store';
 import { demoAccount } from '../sync';
 import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
@@ -223,7 +223,7 @@ right: "C4:e D4:e E4:e F4:q E4:e | D4:q. G4:q. | E4:e F4:e G4:e A4:q F4:e | E4:q
 /** Two lessons learned a week ago, Solid and now due for review; a fresh plan for today. */
 function seedReviews(s: Store) {
   const old = new Date(Date.now() - 7 * 86_400_000);
-  const first = [...content.units].sort((a, b) => a.order - b.order)[0]?.lessons.slice(0, 2) ?? [];
+  const first = pathLessons().slice(0, 2).map((l) => l.id);
   for (const id of first) {
     const lesson = content.lessons.get(id);
     const node = lesson && nodeOfLesson(id);
@@ -486,13 +486,18 @@ function scenes(): Scene[] {
     },
   });
   out.push({
-    title: 'Your path',
-    caption: 'The home page shows the path: each year is a road of units, each with a ring that fills as its lessons are done. Only the unit you are in is open; tap any other to see its lessons. The dots say which strand a lesson trains.',
+    title: 'Your tree',
+    caption: 'The home page is a tree that grows. Each branch (technique, reading, rhythm, theory, ear, pieces, creativity) gets a leaf for every lesson practised; a bud at its tip means something new is open there. Milestones ring the trunk and open songs. "Growing now" lists what is open, so you choose; below, the whole tree stage by stage. This is a made-up player two stages in.',
     run: (box, next) => {
-      const first = tree[0]?.units[0]?.nodes.find((n) => n.lesson)?.lesson;
-      box.append(pathMap(first));
-      const t = window.setTimeout(next, 9000);
-      return () => clearTimeout(t);
+      const p = sampleTreeProgress();
+      const snap = snapshot(p);
+      box.append(growingTree(snap), growingNow(snap, p, 6), songsCard(snap), stageList(snap, p));
+      const timers = [
+        window.setTimeout(() => { box.replaceChildren(branchPage('rhythm', p)); window.scrollTo({ top: 0, behavior: 'smooth' }); }, 9000),
+        window.setTimeout(() => { box.replaceChildren(songsPage(p)); }, 15000),
+        window.setTimeout(next, 21000),
+      ];
+      return () => timers.forEach(clearTimeout);
     },
   });
   out.push({
@@ -641,10 +646,8 @@ export const demoView: View = (root, arg) => {
 
   const startBtn = h('button', { onclick: () => { audio(); show(0); } }, 'Start the tour');
   const exercises = h('div', { class: 'demo-list' });
-  for (const unit of content.units) {
-    for (const lid of unit.lessons) {
-      const l = content.lessons.get(lid);
-      if (!l) continue;
+  {
+    for (const l of pathLessons()) {
       const ids = l.steps.flatMap((s) => ('exercise' in s ? [s.exercise] : []));
       exercises.append(h('div', { class: 'demo-lesson' },
         h('span', { class: 'small' }, l.title),
@@ -674,3 +677,32 @@ export const demoView: View = (root, arg) => {
   if (arg === 'start') startBtn.click();
   return () => { stopScene(); stopDemo(); previewTheme(undefined); };
 };
+
+/**
+ * A made-up player for the tree scene: everything in stage 1 and most of stage 2 practised (the
+ * early ones Solid), milestone 1 passed, two songs learned. Throwaway: nothing is saved.
+ */
+function sampleTreeProgress() {
+  const s = new Store(memoryBackend());
+  const exercisesOf = (id: string) => { const l = content.lessons.get(id); return l ? lessonExercises(l) : []; };
+  const m = new Mastery(s, treeNodes, exercisesOf);
+  const day = dayOf(new Date(Date.now() - 3 * 86_400_000));
+  const nodes = [...treeNodes.values()].filter((n) => n.lesson);
+  const stage2 = nodes.filter((n) => n.stage === 2 && n.branch !== 'songs' && n.type !== 'checkpoint');
+  const learned = [
+    ...nodes.filter((n) => n.stage === 1),
+    ...stage2.slice(0, Math.ceil(stage2.length * 0.7)),
+    ...nodes.filter((n) => n.branch === 'songs').slice(0, 2),
+  ];
+  learned.forEach((n, i) => {
+    const solid = i % 3 !== 2;
+    for (const id of exercisesOf(n.lesson!)) {
+      const ex = content.exercises.get(id);
+      for (let k = 0; k < (ex?.reps ?? 3); k++) {
+        s.record(id, { at: new Date(Date.now() - (3 + (k % (ex?.days ?? 1))) * 86_400_000).toISOString(), score: solid ? 96 : 85, stars: solid ? 3 : 2, tempo: 999, counts: true });
+      }
+    }
+    s.put(`mastery.${n.id}`, { state: solid ? 'solid' : 'practised', box: 1, lastGood: day, solidDay: solid ? day : undefined });
+  });
+  return { store: s, mastery: m };
+}

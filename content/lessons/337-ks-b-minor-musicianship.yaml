@@ -1,0 +1,25 @@
+id: ks-b-minor-musicianship
+title: Reading and hearing B minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: B minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: B4:q C#5:q D5:q E5:q F#5:q G5:q A#5:q B5:q
+    key: Bm
+  sound: B4:q C#5:q D5:q E5:q F#5:q G5:q A#5:q B5:q
+- exercise: ks-b-minor-quiz
+- exercise: ks-b-minor-triads
+- exercise: ks-b-minor-read
+- exercise: ks-b-minor-read-bass
+- exercise: ks-b-minor-sight
+- exercise: ks-b-minor-sight-rh
+- exercise: ks-b-minor-sight-lh
+- exercise: ks-b-minor-intervals
+- exercise: ks-b-minor-degrees
+- exercise: ks-b-minor-echo
+recap: B minor for the eyes and ears.

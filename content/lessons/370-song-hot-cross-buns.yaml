@@ -1,0 +1,31 @@
+id: song-hot-cross-buns
+title: Hot Cross Buns
+skills:
+- songs
+steps:
+- explain: |
+    **Hot Cross Buns** · Street cry, London, 1700s
+
+    Bakers in London sang this to sell spiced buns at Easter: "one a penny, two a penny".
+  staff:
+    notes: E4:q D4:q C4:h  |  E4:q D4:q C4:h
+  sound: E4:q D4:q C4:h  |  E4:q D4:q C4:h  |  C4:e C4:e C4:e C4:e D4:e D4:e D4:e D4:e  |  E4:q D4:q C4:h
+- explain: |
+    **Before you play.** Three notes only: E, D, C. The eighths in bar 3 are twice as fast: "one-and two-and".
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-hot-cross-buns-tap
+- exercise: song-hot-cross-buns-tap-hands
+- exercise: song-hot-cross-buns-by-ear
+- exercise: song-hot-cross-buns-rh
+- exercise: song-hot-cross-buns-lh
+- exercise: song-hot-cross-buns
+- exercise: song-hot-cross-buns-arranged
+- exercise: song-hot-cross-buns-swap
+- exercise: song-hot-cross-buns-in-g
+- exercise: song-hot-cross-buns-oompah
+- exercise: song-hot-cross-buns-performance
+- exercise: song-hot-cross-buns-in-f
+recap: 'Hot Cross Buns: tune, left hand, together. Come back to it any time; songs are for fun.'

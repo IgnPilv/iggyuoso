@@ -1,0 +1,13 @@
+id: ks-g-inversions
+title: 'G major: climbing the inversions'
+kind: timed
+hand: together
+prompt: 'Root position, first inversion, second inversion, octave: the same chord climbing. The left hand holds the root.'
+key: G
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4+B4+D5:q B4+D5+G5:q D5+G5+B5:q G5+B5+D6:q | D5+G5+B5:q B4+D5+G5:q G4+B4+D5:h | C5+E5+G5:q E5+G5+C6:q G5+C6+E6:q C6+E6+G6:q
+  | G4+B4+D5:w
+left: G2:w | G2:w | C3:w | G2:w

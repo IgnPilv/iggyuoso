@@ -1,0 +1,15 @@
+id: cr-mary-in-eb
+title: Mary in E♭ major
+kind: timed
+hand: together
+display: staff
+key: Eb
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:q Bb4:q Ab4:q Bb4:q | C5:q C5:q C5:h | Bb4:q Bb4:q Bb4:h | C5:q Eb5:q Eb5:h | C5:q Bb4:q Ab4:q Bb4:q | C5:q C5:q
+  C5:q C5:q | Bb4:q Bb4:q C5:q Bb4:q | Ab4:w
+left: Eb3+G3+Bb3:w | Eb3+G3+Bb3:w | D3+F3+Bb3:w | Eb3+G3+Bb3:w | Eb3+G3+Bb3:w | Eb3+G3+Bb3:w | D3+F3+Bb3:w | Eb3+G3+Bb3:w
+reps: 2
+days: 1

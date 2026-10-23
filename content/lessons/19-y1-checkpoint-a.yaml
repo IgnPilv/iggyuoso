@@ -1,7 +1,7 @@
 id: y1-checkpoint-a
-title: 'Checkpoint 1: steady hands'
-unit: steady-hands
-skills: [checkpoint]
+title: 'Milestone 1: first notes'
+skills:
+- checkpoint
 steps:
 - explain: |
     Checkpoint time. This mixes everything since the start: theory, smooth playing, rhythm, your
@@ -10,9 +10,9 @@ steps:
     they have really stuck.
   callout: |
     No hints in checkpoint quizzes: the answers and their reasons come at the end.
-- {exercise: y1-theory-checkpoint-a}
-- {exercise: smooth-steps-lh}
-- {exercise: tap-three-four}
-- {exercise: ear-checkpoint-a}
-- {exercise: mary-lamb-rh}
+- exercise: y1-theory-checkpoint-a
+- exercise: smooth-steps-lh
+- exercise: tap-three-four
+- exercise: ear-checkpoint-a
+- exercise: mary-lamb-rh
 recap: 'Checkpoint 1 done: you can play smoothly, keep a beat, hear direction and play a tune.'

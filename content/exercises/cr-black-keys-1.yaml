@@ -1,0 +1,10 @@
+id: cr-black-keys-1
+title: Black-key tune, right hand
+kind: tap
+prompt: Black keys only, any of them. Go up, then come home.
+tempo: 84
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w
+reps: 2
+days: 1

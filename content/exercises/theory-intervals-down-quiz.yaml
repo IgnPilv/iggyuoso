@@ -1,0 +1,115 @@
+id: theory-intervals-down-quiz
+title: Intervals below a note
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A major 3rd below C is...
+  choices:
+  - A♭
+  - A
+  - G♭
+  correct: 0
+  why: 3 letters down from C is A; 4 half steps makes it A♭.
+  whyStaff:
+    notes: C4:h Ab3:h
+- ask: A perfect 5th below D is...
+  choices:
+  - G♭
+  - G
+  - F
+  correct: 1
+  why: 5 letters down from D is G; 7 half steps makes it G.
+  whyStaff:
+    notes: D4:h G3:h
+- ask: A minor 3rd below E is...
+  choices:
+  - C♯
+  - B
+  - C
+  correct: 0
+  why: 3 letters down from E is C; 3 half steps makes it C♯.
+  whyStaff:
+    notes: E4:h C#4:h
+- ask: A major 6th below F is...
+  choices:
+  - G♭
+  - A
+  - A♭
+  correct: 2
+  why: 6 letters down from F is A; 9 half steps makes it A♭.
+  whyStaff:
+    notes: F4:h Ab3:h
+- ask: A perfect 4th below G is...
+  choices:
+  - D
+  - C
+  - D♭
+  correct: 0
+  why: 4 letters down from G is D; 5 half steps makes it D.
+  whyStaff:
+    notes: G4:h D4:h
+- ask: A major 2nd below A is...
+  choices:
+  - G♭
+  - F
+  - G
+  correct: 2
+  why: 2 letters down from A is G; 2 half steps makes it G.
+  whyStaff:
+    notes: A4:h G4:h
+- ask: A major 3rd below B♭ is...
+  choices:
+  - F♭
+  - G
+  - G♭
+  correct: 2
+  why: 3 letters down from B♭ is G; 4 half steps makes it G♭.
+  whyStaff:
+    notes: Bb4:h Gb4:h
+- ask: A perfect 5th below E♭ is...
+  choices:
+  - A
+  - G♭
+  - A♭
+  correct: 2
+  why: 5 letters down from E♭ is A; 7 half steps makes it A♭.
+  whyStaff:
+    notes: Eb4:h Ab3:h
+- ask: A minor 3rd below F♯ is...
+  choices:
+  - D♯
+  - C♯
+  - D
+  correct: 0
+  why: 3 letters down from F♯ is D; 3 half steps makes it D♯.
+  whyStaff:
+    notes: F#4:h D#4:h
+- ask: A major 7th below D is...
+  choices:
+  - E
+  - D♭
+  - E♭
+  correct: 2
+  why: 7 letters down from D is E; 11 half steps makes it E♭.
+  whyStaff:
+    notes: D4:h Eb3:h
+- ask: A minor 7th below A is...
+  choices:
+  - B♭
+  - A
+  - B
+  correct: 2
+  why: 7 letters down from A is B; 10 half steps makes it B.
+  whyStaff:
+    notes: A4:h B3:h
+- ask: A perfect 4th below B is...
+  choices:
+  - F♯
+  - E
+  - F
+  correct: 0
+  why: 4 letters down from B is F; 5 half steps makes it F♯.
+  whyStaff:
+    notes: B4:h F#4:h

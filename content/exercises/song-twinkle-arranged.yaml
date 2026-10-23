@@ -1,0 +1,17 @@
+id: song-twinkle-arranged
+title: Twinkle, Twinkle, Little Star, full arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q C4:q G4:q G4:q | A4:q A4:q G4:h | F4:q F4:q E4:q E4:q | D4:q D4:q C4:h | G4:q G4:q F4:q F4:q | E4:q E4:q D4:h
+  | G4:q G4:q F4:q F4:q | E4:q E4:q D4:h | C4:q C4:q G4:q G4:q | A4:q A4:q G4:h | F4:q F4:q E4:q E4:q | D4:q D4:q C4:h
+left: C3+E3+G3:w | C3+F3+A3:h C3+E3+G3:h | C3+F3+A3:h C3+E3+G3:h | B2+D3+G3:h C3+E3+G3:h | C3+E3+G3:h C3+F3+A3:h | C3+E3+G3:h
+  B2+D3+G3:h | C3+E3+G3:h C3+F3+A3:h | C3+E3+G3:h B2+D3+G3:h | C3+E3+G3:w | C3+F3+A3:h C3+E3+G3:h | C3+F3+A3:h C3+E3+G3:h
+  | B2+D3+G3:h C3+E3+G3:h
+reps: 3
+days: 2

@@ -1,0 +1,13 @@
+id: creativity-blues-improv
+title: Improvising the blues
+skills:
+- creativity
+steps:
+- explain: |
+    The left hand plays the boogie; the right hand improvises on the **C blues scale**: C E♭ F F♯ G B♭ C. Leave space:
+    short phrases, then rests, like a singer breathing.
+  keys:
+    notes: C4 Eb4 F4 F#4 G4 Bb4 C5
+    labels: names
+- exercise: cr-blues-improv
+recap: Phrase, breathe, answer.

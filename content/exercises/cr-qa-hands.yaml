@@ -1,0 +1,11 @@
+id: cr-qa-hands
+title: Question and answer over a bass
+kind: tap
+prompt: 'Left hand holds a low C each bar (bar 2: G). Right hand: your question and answer.'
+tempo: 76
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:h x:h
+left: x:w | x:w | x:w | x:w
+reps: 3
+days: 2

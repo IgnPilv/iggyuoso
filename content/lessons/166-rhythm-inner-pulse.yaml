@@ -1,0 +1,15 @@
+id: rhythm-inner-pulse
+title: Keep the beat inside
+skills:
+- rhythm
+steps:
+- explain: |
+    Real music has no click. Here the click plays only during the count-in; after that, the beat
+    lives **inside you**. Nod, tap your foot, count under your breath: anything that keeps it steady.
+  callout: |
+    If you drift, the result shows whether you rushed (got faster) or dragged (got slower).
+- exercise: rt-pulse-quarters
+- exercise: rt-pulse-mixed
+- exercise: rt-pulse-rests
+- exercise: rt-pulse-hands
+recap: The beat you keep yourself is the one that matters.

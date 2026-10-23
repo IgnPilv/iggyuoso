@@ -1,0 +1,18 @@
+id: ks-e-sight-lh
+title: Sight-read the left hand in E major
+kind: generated
+generator: sight-read
+hand: left
+clef: bass
+tempo: 66
+notes: E3-E4
+keys:
+- E
+durations:
+- q
+- h
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

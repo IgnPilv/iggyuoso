@@ -1,0 +1,9 @@
+id: rt-together-same
+title: Same rhythm, both hands
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w
+left: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w

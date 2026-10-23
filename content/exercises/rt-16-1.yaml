@@ -1,0 +1,8 @@
+id: rt-16-1
+title: Four to a beat
+kind: tap
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:s x:s x:s x:s x:q x:s x:s x:s x:s x:q | x:s x:s x:s x:s x:s x:s x:s x:s x:h | x:q x:s x:s x:s x:s x:q x:q | x:w

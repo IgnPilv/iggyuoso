@@ -1,0 +1,167 @@
+id: theory-interval-quality-quiz
+title: Interval naming quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Name this interval.
+  choices:
+  - major 7th
+  - minor 7th
+  - minor 2nd
+  - major 3rd
+  correct: 3
+  why: 'Count the letters C to E for the number, then the half steps (4) for the quality: major 3rd.'
+  staff: C4:h E4:h
+  sound: C4:h E4:h
+- ask: Name this interval.
+  choices:
+  - octave
+  - minor 3rd
+  - minor 7th
+  - major 3rd
+  correct: 1
+  why: 'Count the letters C to E for the number, then the half steps (3) for the quality: minor 3rd.'
+  staff: C4:h Eb4:h
+  sound: C4:h Eb4:h
+- ask: Name this interval.
+  choices:
+  - perfect 5th
+  - minor 3rd
+  - major 3rd
+  - augmented 4th
+  correct: 1
+  why: 'Count the letters D to F for the number, then the half steps (3) for the quality: minor 3rd.'
+  staff: D4:h F4:h
+  sound: D4:h F4:h
+- ask: Name this interval.
+  choices:
+  - minor 6th
+  - minor 7th
+  - major 7th
+  - major 3rd
+  correct: 3
+  why: 'Count the letters D to F for the number, then the half steps (4) for the quality: major 3rd.'
+  staff: D4:h F#4:h
+  sound: D4:h F#4:h
+- ask: Name this interval.
+  choices:
+  - perfect 4th
+  - augmented 5th
+  - minor 6th
+  - minor 7th
+  correct: 0
+  why: 'Count the letters E to A for the number, then the half steps (5) for the quality: perfect 4th.'
+  staff: E4:h A4:h
+  sound: E4:h A4:h
+- ask: Name this interval.
+  choices:
+  - perfect 5th
+  - major 6th
+  - major 3rd
+  - minor 2nd
+  correct: 0
+  why: 'Count the letters F to C for the number, then the half steps (7) for the quality: perfect 5th.'
+  staff: F4:h C5:h
+  sound: F4:h C5:h
+- ask: Name this interval.
+  choices:
+  - major 6th
+  - minor 7th
+  - major 3rd
+  - perfect 5th
+  correct: 0
+  why: 'Count the letters C to A for the number, then the half steps (9) for the quality: major 6th.'
+  staff: C4:h A4:h
+  sound: C4:h A4:h
+- ask: Name this interval.
+  choices:
+  - perfect 5th
+  - minor 6th
+  - diminished 5th
+  - perfect 4th
+  correct: 1
+  why: 'Count the letters E to C for the number, then the half steps (8) for the quality: minor 6th.'
+  staff: E4:h C5:h
+  sound: E4:h C5:h
+- ask: Name this interval.
+  choices:
+  - octave
+  - minor 7th
+  - minor 3rd
+  - diminished 5th
+  correct: 1
+  why: 'Count the letters G to F for the number, then the half steps (10) for the quality: minor 7th.'
+  staff: G4:h F5:h
+  sound: G4:h F5:h
+- ask: Name this interval.
+  choices:
+  - octave
+  - major 2nd
+  - major 3rd
+  - major 7th
+  correct: 3
+  why: 'Count the letters C to B for the number, then the half steps (11) for the quality: major 7th.'
+  staff: C4:h B4:h
+  sound: C4:h B4:h
+- ask: Name this interval.
+  choices:
+  - augmented 4th
+  - minor 3rd
+  - major 2nd
+  - major 3rd
+  correct: 2
+  why: 'Count the letters A to B for the number, then the half steps (2) for the quality: major 2nd.'
+  staff: A4:h B4:h
+  sound: A4:h B4:h
+- ask: Name this interval.
+  choices:
+  - diminished 5th
+  - major 2nd
+  - minor 2nd
+  - octave
+  correct: 2
+  why: 'Count the letters B to C for the number, then the half steps (1) for the quality: minor 2nd.'
+  staff: B4:h C5:h
+  sound: B4:h C5:h
+- ask: Name this interval.
+  choices:
+  - major 2nd
+  - minor 7th
+  - augmented 4th
+  - octave
+  correct: 2
+  why: 'Count the letters F to B for the number, then the half steps (6) for the quality: augmented 4th.'
+  staff: F4:h B4:h
+  sound: F4:h B4:h
+- ask: Name this interval.
+  choices:
+  - perfect 5th
+  - major 3rd
+  - minor 6th
+  - minor 7th
+  correct: 0
+  why: 'Count the letters D to A for the number, then the half steps (7) for the quality: perfect 5th.'
+  staff: D4:h A4:h
+  sound: D4:h A4:h
+- ask: Name this interval.
+  choices:
+  - minor 6th
+  - minor 3rd
+  - perfect 5th
+  - major 6th
+  correct: 1
+  why: 'Count the letters E to G for the number, then the half steps (3) for the quality: minor 3rd.'
+  staff: E4:h G4:h
+  sound: E4:h G4:h
+- ask: Name this interval.
+  choices:
+  - perfect 5th
+  - augmented 5th
+  - octave
+  - major 2nd
+  correct: 0
+  why: 'Count the letters C to G for the number, then the half steps (7) for the quality: perfect 5th.'
+  staff: C4:h G4:h
+  sound: C4:h G4:h

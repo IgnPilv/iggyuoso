@@ -1,0 +1,30 @@
+id: theory-degree-names
+title: The names of the degrees
+skills:
+- theory
+steps:
+- explain: |
+    Each step of a scale has a number and a name. The three most important: **1 tonic** (home), **5 dominant**
+    (the strongest pull home), **4 subdominant**. The **leading note** (7) leads up to the tonic.
+  staff:
+    notes: C4:q D4:q E4:q F4:q | G4:q A4:q B4:q C5:q
+    labels: names
+  terms:
+  - tonic
+  - supertonic
+  - mediant
+  - subdominant
+  - dominant
+  - submediant
+  - leading note
+  check:
+    ask: In C major the dominant is...
+    choices:
+    - G
+    - F
+    - B
+    - E
+    correct: 0
+    why: 'Degree 5 of C major: G.'
+- exercise: theory-degree-names-quiz
+recap: 'Tonic, dominant, subdominant: the pillars of a key.'

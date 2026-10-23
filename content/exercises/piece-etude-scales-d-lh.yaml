@@ -1,0 +1,14 @@
+id: piece-etude-scales-d-lh
+title: 'Scale Study in D: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D3+F#3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w
+reps: 2
+days: 1

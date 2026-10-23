@@ -1,0 +1,23 @@
+id: ks-c
+title: 'Key study: C major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: C major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in C major. Its chords: **C**, **F** and **G7**.
+  staff:
+    notes: C4:q D4:q E4:q F4:q G4:q A4:q B4:q C5:q
+    key: C
+  sound: C4:q D4:q E4:q F4:q G4:q A4:q B4:q C5:q
+- exercise: ks-c-thirds
+- exercise: scale-c-1
+- exercise: ks-c-pedal
+- exercise: ks-c-harmonised-scale
+- exercise: ks-c-chord-pattern
+- exercise: ks-c-inversions
+- exercise: ks-c-broken
+- exercise: ks-c-alberti
+- exercise: ks-c-pulse
+- exercise: ks-c-waltz
+recap: C major under both hands.

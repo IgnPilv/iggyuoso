@@ -1,0 +1,14 @@
+id: piece-sonatina-c-rh
+title: 'Sonatina in C: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h E5:q G5:q | G5:h F5:h | D5:q F5:q A5:q F5:q | E5:h C5:h | C5:q E5:q D5:q C5:q | B4:h G4:h | A4:q B4:q C5:q D5:q
+  | C5:w
+reps: 2
+days: 1

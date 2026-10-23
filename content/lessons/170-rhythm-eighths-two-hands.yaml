@@ -1,0 +1,12 @@
+id: rhythm-eighths-two-hands
+title: Eighths in two hands
+skills:
+- rhythm
+steps:
+- explain: |
+    One hand runs in eighths while the other keeps the beat. Then swap. The quarter-note hand is your clock.
+- exercise: rt-8-over-4
+- exercise: rt-4-over-8
+- exercise: rt-8-alternate
+- exercise: gen-read-hands-eighths
+recap: One hand is the clock, the other dances.

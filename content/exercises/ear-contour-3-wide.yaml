@@ -1,0 +1,15 @@
+id: ear-contour-3-wide
+title: Three notes, big moves
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: contour
+  length: 3
+  range:
+  - C4
+  - C6
+  gap:
+  - 4
+  - 7

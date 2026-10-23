@@ -1,0 +1,95 @@
+id: m8-theory-paper
+title: Theory paper
+kind: quiz
+prompt: 'A theory paper: answers are only noted, and the results list what to revise.'
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: Cmaj7 is...
+  choices:
+  - C E G B♭
+  - C E G B
+  - C E♭ G B♭
+  correct: 1
+  why: Major triad + major 7th.
+- ask: Dm7 is...
+  choices:
+  - D F♯ A C
+  - D F A C♯
+  - D F A C
+  correct: 2
+  why: Minor triad + minor 7th.
+- ask: An augmented triad on C is...
+  choices:
+  - C E♭ G♭
+  - C E G
+  - C E G♯
+  correct: 2
+  why: Two major 3rds.
+- ask: A diminished triad on B is...
+  choices:
+  - B D F
+  - B D♯ F♯
+  - B D F♯
+  correct: 0
+  why: Two minor 3rds.
+- ask: V–vi is called...
+  choices:
+  - A perfect cadence
+  - An interrupted cadence
+  - A plagal cadence
+  correct: 1
+  why: The surprise ending.
+- ask: IV–I is called...
+  choices:
+  - A plagal cadence
+  - An imperfect cadence
+  - An interrupted cadence
+  correct: 0
+  why: '"Amen".'
+- ask: A♭ major has how many flats?
+  choices:
+  - '3'
+  - '4'
+  - '2'
+  - '5'
+  correct: 1
+  why: B♭ E♭ A♭ D♭.
+- ask: D♭ major has how many flats?
+  choices:
+  - '3'
+  - '5'
+  - '6'
+  - '4'
+  correct: 1
+  why: B♭ E♭ A♭ D♭ G♭.
+- ask: Over C, the melody goes C D E. D is...
+  choices:
+  - A chord note
+  - A passing note
+  - A neighbour note
+  correct: 1
+  why: It steps between two chord notes.
+- ask: In three against two, the hands meet...
+  choices:
+  - On every beat
+  - Every other note
+  - Never
+  correct: 0
+  why: Both start each beat together.
+- ask: The triad on degree 7 of a major key is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 2
+  why: B D F in C.
+- ask: The 7th chord on degree 5 of a major key is...
+  choices:
+  - A minor 7th
+  - A dominant 7th
+  - A major 7th
+  correct: 1
+  why: Major triad + minor 7th.

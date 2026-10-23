@@ -1,0 +1,12 @@
+id: ks-d-minor-waltz
+title: 'D minor: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: Dm
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: F4:h A4:q | G4:h Bb4:q | E4:h C#4:q | D4:h.
+left: D3:q F3+A3:q F3+A3:q | G2:q D3+G3+Bb3:q D3+G3+Bb3:q | A2:q C#3+E3+A3:q C#3+E3+A3:q | D3+F3+A3:h.

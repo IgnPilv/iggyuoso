@@ -1,0 +1,13 @@
+id: ks-e-minor-pedal
+title: 'E minor: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: Em
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:h B4:h | A4:h C5:h | F#4:h D#4:h | E4:w
+left: E3:q B3:q E4:q B3:q | A2:q E3:q A3:q E3:q | B2:q F#3:q B3:q F#3:q | E3+G3+B3:w
+pedal: x:w | x:w | x:w | x:w

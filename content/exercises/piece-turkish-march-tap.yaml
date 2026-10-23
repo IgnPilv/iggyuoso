@@ -1,0 +1,12 @@
+id: piece-turkish-march-tap
+title: 'Turkish March: the opening: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 60
+meter: 2/4
+countIn: 1
+right: x:s x:s x:s x:s x:e r:e | x:s x:s x:s x:s x:e r:e | x:s x:s x:s x:s x:s x:s x:s x:s | x:s x:s x:s x:s x:q
+left: r:h | x:e x:e x:e x:e | x:e x:e x:e x:e | x:e x:e x:e x:e
+reps: 2
+days: 1

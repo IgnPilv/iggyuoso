@@ -1,0 +1,9 @@
+id: rt-eighths-offbeat
+title: On the "and"
+kind: tap
+prompt: A rest on the beat, a tap on the "and".
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q r:e x:e x:q x:q | r:e x:e r:e x:e x:h | x:e x:e x:q r:e x:e x:q | x:w

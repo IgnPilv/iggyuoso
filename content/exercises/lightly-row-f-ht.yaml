@@ -1,0 +1,13 @@
+id: lightly-row-f-ht
+title: Lightly Row in F, both hands
+kind: timed
+hand: together
+display: staff
+key: F
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:q A4:q A4:h | Bb4:q G4:q G4:h | F4:q G4:q A4:q Bb4:q | C5:q C5:q C5:h | C5:q A4:q A4:h | Bb4:q G4:q G4:h | F4:q
+  A4:q C5:q C5:q | F4:w
+left: C3+F3+A3:w | C3+E3+Bb3:w | C3+F3+A3:w | C3+F3+A3:w | C3+F3+A3:w | C3+E3+Bb3:w | C3+F3+A3:w | C3+F3+A3:w

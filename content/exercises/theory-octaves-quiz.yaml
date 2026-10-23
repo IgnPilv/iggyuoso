@@ -1,0 +1,100 @@
+id: theory-octaves-quiz
+title: Octaves quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Which C is middle C?
+  choices:
+  - C3
+  - C2
+  - C5
+  - C4
+  correct: 3
+  why: 'Middle C is C4: the C near the middle of the piano, and the start of octave 4.'
+  whyKeys:
+    notes: C4
+    labels: names
+- ask: C4 to C5 is...
+  choices:
+  - A step
+  - A fifth
+  - An octave
+  correct: 2
+  why: 'From one C to the next C is eight white keys: an octave.'
+- ask: The note just below C4 is...
+  choices:
+  - D4
+  - C3
+  - B4
+  - B3
+  correct: 3
+  why: Octave numbers change at C. The B just below middle C belongs to octave 3.
+- ask: The note just above B3 is...
+  choices:
+  - C3
+  - C4
+  - B4
+  - A3
+  correct: 1
+  why: After B comes C, and the octave number goes up.
+- ask: 'Which is higher: G3 or E4?'
+  choices:
+  - G3
+  - E4
+  correct: 1
+  why: Octave 4 is above octave 3, whatever the letter.
+- ask: 'Which is lower: A4 or C5?'
+  choices:
+  - C5
+  - A4
+  correct: 1
+  why: A4 is in octave 4; C5 starts octave 5.
+- ask: How many C keys does an 88-key piano have?
+  choices:
+  - '8'
+  - '12'
+  - '5'
+  - '7'
+  correct: 0
+  why: 'From C1 to C8: eight of them.'
+- ask: The lowest key of an 88-key piano is...
+  choices:
+  - A1
+  - A0
+  - C0
+  - C1
+  correct: 1
+  why: 'Below C1 there are just three keys: A0, B♭0, B0.'
+- ask: Two notes with the same letter, an octave apart, sound...
+  choices:
+  - Like the same note, higher and lower
+  - Completely different
+  - Clashing
+  correct: 0
+  why: Octaves blend so well they sound like one note doubled.
+  sound: C4:h C5:h
+- ask: E4 is in the octave that starts on...
+  choices:
+  - A3
+  - E3
+  - C4
+  - C5
+  correct: 2
+  why: 'Each octave runs from C up to B: E4 is between C4 and B4.'
+- ask: Which note is two octaves above C3?
+  choices:
+  - C4
+  - C5
+  - C6
+  - E3
+  correct: 1
+  why: C3 → C4 is one octave, C4 → C5 is two.
+- ask: The octave number tells you...
+  choices:
+  - How loud it is
+  - Which C to B stretch the note is in
+  - How long it lasts
+  correct: 1
+  why: 'Octave numbers name the register: where on the keyboard.'

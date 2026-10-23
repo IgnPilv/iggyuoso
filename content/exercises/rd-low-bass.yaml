@@ -1,0 +1,12 @@
+id: rd-low-bass
+title: Low in the bass
+kind: generated
+generator: read-notes
+clef: bass
+notes: C2-C3
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 4
+days: 2

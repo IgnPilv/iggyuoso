@@ -1,0 +1,13 @@
+id: ks-f-sharp-minor-chord-pattern
+title: 'F♯ minor: broken I, IV, V7, I'
+kind: timed
+hand: together
+prompt: Each chord broken in the right hand, its root held in the left. The hand barely moves.
+key: F#m
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4:q A4:q C#5:q A4:q | F#4:q B4:q D5:q B4:q | E#4:q G#4:q B4:q C#5:q | F#4:q A4:q C#5:h
+left: F#2:w | B2:w | C#3:w | F#2:w
+rightFingers: 1 3 5 3 1 2 4 2 1 2 4 5 1 3 5

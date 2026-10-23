@@ -1,0 +1,17 @@
+id: song-old-macdonald-swap
+title: 'Old MacDonald Had a Farm: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+key: G
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4+G4+B4:w | C4+E4+G4:h B3+D4+G4:h | B3+D4+G4:h A3+D4+F#4:h | B3+D4+G4:w | B3+D4+G4:w | C4+E4+G4:h B3+D4+G4:h | B3+D4+G4:h
+  A3+D4+F#4:h | B3+D4+G4:w
+left: G3:q G3:q G3:q D3:q | E3:q E3:q D3:h | B3:q B3:q A3:q A3:q | G3:h. D3:q | G3:q G3:q G3:q D3:q | E3:q E3:q D3:h | B3:q
+  B3:q A3:q A3:q | G3:w
+reps: 2
+days: 1

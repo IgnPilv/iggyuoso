@@ -1,0 +1,22 @@
+id: theory-note-value-maths
+title: Adding up note values
+skills:
+- theory
+steps:
+- explain: |
+    Every bar adds up to the time signature. Whole = 4, half = 2, quarter = 1, eighth = ½. A **dot** adds half
+    the value again: a dotted half lasts 3.
+  staff:
+    notes: C5:h. C5:q | C5:q. C5:e C5:h
+  terms:
+  - dot
+  check:
+    ask: A dotted half note lasts...
+    choices:
+    - 2 beats
+    - 2½ beats
+    - 3 beats
+    correct: 2
+    why: 2 + 1 (half of 2) = 3.
+- exercise: theory-note-values-quiz
+recap: Every bar adds up.

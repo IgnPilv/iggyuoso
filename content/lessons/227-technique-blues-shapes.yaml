@@ -1,0 +1,10 @@
+id: technique-blues-shapes
+title: Blues shapes
+skills:
+- technique
+steps:
+- explain: |
+    The blues uses three dominant 7th chords: C7, F7 and G7 in C. The left hand plays a boogie line (root, fifth, sixth, fifth); the right hand plays shells.
+- exercise: blues-boogie-lh
+- exercise: blues-twelve-bars
+recap: Three chords, twelve bars.

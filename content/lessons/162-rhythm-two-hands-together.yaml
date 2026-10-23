@@ -1,0 +1,14 @@
+id: rhythm-two-hands-together
+title: Two hands at once
+skills:
+- rhythm
+steps:
+- explain: |
+    Now both hands tap together. First the same rhythm; then the left hand holds long notes while
+    the right hand keeps the beat. This is exactly what a melody over a bass note feels like.
+- exercise: rt-together-same
+- exercise: rt-together-q-over-h
+- exercise: rt-together-h-over-q
+- exercise: rt-together-w-under
+- exercise: gen-echo-hands-q-h
+recap: Two hands, one beat. Every piece hands together is built on this.

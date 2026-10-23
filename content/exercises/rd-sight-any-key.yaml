@@ -1,0 +1,35 @@
+id: rd-sight-any-key
+title: Any key, both hands
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: C4-E5
+durations:
+- q
+- h
+- e
+- q.
+bars: 8
+mastery:
+  accuracy: 90
+keys:
+- C
+- G
+- D
+- A
+- E
+- F
+- Bb
+- Eb
+- Ab
+- Am
+- Em
+- Bm
+- Dm
+- Gm
+- Cm
+left: fifths
+reps: 6
+days: 3

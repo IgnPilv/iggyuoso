@@ -1,0 +1,23 @@
+id: theory-road-map
+title: Repeats and the road map
+skills:
+- theory
+steps:
+- explain: |
+    Music saves paper with **repeat signs**: two dots facing a double bar line mean "go back". **1st and 2nd endings** play
+    different last bars each time. **D.C. al Fine**: back to the start, stop at Fine.
+  terms:
+  - repeat
+  - 1st ending
+  - D.C.
+  - Fine
+  check:
+    ask: Repeat dots point...
+    choices:
+    - At the bars to play again
+    - At the next piece
+    - At the coda
+    correct: 0
+    why: The dots face into the section that repeats.
+- exercise: theory-road-map-quiz
+recap: 'Repeats, endings, D.C., D.S. and coda: the road map of a piece.'

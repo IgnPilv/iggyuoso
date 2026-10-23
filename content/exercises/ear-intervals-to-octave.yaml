@@ -1,0 +1,21 @@
+id: ear-intervals-to-octave
+title: All intervals, going up
+kind: ear
+questions: 25
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - m2
+  - M2
+  - m3
+  - M3
+  - P4
+  - P5
+  - m6
+  - M6
+  - P8
+  from: C4
+  direction: up
+  answer: name

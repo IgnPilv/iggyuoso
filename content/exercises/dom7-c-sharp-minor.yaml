@@ -1,0 +1,12 @@
+id: dom7-c-sharp-minor
+title: The dominant 7th in C♯ minor
+kind: timed
+hand: together
+prompt: Four notes of the dominant 7th, then the chord, then it resolves home.
+key: C#m
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G#4:q B#4:q D#5:q F#5:q | G#5:h B#4+D#5+F#5:h | C#5:q E5:q G#5:q E5:q | C#5+E5+G#5:w
+left: G#2:w | G#2:w | C#3:w | C#3:w

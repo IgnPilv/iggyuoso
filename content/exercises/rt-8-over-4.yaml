@@ -1,0 +1,9 @@
+id: rt-8-over-4
+title: Right runs, left walks
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:h | x:e x:e x:e x:e x:e x:e x:e x:e | x:w
+left: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w

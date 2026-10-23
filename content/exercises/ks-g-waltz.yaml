@@ -1,0 +1,12 @@
+id: ks-g-waltz
+title: 'G major: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: G
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: B4:h D5:q | C5:h E5:q | A4:h F#4:q | G4:h.
+left: G2:q D3+G3+B3:q D3+G3+B3:q | C3:q E3+G3:q E3+G3:q | D3:q F#3:q F#3:q | B2+D3+G3:h.

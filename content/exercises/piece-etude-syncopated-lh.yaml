@@ -1,0 +1,14 @@
+id: piece-etude-syncopated-lh
+title: 'Syncopated Study: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: F
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: F2:q C3:q F2:q C3:q | Bb2:q F3:q Bb2:q F3:q | F2:q C3:q F2:q C3:q | C3:q G2:q F2:h
+reps: 2
+days: 1

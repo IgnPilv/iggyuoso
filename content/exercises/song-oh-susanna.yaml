@@ -1,0 +1,18 @@
+id: song-oh-susanna
+title: Oh! Susanna
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+pickup: e e
+countIn: 1
+right: C4:e D4:e | E4:q G4:q G4:q. A4:e | G4:q E4:q C4:q. D4:e | E4:q E4:q D4:q C4:q | D4:h. C4:e D4:e | E4:q G4:q G4:q. A4:e
+  | G4:q E4:q C4:q. D4:e | E4:q E4:q D4:q D4:q | C4:h. r:q | F4:h F4:h | A4:q A4:h A4:q | G4:q G4:q E4:q C4:q | D4:h. C4:e
+  D4:e | E4:q G4:q G4:q. A4:e | G4:q E4:q C4:q. D4:e | E4:q E4:q D4:q D4:q | C4:h.
+left: r:q | C3:w | C3:w | C3:w | G2:w | C3:w | C3:w | C3:h G2:h | C3:w | F2:w | F2:w | C3:w | G2:w | C3:w | C3:w | C3:h G2:h
+  | C3:h.
+reps: 3
+days: 2

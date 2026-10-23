@@ -1,0 +1,29 @@
+id: song-greensleeves-pedal
+title: Greensleeves, with pedal
+skills:
+- songs
+steps:
+- explain: |
+    **Greensleeves, with pedal** · English ballad, 1500s, arranged
+
+    The Tudor tune again, now with a flowing left hand and the pedal changing on every chord.
+  staff:
+    notes: A4:q  |  C5:h D5:q
+    key: Am
+  sound: A4:q  |  C5:h D5:q  |  E5:q. F5:e E5:q  |  D5:h B4:q
+- explain: |
+    **Before you play.** Pedal just after each new bass note. Keep the left hand softer than the tune.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: A minor · Time: 3/4 · Tempo: 76
+- exercise: song-greensleeves-pedal-tap
+- exercise: song-greensleeves-pedal-tap-hands
+- exercise: song-greensleeves-pedal-by-ear
+- exercise: song-greensleeves-pedal-rh
+- exercise: song-greensleeves-pedal-lh
+- exercise: song-greensleeves-pedal
+- exercise: song-greensleeves-pedal-arranged
+- exercise: song-greensleeves-pedal-waltz
+- exercise: song-greensleeves-pedal-performance
+recap: 'Greensleeves, with pedal: tune, left hand, together. Come back to it any time; songs are for fun.'

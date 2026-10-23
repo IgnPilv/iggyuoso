@@ -1,0 +1,28 @@
+id: song-we-wish
+title: We Wish You a Merry Christmas
+skills:
+- songs
+steps:
+- explain: |
+    **We Wish You a Merry Christmas** · Folk carol, England
+
+    An old West Country carol, sung by carollers asking for figgy pudding.
+  staff:
+    notes: G4:q  |  C5:q C5:e D5:e C5:e B4:e
+  sound: G4:q  |  C5:q C5:e D5:e C5:e B4:e  |  A4:q A4:q A4:q  |  D5:q D5:e E5:e D5:e C5:e
+- explain: |
+    **Before you play.** Fast and bouncy. Eighth notes come in pairs: "1 and 2 and 3".
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 3/4 · Tempo: 120
+- exercise: song-we-wish-tap
+- exercise: song-we-wish-tap-hands
+- exercise: song-we-wish-by-ear
+- exercise: song-we-wish-rh
+- exercise: song-we-wish-lh
+- exercise: song-we-wish
+- exercise: song-we-wish-arranged
+- exercise: song-we-wish-swap
+- exercise: song-we-wish-performance
+recap: 'We Wish You a Merry Christmas: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,22 @@
+id: theory-minor-chords
+title: Minor chords and their symbols
+skills:
+- theory
+steps:
+- explain: |
+    A chord symbol with a small **m** is a **minor** chord: Am = A C E. The only difference from major is the
+    middle note, one half step lower: A major is A C♯ E.
+  keys:
+    notes: A3 C4 E4
+    labels: names
+  sound: A3+C#4+E4:h A3+C4+E4:h
+  check:
+    ask: Dm is...
+    choices:
+    - D F♯ A
+    - D E A
+    - D F A
+    correct: 2
+    why: Root D, minor third F, fifth A.
+- exercise: theory-minor-chords-quiz
+recap: Small m, lower third.

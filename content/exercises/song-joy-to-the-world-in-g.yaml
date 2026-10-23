@@ -1,0 +1,18 @@
+id: song-joy-to-the-world-in-g
+title: Joy to the World in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G5:h F#5:q. E5:e | D5:h. C5:q | B4:h A4:h | G4:h. D5:q | E5:h. E5:q | F#5:h. F#5:q | G5:h. G5:q | G5:q F#5:q E5:q D5:q
+  | D5:q. C5:e B4:q G5:q | G5:q F#5:q E5:q D5:q | D5:q. C5:e B4:q B4:q | B4:q B4:q B4:q B4:e C5:e | D5:h. C5:e B4:e | A4:q
+  A4:q A4:q A4:e B4:e | C5:h. B4:e A4:e | G4:q G5:h E5:q | D5:q. C5:e B4:q C5:q | B4:h A4:h | G4:w
+left: G2:w | D3:w | G2:h D3:h | G2:w | C3:w | D3:w | G2:w | G2:w | G2:w | G2:w | G2:w | G2:w | G2:w | D3:w | D3:w | G2:h C3:h
+  | G2:w | G2:h D3:h | G2:w
+reps: 2
+days: 1

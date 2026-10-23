@@ -1,0 +1,14 @@
+id: ear-five-keys
+title: Find it on five keys
+skills:
+- ear
+steps:
+- explain: |
+    All five keys of C position are lit: C D E F G. After the reference C you hear one of them.
+    Is it close to C (D, E) or far (F, G)? Then pick the key.
+  keys:
+    notes: C4 D4 E4 F4 G4
+    labels: names
+- exercise: ear-find-five-lit
+- exercise: ear-find-five
+recap: The five keys under your hand, by ear.

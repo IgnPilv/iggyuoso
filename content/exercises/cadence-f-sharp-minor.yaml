@@ -1,0 +1,12 @@
+id: cadence-f-sharp-minor
+title: 'F♯ minor: i, iv, V7, i'
+kind: timed
+hand: together
+prompt: 'The right hand barely moves: keep the common notes, slide the others to the nearest key.'
+key: F#m
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4+A4+C#5:h F#4+B4+D5:h | E#4+B4+C#5:h F#4+A4+C#5:h | F#4+A4+C#5:h F#4+B4+D5:h | E#4+B4+C#5:h F#4+A4+C#5:h
+left: F#2:h B2:h | C#3:h F#2:h | F#2:h B2:h | C#3:h F#2:h

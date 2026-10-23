@@ -1,0 +1,26 @@
+id: m8-ear-test
+title: Ear test
+kind: ear
+prompt: 'An ear test: no colours, no hints. The results list each miss with its answer.'
+questions: 20
+feedback: none
+reps: 1
+days: 1
+items:
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  - aug
+  root: C4
+- type: interval
+  pool:
+  - P4
+  - TT
+  - P5
+  - m7
+  - M7
+  from: C4
+  direction: up
+  answer: name

@@ -1,0 +1,14 @@
+id: piece-gymnopedie-rh
+title: 'Gymnopédie No. 1: the opening: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: D
+tempo: 66
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: r:h. | r:h. | r:q F#5:q A5:q | G5:q F#5:q C#5:q | B4:q C#5:q D5:q | A4:h. | F#4:h. | F#4:h.
+reps: 2
+days: 1

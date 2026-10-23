@@ -1,0 +1,13 @@
+id: ks-f-minor-broken
+title: 'F minor: broken chords'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with broken chords in the left hand.
+key: Fm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Ab4:h C5:h | Bb4:h Db5:h | G4:h E4:h | F4:w
+left: F2:e C3:e Ab2:e C3:e F2:e C3:e Ab2:e C3:e | Bb2:e F3:e Db3:e F3:e Bb2:e F3:e Db3:e F3:e | C3:e G3:e E3:e G3:e C3:e G3:e
+  E3:e G3:e | C3+F3+Ab3:w

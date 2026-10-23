@@ -1,0 +1,14 @@
+id: piece-etude-legato-pedal-lh
+title: 'Evening Bells: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:q G3:q C4:q G3:q | D3:q A3:q D4:q A3:q | C3:q G3:q C4:q G3:q | G2:q D3:q G3:q D3:q | C3:q G3:q C4:q G3:q | D3:q A3:q
+  D4:q A3:q | C3:q G3:q G2:q D3:q | C3+E3+G3:w
+reps: 2
+days: 1

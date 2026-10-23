@@ -1,0 +1,14 @@
+id: ks-a-minor-thirds
+title: 'A minor: warm-up in thirds'
+kind: timed
+hand: together
+prompt: 'Skip a key, step back: 1 3 2 4 3 5. Both hands at once.'
+key: Am
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q C5:q B4:q D5:q | C5:q E5:q D5:q B4:q | A4:q C5:q E5:q C5:q | A4:w
+left: A3:q C4:q B3:q D4:q | C4:q E4:q D4:q B3:q | A3:q C4:q E4:q C4:q | A3:w
+rightFingers: 1 3 2 4 3 5 4 2 1 3 5 3 1
+leftFingers: 5 3 4 2 3 1 2 4 5 3 1 3 5

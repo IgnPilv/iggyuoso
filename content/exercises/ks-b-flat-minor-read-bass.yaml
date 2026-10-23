@@ -1,0 +1,14 @@
+id: ks-b-flat-minor-read-bass
+title: Read the bass in B♭ minor
+kind: generated
+generator: read-notes
+clef: bass
+notes: E2-C4
+keys:
+- Bbm
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 3
+days: 2

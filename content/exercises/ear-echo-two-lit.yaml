@@ -1,0 +1,39 @@
+id: ear-echo-two-lit
+title: Echo two notes (lit keys)
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: C4 E4
+  plays: 3
+  lit: true
+- type: melody
+  notes: E4 C4
+  plays: 3
+  lit: true
+- type: melody
+  notes: D4 C4
+  plays: 3
+  lit: true
+- type: melody
+  notes: C4 D4
+  plays: 3
+  lit: true
+- type: melody
+  notes: E4 D4
+  plays: 3
+  lit: true
+- type: melody
+  notes: D4 E4
+  plays: 3
+  lit: true
+- type: melody
+  notes: C4 C4
+  plays: 3
+  lit: true
+- type: melody
+  notes: E4 E4
+  plays: 3
+  lit: true

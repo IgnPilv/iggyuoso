@@ -1,0 +1,12 @@
+id: ks-a-minor-waltz
+title: 'A minor: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: Am
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: C5:h E5:q | D5:h F5:q | B4:h G#4:q | A4:h.
+left: A2:q C3+E3:q C3+E3:q | D3:q F3:q F3:q | E3:q G#3:q G#3:q | C3+E3+A3:h.

@@ -1,0 +1,19 @@
+id: gen-workout-8-read-hands
+title: Read it, two hands
+kind: generated
+generator: rhythm-read
+tempo: 60
+meter: 4/4
+durations:
+- q
+- q.
+- e
+- s
+- r:e
+- h
+bars: 4
+mastery:
+  accuracy: 90
+hands: both
+reps: 3
+days: 3

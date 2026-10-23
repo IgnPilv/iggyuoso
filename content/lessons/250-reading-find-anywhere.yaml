@@ -1,0 +1,10 @@
+id: reading-find-anywhere
+title: Find it anywhere
+skills:
+- reading
+steps:
+- explain: |
+    Every letter appears many times on the keyboard. Find the note named, in any octave: fast.
+- exercise: rd-find-white
+- exercise: rd-find-black
+recap: Any octave, any key, without counting.

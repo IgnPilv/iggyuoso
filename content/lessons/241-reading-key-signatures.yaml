@@ -1,0 +1,12 @@
+id: reading-key-signatures
+title: Reading with key signatures
+skills:
+- reading
+steps:
+- explain: |
+    With a key signature, the sharps or flats apply to **every** note on that letter, on every line, all the way through.
+    Play the note as the key says, even though no ♯ or ♭ stands next to it.
+- exercise: rd-keys-g-d
+- exercise: rd-keys-f-bb
+- exercise: rd-keys-bass
+recap: The key signature is in force everywhere.

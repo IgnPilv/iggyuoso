@@ -1,0 +1,22 @@
+id: ear-how-many
+title: How many notes at once?
+skills:
+- ear
+steps:
+- explain: |
+    Several notes can sound at once: that is a **chord**. First game: how many notes did you hear,
+    one, two or three? After you answer, they are played one by one so you can check.
+  sound: C4:h | C4+G4:h | C4+E4+G4:h
+  terms:
+  - chord
+  check:
+    ask: C, E and G together make...
+    choices:
+    - A chord of three notes
+    - One loud note
+    - Two notes
+    correct: 0
+    why: 'Three notes sounding at once: a three-note chord, a triad.'
+- exercise: ear-count-1-2
+- exercise: ear-count-1-2-3
+recap: Chords are notes sounding together. Your ear can pull them apart.

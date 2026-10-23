@@ -1,0 +1,16 @@
+id: gen-read-eight-bars
+title: Read eight bars
+kind: generated
+generator: rhythm-read
+tempo: 72
+meter: 4/4
+durations:
+- q
+- h
+- e
+- r:q
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

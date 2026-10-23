@@ -1,0 +1,12 @@
+id: rd-c-position-bass
+title: Name the left-hand notes
+kind: generated
+generator: read-notes
+clef: bass
+notes: C3-G3
+questions: 25
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 4
+days: 2

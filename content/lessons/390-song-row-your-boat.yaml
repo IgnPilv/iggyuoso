@@ -1,0 +1,30 @@
+id: song-row-your-boat
+title: Row, Row, Row Your Boat
+skills:
+- songs
+steps:
+- explain: |
+    **Row, Row, Row Your Boat** · Round, England and America, 1852
+
+    A round: a second player can start from the beginning when the first reaches bar 3. In 6/8 there are two beats a bar, each a dotted quarter.
+  staff:
+    notes: C4:q. C4:q.  |  C4:q D4:e E4:q.
+  sound: C4:q. C4:q.  |  C4:q D4:e E4:q.  |  E4:q D4:e E4:q F4:e  |  G4:h.
+- explain: |
+    **Before you play.** Feel two big beats a bar: "ROW, row | ROW your boat".
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 6/8 · Tempo: 60
+- exercise: song-row-your-boat-tap
+- exercise: song-row-your-boat-tap-hands
+- exercise: song-row-your-boat-by-ear
+- exercise: song-row-your-boat-rh
+- exercise: song-row-your-boat-lh
+- exercise: song-row-your-boat
+- exercise: song-row-your-boat-arranged
+- exercise: song-row-your-boat-swap
+- exercise: song-row-your-boat-in-g
+- exercise: song-row-your-boat-performance
+- exercise: song-row-your-boat-in-f
+recap: 'Row, Row, Row Your Boat: tune, left hand, together. Come back to it any time; songs are for fun.'

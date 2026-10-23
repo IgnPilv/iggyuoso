@@ -16,7 +16,7 @@ import { h, type View } from './dom';
 // progress with a made-up history.
 
 const STRAND_LABEL: Record<Strand, string> = {
-  technique: 'Technique', reading: 'Reading', rhythm: 'Rhythm', theory: 'Theory', ear: 'Ear', repertoire: 'Pieces', creativity: 'Creativity',
+  technique: 'Technique', reading: 'Reading', rhythm: 'Rhythm', theory: 'Theory', ear: 'Ear', repertoire: 'Pieces', creativity: 'Creativity', songs: 'Songs',
 };
 const HAND_LABEL: Record<Hand, string> = { right: 'Right hand', left: 'Left hand' };
 

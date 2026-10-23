@@ -1,0 +1,14 @@
+id: triad-a
+title: A major triad, both hands
+kind: timed
+hand: together
+prompt: Broken, then all three notes together.
+key: A
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q C#5:q E5:q C#5:q | A4+C#5+E5:w | A4:q C#5:q E5:q C#5:q | A4+C#5+E5:w
+left: A3:h E4:h | A3+E4:w | A3:h E4:h | A3+E4:w
+rightFingers: 1 3 5 3 1 1 3 5 3 1
+leftFingers: 5 1 5 5 1 5

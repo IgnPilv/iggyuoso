@@ -1,0 +1,19 @@
+id: rd-sight-together-c
+title: Tune over the key note
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: C4-G4
+durations:
+- q
+- h
+bars: 4
+mastery:
+  accuracy: 90
+keys:
+- C
+left: roots
+reps: 4
+days: 2

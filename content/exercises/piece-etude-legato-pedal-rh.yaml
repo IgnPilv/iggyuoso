@@ -1,0 +1,13 @@
+id: piece-etude-legato-pedal-rh
+title: 'Evening Bells: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G5:h E5:h | F5:h D5:h | E5:h C5:h | D5:w | G5:h E5:h | F5:h D5:h | E5:q D5:q C5:q B4:q | C5:w
+reps: 2
+days: 1

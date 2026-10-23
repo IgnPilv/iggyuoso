@@ -1,0 +1,16 @@
+id: gen-read-hands-eighths
+title: Read two hands with eighths
+kind: generated
+generator: rhythm-read
+tempo: 60
+meter: 4/4
+durations:
+- q
+- e
+- h
+bars: 4
+mastery:
+  accuracy: 90
+hands: both
+reps: 4
+days: 2

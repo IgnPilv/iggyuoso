@@ -1,0 +1,14 @@
+id: pos-b-flat-minor
+title: B♭ minor position, hands together
+kind: timed
+hand: together
+prompt: 'Thumbs on different notes: right thumb on Bb, left little finger on Bb.'
+key: Bbm
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Bb4:q C5:q Db5:q Eb5:q | F5:q Eb5:q Db5:q C5:q | Bb4:q Db5:q F5:q Db5:q | Bb4:w
+left: Bb3:q C4:q Db4:q Eb4:q | F4:q Eb4:q Db4:q C4:q | Bb3:q Db4:q F4:q Db4:q | Bb3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 5 3 1
+leftFingers: 5 4 3 2 1 2 3 4 5 3 1 3 5

@@ -1,0 +1,15 @@
+id: song-sailors-song-performance
+title: 'Sailor''s Song in D Minor: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Dm
+tempo: 96
+meter: 4/4
+countIn: 1
+right: D4:q F4:q A4:q A4:q | G4:q F4:q E4:h | C4:q E4:q G4:q G4:q | F4:q E4:q D4:h | A4:q A4:q A4:q F4:q | G4:q G4:q G4:q
+  E4:q | F4:q E4:q D4:q C#4:q | D4:w
+left: D3+F3+A3:w | D3+F3+A3:h C#3+E3+A3:h | C3+E3+G3:w | D3+F3+A3:w | D3+F3+A3:w | C3+E3+G3:w | D3+F3+A3:h C#3+E3+A3:h | D3+F3+A3:w
+reps: 2
+days: 2

@@ -1,0 +1,23 @@
+id: piece-etude-chromatic
+title: Chromatic Study
+skills:
+- repertoire
+steps:
+- explain: |
+    **Chromatic Study** · Our own study
+
+    Chromatic runs, every key in order, over plain chords.
+  staff:
+    notes: C5:e B4:e Bb4:e A4:e Ab4:e G4:e F#4:e F4:e  |  E4:h G4:h
+  sound: C5:e B4:e Bb4:e A4:e Ab4:e G4:e F#4:e F4:e  |  E4:h G4:h  |  A4:e Bb4:e B4:e C5:e C#5:e D5:e D#5:e E5:e  |  F5:h
+    D5:h
+- explain: |
+    **How to learn it.** Fingering: 3 on every black key, 1 on most white keys, 2 between E-F and B-C.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-chromatic-tap
+- exercise: piece-etude-chromatic-rh
+- exercise: piece-etude-chromatic-lh
+- exercise: piece-etude-chromatic
+- exercise: piece-etude-chromatic-polish
+recap: 'Chromatic Study: learned hands alone, then together, then performed.'

@@ -1,0 +1,13 @@
+id: ks-g-minor-harmonised-scale
+title: 'G minor: the scale with chords'
+kind: timed
+hand: together
+prompt: 'The scale in the right hand, the chords under it in the left: the scale turned into music.'
+key: Gm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q A4:q Bb4:q C5:q | D5:q Eb5:q F#5:q G5:q | F#5:q Eb5:q D5:q C5:q | Bb4:q A4:q G4:h
+left: D3+G3+Bb3:w | D3+G3+Bb3:h D3+F#3+A3:h | D3+F#3+A3:w | D3+G3+Bb3:w
+rightFingers: 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1

@@ -1,0 +1,19 @@
+id: theory-writing-melodies
+title: How melodies work
+skills:
+- theory
+steps:
+- explain: |
+    Good melodies are mostly **steps** with a few **leaps**; a leap is followed by a step back. Phrases rise to one **climax**,
+    put chord notes on strong beats, and the last phrase comes home to the tonic.
+  sound: C4:q D4:q E4:q G4:q | A4:h G4:h | F4:q E4:q D4:q B3:q | C4:w
+  check:
+    ask: After the leap E–A, the melody...
+    choices:
+    - Leaps higher
+    - Steps back down
+    - Stops
+    correct: 1
+    why: A–G, filling the gap.
+- exercise: theory-melodies-quiz
+recap: Steps, a leap, a peak, home.

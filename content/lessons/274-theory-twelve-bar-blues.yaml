@@ -1,0 +1,22 @@
+id: theory-twelve-bar-blues
+title: The twelve-bar blues
+skills:
+- theory
+steps:
+- explain: |
+    The **twelve-bar blues**: I I I I | IV IV I I | V IV I V. Three chords, usually all dominant 7ths, and a scale with
+    a "blue" note.
+  callout: |
+    | C7 | C7 | C7 | C7 |
+    | F7 | F7 | C7 | C7 |
+    | G7 | F7 | C7 | G7 |
+  check:
+    ask: Bar 5 of a blues in C is...
+    choices:
+    - G7
+    - F7
+    - C7
+    correct: 1
+    why: Bars 5–6 move to IV.
+- exercise: theory-blues-quiz
+recap: Twelve bars, three chords.

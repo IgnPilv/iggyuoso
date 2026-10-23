@@ -1,0 +1,10 @@
+id: rt-8-alternate
+title: Eighths shared between hands
+kind: tap
+prompt: Right on the beat, left on the "and".
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e r:e x:e r:e x:e r:e x:e r:e | x:e r:e x:e r:e x:e r:e x:e r:e | x:e r:e x:e r:e x:h | x:w
+left: r:e x:e r:e x:e r:e x:e r:e x:e | r:e x:e r:e x:e r:e x:e r:e x:e | r:e x:e r:e x:e r:h | r:w

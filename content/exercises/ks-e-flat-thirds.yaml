@@ -1,0 +1,14 @@
+id: ks-e-flat-thirds
+title: 'E♭ major: warm-up in thirds'
+kind: timed
+hand: together
+prompt: 'Skip a key, step back: 1 3 2 4 3 5. Both hands at once.'
+key: Eb
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Eb4:q G4:q F4:q Ab4:q | G4:q Bb4:q Ab4:q F4:q | Eb4:q G4:q Bb4:q G4:q | Eb4:w
+left: Eb3:q G3:q F3:q Ab3:q | G3:q Bb3:q Ab3:q F3:q | Eb3:q G3:q Bb3:q G3:q | Eb3:w
+rightFingers: 1 3 2 4 3 5 4 2 1 3 5 3 1
+leftFingers: 5 3 4 2 3 1 2 4 5 3 1 3 5

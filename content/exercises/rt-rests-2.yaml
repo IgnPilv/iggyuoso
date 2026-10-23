@@ -1,0 +1,8 @@
+id: rt-rests-2
+title: Rest at the end
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q r:q | x:q x:q x:q r:q | r:q x:q x:q x:q | x:h r:h

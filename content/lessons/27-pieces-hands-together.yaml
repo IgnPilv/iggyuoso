@@ -1,7 +1,8 @@
 id: pieces-hands-together
 title: First pieces hands together
-unit: two-hands-at-once
-skills: [repertoire, hands-together]
+skills:
+- repertoire
+- hands-together
 steps:
 - explain: |
     Two well-known tunes, now with the left hand. **Ode to Joy** is by Beethoven, from his
@@ -10,9 +11,12 @@ steps:
 - explain: |
     Most piano music has a **melody** (the tune) and an **accompaniment** (the part that supports it).
     Play the left hand quietly (p) and the melody a little louder (mf): the tune should sing on top.
-  terms: [melody, accompaniment, balance]
+  terms:
+  - melody
+  - accompaniment
+  - balance
   callout: |
-    Practise each hand alone first if it's hard. That's what "hands apart, then together" means.
-- {exercise: mary-lamb-ht}
-- {exercise: ode-to-joy-ht}
-recap: Melody louder, accompaniment softer. Hands apart first, then together.
+    Hard bar? Play each hand alone a few times, then put them back together.
+- exercise: mary-lamb-ht
+- exercise: ode-to-joy-ht
+recap: Melody louder, accompaniment softer.

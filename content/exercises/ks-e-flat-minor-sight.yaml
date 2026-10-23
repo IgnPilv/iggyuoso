@@ -1,0 +1,20 @@
+id: ks-e-flat-minor-sight
+title: Sight-read in E♭ minor
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: Eb4-Eb5
+keys:
+- Ebm
+left: chords
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

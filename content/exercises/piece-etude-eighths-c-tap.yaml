@@ -1,0 +1,12 @@
+id: piece-etude-eighths-c-tap
+title: 'Running Eighths: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 76
+meter: 4/4
+countIn: 1
+right: x:e x:e x:e x:e x:q x:q | x:e x:e x:e x:e x:h | x:e x:e x:e x:e x:q x:q | x:e x:e x:e x:e x:h
+left: x:w | x:w | x:w | x:h x:h
+reps: 2
+days: 1

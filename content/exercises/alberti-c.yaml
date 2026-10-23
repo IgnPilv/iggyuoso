@@ -1,0 +1,11 @@
+id: alberti-c
+title: Alberti in C
+kind: timed
+hand: together
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:h D5:q C5:q | C5:h B4:h | D5:h F5:q E5:q | C5:w
+left: C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e D3:e
+  G3:e | C3+E3+G3:w

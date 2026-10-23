@@ -1,0 +1,18 @@
+id: rd-fluency-grand
+title: Grand staff, fast
+kind: generated
+generator: read-notes
+clef: grand
+notes: C2-C6
+questions: 40
+mastery:
+  accuracy: 90
+  medianMs: 2000
+keys:
+- C
+- G
+- D
+- F
+- Bb
+reps: 5
+days: 3

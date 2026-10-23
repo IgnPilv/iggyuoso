@@ -1,0 +1,10 @@
+id: creativity-harmonise-minor
+title: Harmonising in minor
+skills:
+- creativity
+steps:
+- explain: |
+    A minor tune with i, iv and V. In A minor: Am, Dm and E (with G♯). Choose the chord whose notes match the tune's strong beats.
+- exercise: cr-harm-minor-1
+- exercise: cr-harm-minor-2
+recap: 'i, iv and V: minor keys have their own three chords.'

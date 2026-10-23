@@ -1,0 +1,123 @@
+id: theory-keys-two-three-quiz
+title: Key signatures quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: The key signature of C major is...
+  choices:
+  - No sharps or flats
+  - B♭, E♭, A♭
+  - F♯, C♯, G♯
+  - F♯
+  correct: 0
+  why: 'C major: No sharps or flats.'
+- ask: The key signature of G major is...
+  choices:
+  - F♯
+  - B♭, E♭
+  - No sharps or flats
+  - B♭
+  correct: 0
+  why: 'G major: F♯.'
+- ask: Which major key has this key signature?
+  choices:
+  - B♭ major
+  - E♭ major
+  - F major
+  - G major
+  correct: 3
+  why: 'F♯: G major. Sharps: the key is a half step above the last sharp. Flats: the key is the second-to-last flat.'
+  staff: C5:w
+  key: G
+- ask: The key signature of D major is...
+  choices:
+  - No sharps or flats
+  - F♯, C♯
+  - B♭, E♭
+  - F♯, C♯, G♯
+  correct: 1
+  why: 'D major: F♯, C♯.'
+- ask: Which major key has this key signature?
+  choices:
+  - D major
+  - F major
+  - B♭ major
+  - G major
+  correct: 0
+  why: 'F♯, C♯: D major. Sharps: the key is a half step above the last sharp. Flats: the key is the second-to-last flat.'
+  staff: C5:w
+  key: D
+- ask: The key signature of F major is...
+  choices:
+  - F♯, C♯, G♯
+  - B♭, E♭, A♭
+  - B♭
+  - F♯
+  correct: 2
+  why: 'F major: B♭.'
+- ask: Which major key has this key signature?
+  choices:
+  - F major
+  - G major
+  - B♭ major
+  - E♭ major
+  correct: 0
+  why: 'B♭: F major. Sharps: the key is a half step above the last sharp. Flats: the key is the second-to-last flat.'
+  staff: C5:w
+  key: F
+- ask: The key signature of B♭ major is...
+  choices:
+  - F♯
+  - B♭, E♭, A♭
+  - B♭, E♭
+  - No sharps or flats
+  correct: 2
+  why: 'B♭ major: B♭, E♭.'
+- ask: Which major key has this key signature?
+  choices:
+  - E♭ major
+  - D major
+  - A major
+  - B♭ major
+  correct: 3
+  why: 'B♭, E♭: B♭ major. Sharps: the key is a half step above the last sharp. Flats: the key is the second-to-last flat.'
+  staff: C5:w
+  key: Bb
+- ask: The key signature of A major is...
+  choices:
+  - F♯, C♯, G♯
+  - F♯
+  - B♭
+  - B♭, E♭, A♭
+  correct: 0
+  why: 'A major: F♯, C♯, G♯.'
+- ask: Which major key has this key signature?
+  choices:
+  - B♭ major
+  - D major
+  - A major
+  - F major
+  correct: 2
+  why: 'F♯, C♯, G♯: A major. Sharps: the key is a half step above the last sharp. Flats: the key is the second-to-last flat.'
+  staff: C5:w
+  key: A
+- ask: The key signature of E♭ major is...
+  choices:
+  - F♯
+  - No sharps or flats
+  - B♭
+  - B♭, E♭, A♭
+  correct: 3
+  why: 'E♭ major: B♭, E♭, A♭.'
+- ask: Which major key has this key signature?
+  choices:
+  - D major
+  - A major
+  - E♭ major
+  - B♭ major
+  correct: 2
+  why: 'B♭, E♭, A♭: E♭ major. Sharps: the key is a half step above the last sharp. Flats: the key is the second-to-last flat.'
+  staff: C5:w
+  key: Eb

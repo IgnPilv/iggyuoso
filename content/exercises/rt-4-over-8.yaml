@@ -1,0 +1,9 @@
+id: rt-4-over-8
+title: Left runs, right holds
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:h x:h | x:q x:q x:h | x:h x:h | x:w
+left: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:h | x:e x:e x:q x:e x:e x:q | x:w

@@ -1,0 +1,16 @@
+id: song-drunken-sailor-in-g
+title: What Shall We Do with the Drunken Sailor? in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:h E5:h | E5:q A4:q C5:q E5:q | D5:h D5:h | D5:q G4:q B4:q D5:q | E5:h E5:h | E5:q F#5:q G5:q A5:q | G5:q E5:q D5:q
+  B4:q | A4:h A4:h
+left: A2:w | A2:w | G2:w | G2:w | A2:w | A2:w | G2:h E3:h | A2:w
+reps: 2
+days: 1

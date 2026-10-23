@@ -1,0 +1,12 @@
+id: piece-etude-pedal-waltz-tap
+title: 'Pedal Waltz: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 104
+meter: 3/4
+countIn: 1
+right: x:h. | x:h x:q | x:h. | x:h. | x:h. | x:h x:q | x:h x:q | x:h.
+left: x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:h.
+reps: 2
+days: 1

@@ -1,0 +1,10 @@
+id: reading-eight-bars
+title: Eight bars, both hands
+skills:
+- reading
+steps:
+- explain: |
+    Eight-bar pieces with chords. Look one bar ahead; never stop to fix a note.
+- exercise: rd-sight-eight-chords
+- exercise: rd-sight-eight-lh
+recap: Look ahead and keep going.

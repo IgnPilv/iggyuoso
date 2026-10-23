@@ -1,0 +1,14 @@
+id: piece-etude-staccato-chords-lh
+title: 'Bouncing Chords: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3+E3+G3:q C3+E3+G3:q C3+E3+G3:q C3+E3+G3:q | C3+F3+A3:q C3+F3+A3:q C3+E3+G3:q C3+E3+G3:q | C3+E3+G3:q C3+E3+G3:q B2+D3+G3:q
+  B2+D3+G3:q | C3+E3+G3:w
+reps: 2
+days: 1

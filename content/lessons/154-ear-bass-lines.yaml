@@ -1,0 +1,10 @@
+id: ear-bass-lines
+title: Hearing the bass
+skills:
+- ear
+steps:
+- explain: |
+    Low notes are harder to hear. Echo bass lines below middle C with the left hand.
+- exercise: ear-echo-bass
+- exercise: ear-count-low
+recap: The bass is the floor of the harmony.

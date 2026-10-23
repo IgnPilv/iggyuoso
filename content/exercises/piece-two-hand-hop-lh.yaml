@@ -1,0 +1,14 @@
+id: piece-two-hand-hop-lh
+title: 'Two-Hand Hop: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: r:w | G3:q E3:q C3:h | r:w | C3:w
+fingers: 1 3 5 5
+reps: 2
+days: 1

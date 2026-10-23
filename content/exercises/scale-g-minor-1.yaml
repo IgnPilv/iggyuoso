@@ -1,0 +1,14 @@
+id: scale-g-minor-1
+title: G minor harmonic scale, one octave
+kind: timed
+hand: together
+prompt: 'Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.'
+key: Gm
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q A4:q Bb4:q C5:q | D5:q Eb5:q F#5:q G5:q | F#5:q Eb5:q D5:q C5:q | Bb4:q A4:q G4:h
+left: G3:q A3:q Bb3:q C4:q | D4:q Eb4:q F#4:q G4:q | F#4:q Eb4:q D4:q C4:q | Bb3:q A3:q G3:h
+rightFingers: 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1
+leftFingers: 5 4 3 2 1 3 2 1 2 3 1 2 3 4 5

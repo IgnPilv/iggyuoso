@@ -1,0 +1,14 @@
+id: song-rain-rain-rh
+title: 'Rain, Rain, Go Away: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:h E4:h | G4:q G4:q E4:h | G4:q G4:q E4:q E4:q | A4:q G4:q E4:h | G4:h E4:h | G4:q G4:q E4:h | G4:q G4:q E4:q E4:q
+  | A4:q G4:q C4:h
+reps: 2
+days: 1

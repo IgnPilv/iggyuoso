@@ -1,0 +1,67 @@
+id: ks-c-sharp-minor-quiz
+title: 'Know the key: C♯ minor'
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: The key signature of C♯ minor is...
+  choices:
+  - F♯, C♯, G♯
+  - F♯, C♯, G♯, D♯, A♯
+  - F♯, C♯, G♯, D♯
+  - B♭, E♭, A♭, D♭
+  correct: 2
+  why: 'C♯ minor: F♯, C♯, G♯, D♯.'
+  whyStaff:
+    notes: C#4:w
+    key: C#m
+- ask: The notes of the C♯ minor harmonic scale are...
+  choices:
+  - C♯ D♯ E♯ F♯ G♯ A♯ B♯
+  - C♯ D♯ E F♯ G♯ A B♯
+  correct: 1
+  why: 'Count the steps: W H W W H W+H H.'
+- ask: The tonic chord of C♯ minor is...
+  choices:
+  - C♯ E G♯
+  - F♯ A C♯
+  - G♯ B♯ D♯ F♯
+  correct: 0
+  why: 'Degrees 1, 3, 5: C♯ E G♯.'
+- ask: The iv chord of C♯ minor is...
+  choices:
+  - C♯ E G♯
+  - F♯ A C♯
+  - G♯ B♯ D♯ F♯
+  correct: 1
+  why: 'Degrees 4, 6, 8: F♯ A C♯.'
+- ask: The dominant 7th of C♯ minor is...
+  choices:
+  - G♯ B♯ D♯ F♯
+  - F♯ A C♯
+  - C♯ E G♯
+  correct: 0
+  why: 'Built on degree 5, G♯: G♯ B♯ D♯ F♯.'
+- ask: The dominant note of C♯ minor is...
+  choices:
+  - A
+  - G♯
+  - D♯
+  - F♯
+  correct: 1
+  why: Degree 5.
+- ask: The leading note of C♯ minor is...
+  choices:
+  - D♯
+  - A
+  - B♯
+  correct: 2
+  why: Degree 7, a half step below the tonic (raised in harmonic minor).
+- ask: The relative major of C♯ minor is...
+  choices:
+  - C major
+  - E minor
+  - E major
+  correct: 2
+  why: They share a key signature.

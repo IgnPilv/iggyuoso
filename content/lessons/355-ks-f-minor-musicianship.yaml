@@ -1,0 +1,25 @@
+id: ks-f-minor-musicianship
+title: Reading and hearing F minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: F minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: F4:q G4:q Ab4:q Bb4:q C5:q Db5:q E5:q F5:q
+    key: Fm
+  sound: F4:q G4:q Ab4:q Bb4:q C5:q Db5:q E5:q F5:q
+- exercise: ks-f-minor-quiz
+- exercise: ks-f-minor-triads
+- exercise: ks-f-minor-read
+- exercise: ks-f-minor-read-bass
+- exercise: ks-f-minor-sight
+- exercise: ks-f-minor-sight-rh
+- exercise: ks-f-minor-sight-lh
+- exercise: ks-f-minor-intervals
+- exercise: ks-f-minor-degrees
+- exercise: ks-f-minor-echo
+recap: F minor for the eyes and ears.

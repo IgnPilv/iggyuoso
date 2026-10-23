@@ -1,0 +1,16 @@
+id: ear-sixths-sevenths-up
+title: Sixths and sevenths
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - m6
+  - M6
+  - m7
+  - M7
+  from: C4
+  direction: up
+  answer: name

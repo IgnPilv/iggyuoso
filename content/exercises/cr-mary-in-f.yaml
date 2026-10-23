@@ -1,0 +1,15 @@
+id: cr-mary-in-f
+title: Mary in F major
+kind: timed
+hand: together
+display: staff
+key: F
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q G4:q F4:q G4:q | A4:q A4:q A4:h | G4:q G4:q G4:h | A4:q C5:q C5:h | A4:q G4:q F4:q G4:q | A4:q A4:q A4:q A4:q
+  | G4:q G4:q A4:q G4:q | F4:w
+left: C3+F3+A3:w | C3+F3+A3:w | C3+E3+G3:w | C3+F3+A3:w | C3+F3+A3:w | C3+F3+A3:w | C3+E3+G3:w | C3+F3+A3:w
+reps: 2
+days: 1

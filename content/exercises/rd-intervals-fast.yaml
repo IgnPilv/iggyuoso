@@ -1,0 +1,19 @@
+id: rd-intervals-fast
+title: Intervals, fast
+kind: generated
+generator: intervals
+clef: treble
+notes: C4-C5
+intervals:
+- M2
+- M3
+- P4
+- P5
+- M6
+- P8
+questions: 25
+mastery:
+  accuracy: 90
+  medianMs: 2000
+reps: 4
+days: 3

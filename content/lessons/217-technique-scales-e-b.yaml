@@ -1,0 +1,11 @@
+id: technique-scales-e-b
+title: E and B major, B minor
+skills:
+- technique
+steps:
+- explain: |
+    E major uses the fingering of C. B major and B minor change the left hand: it starts on finger 4.
+- exercise: scale-e-1
+- exercise: scale-b-1
+- exercise: scale-b-minor-1
+recap: Four and five sharps.

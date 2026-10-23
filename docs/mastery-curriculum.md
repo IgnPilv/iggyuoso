@@ -9,17 +9,29 @@ Five years at 20–40 minutes a day takes an adult beginner to about **ABRSM Gra
 6–7) in playing, theory and ear. That is high intermediate. Grade 7 is a stretch goal for players
 who practise 40 minutes a day. The app shows each player where their own pace projects them.
 
-## Structure
-- **Seven strands:** technique, reading, rhythm, theory, ear, repertoire, creativity.
-- **Year (5) → unit (about 6 a year) → node → exercise.** The data is in `content/tree/`.
-  Year 1 is designed node by node; Years 2–5 are unit outlines until they are built.
-- **Node types:** lesson, drill, piece, checkpoint (3 a year, 15 in all), side quest.
-- **Path over tree:** "Start today's session" follows the path; the full tree is visible, and
-  side quests are optional.
-- **Cross-strand gates:** a key opens for playing only after its theory and ear nodes are
-  Practised. Every node runs hear → name → see → play → create.
-- **Repertoire mix from Year 2:** etude, polyphony, large form, character piece. Pieces are public
-  domain or our own arrangements. Sight-reading sits 1–2 levels below the player's pieces.
+## Structure (2026-10-23: a growing tree, no years)
+- **Seven branches** grow side by side: technique, reading, rhythm, theory, ear, pieces
+  (repertoire), creativity. A **trunk of milestones** joins them, and **songs** open after milestones.
+  Data in `content/tree/` (format in `content/README.md`).
+- **Stages, not years.** Nine stages, each closed by one milestone: first notes; two hands; scales
+  and eighths; two octaves and minor keys; chords and harmony; pedal and four kinds of piece; flat
+  keys and compound time; arpeggios and the dominant seventh; form, sonatinas and the blues. A stage is a few
+  months at the planned pace; nobody is told how long a stage "should" take.
+- **Intertwined requirements.** Requirements cross branches: reading a key needs its theory node,
+  a piece needs its technique and rhythm nodes, an ear drill needs the notes it uses on the keys.
+  The four roots (playing, reading, rhythm, ear) start together in stage 1 and feed each other.
+- **Both hands early.** Two hands from stage 1 (mirror hands, taking turns, a held bass); after
+  stage 2, nearly every playing exercise is hands together. Hands-alone takes stay only as the first
+  steps of a new piece.
+- **Each milestone** has a theory paper, technique takes, an ear test and a sight-read, and needs a
+  few nodes from every branch of its stage. Passing it grows the next stage and opens new songs.
+- **Node types:** lesson, drill, piece, checkpoint (milestone), side quest, song. Nothing is locked:
+  a node that has not grown yet still opens, with advice on what comes first.
+- **Families in every key:** from stage 5, each key gets a key study (scale, contrary motion,
+  cadence, arpeggio, inversions, accompaniments, a waltz) and a musicianship lesson (key quiz,
+  reading, sight-reading, intervals, degrees, echo).
+- **Repertoire mix:** etude, polyphony, large form, character piece; public domain or our own.
+  Every piece runs rhythm tap → right hand → left hand → together (tempo ladder) → polish.
 
 ## Mastery states
 Locked → Introduced → Practised (★, 65+) → Solid (★★★, 92+ at ≥90% tempo) → Mastered (passed again
@@ -40,6 +52,9 @@ memory model once there is data.
   threatens a streak. Placement tests let players skip ahead (skipped nodes count as Practised).
 
 ## Ear track
+Assumes no pitch sense at all. It starts with same or different (far apart, then closer), higher or
+lower, which way a tune moves, step or leap, loud or soft, how many notes, and echoing two notes on
+lit keys; only then single notes against a reference, intervals, chords and melodies.
 Relative pitch in a key, answered on the keyboard: cadence → note → play it back → hear it resolve.
 Only the first key pressed counts. Mix 3–6 categories; add one at 85–90% over the last 20–30 tries.
 Perfect pitch is the "note naming" side quest and never blocks progress. Thresholds are design

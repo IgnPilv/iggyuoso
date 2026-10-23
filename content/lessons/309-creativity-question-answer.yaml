@@ -1,0 +1,12 @@
+id: creativity-question-answer
+title: Question and answer
+skills:
+- creativity
+steps:
+- explain: |
+    A **question** phrase ends up in the air (on D, E or G); the **answer** comes home to C. Make up both, in C position,
+    in this rhythm. Bars 1–2 are the question, bars 3–4 the answer.
+  sound: C4:q D4:q E4:q F4:q | G4:h D4:h | E4:q D4:q E4:q F4:q | D4:h C4:h
+- exercise: cr-qa-c
+- exercise: cr-qa-hands
+recap: Questions go away; answers come home.

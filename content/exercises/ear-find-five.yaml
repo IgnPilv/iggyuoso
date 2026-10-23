@@ -1,0 +1,15 @@
+id: ear-find-five
+title: One of five, no help
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: note
+  pool:
+  - C4
+  - D4
+  - E4
+  - F4
+  - G4
+  reference: C4

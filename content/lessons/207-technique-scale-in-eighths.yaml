@@ -1,0 +1,11 @@
+id: technique-scale-in-eighths
+title: Scales in eighths
+skills:
+- technique
+steps:
+- explain: |
+    Twice as many notes in the same time. Keep the tempo slow; aim for evenness, not speed.
+- exercise: scale-c-1-e
+- exercise: scale-g-1-e
+- exercise: scale-f-1-e
+recap: Even eighths, both hands.

@@ -1,0 +1,14 @@
+id: scale-f-minor-1-e
+title: F minor harmonic scale, one octave, eighths
+kind: timed
+hand: together
+prompt: 'Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.'
+key: Fm
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:e G4:e Ab4:e Bb4:e C5:e Db5:e E5:e F5:e | E5:e Db5:e C5:e Bb4:e Ab4:e G4:e F4:q
+left: F3:e G3:e Ab3:e Bb3:e C4:e Db4:e E4:e F4:e | E4:e Db4:e C4:e Bb3:e Ab3:e G3:e F3:q
+rightFingers: 1 2 3 4 1 2 3 4 3 2 1 4 3 2 1
+leftFingers: 5 4 3 2 1 3 2 1 2 3 1 2 3 4 5

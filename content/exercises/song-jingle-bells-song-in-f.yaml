@@ -1,0 +1,18 @@
+id: song-jingle-bells-song-in-f
+title: Jingle Bells in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q A4:q A4:h | A4:q A4:q A4:h | A4:q C5:q F4:q. G4:e | A4:w | Bb4:q Bb4:q Bb4:q. Bb4:e | Bb4:q A4:q A4:q A4:e A4:e
+  | A4:q G4:q G4:q A4:q | G4:h C5:h | A4:q A4:q A4:h | A4:q A4:q A4:h | A4:q C5:q F4:q. G4:e | A4:w | Bb4:q Bb4:q Bb4:q. Bb4:e
+  | Bb4:q A4:q A4:q A4:e A4:e | C5:q C5:q Bb4:q G4:q | F4:w
+left: C3+F3+A3:w | C3+F3+A3:w | C3+F3+A3:w | C3+F3+A3:w | D3+F3+Bb3:w | C3+F3+A3:w | C3+E3+G3:w | C3+E3+G3:w | C3+F3+A3:w
+  | C3+F3+A3:w | C3+F3+A3:w | C3+F3+A3:w | D3+F3+Bb3:w | C3+F3+A3:w | C3+E3+G3:w | C3+F3+A3:w
+reps: 2
+days: 1

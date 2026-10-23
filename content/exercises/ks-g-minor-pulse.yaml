@@ -1,0 +1,13 @@
+id: ks-g-minor-pulse
+title: 'G minor: a chord on every beat'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with a chord on every beat in the left hand.
+key: Gm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Bb4:h D5:h | C5:h Eb5:h | A4:h F#4:h | G4:w
+left: D3+G3+Bb3:q D3+G3+Bb3:q D3+G3+Bb3:q D3+G3+Bb3:q | C3+Eb3+G3:q C3+Eb3+G3:q C3+Eb3+G3:q C3+Eb3+G3:q | A2+D3+F#3:q A2+D3+F#3:q
+  A2+D3+F#3:q A2+D3+F#3:q | Bb2+D3+G3:w

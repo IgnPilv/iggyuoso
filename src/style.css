@@ -930,3 +930,89 @@ ol.path-nodes li.ahead a { opacity: 0.6; }
 .choices.pictures { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--space-2); }
 .choices.pictures button.choice { display: grid; gap: var(--space-1); justify-items: center; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); height: auto; }
 .rhythm-picture { width: 100%; max-width: 220px; height: auto; }
+/* ---------------------------------------------------------------- the growing tree (src/ui/treeView.ts) */
+
+.strand-songs { background: var(--accent); }
+.tree-card .growing-tree { display: block; width: 100%; max-width: 760px; height: auto; margin: var(--space-3) auto 0; }
+.tree-caption { margin: var(--space-2) 0 0; text-align: center; }
+.tree-ground { fill: var(--surface-sunken); }
+.tree-trunk { fill: var(--line-strong); }
+.tree-ring { fill: none; stroke: var(--brand-2); stroke-width: 2.5; }
+.tree-limb { fill: none; stroke-width: 6; stroke-linecap: round; opacity: 0.85; }
+.tree-trunk.ghost { opacity: 0.35; }
+.tree-limb.ghost { stroke-width: 3; opacity: 0.18; stroke-dasharray: 2 7; }
+.tree-ring.ghost { stroke: var(--line-strong); stroke-width: 1.5; }
+.tree-branch:hover .tree-limb.ghost, .tree-branch:focus-visible .tree-limb.ghost { stroke-width: 4; opacity: 0.4; }
+.tree-leaf { opacity: 0.95; }
+.tree-leaf.pale { opacity: 0.4; }
+.tree-bud { fill: var(--target); filter: drop-shadow(0 0 6px var(--target)); animation: bud-glow 2.4s var(--ease-out) infinite alternate; }
+@keyframes bud-glow { from { opacity: 0.65; } to { opacity: 1; } }
+.tree-blossom { fill: var(--brand-2); stroke: var(--surface-solid); stroke-width: 1.5; }
+.tree-label { font-family: var(--font-mono); font-size: 15px; fill: var(--ink-2); }
+.tree-branch { cursor: pointer; outline: none; }
+.tree-branch:hover .tree-limb, .tree-branch:focus-visible .tree-limb { stroke-width: 8; opacity: 1; }
+.tree-branch:hover .tree-label, .tree-branch:focus-visible .tree-label { fill: var(--ink); }
+.strand-stroke-technique { stroke: var(--rh); }
+.strand-stroke-reading { stroke: var(--brand-3); }
+.strand-stroke-rhythm { stroke: var(--warn); }
+.strand-stroke-theory { stroke: var(--brand-1); }
+.strand-stroke-ear { stroke: var(--lh); }
+.strand-stroke-repertoire { stroke: var(--brand-2); }
+.strand-stroke-creativity { stroke: var(--target); }
+.strand-fill-technique { fill: var(--rh); }
+.strand-fill-reading { fill: var(--brand-3); }
+.strand-fill-rhythm { fill: var(--warn); }
+.strand-fill-theory { fill: var(--brand-1); }
+.strand-fill-ear { fill: var(--lh); }
+.strand-fill-repertoire { fill: var(--brand-2); }
+.strand-fill-creativity { fill: var(--target); }
+.tree-count { font-size: 0.8em; fill: var(--muted); }
+@media (max-width: 560px) { .tree-label { font-size: 25px; } }
+
+/* Tiles with a second line (branch and stage), and nodes that have not grown yet. */
+.tile-text { display: flex; flex-direction: column; min-width: 0; }
+.tile-meta { font-size: var(--text-xs); color: var(--muted); }
+ol.lessons li.bud a { opacity: 0.55; border-style: dashed; }
+ol.lessons li.bud a:hover { opacity: 1; }
+.tile-needs { display: block; margin-top: 2px; font-size: var(--text-xs); color: var(--muted); }
+
+/* Stages: one row per branch inside each stage. */
+.stage-summary { margin: 0 0 var(--space-2) 56px; max-width: 70ch; }
+.stage-row { display: grid; grid-template-columns: 8.5em 1fr; gap: var(--space-2); align-items: start; margin: 0 0 var(--space-2) 56px; }
+.stage-row-label { display: inline-flex; align-items: center; gap: 6px; padding-top: 12px; font-size: var(--text-sm); color: var(--ink-2); }
+.stage-row-label a { color: inherit; text-decoration: none; }
+.stage-row-label a:hover { color: var(--ink); }
+.stage-row ol.path-nodes { margin: 0; }
+@media (max-width: 560px) {
+  .stage-summary, .stage-row { margin-left: 0; }
+  .stage-row { grid-template-columns: 1fr; }
+  .stage-row-label { padding-top: var(--space-2); }
+}
+
+/* Branch page and songbook. */
+.lesson-branch { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; margin-bottom: 2px; }
+.lesson-branch:hover { color: var(--ink-2); }
+.branch-page h2 .strand-dot, .branch-page h2 .strand-dot { display: inline-block; width: 14px; height: 14px; vertical-align: middle; }
+.branch-nav { display: flex; flex-wrap: wrap; gap: 6px; margin: var(--space-3) 0; }
+.branch-nav a { padding: 3px 10px; border-radius: var(--radius-pill); border: 1px solid var(--line); color: var(--ink-2); text-decoration: none; }
+.branch-nav a.current { background: var(--brand-gradient); color: var(--on-accent); border-color: transparent; }
+.branch-stage h3 { margin: var(--space-5) 0 0; font-family: var(--font-display); font-size: var(--text-md); color: var(--ink-2); }
+ol.vine { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-left: 0; }
+ol.path-nodes.growing-list { margin-left: 0; }
+ol.path-nodes li.more a { color: var(--muted); border-style: dashed; justify-content: center; font-size: var(--text-sm); }
+.song-shelf { margin-top: var(--space-5); }
+.song-shelf h3 { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin: 0; font-family: var(--font-display); font-size: var(--text-md); }
+.song-shelf h3 .state-badge { margin-left: 0; }
+.song-shelf.closed .song-grid { opacity: 0.6; }
+.song-grid { list-style: none; padding: 0; margin: var(--space-3) 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: var(--space-2); }
+.song-grid a {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px var(--space-2); padding: var(--space-3);
+  border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); text-decoration: none; height: 100%;
+  transition: transform var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+}
+.song-grid a:hover { transform: translateY(-2px); border-color: var(--line-strong); }
+.song-grid li.done a { border-color: var(--ok); }
+.song-title { font-family: var(--font-display); font-weight: 600; }
+.song-about { grid-column: 1; font-size: var(--text-xs); color: var(--muted); }
+.song-grid .state-badge { grid-row: 1; grid-column: 2; }

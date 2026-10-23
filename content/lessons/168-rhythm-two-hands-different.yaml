@@ -1,0 +1,15 @@
+id: rhythm-two-hands-different
+title: Two rhythms at once
+skills:
+- rhythm
+steps:
+- explain: |
+    The hands now play **different** rhythms that fit together. Learn each line alone for a moment,
+    then join them. Listen for the beats where both hands land together: they are your anchors.
+- exercise: rt-diff-1
+- exercise: rt-diff-2
+- exercise: rt-diff-3
+- exercise: rt-diff-4
+- exercise: gen-read-hands-diff
+- exercise: gen-echo-hands-diff
+recap: 'Different rhythms in each hand: the start of real independence.'

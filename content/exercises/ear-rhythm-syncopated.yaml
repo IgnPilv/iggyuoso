@@ -1,0 +1,15 @@
+id: ear-rhythm-syncopated
+title: Straight or syncopated?
+kind: ear
+questions: 15
+reps: 3
+days: 2
+items:
+- type: rhythm
+  pool:
+  - x:q x:h x:q
+  - x:q x:q x:q x:q
+  - x:e x:q x:e x:h
+  - x:h x:h
+  meter: 4/4
+  tempo: 80

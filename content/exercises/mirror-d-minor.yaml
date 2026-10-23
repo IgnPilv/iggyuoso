@@ -1,0 +1,14 @@
+id: mirror-d-minor
+title: 'D minor: mirror image'
+kind: timed
+hand: together
+prompt: Both thumbs on the key note; the hands move apart and back. Same finger in both hands every time.
+key: Dm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q E4:q F4:q G4:q | A4:q G4:q F4:q E4:q | D4:h F4:h | D4:w
+left: D3:q C3:q Bb2:q A2:q | G2:q A2:q Bb2:q C3:q | D3:h Bb2:h | D3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 1
+leftFingers: 1 2 3 4 5 4 3 2 1 3 1

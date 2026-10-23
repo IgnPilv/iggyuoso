@@ -1,0 +1,26 @@
+id: ks-e
+title: 'Key study: E major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: E major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in E major. Its chords: **E**, **A** and **B7**.
+  staff:
+    notes: E4:q F#4:q G#4:q A4:q B4:q C#5:q D#5:q E5:q
+    key: E
+  sound: E4:q F#4:q G#4:q A4:q B4:q C#5:q D#5:q E5:q
+- exercise: ks-e-thirds
+- exercise: dom7-e
+- exercise: scale-e-1-e
+- exercise: scale-e-2-e
+- exercise: scale-e-contrary
+- exercise: ks-e-pedal
+- exercise: ks-e-harmonised-scale
+- exercise: ks-e-chord-pattern
+- exercise: ks-e-inversions
+- exercise: ks-e-broken
+- exercise: ks-e-alberti
+- exercise: ks-e-pulse
+- exercise: ks-e-waltz
+recap: E major under both hands.

@@ -1,0 +1,9 @@
+id: ear-echo-two-hands
+title: Echo a tune and its bass
+skills:
+- ear
+steps:
+- explain: |
+    Tunes that cross middle C: the low notes go to the left hand, the high ones to the right.
+- exercise: ear-echo-wide
+recap: The whole keyboard, by ear.

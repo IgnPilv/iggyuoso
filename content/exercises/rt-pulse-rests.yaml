@@ -1,0 +1,9 @@
+id: rt-pulse-rests
+title: Rests, no click
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q r:q x:q r:q | x:h r:h | x:q x:q r:q x:q | x:w
+click: count-in

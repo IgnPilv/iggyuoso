@@ -1,0 +1,15 @@
+id: piece-etude-legato-pedal-polish
+title: 'Evening Bells: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+tempo: 60
+meter: 4/4
+countIn: 1
+right: G5:h E5:h | F5:h D5:h | E5:h C5:h | D5:w | G5:h E5:h | F5:h D5:h | E5:q D5:q C5:q B4:q | C5:w
+left: C3:q G3:q C4:q G3:q | D3:q A3:q D4:q A3:q | C3:q G3:q C4:q G3:q | G2:q D3:q G3:q D3:q | C3:q G3:q C4:q G3:q | D3:q A3:q
+  D4:q A3:q | C3:q G3:q G2:q D3:q | C3+E3+G3:w
+pedal: x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w
+reps: 3
+days: 3

@@ -1,0 +1,91 @@
+id: theory-big-forms-quiz
+title: Big forms quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A rondo has the shape...
+  choices:
+  - A A B A
+  - A B A C A
+  - A B
+  correct: 1
+  why: The main theme keeps coming back between new episodes.
+- ask: 'Sonata form has three parts:'
+  choices:
+  - Verse, chorus, bridge
+  - Minuet, trio, minuet
+  - Exposition, development, recapitulation
+  correct: 2
+  why: Present the themes, work them, bring them back.
+- ask: In the exposition of a major-key sonata, the second theme is usually in...
+  choices:
+  - The dominant key
+  - The relative minor
+  - The tonic
+  correct: 0
+  why: In C major, the second theme comes in G.
+- ask: In the recapitulation, the second theme returns in...
+  choices:
+  - A new key
+  - The tonic key
+  - The dominant
+  correct: 1
+  why: Everything comes home.
+- ask: The development section...
+  choices:
+  - Repeats the exposition exactly
+  - Ends the piece
+  - Takes the themes through new keys
+  correct: 2
+  why: 'Fragments, sequences, new keys: the drama.'
+- ask: A sonatina is...
+  choices:
+  - A dance
+  - A small sonata
+  - A song
+  correct: 1
+  why: Shorter, simpler sonata form.
+- ask: Theme and variations means...
+  choices:
+  - A tune, then changed versions of it
+  - Two unrelated tunes
+  - A round
+  correct: 0
+  why: Same tune, new rhythm, harmony or decoration.
+- ask: A minuet is in...
+  choices:
+  - 3/4
+  - 4/4
+  - 6/8
+  correct: 0
+  why: A dance in three.
+- ask: A coda is...
+  choices:
+  - An ending section
+  - An opening
+  - A repeat
+  correct: 0
+  why: Coda = tail.
+- ask: The first movement of a classical sonata is usually...
+  choices:
+  - A minuet
+  - In sonata form
+  - A rondo
+  correct: 1
+  why: Fast first movement, sonata form.
+- ask: The last movement of a classical sonata is often...
+  choices:
+  - A theme only
+  - A fugue
+  - A rondo
+  correct: 2
+  why: Lively finales love rondo form.
+- ask: A canon (round) is...
+  choices:
+  - A form ABA
+  - A tune with chords
+  - The same tune starting at different times
+  correct: 2
+  why: Frère Jacques is a canon.

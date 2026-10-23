@@ -1,0 +1,22 @@
+id: piece-two-hand-hop
+title: Two-Hand Hop
+skills:
+- repertoire
+steps:
+- explain: |
+    **Two-Hand Hop** · Our own study
+
+    The hands take turns, then meet on the last note.
+  staff:
+    notes: C4:q E4:q G4:h  |  r:w
+  sound: C4:q E4:q G4:h  |  r:w  |  G4:q F4:q E4:q D4:q  |  C4:w
+- explain: |
+    **How to learn it.** Count the rests out loud: "one, two, three, four".
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-two-hand-hop-tap
+- exercise: piece-two-hand-hop-rh
+- exercise: piece-two-hand-hop-lh
+- exercise: piece-two-hand-hop
+- exercise: piece-two-hand-hop-polish
+recap: 'Two-Hand Hop: learned hands alone, then together, then performed.'

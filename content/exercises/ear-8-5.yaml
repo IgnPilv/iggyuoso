@@ -1,0 +1,14 @@
+id: ear-8-5
+title: Octave or fifth?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - P8
+  - P5
+  from: C4
+  direction: up
+  answer: name

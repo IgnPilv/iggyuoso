@@ -1,0 +1,77 @@
+id: ks-a-minor-triads
+title: Chords of A minor
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: In A minor, the triad on degree 1 (A C E) is...
+  choices:
+  - Major
+  - Minor
+  - Diminished
+  correct: 1
+  why: 'A C E: minor 3rd + major 3rd, so minor. Roman numeral: i.'
+  whyStaff:
+    notes: A4+C5+E5:w
+    key: Am
+- ask: In A minor, the triad on degree 2 (B D F) is...
+  choices:
+  - Diminished
+  - Minor
+  - Major
+  correct: 0
+  why: 'B D F: two minor 3rds, so diminished. Roman numeral: ii°.'
+  whyStaff:
+    notes: B4+D5+F5:w
+    key: Am
+- ask: In A minor, the triad on degree 3 (C E G♯) is...
+  choices:
+  - Augmented
+  - Minor
+  - Major
+  correct: 0
+  why: 'C E G♯: two major 3rds, so augmented. Roman numeral: III+.'
+  whyStaff:
+    notes: C5+E5+G#5:w
+    key: Am
+- ask: In A minor, the triad on degree 4 (D F A) is...
+  choices:
+  - Major
+  - Diminished
+  - Minor
+  correct: 2
+  why: 'D F A: minor 3rd + major 3rd, so minor. Roman numeral: iv.'
+  whyStaff:
+    notes: D5+F5+A5:w
+    key: Am
+- ask: In A minor, the triad on degree 5 (E G♯ B) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 1
+  why: 'E G♯ B: major 3rd + minor 3rd, so major. Roman numeral: V.'
+  whyStaff:
+    notes: E5+G#5+B5:w
+    key: Am
+- ask: In A minor, the triad on degree 6 (F A C) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 1
+  why: 'F A C: major 3rd + minor 3rd, so major. Roman numeral: VI.'
+  whyStaff:
+    notes: F5+A5+C6:w
+    key: Am
+- ask: In A minor, the triad on degree 7 (G♯ B D) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 2
+  why: 'G♯ B D: two minor 3rds, so diminished. Roman numeral: vii°.'
+  whyStaff:
+    notes: G#5+B5+D6:w
+    key: Am

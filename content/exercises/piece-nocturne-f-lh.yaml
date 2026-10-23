@@ -1,0 +1,16 @@
+id: piece-nocturne-f-lh
+title: 'Nocturne in F: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: F
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | G2:e D3:e Bb2:e D3:e C3:e G3:e E3:e G3:e | F2:e C3:e A2:e C3:e F2:e C3:e A2:e
+  C3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | Bb2:e F3:e D3:e F3:e Bb2:e F3:e D3:e F3:e | F2:e C3:e A2:e C3:e F2:e C3:e
+  A2:e C3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3+F3+A3:w
+reps: 2
+days: 1

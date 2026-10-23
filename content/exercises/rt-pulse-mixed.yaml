@@ -1,0 +1,9 @@
+id: rt-pulse-mixed
+title: Long and short, no click
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:h | x:h x:h | x:q x:q x:q x:q | x:w
+click: count-in

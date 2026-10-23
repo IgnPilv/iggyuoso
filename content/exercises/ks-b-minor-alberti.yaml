@@ -1,0 +1,13 @@
+id: ks-b-minor-alberti
+title: 'B minor: an Alberti bass'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with an Alberti bass in the left hand.
+key: Bm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:h F#5:h | E5:h G5:h | C#5:h A#4:h | B4:w
+left: B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e | B2:e G3:e E3:e G3:e B2:e G3:e E3:e G3:e | A#2:e F#3:e C#3:e F#3:e A#2:e
+  F#3:e C#3:e F#3:e | B2+D3+F#3:w

@@ -1,0 +1,12 @@
+id: cadence-d-flat
+title: 'D♭ major: I, IV, V7, I'
+kind: timed
+hand: together
+prompt: 'The right hand barely moves: keep the common notes, slide the others to the nearest key.'
+key: Db
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Db4+F4+Ab4:h Db4+Gb4+Bb4:h | C4+Gb4+Ab4:h Db4+F4+Ab4:h | Db4+F4+Ab4:h Db4+Gb4+Bb4:h | C4+Gb4+Ab4:h Db4+F4+Ab4:h
+left: Db3:h Gb2:h | Ab2:h Db3:h | Db3:h Gb2:h | Ab2:h Db3:h

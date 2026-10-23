@@ -1,0 +1,9 @@
+id: rt-offbeat-2
+title: Reggae chop
+kind: tap
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:q x:q r:q x:q | r:q x:q r:q x:q | r:q x:q r:q x:q | x:w
+left: x:h x:h | x:h x:h | x:h x:h | x:w

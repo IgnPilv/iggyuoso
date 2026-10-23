@@ -1,0 +1,15 @@
+id: ear-count-1-2-3
+title: One, two or three?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: count
+  pool:
+  - 1
+  - 2
+  - 3
+  range:
+  - C3
+  - C5

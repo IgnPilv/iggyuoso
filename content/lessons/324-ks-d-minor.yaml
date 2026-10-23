@@ -1,0 +1,25 @@
+id: ks-d-minor
+title: 'Key study: D minor'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: D minor, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in D minor. Its chords: **Dm**, **Gm** and **A7**.
+  staff:
+    notes: D4:q E4:q F4:q G4:q A4:q Bb4:q C#5:q D5:q
+    key: Dm
+  sound: D4:q E4:q F4:q G4:q A4:q Bb4:q C#5:q D5:q
+- exercise: ks-d-minor-thirds
+- exercise: pos-d-minor
+- exercise: scale-d-minor-1-e
+- exercise: scale-d-minor-contrary
+- exercise: ks-d-minor-pedal
+- exercise: ks-d-minor-harmonised-scale
+- exercise: ks-d-minor-chord-pattern
+- exercise: ks-d-minor-inversions
+- exercise: ks-d-minor-broken
+- exercise: ks-d-minor-alberti
+- exercise: ks-d-minor-pulse
+- exercise: ks-d-minor-waltz
+recap: D minor under both hands.

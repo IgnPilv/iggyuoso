@@ -1,0 +1,18 @@
+id: ks-c-sharp-minor-degrees
+title: Every degree of C♯ minor
+kind: ear
+cadence: C#m
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: C#m
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

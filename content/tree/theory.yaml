@@ -1,0 +1,56 @@
+# The Theory branch. Written by tools/content/build.py; format in content/README.md.
+branch: theory
+title: Theory
+summary: "How music is built: notes, intervals, scales, keys, chords and form, a few screens and a quiz at a time."
+nodes:
+  - { id: high-and-low, stage: 1, lesson: high-and-low, title: "High and low" }
+  - { id: c-d-e, stage: 1, lesson: c-d-e, title: "C, D and E", requires: [high-and-low] }
+  - { id: f-g-a-b, stage: 1, lesson: f-g-a-b, title: "F, G, A and B", requires: [c-d-e] }
+  - { id: steps-and-skips, stage: 1, lesson: steps-and-skips, title: "Steps and skips (2nds and 3rds)", requires: [treble-staff] }
+  - { id: dynamics, stage: 2, lesson: dynamics, title: "Loud and soft (f, p, mf, mp)", requires: [y1-checkpoint-a, ear-loud-soft] }
+  - { id: sharps-flats-naturals, stage: 2, lesson: sharps-flats-naturals, title: "Sharps, flats and semitones", requires: [y1-checkpoint-a] }
+  - { id: intervals-to-fifth, stage: 2, lesson: intervals-to-fifth, title: "Intervals: 2nd to 5th and the octave", requires: [steps-and-skips] }
+  - { id: tonic-triad, stage: 2, lesson: tonic-triad, title: "Triads: C, F and G", requires: [intervals-to-fifth] }
+  - { id: chord-symbols, stage: 2, lesson: chord-symbols, title: "Chord symbols and I, IV, V, V7", requires: [tonic-triad] }
+  - { id: key-of-g, stage: 2, lesson: key-of-g, title: "One sharp: the key of G", requires: [sharps-flats-naturals, g-position] }
+  - { id: f-position-key-of-f, stage: 2, lesson: f-position-key-of-f, title: "One flat: F position and the key of F", requires: [sharps-flats-naturals, g-position] }
+  - { id: keys-and-signatures, stage: 2, lesson: keys-and-signatures, title: "Big idea: why music has keys", requires: [key-of-g, f-position-key-of-f] }
+  - { id: major-scale-pattern, stage: 3, lesson: major-scale-pattern, title: "The major scale: tones and semitones", requires: [y1-checkpoint-b] }
+  - { id: seconds-major-minor, stage: 4, lesson: seconds-major-minor, title: "Major and minor 2nds", requires: [y1-exit] }
+  - { id: thirds-major-minor, stage: 4, lesson: thirds-major-minor, title: "Major and minor 3rds", requires: [seconds-major-minor] }
+  - { id: relative-minor, stage: 4, lesson: relative-minor, title: "Relative major and minor", requires: [thirds-major-minor] }
+  - { id: natural-minor, stage: 4, lesson: natural-minor, title: "The natural minor scale", requires: [relative-minor] }
+  - { id: harmonic-minor, stage: 4, lesson: harmonic-minor, title: "The harmonic minor scale", requires: [natural-minor] }
+  - { id: melodic-minor, stage: 4, lesson: melodic-minor, title: "The melodic minor scale", requires: [harmonic-minor] }
+  - { id: triads-on-every-degree, stage: 5, lesson: triads-on-every-degree, title: "A chord on every note", requires: [y2-checkpoint-a, ear-how-many] }
+  - { id: primary-triads, stage: 5, lesson: primary-triads, title: "The primary triads", requires: [triads-on-every-degree] }
+  - { id: perfect-intervals, stage: 5, lesson: perfect-intervals, title: "Perfect 4ths and 5ths", requires: [y2-checkpoint-a] }
+  - { id: interval-map, stage: 5, lesson: interval-map, title: "Big idea: the interval map", requires: [perfect-intervals] }
+  - { id: stable-unstable, stage: 5, lesson: stable-unstable, title: "Notes that rest, notes that pull", requires: [primary-triads] }
+  - { id: cadence-in-f, stage: 5, lesson: cadence-in-f, title: "The perfect cadence", requires: [harmonise-i-iv-v] }
+  - { id: circle-of-fifths, stage: 6, lesson: circle-of-fifths, title: "Big idea: the circle of fifths", requires: [scales-a-major-g-minor] }
+  - { id: theory-octaves, stage: 1, lesson: theory-octaves, title: "Octaves and their numbers", type: lesson, requires: [f-g-a-b] }
+  - { id: theory-time-signatures, stage: 2, lesson: theory-time-signatures, title: "Time signatures", type: lesson, requires: [three-four-time, rhythm-two-four] }
+  - { id: theory-note-value-maths, stage: 2, lesson: theory-note-value-maths, title: "Adding up note values", type: lesson, requires: [half-and-whole-notes, rhythm-quarter-rests] }
+  - { id: theory-tempo-words, stage: 3, lesson: theory-tempo-words, title: "Tempo and expression words", type: lesson, requires: [dynamics] }
+  - { id: theory-road-map, stage: 3, lesson: theory-road-map, title: "Repeats and the road map", type: lesson, requires: [y1-checkpoint-b] }
+  - { id: theory-enharmonics, stage: 3, lesson: theory-enharmonics, title: "One key, two names", type: lesson, requires: [sharps-flats-naturals] }
+  - { id: theory-keys-two-and-three, stage: 4, lesson: theory-keys-two-and-three, title: "Keys with two and three sharps or flats", type: lesson, requires: [keys-and-signatures] }
+  - { id: theory-degree-names, stage: 4, lesson: theory-degree-names, title: "The names of the degrees", type: lesson, requires: [major-scale-pattern, chord-symbols] }
+  - { id: theory-minor-chords, stage: 4, lesson: theory-minor-chords, title: "Minor chords and their symbols", type: lesson, requires: [chord-symbols, relative-minor] }
+  - { id: theory-interval-quality, stage: 5, lesson: theory-interval-quality, title: "Major, minor and perfect", type: lesson, requires: [perfect-intervals, thirds-major-minor] }
+  - { id: theory-phrases-and-form, stage: 5, lesson: theory-phrases-and-form, title: "Phrases and form", type: lesson, requires: [theory-road-map, stable-unstable] }
+  - { id: theory-compound-time, stage: 6, lesson: theory-compound-time, title: "Simple and compound time", type: lesson, requires: [three-eight-time, theory-time-signatures] }
+  - { id: theory-minor-key-signatures, stage: 6, lesson: theory-minor-key-signatures, title: "Minor key signatures", type: lesson, requires: [circle-of-fifths, harmonic-minor] }
+  - { id: theory-transposition, stage: 6, lesson: theory-transposition, title: "Transposing on paper", type: lesson, requires: [transposing, theory-keys-two-and-three] }
+  - { id: dominant-seventh-theory, stage: 7, lesson: dominant-seventh-theory, title: "The dominant 7th chord", type: lesson, requires: [chord-symbols, theory-degree-names, y2-exit] }
+  - { id: cadence-types, stage: 7, lesson: cadence-types, title: "Four cadences", type: lesson, requires: [cadence-in-f, theory-phrases-and-form] }
+  - { id: theory-aug-dim, stage: 8, lesson: theory-aug-dim, title: "Augmented and diminished", type: lesson, requires: [dominant-seventh-theory, theory-interval-quality] }
+  - { id: theory-seventh-chords, stage: 8, lesson: theory-seventh-chords, title: "Seventh chords", type: lesson, requires: [dominant-seventh-theory] }
+  - { id: theory-passing-notes, stage: 8, lesson: theory-passing-notes, title: "Chord notes and passing notes", type: lesson, requires: [stable-unstable, theory-seventh-chords] }
+  - { id: theory-all-key-signatures, stage: 8, lesson: theory-all-key-signatures, title: "Every key signature", type: lesson, requires: [theory-minor-key-signatures, theory-keys-two-and-three] }
+  - { id: theory-sonata-and-rondo, stage: 9, lesson: theory-sonata-and-rondo, title: "Rondo and sonata form", type: lesson, requires: [theory-phrases-and-form, cadence-types] }
+  - { id: theory-twelve-bar-blues, stage: 9, lesson: theory-twelve-bar-blues, title: "The twelve-bar blues", type: lesson, requires: [dominant-seventh-theory, theory-phrases-and-form] }
+  - { id: theory-writing-melodies, stage: 9, lesson: theory-writing-melodies, title: "How melodies work", type: lesson, requires: [theory-passing-notes, cadence-types] }
+  - { id: theory-scale-spelling, stage: 5, lesson: theory-scale-spelling, title: "Spelling scales", type: lesson, requires: [theory-keys-two-and-three, harmonic-minor] }
+  - { id: theory-spelling-intervals, stage: 6, lesson: theory-spelling-intervals, title: "Spelling intervals", type: lesson, requires: [theory-interval-quality, theory-scale-spelling] }

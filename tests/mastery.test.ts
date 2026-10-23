@@ -5,7 +5,7 @@ import { memoryBackend, Store } from '../src/progress/store';
 import { stars } from '../src/scoring/stars';
 
 const node = (id: string, lesson: string, requires: string[] = []): TreeNode =>
-  ({ id, type: 'lesson', strand: 'technique', title: id, lesson, requires, planned: false, year: 1, unit: 'u' });
+  ({ id, type: 'lesson', strand: 'technique', title: id, lesson, requires, planned: false, stage: 1, branch: 'technique' });
 
 function setup() {
   const store = new Store(memoryBackend());

@@ -1,0 +1,92 @@
+id: theory-dominant-seventh-quiz
+title: Dominant 7th quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: The dominant 7th chord in C major is G7. Its notes are...
+  choices:
+  - G B D F
+  - G B♭ D F
+  - G B D F♯
+  correct: 0
+  why: Root G, major 3rd B, 5th D, minor 7th F.
+- ask: The dominant 7th chord in G major is D7. Its notes are...
+  choices:
+  - D F♯ A C
+  - D F♯ A C♯
+  - D F A C
+  correct: 0
+  why: Root D, major 3rd F♯, 5th A, minor 7th C.
+- ask: The dominant 7th chord in F major is C7. Its notes are...
+  choices:
+  - C E♭ G B♭
+  - C E G B♭
+  - C E G B
+  correct: 1
+  why: Root C, major 3rd E, 5th G, minor 7th B♭.
+- ask: The dominant 7th chord in D major is A7. Its notes are...
+  choices:
+  - A C♯ E G
+  - A C♯ E G♯
+  - A C E G
+  correct: 0
+  why: Root A, major 3rd C♯, 5th E, minor 7th G.
+- ask: The dominant 7th chord in B♭ major is F7. Its notes are...
+  choices:
+  - F A♭ C E♭
+  - F A C E
+  - F A C E♭
+  correct: 2
+  why: Root F, major 3rd A, 5th C, minor 7th E♭.
+- ask: The dominant 7th chord in A major is E7. Its notes are...
+  choices:
+  - E G♯ B D
+  - E G♯ B D♯
+  - E G B D
+  correct: 0
+  why: Root E, major 3rd G♯, 5th B, minor 7th D.
+- ask: The dominant 7th chord in E♭ major is B♭7. Its notes are...
+  choices:
+  - B♭ D F A
+  - B♭ D♭ F A♭
+  - B♭ D F A♭
+  correct: 2
+  why: Root B♭, major 3rd D, 5th F, minor 7th A♭.
+- ask: The dominant 7th chord in E major is B7. Its notes are...
+  choices:
+  - B D F♯ A
+  - B D♯ F♯ A
+  - B D♯ F♯ A♯
+  correct: 1
+  why: Root B, major 3rd D♯, 5th F♯, minor 7th A.
+- ask: The dominant 7th is built on degree...
+  choices:
+  - '1'
+  - '5'
+  - '7'
+  - '4'
+  correct: 1
+  why: Dominant = 5; add the 7th above it.
+- ask: In G7, the B usually resolves to...
+  choices:
+  - A
+  - B♭
+  - C
+  correct: 2
+  why: 'B is the leading note of C: it rises a half step.'
+- ask: In G7, the F usually resolves to...
+  choices:
+  - F♯
+  - E
+  - G
+  correct: 1
+  why: The 7th falls by step.
+- ask: Between B and F in G7 is a...
+  choices:
+  - Major 6th
+  - Perfect 5th
+  - Tritone
+  correct: 2
+  why: 'B to F: three whole tones, the tense heart of V7.'

@@ -1,0 +1,13 @@
+id: ks-f-pulse
+title: 'F major: a chord on every beat'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with a chord on every beat in the left hand.
+key: F
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:h C5:h | Bb4:h D5:h | G4:h E4:h | F4:w
+left: C3+F3+A3:q C3+F3+A3:q C3+F3+A3:q C3+F3+A3:q | D3+F3+Bb3:q D3+F3+Bb3:q D3+F3+Bb3:q D3+F3+Bb3:q | C3+E3+Bb3:q C3+E3+Bb3:q
+  C3+E3+Bb3:q C3+E3+Bb3:q | C3+F3+A3:w

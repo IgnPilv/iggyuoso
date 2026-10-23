@@ -1,0 +1,9 @@
+id: rt-rests-hands
+title: Rests in both hands
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q r:q x:q r:q | x:q r:q x:q r:q | x:h r:h | x:w
+left: r:q x:q r:q x:q | x:h r:h | r:h x:h | x:w

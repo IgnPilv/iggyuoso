@@ -1,0 +1,15 @@
+id: cr-mary-in-d
+title: Mary in D major
+kind: timed
+hand: together
+display: staff
+key: D
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4:q E4:q D4:q E4:q | F#4:q F#4:q F#4:h | E4:q E4:q E4:h | F#4:q A4:q A4:h | F#4:q E4:q D4:q E4:q | F#4:q F#4:q F#4:q
+  F#4:q | E4:q E4:q F#4:q E4:q | D4:w
+left: D3+F#3+A3:w | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w
+reps: 2
+days: 1

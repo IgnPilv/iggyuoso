@@ -1,0 +1,14 @@
+id: scale-b-flat-1-m7
+title: B♭ major scale, one octave
+kind: timed
+hand: together
+prompt: 'Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.'
+key: Bb
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Bb4:q C5:q D5:q Eb5:q | F5:q G5:q A5:q Bb5:q | A5:q G5:q F5:q Eb5:q | D5:q C5:q Bb4:h
+left: Bb3:q C4:q D4:q Eb4:q | F4:q G4:q A4:q Bb4:q | A4:q G4:q F4:q Eb4:q | D4:q C4:q Bb3:h
+rightFingers: 4 1 2 3 1 2 3 4 3 2 1 3 2 1 4
+leftFingers: 3 2 1 4 3 2 1 3 1 2 3 4 1 2 3

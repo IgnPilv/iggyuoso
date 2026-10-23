@@ -1,0 +1,11 @@
+id: repeated-c-321
+title: Three fingers, one key
+kind: timed
+hand: together
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:q C5:q C5:q r:q | E5:q E5:q E5:q r:q | G5:q G5:q G5:q r:q | C5:w
+left: C3:w | C3:w | G2:w | C3:w
+rightFingers: 3 2 1 3 2 1 3 2 1 1

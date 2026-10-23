@@ -1,0 +1,13 @@
+id: theory-spelling-intervals
+title: Spelling intervals
+skills:
+- theory
+steps:
+- explain: |
+    To write an interval: count the **letters** first (a 3rd above D is F), then fix the **quality** with a sharp or flat
+    (D to F is a minor 3rd; a major 3rd needs F♯).
+  staff:
+    notes: D4:h F#4:h
+- exercise: theory-intervals-up-quiz
+- exercise: theory-intervals-down-quiz
+recap: Letters first, then the sharp or flat.

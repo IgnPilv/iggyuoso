@@ -1,0 +1,115 @@
+id: theory-intervals-up-quiz
+title: Intervals above a note
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A major 3rd above C is...
+  choices:
+  - F♯
+  - E
+  - E♯
+  correct: 1
+  why: 3 letters up from C is E; 4 half steps makes it E.
+  whyStaff:
+    notes: C4:h E4:h
+- ask: A perfect 5th above D is...
+  choices:
+  - A♯
+  - B
+  - A
+  correct: 2
+  why: 5 letters up from D is A; 7 half steps makes it A.
+  whyStaff:
+    notes: D4:h A4:h
+- ask: A minor 3rd above E is...
+  choices:
+  - A
+  - G
+  - G♯
+  correct: 1
+  why: 3 letters up from E is G; 3 half steps makes it G.
+  whyStaff:
+    notes: E4:h G4:h
+- ask: A major 6th above F is...
+  choices:
+  - D
+  - E
+  - D♯
+  correct: 0
+  why: 6 letters up from F is D; 9 half steps makes it D.
+  whyStaff:
+    notes: F4:h D5:h
+- ask: A perfect 4th above G is...
+  choices:
+  - C♯
+  - D
+  - C
+  correct: 2
+  why: 4 letters up from G is C; 5 half steps makes it C.
+  whyStaff:
+    notes: G4:h C5:h
+- ask: A major 2nd above A is...
+  choices:
+  - B
+  - B♯
+  - C♯
+  correct: 0
+  why: 2 letters up from A is B; 2 half steps makes it B.
+  whyStaff:
+    notes: A4:h B4:h
+- ask: A major 3rd above B♭ is...
+  choices:
+  - D♯
+  - D
+  - E
+  correct: 1
+  why: 3 letters up from B♭ is D; 4 half steps makes it D.
+  whyStaff:
+    notes: Bb4:h D5:h
+- ask: A perfect 5th above E♭ is...
+  choices:
+  - C
+  - B♭
+  - B
+  correct: 1
+  why: 5 letters up from E♭ is B; 7 half steps makes it B♭.
+  whyStaff:
+    notes: Eb4:h Bb4:h
+- ask: A minor 3rd above F♯ is...
+  choices:
+  - A
+  - A♯
+  - B
+  correct: 0
+  why: 3 letters up from F♯ is A; 3 half steps makes it A.
+  whyStaff:
+    notes: F#4:h A4:h
+- ask: A major 7th above D is...
+  choices:
+  - C♯
+  - D♯
+  - C
+  correct: 0
+  why: 7 letters up from D is C; 11 half steps makes it C♯.
+  whyStaff:
+    notes: D4:h C#5:h
+- ask: A minor 7th above A is...
+  choices:
+  - G
+  - A
+  - G♯
+  correct: 0
+  why: 7 letters up from A is G; 10 half steps makes it G.
+  whyStaff:
+    notes: A4:h G5:h
+- ask: A perfect 4th above B is...
+  choices:
+  - E♯
+  - E
+  - F♯
+  correct: 1
+  why: 4 letters up from B is E; 5 half steps makes it E.
+  whyStaff:
+    notes: B4:h E5:h

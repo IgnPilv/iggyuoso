@@ -1,0 +1,10 @@
+id: reading-other-meters
+title: Reading in 3/4 and 6/8
+skills:
+- reading
+steps:
+- explain: |
+    Sight-reading in waltz time and in 6/8.
+- exercise: rd-sight-34
+- exercise: rd-sight-68
+recap: Meters change; reading stays the same.

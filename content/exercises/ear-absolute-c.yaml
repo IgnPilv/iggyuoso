@@ -1,0 +1,14 @@
+id: ear-absolute-c
+title: C or not C?
+kind: ear
+questions: 20
+reps: 3
+days: 3
+items:
+- type: note
+  pool:
+  - C4
+  - E4
+  - G4
+  - A4
+  lit: true

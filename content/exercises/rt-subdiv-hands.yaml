@@ -1,0 +1,10 @@
+id: rt-subdiv-hands
+title: Twos and threes over the beat
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e x:e x:e3 x:e3 x:e3 x:e x:e x:e3 x:e3 x:e3 | x:e3 x:e3 x:e3 x:e x:e x:e3 x:e3 x:e3 x:e x:e | x:e x:e x:e3 x:e3 x:e3
+  x:h | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:h | x:w

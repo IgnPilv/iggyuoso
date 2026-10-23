@@ -1,0 +1,14 @@
+id: arp-f-1
+title: F major arpeggio, one octave
+kind: timed
+hand: together
+prompt: Stretch the hand over the chord; keep the wrist loose.
+key: F
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:q A4:q C5:q F5:q | C5:q A4:q F4:h
+left: F3:q A3:q C4:q F4:q | C4:q A3:q F3:h
+rightFingers: 1 2 3 5 3 2 1
+leftFingers: 5 4 2 1 2 4 5

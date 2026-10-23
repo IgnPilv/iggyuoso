@@ -1,0 +1,26 @@
+id: theory-compound-time
+title: Simple and compound time
+skills:
+- theory
+steps:
+- explain: |
+    In **simple time** (2/4, 3/4, 4/4) each beat splits in **two**. In **compound time** (6/8, 9/8, 12/8) each beat
+    splits in **three**, and the beat is a dotted quarter. 6/8 has two beats, 9/8 three, 12/8 four.
+  staff:
+    notes: C5:e C5:e C5:e C5:e C5:e C5:e
+  terms:
+  - simple time
+  - compound time
+  - duple
+  - triple
+  - quadruple
+  check:
+    ask: 9/8 is...
+    choices:
+    - Simple triple
+    - Compound duple
+    - Compound triple
+    correct: 2
+    why: Three beats, each three eighths.
+- exercise: theory-compound-time-quiz
+recap: Twos are simple, threes are compound.

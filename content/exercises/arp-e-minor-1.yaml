@@ -1,0 +1,14 @@
+id: arp-e-minor-1
+title: E minor arpeggio, one octave
+kind: timed
+hand: together
+prompt: Stretch the hand over the chord; keep the wrist loose.
+key: Em
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q G4:q B4:q E5:q | B4:q G4:q E4:h
+left: E3:q G3:q B3:q E4:q | B3:q G3:q E3:h
+rightFingers: 1 2 3 5 3 2 1
+leftFingers: 5 4 2 1 2 4 5

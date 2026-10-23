@@ -1,0 +1,14 @@
+id: rhythm-workout-5
+title: 'Rhythm workout: triplets and off-beats'
+skills:
+- rhythm
+steps:
+- explain: |
+    Fresh rhythms every time, read and by ear, one hand and two. Five minutes a day keeps the reading sharp.
+- exercise: gen-workout-5-read
+- exercise: gen-workout-5-echo
+- exercise: gen-workout-5-read-hands
+- exercise: gen-workout-5-echo-hands
+- exercise: gen-workout-5-read-long
+- exercise: gen-workout-5-echo-long
+recap: 'A daily workout: new rhythms every run.'

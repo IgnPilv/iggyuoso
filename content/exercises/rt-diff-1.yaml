@@ -1,0 +1,9 @@
+id: rt-diff-1
+title: Swapping roles
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:h x:h | x:q x:q x:h | x:w
+left: x:h x:h | x:q x:q x:q x:q | x:h x:q x:q | x:w

@@ -1,0 +1,12 @@
+id: c-pos-unison-slow
+title: Up and down together
+kind: timed
+hand: together
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:h D4:h | E4:h F4:h | G4:h F4:h | E4:h D4:h | C4:w
+left: C3:h D3:h | E3:h F3:h | G3:h F3:h | E3:h D3:h | C3:w
+rightFingers: 1 2 3 4 5 4 3 2 1
+leftFingers: 5 4 3 2 1 2 3 4 5

@@ -1,0 +1,15 @@
+id: gen-echo-four-bars
+title: Echo four bars
+kind: generated
+generator: rhythm-echo
+tempo: 72
+meter: 4/4
+durations:
+- q
+- h
+- e
+bars: 4
+mastery:
+  accuracy: 90
+reps: 4
+days: 2

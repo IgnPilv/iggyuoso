@@ -1,0 +1,12 @@
+id: lh-close-d
+title: Smooth left-hand chords in D major
+kind: timed
+hand: together
+display: staff
+key: D
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4:h G4:h | E4:h D4:h | F#4:q G4:q A4:q F#4:q | E4:h D4:h
+left: D3+F#3+A3:h D3+G3+B3:h | C#3+E3+A3:h D3+F#3+A3:h | D3+F#3+A3:w | C#3+E3+A3:h D3+F#3+A3:h

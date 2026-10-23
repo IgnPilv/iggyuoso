@@ -1,0 +1,20 @@
+# The Creativity branch. Written by tools/content/build.py; format in content/README.md.
+branch: creativity
+title: Creativity
+summary: "Making your own music: rhythm conversations, improvising, bass lines, harmonising and moving tunes to new keys."
+nodes:
+  - { id: pentatonic-improv, stage: 2, lesson: pentatonic-improv, title: "Black-key improvising", requires: [sharps-flats-naturals] }
+  - { id: improvise-over-drone, stage: 3, lesson: improvise-over-drone, title: "Improvise in C", requires: [pentatonic-improv, c-scale-hands-together] }
+  - { id: harmonise-i-v, stage: 5, lesson: harmonise-i-v, title: "Harmonising with two chords", requires: [stable-unstable] }
+  - { id: harmonise-i-iv-v, stage: 5, lesson: harmonise-i-iv-v, title: "Harmonising with three chords", requires: [harmonise-i-v, close-position-chords] }
+  - { id: accompaniment-patterns, stage: 5, lesson: accompaniment-patterns, title: "Accompaniment patterns", requires: [harmonise-i-iv-v] }
+  - { id: transposing, stage: 5, lesson: transposing, title: "Moving a tune to a new key", requires: [harmonise-i-v] }
+  - { id: creativity-rhythm-conversation, stage: 1, lesson: creativity-rhythm-conversation, title: "A rhythm conversation", type: lesson }
+  - { id: creativity-black-key-tunes, stage: 1, lesson: creativity-black-key-tunes, title: "Tunes on the black keys", type: lesson, requires: [creativity-rhythm-conversation, c-d-e] }
+  - { id: creativity-question-answer, stage: 2, lesson: creativity-question-answer, title: "Question and answer", type: lesson, requires: [creativity-black-key-tunes, pentatonic-improv] }
+  - { id: creativity-make-a-bass, stage: 4, lesson: creativity-make-a-bass, title: "Make a bass line", type: lesson, requires: [creativity-question-answer, lh-chords, y1-exit] }
+  - { id: creativity-choose-accompaniment, stage: 6, lesson: creativity-choose-accompaniment, title: "Choose an accompaniment", type: lesson, requires: [accompaniment-patterns, technique-alberti] }
+  - { id: creativity-transpose-tune, stage: 6, lesson: creativity-transpose-tune, title: "One tune, four keys", type: lesson, requires: [transposing, theory-transposition] }
+  - { id: creativity-harmonise-minor, stage: 7, lesson: creativity-harmonise-minor, title: "Harmonising in minor", type: lesson, requires: [harmonise-i-iv-v, natural-minor, y2-exit] }
+  - { id: creativity-minor-pentatonic, stage: 7, lesson: creativity-minor-pentatonic, title: "The minor pentatonic", type: lesson, requires: [creativity-harmonise-minor, creativity-question-answer] }
+  - { id: creativity-blues-improv, stage: 9, lesson: creativity-blues-improv, title: "Improvising the blues", type: lesson, requires: [technique-blues-shapes, creativity-minor-pentatonic] }

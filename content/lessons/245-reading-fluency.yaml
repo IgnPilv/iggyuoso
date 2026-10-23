@@ -1,0 +1,9 @@
+id: reading-fluency
+title: Fluent note reading
+skills:
+- reading
+steps:
+- explain: |
+    Speed matters now: under two seconds a note, anywhere on the grand staff, with a key signature.
+- exercise: rd-fluency-grand
+recap: Reading fast frees the eyes to look ahead.

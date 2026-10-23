@@ -1,0 +1,15 @@
+id: song-aura-lee-pedal-lh
+title: 'Aura Lee, with pedal: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e
+  B2:e D3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | D3:e A3:e F#3:e A3:e D3:e
+  A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3+E3+G3:w
+reps: 2
+days: 1

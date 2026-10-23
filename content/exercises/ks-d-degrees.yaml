@@ -1,0 +1,18 @@
+id: ks-d-degrees
+title: Every degree of D major
+kind: ear
+cadence: D
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: D
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

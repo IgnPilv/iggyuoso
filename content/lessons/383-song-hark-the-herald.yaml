@@ -1,0 +1,29 @@
+id: song-hark-the-herald
+title: Hark! The Herald Angels Sing
+skills:
+- songs
+steps:
+- explain: |
+    **Hark! The Herald Angels Sing** · Felix Mendelssohn, 1840
+
+    Mendelssohn wrote the music for a festival in 1840; it was later fitted to Charles Wesley's words.
+  staff:
+    notes: G4:q C5:q C5:q. B4:e  |  C5:q E5:q E5:q D5:q
+  sound: G4:q C5:q C5:q. B4:e  |  C5:q E5:q E5:q D5:q  |  G5:q G5:q G5:q. F5:e  |  E5:q D5:q E5:h
+- explain: |
+    **Before you play.** The last line moves to G major: the left hand plays a D chord with F♯.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 96
+- exercise: song-hark-the-herald-tap
+- exercise: song-hark-the-herald-tap-hands
+- exercise: song-hark-the-herald-by-ear
+- exercise: song-hark-the-herald-rh
+- exercise: song-hark-the-herald-lh
+- exercise: song-hark-the-herald
+- exercise: song-hark-the-herald-arranged
+- exercise: song-hark-the-herald-swap
+- exercise: song-hark-the-herald-oompah
+- exercise: song-hark-the-herald-performance
+recap: 'Hark! The Herald Angels Sing: tune, left hand, together. Come back to it any time; songs are for fun.'

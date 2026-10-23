@@ -1,0 +1,18 @@
+id: ks-e-flat-minor-degrees
+title: Every degree of E♭ minor
+kind: ear
+cadence: Ebm
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Ebm
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

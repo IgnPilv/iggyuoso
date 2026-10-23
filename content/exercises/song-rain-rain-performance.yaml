@@ -1,0 +1,14 @@
+id: song-rain-rain-performance
+title: 'Rain, Rain, Go Away: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 88
+meter: 4/4
+countIn: 1
+right: G4:h E4:h | G4:q G4:q E4:h | G4:q G4:q E4:q E4:q | A4:q G4:q E4:h | G4:h E4:h | G4:q G4:q E4:h | G4:q G4:q E4:q E4:q
+  | A4:q G4:q C4:h
+left: C3+G3:w | C3+G3:w | C3+G3:w | F2+C3:h C3+G3:h | C3+G3:w | C3+G3:w | C3+G3:w | F2+C3:h C3+G3:h
+reps: 2
+days: 2

@@ -1,0 +1,13 @@
+id: cr-blues-improv
+title: Twelve bars of your own
+kind: tap
+prompt: 'Left hand: low keys in quarters (try the boogie C G A G). Right hand: blues-scale notes, with rests between phrases.'
+tempo: 88
+meter: 4/4
+countIn: 1
+right: x:q x:q x:h | r:w | x:e x:e x:q x:h | r:w | x:q x:q x:h | r:w | x:e x:e x:q x:h | r:w | x:q x:q x:h | r:w | x:e x:e
+  x:q x:h | r:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q
+  x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q
+reps: 3
+days: 2

@@ -1,0 +1,14 @@
+id: piece-prelude-in-c-lh
+title: 'Prelude in C: the opening: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C4+E4:h C4+E4:h | C4+D4:h C4+D4:h | B3+D4:h B3+D4:h | C4+E4:h C4+E4:h | C4+E4:h C4+E4:h | C4+D4:h C4+D4:h | B3+D4:h
+  B3+D4:h | B3+C4:h B3+C4:h
+reps: 2
+days: 1

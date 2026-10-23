@@ -1,0 +1,12 @@
+id: ear-fourths-fifths-sixths
+title: Fourths, fifths and sixths
+skills:
+- ear
+steps:
+- explain: |
+    Wider intervals. Many musicians remember intervals by the start of a famous tune: a fourth starts
+    "Here Comes the Bride", a fifth starts "Twinkle, Twinkle", a major sixth starts "My Bonnie Lies Over the Ocean".
+  sound: C4:h F4:h | C4:h G4:h | C4:h A4:h
+- exercise: ear-4-5-6
+- exercise: ear-4-5-6-play
+recap: Tie every interval to a tune you know.

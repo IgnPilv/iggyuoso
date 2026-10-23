@@ -1,0 +1,13 @@
+id: ks-a-flat-pulse
+title: 'A♭ major: a chord on every beat'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with a chord on every beat in the left hand.
+key: Ab
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h Eb5:h | Db5:h F5:h | Bb4:h G4:h | Ab4:w
+left: C3+Eb3+Ab3:q C3+Eb3+Ab3:q C3+Eb3+Ab3:q C3+Eb3+Ab3:q | Db3+F3+Ab3:q Db3+F3+Ab3:q Db3+F3+Ab3:q Db3+F3+Ab3:q | Bb2+Eb3+G3:q
+  Bb2+Eb3+G3:q Bb2+Eb3+G3:q Bb2+Eb3+G3:q | C3+Eb3+Ab3:w

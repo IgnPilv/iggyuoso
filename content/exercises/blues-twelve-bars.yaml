@@ -1,0 +1,13 @@
+id: blues-twelve-bars
+title: Twelve-bar blues in C
+kind: timed
+hand: together
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4+Bb4:w | E4+Bb4:w | E4+Bb4:w | E4+Bb4:w | Eb4+A4:w | Eb4+A4:w | E4+Bb4:w | E4+Bb4:w | F4+B4:w | Eb4+A4:w | E4+Bb4:w
+  | F4+B4:w
+left: C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | F2:q C3:q D3:q C3:q | F2:q C3:q
+  D3:q C3:q | C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | G2:q D3:q E3:q D3:q | F2:q C3:q D3:q C3:q | C3:q G3:q A3:q G3:q
+  | G2:q D3:q E3:q D3:q

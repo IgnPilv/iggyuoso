@@ -1,0 +1,14 @@
+id: pos-e
+title: E major position, hands together
+kind: timed
+hand: together
+prompt: 'Thumbs on different notes: right thumb on E, left little finger on E.'
+key: E
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q F#4:q G#4:q A4:q | B4:q A4:q G#4:q F#4:q | E4:q G#4:q B4:q G#4:q | E4:w
+left: E3:q F#3:q G#3:q A3:q | B3:q A3:q G#3:q F#3:q | E3:q G#3:q B3:q G#3:q | E3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 5 3 1
+leftFingers: 5 4 3 2 1 2 3 4 5 3 1 3 5

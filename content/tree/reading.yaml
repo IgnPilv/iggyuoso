@@ -1,0 +1,60 @@
+# The Reading branch. Written by tools/content/build.py; format in content/README.md.
+branch: reading
+title: Reading
+summary: "From the first notes on the staff to sight-reading both hands at once in any key."
+nodes:
+  - { id: treble-staff, stage: 1, lesson: treble-staff, title: "The treble staff", requires: [reading-lines-and-spaces, middle-c-position] }
+  - { id: bass-staff, stage: 1, lesson: bass-staff, title: "The bass staff", requires: [treble-staff] }
+  - { id: grand-staff-map, stage: 1, lesson: grand-staff-map, title: "Big idea: the grand staff map", requires: [bass-staff] }
+  - { id: c-position-reading, stage: 1, lesson: c-position-reading, title: "Reading in C position", type: drill, requires: [bass-staff, steps-and-skips] }
+  - { id: sight-reading-y1, stage: 3, lesson: sight-reading-y1, title: "Sight-reading: any five-finger position", type: drill, requires: [g-and-f-scales, minor-five-finger] }
+  - { id: shifting-position, stage: 4, lesson: shifting-position, title: "Leaving the five-finger position", requires: [y1-exit] }
+  - { id: two-note-chords, stage: 4, lesson: two-note-chords, title: "Two notes at once", requires: [shifting-position] }
+  - { id: reading-ht-eight-bars, stage: 4, lesson: reading-ht-eight-bars, title: "Reading eight bars, hands together", requires: [two-note-chords, ties] }
+  - { id: sight-reading-y2a, stage: 4, lesson: sight-reading-y2a, title: "Sight-reading, hands together", type: drill, requires: [reading-ht-eight-bars] }
+  - { id: reading-lines-and-spaces, stage: 1, lesson: reading-lines-and-spaces, title: "Lines and spaces", type: lesson }
+  - { id: reading-landmarks, stage: 1, lesson: reading-landmarks, title: "Landmark notes", type: lesson, requires: [grand-staff-map] }
+  - { id: reading-steps-and-skips-sight, stage: 2, lesson: reading-steps-and-skips-sight, title: "Reading by steps and skips", type: lesson, requires: [c-position-reading, reading-landmarks] }
+  - { id: reading-two-hands-first, stage: 2, lesson: reading-two-hands-first, title: "Reading both hands", type: lesson, requires: [reading-steps-and-skips-sight, hands-together-held] }
+  - { id: reading-g-and-f-positions, stage: 2, lesson: reading-g-and-f-positions, title: "Reading in G and F", type: lesson, requires: [reading-steps-and-skips-sight, key-of-g, f-position-key-of-f] }
+  - { id: reading-intervals-on-staff, stage: 3, lesson: reading-intervals-on-staff, title: "Intervals on the staff", type: lesson, requires: [intervals-to-fifth, reading-steps-and-skips-sight] }
+  - { id: reading-ledger-lines, stage: 3, lesson: reading-ledger-lines, title: "Ledger lines around middle C", type: lesson, requires: [reading-landmarks, bass-staff] }
+  - { id: reading-two-hands-fifths, stage: 3, lesson: reading-two-hands-fifths, title: "Both hands: root and fifth", type: lesson, requires: [reading-two-hands-first, technique-triads-c-f-g] }
+  - { id: reading-high-and-low, stage: 4, lesson: reading-high-and-low, title: "High treble, low bass", type: lesson, requires: [reading-ledger-lines, y1-exit] }
+  - { id: reading-chords-sight, stage: 4, lesson: reading-chords-sight, title: "Reading with chords in the left hand", type: lesson, requires: [two-note-chords, reading-two-hands-fifths] }
+  - { id: reading-minor-sight, stage: 4, lesson: reading-minor-sight, title: "Sight-reading in minor keys", type: lesson, requires: [natural-minor, reading-two-hands-fifths] }
+  - { id: reading-key-signatures, stage: 5, lesson: reading-key-signatures, title: "Reading with key signatures", type: lesson, requires: [keys-and-signatures, reading-high-and-low] }
+  - { id: reading-wide-intervals, stage: 5, lesson: reading-wide-intervals, title: "Wide intervals", type: lesson, requires: [interval-map, reading-intervals-on-staff] }
+  - { id: reading-sight-many-keys, stage: 5, lesson: reading-sight-many-keys, title: "Sight-reading in six keys", type: lesson, requires: [reading-chords-sight, reading-minor-sight, reading-key-signatures] }
+  - { id: reading-other-meters, stage: 6, lesson: reading-other-meters, title: "Reading in 3/4 and 6/8", type: lesson, requires: [reading-sight-many-keys, rhythm-six-eight] }
+  - { id: reading-fluency, stage: 6, lesson: reading-fluency, title: "Fluent note reading", type: lesson, requires: [reading-key-signatures] }
+  - { id: reading-flat-keys-sight, stage: 7, lesson: reading-flat-keys-sight, title: "Sight-reading in flat keys", type: lesson, requires: [reading-other-meters, y2-exit] }
+  - { id: reading-sharp-keys-sight, stage: 7, lesson: reading-sharp-keys-sight, title: "Sight-reading in sharp keys", type: lesson, requires: [reading-other-meters] }
+  - { id: reading-eight-bars, stage: 8, lesson: reading-eight-bars, title: "Eight bars, both hands", type: lesson, requires: [reading-flat-keys-sight, reading-sharp-keys-sight] }
+  - { id: reading-any-key, stage: 9, lesson: reading-any-key, title: "Sight-reading in any key", type: lesson, requires: [reading-eight-bars, reading-fluency] }
+  - { id: reading-find-anywhere, stage: 2, lesson: reading-find-anywhere, title: "Find it anywhere", type: lesson, requires: [reading-landmarks, sharps-flats-naturals] }
+  - { id: reading-interval-fluency, stage: 6, lesson: reading-interval-fluency, title: "Intervals at a glance", type: lesson, requires: [reading-wide-intervals] }
+  - { id: reading-ledger-fluency, stage: 8, lesson: reading-ledger-fluency, title: "Ledger lines, fast", type: lesson, requires: [reading-high-and-low, reading-fluency] }
+  - { id: ks-c-musicianship, stage: 5, lesson: ks-c-musicianship, title: "Reading and hearing C major", type: drill, requires: [ks-c, reading-key-signatures] }
+  - { id: ks-g-musicianship, stage: 5, lesson: ks-g-musicianship, title: "Reading and hearing G major", type: drill, requires: [ks-g, reading-key-signatures] }
+  - { id: ks-f-musicianship, stage: 5, lesson: ks-f-musicianship, title: "Reading and hearing F major", type: drill, requires: [ks-f, reading-key-signatures] }
+  - { id: ks-a-minor-musicianship, stage: 5, lesson: ks-a-minor-musicianship, title: "Reading and hearing A minor", type: drill, requires: [ks-a-minor, reading-key-signatures] }
+  - { id: ks-d-minor-musicianship, stage: 5, lesson: ks-d-minor-musicianship, title: "Reading and hearing D minor", type: drill, requires: [ks-d-minor, reading-key-signatures] }
+  - { id: ks-d-musicianship, stage: 6, lesson: ks-d-musicianship, title: "Reading and hearing D major", type: drill, requires: [ks-d, reading-key-signatures] }
+  - { id: ks-e-minor-musicianship, stage: 6, lesson: ks-e-minor-musicianship, title: "Reading and hearing E minor", type: drill, requires: [ks-e-minor, reading-key-signatures] }
+  - { id: ks-a-musicianship, stage: 6, lesson: ks-a-musicianship, title: "Reading and hearing A major", type: drill, requires: [ks-a, reading-key-signatures] }
+  - { id: ks-b-flat-musicianship, stage: 6, lesson: ks-b-flat-musicianship, title: "Reading and hearing B♭ major", type: drill, requires: [ks-b-flat, reading-key-signatures] }
+  - { id: ks-e-musicianship, stage: 7, lesson: ks-e-musicianship, title: "Reading and hearing E major", type: drill, requires: [ks-e, reading-key-signatures] }
+  - { id: ks-b-minor-musicianship, stage: 7, lesson: ks-b-minor-musicianship, title: "Reading and hearing B minor", type: drill, requires: [ks-b-minor, reading-key-signatures] }
+  - { id: ks-e-flat-musicianship, stage: 7, lesson: ks-e-flat-musicianship, title: "Reading and hearing E♭ major", type: drill, requires: [ks-e-flat, reading-key-signatures] }
+  - { id: ks-g-minor-musicianship, stage: 7, lesson: ks-g-minor-musicianship, title: "Reading and hearing G minor", type: drill, requires: [ks-g-minor, reading-key-signatures] }
+  - { id: ks-b-musicianship, stage: 8, lesson: ks-b-musicianship, title: "Reading and hearing B major", type: drill, requires: [ks-b, reading-key-signatures] }
+  - { id: ks-f-sharp-minor-musicianship, stage: 8, lesson: ks-f-sharp-minor-musicianship, title: "Reading and hearing F♯ minor", type: drill, requires: [ks-f-sharp-minor, reading-key-signatures] }
+  - { id: ks-c-minor-musicianship, stage: 8, lesson: ks-c-minor-musicianship, title: "Reading and hearing C minor", type: drill, requires: [ks-c-minor, reading-key-signatures] }
+  - { id: ks-a-flat-musicianship, stage: 8, lesson: ks-a-flat-musicianship, title: "Reading and hearing A♭ major", type: drill, requires: [ks-a-flat, reading-key-signatures] }
+  - { id: ks-d-flat-musicianship, stage: 9, lesson: ks-d-flat-musicianship, title: "Reading and hearing D♭ major", type: drill, requires: [ks-d-flat, reading-key-signatures] }
+  - { id: ks-f-sharp-musicianship, stage: 9, lesson: ks-f-sharp-musicianship, title: "Reading and hearing F♯ major", type: drill, requires: [ks-f-sharp, reading-key-signatures] }
+  - { id: ks-f-minor-musicianship, stage: 9, lesson: ks-f-minor-musicianship, title: "Reading and hearing F minor", type: drill, requires: [ks-f-minor, reading-key-signatures] }
+  - { id: ks-c-sharp-minor-musicianship, stage: 9, lesson: ks-c-sharp-minor-musicianship, title: "Reading and hearing C♯ minor", type: drill, requires: [ks-c-sharp-minor, reading-key-signatures] }
+  - { id: ks-b-flat-minor-musicianship, stage: 9, lesson: ks-b-flat-minor-musicianship, title: "Reading and hearing B♭ minor", type: drill, requires: [ks-b-flat-minor, reading-key-signatures] }
+  - { id: ks-e-flat-minor-musicianship, stage: 9, lesson: ks-e-flat-minor-musicianship, title: "Reading and hearing E♭ minor", type: drill, requires: [ks-e-flat-minor, reading-key-signatures] }

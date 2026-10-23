@@ -1,0 +1,11 @@
+id: creativity-make-a-bass
+title: Make a bass line
+skills:
+- creativity
+steps:
+- explain: |
+    Over a tune, the left hand can play just the **root** of each chord, in a rhythm you choose. Here the right hand is
+    written; the left hand plays any key below middle C in the given rhythm. Try roots first, then experiment.
+- exercise: cr-bass-mary-roots
+- exercise: cr-bass-your-rhythm
+recap: A bass line is the floor a tune stands on.

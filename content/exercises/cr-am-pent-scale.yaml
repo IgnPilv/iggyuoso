@@ -1,0 +1,13 @@
+id: cr-am-pent-scale
+title: A minor pentatonic, both hands
+kind: timed
+hand: together
+key: Am
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q C5:q D5:q E5:q | G5:q A5:q G5:q E5:q | D5:q C5:q A4:h
+left: A3:q C4:q D4:q E4:q | G4:q A4:q G4:q E4:q | D4:q C4:q A3:h
+rightFingers: 1 2 3 4 1 2 1 4 3 2 1
+leftFingers: 5 4 3 2 1 2 1 2 3 4 5

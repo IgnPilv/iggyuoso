@@ -1,0 +1,15 @@
+id: song-row-your-boat-performance
+title: 'Row, Row, Row Your Boat: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 60
+meter: 6/8
+countIn: 1
+right: C4:q. C4:q. | C4:q D4:e E4:q. | E4:q D4:e E4:q F4:e | G4:h. | C5:e C5:e C5:e G4:e G4:e G4:e | E4:e E4:e E4:e C4:e C4:e
+  C4:e | G4:q F4:e E4:q D4:e | C4:h.
+left: C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e
+  G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3+E3+G3:h.
+reps: 2
+days: 2

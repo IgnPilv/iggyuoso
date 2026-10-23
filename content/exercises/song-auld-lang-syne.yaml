@@ -1,0 +1,17 @@
+id: song-auld-lang-syne
+title: Auld Lang Syne
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 80
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: C4:q | F4:q. F4:e F4:q A4:q | G4:q. F4:e G4:q A4:q | F4:q. F4:e A4:q C5:q | D5:h. D5:q | C5:q. A4:e A4:q F4:q | G4:q.
+  F4:e G4:q A4:q | F4:q. D4:e D4:q C4:q | F4:h.
+left: r:q | F2:w | C3:w | F2:w | Bb2:w | F2:w | C3:w | Bb2:h C3:h | F2:h.
+reps: 3
+days: 2

@@ -1,0 +1,14 @@
+id: song-aura-lee-pedal-rh
+title: 'Aura Lee, with pedal: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q A4:q B4:q | C5:w | G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q
+  A4:q B4:q | C5:w
+reps: 2
+days: 1

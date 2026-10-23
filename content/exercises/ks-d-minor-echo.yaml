@@ -1,0 +1,37 @@
+id: ks-d-minor-echo
+title: Echo phrases in D minor
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: D4 E4 F4 E4 D4
+  plays: 2
+- type: melody
+  notes: A4 G4 F4 E4 D4
+  plays: 2
+- type: melody
+  notes: D4 F4 A4 F4 D4
+  plays: 2
+- type: melody
+  notes: F4 G4 A4 G4 F4
+  plays: 2
+- type: melody
+  notes: D4 E4 F4 G4 A4
+  plays: 2
+- type: melody
+  notes: A4 Bb4 A4 G4 F4
+  plays: 2
+- type: melody
+  notes: D5 C#5 Bb4 A4
+  plays: 2
+- type: melody
+  notes: F4 E4 D4 C#5 D4
+  plays: 2
+- type: melody
+  notes: D4 A4 F4 D4
+  plays: 2
+- type: melody
+  notes: A4 F4 G4 E4 D4
+  plays: 2

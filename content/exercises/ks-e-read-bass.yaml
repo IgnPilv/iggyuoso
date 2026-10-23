@@ -1,0 +1,14 @@
+id: ks-e-read-bass
+title: Read the bass in E major
+kind: generated
+generator: read-notes
+clef: bass
+notes: E2-C4
+keys:
+- E
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 3
+days: 2

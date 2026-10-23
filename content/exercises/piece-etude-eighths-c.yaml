@@ -1,0 +1,14 @@
+id: piece-etude-eighths-c
+title: Running Eighths
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:e D4:e E4:e F4:e G4:q G4:q | A4:e G4:e F4:e E4:e D4:h | E4:e F4:e G4:e A4:e G4:q E4:q | D4:e E4:e D4:e B3:e C4:h
+left: C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:w | B2+D3+G3:h C3+E3+G3:h
+reps: 3
+days: 2

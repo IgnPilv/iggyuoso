@@ -1,0 +1,25 @@
+id: ear-echo-wide
+title: Echo across the keyboard
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: C3 G3 E4 C5
+  plays: 3
+- type: melody
+  notes: C5 G4 E4 C4 G3 C3
+  plays: 3
+- type: melody
+  notes: A2 E3 C4 A4
+  plays: 3
+- type: melody
+  notes: G2 D3 B3 G4 D5
+  plays: 3
+- type: melody
+  notes: F2 C3 A3 F4
+  plays: 3
+- type: melody
+  notes: E4 C4 G3 E3 C3
+  plays: 3

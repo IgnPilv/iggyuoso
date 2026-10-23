@@ -1,0 +1,22 @@
+id: piece-etude-legato-pedal
+title: Evening Bells
+skills:
+- repertoire
+steps:
+- explain: |
+    **Evening Bells** · Our own study
+
+    Bells ringing over a rolling left hand, joined by the pedal.
+  staff:
+    notes: G5:h E5:h  |  F5:h D5:h
+  sound: G5:h E5:h  |  F5:h D5:h  |  E5:h C5:h  |  D5:w
+- explain: |
+    **How to learn it.** Change the pedal with each new bass note.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-legato-pedal-tap
+- exercise: piece-etude-legato-pedal-rh
+- exercise: piece-etude-legato-pedal-lh
+- exercise: piece-etude-legato-pedal
+- exercise: piece-etude-legato-pedal-polish
+recap: 'Evening Bells: learned hands alone, then together, then performed.'

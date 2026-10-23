@@ -1,0 +1,10 @@
+id: rt-beat-8-bars
+title: Eight bars without a slip
+kind: tap
+prompt: 'Eight bars. If you slip, keep going: the beat never waits.'
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q
+  x:q x:q | x:q x:q x:q x:q

@@ -1,0 +1,15 @@
+id: piece-etude-minor-song-rh
+title: 'Song in A minor: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: Am
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q C5:q E5:q C5:q | D5:q C5:q B4:h | C5:q B4:q A4:q G#4:q | A4:w | E5:q D5:q C5:q B4:q | A4:q B4:q C5:h | B4:q A4:q
+  G#4:q B4:q | A4:w
+reps: 2
+days: 1

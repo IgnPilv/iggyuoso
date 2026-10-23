@@ -1,0 +1,8 @@
+id: rt-68-2
+title: Running eighths in 6/8
+kind: tap
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+rhythm: x:e x:e x:e x:e x:e x:e | x:q x:e x:q x:e | x:e x:e x:e x:q. | x:q. x:q.

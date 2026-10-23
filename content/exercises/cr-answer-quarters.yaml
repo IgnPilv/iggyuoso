@@ -1,0 +1,10 @@
+id: cr-answer-quarters
+title: 'Your answer: four quarters, any keys'
+kind: tap
+prompt: 'Play any keys you like on these beats: make it sound like a little tune. High, low, black, white: your choice.'
+tempo: 80
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w
+reps: 2
+days: 1

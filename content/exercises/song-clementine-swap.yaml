@@ -1,0 +1,16 @@
+id: song-clementine-swap
+title: 'Oh My Darling, Clementine: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: r:q | C4+E4+G4:h. | C4+E4+G4:h. | C4+E4+G4:h. | B3+D4+G4:h. | B3+D4+G4:h. | C4+E4+G4:h. | B3+D4+G4:h. | C4+E4+G4:h
+left: C3:e C3:e | C3:q G2:q E3:e E3:e | E3:q C3:q C3:e E3:e | G3:q. F3:e E3:e D3:e | D3:h D3:e E3:e | F3:q F3:q E3:e D3:e
+  | E3:q C3:q C3:e E3:e | D3:q. G2:e B2:e D3:e | C3:h
+reps: 2
+days: 1

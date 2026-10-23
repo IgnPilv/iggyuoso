@@ -1,0 +1,16 @@
+id: technique-lh-inversions
+title: Left-hand chords that move smoothly
+skills:
+- technique
+steps:
+- explain: |
+    The left hand plays I, IV, V7, I in close position, moving to the nearest notes, under a right-hand tune.
+- exercise: lh-close-c
+- exercise: lh-close-g
+- exercise: lh-close-f
+- exercise: lh-close-d
+- exercise: lh-close-a
+- exercise: lh-close-bb
+- exercise: lh-close-eb
+- exercise: lh-close-e
+recap: 'Close chords: the left hand barely moves.'

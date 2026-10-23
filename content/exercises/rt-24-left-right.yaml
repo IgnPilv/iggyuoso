@@ -1,0 +1,9 @@
+id: rt-24-left-right
+title: Left, right
+kind: tap
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: r:q x:q | r:q x:q | x:q x:q | x:h
+left: x:q r:q | x:q r:q | x:h | r:h

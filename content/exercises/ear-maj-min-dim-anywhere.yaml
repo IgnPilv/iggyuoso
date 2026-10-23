@@ -1,0 +1,43 @@
+id: ear-maj-min-dim-anywhere
+title: Major, minor or diminished, any root
+kind: ear
+questions: 20
+reps: 3
+days: 3
+items:
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: C4
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: D4
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: E4
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: F3
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: G3
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: A3

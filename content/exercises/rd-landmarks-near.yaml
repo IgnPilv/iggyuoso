@@ -1,0 +1,12 @@
+id: rd-landmarks-near
+title: Landmarks and their neighbours
+kind: generated
+generator: read-notes
+clef: grand
+notes: E3 F3 G3 B3 C4 D4 F4 G4 A4
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 4
+days: 2

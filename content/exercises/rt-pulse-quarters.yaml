@@ -1,0 +1,9 @@
+id: rt-pulse-quarters
+title: Quarters, no click
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w
+click: count-in

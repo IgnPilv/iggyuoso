@@ -1,0 +1,9 @@
+id: ear-rhythm-hearing
+title: Which rhythm did you hear?
+skills:
+- ear
+steps:
+- explain: |
+    Ears hear time as well as pitch. One bar of rhythm on one note: pick its picture.
+- exercise: ear-rhythm-syncopated
+recap: 'Rhythm by ear: off-beat notes jump out once you count.'

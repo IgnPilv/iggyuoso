@@ -1,0 +1,15 @@
+id: cr-mary-in-bb
+title: Mary in B♭ major
+kind: timed
+hand: together
+display: staff
+key: Bb
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:q C5:q Bb4:q C5:q | D5:q D5:q D5:h | C5:q C5:q C5:h | D5:q F5:q F5:h | D5:q C5:q Bb4:q C5:q | D5:q D5:q D5:q D5:q
+  | C5:q C5:q D5:q C5:q | Bb4:w
+left: Bb2+D3+F3:w | Bb2+D3+F3:w | A2+C3+F3:w | Bb2+D3+F3:w | Bb2+D3+F3:w | Bb2+D3+F3:w | A2+C3+F3:w | Bb2+D3+F3:w
+reps: 2
+days: 1

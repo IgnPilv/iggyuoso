@@ -1,35 +1,49 @@
 id: eighth-notes
 title: Eighth notes
-unit: scales-and-eighths
-skills: [eighth-note, rhythm]
+skills:
+- eighth-note
+- rhythm
 steps:
 - explain: |
     Some notes go by faster than the beat. Listen: the clicks keep the beat, the notes run twice as fast.
   sound: C4:e C4:e C4:e C4:e C4:e C4:e C4:e C4:e
-  terms: [eighth note]
+  terms:
+  - eighth note
 - explain: |
     An **eighth note** lasts **half a beat**. On its own it has a **flag**; two or more in a row are joined by a **beam**.
-  staff: {notes: 'C4:e r:e C4:e C4:e C4:q C4:q'}
-  terms: [flag, beam]
+  staff:
+    notes: C4:e r:e C4:e C4:e C4:q C4:q
+  terms:
+  - flag
+  - beam
   check:
     ask: How many eighth notes fit in one beat?
-    choices: [One, Two, Four]
+    choices:
+    - One
+    - Two
+    - Four
     correct: 1
     why: Each eighth is half a beat, so two make one beat.
 - explain: |
     Count **"1 and 2 and 3 and 4 and"**: the eighths fall on the numbers and on the "ands".
     Many teachers say **ta** for a quarter and **ti-ti** for two eighths.
-  staff: {notes: 'C4:q C4:e C4:e C4:q C4:e C4:e'}
+  staff:
+    notes: C4:q C4:e C4:e C4:q C4:e C4:e
   sound: C4:q C4:e C4:e C4:q C4:e C4:e
   callout: |
     ta ti-ti ta ti-ti = 1, 2-and, 3, 4-and.
-  terms: [ti-ti, and]
-- {exercise: tap-eighths}
-- {exercise: hot-cross-buns-eighths}
+  terms:
+  - ti-ti
+  - and
+- exercise: tap-eighths
+- exercise: hot-cross-buns-eighths
+- explain: |
+    Eighths in the right hand over a slow left hand.
+- exercise: hot-cross-buns-eighths-ht
 - explain: |
     Fresh rhythms with eighth notes. Count 1-and-2-and under your breath.
-- {exercise: gen-rhythm-eighths}
+- exercise: gen-rhythm-eighths
 - explain: |
     Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
-- {exercise: eighth-notes-quiz}
+- exercise: eighth-notes-quiz
 recap: 'Eighth = half a beat. Two eighths = one beat: ti-ti.'

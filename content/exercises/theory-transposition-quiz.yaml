@@ -1,0 +1,98 @@
+id: theory-transposition-quiz
+title: Transposing quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Move C D E from C major to G major.
+  choices:
+  - G A B
+  - G♯ A♯ B♯
+  - A B C♯
+  - C D E
+  correct: 0
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: G A B.'
+- ask: Move C E G from C major to F major.
+  choices:
+  - G B D
+  - C E G
+  - F♯ A♯ C♯
+  - F A C
+  correct: 3
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: F A C.'
+- ask: Move G A B from G major to D major.
+  choices:
+  - E F♯ G♯
+  - G A B
+  - D E F♯
+  - D♯ E♯ F♯♯
+  correct: 2
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: D E F♯.'
+- ask: Move E D C from C major to D major.
+  choices:
+  - F♯♯ E♯ D♯
+  - G♯ F♯ E
+  - E D C
+  - F♯ E D
+  correct: 3
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: F♯ E D.'
+- ask: Move F A C from F major to G major.
+  choices:
+  - A C♯ E
+  - G B D
+  - F A C
+  - G♯ B♯ D♯
+  correct: 1
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: G B D.'
+- ask: Move C G E from C major to A major.
+  choices:
+  - B F♯ D♯
+  - C G E
+  - A E C♯
+  - A♯ E♯ C♯♯
+  correct: 2
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: A E C♯.'
+- ask: Move D F♯ A from D major to C major.
+  choices:
+  - C E G
+  - C♯ E♯ G♯
+  - D F♯ A
+  correct: 0
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: C E G.'
+- ask: Move A C E from A minor to D minor.
+  choices:
+  - E G B
+  - D♯ F♯ A♯
+  - D F A
+  - A C E
+  correct: 2
+  why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: D F A.'
+- ask: Transposing changes...
+  choices:
+  - The pitch, not the tune
+  - The tune
+  - The rhythm
+  correct: 0
+  why: Same shape, new starting note.
+- ask: To move a tune from C to G, every note goes up a...
+  choices:
+  - Major 3rd
+  - Perfect 5th (or down a 4th)
+  - Half step
+  correct: 1
+  why: C to G is a 5th.
+- ask: A tune in C has an F. In G, that F becomes...
+  choices:
+  - G
+  - F♯
+  - C
+  correct: 2
+  why: 'Up a 5th: F → C.'
+- ask: Singers ask to "take it down a tone". That means...
+  choices:
+  - Play more softly
+  - Transpose down a whole step
+  - Play slower
+  correct: 1
+  why: A tone = a whole step.

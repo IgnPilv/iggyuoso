@@ -1,0 +1,12 @@
+id: rd-ledger-mixed
+title: Ledger lines everywhere
+kind: generated
+generator: read-notes
+clef: grand
+notes: C1-E6
+questions: 40
+mastery:
+  accuracy: 90
+  medianMs: 2500
+reps: 5
+days: 3

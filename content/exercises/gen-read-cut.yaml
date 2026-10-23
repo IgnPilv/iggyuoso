@@ -1,0 +1,15 @@
+id: gen-read-cut
+title: Read in cut time
+kind: generated
+generator: rhythm-read
+tempo: 60
+meter: 2/2
+durations:
+- q
+- h
+- w
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

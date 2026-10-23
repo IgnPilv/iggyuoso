@@ -1,0 +1,16 @@
+id: gen-echo-hands-diff
+title: Echo two rhythms
+kind: generated
+generator: rhythm-echo
+tempo: 66
+meter: 4/4
+durations:
+- q
+- h
+- r:q
+bars: 2
+mastery:
+  accuracy: 90
+hands: both
+reps: 3
+days: 2

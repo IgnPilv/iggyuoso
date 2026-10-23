@@ -1,0 +1,18 @@
+id: ear-hl-same-too
+title: Higher, lower or the same?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: compare
+  pool:
+  - higher
+  - lower
+  - same
+  range:
+  - C3
+  - C5
+  gap:
+  - 1
+  - 4

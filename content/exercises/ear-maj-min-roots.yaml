@@ -1,0 +1,42 @@
+id: ear-maj-min-roots
+title: Major or minor, any root
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: chord
+  pool:
+  - maj
+  - min
+  root: C4
+- type: chord
+  pool:
+  - maj
+  - min
+  root: D4
+- type: chord
+  pool:
+  - maj
+  - min
+  root: E4
+- type: chord
+  pool:
+  - maj
+  - min
+  root: F3
+- type: chord
+  pool:
+  - maj
+  - min
+  root: G3
+- type: chord
+  pool:
+  - maj
+  - min
+  root: A3
+- type: chord
+  pool:
+  - maj
+  - min
+  root: Bb3

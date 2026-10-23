@@ -1,0 +1,18 @@
+id: ks-f-sharp-sight-lh
+title: Sight-read the left hand in F♯ major
+kind: generated
+generator: sight-read
+hand: left
+clef: bass
+tempo: 66
+notes: F#3-F#4
+keys:
+- F#
+durations:
+- q
+- h
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

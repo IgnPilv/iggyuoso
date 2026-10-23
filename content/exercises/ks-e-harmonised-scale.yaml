@@ -1,0 +1,13 @@
+id: ks-e-harmonised-scale
+title: 'E major: the scale with chords'
+kind: timed
+hand: together
+prompt: 'The scale in the right hand, the chords under it in the left: the scale turned into music.'
+key: E
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q F#4:q G#4:q A4:q | B4:q C#5:q D#5:q E5:q | D#5:q C#5:q B4:q A4:q | G#4:q F#4:q E4:h
+left: E3+G#3+B3:w | E3+G#3+B3:h D#3+F#3+B3:h | D#3+F#3+B3:w | E3+G#3+B3:w
+rightFingers: 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1

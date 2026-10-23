@@ -1,0 +1,25 @@
+id: ks-b-musicianship
+title: Reading and hearing B major
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: B major, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: B4:q C#5:q D#5:q E5:q F#5:q G#5:q A#5:q B5:q
+    key: B
+  sound: B4:q C#5:q D#5:q E5:q F#5:q G#5:q A#5:q B5:q
+- exercise: ks-b-quiz
+- exercise: ks-b-triads
+- exercise: ks-b-read
+- exercise: ks-b-read-bass
+- exercise: ks-b-sight
+- exercise: ks-b-sight-rh
+- exercise: ks-b-sight-lh
+- exercise: ks-b-intervals
+- exercise: ks-b-degrees
+- exercise: ks-b-echo
+recap: B major for the eyes and ears.

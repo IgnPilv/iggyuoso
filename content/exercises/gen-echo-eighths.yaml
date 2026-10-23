@@ -1,0 +1,15 @@
+id: gen-echo-eighths
+title: Echo eighths
+kind: generated
+generator: rhythm-echo
+tempo: 72
+meter: 4/4
+durations:
+- q
+- e
+- h
+bars: 2
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

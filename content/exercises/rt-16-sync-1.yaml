@@ -1,0 +1,9 @@
+id: rt-16-sync-1
+title: Sixteenth push
+kind: tap
+tempo: 52
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:s x:e x:s x:e x:e x:s x:e x:s x:e x:e | x:s x:e x:s x:q x:s x:e x:s x:q | x:s x:e x:s x:s x:e x:s x:h | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:h | x:w

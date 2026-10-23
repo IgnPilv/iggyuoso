@@ -1,0 +1,28 @@
+id: ear-maj-min-dim-aug
+title: Four triads
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  - aug
+  root: C4
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  - aug
+  root: D4
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  - aug
+  root: G3

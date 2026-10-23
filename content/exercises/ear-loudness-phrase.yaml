@@ -1,0 +1,12 @@
+id: ear-loudness-phrase
+title: 'Louder or softer: a phrase'
+kind: ear
+questions: 12
+reps: 2
+days: 1
+items:
+- type: loudness
+  pool:
+  - loud
+  - soft
+  notes: C4 D4 E4 F4 G4

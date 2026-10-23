@@ -1,14 +1,19 @@
 id: second-inversion
 title: Second inversion
-unit: inversions
-skills: [technique, inversions, theory]
+skills:
+- technique
+- inversions
+- theory
 steps:
 - explain: |
     Move the 3rd up too, and the **5th** is at the bottom: the **second inversion**.
     C E G becomes **G C E**. Fingers **1 3 5** again, but now the 4th is at the bottom.
-  staff: {notes: 'C4+E4+G4:q E4+G4+C5:q G4+C5+E5:h', labels: names}
+  staff:
+    notes: C4+E4+G4:q E4+G4+C5:q G4+C5+E5:h
+    labels: names
   sound: C4+E4+G4:q E4+G4+C5:q G4+C5+E5:h
-  terms: [second inversion]
+  terms:
+  - second inversion
 - explain: |
     So every triad has three positions: **root**, **first inversion**, **second inversion**.
     Climb through all three and you walk a chord up the keyboard.
@@ -16,12 +21,18 @@ steps:
     Name the chord from its root, whatever note is at the bottom. Squash it back into 3rds to find the root.
   check:
     ask: C F A is which chord?
-    choices: ['F major, second inversion', C major, 'A minor, first inversion']
+    choices:
+    - F major, second inversion
+    - C major
+    - A minor, first inversion
     correct: 0
     why: 'Stack it in 3rds: F A C. The root F; with C (the 5th) at the bottom it is second inversion.'
-- {exercise: build-second-inversions}
-- {exercise: inversion-climb-rh}
+- exercise: build-second-inversions
+- exercise: inversion-climb-rh
+- explain: |
+    Climb again with a bass note under it. Same chord, three shapes, one root.
+- exercise: inversion-climb-ht
 - explain: |
     Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
-- {exercise: inversions-quiz}
+- exercise: inversions-quiz
 recap: 'Second inversion: the 5th at the bottom. Three shapes for every chord.'

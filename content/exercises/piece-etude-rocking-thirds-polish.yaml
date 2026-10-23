@@ -1,0 +1,14 @@
+id: piece-etude-rocking-thirds-polish
+title: 'Rocking Thirds: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+key: G
+tempo: 76
+meter: 4/4
+countIn: 1
+right: B4+D5:q G4+B4:q B4+D5:q G4+B4:q | C5+E5:q A4+C5:q C5+E5:q A4+C5:q | A4+C5:q F#4+A4:q A4+C5:q F#4+A4:q | G4+B4:w
+left: G2:w | C3:w | D3:w | G2:w
+reps: 3
+days: 3

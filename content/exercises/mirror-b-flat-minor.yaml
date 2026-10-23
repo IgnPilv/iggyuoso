@@ -1,0 +1,14 @@
+id: mirror-b-flat-minor
+title: 'B♭ minor: mirror image'
+kind: timed
+hand: together
+prompt: Both thumbs on the key note; the hands move apart and back. Same finger in both hands every time.
+key: Bbm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Bb4:q C5:q Db5:q Eb5:q | F5:q Eb5:q Db5:q C5:q | Bb4:h Db5:h | Bb4:w
+left: Bb3:q Ab3:q Gb3:q F3:q | Eb3:q F3:q Gb3:q Ab3:q | Bb3:h Gb3:h | Bb3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 1
+leftFingers: 1 2 3 4 5 4 3 2 1 3 1

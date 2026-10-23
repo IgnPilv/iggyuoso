@@ -1,0 +1,10 @@
+id: rt-waltz-oompah
+title: Oom-pah-pah
+kind: tap
+prompt: Left hand on ONE, right hand on two and three.
+tempo: 90
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: r:q x:q x:q | r:q x:q x:q | r:q x:q x:q | x:h.
+left: x:q r:q r:q | x:q r:q r:q | x:q r:q r:q | x:h.

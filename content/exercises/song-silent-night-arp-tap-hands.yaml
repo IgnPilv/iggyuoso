@@ -1,0 +1,16 @@
+id: song-silent-night-arp-tap-hands
+title: 'Silent Night, flowing: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 66
+meter: 3/4
+countIn: 1
+right: x:q. x:e x:q | x:h. | x:q. x:e x:q | x:h. | x:h x:q | x:h. | x:h x:q | x:h. | x:h x:q | x:q. x:e x:q | x:q. x:e x:q
+  | x:h. | x:h x:q | x:q. x:e x:q | x:q. x:e x:q | x:h. | x:h x:q | x:q. x:e x:q | x:h. | x:h. | x:q x:q x:q | x:q. x:e x:q
+  | x:h.
+left: x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q
+  x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q
+  | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:h.
+reps: 2
+days: 1

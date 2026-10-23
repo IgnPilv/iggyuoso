@@ -1,0 +1,92 @@
+id: theory-passing-notes-quiz
+title: Non-chord notes quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A passing note...
+  choices:
+  - Jumps away and back
+  - Moves by step between two chord notes
+  - Is a chord note
+  correct: 1
+  why: 'C (D) E over a C chord: D passes.'
+- ask: A neighbour note...
+  choices:
+  - Steps away from a chord note and back
+  - Is held over the bar
+  - Passes between two chord notes
+  correct: 0
+  why: 'E F E: F is an upper neighbour.'
+- ask: Over a C chord, which of these is a chord note?
+  choices:
+  - D
+  - F
+  - A
+  - G
+  correct: 3
+  why: 'C chord: C E G.'
+- ask: Over a G chord, the melody goes B C D. C is a...
+  choices:
+  - Chord note
+  - Neighbour note
+  - Passing note
+  correct: 2
+  why: B and D are in G; C passes between them by step.
+- ask: Over an F chord, the melody goes A B♭ A. B♭ is a...
+  choices:
+  - Neighbour note
+  - Chord note
+  - Passing note
+  correct: 0
+  why: From A, up a step, back to A.
+- ask: Chord notes usually fall on...
+  choices:
+  - Rests
+  - Weak beats only
+  - Strong beats
+  correct: 2
+  why: Melodies usually put chord notes on the beat.
+- ask: 'Over C: E F G. Which note is not in the chord?'
+  choices:
+  - E
+  - F
+  - G
+  correct: 1
+  why: C E G; F passes.
+- ask: 'Over Am: A B C. Which note is not in the chord?'
+  choices:
+  - A
+  - B
+  - C
+  correct: 1
+  why: Am = A C E; B passes.
+- ask: 'Over G7: F E. The F is...'
+  choices:
+  - A passing note
+  - A wrong note
+  - A chord note (the 7th)
+  correct: 2
+  why: G7 = G B D F.
+- ask: Non-chord notes make a melody...
+  choices:
+  - Move smoothly between chord notes
+  - Louder
+  - Clash and stop
+  correct: 0
+  why: They join chord notes by step.
+- ask: Over C, the melody goes C D E F G. Passing notes are...
+  choices:
+  - E only
+  - D and F
+  - C and G
+  correct: 1
+  why: C E G are chord notes; D and F pass.
+- ask: Choosing a chord for a bar, look for...
+  choices:
+  - The last note only
+  - The highest note
+  - The notes on the strong beats
+  correct: 2
+  why: Strong-beat notes usually belong to the chord.

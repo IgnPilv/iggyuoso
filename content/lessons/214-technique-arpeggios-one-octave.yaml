@@ -1,0 +1,18 @@
+id: technique-arpeggios-one-octave
+title: Arpeggios, one octave
+skills:
+- technique
+steps:
+- explain: |
+    An **arpeggio** is a chord played one note at a time across the keyboard. One octave: fingers 1, 2, 3, 5 in
+    the right hand, 5, 4, 2, 1 in the left.
+  keys:
+    notes: C4 E4 G4 C5
+    fingers: 1 2 3 5
+- exercise: arp-c-1
+- exercise: arp-g-1
+- exercise: arp-f-1
+- exercise: arp-a-minor-1
+- exercise: arp-d-minor-1
+- exercise: arp-e-minor-1
+recap: A chord, spread out.

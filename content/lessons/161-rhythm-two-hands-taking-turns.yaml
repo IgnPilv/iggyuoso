@@ -1,0 +1,18 @@
+id: rhythm-two-hands-taking-turns
+title: Two hands taking turns
+skills:
+- rhythm
+steps:
+- explain: |
+    Two hands, one beat. Keys from middle C up belong to the **right hand**; keys below middle C
+    to the **left**. First the hands take turns: one plays while the other rests.
+  keys:
+    notes: C3 C5
+    labels: names
+  callout: |
+    Left hand: any key below middle C. Right hand: middle C or above.
+- exercise: rt-turns-bars
+- exercise: rt-turns-halves
+- exercise: rt-turns-beats
+- exercise: gen-read-hands-q-h
+recap: Taking turns is the first step to two hands at once.

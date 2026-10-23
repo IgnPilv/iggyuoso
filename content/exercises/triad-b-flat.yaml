@@ -1,0 +1,14 @@
+id: triad-b-flat
+title: B♭ major triad, both hands
+kind: timed
+hand: together
+prompt: Broken, then all three notes together.
+key: Bb
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Bb4:q D5:q F5:q D5:q | Bb4+D5+F5:w | Bb4:q D5:q F5:q D5:q | Bb4+D5+F5:w
+left: Bb3:h F4:h | Bb3+F4:w | Bb3:h F4:h | Bb3+F4:w
+rightFingers: 1 3 5 3 1 1 3 5 3 1
+leftFingers: 5 1 5 5 1 5

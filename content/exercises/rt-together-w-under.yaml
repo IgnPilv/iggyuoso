@@ -1,0 +1,9 @@
+id: rt-together-w-under
+title: A melody over long notes
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:h | x:q x:q x:h | x:h x:q x:q | x:w
+left: x:w | x:w | x:w | x:w

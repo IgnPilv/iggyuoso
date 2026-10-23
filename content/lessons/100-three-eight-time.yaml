@@ -1,24 +1,33 @@
 id: three-eight-time
 title: 3/8 time
-unit: pedal-and-genres
-skills: [rhythm, meter]
+skills:
+- rhythm
+- meter
 steps:
 - explain: |
     In **3/8** the beat is an **eighth note** and there are three of them in a bar. It is like a
     fast 3/4, and it often feels like one swing per bar: **ONE**-two-three.
-  staff: {notes: 'C4:e D4:e E4:e | F4:q. | E4:e. D4:s C4:e | C4:q.'}
-  terms: [3/8]
+  staff:
+    notes: C4:e D4:e E4:e | F4:q. | E4:e. D4:s C4:e | C4:q.
+  terms:
+  - 3/8
 - explain: |
     The click is on every eighth note here. A **dotted quarter** fills the whole bar. A **dotted eighth**
     and a **sixteenth** make a skipping *long-short*.
   check:
     ask: In 3/8, which note fills a whole bar?
-    choices: [A half note, A dotted quarter, A quarter note]
+    choices:
+    - A half note
+    - A dotted quarter
+    - A quarter note
     correct: 1
     why: Three eighths = 1½ quarters = a dotted quarter.
-- {exercise: tap-three-eight}
-- {exercise: little-jig}
+- exercise: tap-three-eight
+- exercise: little-jig
+- explain: |
+    The jig with a left hand: one dotted quarter per bar, on the one.
+- exercise: little-jig-ht
 - explain: |
     New 3/8 rhythms every time.
-- {exercise: gen-rhythm-three-eight}
+- exercise: gen-rhythm-three-eight
 recap: '3/8: three eighths to a bar, felt as one swing.'

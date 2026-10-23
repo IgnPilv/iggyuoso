@@ -1,0 +1,13 @@
+id: ks-a-flat-pedal
+title: 'A♭ major: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: Ab
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h Eb5:h | Db5:h F5:h | Bb4:h G4:h | Ab4:w
+left: Ab2:q Eb3:q Ab3:q Eb3:q | Db3:q Ab3:q Db4:q Ab3:q | Eb3:q Bb3:q Eb4:q Bb3:q | C3+Eb3+Ab3:w
+pedal: x:w | x:w | x:w | x:w

@@ -1,0 +1,15 @@
+id: rd-keys-f-bb
+title: Read in F and B♭
+kind: generated
+generator: read-notes
+clef: treble
+notes: C4-C6
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3500
+keys:
+- F
+- Bb
+reps: 4
+days: 2

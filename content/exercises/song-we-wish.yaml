@@ -1,0 +1,16 @@
+id: song-we-wish
+title: We Wish You a Merry Christmas
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 120
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: G4:q | C5:q C5:e D5:e C5:e B4:e | A4:q A4:q A4:q | D5:q D5:e E5:e D5:e C5:e | B4:q G4:q G4:q | E5:q E5:e F5:e E5:e
+  D5:e | C5:q A4:q G4:e G4:e | A4:q D5:q B4:q | C5:h
+left: r:q | C3:h. | F2:h. | D3:h. | G2:h. | E3:h. | A2:h. | F2:q. G2:q. | C3:h
+reps: 3
+days: 2
