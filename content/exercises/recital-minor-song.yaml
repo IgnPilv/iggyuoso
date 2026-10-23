@@ -1,0 +1,9 @@
+id: recital-minor-song
+kind: timed
+hand: together
+display: staff
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "D4:q E4:q F4:q G4:q | A4:h A4:h | G4:q F4:q E4:q G4:q | F4:h D4:h | D4:q F4:q E4:q G4:q | F4:q A4:q G4:h | F4:q E4:q E4:q F4:q | D4:w"
+left:  "D3:w | D3:w | A3:w | D3:w | D3:w | D3:w | A3:w | D3:w"

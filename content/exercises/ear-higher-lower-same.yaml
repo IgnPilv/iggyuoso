@@ -1,0 +1,6 @@
+id: ear-higher-lower-same
+kind: ear
+prompt: Two notes again. Higher, lower, or the same?
+questions: 10
+items:
+  - { type: compare, pool: [higher, lower, same], range: [C4, C5] }

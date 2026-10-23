@@ -1,0 +1,10 @@
+id: dynamics-quiz
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "What does p (piano) mean?", choices: [Soft, Loud, Slow], correct: 0 }
+  - { ask: "What does f (forte) mean?", choices: [Fast, Loud, Soft], correct: 1 }
+  - { ask: "Which is louder?", choices: [mp, mf], correct: 1 }
+  - { ask: "Which is softer?", choices: [p, mp], correct: 0 }
+  - { ask: "A crescendo (<) means...", choices: [Getting louder, Getting softer, Getting faster], correct: 0 }
+  - { ask: "A diminuendo (>) means...", choices: [Getting slower, Getting softer, Getting louder], correct: 1 }

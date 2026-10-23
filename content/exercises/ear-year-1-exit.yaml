@@ -1,0 +1,11 @@
+id: ear-year-1-exit
+kind: ear
+prompt: The Year 1 ear test. Mixed questions, no hints.
+cadence: C
+questions: 15
+items:
+  - { type: chord, pool: [maj, min], root: C4 }
+  - { type: degree, key: C, pool: [1, 3, 5] }
+  - { type: interval, pool: [m3, M3], from: D4, direction: up, answer: name }
+  - { type: melody, notes: "C4 E4 D4 G4", plays: 2 }
+  - { type: melody, notes: "E4 D4 E4 C4", plays: 2 }

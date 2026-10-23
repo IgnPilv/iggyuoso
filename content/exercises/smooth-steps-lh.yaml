@@ -1,0 +1,8 @@
+id: smooth-steps-lh
+kind: timed
+hand: left
+tempo: 72
+meter: 4/4
+countIn: 1
+left: "C4:h B3:h | A3:h G3:h | F3:h G3:h | A3:h B3:h | C4:w"
+fingers: "1 2 3 4 5 4 3 2 1"

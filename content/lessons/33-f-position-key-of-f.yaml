@@ -1,0 +1,12 @@
+id: f-position-key-of-f
+title: "One flat: the key of F"
+unit: first-chords
+skills: [key-signatures, five-finger-position]
+steps:
+  - explain: |
+      **F major** needs **B flat**. Its key signature is one flat, on the B line.
+      In **F position** the right thumb sits on F above middle C: F G A B♭ C. Finger 4 goes on the
+      black key, so let the hand move slightly in toward the piano.
+  - exercise: key-of-f-quiz
+  - exercise: f-position-rh
+recap: "F major: one flat, B flat. F position puts finger 4 on a black key."

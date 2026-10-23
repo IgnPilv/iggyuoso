@@ -1,0 +1,7 @@
+id: note-naming-two
+kind: ear
+prompt: No chords to help this time. Which note was it? Play it (any octave).
+questions: 12
+pitchMatch: pitchClass
+items:
+  - { type: note, pool: [C4, F#4] }

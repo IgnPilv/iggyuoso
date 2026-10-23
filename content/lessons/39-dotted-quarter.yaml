@@ -1,0 +1,14 @@
+id: dotted-quarter
+title: "Dotted quarter notes"
+unit: scales-and-eighths
+skills: [dotted-rhythm]
+steps:
+  - explain: |
+      A dot adds half the note's value. A **dotted quarter** = 1 + ½ = **1½ beats**. It's
+      usually followed by an eighth note, making a long-short pattern.
+
+      Now you can play Ode to Joy the way Beethoven wrote it: listen for the little limp at the
+      end of each line.
+  - exercise: tap-dotted-quarter
+  - exercise: ode-to-joy-dotted
+recap: "Dotted quarter = 1½ beats, usually followed by an eighth: long-short."

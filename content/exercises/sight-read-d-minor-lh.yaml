@@ -1,0 +1,9 @@
+id: sight-read-d-minor-lh
+kind: timed
+hand: left
+display: staff
+clef: bass
+tempo: 66
+meter: 4/4
+countIn: 1
+left: "D3:q F3:q E3:q G3:q | A3:h G3:h | F3:q E3:q D3:h | D3:w"

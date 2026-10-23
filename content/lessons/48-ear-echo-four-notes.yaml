@@ -1,0 +1,10 @@
+id: ear-echo-four-notes
+title: "Echo four notes"
+unit: year-1-recital
+skills: [playing-by-ear, melodic-memory]
+steps:
+  - explain: |
+      Longer tunes are easier to remember in **chunks**. Hear four notes as two pairs, or notice
+      the shape: up then down? A skip then steps? Your right hand is in C position, covering C to G.
+  - exercise: ear-echo-four
+recap: "Hear tunes in chunks and shapes, not single notes."

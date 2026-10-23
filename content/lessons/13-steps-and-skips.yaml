@@ -1,0 +1,16 @@
+id: steps-and-skips
+title: "Steps and skips"
+unit: steady-hands
+skills: [intervals, reading]
+steps:
+  - explain: |
+      The distance between two notes is called an **interval**.
+
+      A **step** goes to the very next white key. On the staff it moves from a line to the next
+      space, or from a space to the next line. Musicians call it a **2nd**.
+
+      A **skip** jumps over one white key. On the staff it goes line to line, or space to space.
+      That is a **3rd**.
+  - exercise: steps-or-skips
+  - exercise: play-steps-and-skips
+recap: "Step = 2nd = next key, line to space. Skip = 3rd = skip a key, line to line or space to space."

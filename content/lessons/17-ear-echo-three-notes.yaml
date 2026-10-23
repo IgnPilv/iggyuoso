@@ -1,0 +1,13 @@
+id: ear-echo-three-notes
+title: "Echo three notes"
+unit: steady-hands
+skills: [playing-by-ear]
+steps:
+  - explain: |
+      Playing back what you hear is how people learned music long before it was written down.
+      Every tune here uses only **C, D and E**. Rest your right thumb on middle C,
+      finger 2 on D and finger 3 on E.
+
+      Listen first, sing it in your head, then play.
+  - exercise: ear-echo-three
+recap: "Listen, sing it inside, then play. Only C, D and E for now."

@@ -1,0 +1,9 @@
+id: recital-waltz-in-g
+kind: timed
+hand: together
+display: staff
+tempo: 88
+meter: 3/4
+countIn: 1
+right: "B4:h D5:q | C5:h A4:q | B4:q A4:q G4:q | A4:h. | B4:h D5:q | C5:h A4:q | B4:q A4:q A4:q | G4:h."
+left:  "G2:h. | D3:h. | G2:h. | D3:h. | G2:h. | D3:h. | D3:h. | G2:h."

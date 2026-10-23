@@ -1,0 +1,7 @@
+id: tap-dotted-quarter
+kind: tap
+prompt: Long-short. The dotted quarter takes "1 and 2", the eighth takes "and".
+tempo: 66
+meter: 4/4
+countIn: 1
+rhythm: "x:q. x:e x:h | x:q. x:e x:q x:q | x:q x:q x:q. x:e | x:w"

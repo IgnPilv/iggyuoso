@@ -1,0 +1,15 @@
+id: hands-together-held
+title: "One hand holds, one hand moves"
+unit: two-hands-at-once
+skills: [hands-together, c-position]
+steps:
+  - explain: |
+      Time for both hands at once. To make room, move the left hand down: its **little finger
+      (5) goes on the C below middle C**. Now each hand has its own five keys. This is
+      **C position**.
+  - explain: |
+      Start easy: one hand holds a long note while the other moves. Keep the holding hand
+      relaxed, not pressing hard.
+  - exercise: held-lh-moving-rh
+  - exercise: held-rh-moving-lh
+recap: "C position: left hand from the C below middle C, right hand from middle C. One holds, one moves."

@@ -141,3 +141,8 @@ never copied pages). Start small, adapt as we go.
   `src/engine/drills.ts`, theory in `src/music/theory.ts`. They have the same view toggle; answer
   keys are never lit while a question sounds. The demo has a scene for each, using content
   exercises when there are some and built-in samples until then.
+- 2026-10-23: Year 1 content complete (units 1–6, 51 lessons, 3 checkpoints, Year 1 exit exam),
+  every Year 1 tree node linked to its lesson. Pieces are public domain (folk tunes, Beethoven's
+  Ode to Joy) or our own (waltz in G, D minor song, call and answer). Improvising uses `tap`
+  (any keys in a given rhythm) until there is a free-play kind. Ear checkpoints reuse normal
+  `ear` exercises (no "no-feedback" mode yet).

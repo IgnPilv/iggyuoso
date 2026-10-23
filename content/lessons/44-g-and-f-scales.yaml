@@ -1,0 +1,15 @@
+id: g-and-f-scales
+title: "G and F major scales"
+unit: scales-and-eighths
+skills: [scales, keys]
+steps:
+  - explain: |
+      **G major** uses the same fingering as C, with F sharp near the top.
+
+      **F major** is different in the right hand: 1 2 3 **4** on B flat, then thumb under to C.
+      The left hand fingering is the same as C.
+  - exercise: g-scale-rh
+  - exercise: g-scale-lh
+  - exercise: f-scale-rh
+  - exercise: f-scale-lh
+recap: "G major like C, with F sharp. F major right hand puts 4 on B flat."

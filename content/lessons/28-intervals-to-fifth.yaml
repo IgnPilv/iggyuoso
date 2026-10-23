@@ -1,0 +1,13 @@
+id: intervals-to-fifth
+title: "Intervals up to the 5th"
+unit: first-chords
+skills: [intervals]
+steps:
+  - explain: |
+      Count an interval by its letters, **including both ends**. C to G: C D E F G = 5 letters,
+      so it's a **5th**. C up to the next C is 8 letters: an **octave**.
+
+      On the staff: 2nds and 4ths go line to space; 3rds and 5ths go line to line or space to space.
+  - exercise: name-the-interval
+  - exercise: play-the-interval
+recap: "Count the letters including both ends. Odd intervals stay on lines or on spaces."

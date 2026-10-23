@@ -1,0 +1,8 @@
+id: ear-degree-three
+kind: ear
+prompt: After the chords, play the note you heard. Now 1, 3 or 5.
+cadence: C
+questions: 12
+items:
+  - { type: degree, key: C, pool: [1, 3, 5] }
+  - { type: degree, key: F, pool: [1, 3, 5] }

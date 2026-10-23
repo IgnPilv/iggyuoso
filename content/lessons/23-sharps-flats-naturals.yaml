@@ -1,0 +1,17 @@
+id: sharps-flats-naturals
+title: "Sharps, flats and semitones"
+unit: two-hands-at-once
+skills: [accidentals, semitones]
+steps:
+  - explain: |
+      A **semitone** is the smallest step on the piano: from one key to the very next key,
+      black or white. Two semitones make a **tone**.
+
+      Most white keys have a black key between them, so they are a tone apart. But **E–F** and
+      **B–C** have no black key between them: they are only a semitone apart.
+  - exercise: tone-or-semitone
+  - explain: |
+      **Sharp (♯)** = one semitone higher. **Flat (♭)** = one semitone lower.
+      **Natural (♮)** cancels them. So the black key between F and G is both **F♯** and **G♭**.
+  - exercise: sharps-and-flats
+recap: "Semitone = next key. Tone = two semitones. Sharp raises, flat lowers, natural cancels."

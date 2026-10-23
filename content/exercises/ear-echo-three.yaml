@@ -1,0 +1,11 @@
+id: ear-echo-three
+kind: ear
+prompt: Listen to the little tune, then play it back. You can hear it twice.
+questions: 8
+items:
+  - { type: melody, notes: "C4 D4 E4", plays: 2 }
+  - { type: melody, notes: "E4 D4 C4", plays: 2 }
+  - { type: melody, notes: "C4 E4 D4", plays: 2 }
+  - { type: melody, notes: "E4 E4 C4", plays: 2 }
+  - { type: melody, notes: "D4 C4 E4", plays: 2 }
+  - { type: melody, notes: "C4 C4 E4", plays: 2 }

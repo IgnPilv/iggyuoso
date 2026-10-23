@@ -1,0 +1,8 @@
+id: f-scale-rh
+kind: timed
+hand: right
+tempo: 60
+meter: 4/4
+countIn: 1
+right: "F4:q G4:q A4:q Bb4:q | C5:q D5:q E5:q F5:q | E5:q D5:q C5:q Bb4:q | A4:q G4:q F4:h"
+fingers: "1 2 3 4 1 2 3 4 3 2 1 4 3 2 1"

@@ -1,0 +1,13 @@
+id: tonic-triad
+title: "Triads"
+unit: first-chords
+skills: [triads, chords]
+steps:
+  - explain: |
+      A **chord** is several notes played together. The most common chord is a **triad**:
+      three notes stacked in skips (3rds). Take a note, skip one, play one, skip one, play one.
+
+      The bottom note is the **root** and names the chord. C–E–G is a C triad. On the staff a
+      triad looks like a little snowman: all on lines or all on spaces.
+  - exercise: build-c-f-g
+recap: "Triad = root, 3rd and 5th, stacked in skips. The root names it."

@@ -1,0 +1,9 @@
+id: sight-read-g-position
+kind: timed
+hand: right
+display: staff
+clef: treble
+tempo: 66
+meter: 4/4
+countIn: 1
+right: "G4:q B4:q A4:q C5:q | B4:h A4:h | G4:q A4:q B4:q D5:q | G4:w"

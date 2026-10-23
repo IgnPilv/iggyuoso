@@ -1,0 +1,8 @@
+id: g-position-rh
+kind: timed
+hand: right
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "G4:q A4:q B4:q C5:q | D5:w | D5:q C5:q B4:q A4:q | G4:w"
+fingers: "1 2 3 4 5 5 4 3 2 1"

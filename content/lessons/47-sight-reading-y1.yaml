@@ -1,0 +1,13 @@
+id: sight-reading-y1
+title: "Sight-reading"
+unit: year-1-recital
+skills: [sight-reading]
+steps:
+  - explain: |
+      **Sight-reading** means playing something you have never seen, first time, without stopping.
+      Before you start, take ten seconds: find the key and the time signature, the starting note
+      and hand position, and any tricky spot. Then keep the beat going whatever happens.
+  - exercise: sight-read-g-position
+  - exercise: sight-read-waltz
+  - exercise: sight-read-d-minor-lh
+recap: "Look first (key, time, start note), then keep going no matter what."

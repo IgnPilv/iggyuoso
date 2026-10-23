@@ -1,0 +1,10 @@
+id: tone-or-semitone
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "E to F is a...", choices: [Semitone, Tone], correct: 0 }
+  - { ask: "C to D is a...", choices: [Semitone, Tone], correct: 1 }
+  - { ask: "B to C is a...", choices: [Semitone, Tone], correct: 0 }
+  - { ask: "F to F sharp is a...", choices: [Semitone, Tone], correct: 0 }
+  - { ask: "G to A is a...", choices: [Semitone, Tone], correct: 1 }
+  - { ask: "Play a semitone up from E", play: "E4 F4" }

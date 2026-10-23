@@ -1,0 +1,7 @@
+id: key-of-f-quiz
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "The key signature of F major has one...", choices: [Sharp, Flat], correct: 1 }
+  - { ask: "Which note is flat in F major?", choices: [B, E, A], correct: 0 }
+  - { ask: "Play the fourth note of F position", play: "Bb4" }

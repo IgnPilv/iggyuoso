@@ -1,0 +1,7 @@
+id: build-major-scales
+kind: build
+tasks:
+  - { scale: C major, ask: "Play C major up one octave (any fingers)" }
+  - { scale: G major, ask: "Play G major up one octave" }
+  - { scale: F major, ask: "Play F major up one octave" }
+  - { scale: D major, ask: "Use the pattern: build D major on your own" }

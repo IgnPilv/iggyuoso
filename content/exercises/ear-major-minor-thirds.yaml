@@ -1,0 +1,8 @@
+id: ear-major-minor-thirds
+kind: ear
+prompt: Two notes, a third apart. Major third (bright) or minor third (darker)?
+questions: 12
+items:
+  - { type: interval, pool: [m3, M3], from: C4, direction: up, answer: name }
+  - { type: interval, pool: [m3, M3], from: F4, direction: up, answer: name }
+  - { type: interval, pool: [m3, M3], from: D4, direction: up, answer: name, together: true }

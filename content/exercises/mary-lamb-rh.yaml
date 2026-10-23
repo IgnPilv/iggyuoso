@@ -1,0 +1,7 @@
+id: mary-lamb-rh
+kind: timed
+hand: right
+tempo: 80
+meter: 4/4
+countIn: 1
+right: "E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h | E4:q D4:q C4:q D4:q | E4:q E4:q E4:q E4:q | D4:q D4:q E4:q D4:q | C4:w"

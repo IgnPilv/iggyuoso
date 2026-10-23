@@ -1,0 +1,9 @@
+id: ode-to-joy-ht
+kind: timed
+hand: together
+display: staff
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | E4:h D4:h | E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | D4:h C4:h"
+left:  "C3:w | G3:w | C3:w | G3:w | C3:w | G3:w | C3:w | G3:h C3:h"
