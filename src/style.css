@@ -851,3 +851,62 @@ ol.path-nodes li.ahead a { opacity: 0.6; }
 .staff .finger, .staff .note-label { font-family: var(--font-mono); font-size: 11px; text-anchor: middle; fill: var(--muted); }
 .staff .note-label { fill: var(--staff-ink); font-weight: 600; }
 .why[hidden], .check [hidden] { display: none; }
+
+/* ---------------------------------------------------------------- theory screens (design)
+   Big readable text beside its pictures on wide screens; pictures sit on a stage panel; the rule
+   is a callout with a gradient edge; the check question is its own card. */
+
+.theory-block { gap: var(--space-5); }
+.theory-text .explain { font-size: clamp(1.15rem, 1rem + 0.5vw, 1.35rem); line-height: 1.6; color: var(--ink); max-width: 60ch; }
+.theory-text .explain strong { color: var(--ink); background: linear-gradient(transparent 62%, var(--accent-soft) 62%); }
+.theory-pictures {
+  justify-items: center;
+  align-content: center;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--surface-sunken);
+  border: 1px solid var(--line);
+}
+.theory-pictures > * { width: 100%; }
+.theory-pictures .theory-staff svg.staff { display: block; margin: 0 auto; }
+.theory-pictures .theory-keys svg.keyboard { max-width: 520px; margin: 0 auto; }
+.theory-pictures .controls { justify-content: center; margin-top: 0; }
+@media (min-width: 900px) {
+  .theory-block:has(> .theory-pictures) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; }
+  .theory-block > .check { grid-column: 1 / -1; }
+}
+
+.callout {
+  position: relative;
+  padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 6px);
+  background: linear-gradient(100deg, var(--accent-soft), transparent 85%), var(--surface-2);
+  border: 1px solid var(--line);
+  border-left: 0;
+  font-size: var(--text-lg);
+}
+.callout::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; border-radius: var(--radius-md) 0 0 var(--radius-md); background: var(--brand-gradient); }
+.callout strong { color: var(--accent-ink); }
+
+.terms .small { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; margin-right: var(--space-1); }
+.term-chip { display: inline-flex; align-items: center; gap: 6px; font-weight: 550; padding: 4px 12px; }
+.term-chip::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-gradient); }
+
+.check {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-5);
+  background: var(--surface-2);
+  border-color: var(--line);
+  box-shadow: var(--shadow-1);
+}
+.check::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--brand-gradient); }
+.check .eyebrow { margin: 0; }
+.check .check-ask { font-family: var(--font-display); font-size: var(--text-xl); letter-spacing: -0.015em; }
+.check [data-choice] { min-width: 88px; padding: 12px 22px; font-size: var(--text-md); }
+.why { background: var(--surface-sunken); border: 1px solid var(--line); }
+
+.playground { justify-items: center; text-align: center; }
+.playground > .explain { font-size: var(--text-lg); color: var(--ink-2); }
+.playground .theory-staff { width: min(100%, 560px); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--surface-sunken); border: 1px solid var(--line); }
+.playground-name { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; letter-spacing: -0.03em; }
+.playground .stage { width: 100%; }
