@@ -41,7 +41,7 @@ describe('profile', () => {
 
   it('counts written nodes per strand and state, and keeps the best streak', () => {
     const n = (id: string, strand: TreeNode['strand'], lesson?: string): TreeNode =>
-      ({ id, type: 'lesson', strand, title: id, lesson, requires: [], planned: !lesson, year: 1, unit: 'u' });
+      ({ id, type: 'lesson', strand, title: id, lesson, requires: [], planned: !lesson, stage: 1, branch: strand === 'all' ? 'milestones' : strand });
     const rows = strandMastery([n('a', 'reading', 'la'), n('b', 'reading', 'lb'), n('c', 'ear'), n('d', 'all', 'ld')], (id) => (id === 'a' ? 'solid' : 'introduced'));
     expect(rows.get('reading')).toMatchObject({ solid: 1, introduced: 1, total: 2 });
     expect(rows.get('ear')?.total).toBe(0);

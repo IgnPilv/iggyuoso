@@ -11,13 +11,14 @@ const files = readContentFiles();
 const { content } = realContent();
 const { nodes } = loadTree(files, content.lessons);
 const goals = (l: Lesson) => l.steps.flatMap((s) => ('exercise' in s ? [content.exercises.get(s.exercise)!] : [])).filter(Boolean);
-const first = [...content.units].sort((a, b) => a.order - b.order)[0].lessons;
+const path = [...nodes.values()].map((n) => n.lesson && content.lessons.get(n.lesson)).filter((l): l is Lesson => !!l);
+const first = path.map((l) => l.id);
 
 function setup() {
   const store = new Store(memoryBackend());
   const mastery = new Mastery(store, nodes, (id) => { const l = content.lessons.get(id); return l ? goals(l).map((e) => e.id) : []; });
-  // Only the first lesson of the first unit is recommended, as for a new player.
-  const input: PlanInput = { content, nodes, store, mastery, lessonGoals: goals, ready: (l) => l.id === first[0] || store.lessonDone(goals(content.lessons.get(first[0])!)) };
+  // Only the root of the tree is open, as for a new player.
+  const input: PlanInput = { content, nodes, store, mastery, lessonGoals: goals, next: () => [path[0]], path: () => path };
   return { store, mastery, input };
 }
 

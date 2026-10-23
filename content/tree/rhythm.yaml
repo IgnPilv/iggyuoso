@@ -1,0 +1,17 @@
+branch: rhythm
+title: Rhythm
+summary: "The beat and everything that sits on it: note values, rests, meters, eighths to triplets, two hands in different rhythms."
+nodes:
+  - { id: steady-beat, stage: 1, lesson: steady-beat, title: Steady beat, requires: [c-d-e] }
+  - { id: half-and-whole-notes, stage: 1, lesson: half-and-whole-notes, title: Half and whole notes, requires: [steady-beat] }
+  - { id: rests-and-taking-turns, stage: 1, lesson: rests-and-taking-turns, title: Rests and taking turns, requires: [half-and-whole-notes, bass-staff] }
+  - { id: three-four-time, stage: 1, lesson: three-four-time, title: 3/4 time and the dotted half note, requires: [rests-and-taking-turns] }
+  - { id: tap-rhythm-echo, stage: 1, lesson: tap-rhythm-echo, title: Tap it back, type: drill, requires: [three-four-time] }
+  - { id: eighth-notes, stage: 3, lesson: eighth-notes, title: Eighth notes, requires: [y1-checkpoint-b] }
+  - { id: dotted-quarter, stage: 3, lesson: dotted-quarter, title: Dotted quarter notes, requires: [eighth-notes] }
+  - { id: rhythm-toolkit, stage: 3, lesson: rhythm-toolkit, title: 'Big idea: counting any rhythm', requires: [dotted-quarter] }
+  - { id: ties, stage: 4, lesson: ties, title: Ties, requires: [y1-exit] }
+  - { id: sixteenth-notes, stage: 4, lesson: sixteenth-notes, title: Sixteenth notes, requires: [ties] }
+  - { id: triplets, stage: 5, lesson: triplets, title: Triplets, requires: [y2-checkpoint-a] }
+  - { id: syncopation, stage: 6, lesson: syncopation, title: Syncopation, requires: [y2-checkpoint-b] }
+  - { id: three-eight-time, stage: 6, lesson: three-eight-time, title: 3/8 time, requires: [syncopation] }

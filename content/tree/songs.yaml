@@ -1,0 +1,8 @@
+branch: songs
+title: Songs
+summary: "Tunes to play for fun, opened by the milestones."
+nodes:
+  - { id: songbook-1, stage: 2, lesson: songbook-1, title: 'Songbook: three old songs', requires: [y1-checkpoint-a] }
+  - { id: songbook-2, stage: 3, lesson: songbook-2, title: 'Songbook: hands together', requires: [y1-checkpoint-b] }
+  - { id: songbook-3, stage: 3, lesson: songbook-3, title: 'Songbook: tunes with chords', requires: [y1-checkpoint-b] }
+  - { id: songbook-4, stage: 4, lesson: songbook-4, title: 'Songbook: a round for two hands', requires: [y1-exit] }

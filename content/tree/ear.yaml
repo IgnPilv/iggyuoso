@@ -1,0 +1,17 @@
+branch: ear
+title: Ear
+summary: "Training the ear from scratch: high or low, same or different, up or down, then notes, intervals, chords and melodies played back."
+nodes:
+  - { id: ear-high-low, stage: 1, lesson: ear-high-low, title: Higher or lower?, type: drill, requires: [high-and-low] }
+  - { id: ear-echo-three-notes, stage: 1, lesson: ear-echo-three-notes, title: Echo three notes, type: drill, requires: [ear-high-low, middle-c-position] }
+  - { id: ear-major-minor, stage: 2, lesson: ear-major-minor, title: Happy or sad? Major and minor, type: drill, requires: [ear-echo-three-notes] }
+  - { id: ear-degrees-1-5, stage: 2, lesson: ear-degrees-1-5, title: 'Home and five: scale degrees 1 and 5', type: drill, requires: [ear-major-minor] }
+  - { id: note-naming, stage: 2, lesson: note-naming, title: Note naming (perfect pitch side quest), type: side-quest, requires: [ear-degrees-1-5] }
+  - { id: ear-degree-3-and-thirds, stage: 3, lesson: ear-degree-3-and-thirds, title: Degree 3, major and minor thirds, type: drill, requires: [ear-degrees-1-5] }
+  - { id: ear-echo-four-notes, stage: 3, lesson: ear-echo-four-notes, title: Echo four notes, type: drill, requires: [ear-degree-3-and-thirds] }
+  - { id: ear-all-degrees, stage: 4, lesson: ear-all-degrees, title: Hear every note of the scale, type: drill, requires: [y1-exit] }
+  - { id: ear-echo-five, stage: 4, lesson: ear-echo-five, title: Echo five notes, type: drill, requires: [ear-all-degrees] }
+  - { id: ear-cadences, stage: 4, lesson: ear-cadences, title: Finished or waiting?, type: drill, requires: [ear-all-degrees] }
+  - { id: ear-melodic-intervals, stage: 5, lesson: ear-melodic-intervals, title: Hearing 3rds, 4ths and 5ths, type: drill, requires: [perfect-intervals] }
+  - { id: ear-spot-the-change, stage: 6, lesson: ear-spot-the-change, title: Spot the change, type: drill, requires: [y2-checkpoint-b] }
+  - { id: ear-echo-six, stage: 6, lesson: ear-echo-six, title: Echo six notes, type: drill, requires: [ear-spot-the-change] }

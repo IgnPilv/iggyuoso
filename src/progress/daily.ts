@@ -49,14 +49,12 @@ export interface PlanInput {
   nodes: ReadonlyMap<string, TreeNode>;
   store: Store;
   mastery: Mastery;
-  /** Whether a lesson is the recommended next step (nothing is ever closed). */
-  ready: (l: Lesson) => boolean;
   lessonGoals: (l: Lesson) => Exercise[];
+  /** The open lessons of the tree, best first (the growing edge). */
+  next: () => Lesson[];
+  /** Every lesson in path order. */
+  path: () => Lesson[];
 }
-
-/** The lessons in path order: units by their order, lessons as listed. */
-const pathLessons = (c: Content) =>
-  [...c.units].sort((a, b) => a.order - b.order).flatMap((u) => u.lessons).map((id) => c.lessons.get(id)).filter((l): l is Lesson => !!l);
 
 export function makePlan(p: PlanInput, now = new Date()): DailyPlan {
   const items: DailyItem[] = [];
@@ -76,21 +74,27 @@ export function makePlan(p: PlanInput, now = new Date()): DailyPlan {
     add({ why: 'review', exercise: weakest.id, lesson: lesson.id, node: nodeId, minutes });
   }
 
-  // 2. The next lesson on the path: the first one not done whose requirements are met, else the
-  // first one not done at all.
-  const lessons = pathLessons(p.content);
-  const open = lessons.filter((l) => !p.store.lessonDone(p.lessonGoals(l)));
-  const next = open.find((l) => p.ready(l)) ?? open[0];
-  if (next) {
-    const left = p.lessonGoals(next).filter((e) => !p.store.reps(e).done);
+  // 2. New work from the growing edge of the tree: the best open lesson, and if there is time a
+  // second one from another branch, so a session trains more than one skill.
+  const nodeOf = (l: Lesson) => [...p.nodes.values()].find((n) => n.lesson === l.id);
+  const lessonMinutes = (l: Lesson) => {
+    const left = p.lessonGoals(l).filter((e) => !p.store.reps(e).done);
     // Each exercise needs its clean takes still to come; a try often misses, so most of a try each.
-    const need = left.reduce((s, e) => s + minutesFor(e) * 0.75 * Math.max(1, e.reps - p.store.reps(e).clean), 0);
-    const minutes = Math.min(DAILY_MINUTES - used, Math.max(3, need));
-    add({ why: 'lesson', lesson: next.id, node: [...p.nodes.values()].find((n) => n.lesson === next.id)?.id, minutes: Math.max(1, Math.round(minutes)) });
+    return left.reduce((s, e) => s + minutesFor(e) * 0.75 * Math.max(1, e.reps - p.store.reps(e).clean), 0);
+  };
+  const open = p.next();
+  const picked: Lesson[] = [];
+  for (const l of open) {
+    if (picked.length >= 2 || used >= DAILY_MINUTES - 3) break;
+    if (picked.some((x) => nodeOf(x)?.branch === nodeOf(l)?.branch)) continue;
+    const minutes = Math.min(DAILY_MINUTES - used, Math.max(3, lessonMinutes(l)) * (picked.length ? 0.5 : 1));
+    picked.push(l);
+    add({ why: 'lesson', lesson: l.id, node: nodeOf(l)?.id, minutes: Math.max(1, Math.round(minutes)) });
   }
 
-  // 3. Generated drills from lessons already reached, newest first, while there is time.
-  const reached = next ? lessons.slice(0, lessons.indexOf(next) + 1) : lessons;
+  // 3. Generated drills from lessons already reached (played, or on the edge), newest first.
+  const lessons = p.path();
+  const reached = lessons.filter((l) => picked.includes(l) || p.lessonGoals(l).some((e) => p.store.exercise(e.id).attempts > 0));
   for (const l of [...reached].reverse()) {
     for (const ex of p.lessonGoals(l)) {
       if (ex.kind !== 'generated' || used >= DAILY_MINUTES) continue;

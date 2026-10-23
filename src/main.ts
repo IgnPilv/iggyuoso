@@ -7,6 +7,7 @@ import { h, type View } from './ui/dom';
 import { demoView } from './ui/demoView';
 import { profileView } from './ui/profileView';
 import { todayView } from './ui/todayView';
+import { branchView, songsView } from './ui/treePages';
 import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './ui/theme';
 import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './ui/views';
 
@@ -18,6 +19,8 @@ const routes: Record<string, View> = {
   settings: settingsView,
   profile: profileView,
   today: todayView,
+  branch: branchView,
+  songs: songsView,
   midi: testerView,
   demo: demoView,
 };
@@ -48,6 +51,7 @@ brandMark.innerHTML = '<svg viewBox="0 0 16 16"><rect x="2" y="2" width="3" heig
 
 // Nav links carry an icon; on a phone only the icons show.
 const NAV_ICONS: Record<string, string> = {
+  songs: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5.5l11-2V16"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>',
   profile: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.8 4.2-5.6 7.5-5.6s6.3 1.8 7.5 5.6"/></svg>',
   demo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor"/></svg>',
   settings: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>',
@@ -57,7 +61,7 @@ const navLink = (route: string, label: string) => {
   icon.innerHTML = NAV_ICONS[route];
   return h('a', { href: `#/${route}`, title: label, 'aria-label': label }, icon, h('span', { class: 'nav-label' }, label));
 };
-const navLinks = [navLink('profile', 'Profile'), navLink('demo', 'Demo'), navLink('settings', 'Settings')];
+const navLinks = [navLink('songs', 'Songs'), navLink('profile', 'Profile'), navLink('demo', 'Demo'), navLink('settings', 'Settings')];
 
 computerKeys.middleC = () => (demo.active ? DEMO_CALIBRATION : store.calibration)?.middleC ?? 60;
 computerKeys.allow = () => !demo.active;

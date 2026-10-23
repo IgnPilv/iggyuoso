@@ -1,6 +1,5 @@
 id: interval-map
 title: 'Big idea: the interval map'
-unit: inversions
 skills: [intervals, interval-quality]
 steps:
 - explain: |

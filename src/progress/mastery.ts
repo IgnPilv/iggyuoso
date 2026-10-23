@@ -99,6 +99,13 @@ export class Mastery {
     return this.stateIn(id, new Map());
   }
 
+  /** Every node's state at once (one requirement walk for the whole tree). */
+  states(): Map<string, NodeState> {
+    const memo = new Map<string, NodeState>();
+    for (const id of this.nodes.keys()) this.stateIn(id, memo);
+    return memo;
+  }
+
   /** Nodes this one requires that are not far enough along yet to open it. */
   missing(node: TreeNode): string[] {
     return this.missingIn(node, new Map());

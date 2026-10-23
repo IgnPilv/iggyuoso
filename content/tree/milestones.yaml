@@ -1,0 +1,10 @@
+branch: milestones
+title: Milestones
+summary: "The trunk of the tree. Each milestone checks a stage and opens new songs."
+nodes:
+  - { id: y1-checkpoint-a, stage: 1, lesson: y1-checkpoint-a, title: 'Checkpoint 1: steady hands', requires: [legato-and-non-legato, tap-rhythm-echo, ear-echo-three-notes, first-pieces-alternating] }
+  - { id: y1-checkpoint-b, stage: 2, lesson: y1-checkpoint-b, title: 'Checkpoint 2: first chords', requires: [lead-sheet-melody, ear-degrees-1-5, pieces-hands-together, pentatonic-improv] }
+  - { id: y1-exit, stage: 3, lesson: y1-exit, title: Year 1 exit exam, requires: [sight-reading-y1, ear-echo-four-notes, improvise-over-drone, recital-three-pieces, g-and-f-scales, c-scale-hands-together] }
+  - { id: y2-checkpoint-a, stage: 4, lesson: y2-checkpoint-a, title: 'Year 2, checkpoint 1: scales, minor and reading', requires: [two-octave-d-minor, melodic-minor, ear-cadences, korobeiniki, sight-reading-y2a, sixteenth-notes, ear-echo-five, minuet-first-half, scale-study-in-c] }
+  - { id: y2-checkpoint-b, stage: 5, lesson: y2-checkpoint-b, title: 'Year 2, checkpoint 2: chords and harmony', requires: [cadence-in-f, triplets, accompaniment-patterns, transposing, staccato-march, ear-melodic-intervals] }
+  - { id: y2-exit, stage: 6, lesson: y2-exit, title: Year 2 exit exam, requires: [chromatic-scale, scales-a-major-g-minor, three-eight-time, ear-echo-six, etude-in-g, minuet-in-g, variations-lightly-row, evening-song] }

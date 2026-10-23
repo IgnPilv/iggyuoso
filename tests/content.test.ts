@@ -3,10 +3,9 @@ import { loadContent } from '../src/content/load';
 import { realContent } from './helpers';
 
 describe('content/', () => {
-  it('loads every unit, lesson and exercise without problems', () => {
+  it('loads every lesson and exercise without problems', () => {
     const { content, errors } = realContent();
     expect(errors).toEqual([]);
-    expect(content.units.length).toBeGreaterThan(0);
     expect(content.lessons.size).toBeGreaterThan(0);
     expect(content.exercises.size).toBeGreaterThan(0);
   });
@@ -43,12 +42,10 @@ describe('content validation', () => {
     expect(loadContent({ 'content/exercises/y.yaml': 'id: x\nkind: find\ntargets: [{ pitchClass: C }]' }).errors[0]).toMatch(/match the file name/);
   });
 
-  it('catches missing lessons and exercises', () => {
+  it('catches missing exercises', () => {
     const { errors } = loadContent({
-      'content/units/01-u.yaml': 'id: u\ntitle: U\nlessons: [a, b]',
-      'content/lessons/01-a.yaml': 'id: a\ntitle: A\nunit: u\nsteps:\n  - exercise: nope',
+      'content/lessons/01-a.yaml': 'id: a\ntitle: A\nsteps:\n  - exercise: nope',
     });
-    expect(errors).toContain('unit u: lesson "b" not found');
     expect(errors).toContain('lesson a: exercise "nope" not found');
   });
 });

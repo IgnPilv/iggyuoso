@@ -1,0 +1,31 @@
+branch: technique
+title: Technique
+summary: "How the hands work: positions, scales, chords, arpeggios, the pedal. Hands together as soon as possible."
+nodes:
+  - { id: finger-numbers, stage: 1, lesson: finger-numbers, title: Finger numbers, requires: [high-and-low] }
+  - { id: middle-c-position, stage: 1, lesson: middle-c-position, title: Middle C position, requires: [finger-numbers, f-g-a-b] }
+  - { id: legato-and-non-legato, stage: 1, lesson: legato-and-non-legato, title: Detached and smooth, requires: [middle-c-position] }
+  - { id: hands-together-held, stage: 2, lesson: hands-together-held, title: One hand holds, requires: [y1-checkpoint-a] }
+  - { id: hands-together-parallel, stage: 2, lesson: hands-together-parallel, title: Both hands moving, type: drill, requires: [hands-together-held] }
+  - { id: g-position, stage: 2, lesson: g-position, title: G position, requires: [hands-together-held] }
+  - { id: lh-chords, stage: 2, lesson: lh-chords, title: Left-hand chords under a melody, type: drill, requires: [chord-symbols, hands-together-parallel] }
+  - { id: thumb-under, stage: 3, lesson: thumb-under, title: Thumb under, type: drill, requires: [y1-checkpoint-b] }
+  - { id: c-scale-hands-apart, stage: 3, lesson: c-scale-hands-apart, title: C major scale, hands apart, type: drill, requires: [thumb-under, major-scale-pattern] }
+  - { id: c-scale-hands-together, stage: 3, lesson: c-scale-hands-together, title: C major scale, hands together, type: drill, requires: [c-scale-hands-apart] }
+  - { id: g-and-f-scales, stage: 3, lesson: g-and-f-scales, title: G and F major scales, hands apart, type: drill, requires: [c-scale-hands-apart, key-of-g, f-position-key-of-f] }
+  - { id: minor-five-finger, stage: 3, lesson: minor-five-finger, title: A minor and D minor positions, requires: [y1-checkpoint-b] }
+  - { id: two-octave-c, stage: 4, lesson: two-octave-c, title: C major over two octaves, requires: [y1-exit] }
+  - { id: two-octave-c-together, stage: 4, lesson: two-octave-c-together, title: Two octaves, hands together, requires: [two-octave-c] }
+  - { id: two-octave-g, stage: 4, lesson: two-octave-g, title: G major over two octaves, requires: [two-octave-c-together] }
+  - { id: two-octave-f, stage: 4, lesson: two-octave-f, title: F major over two octaves, requires: [two-octave-g] }
+  - { id: two-octave-a-minor, stage: 4, lesson: two-octave-a-minor, title: A minor over two octaves, requires: [harmonic-minor, two-octave-f] }
+  - { id: two-octave-d-minor, stage: 4, lesson: two-octave-d-minor, title: D minor over two octaves, requires: [two-octave-a-minor] }
+  - { id: first-inversion, stage: 5, lesson: first-inversion, title: First inversion, requires: [primary-triads] }
+  - { id: second-inversion, stage: 5, lesson: second-inversion, title: Second inversion, requires: [first-inversion] }
+  - { id: close-position-chords, stage: 5, lesson: close-position-chords, title: Chords that move smoothly, requires: [second-inversion] }
+  - { id: staccato, stage: 5, lesson: staccato, title: Staccato, requires: [y2-checkpoint-a] }
+  - { id: pedal-simple, stage: 6, lesson: pedal-simple, title: The sustain pedal, requires: [y2-checkpoint-b] }
+  - { id: pedal-legato, stage: 6, lesson: pedal-legato, title: Legato pedal, requires: [pedal-simple] }
+  - { id: chromatic-scale, stage: 6, lesson: chromatic-scale, title: The chromatic scale, requires: [y2-checkpoint-b] }
+  - { id: scales-d-major-e-minor, stage: 6, lesson: scales-d-major-e-minor, title: D major and E minor, requires: [y2-checkpoint-b] }
+  - { id: scales-a-major-g-minor, stage: 6, lesson: scales-a-major-g-minor, title: A major and G minor, requires: [scales-d-major-e-minor] }

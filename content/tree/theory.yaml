@@ -1,0 +1,30 @@
+branch: theory
+title: Theory
+summary: "How music is built: notes, intervals, scales, keys, chords and form, a few screens and a quiz at a time."
+nodes:
+  - { id: high-and-low, stage: 1, lesson: high-and-low, title: High and low }
+  - { id: c-d-e, stage: 1, lesson: c-d-e, title: C, D and E, requires: [high-and-low] }
+  - { id: f-g-a-b, stage: 1, lesson: f-g-a-b, title: F, G, A and B, requires: [c-d-e] }
+  - { id: steps-and-skips, stage: 1, lesson: steps-and-skips, title: Steps and skips (2nds and 3rds), requires: [treble-staff] }
+  - { id: dynamics, stage: 2, lesson: dynamics, title: Loud and soft (f, p, mf, mp), requires: [y1-checkpoint-a] }
+  - { id: sharps-flats-naturals, stage: 2, lesson: sharps-flats-naturals, title: Sharps, flats and semitones, requires: [y1-checkpoint-a] }
+  - { id: intervals-to-fifth, stage: 2, lesson: intervals-to-fifth, title: 'Intervals: 2nd to 5th and the octave', requires: [steps-and-skips] }
+  - { id: tonic-triad, stage: 2, lesson: tonic-triad, title: 'Triads: C, F and G', requires: [intervals-to-fifth] }
+  - { id: chord-symbols, stage: 2, lesson: chord-symbols, title: Chord symbols and I, IV, V, V7, requires: [tonic-triad] }
+  - { id: key-of-g, stage: 2, lesson: key-of-g, title: 'One sharp: the key of G', requires: [sharps-flats-naturals, g-position] }
+  - { id: f-position-key-of-f, stage: 2, lesson: f-position-key-of-f, title: 'One flat: F position and the key of F', requires: [sharps-flats-naturals, g-position] }
+  - { id: keys-and-signatures, stage: 2, lesson: keys-and-signatures, title: 'Big idea: why music has keys', requires: [key-of-g, f-position-key-of-f] }
+  - { id: major-scale-pattern, stage: 3, lesson: major-scale-pattern, title: 'The major scale: tones and semitones', requires: [y1-checkpoint-b] }
+  - { id: seconds-major-minor, stage: 4, lesson: seconds-major-minor, title: Major and minor 2nds, requires: [y1-exit] }
+  - { id: thirds-major-minor, stage: 4, lesson: thirds-major-minor, title: Major and minor 3rds, requires: [seconds-major-minor] }
+  - { id: relative-minor, stage: 4, lesson: relative-minor, title: Relative major and minor, requires: [thirds-major-minor] }
+  - { id: natural-minor, stage: 4, lesson: natural-minor, title: The natural minor scale, requires: [relative-minor] }
+  - { id: harmonic-minor, stage: 4, lesson: harmonic-minor, title: The harmonic minor scale, requires: [natural-minor] }
+  - { id: melodic-minor, stage: 4, lesson: melodic-minor, title: The melodic minor scale, requires: [harmonic-minor] }
+  - { id: triads-on-every-degree, stage: 5, lesson: triads-on-every-degree, title: A chord on every note, requires: [y2-checkpoint-a] }
+  - { id: primary-triads, stage: 5, lesson: primary-triads, title: The primary triads, requires: [triads-on-every-degree] }
+  - { id: perfect-intervals, stage: 5, lesson: perfect-intervals, title: Perfect 4ths and 5ths, requires: [y2-checkpoint-a] }
+  - { id: interval-map, stage: 5, lesson: interval-map, title: 'Big idea: the interval map', requires: [perfect-intervals] }
+  - { id: stable-unstable, stage: 5, lesson: stable-unstable, title: Notes that rest, notes that pull, requires: [primary-triads] }
+  - { id: cadence-in-f, stage: 5, lesson: cadence-in-f, title: The perfect cadence, requires: [harmonise-i-iv-v] }
+  - { id: circle-of-fifths, stage: 6, lesson: circle-of-fifths, title: 'Big idea: the circle of fifths', requires: [scales-a-major-g-minor] }

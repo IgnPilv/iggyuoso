@@ -1,0 +1,10 @@
+branch: creativity
+title: Creativity
+summary: "Making your own music: improvising, answering phrases, harmonising and moving tunes to new keys."
+nodes:
+  - { id: pentatonic-improv, stage: 2, lesson: pentatonic-improv, title: Black-key improvising, requires: [sharps-flats-naturals] }
+  - { id: improvise-over-drone, stage: 3, lesson: improvise-over-drone, title: Improvise in C, requires: [pentatonic-improv, c-scale-hands-together] }
+  - { id: harmonise-i-v, stage: 5, lesson: harmonise-i-v, title: Harmonising with two chords, requires: [stable-unstable] }
+  - { id: harmonise-i-iv-v, stage: 5, lesson: harmonise-i-iv-v, title: Harmonising with three chords, requires: [harmonise-i-v, close-position-chords] }
+  - { id: accompaniment-patterns, stage: 5, lesson: accompaniment-patterns, title: Accompaniment patterns, requires: [harmonise-i-iv-v] }
+  - { id: transposing, stage: 5, lesson: transposing, title: Moving a tune to a new key, requires: [harmonise-i-v] }

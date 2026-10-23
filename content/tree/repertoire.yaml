@@ -1,0 +1,16 @@
+branch: repertoire
+title: Pieces
+summary: "Real pieces to learn and polish: studies, dances and classics."
+nodes:
+  - { id: first-pieces-alternating, stage: 1, lesson: first-pieces-alternating, title: First pieces, requires: [c-position-reading, three-four-time] }
+  - { id: pieces-hands-together, stage: 2, lesson: pieces-hands-together, title: First pieces hands together, requires: [hands-together-parallel, dynamics] }
+  - { id: lead-sheet-melody, stage: 2, lesson: lead-sheet-melody, title: A tune with chords, requires: [lh-chords] }
+  - { id: recital-three-pieces, stage: 3, lesson: recital-three-pieces, title: Three contrasting pieces, requires: [c-scale-hands-together, dotted-quarter] }
+  - { id: scale-study-in-c, stage: 4, lesson: scale-study-in-c, title: Scale study in C, requires: [two-octave-c-together] }
+  - { id: minuet-first-half, stage: 4, lesson: minuet-first-half, title: Minuet in G, first half, requires: [reading-ht-eight-bars] }
+  - { id: korobeiniki, stage: 4, lesson: korobeiniki, title: Korobeiniki, requires: [harmonic-minor, reading-ht-eight-bars] }
+  - { id: staccato-march, stage: 5, lesson: staccato-march, title: Toy-soldier march, requires: [staccato, close-position-chords] }
+  - { id: etude-in-g, stage: 6, lesson: etude-in-g, title: Running etude in G, requires: [scales-d-major-e-minor] }
+  - { id: minuet-in-g, stage: 6, lesson: minuet-in-g, title: Minuet in G, complete, requires: [y2-checkpoint-b] }
+  - { id: variations-lightly-row, stage: 6, lesson: variations-lightly-row, title: Theme and variations, requires: [y2-checkpoint-b] }
+  - { id: evening-song, stage: 6, lesson: evening-song, title: Evening song, requires: [pedal-legato] }

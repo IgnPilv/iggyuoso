@@ -1,0 +1,13 @@
+branch: reading
+title: Reading
+summary: "From the first notes on the staff to sight-reading both hands at once."
+nodes:
+  - { id: treble-staff, stage: 1, lesson: treble-staff, title: The treble staff, requires: [middle-c-position] }
+  - { id: bass-staff, stage: 1, lesson: bass-staff, title: The bass staff, requires: [treble-staff] }
+  - { id: grand-staff-map, stage: 1, lesson: grand-staff-map, title: 'Big idea: the grand staff map', requires: [bass-staff] }
+  - { id: c-position-reading, stage: 1, lesson: c-position-reading, title: Reading in C position, type: drill, requires: [bass-staff, steps-and-skips] }
+  - { id: sight-reading-y1, stage: 3, lesson: sight-reading-y1, title: 'Sight-reading: any five-finger position', type: drill, requires: [g-and-f-scales, minor-five-finger] }
+  - { id: shifting-position, stage: 4, lesson: shifting-position, title: Leaving the five-finger position, requires: [y1-exit] }
+  - { id: two-note-chords, stage: 4, lesson: two-note-chords, title: Two notes at once, requires: [shifting-position] }
+  - { id: reading-ht-eight-bars, stage: 4, lesson: reading-ht-eight-bars, title: Reading eight bars, hands together, requires: [two-note-chords, ties] }
+  - { id: sight-reading-y2a, stage: 4, lesson: sight-reading-y2a, title: Sight-reading, hands together, type: drill, requires: [reading-ht-eight-bars] }
