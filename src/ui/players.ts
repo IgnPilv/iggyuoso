@@ -166,6 +166,8 @@ const VIEW_LABEL: Record<ViewMode, string> = { classic: 'Keyboard & sheet', fall
 
 /** The player's last pick wins everywhere; otherwise reading exercises start classic. */
 export function initialView(ex: Exercise): ViewMode {
+  // Reading questions are about the staff: an empty falling lane under them only distracts.
+  if (ex.kind === 'quiz' && ex.questions.some((q) => q.staff)) return 'classic';
   return store.settings.view ?? (ex.kind === 'timed' && ex.display !== 'staff' ? 'falling' : 'classic');
 }
 
@@ -309,7 +311,7 @@ export function clefFor(ex: Exercise, hand?: Hand): Clef {
 }
 
 const sequenceStaff = (ex: SequenceExercise) =>
-  renderStaff([{ clef: clefFor(ex), notes: ex.notes.map((p, i) => ({ pitches: [p], key: String(i) })) }], { key: ex.key });
+  renderStaff([{ clef: clefFor(ex), notes: ex.notes.map((p, i) => ({ pitches: [p], key: String(i), finger: ex.fingers[i] })) }], { key: ex.key });
 
 function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibration, onDone: OnDone) {
   let session = new SequenceSession(ex, cal);
@@ -423,11 +425,15 @@ function staffParts(ex: TimedExercise): StaffPart[] {
     let index = 0;
     return {
       clef,
-      notes: tokens.map((t, ti) => ({
-        pitches: t.pitches, beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie,
-        // A tied note's second half shares the note's number; it is not marked on its own.
-        key: !t.pitches.length ? `${hand}:r${ti}` : isTieEnd(tokens, ti) ? `${hand}:t${ti}` : `${hand}:${index++}`,
-      })),
+      notes: tokens.map((t, ti) => {
+        const own = t.pitches.length && !isTieEnd(tokens, ti);
+        const finger = own ? ex.fingers[hand][index] : undefined;
+        return {
+          pitches: t.pitches, beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie, finger,
+          // A tied note's second half shares the note's number; it is not marked on its own.
+          key: !t.pitches.length ? `${hand}:r${ti}` : !own ? `${hand}:t${ti}` : `${hand}:${index++}`,
+        };
+      }),
     };
   };
   if (ex.right && ex.left) return [part('right', ex.right, 'treble'), part('left', ex.left, 'bass')];
@@ -669,7 +675,11 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         ? h('p', { class: 'small' }, 'Most mistakes were in ', h('strong', {}, barsText(tricky)), '. ',
           h('button', { class: 'secondary', onclick: () => loop.setLoop(tricky, Number(tempoSel.value)) }, `Loop ${barsText(tricky)}`))
         : '';
-      result.replaceChildren(timedResult(r, ex, tempo, cal), reward, ladderNote, loopTip);
+      // Go again from the card, without scrolling back up to Play.
+      const againRow = h('div', { class: 'controls' },
+        h('button', { onclick: () => { stage.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); start('play'); } }, 'Try again'),
+        regenerate.has(ex) ? h('button', { class: 'secondary', onclick: () => regenerate.get(ex)!() }, ex.tap ? 'New rhythm' : 'New tune') : '');
+      result.replaceChildren(timedResult(r, ex, tempo, cal), reward, ladderNote, loopTip, againRow);
       onDone(r);
       demo.onRunEnd?.('play');
     };

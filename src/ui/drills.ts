@@ -11,7 +11,9 @@ import { KeyboardView } from './keyboard';
 import {
   animate, header, initialView, record, regenerate, showHeld, starText, viewToggle, type OnDone, type ViewMode,
 } from './players';
+import { markdown } from './markdown';
 import { renderStaff } from './staff';
+import { theoryKeys, theoryStaff } from './theory';
 
 // Players for the question kinds: ear (listen, then answer), quiz (theory questions) and build
 // (play a named chord, interval or scale). Scoring lives in engine/drills.ts.
@@ -19,7 +21,7 @@ import { renderStaff } from './staff';
 // ---------------------------------------------------------------- shared
 
 /** Play sounds starting now; returns when they end (ms from now). */
-function playSounds(sounds: Sound[], delay = 0): number {
+export function playSounds(sounds: Sound[], delay = 0): number {
   audio();
   const start = performance.now() + 80 + delay;
   for (const s of sounds) for (const n of s.notes) piano(n, start + s.at, s.dur, 0.7 / Math.sqrt(s.notes.length));
@@ -301,10 +303,22 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
   const picture = h('div', { class: 'quiz-picture' });
   const choices = h('div');
   const feedback = h('p', { class: 'drill-feedback' });
+  const why = h('div', { class: 'why', hidden: true });
   const result = h('div');
   const nextBtn = h('button', { class: 'secondary', hidden: true }, 'Next');
   let timers: number[] = [];
   const clearTimers = () => { timers.forEach(clearTimeout); timers = []; };
+
+  /** Why the answer is what it is (and why a wrong pick is wrong), with its picture. */
+  const explain = (q: typeof session.current, picked?: number) => {
+    const wrongWhy = picked !== undefined && picked !== q.correct ? q.choiceWhy?.[picked] : undefined;
+    if (!q.why && !wrongWhy) return false;
+    const text = h('div', { class: 'explain' });
+    text.innerHTML = markdown([wrongWhy, q.why].filter(Boolean).join('\n\n'));
+    why.replaceChildren(text, q.whyStaff ? theoryStaff(q.whyStaff) : '', q.whyKeys ? theoryKeys(q.whyKeys, cal) : '');
+    why.hidden = false;
+    return true;
+  };
 
   const present = () => {
     clearTimers();
@@ -315,6 +329,8 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
     count.textContent = `Question ${session.index + 1} of ${session.questions.length}`;
     feedback.textContent = '';
     feedback.className = 'drill-feedback';
+    why.hidden = true;
+    why.replaceChildren();
     nextBtn.hidden = true;
     picture.replaceChildren();
     if (q.staff) {
@@ -361,12 +377,16 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
         if (session.keys) stage?.show(session.keys.expect);
       }
     }
-    if (session.done) {
+    // With a reason to read, the player moves on with Next (the demo reads fast).
+    const reading = !silent && explain(q, picked);
+    if (session.done && !reading) {
       timers.push(window.setTimeout(finish, 900));
       return;
     }
+    nextBtn.textContent = session.done ? 'See the result' : 'Next';
     nextBtn.hidden = false;
-    timers.push(window.setTimeout(next, silent || credit >= 1 ? 1100 : 2600));
+    nextBtn.classList.toggle('secondary', !reading);
+    if (!reading || demo.active) timers.push(window.setTimeout(session.done ? finish : next, reading ? 3500 : silent || credit >= 1 ? 1100 : 2600));
   };
 
   const next = () => {
@@ -376,6 +396,8 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
   };
 
   const finish = () => {
+    if (result.childElementCount) return;
+    nextBtn.hidden = true;
     const r = session.result();
     const reward = record(ex, r.score, r.stars, 0);
     ask.textContent = 'Done!';
@@ -391,7 +413,7 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
     result.replaceChildren();
     present();
   };
-  nextBtn.onclick = () => { clearTimers(); next(); };
+  nextBtn.onclick = () => { clearTimers(); if (session.done) { nextBtn.hidden = true; finish(); } else next(); };
 
   const off = midi.onNote((e) => {
     if (e.type !== 'on' || session.done || session.answered || !session.keys) return;
@@ -402,8 +424,8 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
 
   root.append(
     header(ex, 'Answer the questions.'),
-    h('div', { class: 'controls top' }, stage ? stage.toggle.el : '', nextBtn),
-    h('div', { class: 'drill-head' }, count), ask, picture, choices, feedback, stage?.el ?? '', result,
+    stage ? h('div', { class: 'controls top' }, stage.toggle.el) : '',
+    h('div', { class: 'drill-head' }, count), ask, picture, choices, stage?.el ?? '', feedback, why, h('div', { class: 'controls' }, nextBtn), result,
   );
   present();
   return () => { off(); clearTimers(); stopAll(); stage?.destroy(); };

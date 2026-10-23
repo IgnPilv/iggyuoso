@@ -9,6 +9,7 @@ import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
 import { markdown } from './markdown';
+import { explainBlock, playground } from './theory';
 import { mountExercise, repsText } from './players';
 import { todayCard } from './todayView';
 import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
@@ -246,9 +247,15 @@ export const lessonView: View = (root, id?: string) => {
     const s = lesson.steps[step];
     const next = h('button', { onclick: () => { step++; show(); } }, 'Next');
     if ('explain' in s) {
-      const p = h('div', { class: 'explain' });
-      p.innerHTML = markdown(s.explain);
-      body.append(p);
+      // A check question holds Next until it is answered right.
+      next.disabled = true;
+      const block = explainBlock(s, cal, () => { next.disabled = false; });
+      body.append(block.el);
+      cleanup = block.destroy;
+    } else if ('playground' in s) {
+      const block = playground(s, cal);
+      body.append(block.el);
+      cleanup = block.destroy;
     } else {
       const ex = content.exercises.get(s.exercise)!;
       const box = h('div');
@@ -258,6 +265,9 @@ export const lessonView: View = (root, id?: string) => {
       cleanup = mountExercise(box, ex, cal, () => { next.textContent = 'Next'; next.classList.remove('secondary'); });
     }
     nav.append(next);
+    // The path note, once and quietly, under the first step.
+    if (step === 0 && !advice.ready) body.after(adviceNote);
+    else adviceNote.remove();
   };
 
   const showRecap = (l: Lesson) => {
@@ -273,8 +283,8 @@ export const lessonView: View = (root, id?: string) => {
     nav.append(nextId ? h('button', { onclick: () => go(`/lesson/${nextId}`) }, 'Next lesson') : h('button', { onclick: () => go('/') }, 'Home'));
   };
 
-  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('h2', {}, lesson.title), progress),
-    advice.ready ? '' : adviceBanner(advice), bar, body, nav));
+  const adviceNote = advice.ready ? h('div') : adviceBanner(advice);
+  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('h2', {}, lesson.title), progress), bar, body, nav));
   show();
   return () => cleanup?.();
 };
@@ -301,7 +311,7 @@ function adviceBanner(advice: Extract<LessonAdvice, { ready: false }>) {
     : advice.checkpoint
       ? ['A checkpoint works best when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ', ...links(advice.nodes), '.']
       : ['Recommended first: ', ...links(advice.nodes), '.'];
-  return h('div', { class: 'banner advice' },
+  return h('div', { class: 'advice small' },
     h('p', {}, h('strong', {}, 'Ahead of your path. '), ...why, ' You can play this now; your takes count all the same.'),
     advice.reason === 'previous' ? h('details', { class: 'small' }, h('summary', {}, `Where you are in ${advice.lesson.title}`), repsTable(lessonGoals(advice.lesson))) : '');
 }
