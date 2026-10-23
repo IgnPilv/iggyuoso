@@ -3,6 +3,7 @@ title: "Lightly Row: melody"
 kind: timed
 hand: right
 tempo: 88
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q D4:q E4:q F4:q | G4:q G4:q G4:h | G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q E4:q G4:q G4:q | C4:w"

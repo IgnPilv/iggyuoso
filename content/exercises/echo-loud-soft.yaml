@@ -2,6 +2,7 @@ id: echo-loud-soft
 kind: timed
 hand: right
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 prompt: Play the first bar f (loud), the second p (soft), like an echo.

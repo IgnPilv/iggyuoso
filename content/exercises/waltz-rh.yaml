@@ -3,6 +3,8 @@ title: "Little waltz, right hand"
 kind: timed
 hand: right
 tempo: 80
+tempoLadder: true
 meter: 3/4
 countIn: 1
 right: "C4:h. | E4:q D4:q C4:q | D4:h E4:q | C4:h."
+days: 2

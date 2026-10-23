@@ -2,7 +2,7 @@ id: ear-maj-min-dim
 title: "Major, minor or diminished?"
 kind: ear
 prompt: "Name the chord you hear."
-questions: 12
+questions: 20
 items:
   - { type: chord, pool: [maj, min, dim], root: C4 }
   - { type: chord, pool: [maj, min, dim], root: F4 }

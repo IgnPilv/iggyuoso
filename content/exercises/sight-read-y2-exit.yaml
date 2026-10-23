@@ -5,7 +5,9 @@ hand: together
 display: staff
 key: D
 tempo: 80
+tempoLadder: true
 meter: 3/4
 countIn: 1
 right: "F#4:q A4:q D5:q | C#5:h A4:q | B4:q A4:q G4:q | F#4:h. | G4:q B4:q D5:q | C#5:q B4:q A4:q | G4:q E4:q C#4:q | D4:h."
 left: "D3:h. | A2:h. | G2:h. | D3:h. | G2:h. | A2:h. | A2:h. | D3:h."
+reps: 1

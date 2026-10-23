@@ -1,7 +1,7 @@
 id: note-naming-three
 kind: ear
 prompt: Now three notes to tell apart. Any octave counts.
-questions: 15
+questions: 20
 pitchMatch: pitchClass
 items:
   - { type: note, pool: [C4, F#4, A4] }

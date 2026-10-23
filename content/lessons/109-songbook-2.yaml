@@ -1,0 +1,17 @@
+id: songbook-2
+title: "Songbook: hands together"
+unit: two-hands-at-once
+skills: [repertoire, hands-together]
+steps:
+  - explain: |
+      Two well-known tunes with both hands. The right hand plays the melody in C position; the
+      left hand holds one bass note per bar: C most of the time, F or G when the harmony moves.
+
+      **Jingle Bells** was written in 1857 by James Lord Pierpont. Play the chorus *mf*, and the
+      last line a little louder.
+  - exercise: jingle-bells-ht
+  - explain: |
+      **When the Saints Go Marching In** is an old American spiritual, a favourite of New Orleans
+      jazz bands. Every phrase begins on the second beat, after a rest.
+  - exercise: saints-ht
+recap: "Melody plus bass: the shape of most piano music."

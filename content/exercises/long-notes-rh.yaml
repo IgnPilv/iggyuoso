@@ -2,6 +2,7 @@ id: long-notes-rh
 kind: timed
 hand: right
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 pitchMatch: pitchClass

@@ -2,6 +2,6 @@ id: ear-degrees-c-1235
 title: "Degrees 1, 2, 3 and 5"
 kind: ear
 prompt: "Chords set the key of C, then one note. Play the degree you heard."
-questions: 12
+questions: 20
 items:
   - { type: degree, key: C, pool: [1, 2, 3, 5] }

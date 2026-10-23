@@ -1,0 +1,13 @@
+id: aunt-rhody-rh
+kind: timed
+title: "Go Tell Aunt Rhody"
+hand: right
+display: staff
+clef: treble
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "E4:h E4:q D4:q | C4:h C4:h | D4:q D4:q F4:q E4:q | D4:h C4:h | G4:h G4:q F4:q | E4:h E4:h | D4:q C4:q D4:q E4:q | C4:w"
+fingers: "3 3 2 1 1 2 2 4 3 2 1 5 5 4 3 3 2 1 2 3 1"
+days: 2

@@ -3,6 +3,7 @@ title: "Lightly Row in G"
 kind: timed
 hand: right
 tempo: 88
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "D5:q B4:q B4:h | C5:q A4:q A4:h | G4:q A4:q B4:q C5:q | D5:q D5:q D5:h | D5:q B4:q B4:h | C5:q A4:q A4:h | G4:q B4:q D5:q D5:q | G4:w"

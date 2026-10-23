@@ -3,6 +3,7 @@ title: "A natural minor, right hand"
 kind: timed
 hand: right
 tempo: 66
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "A4:q B4:q C5:q D5:q | E5:q F5:q G5:q A5:q | G5:q F5:q E5:q D5:q | C5:q B4:q A4:h"

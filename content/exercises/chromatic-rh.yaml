@@ -9,3 +9,4 @@ countIn: 1
 tempoLadder: true
 right: "C4:e C#4:e D4:e D#4:e E4:e F4:e F#4:e G4:e | G#4:e A4:e A#4:e B4:e C5:e B4:e Bb4:e A4:e | Ab4:e G4:e Gb4:e F4:e E4:e Eb4:e D4:e Db4:e | C4:w"
 fingers: "1 3 1 3 1 2 3 1 3 1 3 1 2 1 3 1 3 1 3 2 1 3 1 3 1"
+days: 2

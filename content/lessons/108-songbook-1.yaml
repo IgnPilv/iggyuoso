@@ -1,0 +1,20 @@
+id: songbook-1
+title: "Songbook: three old songs"
+unit: steady-hands
+skills: [repertoire, reading]
+steps:
+  - explain: |
+      Pianists get better by playing lots of pieces, again and again, until they sit in the
+      fingers. Here are three old songs in C position. Each one has to be played cleanly at full
+      speed several times, on two different days, before it counts.
+
+      **Au clair de la lune** is a French song from the 1700s about lending a pen by moonlight.
+  - exercise: au-clair-rh
+  - explain: |
+      **Go Tell Aunt Rhody** is an American folk song. Watch the jump up to G in bar 5.
+  - exercise: aunt-rhody-rh
+  - explain: |
+      **Frère Jacques** (Brother John) is a round sung all over the world. This time the left hand
+      plays the tune.
+  - exercise: frere-jacques-lh
+recap: "Three songs in your fingers. Come back to them on another day: that's how pieces stick."

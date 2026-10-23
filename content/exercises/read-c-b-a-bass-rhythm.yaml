@@ -4,6 +4,7 @@ hand: left
 display: staff
 clef: bass
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 left: "C4:q B3:q A3:h | A3:q B3:q C4:h | C4:q A3:q B3:q A3:q | C4:w"

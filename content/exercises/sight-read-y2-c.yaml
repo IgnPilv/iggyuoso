@@ -4,6 +4,7 @@ kind: timed
 hand: together
 display: staff
 tempo: 66
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "E4:q F4:q G4:h | A4:q G4:q F4:h | E4:q D4:q E4:q F4:q | E4:w"

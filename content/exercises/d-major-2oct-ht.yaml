@@ -10,3 +10,4 @@ right: "D4:e E4:e F#4:e G4:e A4:e B4:e C#5:e D5:e | E5:e F#5:e G5:e A5:e B5:e C#
 left: "D2:e E2:e F#2:e G2:e A2:e B2:e C#3:e D3:e | E3:e F#3:e G3:e A3:e B3:e C#4:e D4:e C#4:e | B3:e A3:e G3:e F#3:e E3:e D3:e C#3:e B2:e | A2:e G2:e F#2:e E2:e D2:h"
 rightFingers: "1 2 3 1 2 3 4 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1 4 3 2 1 3 2 1"
 leftFingers: "5 4 3 2 1 3 2 1 4 3 2 1 3 2 1 2 3 1 2 3 4 1 2 3 1 2 3 4 5"
+days: 2

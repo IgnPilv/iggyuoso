@@ -1,7 +1,7 @@
 id: ear-major-minor-chords
 kind: ear
 prompt: Major sounds bright, minor sounds darker. Which one did you hear?
-questions: 12
+questions: 20
 items:
   - { type: chord, pool: [maj, min], root: C4 }
   - { type: chord, pool: [maj, min], root: F4 }

@@ -3,6 +3,7 @@ kind: timed
 hand: alternating   # both hands, never at the same moment
 display: staff
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:q D4:q E4:h | r:w | E4:q D4:q C4:h | r:w"

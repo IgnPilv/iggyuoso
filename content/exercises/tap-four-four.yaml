@@ -2,6 +2,7 @@ id: tap-four-four
 kind: tap
 prompt: Listen, then tap the rhythm back on any key.
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 rhythm: "x:q x:q x:h | x:q x:q x:q x:q | x:h x:h | x:w"

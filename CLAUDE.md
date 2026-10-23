@@ -215,3 +215,11 @@ never copied pages). Start small, adapt as we go.
   only). "Spot the change" uses a quiz with a sound of both versions until there is an ear item
   for it. Staccato is written as a note plus a rest, because release timing isn't scored yet.
   Staff pieces outside C carry `key:`.
+- 2026-10-23: Pacing (Ignas: "lessons now are 10 seconds... the 1 year can be done in 45
+  minutes"). Content target: about 4–6 practice days per Year 1 lesson. Every timed and tap
+  exercise has `tempoLadder: true`. Ear drills ask 20 questions (25 in exams). Scales and pieces
+  carry `days: 2` (clean takes on two different days); checkpoint-only tests carry `reps: 1`.
+  `reps` and `days` take effect when the engine's progression rules land. Year 1 gains four
+  songbook lessons (`songbook-1` to `songbook-4`: Au clair de la lune, Go Tell Aunt Rhody, Frère
+  Jacques, Jingle Bells, When the Saints, London Bridge, and a Frère Jacques canon), which the
+  checkpoints require. Generated daily drills come next.

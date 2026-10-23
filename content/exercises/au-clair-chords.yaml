@@ -1,0 +1,13 @@
+id: au-clair-chords
+kind: timed
+title: "Au clair de la lune with chords"
+hand: together
+prompt: "The chord changes in the middle of bars 2 and 3. Get the left hand ready early."
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "C4:q C4:q C4:q D4:q | E4:h D4:h | C4:q E4:q D4:q D4:q | C4:w | C4:q C4:q C4:q D4:q | E4:h D4:h | C4:q E4:q D4:q D4:q | C4:w"
+left: "C3+E3+G3:w | C3+E3+G3:h B2+F3+G3:h | C3+E3+G3:h B2+F3+G3:h | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:h B2+F3+G3:h | C3+E3+G3:h B2+F3+G3:h | C3+E3+G3:w"
+days: 2

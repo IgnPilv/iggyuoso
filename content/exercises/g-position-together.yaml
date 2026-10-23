@@ -2,6 +2,7 @@ id: g-position-together
 kind: timed
 hand: together
 tempo: 66
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "G4:q A4:q B4:h | D5:q C5:q B4:h | A4:q B4:q A4:q G4:q | G4:w"
