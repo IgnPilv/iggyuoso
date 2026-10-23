@@ -1,4 +1,5 @@
 id: echo-loud-soft
+title: "Loud and soft echo"
 kind: timed
 hand: right
 tempo: 72

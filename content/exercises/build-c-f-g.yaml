@@ -1,4 +1,5 @@
 id: build-c-f-g
+title: "Build C, F and G"
 kind: build
 tasks:
   - { chord: C, ask: "Play a C triad: C, E, G together" }

@@ -1,4 +1,5 @@
 id: ear-echo-four
+title: "Echo four notes"
 kind: ear
 prompt: Four notes now, from C to G. Listen twice, then play it back.
 questions: 20

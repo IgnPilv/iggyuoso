@@ -1,4 +1,5 @@
 id: ear-major-minor-chords
+title: "Major or minor chord?"
 kind: ear
 prompt: Major sounds bright, minor sounds darker. Which one did you hear?
 questions: 20

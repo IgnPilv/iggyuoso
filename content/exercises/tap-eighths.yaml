@@ -1,4 +1,5 @@
 id: tap-eighths
+title: "Tap eighth notes"
 kind: tap
 prompt: Two eighth notes fit in one beat. Say "ti-ti" for each pair.
 tempo: 72

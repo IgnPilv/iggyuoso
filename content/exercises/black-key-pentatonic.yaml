@@ -1,4 +1,5 @@
 id: black-key-pentatonic
+title: "Build the black-key scale"
 kind: build
 pitchMatch: pitchClass
 tasks:

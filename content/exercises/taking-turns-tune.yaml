@@ -1,4 +1,5 @@
 id: taking-turns-tune
+title: "Taking turns"
 kind: timed
 hand: alternating   # both hands, never at the same moment
 display: staff

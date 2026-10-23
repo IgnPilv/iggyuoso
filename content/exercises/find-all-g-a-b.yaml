@@ -1,4 +1,5 @@
 id: find-all-g-a-b
+title: "Find G, A and B"
 kind: find
 prompt: Play the key the app names. Any octave is fine.
 order: random
