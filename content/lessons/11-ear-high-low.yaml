@@ -1,0 +1,16 @@
+id: ear-high-low
+title: "Higher or lower?"
+unit: meet-the-keyboard
+skills: [listening, pitch-direction]
+steps:
+  - explain: |
+      Musicians train their ears as well as their fingers. The first ear skill is simple:
+      is a sound **higher** or **lower** than the one before?
+
+      You won't play the piano here. Just listen and pick the answer.
+  - exercise: ear-higher-lower
+  - explain: |
+      Now sometimes the two notes are exactly the **same**. Listen carefully: when they are close
+      together it gets harder.
+  - exercise: ear-higher-lower-same
+recap: "Your ears can tell higher, lower and the same. We will train them a little every day."

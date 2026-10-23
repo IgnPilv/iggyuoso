@@ -1,0 +1,9 @@
+id: play-the-interval
+kind: build
+tasks:
+  - { notes: "C4 F4", order: listed, ask: "Play a 4th up from C" }
+  - { notes: "C4 G4", order: listed, ask: "Play a 5th up from C" }
+  - { notes: "D4 A4", order: listed, ask: "Play a 5th up from D" }
+  - { notes: "G4 C5", order: listed, ask: "Play a 4th up from G" }
+  - { notes: "E4 E5", order: listed, ask: "Play an octave up from E" }
+  - { notes: "A4 E4", order: listed, ask: "Play a 4th down from A" }

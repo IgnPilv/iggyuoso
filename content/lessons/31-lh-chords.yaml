@@ -1,0 +1,12 @@
+id: lh-chords
+title: "Left-hand chords"
+unit: first-chords
+skills: [accompaniment, hands-together]
+steps:
+  - explain: |
+      Here's how most popular music is played: the **right hand plays the tune**, the **left hand
+      plays chords**. Move between C and G7 by changing only the fingers that must move: the G stays.
+
+      Play the chords softly and hold them for the full bar.
+  - exercise: melody-over-chords
+recap: "Right hand sings, left hand holds chords. Change only the fingers that must move."

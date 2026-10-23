@@ -1,0 +1,8 @@
+id: echo-loud-soft
+kind: timed
+hand: right
+tempo: 72
+meter: 4/4
+countIn: 1
+prompt: Play the first bar f (loud), the second p (soft), like an echo.
+right: "C4:q E4:q G4:h | C4:q E4:q G4:h | G4:q F4:q E4:q D4:q | C4:w"

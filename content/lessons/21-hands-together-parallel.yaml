@@ -1,0 +1,14 @@
+id: hands-together-parallel
+title: "Both hands moving"
+unit: two-hands-at-once
+skills: [hands-together, parallel-motion, contrary-motion]
+steps:
+  - explain: |
+      Now both hands move together. In **parallel motion** they go the same way, but notice
+      the fingers are different: the right thumb starts while the left little finger starts.
+  - exercise: parallel-c-position
+  - explain: |
+      In **contrary motion** the hands move away from each other like a mirror. Here the
+      fingers match: thumbs together, then 2 and 2, and so on. Many people find this one easier.
+  - exercise: contrary-c
+recap: "Parallel = same direction, different fingers. Contrary = mirror image, same fingers."

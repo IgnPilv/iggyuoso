@@ -1,0 +1,16 @@
+id: minor-five-finger
+title: "A minor and D minor positions"
+unit: scales-and-eighths
+skills: [minor, five-finger-position]
+steps:
+  - explain: |
+      **Minor** keys have a darker sound. The difference is the **third note**: in a minor
+      five-finger position it is a semitone lower than in major. D major position has F sharp;
+      **D minor** has plain F.
+
+      **A minor** uses only white keys, like C major. They share the same notes, so they are
+      called **relative** keys.
+  - exercise: a-minor-position-rh
+  - exercise: d-minor-position-rh
+  - exercise: d-minor-position-lh
+recap: "Minor = lower third. A minor is C major's relative: same notes, different home."

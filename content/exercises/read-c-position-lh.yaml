@@ -1,0 +1,9 @@
+id: read-c-position-lh
+kind: timed
+hand: left
+display: staff
+clef: bass
+tempo: 66
+meter: 4/4
+countIn: 1
+left: "C4:q B3:q A3:h | G3:q A3:q B3:h | C4:q A3:q G3:q F3:q | G3:w"

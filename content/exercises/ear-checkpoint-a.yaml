@@ -1,0 +1,9 @@
+id: ear-checkpoint-a
+kind: ear
+prompt: Higher, lower, or the same? Then echo the tune.
+questions: 10
+items:
+  - { type: compare, pool: [higher, lower, same], range: [C4, C5] }
+  - { type: melody, notes: "C4 D4 E4", plays: 2 }
+  - { type: melody, notes: "E4 C4 D4", plays: 2 }
+  - { type: melody, notes: "D4 E4 C4", plays: 2 }

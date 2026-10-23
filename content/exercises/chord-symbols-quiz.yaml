@@ -1,0 +1,10 @@
+id: chord-symbols-quiz
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "Which chord is C, E and G?", choices: [C, F, G], correct: 0 }
+  - { ask: "Which chord is F, A and C?", choices: [C, F, G], correct: 1 }
+  - { ask: "In the key of C, which chord is I?", choices: [C, F, G], correct: 0 }
+  - { ask: "In the key of C, which chord is V?", choices: [C, F, G], correct: 2 }
+  - { ask: "In the key of C, which chord is IV?", choices: [C, F, G], correct: 1 }
+  - { ask: "G7 is a G triad plus...", choices: [F, A, C], correct: 0 }

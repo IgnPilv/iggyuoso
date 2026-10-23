@@ -1,0 +1,16 @@
+id: major-scale-pattern
+title: "The major scale"
+unit: scales-and-eighths
+skills: [scales, tones-and-semitones]
+steps:
+  - explain: |
+      A **scale** is the notes of a key in order, from home to home. Every major scale follows
+      the same pattern of steps:
+
+      **tone, tone, semitone, tone, tone, tone, semitone**
+
+      On C it lands on white keys only. Starting anywhere else, the pattern tells you which black
+      keys you need. That's where key signatures come from.
+  - exercise: scale-pattern-quiz
+  - exercise: build-major-scales
+recap: "Major scale = T T S T T T S. The pattern decides the sharps and flats."

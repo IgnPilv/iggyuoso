@@ -1,0 +1,7 @@
+id: tap-three-four
+kind: tap
+prompt: Listen, then tap the rhythm back on any key. Count 1, 2, 3.
+tempo: 80
+meter: 3/4
+countIn: 1
+rhythm: "x:h x:q | x:q x:q x:q | x:q x:h | x:h."

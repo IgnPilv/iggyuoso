@@ -1,0 +1,13 @@
+id: tap-rhythm-echo
+title: "Tap it back"
+unit: steady-hands
+skills: [rhythm-echo, pulse]
+steps:
+  - explain: |
+      Rhythm is the backbone of music. Here the notes don't matter, only **when** you play.
+      Listen to the rhythm, then tap it back on any key you like.
+      Count in your head the whole time.
+  - exercise: tap-four-four
+  - exercise: tap-three-four
+  - exercise: tap-with-rests
+recap: "Hear it, count it, tap it. Rests are part of the rhythm."

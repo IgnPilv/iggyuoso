@@ -1,0 +1,4 @@
+id: g-major-steps
+kind: build
+tasks:
+  - { notes: "G4 A4 B4 C5 D5 E5 F#5 G5", order: listed, ask: "Play G major up one note at a time (any fingers for now)" }

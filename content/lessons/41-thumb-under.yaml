@@ -1,0 +1,13 @@
+id: thumb-under
+title: "Thumb under"
+unit: scales-and-eighths
+skills: [scale-technique, fingering]
+steps:
+  - explain: |
+      A scale has eight notes but a hand has five fingers. The trick: the **thumb passes under**
+      the hand (or a finger crosses over the thumb) so the hand moves on without a bump.
+
+      Move only the thumb, early and smoothly. The wrist stays level and the elbow stays loose.
+  - exercise: thumb-under-rh
+  - exercise: thumb-under-lh
+recap: "Thumb under going up (right hand), finger over the thumb (left hand). No bumps."

@@ -1,0 +1,15 @@
+id: pentatonic-improv
+title: "Black-key improvising"
+unit: two-hands-at-once
+skills: [improvisation, pentatonic]
+steps:
+  - explain: |
+      The five black keys make a **pentatonic scale**: five notes that always sound good together.
+      Folk music all over the world uses it. Because nothing clashes, it's the perfect place to start
+      making up your own music.
+  - exercise: black-key-pentatonic
+  - explain: |
+      Now **improvise**: make up a tune on the spot. You only have to keep the rhythm; the notes
+      are yours. Try going up, then coming back down. There are no wrong notes here.
+  - exercise: pentatonic-rhythm-improv
+recap: "Black keys = pentatonic. No wrong notes, so make up your own tunes."

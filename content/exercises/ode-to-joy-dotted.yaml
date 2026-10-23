@@ -1,0 +1,7 @@
+id: ode-to-joy-dotted
+kind: timed
+hand: right
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | E4:q. D4:e D4:h | E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | D4:q. C4:e C4:h"

@@ -1,0 +1,7 @@
+id: waltz-lh
+kind: timed
+hand: left
+tempo: 80
+meter: 3/4
+countIn: 1
+left: "C4:h. | A3:q B3:q C4:q | B3:h A3:q | C4:h."

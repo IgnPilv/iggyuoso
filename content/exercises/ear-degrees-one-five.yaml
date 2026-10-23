@@ -1,0 +1,8 @@
+id: ear-degrees-one-five
+kind: ear
+prompt: You'll hear a few chords that set the key, then one note. Was it home (1) or 5? Play it.
+cadence: C
+questions: 12
+items:
+  - { type: degree, key: C, pool: [1, 5] }
+  - { type: degree, key: G, pool: [1, 5] }

@@ -1,0 +1,10 @@
+id: contrary-c
+kind: timed
+hand: together
+tempo: 60
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:q F4:q | G4:h E4:h | C4:w"
+left:  "G3:q F3:q E3:q D3:q | C3:h E3:h | G3:w"
+rightFingers: "1 2 3 4 5 3 1"
+leftFingers: "1 2 3 4 5 3 1"

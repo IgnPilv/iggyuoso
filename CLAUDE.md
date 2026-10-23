@@ -146,3 +146,8 @@ never copied pages). Start small, adapt as we go.
   `public/piano/CREDITS.txt`), 30 samples a minor third apart, cut to 3.5 s mono 96 kb/s (1.3 MB
   in all). Samples load on first use; a note whose sample is not ready yet uses the synth tone.
   Metronome clicks stay synthetic.
+- 2026-10-23: Year 1 content complete (units 1–6, 51 lessons, 3 checkpoints, Year 1 exit exam),
+  every Year 1 tree node linked to its lesson. Pieces are public domain (folk tunes, Beethoven's
+  Ode to Joy) or our own (waltz in G, D minor song, call and answer). Improvising uses `tap`
+  (any keys in a given rhythm) until there is a free-play kind. Ear checkpoints reuse normal
+  `ear` exercises (no "no-feedback" mode yet).

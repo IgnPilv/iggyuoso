@@ -1,0 +1,14 @@
+id: c-scale-hands-apart
+title: "C major scale, hands apart"
+unit: scales-and-eighths
+skills: [scales]
+steps:
+  - explain: |
+      The **C major scale**, one octave, hands separately. Right hand: 1 2 3, thumb under, 1 2 3 4 5.
+      Left hand: 5 4 3 2 1, cross 3 over, 3 2 1.
+
+      Slow and even beats fast and bumpy. The app moves the tempo up once you have played it cleanly a
+      few times.
+  - exercise: c-scale-rh
+  - exercise: c-scale-lh
+recap: "Right: 123-12345. Left: 54321-321. Even before fast."

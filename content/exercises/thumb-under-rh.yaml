@@ -1,0 +1,7 @@
+id: thumb-under-rh
+kind: sequence
+hand: right
+display: keys
+prompt: Right hand. After finger 3, slide the thumb under to the next key. Keep the wrist level.
+notes:   "C4 D4 E4 F4 E4 D4 C4 D4 E4 F4 G4 A4"
+fingers: "1 2 3 1 3 2 1 2 3 1 2 3"

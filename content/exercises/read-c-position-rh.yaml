@@ -1,0 +1,9 @@
+id: read-c-position-rh
+kind: timed
+hand: right
+display: staff
+clef: treble
+tempo: 66
+meter: 4/4
+countIn: 1
+right: "E4:q D4:q C4:h | D4:q E4:q F4:h | G4:q F4:q E4:q D4:q | C4:w"

@@ -1,0 +1,8 @@
+id: scale-pattern-quiz
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "The major scale pattern is...", choices: ["tone tone semitone tone tone tone semitone", "tone semitone tone tone semitone tone tone", "all tones"], correct: 0 }
+  - { ask: "In C major, where are the semitones?", choices: ["E–F and B–C", "C–D and F–G", "D–E and A–B"], correct: 0 }
+  - { ask: "Which black key does G major need?", choices: [F sharp, B flat, C sharp], correct: 0 }
+  - { ask: "Which black key does F major need?", choices: [F sharp, B flat, E flat], correct: 1 }

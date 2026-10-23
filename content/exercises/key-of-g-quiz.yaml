@@ -1,0 +1,8 @@
+id: key-of-g-quiz
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "The key signature of G major has one...", choices: [Sharp, Flat], correct: 0 }
+  - { ask: "Which note is sharp in G major?", choices: [C, F, B], correct: 1 }
+  - { ask: "In G major, every F is played as...", choices: [F, F sharp, F flat], correct: 1 }
+  - { ask: "Play the note just below G in G major", play: "F#4" }

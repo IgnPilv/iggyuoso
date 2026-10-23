@@ -1,0 +1,11 @@
+id: name-the-interval
+kind: quiz
+shuffle: true
+questions:
+  - { ask: "Which interval?", staff: "C4:h E4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 1 }
+  - { ask: "Which interval?", staff: "C4:h G4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 3 }
+  - { ask: "Which interval?", staff: "D4:h G4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 2 }
+  - { ask: "Which interval?", staff: "E4:h F4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 0 }
+  - { ask: "Which interval?", staff: "C3:h F3:h", clef: bass, choices: [2nd, 3rd, 4th, 5th], correct: 2 }
+  - { ask: "Which interval?", staff: "G3:h D4:h", clef: bass, choices: [2nd, 3rd, 4th, 5th], correct: 3 }
+  - { ask: "Which interval?", staff: "C4:h C5:h", clef: treble, choices: [4th, 5th, 6th, Octave], correct: 3 }
