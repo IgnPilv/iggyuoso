@@ -60,7 +60,9 @@ export type LiveState = 'coming' | 'now' | 'hit' | 'missed';
 
 export class TimedSession {
   readonly expected: ExpectedNote[];
+  /** Milliseconds per quarter beat. */
   readonly beatMs: number;
+  readonly quarterTempo: number;
   readonly countBeats: number;
   readonly totalBeats: number;
   /** First downbeat after the count-in, as scheduled. */
@@ -72,20 +74,23 @@ export class TimedSession {
 
   constructor(readonly ex: TimedExercise, readonly cal: Calibration, readonly opts: TimedSessionOptions) {
     this.expected = expectedNotes(ex);
-    this.beatMs = beatMs(opts.tempo);
+    // The tempo counts the meter's beat (a dotted quarter in 6/8); timing works in quarters.
+    this.quarterTempo = opts.tempo * ex.meter.pulse;
+    this.beatMs = beatMs(this.quarterTempo);
     this.countBeats = Math.max(1, ex.countIn) * ex.meter.quarters;
     this.totalBeats = totalBeats(ex);
     this.t0 = opts.startAt + this.countBeats * this.beatMs;
-    this.windowMs = hitWindowMs(opts.tempo);
+    this.windowMs = hitWindowMs(this.quarterTempo);
     this.end = this.t0 + this.totalBeats * this.beatMs + this.windowMs + opts.latencyMs + 200;
   }
 
   /** Count-in clicks always; beat clicks while playing only with the metronome on. */
   clicks(metronome: boolean): Click[] {
-    const q = this.ex.meter.quarters;
+    const { quarters: q, pulse } = this.ex.meter;
     const out: Click[] = [];
-    for (let i = 0; i < this.countBeats; i++) out.push({ time: this.opts.startAt + i * this.beatMs, accent: i % q === 0 });
-    if (metronome) for (let b = 0; b < this.totalBeats; b++) out.push({ time: this.t0 + b * this.beatMs, accent: b % q === 0 });
+    const accent = (b: number) => Math.abs(b / q - Math.round(b / q)) < 1e-6;
+    for (let b = 0; b < this.countBeats - 1e-6; b += pulse) out.push({ time: this.opts.startAt + b * this.beatMs, accent: accent(b) });
+    if (metronome) for (let b = 0; b < this.totalBeats - 1e-6; b += pulse) out.push({ time: this.t0 + b * this.beatMs, accent: accent(b) });
     return out;
   }
 
@@ -102,8 +107,9 @@ export class TimedSession {
     if (now >= this.end) return { phase: 'done', beat };
     if (heard < this.opts.startAt) return { phase: 'waiting', beat };
     if (beat < 0) {
-      const i = Math.floor((heard - this.opts.startAt) / this.beatMs);
-      return { phase: 'count-in', beat, count: (i % this.ex.meter.quarters) + 1 };
+      const { quarters, pulse } = this.ex.meter;
+      const q = (heard - this.opts.startAt) / this.beatMs;
+      return { phase: 'count-in', beat, count: Math.floor((q % quarters) / pulse + 1e-6) + 1 };
     }
     return { phase: 'playing', beat };
   }
@@ -176,7 +182,7 @@ export class TimedSession {
       return !nearest || doneSet.has(nearest) || d > this.windowMs;
     });
     if (!done.length) return { score: 100, hits: 0, wrong: 0, missed: 0, extras: 0, perHand: {} };
-    const r = scoreTimed(done, played, { tempo: this.opts.tempo, pitchMatch: this.ex.pitchMatch });
+    const r = scoreTimed(done, played, { tempo: this.quarterTempo, pitchMatch: this.ex.pitchMatch });
     const sum = (k: 'hits' | 'wrong' | 'misses' | 'extras') => r.hands.reduce((s, h) => s + h[k], 0);
     return {
       score: r.score,
@@ -189,6 +195,6 @@ export class TimedSession {
   }
 
   result(): TimedResult {
-    return scoreTimed(this.expected, this.played, { tempo: this.opts.tempo, pitchMatch: this.ex.pitchMatch });
+    return scoreTimed(this.expected, this.played, { tempo: this.quarterTempo, pitchMatch: this.ex.pitchMatch });
   }
 }

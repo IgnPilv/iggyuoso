@@ -164,5 +164,12 @@ never copied pages). Start small, adapt as we go.
   exercise's number (never the raw id). A `tap` without `hand` shows no hand badge. `ear` and
   `quiz` take `feedback: none` for checkpoints: answers are only noted (no colours, no
   resolution), and the result lists the missed questions with their answers.
+- 2026-10-23: Richer note strings (curriculum's Year 2 order): ties (`E4:h~ | E4:q`, one note held,
+  one finger), upbeats (`pickup:`; the upbeat bar is padded at the front so bar lines, clicks and
+  falling-notes bars stay on whole bars, and the last bar may be short by the same amount),
+  sixteenths (`s`), triplets (`q3 e3 s3`), and compound meters: the tempo counts the meter's beat
+  (`Meter.pulse` = 1.5 quarters in 6/8, 9/8, 12/8; 2 in 2/2), and clicks and the count-in follow
+  it. Timing inside the engine stays in quarter beats. The staff draws ties, triplet 3s, sixteenth
+  flags and rests.
 - 2026-10-23: Checkpoint and exam ear exercises use `feedback: none` (`ear-checkpoint-a`,
   `ear-checkpoint-b`, `ear-year-1-exit`); pieces and scales carry `title:`.

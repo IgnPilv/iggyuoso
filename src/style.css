@@ -461,6 +461,8 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .staff { min-width: 480px; width: 100%; height: auto; color: var(--staff-ink); }
 .staff .line, .staff .ledger, .staff .bar { stroke: var(--staff-line); stroke-width: 1; }
 .staff .stem, .staff .flag { stroke: var(--staff-ink); stroke-width: 1.3; fill: none; }
+.staff .tie { stroke: var(--staff-ink); stroke-width: 1.3; fill: none; }
+.staff .tuplet { fill: var(--staff-ink); font: italic 600 12px var(--font-body); text-anchor: middle; }
 .staff text { fill: var(--staff-ink); }
 .staff circle { fill: var(--staff-ink); }
 .staff .clef { font-family: var(--font-music); font-size: 56px; }

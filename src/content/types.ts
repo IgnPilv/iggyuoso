@@ -56,6 +56,8 @@ export interface TimedExercise extends ExerciseBase {
   tempo: number;
   meter: Meter;
   countIn: number;
+  /** Length of an upbeat bar in quarter beats (0 = none). Bar 1 is that long. */
+  pickup: number;
   right?: NoteToken[];
   left?: NoteToken[];
   /** Finger numbers per hand, one per note (chords take one number for the whole chord). */

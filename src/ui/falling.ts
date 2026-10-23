@@ -60,7 +60,7 @@ export class FallingView {
     low: number, high: number,
     private cal: Calibration,
     private notes: FallingNote[],
-    private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c' },
+    private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c'; /** Quarters per beat line (1.5 in 6/8). */ pulse?: number },
   ) {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
@@ -131,17 +131,19 @@ export class FallingView {
         ctx.fillRect(k.x, 0, k.w, laneH);
       }
     }
-    const firstBeat = Math.floor(s.beat);
-    for (let b = Math.max(0, firstBeat); b <= Math.min(this.opts.totalBeats, s.beat + this.opts.lookahead); b++) {
+    const step = this.opts.pulse ?? 1;
+    const barQ = this.opts.barQuarters;
+    for (let i = Math.max(0, Math.floor(s.beat / step)); i * step <= Math.min(this.opts.totalBeats, s.beat + this.opts.lookahead); i++) {
+      const b = i * step;
       const y = yOf(b);
-      const bar = b % this.opts.barQuarters === 0;
+      const bar = Math.abs(b / barQ - Math.round(b / barQ)) < 1e-6;
       ctx.fillStyle = bar ? p.laneBar : p.laneBeat;
       ctx.fillRect(0, y, width, bar ? 1.5 : 1);
       if (bar && b < this.opts.totalBeats) {
         ctx.fillStyle = p.laneText;
         ctx.font = `500 10px ${p.fontMono}`;
         ctx.textAlign = 'left';
-        ctx.fillText(`BAR ${b / this.opts.barQuarters + 1}`, 8, y - 5);
+        ctx.fillText(`BAR ${Math.round(b / barQ) + 1}`, 8, y - 5);
       }
     }
 
