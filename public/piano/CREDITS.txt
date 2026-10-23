@@ -1,0 +1,5 @@
+Piano samples: Salamander Grand Piano V3 by Alexander Holm, CC BY 3.0
+(https://creativecommons.org/licenses/by/3.0/, https://archive.org/details/SalamanderGrandPianoV3).
+MP3 conversion from @audio-samples/piano-mp3-velocity8 (Jan Forst, MIT). For iggyuoso the files
+were cut to 3.5 s with a fade-out, made mono and re-encoded at 96 kb/s; D# and F# are written
+Ds and Fs in the file names.

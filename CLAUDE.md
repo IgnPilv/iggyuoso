@@ -141,6 +141,11 @@ never copied pages). Start small, adapt as we go.
   `src/engine/drills.ts`, theory in `src/music/theory.ts`. They have the same view toggle; answer
   keys are never lit while a question sounds. The demo has a scene for each, using content
   exercises when there are some and built-in samples until then.
+- 2026-10-23: The app's own sounds (ear prompts, quiz sounds, Listen and guide notes) use a sampled
+  piano: Salamander Grand Piano V3 (Alexander Holm, CC BY 3.0, credited in Settings and
+  `public/piano/CREDITS.txt`), 30 samples a minor third apart, cut to 3.5 s mono 96 kb/s (1.3 MB
+  in all). Samples load on first use; a note whose sample is not ready yet uses the synth tone.
+  Metronome clicks stay synthetic.
 - 2026-10-23: Year 1 content complete (units 1–6, 51 lessons, 3 checkpoints, Year 1 exit exam),
   every Year 1 tree node linked to its lesson. Pieces are public domain (folk tunes, Beethoven's
   Ode to Joy) or our own (waltz in G, D minor song, call and answer). Improvising uses `tap`

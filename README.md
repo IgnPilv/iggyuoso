@@ -54,3 +54,5 @@ tests/              vitest
   kept, since that is what "hands together" measures. Presses during the count-in are ignored.
 - Times use MIDI event timestamps (falling back to `performance.now()` when a timestamp looks
   wrong), corrected for the audio output latency plus the player's own setting.
+
+Piano samples: Salamander Grand Piano V3 by Alexander Holm, CC BY 3.0 (see `public/piano/CREDITS.txt`).
