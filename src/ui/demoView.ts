@@ -1,5 +1,5 @@
 import { audio } from '../audio/audio';
-import { content, exerciseTitle, tree } from '../content';
+import { content, exerciseTitle, tree, treeNodes } from '../content';
 import type { EarExercise, Exercise, ExplainStep, PlaygroundStep, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
@@ -11,8 +11,9 @@ import { mountExercise, resetDemoOptions } from './players';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
 import { demoProgress, lessonGoals, nodeOfLesson } from '../progress';
-import { dayOf } from '../progress/mastery';
-import type { Store } from '../progress/store';
+import { dayOf, Mastery } from '../progress/mastery';
+import { Store } from '../progress/store';
+import { demoAccount } from '../sync';
 import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
 import { explainBlock, playground } from './theory';
@@ -484,6 +485,34 @@ function scenes(): Scene[] {
       box.append(renderProfile(sampleProgress()));
       const t = window.setTimeout(next, 12000);
       return () => clearTimeout(t);
+    },
+  });
+  out.push({
+    title: 'Guest or account',
+    caption: 'Without an account you play as a guest: progress is saved on this device only, and the profile says so. Sign in with an emailed link (no password) and the guest progress goes into the account, which carries it to every device. Here the pianist signs in and the practice from their other device arrives. (Accounts switch on once the account server is set up; the demo uses a pretend one.)',
+    run: (box, next) => {
+      const timers: number[] = [];
+      const email = 'pianist@example.com';
+      const { server, account, data } = demoAccount();
+      // The "other device": seven weeks of made-up practice already in the account.
+      const other = sampleProgress().store;
+      const keys = ['profile.days', 'profile.timing', 'mastery.meta', ...[...treeNodes.keys()].map((id) => `mastery.${id}`)];
+      void server.push({ userId: `user:${email}`, email, accessToken: '', refreshToken: '', expiresAt: 0 },
+        keys.flatMap((key) => { const value = other.get(key); return value === undefined ? [] : [{ key, value, schema: 1 }]; }));
+      const local = new Store(data);
+      const progress = { store: local, mastery: new Mastery(local, treeNodes, (l) => { const x = content.lessons.get(l); return x ? lessonGoals(x).map((e) => e.id) : []; }) };
+      const draw = () => box.replaceChildren(renderProfile(progress, new Date(), account));
+      draw();
+      const off = account.onChange((changed) => { if (changed) draw(); });
+      timers.push(window.setTimeout(() => {
+        const input = box.querySelector<HTMLInputElement>('.account-form input');
+        if (!input) return;
+        [...email].forEach((_, i) => timers.push(window.setTimeout(() => { input.value = email.slice(0, i + 1); input.dispatchEvent(new Event('input')); }, i * 60)));
+        timers.push(window.setTimeout(() => box.querySelector<HTMLFormElement>('.account-form')?.requestSubmit(), email.length * 60 + 500));
+      }, 4500));
+      timers.push(window.setTimeout(() => void account.completeSignIn(`#memory-sign-in=${email}`), 10500));
+      timers.push(window.setTimeout(next, 19000));
+      return () => { timers.forEach(clearTimeout); off(); };
     },
   });
   const looks = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys');
