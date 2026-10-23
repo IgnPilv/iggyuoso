@@ -1,0 +1,13 @@
+id: harmony-play-i-vi-iv-v
+title: Play I vi IV V in C
+kind: timed
+hand: together
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:w | C4+E4+A4:w | C4+F4+A4:w | B3+D4+G4:w
+left: C3:w | A2:w | F2:w | G2:w
+reps: 3
+days: 2

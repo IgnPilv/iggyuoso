@@ -1,0 +1,81 @@
+id: musician-texture-quiz
+title: 'Texture: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: One tune with no accompaniment is...
+  choices:
+  - Polyphony
+  - Monophony
+  - Homophony
+  correct: 1
+  why: Mono = one.
+- ask: A tune with chords underneath is...
+  choices:
+  - Monophony
+  - Polyphony
+  - Homophony
+  correct: 2
+  why: One leading line, the rest supports it.
+- ask: Two or more independent tunes at once is...
+  choices:
+  - Homophony
+  - Polyphony
+  - Monophony
+  correct: 1
+  why: Poly = many.
+- ask: The art of writing independent lines together is...
+  choices:
+  - Orchestration
+  - Counterpoint
+  - Rhythm
+  - Harmony
+  correct: 1
+  why: 'Point against point: note against note.'
+- ask: Broken chords low-high-middle-high in the left hand are...
+  choices:
+  - A canon
+  - An Alberti bass
+  - A chorale
+  - A drone
+  correct: 1
+  why: Named after Domenico Alberti.
+- ask: Four voices moving together in chords, like a hymn, is a...
+  choices:
+  - Canon
+  - Fugue
+  - Chorale texture
+  - Solo
+  correct: 2
+  why: Bach harmonised hundreds of chorales.
+- ask: A canon is a kind of...
+  choices:
+  - Homophony
+  - Polyphony
+  - Monophony
+  correct: 1
+  why: The same tune, starting at different times.
+- ask: A held low note under changing harmony is a...
+  choices:
+  - Suspension
+  - Passing note
+  - Grace note
+  - Pedal point (drone)
+  correct: 3
+  why: Named after the organ pedals.
+- ask: Most pop songs are...
+  choices:
+  - Polyphonic
+  - Homophonic
+  - Monophonic
+  correct: 1
+  why: A voice over chords.
+- ask: A Bach minuet, with a real tune in each hand, leans towards...
+  choices:
+  - Homophony
+  - Monophony
+  - Polyphony
+  correct: 2
+  why: Both hands have melodies.

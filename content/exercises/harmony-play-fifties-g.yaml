@@ -1,0 +1,14 @@
+id: harmony-play-fifties-g
+title: Play I vi IV V in G
+kind: timed
+hand: together
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B3+D4+G4:w | B3+E4+G4:w | C4+E4+G4:w | D4+F#4+A4:w
+left: G2:w | E2:w | C3:w | D3:w
+reps: 3
+days: 2

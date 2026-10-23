@@ -1,0 +1,17 @@
+id: ear-progressions-minor-four
+title: Minor progressions
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: progression
+  key:
+  - Am
+  - Em
+  - Dm
+  pool:
+  - i iv V i
+  - i VI III VII
+  - i VII VI V
+  - i iv VII III

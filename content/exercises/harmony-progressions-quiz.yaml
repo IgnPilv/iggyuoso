@@ -1,0 +1,103 @@
+id: harmony-progressions-quiz
+title: 'Progressions: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: I V vi IV in C is...
+  choices:
+  - C G Em F
+  - C F Am G
+  - C G A F
+  - C G Am F
+  correct: 3
+  why: I = C, V = G, vi = Am, IV = F.
+- ask: I vi IV V in G is...
+  choices:
+  - G Am C D
+  - G E C D
+  - G Em C D
+  - G Em C D7
+  correct: 2
+  why: vi in G is E minor.
+- ask: ii V I in F is...
+  choices:
+  - G C F
+  - Gm C7 B♭
+  - Gm C F
+  - Dm G C
+  correct: 2
+  why: ii = G minor, V = C, I = F.
+- ask: Which progression is the heart of jazz?
+  choices:
+  - ii V I
+  - I vi IV V
+  - I V vi IV
+  - I IV V
+  correct: 0
+  why: 'ii V I, usually with sevenths: Dm7 G7 Cmaj7.'
+- ask: In vi ii V I, the roots move...
+  choices:
+  - Up by step
+  - Down by fifths
+  - Up by thirds
+  - Down by step
+  correct: 1
+  why: 'A → D → G → C: each a fifth below (a fourth above) the last.'
+- ask: I V vi IV and I vi IV V use...
+  choices:
+  - The same four chords
+  - Different chords
+  - Only major chords
+  - Seventh chords
+  correct: 0
+  why: Both use I, IV, V and vi, in different orders.
+- ask: Listen. Which progression is it?
+  choices:
+  - I – IV – V – I
+  - I – V – vi – IV
+  - I – vi – IV – V
+  correct: 0
+  why: 'The basic one: home, away, the pull of V, home.'
+  sound: C3+C4+E4+G4:h F2+C4+F4+A4:h | G2+B3+D4+G4:h C3+C4+E4+G4:h
+- ask: Listen. Which progression is it?
+  choices:
+  - I – IV – V – I
+  - I – vi – IV – V
+  - I – V – vi – IV
+  correct: 2
+  why: 'The pop progression: the third chord is minor.'
+  sound: C3+C4+E4+G4:h G2+B3+D4+G4:h | A2+C4+E4+A4:h F2+C4+F4+A4:h
+- ask: Listen. Which progression is it?
+  choices:
+  - I – vi – IV – V
+  - I – IV – V – I
+  - I – V – vi – IV
+  correct: 0
+  why: 'The second chord is the minor one: vi.'
+  sound: C3+C4+E4+G4:h A2+C4+E4+A4:h | F2+C4+F4+A4:h G2+B3+D4+G4:h
+- ask: Which progression ends a piece most strongly?
+  choices:
+  - I – V
+  - I – IV
+  - IV – V
+  - V – I
+  correct: 3
+  why: 'The perfect cadence: V to I.'
+- ask: IV – I at the end of a hymn is called...
+  choices:
+  - A perfect cadence
+  - A half cadence
+  - A deceptive cadence
+  - A plagal cadence ("Amen")
+  correct: 3
+  why: Sung to "A-men".
+- ask: V – vi instead of V – I is called...
+  choices:
+  - A plagal cadence
+  - A half cadence
+  - A perfect cadence
+  - A deceptive cadence
+  correct: 3
+  why: 'The ear expects I and gets vi: a surprise.'

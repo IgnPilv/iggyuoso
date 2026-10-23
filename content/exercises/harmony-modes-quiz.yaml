@@ -1,0 +1,87 @@
+id: harmony-modes-quiz
+title: 'Modes: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: White keys from D to D make the...
+  choices:
+  - Phrygian mode
+  - Aeolian mode
+  - Lydian mode
+  - Dorian mode
+  correct: 3
+  why: D Dorian.
+- ask: White keys from G to G make the...
+  choices:
+  - Mixolydian mode
+  - Lydian mode
+  - Dorian mode
+  - Ionian mode
+  correct: 0
+  why: 'G Mixolydian: G major with F♮.'
+- ask: White keys from A to A make the...
+  choices:
+  - Aeolian mode (natural minor)
+  - Ionian mode
+  - Locrian mode
+  - Dorian mode
+  correct: 0
+  why: Aeolian is the natural minor.
+- ask: Lydian is major with...
+  choices:
+  - A flat 7th
+  - A flat 3rd
+  - A raised 6th
+  - A raised 4th
+  correct: 3
+  why: F Lydian has B♮, not B♭.
+- ask: Dorian is minor with...
+  choices:
+  - A raised 7th
+  - A flat 2nd
+  - A flat 5th
+  - A raised 6th
+  correct: 3
+  why: D Dorian has B♮.
+- ask: Mixolydian is major with...
+  choices:
+  - A flat 6th
+  - A flat 7th
+  - A raised 4th
+  - A flat 3rd
+  correct: 1
+  why: G Mixolydian has F♮.
+- ask: Phrygian is minor with...
+  choices:
+  - A flat 7th
+  - A raised 6th
+  - A raised 4th
+  - A flat 2nd
+  correct: 3
+  why: 'E Phrygian starts E F: a semitone.'
+- ask: The Ionian mode is the same as...
+  choices:
+  - The blues scale
+  - The chromatic scale
+  - The natural minor
+  - The major scale
+  correct: 3
+  why: C to C on the white keys.
+- ask: Which mode sounds unstable because its 5th is diminished?
+  choices:
+  - Locrian
+  - Lydian
+  - Dorian
+  - Mixolydian
+  correct: 0
+  why: B to F is a diminished 5th.
+- ask: '"Scarborough Fair" is a famous tune in...'
+  choices:
+  - Ionian
+  - Locrian
+  - Lydian
+  - Dorian
+  correct: 3
+  why: Minor, with that bright raised 6th.

@@ -1,0 +1,14 @@
+id: ear-chord-function
+title: I, IV or V?
+skills:
+- ear
+steps:
+- explain: |
+    After the cadence sets the key, one chord plays. Is it **I** (home, at rest), **IV** (lifted, open) or **V** (tense,
+    wants to go home)? Then it goes home to I, so you hear its pull.
+  sound: C3+C4+E4+G4:h F2+C4+F4+A4:h | G2+B3+D4+G4:h C3+C4+E4+G4:h
+  callout: |
+    I rests. IV opens up. V leans towards home.
+- exercise: ear-function-c
+- exercise: ear-function-g-f
+recap: 'Rest, open, pull: I, IV, V.'

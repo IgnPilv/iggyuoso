@@ -1,0 +1,30 @@
+id: musician-texture
+title: 'Texture: melody, chords and voices'
+skills:
+- theory
+steps:
+- explain: |
+    **Texture** is how the sounds are layered. **Monophony**: one line alone (a folk singer, a flute). **Homophony**: a tune
+    with chords under it (most songs, and most of what you play). **Polyphony**: two or more tunes at once, each
+    independent (a canon, a Bach minuet's two hands).
+  terms:
+  - texture
+  - monophony
+  - homophony
+  - polyphony
+  - counterpoint
+  sound: C4:q D4:q E4:q C4:q | C3+E4:q G3+D4:q C3+E4:q G3+C4:q | C4:q D4:q E4:q C4:q
+- explain: |
+    Writing two independent lines is **counterpoint**. Piano music also has its own textures: **Alberti bass** (broken chords
+    in the left hand, Mozart's favourite), **chorale** (four voices moving together, like a choir) and **melody and
+    accompaniment** with the pedal (Chopin).
+  check:
+    ask: A round like "Frère Jacques" sung as a canon is...
+    choices:
+    - Monophony
+    - Polyphony
+    - Homophony
+    correct: 1
+    why: Several independent lines at once.
+- exercise: musician-texture-quiz
+recap: 'One line, a tune with chords, or many lines: texture.'

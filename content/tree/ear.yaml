@@ -58,3 +58,7 @@ nodes:
   - { id: ear-echo-two-hands, stage: 9, lesson: ear-echo-two-hands, title: "Echo a tune and its bass", type: drill, requires: [ear-bass-lines, ear-echo-eight] }
   - { id: ear-contour-five, stage: 3, lesson: ear-contour-five, title: "Five-note shapes", type: drill, requires: [ear-contour-four] }
   - { id: ear-half-steps, stage: 4, lesson: ear-half-steps, title: "The smallest step", type: drill, requires: [ear-seconds-thirds] }
+  - { id: ear-chord-function, stage: 5, lesson: ear-chord-function, title: "I, IV or V?", type: drill, requires: [primary-triads, ear-triad-qualities] }
+  - { id: ear-function-six-chords, stage: 6, lesson: ear-function-six-chords, title: "Hearing ii and vi", type: drill, requires: [ear-chord-function, harmony-other-chords] }
+  - { id: ear-progressions, stage: 6, lesson: ear-progressions, title: "Name that progression", type: drill, requires: [ear-function-six-chords, harmony-progressions] }
+  - { id: ear-progressions-minor, stage: 7, lesson: ear-progressions-minor, title: "Progressions in minor", type: drill, requires: [ear-progressions, harmonic-minor] }

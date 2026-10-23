@@ -1,0 +1,18 @@
+id: ear-progressions-four
+title: Four famous progressions
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: progression
+  key:
+  - C
+  - G
+  - F
+  - D
+  pool:
+  - I IV V I
+  - I V vi IV
+  - I vi IV V
+  - vi ii V I

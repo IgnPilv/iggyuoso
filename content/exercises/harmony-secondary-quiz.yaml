@@ -1,0 +1,87 @@
+id: harmony-secondary-quiz
+title: 'Secondary dominants: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: V/V in G major is...
+  choices:
+  - E minor
+  - D major
+  - A major (A7)
+  - C major
+  correct: 2
+  why: The V of D is A.
+- ask: V/vi in C major is...
+  choices:
+  - E minor
+  - A major
+  - E major (E7)
+  - G major
+  correct: 2
+  why: The V of A minor is E.
+- ask: V/ii in C major is...
+  choices:
+  - D major
+  - A minor
+  - A major (A7)
+  - G major
+  correct: 2
+  why: The V of D minor is A.
+- ask: D7 in C major usually goes to...
+  choices:
+  - C
+  - F
+  - G
+  - A minor
+  correct: 2
+  why: It is V of G.
+- ask: E7 in C major usually goes to...
+  choices:
+  - C
+  - E minor
+  - A minor
+  - F
+  correct: 2
+  why: It is V of vi.
+- ask: The F♯ in D7 (in C major) is the leading note of...
+  choices:
+  - A
+  - C
+  - F
+  - G
+  correct: 3
+  why: F♯ rises to G.
+- ask: A secondary dominant borrows a note from...
+  choices:
+  - The bass clef
+  - The relative minor only
+  - A different meter
+  - Another key
+  correct: 3
+  why: That is why it adds colour.
+- ask: Which is V/IV in C major?
+  choices:
+  - C7
+  - B♭
+  - G7
+  - F7
+  correct: 0
+  why: The V of F is C; adding B♭ (C7) makes it lean to F.
+- ask: Listen. The middle chord is...
+  choices:
+  - vi (Am)
+  - IV (F)
+  - V/V (D)
+  correct: 2
+  why: The F♯ gives it away, and it pulls to G.
+  sound: C2+C4+E4+G4:h D2+C4+F#4+A4:h | G2+B3+D4+G4:w
+- ask: A chain of secondary dominants (E7 A7 D7 G7 C) moves...
+  choices:
+  - In thirds
+  - Round the circle of fifths
+  - Chromatically up
+  - Up by steps
+  correct: 1
+  why: E → A → D → G → C.

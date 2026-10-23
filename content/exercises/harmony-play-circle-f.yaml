@@ -1,0 +1,14 @@
+id: harmony-play-circle-f
+title: Play vi ii V I in F
+kind: timed
+hand: together
+display: staff
+key: F
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4+F4+A4:w | D4+G4+Bb4:w | E4+G4+C5:w | F4+A4+C5:w
+left: D3:w | G2:w | C3:w | F2:w
+reps: 3
+days: 2

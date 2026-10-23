@@ -434,3 +434,11 @@ never copied pages). Start small, adapt as we go.
   close, a tune over I vi IV V, the eight-bar period, both hands, minor, A B A, Dorian and
   Mixolydian, plus a blues head in AAB form; milestones 2–9 each need one composing node. Scales
   gain blues, dorian, mixolydian, lydian, phrygian. Demo scene "Improvising that listens".
+- 2026-10-23: Harmony and musician's vocabulary (audit gaps 3 and 4). Ear items `function` (one chord
+  after the cadence, named by Roman numeral, then resolved home) and `progression` (four chords, pick
+  the progression), on `romanChord` / `voiceProgression` in `src/music/theory.ts`. Content
+  (`tools/content/harmony.py`, runs after compose): ii, iii and vi; the common progressions played
+  hands together (root in the left hand, voice-led chords in the right) and heard; chord function in
+  major and minor; modulation; secondary dominants; the modes; texture; the four eras tied to the
+  app's pieces; and how to talk about a piece (form, Italian terms, analysis). Milestones 6–9 now
+  also need these. Demo scene "Hearing harmony".

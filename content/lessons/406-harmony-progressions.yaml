@@ -1,0 +1,34 @@
+id: harmony-progressions
+title: Progressions everyone uses
+skills:
+- theory
+steps:
+- explain: |
+    A **progression** is a chain of chords. A handful of them carry most of the music you know. First, the oldest:
+    **I IV V I**, every hymn, folk song and blues uses it.
+  sound: C3+C4+E4+G4:h F2+C4+F4+A4:h | G2+B3+D4+G4:h C3+C4+E4+G4:h
+  terms:
+  - progression
+- explain: |
+    **I vi IV V** is the 1950s progression: "Stand by Me", doo-wop, a thousand ballads. **I V vi IV** is today's pop
+    progression ("Let It Be", "Someone Like You"); it is the same four chords, started in another place.
+  sound: C3+C4+E4+G4:h A2+C4+E4+A4:h | F2+C4+F4+A4:h G2+B3+D4+G4:h | C3+C4+E4+G4:h G2+B3+D4+G4:h | A2+C4+E4+A4:h F2+C4+F4+A4:h
+- explain: |
+    **ii V I** is the heart of jazz: in C, Dm7 G7 C. And **vi ii V I** goes round the circle of fifths (A, D, G, C), each
+    chord a fifth above the next: the most satisfying way home there is.
+  sound: D3+D4+F4+A4:h G2+D4+F4+G4+B4:h | C3+C4+E4+G4:h C3+C4+E4+G4:h | A2+C4+E4+A4:h D3+D4+F4+A4:h | G2+D4+G4+B4:h C3+E4+G4+C5:h
+  callout: |
+    Roots falling by fifths (A → D → G → C) are the strongest pull in harmony.
+  check:
+    ask: vi ii V I in C is...
+    choices:
+    - Am D G C
+    - A Dm G7 F
+    - Am Dm G C
+    correct: 2
+    why: vi = Am, ii = Dm, V = G, I = C.
+- exercise: harmony-play-pop-c
+- exercise: harmony-play-circle-f
+- exercise: harmony-play-fifties-g
+- exercise: harmony-progressions-quiz
+recap: 'I IV V I, I vi IV V, I V vi IV, ii V I, vi ii V I: most of the music you know.'

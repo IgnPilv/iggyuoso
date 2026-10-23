@@ -1,0 +1,103 @@
+id: harmony-modulation-quiz
+title: 'Modulation: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: The dominant key of C major is...
+  choices:
+  - F major
+  - G major
+  - A minor
+  - D major
+  correct: 1
+  why: The key a fifth above.
+- ask: The dominant key of F major is...
+  choices:
+  - B♭ major
+  - D minor
+  - C major
+  - G major
+  correct: 2
+  why: 'A fifth above F: C.'
+- ask: The relative major of D minor is...
+  choices:
+  - B♭ major
+  - D major
+  - F major
+  - A major
+  correct: 2
+  why: Same signature (one flat), a minor third up.
+- ask: The relative minor of G major is...
+  choices:
+  - G minor
+  - A minor
+  - E minor
+  - B minor
+  correct: 2
+  why: 'Down a minor third: E.'
+- ask: A chord that belongs to both the old and the new key is a...
+  choices:
+  - Tonic chord
+  - Passing chord
+  - Pedal chord
+  - Pivot chord
+  correct: 3
+  why: It lets the music change key smoothly.
+- ask: In C major, a new F♯ usually means the music is heading to...
+  choices:
+  - D minor
+  - F major
+  - B♭ major
+  - G major
+  correct: 3
+  why: F♯ is the leading note of G.
+- ask: In C major, a new B♭ usually means the music is heading to...
+  choices:
+  - F major
+  - E minor
+  - G major
+  - A minor
+  correct: 0
+  why: B♭ is in F major.
+- ask: Am is vi in C major. What is it in G major?
+  choices:
+  - ii
+  - iii
+  - vi
+  - IV
+  correct: 0
+  why: 'G A: A minor is ii in G.'
+- ask: A piece in A minor most often modulates to...
+  choices:
+  - C major
+  - A major
+  - E minor
+  - D minor
+  correct: 0
+  why: Its relative major.
+- ask: What confirms a new key?
+  choices:
+  - A loud chord
+  - A cadence in it
+  - A faster tempo
+  - A key signature change on every line
+  correct: 1
+  why: V – I in the new key settles it.
+- ask: Keys next to each other on the circle of fifths differ by...
+  choices:
+  - One sharp or flat
+  - Two sharps
+  - A semitone
+  - Nothing
+  correct: 0
+  why: C (none), G (one sharp), D (two)...
+- ask: The keys closest to C major are...
+  choices:
+  - G, F and A minor
+  - D, E and B
+  - C minor and E♭
+  - F♯ and D♭
+  correct: 0
+  why: One accidental away, or the same signature.

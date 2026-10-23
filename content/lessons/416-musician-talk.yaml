@@ -1,0 +1,25 @@
+id: musician-talk
+title: Talking about a piece
+skills:
+- theory
+steps:
+- explain: |
+    Musicians describe a piece in a few strokes: its **key** and **meter**, its **form** (binary AB, ternary ABA, rondo,
+    sonata, theme and variations), where it **modulates**, its **cadences**, its **texture**, its **era** and **character**
+    (the Italian words at the top). You know all of these words now.
+  terms:
+  - analysis
+  - binary
+  - ternary
+  - rondo
+  - coda
+  - development
+  - recapitulation
+- explain: |
+    For example, the **Minuet in G**: G major, 3/4, binary form (two halves, each repeated), the first half ending in the
+    dominant (D major), Baroque, two-part counterpoint, *moderato*, graceful. Try describing a piece you play the same
+    way.
+  callout: |
+    Key · meter · form · modulation · cadences · texture · era · character
+- exercise: musician-talk-quiz
+recap: Key, meter, form, modulation, cadences, texture, era, character.

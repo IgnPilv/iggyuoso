@@ -1,0 +1,23 @@
+id: ear-progressions-six
+title: Six progressions
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: progression
+  key:
+  - C
+  - G
+  - F
+  - D
+  - Bb
+  - A
+  pool:
+  - I IV V I
+  - I V vi IV
+  - I vi IV V
+  - vi ii V I
+  - I ii V I
+  - I IV I V
+  choices: 4

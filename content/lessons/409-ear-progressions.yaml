@@ -1,0 +1,12 @@
+id: ear-progressions
+title: Name that progression
+skills:
+- ear
+steps:
+- explain: |
+    Four chords, played one after another. Which progression was it? Follow the bass first, then the colour (major or
+    minor) of each chord.
+  sound: G2+B3+D4+G4:h D3+A3+D4+F#4:h | E2+B3+E4+G4:h C3+C4+E4+G4:h
+- exercise: ear-progressions-four
+- exercise: ear-progressions-six
+recap: 'Bass first, then colour: progressions by ear.'

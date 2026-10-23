@@ -1,0 +1,14 @@
+id: ear-function-minor
+title: i, iv, V or VI in A minor
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: function
+  key: Am
+  pool:
+  - i
+  - iv
+  - V
+  - VI

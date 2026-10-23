@@ -1,0 +1,14 @@
+id: harmony-play-i-ii-v-i-g
+title: Play I ii V I in G
+kind: timed
+hand: together
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B3+D4+G4:w | C4+E4+A4:w | D4+F#4+A4:w | D4+G4+B4:w
+left: G2:w | A2:w | D3:w | G2:w
+reps: 3
+days: 2

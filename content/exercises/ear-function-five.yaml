@@ -1,0 +1,15 @@
+id: ear-function-five
+title: I, ii, IV, V or vi
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: function
+  key: C
+  pool:
+  - I
+  - ii
+  - IV
+  - V
+  - vi

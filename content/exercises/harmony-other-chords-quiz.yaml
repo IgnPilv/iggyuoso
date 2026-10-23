@@ -1,0 +1,105 @@
+id: harmony-other-chords-quiz
+title: 'The other chords: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: In C major, which chord is vi?
+  choices:
+  - A minor
+  - D minor
+  - A major
+  - E minor
+  correct: 0
+  why: 'Count six notes up from C: A. In a major key vi is minor.'
+- ask: In G major, which chord is ii?
+  choices:
+  - A major
+  - C major
+  - A minor
+  - E minor
+  correct: 2
+  why: 'G A: degree 2 is A, and ii is minor.'
+- ask: In F major, which chord is vi?
+  choices:
+  - D minor
+  - D major
+  - A minor
+  - B♭ major
+  correct: 0
+  why: 'F G A B♭ C D: degree 6 is D, minor.'
+- ask: In a major key, which three chords are major?
+  choices:
+  - ii, iii and vi
+  - I, ii and vi
+  - I, V and vi
+  - I, IV and V
+  correct: 3
+  why: The primary chords are the major ones.
+- ask: Which chord is diminished in a major key?
+  choices:
+  - vii°
+  - iii
+  - IV
+  - ii
+  correct: 0
+  why: 'The chord on the 7th degree: B D F in C.'
+- ask: vi can often replace...
+  choices:
+  - V
+  - IV
+  - vii°
+  - I
+  correct: 3
+  why: vi shares two notes with I.
+- ask: ii can often replace...
+  choices:
+  - V
+  - I
+  - IV
+  - iii
+  correct: 2
+  why: ii shares two notes with IV (D F A and F A C).
+- ask: In D major, which chord is iii?
+  choices:
+  - F major
+  - F♯ minor
+  - E minor
+  - G major
+  correct: 1
+  why: 'D E F♯: degree 3 is F♯, minor.'
+- ask: How many minor chords does a major key have (not counting vii°)?
+  choices:
+  - '3'
+  - '2'
+  - '1'
+  - '4'
+  correct: 0
+  why: ii, iii and vi.
+- ask: Listen. Which chord comes second?
+  choices:
+  - vi
+  - ii
+  - IV
+  - V
+  correct: 0
+  why: 'I to vi: the bass drops a third and the chord turns minor.'
+  sound: C3+C4+E4+G4:h A2+C4+E4+A4:h
+- ask: Listen. Which chord comes second?
+  choices:
+  - ii
+  - IV
+  - vi
+  - V
+  correct: 0
+  why: 'A minor colour on D: ii.'
+  sound: C3+C4+E4+G4:h D3+D4+F4+A4:h
+- ask: In C major, what are the notes of ii?
+  choices:
+  - D F♯ A
+  - D F A C
+  - E G B
+  - D F A
+  correct: 3
+  why: Every other note of the scale from D.

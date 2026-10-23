@@ -1,0 +1,12 @@
+id: ear-progressions-minor
+title: Progressions in minor
+skills:
+- ear
+steps:
+- explain: |
+    Minor keys have their own favourites: **i iv V i**, **i VI III VII** (the epic film-music sound), and **i VII VI V**
+    (the falling bass of flamenco and a hundred rock songs).
+  sound: A2+C4+E4+A4:h F2+C4+F4+A4:h | C3+C4+E4+G4:h G2+B3+D4+G4:h | A2+C4+E4+A4:h G2+B3+D4+G4:h | F2+A3+C4+F4:h E2+G#3+B3+E4:h
+- exercise: ear-function-minor
+- exercise: ear-progressions-minor-four
+recap: 'Minor keys: i iv V, and the falling i VII VI V.'

@@ -3,7 +3,7 @@ import {
   barLengths, isTieEnd, parseDuration, parsePedal, parsePitch, pitchToMidi, type Meter, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
 } from '../music/notes';
 import { DEFAULT_LADDER } from '../engine/practice';
-import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, scaleNotes, scalePitchClasses } from '../music/theory';
+import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, numerals, romanChord, scaleNotes, scalePitchClasses } from '../music/theory';
 import { GENERATORS } from './types';
 import type {
   BuildTask, Content, EarItem, ExplainStep, Exercise, FindTarget, ImproviseExercise, ImproviseRule, Lesson, LessonStep, PlaygroundStep, QuizQuestion, TheoryCheck,
@@ -371,7 +371,7 @@ function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
   const items = raw.items.map((r: unknown, i: number): EarItem => {
     const o = (r ?? {}) as Raw;
     try {
-      const type = oneOf(o, 'type', ['note', 'interval', 'chord', 'degree', 'melody', 'compare', 'contour', 'motion', 'count', 'rhythm', 'loudness'] as const);
+      const type = oneOf(o, 'type', ['note', 'interval', 'chord', 'degree', 'melody', 'compare', 'contour', 'motion', 'count', 'rhythm', 'loudness', 'progression', 'function'] as const);
       const need = <T>(xs: T[], what: string) => { if (!xs.length) throw new FieldError(`"${what}" should not be empty`); return xs; };
       /** `range: [C4, C5]`, at least `min` semitones wide. */
       const rangeOf = (fallback: [string, string], min = 4): [Pitch, Pitch] => {
@@ -476,6 +476,23 @@ function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
         case 'loudness': {
           const pool = only(strings(o, 'pool'), ['loud', 'soft'] as const, 'loudness');
           return { type, pool: pool.length ? pool : ['loud', 'soft'], notes: pitches(o, 'notes', 'C4') };
+        }
+        case 'progression': {
+          const keys = strings(o, 'key').length ? strings(o, 'key') : ['C'];
+          keys.forEach(parseKey);
+          const pool = need(strings(o, 'pool'), 'pool');
+          if (pool.length < 2) throw new FieldError('"pool" needs at least two progressions');
+          for (const k of keys) for (const p of pool) numerals(p).forEach((n) => romanChord(parseKey(k), n));
+          const choices = o.choices === undefined ? 4 : Number(o.choices);
+          if (!Number.isInteger(choices) || choices < 2) throw new FieldError('"choices" should be 2 or more');
+          return { type, keys, pool, choices };
+        }
+        case 'function': {
+          const key = str(o, 'key', false) ?? 'C';
+          const k = parseKey(key);
+          const pool = need(strings(o, 'pool'), 'pool');
+          pool.forEach((n) => romanChord(k, n));
+          return { type, key, pool };
         }
         default: throw new FieldError('missing "type"');
       }

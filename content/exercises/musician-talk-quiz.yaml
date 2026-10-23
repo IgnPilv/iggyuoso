@@ -1,0 +1,126 @@
+id: musician-talk-quiz
+title: 'Talking about music: quiz'
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A piece in two halves, each repeated (AABB), is in...
+  choices:
+  - Binary form
+  - Ternary form
+  - Rondo form
+  - Sonata form
+  correct: 0
+  why: Bi = two parts.
+- ask: A B A, the opening coming back after a contrast, is...
+  choices:
+  - Binary form
+  - Rondo form
+  - Ternary form
+  correct: 2
+  why: Ter = three parts.
+- ask: A B A C A, the main tune returning between episodes, is a...
+  choices:
+  - Fugue
+  - Sonata
+  - Minuet
+  - Rondo
+  correct: 3
+  why: The refrain keeps coming round.
+- ask: Exposition, development, recapitulation are the parts of...
+  choices:
+  - Sonata form
+  - Theme and variations
+  - Rondo form
+  - Binary form
+  correct: 0
+  why: The big form of the Classical era.
+- ask: The ending section added after the main form is the...
+  choices:
+  - Intro
+  - Coda
+  - Bridge
+  - Cadenza
+  correct: 1
+  why: Coda = tail.
+- ask: '"Andante" at the top of a piece describes its...'
+  choices:
+  - Dynamics
+  - Form
+  - Key
+  - Tempo (walking pace)
+  correct: 3
+  why: Andante comes from "to walk".
+- ask: '"Dolce" means...'
+  choices:
+  - Sweetly
+  - Getting faster
+  - Loudly
+  - Detached
+  correct: 0
+  why: A character word.
+- ask: '"Cantabile" means...'
+  choices:
+  - Very soft
+  - Held back
+  - Very fast
+  - In a singing style
+  correct: 3
+  why: Make the tune sing.
+- ask: '"Rubato" means...'
+  choices:
+  - Getting louder
+  - Short and detached
+  - Stretching and giving back the time
+  - Exactly in time
+  correct: 2
+  why: 'Robbed time: Romantic music lives on it.'
+- ask: '"Ritardando" (rit.) means...'
+  choices:
+  - Gradually louder
+  - Back to the tempo
+  - Gradually slower
+  - Suddenly loud
+  correct: 2
+  why: Usually near an ending.
+- ask: '"Sforzando" (sf) means...'
+  choices:
+  - Smoothly
+  - Slowing down
+  - Very soft
+  - A sudden strong accent
+  correct: 3
+  why: Forced.
+- ask: The Minuet in G, first half, ends in D major. That is a modulation to the...
+  choices:
+  - Tonic minor
+  - Subdominant
+  - Relative minor
+  - Dominant
+  correct: 3
+  why: D is V of G.
+- ask: A theme played again and again with changes is...
+  choices:
+  - A rondo
+  - A minuet
+  - Theme and variations
+  - A fugue
+  correct: 2
+  why: Like the Lightly Row variations.
+- ask: A short Romantic piece with one mood, like a nocturne, is a...
+  choices:
+  - Suite
+  - Concerto
+  - Sonata
+  - Character piece
+  correct: 3
+  why: Chopin, Schumann, Mendelssohn wrote many.
+- ask: Describing a piece's key, form, cadences and texture is called...
+  choices:
+  - Transposition
+  - Orchestration
+  - Improvisation
+  - Analysis
+  correct: 3
+  why: What music students do every week.
