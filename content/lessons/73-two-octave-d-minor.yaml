@@ -1,0 +1,14 @@
+id: two-octave-d-minor
+title: "D minor over two octaves"
+unit: minor-keys
+skills: [scales, minor]
+steps:
+  - explain: |
+      D minor is the relative minor of F major, so it has **Bb** in its key signature. The harmonic
+      form adds **C#**. Fingering: same as C major in both hands.
+
+      Bb and C# sit next to each other near the top of each octave. Say them as you play: "B-flat,
+      C-sharp, D".
+  - exercise: d-minor-2oct-rh
+  - exercise: d-minor-2oct-ht
+recap: "D harmonic minor: Bb from the key, C# raised. C's fingering."

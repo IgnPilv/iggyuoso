@@ -1,0 +1,15 @@
+id: ties
+title: "Ties"
+unit: reading-hands-together
+skills: [rhythm, ties, reading]
+steps:
+  - explain: |
+      A **tie** is a curved line joining two notes of the **same pitch**. You play the first one
+      and keep holding it for both lengths added together. The second note is *not* played again.
+
+      Ties are how music holds a note across a bar line, where a single note can't go.
+
+      Don't confuse a tie with a **slur**: a slur joins *different* notes and means "play smoothly".
+  - exercise: tap-ties
+  - exercise: ties-rh
+recap: "A tie adds two notes together into one. Play once, hold for both."

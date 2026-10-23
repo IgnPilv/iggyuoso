@@ -1,0 +1,18 @@
+id: shifting-position
+title: "Leaving the five-finger position"
+unit: reading-hands-together
+skills: [reading, hand-position]
+steps:
+  - explain: |
+      Until now each piece sat in one place: five fingers over five keys. Real music moves around.
+      There are two ways to reach new notes:
+
+      - **Move the hand**: during a rest or a long note, lift the whole hand and land in the new
+        place, already shaped.
+      - **Stretch**: open the hand wider to reach a note outside the five keys, then close again.
+
+      Look ahead on the sheet so you know where the hand is going *before* it has to go.
+  - exercise: shift-up-rh
+  - exercise: shift-lh
+  - exercise: stretch-rh
+recap: "Move during rests, stretch for one-off notes, and always read a little ahead."

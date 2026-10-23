@@ -1,0 +1,17 @@
+id: y2-exit
+title: "Year 2 exit exam"
+unit: pedal-and-genres
+skills: [checkpoint]
+steps:
+  - explain: |
+      The Year 2 exam, built like a Grade 2–3 music-school exam: scales and the chromatic scale,
+      sight-reading, ears, and your pieces. Take it on a fresh day. Pass it, and Year 3 opens.
+  - exercise: d-major-2oct-ht
+  - exercise: g-minor-2oct-ht
+  - exercise: chromatic-rh
+  - exercise: sight-read-y2-exit
+  - exercise: ear-year-2-exit
+  - exercise: spot-the-change-exit
+  - exercise: minuet-in-g
+  - exercise: evening-song
+recap: "Year 2 complete: two-octave scales in six keys, three minors, I–IV–V, pedal, and four pieces."

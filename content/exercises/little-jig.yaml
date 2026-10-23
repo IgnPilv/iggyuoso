@@ -1,0 +1,10 @@
+id: little-jig
+title: "A little jig in 3/8"
+kind: timed
+hand: right
+tempo: 120
+meter: 3/8
+countIn: 1
+tempoLadder: true
+right: "E4:e F4:e G4:e | G4:q E4:e | F4:e E4:e D4:e | E4:q. | E4:e F4:e G4:e | G4:q E4:e | D4:e E4:e D4:e | C4:q."
+fingers: "3 4 5 5 3 4 3 2 3 3 4 5 5 3 2 3 2 1"

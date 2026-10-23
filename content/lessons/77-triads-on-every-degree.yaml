@@ -1,0 +1,18 @@
+id: triads-on-every-degree
+title: "A chord on every note"
+unit: inversions
+skills: [theory, triads]
+steps:
+  - explain: |
+      You can build a triad (root, 3rd, 5th, skipping a letter each time) on **every** note of a
+      scale. In C major, using only white keys, you get seven chords.
+
+      Because the scale's steps aren't all the same size, the chords come out different: three
+      major, three minor, and one **diminished** (two minor 3rds stacked, tense and unstable).
+
+      Musicians number them with **Roman numerals**: capitals for major (I, IV, V), small letters for
+      minor (ii, iii, vi), and vii° for diminished.
+  - exercise: build-triads-in-c
+  - exercise: triads-in-c-quiz
+  - exercise: ear-maj-min-dim
+recap: "Seven triads in every major key: I ii iii IV V vi vii°."

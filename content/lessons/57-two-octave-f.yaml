@@ -1,0 +1,15 @@
+id: two-octave-f
+title: "F major over two octaves"
+unit: two-octave-scales
+skills: [scales, key-of-f]
+steps:
+  - explain: |
+      F major has one flat, **Bb**. The left hand fingers it like C. The right hand is different:
+      the 4th finger always plays **Bb**.
+
+      Right hand going up: **1 2 3 4** (F G A Bb), thumb under, **1 2 3** (C D E), thumb under,
+      **1 2 3 4**, then **1 2 3 4** to the top F. Think "4 on Bb" and the rest follows.
+  - exercise: f-scale-2oct-rh
+  - exercise: f-scale-2oct-lh
+  - exercise: f-scale-2oct-ht
+recap: "F major: the right hand's 4th finger always lands on Bb."

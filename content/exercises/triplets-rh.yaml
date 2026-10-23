@@ -1,0 +1,10 @@
+id: triplets-rh
+title: "Triplets in C position"
+kind: timed
+hand: right
+tempo: 60
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "C4:e3 D4:e3 E4:e3 F4:e3 G4:e3 F4:e3 E4:h | D4:e3 E4:e3 F4:e3 E4:e3 D4:e3 C4:e3 D4:h | C4:e3 D4:e3 E4:e3 F4:e3 G4:e3 F4:e3 E4:e3 D4:e3 C4:e3 D4:q | C4:w"
+fingers: "1 2 3 4 5 4 3 2 3 4 3 2 1 2 1 2 3 4 5 4 3 2 1 2 1"

@@ -1,0 +1,14 @@
+id: second-inversion
+title: "Second inversion"
+unit: inversions
+skills: [technique, inversions, theory]
+steps:
+  - explain: |
+      Move the 3rd up too, and the **5th** is at the bottom: the **second inversion**.
+      C E G becomes **G C E**. Fingers **1 3 5** again, but now the 4th is at the bottom.
+
+      So every triad has three positions: **root**, **first inversion**, **second inversion**.
+      Climb through all three and you walk a chord up the keyboard.
+  - exercise: build-second-inversions
+  - exercise: inversion-climb-rh
+recap: "Second inversion: the 5th at the bottom. Three shapes for every chord."

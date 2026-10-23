@@ -1,0 +1,7 @@
+id: ear-m3-M3-P4-P5
+title: "Add the perfect 4th"
+kind: ear
+prompt: "Now the 4th joins in. Name the interval."
+questions: 14
+items:
+  - { type: interval, pool: [m3, M3, P4, P5], from: [C4, D4, F4, G4, A3], direction: up, answer: name }

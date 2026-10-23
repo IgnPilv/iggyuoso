@@ -1,0 +1,12 @@
+id: korobeiniki
+title: "Korobeiniki"
+kind: timed
+hand: together
+prompt: "A minor. The left hand's G# makes the chord of E major, chord V."
+display: staff
+key: Am
+tempo: 88
+meter: 4/4
+countIn: 1
+right: "E5:q B4:e C5:e D5:q C5:e B4:e | A4:q A4:e C5:e E5:q D5:e C5:e | B4:q. C5:e D5:q E5:q | C5:q A4:q A4:h | D5:q. F5:e A5:q G5:e F5:e | E5:q. C5:e E5:q D5:e C5:e | B4:q B4:e C5:e D5:q E5:q | C5:q A4:q A4:h"
+left: "A2:h E3:h | A2:h E3:h | E2:h G#2:h | A2:h E3:h | D3:h F3:h | A2:h E3:h | E2:h G#2:h | A2:w"

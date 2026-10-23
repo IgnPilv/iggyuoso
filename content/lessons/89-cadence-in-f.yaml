@@ -1,0 +1,14 @@
+id: cadence-in-f
+title: "The perfect cadence"
+unit: harmonising
+skills: [harmony, cadences]
+steps:
+  - explain: |
+      You heard cadences in the minor-keys unit. Now play them. **IV → V → I** is the most common
+      way to end a piece: away, pull, home.
+
+      In F major the right hand plays **F A C**, then **F Bb D**, then **E G C**, then **F A C**:
+      each chord only moves one or two notes by a step.
+  - exercise: cadence-in-f
+  - exercise: cadence-quiz
+recap: "V–I is a full stop. IV–V–I is the most common ending in music."

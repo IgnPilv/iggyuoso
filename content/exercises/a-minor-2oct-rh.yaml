@@ -1,0 +1,10 @@
+id: a-minor-2oct-rh
+title: "A harmonic minor, two octaves, right hand"
+kind: timed
+hand: right
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "A3:e B3:e C4:e D4:e E4:e F4:e G#4:e A4:e | B4:e C5:e D5:e E5:e F5:e G#5:e A5:e G#5:e | F5:e E5:e D5:e C5:e B4:e A4:e G#4:e F4:e | E4:e D4:e C4:e B3:e A3:h"
+fingers: "1 2 3 1 2 3 4 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1 4 3 2 1 3 2 1"

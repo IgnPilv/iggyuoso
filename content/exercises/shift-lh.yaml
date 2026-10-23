@@ -1,0 +1,12 @@
+id: shift-lh
+title: "Moving the left hand"
+kind: timed
+hand: left
+prompt: "In the rest, lift the hand and put finger 5 on A."
+display: staff
+clef: bass
+tempo: 72
+meter: 4/4
+countIn: 1
+left: "C3:q D3:q E3:q F3:q | G3:h r:h | A3:q B3:q C4:q D4:q | E4:w"
+fingers: "5 4 3 2 1 5 4 3 2 1"

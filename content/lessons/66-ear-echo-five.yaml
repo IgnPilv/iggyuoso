@@ -1,0 +1,10 @@
+id: ear-echo-five
+title: "Echo five notes"
+unit: reading-hands-together
+skills: [ear, melody]
+steps:
+  - explain: |
+      Five notes now. Don't try to remember five separate notes: hear the **shape**. Does it go up
+      then down? Does it end where it started? Sing it back in your head before you play.
+  - exercise: ear-echo-five
+recap: "Remember the shape of a phrase, not a list of notes."

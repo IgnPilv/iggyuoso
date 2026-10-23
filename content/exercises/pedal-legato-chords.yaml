@@ -1,0 +1,12 @@
+id: pedal-legato-chords
+title: "Legato pedal with chords"
+kind: timed
+hand: together
+prompt: "Play the new chord, then lift and press the pedal straight after it: hands first, foot second."
+tempo: 56
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "C4+E4+G4:w | C4+F4+A4:w | B3+D4+G4:w | C4+E4+G4:w"
+left: "C3:w | F3:w | G3:w | C3:w"
+pedal: "x:w | x:w | x:w | x:w"

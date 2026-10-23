@@ -1,0 +1,18 @@
+id: accompaniment-patterns
+title: "Accompaniment patterns"
+unit: harmonising
+skills: [creativity, harmony, left-hand]
+steps:
+  - explain: |
+      Held chords are only one way to accompany. You can also **break** a chord into its notes.
+
+      - **Broken chord** (often called *Alberti bass*, after an Italian composer): low, high,
+        middle, high. Mozart and Haydn used it constantly.
+      - **Waltz pattern** in 3/4: the bass note on beat 1, the rest of the chord on beats 2 and 3:
+        *oom-pah-pah*.
+
+      The chords are the same; only the pattern changes. Choose a pattern to set the mood.
+  - exercise: alberti-lh
+  - exercise: waltz-pattern-lh
+  - exercise: twinkle-alberti
+recap: "Same chords, new pattern: broken chords and oom-pah-pah."

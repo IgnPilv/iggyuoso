@@ -1,0 +1,14 @@
+id: two-octave-g
+title: "G major over two octaves"
+unit: two-octave-scales
+skills: [scales, key-of-g]
+steps:
+  - explain: |
+      G major has one sharp, **F#**. The fingering is exactly the same as C major in both hands,
+      so all the new work is remembering the F# each time it comes round.
+
+      The right hand starts on the G below middle C.
+  - exercise: g-scale-2oct-rh
+  - exercise: g-scale-2oct-lh
+  - exercise: g-scale-2oct-ht
+recap: "G major: C's fingering, plus F# every time."

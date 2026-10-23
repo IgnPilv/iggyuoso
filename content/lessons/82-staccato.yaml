@@ -1,0 +1,15 @@
+id: staccato
+title: "Staccato"
+unit: inversions
+skills: [technique, articulation]
+steps:
+  - explain: |
+      A dot **above or below** a note head (not after it) means **staccato**: play the note short
+      and detached, as if the key were hot.
+
+      The trick is a small bounce from the wrist. The finger goes down and the hand lifts straight
+      away. Staccato notes take up the same beat; there is just silence in the second half. Here
+      the silence is written as a rest so you can see it.
+  - exercise: staccato-rh
+  - exercise: staccato-lh
+recap: "Staccato: short, light, bounced from the wrist. The beat stays the same length."

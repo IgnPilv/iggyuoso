@@ -1,0 +1,11 @@
+id: build-seconds
+title: "Build major and minor 2nds"
+kind: build
+prompt: "Play both notes of each 2nd, in any order."
+tasks:
+  - { interval: "M2", from: "D4" }
+  - { interval: "m2", from: "E4" }
+  - { interval: "M2", from: "G4" }
+  - { interval: "m2", from: "B3" }
+  - { interval: "m2", from: "F#4" }
+  - { interval: "M2", from: "Bb3" }

@@ -1,0 +1,17 @@
+id: harmonic-minor
+title: "The harmonic minor scale"
+unit: minor-keys
+skills: [theory, scales, minor]
+steps:
+  - explain: |
+      In the natural minor, the 7th note (G in A minor) is a whole tone below the tonic, so it
+      doesn't pull home strongly. Composers fixed this by **raising the 7th** by a semitone: G
+      becomes **G#**. Now it leans right into the tonic, just like B does in C major.
+
+      This is the **harmonic minor**. Between degrees 6 and 7 (F to G#) there is now a big gap of
+      three semitones, which gives it its exotic, slightly Middle-Eastern sound.
+
+      The raised 7th is never in the key signature. It is written as an accidental each time.
+  - exercise: build-harmonic-minor
+  - exercise: natural-or-harmonic
+recap: "Harmonic minor raises the 7th so it pulls up to the tonic."

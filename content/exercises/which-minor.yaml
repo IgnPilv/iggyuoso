@@ -1,0 +1,10 @@
+id: which-minor
+title: "Which minor?"
+kind: quiz
+prompt: "Natural, harmonic or melodic? Listen to the top of the scale going up."
+shuffle: true
+questions:
+  - { ask: "This scale is…", choices: ["Natural minor", "Harmonic minor", "Melodic minor"], correct: 2, sound: "A4:e B4:e C5:e D5:e E5:e F#5:e G#5:e A5:e" }
+  - { ask: "This scale is…", choices: ["Melodic minor", "Natural minor", "Harmonic minor"], correct: 2, sound: "A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:e" }
+  - { ask: "This scale is…", choices: ["Melodic minor", "Natural minor", "Harmonic minor"], correct: 1, sound: "A4:e B4:e C5:e D5:e E5:e F5:e G5:e A5:e" }
+  - { ask: "The melodic minor coming down is the same as…", choices: ["The major scale", "The natural minor", "The harmonic minor"], correct: 1 }

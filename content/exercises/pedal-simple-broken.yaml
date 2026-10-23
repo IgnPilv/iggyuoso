@@ -1,0 +1,12 @@
+id: pedal-simple-broken
+title: "Simple pedal with a broken chord"
+kind: timed
+hand: left
+prompt: "The pedal holds all three notes together. Lift it cleanly on beat 4."
+tempo: 72
+meter: 4/4
+countIn: 1
+tempoLadder: true
+left: "C3:q E3:q G3:q r:q | F2:q A2:q C3:q r:q | G2:q B2:q D3:q r:q | C3:w"
+pedal: "x:h. r:q | x:h. r:q | x:h. r:q | x:w"
+fingers: "5 3 1 5 3 1 5 3 1 5"

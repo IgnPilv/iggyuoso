@@ -1,0 +1,12 @@
+id: build-triads-in-c
+title: "Triads on every degree of C"
+kind: build
+prompt: "Build a triad on each note of the C major scale, using only white keys."
+tasks:
+  - { chord: "C" }
+  - { chord: "Dm" }
+  - { chord: "Em" }
+  - { chord: "F" }
+  - { chord: "G" }
+  - { chord: "Am" }
+  - { chord: "Bdim" }

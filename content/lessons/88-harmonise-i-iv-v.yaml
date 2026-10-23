@@ -1,0 +1,17 @@
+id: harmonise-i-iv-v
+title: "Harmonising with three chords"
+unit: harmonising
+skills: [harmony, chords, inversions]
+steps:
+  - explain: |
+      Add **IV** (F A C) and you can harmonise almost any simple tune. Use it for bars built on
+      F, A or C that don't feel like home.
+
+      In the left hand, play the chords in close position, the way you learned in the last unit:
+      **C E G**, **C F A**, **B F G**. The little finger hardly moves.
+
+      The tune is *Twinkle Twinkle Little Star*, an old French melody (*Ah! vous dirai-je, maman*)
+      that Mozart wrote twelve variations on.
+  - exercise: twinkle-chords-quiz
+  - exercise: twinkle-i-iv-v
+recap: "I, IV and V7 in close position: enough to accompany most folk songs."

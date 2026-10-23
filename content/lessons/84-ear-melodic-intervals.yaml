@@ -1,0 +1,17 @@
+id: ear-melodic-intervals
+title: "Hearing 3rds, 4ths and 5ths"
+unit: inversions
+skills: [ear, intervals]
+steps:
+  - explain: |
+      Each interval has a sound you can learn, and songs help. Going up:
+
+      - **minor 3rd**: the start of *Greensleeves*
+      - **major 3rd**: the start of *Oh When the Saints*
+      - **perfect 4th**: *Here Comes the Bride*
+      - **perfect 5th**: *Twinkle Twinkle* (twin-**kle**)
+
+      Sing the song in your head and see which one fits.
+  - exercise: ear-m3-M3-P5
+  - exercise: ear-m3-M3-P4-P5
+recap: "3rds, 4ths and 5ths by ear, with a song to anchor each one."

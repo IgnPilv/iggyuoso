@@ -1,0 +1,12 @@
+id: pedal-legato-broken
+title: "Legato pedal with spread chords"
+kind: timed
+hand: left
+prompt: "Change the pedal just after each bass note. No gaps, no blur."
+tempo: 66
+meter: 4/4
+countIn: 1
+tempoLadder: true
+left: "C3:q G3:q C4:h | F2:q C3:q F3:h | G2:q D3:q G3:h | C3:q G3:q C4:h"
+pedal: "x:w | x:w | x:w | x:w"
+fingers: "5 2 1 5 2 1 5 2 1 5 2 1"

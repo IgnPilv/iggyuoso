@@ -1,0 +1,11 @@
+id: fifths-lh
+title: "Two notes together: 5ths"
+kind: timed
+hand: left
+prompt: "Fingers 5 and 1 for every 5th. Keep the hand's shape and move it as one piece."
+display: staff
+clef: bass
+tempo: 60
+meter: 4/4
+countIn: 1
+left: "C3+G3:h D3+A3:h | E3+B3:h D3+A3:h | C3+G3:h F3+C4:h | G3+D4:h G2+D3:h | C3+G3:w"

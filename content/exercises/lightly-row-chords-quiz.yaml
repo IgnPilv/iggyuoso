@@ -1,0 +1,9 @@
+id: lightly-row-chords-quiz
+title: "C or G7?"
+kind: quiz
+prompt: "Each bar of Lightly Row needs chord I (C) or V7 (G7). Which fits?"
+questions:
+  - { ask: "Bar 1: G E E. Which chord?", choices: ["G7 (G B D F)", "C (C E G)"], correct: 1, staff: "G4:q E4:q E4:h", sound: "G4:q E4:q E4:h" }
+  - { ask: "Bar 2: F D D. Which chord?", choices: ["G7 (G B D F)", "C (C E G)"], correct: 0, staff: "F4:q D4:q D4:h", sound: "F4:q D4:q D4:h" }
+  - { ask: "The last bar ends on C. Which chord?", choices: ["G7 (G B D F)", "C (C E G)"], correct: 1, staff: "C4:w" }
+  - { ask: "Bar 6 is F D D again. Which chord?", choices: ["G7 (G B D F)", "C (C E G)"], correct: 0 }

@@ -1,0 +1,17 @@
+id: pedal-simple
+title: "The sustain pedal"
+unit: pedal-and-genres
+skills: [technique, pedal]
+steps:
+  - explain: |
+      The right-hand pedal is the **sustain pedal**. While it is down, the notes keep ringing
+      after you let go of the keys.
+
+      Keep your heel on the floor and press with the ball of the foot, all the way down. The pedal
+      is marked under the staff: **Ped.** means press, and the end of the line means lift.
+
+      Start with **simple pedal**: press it *with* the notes, keep it down while they ring, and lift
+      it before the next chord, in the rest. Each chord rings on its own, with a tiny gap between.
+  - exercise: pedal-simple-chords
+  - exercise: pedal-simple-broken
+recap: "Heel down, ball of the foot. Press with the chord, lift before the next."

@@ -1,0 +1,8 @@
+id: tap-syncopation
+title: "Syncopation"
+kind: tap
+prompt: "The long notes start off the beat. Keep counting through them."
+tempo: 72
+meter: 4/4
+countIn: 1
+rhythm: "x:q x:h x:q | x:q x:h x:q | x:e x:q x:e x:q x:q | x:w"
