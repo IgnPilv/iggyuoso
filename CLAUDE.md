@@ -53,7 +53,8 @@ never copied pages). Start small, adapt as we go.
 
 ## Content
 - Lessons are grouped in units; each lesson pairs one piece of theory with one playing skill.
-  Format: `content/README.md`. Original proposal and lesson plan: `docs/beta-curriculum-proposal.md`.
+  Format: `content/README.md`. 5-year design: `docs/mastery-curriculum.md` (tree data in
+  `content/tree/`). Original unit 1 plan: `docs/beta-curriculum-proposal.md`.
 
 ## Decision log
 - 2026-10-23: Repo `IgnPilv/iggyuoso`, public (free GitHub Pages for https/Web MIDI).
@@ -112,3 +113,11 @@ never copied pages). Start small, adapt as we go.
 - 2026-10-23: Theme = Follow the device / Dark / Light (`settings.theme`, header button and
   Settings → Appearance), applied before first paint by `index.html`. The falling-notes stage
   stays dark in both themes. Demo scene "Dark and light" flips themes without saving.
+- 2026-10-23: 5-year mastery curriculum designed from research (`docs/mastery-curriculum.md`,
+  `docs/research/`): target ≈ ABRSM Grade 6 after 5 years; seven strands; path over a visible
+  tree; 3 checkpoints a year; mastery states with a later-day retest and decay; XP for clean takes
+  only; gentle streaks, no leagues; functional ear training answered on the keyboard; perfect
+  pitch as an optional side quest.
+- 2026-10-23: Tree data lives in `content/tree/year-N.yaml` (format in `content/README.md`), checked
+  by `npm test`. Year 1 is designed node by node (existing unit 1 placed in it); Years 2–5 are unit
+  outlines. Every new lesson must be placed in the tree.

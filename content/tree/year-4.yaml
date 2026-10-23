@@ -1,0 +1,43 @@
+year: 4
+title: Grade 5 in every strand
+level: ABRSM Grade 5, RCM Levels 5–6
+goal: >-
+  Play all keys to 5 sharps or flats legato and staccato, sight-read four-part chords, know
+  seventh chords and modulation, hear seventh-chord qualities, improvise an 8-bar period, and give
+  a four-piece recital.
+units:
+  - id: all-keys
+    title: All keys to five signs
+    outline:
+      technique: [2-octave scales legato and staccato in all keys to 5 sharps or flats, chromatic contrary motion]
+      theory: [Keys to 6 sharps or flats, compound intervals]
+  - id: four-part-reading
+    title: Reading four parts
+    checkpoint: y4-checkpoint-a
+    outline:
+      reading: [Four-part chords split between the hands, syncopation, rit., 8–12 bars]
+      rhythm: [5/4, mixed metres, duplets]
+  - id: sevenths
+    title: Seventh chords
+    outline:
+      technique: [Dominant 7th broken and blocked, diminished 7th hands apart, arpeggios hands together]
+      theory: [Seventh-chord types, chord ii, ii–V–I]
+      ear: [Four seventh-chord qualities]
+  - id: modulation
+    title: Changing key
+    checkpoint: y4-checkpoint-b
+    outline:
+      theory: [Modulation to the dominant or relative key, ternary form, variations]
+      ear: [Progression dictation, top line playback after two hearings]
+  - id: scales-and-modes
+    title: Other scales and modes
+    outline:
+      theory: [Pentatonic, blues and whole-tone scales, modes]
+      creativity: [Improvise over I–vi–IV–V]
+  - id: grade-5-recital
+    title: Grade 5 recital
+    checkpoint: y4-exit
+    outline:
+      theory: [Grade 5 theory checkpoint, which gates Year 5 playing]
+      creativity: [Answer a 4-bar phrase to make an 8-bar period]
+      repertoire: [Recital of four contrasting works, two from memory]
