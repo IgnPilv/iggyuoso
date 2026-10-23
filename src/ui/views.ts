@@ -38,7 +38,7 @@ function midiBanner(): HTMLElement | null {
   return null;
 }
 
-function needCalibration(root: HTMLElement): Calibration | undefined {
+export function needCalibration(root: HTMLElement): Calibration | undefined {
   const c = demo.active ? DEMO_CALIBRATION : store.calibration;
   if (!c) {
     root.append(h('p', { class: 'banner' }, 'First, let the app get to know your keyboard. ', h('a', { href: '#/calibrate' }, 'Set up the keyboard')));

@@ -420,7 +420,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
 
 // ---------------------------------------------------------------- timed
 
-function staffParts(ex: TimedExercise): StaffPart[] {
+export function staffParts(ex: TimedExercise): StaffPart[] {
   const part = (hand: Hand, tokens: NoteToken[], clef: Clef): StaffPart => {
     let index = 0;
     return {

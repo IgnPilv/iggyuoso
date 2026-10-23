@@ -1016,3 +1016,28 @@ ol.path-nodes li.more a { color: var(--muted); border-style: dashed; justify-con
 .song-title { font-family: var(--font-display); font-weight: 600; }
 .song-about { grid-column: 1; font-size: var(--text-xs); color: var(--muted); }
 .song-grid .state-badge { grid-row: 1; grid-column: 2; }
+
+/* Sketchbook: free play, record, keep ideas. Text fields look like the selects. */
+input[type='text'], input[type='number'], textarea {
+  font: inherit;
+  font-size: var(--text-sm);
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  padding: 7px 12px;
+}
+input[type='number'].num { width: 5em; }
+textarea { width: 100%; resize: vertical; margin-top: var(--space-3); }
+.record-btn { display: inline-flex; align-items: center; gap: 8px; }
+.rec-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--bad); box-shadow: 0 0 8px var(--bad); }
+.record-btn:disabled .rec-dot { animation: rec-pulse 1s ease-in-out infinite; }
+@keyframes rec-pulse { 50% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) { .record-btn:disabled .rec-dot { animation: none; } }
+.rec-status { font-family: var(--font-mono); }
+.sketch-take h3, .sketch-list h3 { margin-top: var(--space-4); }
+.sketch-items { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-1); }
+.sketch-items li { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-3); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--surface-sunken); }
+.sketch-title { font-weight: 600; }
+.sketch-name { font-size: inherit; font-weight: inherit; width: min(100%, 22em); }
+button.danger { color: var(--bad); }

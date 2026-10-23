@@ -1,4 +1,5 @@
 import { calibrate, type Calibration } from '../calibration';
+import type { Recorder } from '../engine/recorder';
 import type { TimedSession } from '../engine/timedSession';
 import type { FindSession, SequenceSession } from '../scoring/untimed';
 
@@ -22,6 +23,8 @@ export const demo = {
   onAsk: undefined as ((a: DemoAsk) => void) | undefined,
   /** Called when a check question in theory text is ready. */
   onCheck: undefined as ((c: { keys?: number[]; correct?: number; choose?: (i: number) => void }) => void) | undefined,
+  /** Called when a free-play take (Sketchbook, improvising) starts recording. */
+  onRecord: undefined as ((r: Recorder) => void) | undefined,
   /** Called when a timed Listen or Play run ends. */
   onRunEnd: undefined as ((mode: 'listen' | 'play') => void) | undefined,
 };
@@ -43,5 +46,5 @@ export interface DemoAsk {
 
 export function stopDemo() {
   demo.active = false;
-  demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onAsk = demo.onCheck = undefined;
+  demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onRecord = demo.onAsk = demo.onCheck = undefined;
 }
