@@ -2,6 +2,7 @@ import { CHORD_WINDOW_MS } from '../midi/chords';
 import { pitchClass, type Hand } from '../music/notes';
 import { beatMs, type ExpectedNote } from '../music/timeline';
 import { stars } from './stars';
+import type { PedalResult } from './pedal';
 
 // Scores a timed exercise. Each hand is scored on its own; the feedback names the hand and the
 // habit that gave way (early/late, rushing/dragging, uneven, misses, wrong notes, extras, short
@@ -56,7 +57,7 @@ export interface Together {
 
 export type Habit =
   | 'missed' | 'wrong-notes' | 'extra-notes' | 'early' | 'late' | 'rushing' | 'dragging' | 'uneven'
-  | 'short-holds' | 'hands-apart' | 'weaker-hand' | 'clean';
+  | 'short-holds' | 'hands-apart' | 'weaker-hand' | 'pedal' | 'clean';
 
 export interface Feedback {
   hand?: Hand;
@@ -72,6 +73,8 @@ export interface TimedResult {
   notes: NoteResult[];
   extras: { played: PlayedNote; hand: Hand }[];
   feedback: Feedback[];
+  /** Set when the exercise has a pedal line; `score` and `stars` then include it. */
+  pedal?: PedalResult;
 }
 
 export const PERFECT_MS = 50;

@@ -462,6 +462,8 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .staff .line, .staff .ledger, .staff .bar { stroke: var(--staff-line); stroke-width: 1; }
 .staff .stem, .staff .flag { stroke: var(--staff-ink); stroke-width: 1.3; fill: none; }
 .staff .tie { stroke: var(--staff-ink); stroke-width: 1.3; fill: none; }
+.staff .pedal-line { stroke: var(--staff-ink); stroke-width: 1.2; fill: none; }
+.staff .pedal-text { fill: var(--staff-ink); font: italic 600 11px var(--font-body); }
 .staff .tuplet { fill: var(--staff-ink); font: italic 600 12px var(--font-body); text-anchor: middle; }
 .staff text { fill: var(--staff-ink); }
 .staff circle { fill: var(--staff-ink); }
@@ -505,6 +507,8 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .live-score.s0 { color: var(--bad); }
 .live-counts { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--ink-2); white-space: pre; }
 .live-msg { color: var(--bad); font-weight: 600; font-size: var(--text-sm); }
+.pedal-pill { font: 600 var(--text-xs) var(--font-mono); padding: 2px 10px; border-radius: var(--radius-pill); border: 1px solid var(--line-strong); color: var(--muted); }
+.pedal-pill.down { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
 
 /* ---------------------------------------------------------------- demo */
 

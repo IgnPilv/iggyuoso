@@ -1,7 +1,9 @@
 import { toWritten, type Calibration } from '../calibration';
 import type { TimedExercise } from '../content/types';
 import { pitchClass } from '../music/notes';
-import { beatMs, expectedNotes, totalBeats, type ExpectedNote } from '../music/timeline';
+import { beatMs, expectedNotes, expectedPedal, totalBeats, type ExpectedNote, type PedalSpan } from '../music/timeline';
+import { PEDAL_WEIGHT, pedalMessages, scorePedal, type PedalPress } from '../scoring/pedal';
+import { stars } from '../scoring/stars';
 import { hitWindowMs, scoreTimed, type PlayedNote, type TimedResult } from '../scoring/timed';
 
 // One run of a timed exercise: the clock, the count-in, what to play when, and the notes the
@@ -70,10 +72,16 @@ export class TimedSession {
   readonly end: number;
   readonly windowMs: number;
   readonly played: PlayedNote[] = [];
+  readonly pedalLine: PedalSpan[];
+  /** Pedal presses and lifts, in song time. */
+  readonly pedal: PedalPress[] = [];
+  /** Whether the pedal was already down when the run started. */
+  private pedalAtStart = false;
   private open = new Map<number, PlayedNote>();
 
   constructor(readonly ex: TimedExercise, readonly cal: Calibration, readonly opts: TimedSessionOptions) {
     this.expected = expectedNotes(ex);
+    this.pedalLine = expectedPedal(ex);
     // The tempo counts the meter's beat (a dotted quarter in 6/8); timing works in quarters.
     this.quarterTempo = opts.tempo * ex.meter.pulse;
     this.beatMs = beatMs(this.quarterTempo);
@@ -144,6 +152,16 @@ export class TimedSession {
     return { kind: 'extra', device };
   }
 
+  /** The pedal state when the run starts (it may already be down). */
+  pedalStart(down: boolean) {
+    this.pedalAtStart = down;
+  }
+
+  pedalChange(down: boolean, time: number) {
+    if (this.opts.mode !== 'play') return;
+    this.pedal.push({ down, at: this.songTime(time) });
+  }
+
   noteOff(device: number, time: number) {
     const w = toWritten(this.cal, device);
     const n = this.open.get(w);
@@ -195,6 +213,12 @@ export class TimedSession {
   }
 
   result(): TimedResult {
-    return scoreTimed(this.expected, this.played, { tempo: this.quarterTempo, pitchMatch: this.ex.pitchMatch });
+    const r = scoreTimed(this.expected, this.played, { tempo: this.quarterTempo, pitchMatch: this.ex.pitchMatch });
+    if (!this.pedalLine.length) return r;
+    const pedal = scorePedal(this.pedalLine, this.pedal, { beatMs: this.beatMs, windowMs: this.windowMs, initialDown: this.pedalAtStart });
+    const score = Math.round((1 - PEDAL_WEIGHT) * r.score + PEDAL_WEIGHT * pedal.score);
+    const messages = pedalMessages(pedal).map((message) => ({ habit: 'pedal' as const, message }));
+    const feedback = messages.length ? [...r.feedback.filter((f) => f.habit !== 'clean'), ...messages] : r.feedback;
+    return { ...r, score, stars: stars(score), feedback, pedal };
   }
 }

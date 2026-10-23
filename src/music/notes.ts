@@ -114,8 +114,28 @@ export function parseTimedNotes(text: string): NoteToken[] {
 /** True for a token that only continues a tied note (it is not played again). */
 export const isTieEnd = (tokens: NoteToken[], i: number) => i > 0 && !!tokens[i - 1].tie;
 
+/** A stretch of a pedal line: `x` = pedal down (pressed again at its start), `r` = up. */
+export interface PedalToken {
+  down: boolean;
+  beats: number;
+  bar: number;
+}
+
+/** Parse a pedal line in the bar format of the notes: "x:h x:h | x:q. r:e x:h". */
+export function parsePedal(text: string): PedalToken[] {
+  const out: PedalToken[] = [];
+  text.split('|').forEach((barText, bar) => {
+    for (const tok of barText.trim().split(/\s+/).filter(Boolean)) {
+      const m = /^([xr]):(.+)$/.exec(tok);
+      if (!m) throw new NoteParseError(`pedal "${tok}" should look like x:h (down) or r:q (up)`);
+      out.push({ down: m[1] === 'x', beats: parseDuration(m[2]).beats, bar });
+    }
+  });
+  return out;
+}
+
 /** Bars of a timed note string, each as total quarter beats. */
-export function barLengths(tokens: NoteToken[]): number[] {
+export function barLengths(tokens: { beats: number; bar: number }[]): number[] {
   const bars: number[] = [];
   for (const t of tokens) bars[t.bar] = (bars[t.bar] ?? 0) + t.beats;
   return Array.from(bars, (b) => b ?? 0);

@@ -1,4 +1,4 @@
-import type { Hand, Meter, NoteToken, Pitch } from '../music/notes';
+import type { Hand, Meter, NoteToken, PedalToken, Pitch } from '../music/notes';
 
 export interface Unit {
   id: string;
@@ -62,6 +62,8 @@ export interface TimedExercise extends ExerciseBase {
   ladder?: number[];
   right?: NoteToken[];
   left?: NoteToken[];
+  /** The sustain pedal, in the same bars as the notes. */
+  pedal?: PedalToken[];
   /** Finger numbers per hand, one per note (chords take one number for the whole chord). */
   fingers: Record<Hand, number[]>;
   pitchMatch: 'exact' | 'pitchClass' | 'any';

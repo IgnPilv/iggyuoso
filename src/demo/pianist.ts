@@ -12,6 +12,13 @@ import type { FindSession, SequenceSession } from '../scoring/untimed';
 export class Pianist {
   private timers: number[] = [];
   private held = new Set<number>();
+  private pedal = false;
+
+  private setPedal(down: boolean) {
+    if (down === this.pedal) return;
+    this.pedal = down;
+    midi.injectPedal(down);
+  }
 
   private at(ms: number, fn: () => void) {
     this.timers.push(window.setTimeout(fn, Math.max(0, ms)));
@@ -39,6 +46,7 @@ export class Pianist {
     this.timers = [];
     for (const n of this.held) midi.inject('off', n);
     this.held.clear();
+    this.setPedal(false);
   }
 
   /** Plays along with a timed run: one wrong key, one late note, one missed note, small jitter. */
@@ -53,6 +61,18 @@ export class Pianist {
         if (i === 6 && s.expected.length >= 9) return; // missed
       }
       this.playNote(note, g.time + s.opts.latencyMs + offset - now, g.durMs * 0.9);
+    });
+    // Legato pedal: lift as each chord sounds and press again just after. Holds through the
+    // second change, so the pedal feedback has something to show.
+    const at = (beat: number) => s.t0 + s.opts.latencyMs + beat * s.beatMs - now;
+    let changes = 0;
+    s.pedalLine.forEach((sp, i) => {
+      const slip = opts.slips && sp.change && ++changes === 2;
+      if (!slip) {
+        if (sp.change) this.at(at(sp.beat) + 20, () => this.setPedal(false));
+        this.at(at(sp.beat) + Math.min(180, 0.3 * s.beatMs), () => this.setPedal(true));
+      }
+      if (sp.lift) this.at(at(sp.beat + sp.beats) - (i === s.pedalLine.length - 1 ? -200 : 30), () => this.setPedal(false));
     });
   }
 

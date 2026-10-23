@@ -181,3 +181,14 @@ never copied pages). Start small, adapt as we go.
   and offers to loop them. A loop is the bars cut out as their own exercise (a tie into the loop
   becomes a fresh note), plays round until Stop at the tempo the player was on, and is never
   saved or counted (no records, ladder or XP). Demo scene "Tempo ladder and loops".
+- 2026-10-23: Sustain pedal (curriculum Year 2). Input: CC 64 on any channel, down at 64+
+  (`midi.onPedal`, `midi.pedalDown`; repeated values ignored); Space on the computer keyboard; the
+  MIDI tester shows it. Content: `pedal:` line in the notes' bar format (`x` = down and pressed
+  again at its start, `r` = up; `x x` = a change). Scoring (`src/scoring/pedal.ts`): per stretch,
+  half a point for the press (at a change the pedal must be up some time from half a hit window
+  before the chord to half a beat plus a window after it, then down again) and half for holding
+  it 90% of the stretch and, before a rest, lifting within a window of its end. Habits: held
+  through a change, changed early, pressed late, missing, lifted early, lifted late. The take
+  score is 75% notes and 25% pedal. Drawn under the staff (Ped., line, change notches, lift tick)
+  and as a strip down the right edge of the falling notes; the HUD shows a pedal light. Demo scene
+  "Sustain pedal" (the pianist holds through one change).
