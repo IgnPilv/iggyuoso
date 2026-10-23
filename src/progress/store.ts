@@ -71,6 +71,10 @@ export interface Settings {
   theme: 'system' | 'light' | 'dark';
   /** Play with the computer keyboard (A S D F ... as white keys). Off unless switched on. */
   computerKeys?: boolean;
+  /** Tempo in percent the player last picked; the next exercise starts there too. */
+  tempo?: number;
+  /** Whether the exercise Options drawer was left open. */
+  optionsOpen?: boolean;
 }
 
 /** Local calendar day (YYYY-MM-DD) of an ISO time. */

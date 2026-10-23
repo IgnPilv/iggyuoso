@@ -8,7 +8,7 @@ import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
 import { expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
-import { CLEAN_SCORE, store, type Attempt, type RepsGoal, type RepsProgress } from '../progress/store';
+import { CLEAN_SCORE, store, type Attempt, type RepsGoal, type RepsProgress, type Settings } from '../progress/store';
 import { treeNodes } from '../content';
 import { RECORD_TEMPO_FRACTION } from '../scoring/stars';
 import type { TimedResult } from '../scoring/timed';
@@ -443,8 +443,19 @@ function staffParts(ex: TimedExercise): StaffPart[] {
 
 const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 
+// Exercise options (tempo, click, guide notes, the Options drawer) carry over: what the player
+// picked last is where the next exercise starts. The demo keeps its own, never saved.
+let demoOptions: Partial<Settings> = {};
+type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'optionsOpen'>;
+export const exerciseOptions = (): ExerciseOptions => (demo.active ? { ...store.settings, ...demoOptions } : store.settings);
+export function setExerciseOptions(o: Partial<ExerciseOptions>) {
+  if (demo.active) demoOptions = { ...demoOptions, ...o };
+  else store.settings = { ...store.settings, ...o };
+}
+export const resetDemoOptions = () => { demoOptions = {}; };
+
 function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onDone: OnDone, loop: LoopOptions) {
-  const settings = store.settings;
+  const settings = exerciseOptions();
   const looping = loop.bars !== undefined;
   const progress = demo.active ? demoProgress().store : store;
   // The tempo ladder: the tempo select starts on the current rung; takes on that rung climb it.
@@ -492,8 +503,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   const hud = h('div', { class: 'hud' });
   const status = h('div', { class: 'status-line' }, 'Press Listen to hear it, then Play.');
   const result = h('div');
-  const startPercent = loop.percent ?? (rungs ? rungs[ladder.rung] : 100);
-  const steps = [...new Set([...TEMPO_STEPS, ...(rungs ?? [])])].sort((a, b) => a - b);
+  // The player's last pick wins over the ladder's step (the ladder line still says which counts).
+  const startPercent = loop.percent ?? settings.tempo ?? (rungs ? rungs[ladder.rung] : 100);
+  const steps = [...new Set([...TEMPO_STEPS, ...(rungs ?? []), startPercent])].sort((a, b) => a - b);
   const tempoSel = h('select', { 'aria-label': 'tempo' }, ...steps.map((p) => h('option', { value: p, selected: p === startPercent }, `${p}%`)));
   const ladderLine = h('p', { class: 'small ladder-line' });
   const showLadder = () => {
@@ -520,6 +532,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   let again = 0; // the next loop take
   const metro = h('input', { type: 'checkbox', checked: settings.metronome });
   const guide = h('input', { type: 'checkbox', checked: settings.guide });
+  metro.addEventListener('change', () => setExerciseOptions({ metronome: metro.checked }));
+  guide.addEventListener('change', () => setExerciseOptions({ guide: guide.checked }));
+  tempoSel.addEventListener('change', () => setExerciseOptions({ tempo: Number(tempoSel.value) }));
   const toggle = viewToggle(initialView(ex), (v) => buildView(v));
   const listenBtn = h('button', { class: 'secondary' }, 'Listen');
   const playBtn = h('button', {}, 'Play');
@@ -703,7 +718,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   };
   showTempo();
   tempoSel.addEventListener('change', showTempo);
-  const drawer = h('details', { class: 'drawer' },
+  const drawer = h('details', { class: 'drawer', open: !!settings.optionsOpen },
     h('summary', {}, 'Options', tempoChip),
     h('div', { class: 'drawer-body' },
       h('div', { class: 'controls' },
@@ -711,6 +726,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         h('label', {}, metro, ' Click'),
         h('label', {}, guide, ' Guide notes')),
       loopControls));
+  drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
   root.append(
     header(ex, ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
     h('div', { class: 'transport' },
