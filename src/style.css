@@ -59,3 +59,20 @@ button:disabled { opacity: .45; cursor: default; }
 .staff .note.hit .head { fill: var(--ok); stroke: var(--ok); }
 .staff .note.hit .head.open { fill: #fff; }
 .staff .note.miss .head, .staff .note.wrong .head { fill: var(--bad); stroke: var(--bad); }
+
+.key text.name { font-size: 10px; font-weight: 500; fill: #555; }
+.middle-c-caption { font-size: 11px; text-anchor: middle; fill: #b45309; font-weight: 700; }
+.middle-c { fill: #b45309; }
+.banner.ok { background: #ebfbee; border-color: #b2f2bb; }
+
+.falling { width: 100%; margin: 8px 0; border-radius: 10px; overflow: hidden; background: #14161c; }
+.falling canvas { display: block; }
+.hud { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; min-height: 2.6rem; }
+.live-score { font-size: 2rem; font-weight: 800; font-variant-numeric: tabular-nums; min-width: 3ch; }
+.live-score.s3 { color: var(--ok); }
+.live-score.s2 { color: #2b8a3e; }
+.live-score.s1 { color: #e67700; }
+.live-score.s0 { color: var(--bad); }
+.live-counts { font-variant-numeric: tabular-nums; white-space: pre; }
+.live-msg { color: var(--bad); font-weight: 600; }
+.controls.top { margin: 4px 0 0; }

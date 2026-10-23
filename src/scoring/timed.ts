@@ -1,4 +1,4 @@
-import { groupChords } from '../midi/chords';
+import { CHORD_WINDOW_MS } from '../midi/chords';
 import { pitchClass, type Hand } from '../music/notes';
 import { beatMs, type ExpectedNote } from '../music/timeline';
 import { stars } from './stars';
@@ -98,7 +98,8 @@ export function timingPoints(offsetMs: number, windowMs: number): number {
 export function scoreTimed(expected: ExpectedNote[], playedRaw: PlayedNote[], opts: TimedScoreOptions): TimedResult {
   const bMs = beatMs(opts.tempo);
   const win = hitWindowMs(opts.tempo);
-  const played = groupChords(playedRaw);
+  // Presses during the count-in are warming up, not extras.
+  const played = playedRaw.filter((p) => p.on >= -win);
   const handsPresent = (['right', 'left'] as const).filter((h) => expected.some((e) => e.hand === h));
   const samePitch = (a: number, b: number) => (opts.pitchMatch === 'pitchClass' ? pitchClass(a) === pitchClass(b) : a === b);
   const time = (e: ExpectedNote) => e.beat * bMs;
@@ -136,10 +137,23 @@ export function scoreTimed(expected: ExpectedNote[], playedRaw: PlayedNote[], op
     if (best >= 0) { eWrong[best] = pi; pUsed[pi] = true; }
   });
 
+  // A chord counts as one hit timed from its first note, but only within one hand: a gap
+  // between the hands is exactly what "hands together" measures.
+  const chordStart = new Map<PlayedNote, number>();
+  for (const hand of handsPresent) {
+    const hits = expected.flatMap((e, ei) => (e.hand === hand && eMatch[ei] >= 0 ? [played[eMatch[ei]]] : []));
+    hits.sort((a, b) => a.on - b.on);
+    let start = -Infinity;
+    for (const p of hits) {
+      if (p.on - start > CHORD_WINDOW_MS) start = p.on;
+      chordStart.set(p, start);
+    }
+  }
+
   const notes: NoteResult[] = expected.map((e, ei) => {
     if (eMatch[ei] >= 0) {
       const p = played[eMatch[ei]];
-      const offsetMs = p.on - time(e);
+      const offsetMs = chordStart.get(p)! - time(e);
       let points = timingPoints(offsetMs, win);
       let shortHold = false;
       if (e.beats >= 2 && p.off !== undefined && p.off - p.on < SHORT_HOLD_FRACTION * e.beats * bMs) {

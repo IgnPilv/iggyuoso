@@ -8,6 +8,8 @@ import { KeyboardView } from './keyboard';
 import { markdown } from './markdown';
 import { mountExercise } from './players';
 
+const lessonExercises = (l: Lesson) => l.steps.flatMap((s) => ('exercise' in s ? [s.exercise] : []));
+
 export const go = (path: string) => { location.hash = path; };
 
 function midiBanner(): HTMLElement | null {
@@ -48,7 +50,7 @@ export const homeView: View = (root) => {
       h('ol', { class: 'lessons' }, ...unit.lessons.map((id) => {
         const l = content.lessons.get(id);
         if (!l) return null;
-        return h('li', { class: store.lessonDone(id) ? 'done' : '' }, h('a', { href: `#/lesson/${id}` }, l.title));
+        return h('li', { class: store.lessonDone(lessonExercises(l)) ? 'done' : '' }, h('a', { href: `#/lesson/${id}` }, l.title));
       })),
     ));
   }
@@ -77,19 +79,40 @@ export const calibrateView: View = (root) => {
     msg.textContent = 'Press the lowest white key on your keyboard (the one furthest to the left).';
   };
 
+  // Step 3: show middle C, explain it, and have the player press it.
+  let offTry = () => {};
   const confirm = (c: Calibration, notes: string[]) => {
     done = true;
-    const kb = new KeyboardView(c.low, c.high, { middleC: c.middleC });
+    offTry();
+    const kb = new KeyboardView(c.low, c.high, { middleC: c.middleC, cal: c, labels: 'c' });
     kb.set(c.middleC, 'target', true, 'C');
-    msg.textContent = 'Got it!';
-    const offTry = midi.onNote((e) => e.type === 'on' && kb.flash(e.note, 'hit'));
+    msg.textContent = 'Now meet middle C.';
+    const check = h('p', { class: 'ask' }, 'Press the lit key: that is middle C.');
+    const save = h('button', { disabled: true, onclick: () => { offTry(); store.calibration = c; go('/'); } }, 'Save');
+    offTry = midi.onNote((e) => {
+      if (e.type !== 'on') return;
+      if (e.note === c.middleC) {
+        kb.flash(e.note, 'hit', 600);
+        check.textContent = 'Yes! That is middle C. Both thumbs share it in your first pieces.';
+        save.disabled = false;
+      } else {
+        kb.flash(e.note, 'wrong');
+        check.textContent = e.note % 12 === c.middleC % 12
+          ? `That is a C too (${keyName(c, e.note)}), but not the middle one. Find the lit key.`
+          : `That is ${keyName(c, e.note)}. Middle C is the lit key, just left of the two black keys near the middle.`;
+      }
+    });
     detail.replaceChildren(
-      h('p', {}, `${notes.join('. ')}. The lit key should be middle C, the C nearest the middle of your keyboard.`),
+      h('p', {}, `${notes.join('. ')}.`),
+      h('div', { class: 'explain' },
+        h('p', {}, 'Middle C is the C closest to the middle of the keyboard. Every C sits just to the left of a group of two black keys; middle C is the one in the middle. On most pianos it is right in front of the brand name.'),
+        h('p', {}, 'Every key is named from here: C4 is middle C, C3 is the C below, C5 the C above.')),
       kb.el,
+      check,
       h('div', { class: 'controls' },
-        h('button', { onclick: () => { offTry(); store.calibration = c; go('/'); } }, 'Yes, save'),
-        h('button', { class: 'secondary', onclick: () => { offTry(); confirm(shiftMiddleC(c, -1), notes); } }, 'Middle C is one octave lower'),
-        h('button', { class: 'secondary', onclick: () => { offTry(); confirm(shiftMiddleC(c, 1), notes); } }, 'one octave higher'),
+        save,
+        h('button', { class: 'secondary', onclick: () => confirm(shiftMiddleC(c, -1), notes) }, 'The real middle C is one octave lower'),
+        h('button', { class: 'secondary', onclick: () => confirm(shiftMiddleC(c, 1), notes) }, 'one octave higher'),
         h('button', { class: 'secondary', onclick: () => { offTry(); ask(); } }, 'Start again'),
       ),
     );
@@ -113,7 +136,7 @@ export const calibrateView: View = (root) => {
 
   ask();
   root.append(h('section', { class: 'card' }, h('h2', {}, 'Set up the keyboard'), banner, msg, detail));
-  return () => { off(); offPorts(); };
+  return () => { off(); offPorts(); offTry(); };
 };
 
 // ---------------------------------------------------------------- lesson
@@ -155,12 +178,14 @@ export const lessonView: View = (root, id?: string) => {
   };
 
   const showRecap = (l: Lesson) => {
-    store.markLessonDone(l.id);
     const p = h('div', { class: 'explain recap' });
     p.innerHTML = markdown(`**Recap.** ${l.recap}`);
-    body.append(p);
-    const ids = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
-    const nextId = ids[ids.indexOf(l.id) + 1];
+    const ids = lessonExercises(l);
+    const passed = ids.filter((x) => store.exercise(x).passed).length;
+    body.append(p, h('p', { class: store.lessonDone(ids) ? 'banner ok' : 'banner' },
+      store.lessonDone(ids) ? 'Lesson done: every exercise passed.' : `${passed} of ${ids.length} exercises passed. Go back to try the others (★ or better at full tempo).`));
+    const order = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
+    const nextId = order[order.indexOf(l.id) + 1];
     nav.append(nextId ? h('button', { onclick: () => go(`/lesson/${nextId}`) }, 'Next lesson') : h('button', { onclick: () => go('/') }, 'Home'));
   };
 
@@ -220,7 +245,7 @@ export const settingsView: View = (root) => {
 
 export const testerView: View = (root) => {
   const c = store.calibration;
-  const kb = new KeyboardView(c?.low ?? 21, c?.high ?? 108, { middleC: c?.middleC ?? 60 });
+  const kb = new KeyboardView(c?.low ?? 21, c?.high ?? 108, { middleC: c?.middleC ?? 60, cal: c, labels: 'c' });
   const ports = h('p', { class: 'small' });
   const log = h('pre', { class: 'log' });
   const lines: string[] = [];

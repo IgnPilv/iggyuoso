@@ -77,3 +77,15 @@ never copied pages). Start small, adapt as we go.
 - 2026-10-23: Latency: played times are corrected by the AudioContext output latency plus a user
   setting (Settings → Timing). The app plays clicks and optional guide notes; the piano makes its
   own sound.
+- 2026-10-23: After Ignas's first test ("very dry"): timed exercises show **Synthesia-style falling
+  notes** by default (canvas, notes coloured by hand: right blue, left green; note name + finger on
+  each note; keys light with what the app plays or expects). `display: staff` exercises start on
+  sheet music; the player can switch views. Live scoring while playing: running score, ✓ / wrong /
+  missed / extra counts, and each mistake named the moment it happens (wrong key, early, late).
+- 2026-10-23: Timing lives in `src/engine/timedSession.ts` (clock, count-in, latency, capture,
+  live judgement, live score), unit-tested; screens only draw from it.
+- 2026-10-23: Chords are grouped per hand only, so a 30–59 ms gap between hands is measured, not
+  hidden. Presses during the count-in are ignored. Two-hand fingering: `rightFingers` / `leftFingers`.
+- 2026-10-23: Saved data carries a schema version (`iggyuoso.schema`) with an upgrade step per
+  version. A lesson is done when every exercise in it has been passed (★ or better, at a tempo that
+  counts). Calibration ends with a "meet middle C" step: the player must press it before saving.

@@ -23,7 +23,7 @@ export function expectedNotes(ex: TimedExercise): ExpectedNote[] {
     let index = 0;
     for (const t of tokens) {
       if (t.pitches.length) {
-        const finger = ex.fingers.length && t.pitches.length === 1 ? ex.fingers[index] : undefined;
+        const finger = ex.fingers[hand][index];
         for (const p of t.pitches) out.push({ hand, index, beat, beats: t.beats, midi: pitchToMidi(p), finger });
         index++;
       }

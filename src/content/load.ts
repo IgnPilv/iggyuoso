@@ -64,6 +64,7 @@ export function loadContent(files: Record<string, string>): LoadResult {
       } else if (path.includes('/exercises/')) {
         const ex = parseExercise(raw);
         if (ex.id !== fileBase(path)) throw new FieldError(`id "${ex.id}" should match the file name "${fileBase(path)}"`);
+        if (exercises.has(ex.id)) throw new FieldError(`duplicate exercise id "${ex.id}"`);
         exercises.set(ex.id, ex);
       }
     } catch (e) {
@@ -172,12 +173,23 @@ export function parseExercise(raw: Raw): Exercise {
   const hand = base.hand;
   if ((hand === 'right' && !right) || (hand === 'left' && !left)) throw new FieldError(`hand is ${hand} but there are no ${hand} notes`);
   if ((hand === 'alternating' || hand === 'together') && !(right && left)) throw new FieldError(`hand ${hand} needs both right and left notes`);
-  const fingers = parseFingers(str(raw, 'fingers', false));
-  if (fingers.length) {
-    const only = right && left ? undefined : (right ?? left)!;
-    if (!only) throw new FieldError('"fingers" is only supported for one-hand exercises');
-    const count = countNotes(only);
-    if (fingers.length !== count) throw new FieldError(`${fingers.length} fingers for ${count} notes`);
+  // `fingers` for a one-hand exercise; `rightFingers` / `leftFingers` when both hands play.
+  const fingers: Record<'right' | 'left', number[]> = { right: [], left: [] };
+  const plain = parseFingers(str(raw, 'fingers', false));
+  if (plain.length) {
+    if (right && left) throw new FieldError('both hands play: use "rightFingers" and "leftFingers" instead of "fingers"');
+    fingers[right ? 'right' : 'left'] = plain;
+  }
+  for (const [h, tokens] of [['right', right], ['left', left]] as const) {
+    const own = parseFingers(str(raw, `${h}Fingers`, false));
+    if (!own.length) continue;
+    if (!tokens) throw new FieldError(`"${h}Fingers" given but there are no ${h} notes`);
+    fingers[h] = own;
+  }
+  for (const [h, tokens] of [['right', right], ['left', left]] as const) {
+    if (fingers[h].length && tokens && fingers[h].length !== countNotes(tokens)) {
+      throw new FieldError(`${fingers[h].length} ${h} fingers for ${countNotes(tokens)} ${h} notes`);
+    }
   }
   return { ...base, hand: hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind, tempo, meter, countIn, right, left, fingers, pitchMatch, bars };
 }

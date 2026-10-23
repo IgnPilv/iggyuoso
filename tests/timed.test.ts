@@ -120,3 +120,30 @@ describe('scoreTimed, two hands', () => {
     expect(r.extras[0].hand).toBe('left');
   });
 });
+
+describe('scoreTimed, small gaps between hands', () => {
+  const both = timed('id: t\nkind: timed\nhand: together\ntempo: 60\nmeter: 4/4\nright: "C4:w"\nleft: "C3:w"');
+  for (const gap of [30, 55, 59, 61]) {
+    it(`sees a ${gap} ms gap between the hands`, () => {
+      const r = scoreTimed(expectedNotes(both), [{ midi: 48, on: 0 }, { midi: 60, on: gap }], opts);
+      expect(r.together).toEqual({ sharedBeats: 1, meanGapMs: gap });
+      expect(r.notes.find((n) => n.expected.hand === 'right')!.offsetMs).toBe(gap);
+      expect(r.notes.find((n) => n.expected.hand === 'left')!.offsetMs).toBe(0);
+    });
+  }
+});
+
+describe('scoreTimed, count-in', () => {
+  it('ignores presses during the count-in', () => {
+    const r = scoreTimed(expectedNotes(quarters), [{ midi: 60, on: -2000 }, { midi: 60, on: -1000 }, ...perfect(beats(8))], opts);
+    expect(r.extras).toHaveLength(0);
+    expect(r.score).toBe(100);
+  });
+});
+
+describe('fingering', () => {
+  it('attaches each hand its own finger numbers', () => {
+    const ex = timed('id: t\nkind: timed\ntempo: 60\nmeter: 4/4\nright: "C4:h D4:h"\nleft: "C3:w"\nrightFingers: "1 2"\nleftFingers: "5"');
+    expect(expectedNotes(ex).map((e) => `${e.hand}:${e.finger}`)).toEqual(['left:5', 'right:1', 'right:2']);
+  });
+});
