@@ -1,0 +1,11 @@
+id: staccato-rh
+title: "Staccato in the right hand"
+kind: timed
+hand: right
+prompt: "Short and bouncy. Let go as soon as the key goes down."
+tempo: 80
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "C4:e r:e E4:e r:e G4:e r:e E4:e r:e | C4:e r:e E4:e r:e G4:h | G4:e r:e F4:e r:e E4:e r:e D4:e r:e | C4:w"
+fingers: "1 3 5 3 1 3 5 5 4 3 2 1"

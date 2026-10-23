@@ -1,0 +1,18 @@
+id: two-octave-c-together
+title: "Two octaves, hands together"
+unit: two-octave-scales
+skills: [scales, hands-together, contrary-motion]
+steps:
+  - explain: |
+      Hands together is easiest first in **contrary motion**: the hands move away from each other,
+      like a mirror. Then the same fingers play at the same time in both hands, and both thumbs pass
+      under together.
+
+      Start with the left hand's thumb on middle C and the right hand's thumb on the C above it.
+  - exercise: c-contrary-2oct
+  - explain: |
+      Now **parallel motion**: both hands go the same way, an octave apart. The thumbs no longer
+      cross together, so this is the hard one. Say the left hand's fingers out loud if it helps.
+      If one hand stumbles, go back to hands apart for a minute: *hands apart, then together*.
+  - exercise: c-scale-2oct-ht
+recap: "Contrary motion is a mirror; parallel motion needs each hand to know its own crossings."

@@ -1,0 +1,8 @@
+id: tap-three-eight
+title: "3/8 time"
+kind: tap
+prompt: "Three eighth notes to a bar, one strong and two light."
+tempo: 120
+meter: 3/8
+countIn: 1
+rhythm: "x:e x:e x:e | x:q x:e | x:e. x:s x:e | x:q. | x:e x:e x:e | x:q x:e | x:e x:e x:e | x:q."

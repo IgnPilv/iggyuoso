@@ -1,0 +1,11 @@
+id: major-or-minor-scale
+title: "Major or minor scale?"
+kind: quiz
+prompt: "Listen to the scale. Major or minor?"
+shuffle: true
+questions:
+  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 1, sound: "C4:e D4:e E4:e F4:e G4:e A4:e B4:e C5:e" }
+  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 0, sound: "A3:e B3:e C4:e D4:e E4:e F4:e G4:e A4:e" }
+  - { ask: "This scale is…", choices: ["Major", "Minor"], correct: 1, sound: "D4:e E4:e F4:e G4:e A4:e Bb4:e C5:e D5:e" }
+  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 1, sound: "G3:e A3:e B3:e C4:e D4:e E4:e F#4:e G4:e" }
+  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 0, sound: "E4:e F#4:e G4:e A4:e B4:e C5:e D5:e E5:e" }

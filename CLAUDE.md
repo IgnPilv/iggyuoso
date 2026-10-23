@@ -206,3 +206,12 @@ never copied pages). Start small, adapt as we go.
   at least two octaves, on white-key edges. `tests/octaves.test.ts` checks the convention, the
   window, that a right hand never goes below C3 nor a left hand above C5, and that any exercise
   about middle C plays C4. G position: left hand from the G below middle C (G3), as in C position.
+- 2026-10-23: Year 2 content complete (units 7–12, 56 lessons, checkpoints `y2-checkpoint-a`,
+  `y2-checkpoint-b`, exam `y2-exit`); `content/tree/year-2.yaml` now has nodes for every unit.
+  Two-octave scales use the tempo ladder; exam scales are harmonic minor. Pieces: our own studies
+  and songs, plus public-domain Minuet in G (Petzold), Korobeiniki, Lightly Row and Twinkle
+  Twinkle. The four exam genres are etude, polyphonic (minuet), large form (theme and variations)
+  and character piece. Quiz choices are written in a mixed order (the app shuffles questions
+  only). "Spot the change" uses a quiz with a sound of both versions until there is an ear item
+  for it. Staccato is written as a note plus a rest, because release timing isn't scored yet.
+  Staff pieces outside C carry `key:`.

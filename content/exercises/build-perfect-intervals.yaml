@@ -1,0 +1,13 @@
+id: build-perfect-intervals
+title: "Build perfect 4ths and 5ths"
+kind: build
+prompt: "Play both notes."
+tasks:
+  - { interval: "P5", from: "C4" }
+  - { interval: "P5", from: "D4" }
+  - { interval: "P4", from: "C4" }
+  - { interval: "P4", from: "E4" }
+  - { interval: "P5", from: "A3" }
+  - { interval: "P4", from: "G3" }
+  - { interval: "P5", from: "F4" }
+  - { interval: "P4", from: "D4" }

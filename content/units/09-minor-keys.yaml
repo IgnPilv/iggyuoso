@@ -1,0 +1,13 @@
+id: minor-keys
+title: "Minor keys"
+summary: "Relative keys, natural, harmonic and melodic minor, A and D minor over two octaves, cadences by ear, and Korobeiniki."
+lessons:
+  - relative-minor
+  - natural-minor
+  - harmonic-minor
+  - melodic-minor
+  - two-octave-a-minor
+  - two-octave-d-minor
+  - ear-cadences
+  - korobeiniki
+  - y2-checkpoint-a

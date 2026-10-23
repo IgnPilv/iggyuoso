@@ -1,0 +1,9 @@
+id: build-second-inversions
+title: "Build second inversions"
+kind: build
+prompt: "Play each chord with its 5th at the bottom."
+tasks:
+  - { notes: "G3 C4 E4", together: true, ask: "C major, second inversion (G at the bottom)" }
+  - { notes: "C4 F4 A4", together: true, ask: "F major, second inversion (C at the bottom)" }
+  - { notes: "D4 G4 B4", together: true, ask: "G major, second inversion (D at the bottom)" }
+  - { notes: "E4 A4 C5", together: true, ask: "A minor, second inversion (E at the bottom)" }

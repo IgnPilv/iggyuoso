@@ -1,0 +1,11 @@
+id: close-position-c
+title: "I–IV–V–I in C, close position"
+kind: timed
+hand: together
+prompt: "The right hand barely moves: keep common notes still, move the others by a step."
+tempo: 60
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "C4+E4+G4:w | C4+F4+A4:w | B3+D4+G4:w | C4+E4+G4:w"
+left: "C3:w | F3:w | G3:w | C3:w"

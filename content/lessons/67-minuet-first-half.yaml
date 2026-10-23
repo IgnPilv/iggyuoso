@@ -1,0 +1,19 @@
+id: minuet-first-half
+title: "Minuet in G, first half"
+unit: reading-hands-together
+skills: [repertoire, reading, baroque]
+steps:
+  - explain: |
+      This minuet is one of the most famous pieces for young pianists. It comes from a notebook
+      J.S. Bach kept for his wife Anna Magdalena around 1725, and was probably written by his friend
+      Christian Petzold. A **minuet** is a dance in 3/4, elegant and light.
+
+      The right hand jumps from D down to G in bar 1 and climbs up to a high G in bar 4: a real
+      workout for reading outside a five-finger position. Learn the right hand alone first.
+  - exercise: minuet-first-half-rh
+  - explain: |
+      Now with the left hand. It moves slowly, mostly one note a bar, but it is its own line, not
+      just chords. That is what makes Baroque music **polyphonic**: two voices, each with its own
+      tune.
+  - exercise: minuet-first-half
+recap: "Two independent lines, one dance. You'll finish the second half later this year."

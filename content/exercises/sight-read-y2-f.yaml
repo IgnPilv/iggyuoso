@@ -1,0 +1,11 @@
+id: sight-read-y2-f
+title: "Sight-reading: a waltz in F"
+kind: timed
+hand: together
+display: staff
+key: F
+tempo: 80
+meter: 3/4
+countIn: 1
+right: "A4:q G4:q F4:q | C5:h. | Bb4:q A4:q G4:q | F4:h."
+left: "F3:h. | E3:h. | C3:h. | F3:h."

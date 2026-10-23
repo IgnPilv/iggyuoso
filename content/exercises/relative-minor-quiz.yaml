@@ -1,0 +1,12 @@
+id: relative-minor-quiz
+title: "Relative keys"
+kind: quiz
+prompt: "Every major key has a relative minor that uses the same notes."
+shuffle: true
+questions:
+  - { ask: "A minor is the relative minor of…", choices: ["C major", "G major", "F major"], correct: 0 }
+  - { ask: "The relative minor starts how far below the major key's tonic?", choices: ["3 semitones (a minor 3rd)", "2 semitones", "5 semitones"], correct: 0 }
+  - { ask: "The relative minor of G major is…", choices: ["D minor", "E minor", "A minor"], correct: 1 }
+  - { ask: "The relative minor of F major is…", choices: ["D minor", "E minor", "C minor"], correct: 0 }
+  - { ask: "A minor's key signature has…", choices: ["One sharp", "No sharps or flats, like C major", "One flat"], correct: 1 }
+  - { ask: "Which degree of a major scale is the tonic of its relative minor?", choices: ["2", "5", "6"], correct: 2 }

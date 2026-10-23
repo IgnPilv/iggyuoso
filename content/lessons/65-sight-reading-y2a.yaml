@@ -1,0 +1,13 @@
+id: sight-reading-y2a
+title: "Sight-reading, hands together"
+unit: reading-hands-together
+skills: [reading, sight-reading]
+steps:
+  - explain: |
+      Short pieces you haven't seen before. Give yourself ten seconds to look at each one (key,
+      time, shapes), then play it once without stopping. A wrong note is fine; stopping is what we
+      are training out.
+  - exercise: sight-read-y2-c
+  - exercise: sight-read-y2-f
+  - exercise: sight-read-y2-g
+recap: "Ten seconds of looking, then play straight through."

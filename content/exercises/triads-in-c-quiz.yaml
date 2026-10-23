@@ -1,0 +1,10 @@
+id: triads-in-c-quiz
+title: "Triads in C major"
+kind: quiz
+prompt: "Think of the triads you just built."
+shuffle: true
+questions:
+  - { ask: "Which triads in C major are major?", choices: ["C, D and E", "C, F and G (I, IV, V)", "D, E and A (ii, iii, vi)"], correct: 1 }
+  - { ask: "Which triads in C major are minor?", choices: ["B only", "D, E and A (ii, iii, vi)", "C, F and G"], correct: 1 }
+  - { ask: "The triad on degree 7 (B D F) is…", choices: ["Diminished: two minor 3rds", "Minor", "Major"], correct: 0 }
+  - { ask: "Roman numerals: capitals (I, IV, V) mean…", choices: ["Minor chords", "Loud chords", "Major chords"], correct: 2 }

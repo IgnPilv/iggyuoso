@@ -1,0 +1,12 @@
+id: perfect-intervals-quiz
+title: "Perfect 4ths and 5ths"
+kind: quiz
+prompt: "4ths and 5ths are called perfect."
+shuffle: true
+questions:
+  - { ask: "A perfect 5th has how many semitones?", choices: ["4", "5", "7"], correct: 2 }
+  - { ask: "A perfect 4th has how many semitones?", choices: ["7", "5", "3"], correct: 1 }
+  - { ask: "C up a perfect 5th is…", choices: ["A", "F", "G"], correct: 2, staff: "C4:h G4:h" }
+  - { ask: "C up a perfect 4th is…", choices: ["E", "G", "F"], correct: 2, staff: "C4:h F4:h" }
+  - { ask: "D up a perfect 5th is…", choices: ["B", "A", "G"], correct: 1 }
+  - { ask: "B up to F is a 5th, but only 6 semitones. It is…", choices: ["A diminished 5th", "A major 5th", "A perfect 5th"], correct: 0 }

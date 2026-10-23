@@ -1,0 +1,11 @@
+id: staccato-lh
+title: "Staccato in the left hand"
+kind: timed
+hand: left
+prompt: "Bounce from the wrist, not the arm."
+tempo: 80
+meter: 4/4
+countIn: 1
+tempoLadder: true
+left: "C3:e r:e G3:e r:e C3:e r:e G3:e r:e | F3:e r:e C3:e r:e G3:h | G3:e r:e D3:e r:e G3:e r:e D3:e r:e | C3:w"
+fingers: "5 1 5 1 2 5 1 1 4 1 4 5"

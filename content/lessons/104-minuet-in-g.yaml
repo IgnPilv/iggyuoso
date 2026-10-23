@@ -1,0 +1,15 @@
+id: minuet-in-g
+title: "Minuet in G, complete"
+unit: pedal-and-genres
+skills: [repertoire, baroque, polyphony]
+steps:
+  - explain: |
+      Your **polyphonic** piece: the whole Minuet in G. You learned the first half earlier. The
+      second half starts the same way and then ends differently: the first half finishes on A
+      (chord V, an imperfect cadence), the second on G (a perfect cadence, home).
+
+      Make the two hands sound like two singers. Baroque music is played with clear, light fingers
+      and **no pedal**.
+  - exercise: minuet-first-half
+  - exercise: minuet-in-g
+recap: "Two voices, sixteen bars, imperfect cadence then perfect."

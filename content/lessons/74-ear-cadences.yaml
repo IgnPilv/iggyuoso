@@ -1,0 +1,15 @@
+id: ear-cadences
+title: "Finished or waiting?"
+unit: minor-keys
+skills: [ear, cadences]
+steps:
+  - explain: |
+      A **cadence** is the way a phrase ends, like punctuation in a sentence.
+
+      - A **perfect cadence** goes from chord V to chord I: a full stop. It sounds finished.
+      - An **imperfect cadence** ends on chord V: a comma. It sounds like a question waiting for an
+        answer.
+
+      Listen to how the last chord feels. Could the piece end there?
+  - exercise: ear-cadences
+recap: "Perfect cadence (V–I) = full stop. Imperfect (ends on V) = comma."

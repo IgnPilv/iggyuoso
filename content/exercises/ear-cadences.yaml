@@ -1,0 +1,12 @@
+id: ear-cadences
+title: "Perfect or imperfect cadence?"
+kind: quiz
+prompt: "Four chords. Does the music finish, or stop and wait?"
+shuffle: true
+questions:
+  - { ask: "How does this phrase end?", choices: ["Imperfect: unfinished, waiting", "Perfect: finished, at home"], correct: 1, sound: "C4+E4+G4:h F4+A4+C5:h | G3+B3+D4+G4:h C4+E4+G4+C5:h" }
+  - { ask: "How does this phrase end?", choices: ["Imperfect: unfinished, waiting", "Perfect: finished, at home"], correct: 0, sound: "C4+E4+G4:h F4+A4+C5:h | C4+E4+G4:h G3+B3+D4+G4:h" }
+  - { ask: "How does this phrase end?", choices: ["Imperfect: unfinished, waiting", "Perfect: finished, at home"], correct: 1, sound: "G3+B3+D4:h C4+E4+G4:h | D4+F#4+A4:h G3+B3+D4+G4:h" }
+  - { ask: "How does this phrase end?", choices: ["Perfect: finished, at home", "Imperfect: unfinished, waiting"], correct: 1, sound: "G3+B3+D4:h C4+E4+G4:h | G3+B3+D4:h D4+F#4+A4:h" }
+  - { ask: "How does this phrase end?", choices: ["Imperfect: unfinished, waiting", "Perfect: finished, at home"], correct: 1, sound: "F3+A3+C4:h Bb3+D4+F4:h | C4+E4+G4:h F3+A3+C4+F4:h" }
+  - { ask: "How does this phrase end?", choices: ["Perfect: finished, at home", "Imperfect: unfinished, waiting"], correct: 1, sound: "F3+A3+C4:h Bb3+D4+F4:h | F3+A3+C4:h C4+E4+G4:h" }

@@ -1,0 +1,7 @@
+id: ear-seconds
+title: "Hear major and minor 2nds"
+kind: ear
+prompt: "Two notes, one after the other. Was the step a major 2nd or a minor 2nd?"
+questions: 10
+items:
+  - { type: interval, pool: [m2, M2], from: [C4, D4, E4, F4, G4, A4], direction: up, answer: name }

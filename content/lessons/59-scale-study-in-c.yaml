@@ -1,0 +1,14 @@
+id: scale-study-in-c
+title: "Scale study in C"
+unit: two-octave-scales
+skills: [etude, scales, reading]
+steps:
+  - explain: |
+      An **etude** (a study) is a piece written to train one skill. This one turns your scale into
+      music: the right hand runs up and down in eighth notes while the left hand holds two-note
+      chords.
+
+      Read it from the sheet. Look for the runs that go up (bars 1 and 3) and down (bar 5). When
+      your hand sees a run, the fingering you learned in the scale takes over.
+  - exercise: scale-study-in-c
+recap: "Scales aren't only exercises: whole pieces are built from them."

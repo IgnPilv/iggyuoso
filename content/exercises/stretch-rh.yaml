@@ -1,0 +1,12 @@
+id: stretch-rh
+title: "Stretching and moving"
+kind: timed
+hand: right
+prompt: "The hand opens wide for the octave, then closes again."
+display: staff
+clef: treble
+tempo: 66
+meter: 4/4
+countIn: 1
+right: "C4:q E4:q G4:q C5:q | B4:q G4:q E4:h | D4:q F4:q A4:q C5:q | B4:w"
+fingers: "1 2 3 5 4 3 2 1 2 4 5 4"

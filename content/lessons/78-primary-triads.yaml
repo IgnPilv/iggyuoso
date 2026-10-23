@@ -1,0 +1,14 @@
+id: primary-triads
+title: "The primary triads"
+unit: inversions
+skills: [theory, triads, harmony]
+steps:
+  - explain: |
+      Of the seven chords in a key, three do most of the work: **I** (the tonic, home), **IV** (the
+      subdominant, moving away) and **V** (the dominant, wanting to go home).
+
+      Between them they contain every note of the scale, so they can harmonise almost any simple
+      tune. Thousands of folk songs, hymns and pop songs use nothing else.
+  - exercise: primary-triads-quiz
+  - exercise: build-primary-triads
+recap: "I, IV and V: home, away, and the pull back home."

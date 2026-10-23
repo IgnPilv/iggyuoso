@@ -1,0 +1,10 @@
+id: g-minor-2oct-rh
+title: "G harmonic minor, two octaves, right hand"
+kind: timed
+hand: right
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "G3:e A3:e Bb3:e C4:e D4:e Eb4:e F#4:e G4:e | A4:e Bb4:e C5:e D5:e Eb5:e F#5:e G5:e F#5:e | Eb5:e D5:e C5:e Bb4:e A4:e G4:e F#4:e Eb4:e | D4:e C4:e Bb3:e A3:e G3:h"
+fingers: "1 2 3 1 2 3 4 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1 4 3 2 1 3 2 1"

@@ -1,0 +1,19 @@
+id: thirds-major-minor
+title: "Major and minor 3rds"
+unit: two-octave-scales
+skills: [intervals, theory]
+steps:
+  - explain: |
+      A 3rd skips one letter: C-E, D-F, E-G. They look alike on the staff, but they are not all the
+      same size:
+
+      - a **major 3rd** is 4 semitones (C to E)
+      - a **minor 3rd** is 3 semitones (D to F)
+
+      You already know this sound from Year 1: the 3rd is what makes a chord major or minor.
+  - exercise: thirds-quiz
+  - exercise: build-thirds
+  - explain: |
+      Now by ear, starting from different notes, and sometimes with both notes at once.
+  - exercise: ear-thirds-any-root
+recap: "Major 3rd = 4 semitones, minor 3rd = 3. The bottom 3rd decides major or minor."

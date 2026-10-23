@@ -1,0 +1,14 @@
+id: sixteenth-notes
+title: "Sixteenth notes"
+unit: reading-hands-together
+skills: [rhythm, sixteenths]
+steps:
+  - explain: |
+      Cut an eighth note in half and you get a **sixteenth note**: four of them in one beat.
+      It has two flags (or two beams when they are joined).
+
+      Count them **1-e-and-a, 2-e-and-a**: say "one ee and uh". The numbers stay on the click.
+      Keep the fingers close to the keys; fast notes are small movements.
+  - exercise: tap-sixteenths
+  - exercise: sixteenths-rh
+recap: "Four sixteenths to a beat: 1-e-and-a. Small, close movements."

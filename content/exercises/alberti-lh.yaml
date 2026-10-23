@@ -1,0 +1,10 @@
+id: alberti-lh
+title: "Broken chords: low, high, middle, high"
+kind: timed
+hand: left
+tempo: 72
+meter: 4/4
+countIn: 1
+tempoLadder: true
+left: "C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e A3:e F3:e A3:e | B2:e G3:e F3:e G3:e B2:e G3:e F3:e G3:e | C3:e G3:e E3:e G3:e C3:h"
+fingers: "5 1 3 1 5 1 3 1 5 1 2 1 5 1 2 1 5 1 2 1 5 1 2 1 5 1 3 1 5"

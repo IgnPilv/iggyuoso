@@ -1,0 +1,10 @@
+id: twinkle-alberti
+title: "Twinkle with broken chords"
+kind: timed
+hand: together
+tempo: 72
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "C4:q C4:q G4:q G4:q | A4:q A4:q G4:h | F4:q F4:q E4:q E4:q | D4:q D4:q C4:h"
+left: "C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e G3:e E3:e G3:e | B2:e G3:e F3:e G3:e C3:h"

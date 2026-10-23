@@ -1,0 +1,16 @@
+id: chromatic-scale
+title: "The chromatic scale"
+unit: pedal-and-genres
+skills: [technique, scales]
+steps:
+  - explain: |
+      The **chromatic scale** plays every key, white and black, in order: twelve semitones to the
+      octave. It has no key and no home; it's pure colour (*chroma* is Greek for colour).
+
+      The fingering is simple: **3 on every black key**, thumb on the white keys. Where two white
+      keys sit together (E-F and B-C), use 1-2 in the right hand going up, and 2-1 in the left hand.
+      Keep the hand close to the black keys so the thumb doesn't have far to go.
+  - exercise: build-chromatic
+  - exercise: chromatic-rh
+  - exercise: chromatic-lh
+recap: "Every key in order: 3 on black, 1 on white, 2 where two whites meet."

@@ -1,0 +1,8 @@
+id: build-natural-minor
+title: "Build natural minor scales"
+kind: build
+prompt: "Play each scale going up, one octave."
+tasks:
+  - { scale: "A natural minor" }
+  - { scale: "E natural minor" }
+  - { scale: "D natural minor", octave: 4 }

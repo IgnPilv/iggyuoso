@@ -1,0 +1,10 @@
+id: d-minor-2oct-lh
+title: "D harmonic minor, two octaves, left hand"
+kind: timed
+hand: left
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: "D3:e E3:e F3:e G3:e A3:e Bb3:e C#4:e D4:e | E4:e F4:e G4:e A4:e Bb4:e C#5:e D5:e C#5:e | Bb4:e A4:e G4:e F4:e E4:e D4:e C#4:e Bb3:e | A3:e G3:e F3:e E3:e D3:h"
+fingers: "5 4 3 2 1 3 2 1 4 3 2 1 3 2 1 2 3 1 2 3 4 1 2 3 1 2 3 4 5"

@@ -1,0 +1,11 @@
+id: ear-y2-checkpoint-b
+title: "Year 2, checkpoint 2: ears"
+kind: ear
+prompt: "Mixed questions, no hints. Answers at the end."
+feedback: none
+questions: 15
+items:
+  - { type: degree, key: G, pool: [1, 2, 3, 4, 5, 6, 7] }
+  - { type: interval, pool: [m3, M3, P4, P5], from: [C4, D4, F4, G4], direction: up, answer: name }
+  - { type: chord, pool: [maj, min, dim], root: C4 }
+  - { type: melody, notes: "G4 E4 F4 D4 C4", plays: 2 }

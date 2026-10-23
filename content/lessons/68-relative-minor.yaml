@@ -1,0 +1,14 @@
+id: relative-minor
+title: "Relative major and minor"
+unit: minor-keys
+skills: [theory, keys, minor]
+steps:
+  - explain: |
+      Play the white keys from **C to C**: that's C major, bright. Now play the same white keys from
+      **A to A**: same notes, but the music sounds darker. That's **A minor**.
+
+      Keys that share the same notes (and the same key signature) are **relatives**. To find the
+      relative minor of a major key, go down three semitones from its tonic, or up to its 6th degree:
+      C major → A minor, G major → E minor, F major → D minor.
+  - exercise: relative-minor-quiz
+recap: "Relative keys share notes and key signature. The minor tonic is the major key's 6th degree."

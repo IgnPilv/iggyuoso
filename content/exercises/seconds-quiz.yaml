@@ -1,0 +1,12 @@
+id: seconds-quiz
+title: "Major and minor 2nds"
+kind: quiz
+prompt: "A 2nd is the step to the next letter. Is it major or minor?"
+shuffle: true
+questions:
+  - { ask: "E up to F is a…", choices: ["Minor 2nd (1 semitone)", "Major 2nd (2 semitones)"], correct: 0, staff: "E4:h F4:h" }
+  - { ask: "C up to D is a…", choices: ["Major 2nd (2 semitones)", "Minor 2nd (1 semitone)"], correct: 0, staff: "C4:h D4:h" }
+  - { ask: "B up to C is a…", choices: ["Minor 2nd (1 semitone)", "Major 2nd (2 semitones)"], correct: 0, staff: "B4:h C5:h" }
+  - { ask: "F up to G is a…", choices: ["Minor 2nd (1 semitone)", "Major 2nd (2 semitones)"], correct: 1, staff: "F4:h G4:h" }
+  - { ask: "A up to Bb is a…", choices: ["Major 2nd (2 semitones)", "Minor 2nd (1 semitone)"], correct: 1, staff: "A4:h Bb4:h" }
+  - { ask: "Another name for a major 2nd is a…", choices: ["Semitone", "Tone", "Third"], correct: 1 }

@@ -1,0 +1,13 @@
+id: etude-in-g
+title: "Running etude in G"
+kind: timed
+hand: together
+prompt: "Even eighth notes all the way. Practise slowly, then climb the tempo ladder."
+display: staff
+key: G
+tempo: 80
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "G4:e A4:e B4:e C5:e D5:e C5:e B4:e A4:e | G4:e A4:e B4:e G4:e D5:h | E5:e D5:e C5:e B4:e A4:e B4:e C5:e A4:e | B4:e A4:e G4:e F#4:e G4:h | C5:e B4:e A4:e G4:e F#4:e G4:e A4:e F#4:e | G4:e F#4:e E4:e D4:e E4:e F#4:e G4:e A4:e | B4:e G4:e A4:e F#4:e G4:e E4:e F#4:e D4:e | G4:w"
+left: "G2:w | G2:h B2:h | C3:w | D3:h G2:h | A2:h D3:h | E3:h C3:h | G2:h D3:h | G2:w"

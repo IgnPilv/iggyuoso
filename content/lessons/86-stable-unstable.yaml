@@ -1,0 +1,18 @@
+id: stable-unstable
+title: "Notes that rest, notes that pull"
+unit: harmonising
+skills: [theory, ear, scale-degrees]
+steps:
+  - explain: |
+      In any key, three degrees feel **stable**: 1, 3 and 5. They are the notes of chord I, home.
+      The other four are **unstable**: they lean towards a neighbour.
+
+      - **7** pulls up to 1 (that's why it's called the *leading note*)
+      - **4** sinks down to 3
+      - **2** steps down to 1, or up to 3
+      - **6** falls to 5
+
+      Melodies are built from this tug between rest and pull. Harmony works the same way.
+  - exercise: stable-unstable-quiz
+  - exercise: ear-degrees-g-resolve
+recap: "1, 3, 5 rest; 2, 4, 6, 7 pull towards them."

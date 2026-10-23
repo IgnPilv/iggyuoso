@@ -1,0 +1,11 @@
+id: primary-triads-quiz
+title: "Primary triads"
+kind: quiz
+prompt: "I, IV and V are the three most important chords in any key."
+shuffle: true
+questions:
+  - { ask: "I, IV and V in G major are…", choices: ["G, C and D", "G, A and D", "G, C and E minor"], correct: 0 }
+  - { ask: "I, IV and V in F major are…", choices: ["F, G and C", "F, Bb and C", "F, B and C"], correct: 1 }
+  - { ask: "Chord V in D major is…", choices: ["A major", "G major", "E minor"], correct: 0 }
+  - { ask: "Chord IV in C major is…", choices: ["F major", "G major", "D minor"], correct: 0 }
+  - { ask: "Together, I, IV and V contain…", choices: ["Just three notes", "Only the black keys", "Every note of the scale"], correct: 2 }

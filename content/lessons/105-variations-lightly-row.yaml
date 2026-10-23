@@ -1,0 +1,17 @@
+id: variations-lightly-row
+title: "Theme and variations"
+unit: pedal-and-genres
+skills: [repertoire, form, creativity]
+steps:
+  - explain: |
+      Your **large-form** piece is a **theme and variations**: a tune, then the same tune
+      changed in different ways. Mozart's Twinkle variations work like this, and so does this one.
+
+      - **Theme**: Lightly Row with held chords, as you learned it.
+      - **Variation 1**: the left hand breaks the chords (low, high, middle, high).
+      - **Variation 2**: the whole tune moves into **C minor**: every E becomes **Eb**, and the
+        C chord becomes C minor. Same tune, new mood.
+
+      It is 24 bars long. If one variation is harder, loop just those bars until they settle.
+  - exercise: variations-lightly-row
+recap: "One tune, three versions: held, broken, and minor."
