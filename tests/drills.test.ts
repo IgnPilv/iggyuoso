@@ -169,6 +169,119 @@ describe('ear session', () => {
   });
 });
 
+describe('ear items for a beginner ear', () => {
+  const run = (yaml: string, n: number, check: (q: EarSession['current']) => void) => {
+    const s = new EarSession(ex<EarExercise>(yaml), cal88);
+    for (let i = 0; i < n; i++) { check(s.current); s.pick(s.current.correct ?? 0); s.next(); }
+    return s;
+  };
+
+  it('parses the new items and rejects bad ones', () => {
+    const e = ex<EarExercise>(`
+id: e
+kind: ear
+items:
+  - { type: compare, pool: [same, different], gap: [1, 3] }
+  - { type: note, pool: [C4, G4], lit: true, reference: C4 }
+  - { type: contour, length: 4 }
+  - { type: motion, pool: [step, leap] }
+  - { type: count, pool: [1, 2] }
+  - { type: rhythm, pool: ["x:q x:q x:h", "x:h x:h", "x:q r:q x:h"], meter: 4/4, tempo: 90 }
+  - { type: loudness, notes: "C4 E4 G4" }
+  - { type: melody, notes: "C4 D4", lit: true }`);
+    expect(e.items.map((i) => i.type)).toEqual(['compare', 'note', 'contour', 'motion', 'count', 'rhythm', 'loudness', 'melody']);
+    expect(e.items[0]).toMatchObject({ gap: [1, 3] });
+    expect(e.items[2]).toMatchObject({ length: 4 });
+    expect((e.items[2] as { pool: string[] }).pool).toHaveLength(8);
+    expect(() => ex(`{id: e, kind: ear, items: [{ type: compare, pool: [higher, different] }]}`)).toThrow();
+    expect(() => ex(`{id: e, kind: ear, items: [{ type: contour, length: 3, pool: [up] }]}`)).toThrow(/up-down/);
+    expect(() => ex(`{id: e, kind: ear, items: [{ type: rhythm, pool: ["x:q x:q", "x:h x:h"] }]}`)).toThrow(/bar 1/);
+    expect(() => ex(`{id: e, kind: ear, items: [{ type: rhythm, pool: ["C4:w", "x:w"] }]}`)).toThrow(/x for every note/);
+    expect(() => ex(`{id: e, kind: ear, items: [{ type: count, pool: [5] }]}`)).toThrow(/1 to 4/);
+  });
+
+  it('compare: Same / Different with gaps in the asked range', () => {
+    run(`{id: e, kind: ear, questions: 40, items: [{ type: compare, pool: [same, different], gap: [3, 4], range: [C4, C5] }]}`, 40, (q) => {
+      expect(q.choices).toEqual(['Same', 'Different']);
+      const [a, b] = q.prompt.map((x) => x.notes[0]);
+      if (q.correct === 0) expect(a).toBe(b);
+      else expect([3, 4]).toContain(Math.abs(a - b));
+    });
+  });
+
+  it('note: lights the pool keys and plays the reference first', () => {
+    run(`{id: e, kind: ear, questions: 5, items: [{ type: note, pool: [C4, G4], lit: true, reference: C4 }]}`, 5, (q) => {
+      expect(q.lit).toEqual([60, 67]);
+      expect(q.prompt[0].notes).toEqual([60]);
+      expect(q.prompt).toHaveLength(2);
+      expect(q.ask).toMatch(/first note was C/);
+    });
+  });
+
+  it('contour: notes move the way the right arrows say, inside the range', () => {
+    run(`{id: e, kind: ear, questions: 30, items: [{ type: contour, length: 3, range: [C4, C5], gap: [2, 5] }]}`, 30, (q) => {
+      const ns = q.prompt.map((x) => x.notes[0]);
+      expect(ns).toHaveLength(3);
+      ns.forEach((n) => { expect(n).toBeGreaterThanOrEqual(60); expect(n).toBeLessThanOrEqual(72); });
+      const shape = ns.slice(1).map((n, i) => (n > ns[i] ? '↗' : '↘')).join(' ');
+      expect(q.choices![q.correct!]).toBe(shape);
+      expect(q.choices).toHaveLength(4);
+    });
+  });
+
+  it('motion: same, a step of 1-2 or a leap of 5 or more', () => {
+    run(`{id: e, kind: ear, questions: 40, items: [{ type: motion }]}`, 40, (q) => {
+      const [a, b] = q.prompt.map((x) => x.notes[0]);
+      const d = Math.abs(a - b);
+      const want = q.choices![q.correct!];
+      if (want === 'The same') expect(d).toBe(0);
+      else if (want === 'A step') expect([1, 2]).toContain(d);
+      else expect(d).toBeGreaterThanOrEqual(5);
+    });
+  });
+
+  it('count: that many different notes at once', () => {
+    run(`{id: e, kind: ear, questions: 30, items: [{ type: count, pool: [1, 2, 3, 4] }]}`, 30, (q) => {
+      const notes = q.prompt[0].notes;
+      expect(new Set(notes).size).toBe(notes.length);
+      expect(q.choices![q.correct!]).toBe(notes.length === 1 ? '1 note' : `${notes.length} notes`);
+      notes.forEach((n) => { expect(n).toBeGreaterThanOrEqual(48); expect(n).toBeLessThanOrEqual(72); });
+    });
+  });
+
+  it('rhythm: a bar of clicks, then the rhythm on one pitch; up to four pictures', () => {
+    const s = new EarSession(ex<EarExercise>(`{id: e, kind: ear, questions: 1, items: [{ type: rhythm, tempo: 60, pool: ["x:q x:q x:h", "x:h x:h", "x:w", "x:q x:q x:q x:q", "x:h x:q x:q"] }]}`), cal88);
+    const q = s.current;
+    expect(q.prompt.filter((x) => x.click)).toHaveLength(4);
+    expect(q.prompt.filter((x) => x.click === 'accent')).toHaveLength(1);
+    const notes = q.prompt.filter((x) => !x.click);
+    expect(notes[0].at).toBe(4000); // after the count-in bar, at 60 bpm
+    notes.forEach((x) => expect(x.notes).toEqual([72]));
+    expect(q.pictures).toHaveLength(4);
+    const beats = q.pictures![q.correct!].map((t) => t.beats);
+    expect(notes.length).toBe(beats.length);
+  });
+
+  it('rhythm in 6/8: the tempo counts dotted quarters', () => {
+    const s = new EarSession(ex<EarExercise>(`{id: e, kind: ear, questions: 1, items: [{ type: rhythm, meter: 6/8, tempo: 60, pool: ["x:q. x:q.", "x:q x:e x:q x:e"] }]}`), cal88);
+    const clicks = s.current.prompt.filter((x) => x.click);
+    expect(clicks.map((x) => x.at)).toEqual([0, 1000]);
+  });
+
+  it('loudness: the same phrase twice, the second louder or softer', () => {
+    run(`{id: e, kind: ear, questions: 20, items: [{ type: loudness, notes: "C4 E4" }]}`, 20, (q) => {
+      expect(q.prompt).toHaveLength(4);
+      const [first, second] = [q.prompt[0].vol!, q.prompt[2].vol!];
+      expect(q.choices![q.correct!]).toBe(second > first ? 'Louder' : 'Softer');
+    });
+  });
+
+  it('melody: lights the keys the phrase uses', () => {
+    const s = new EarSession(ex<EarExercise>(`{id: e, kind: ear, questions: 1, items: [{ type: melody, notes: "C4 E4 C4", lit: true }]}`), cal88);
+    expect(s.current.lit).toEqual([60, 64]);
+  });
+});
+
 describe('quiz and build sessions', () => {
   it('quiz: buttons and played answers', () => {
     const q = ex<QuizExercise>(`

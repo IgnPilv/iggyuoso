@@ -322,3 +322,10 @@ never copied pages). Start small, adapt as we go.
 - 2026-10-23: Slogan is now "Easy as C D E" (Ignas: "lose the hands apart then together slogan,
   easy as C D E is better"), in the home hero and the header tagline. Practising hands apart stays
   as teaching advice in lessons.
+- 2026-10-23: Ear items for a beginner ear (asked by the tree thread, `content/README.md`): `compare`
+  takes `gap` and a Same / Different pool; `note` takes `lit` (pool keys lit as options) and
+  `reference` (a named note first); `melody` takes `lit`; new `contour` (arrow buttons), `motion`
+  (same / step 1–2 / leap 5–9), `count` (1–4 notes at once), `rhythm` (a bar of clicks, then the
+  rhythm on one note; answers are rhythm pictures, 3–4 shown) and `loudness` (the phrase twice:
+  was the second louder or softer, since one sound alone has nothing to compare with). Lit option
+  keys use the `--key-option` token. Demo scenes "First ear steps" and "Hearing rhythms".
