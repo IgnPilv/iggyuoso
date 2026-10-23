@@ -313,3 +313,9 @@ never copied pages). Start small, adapt as we go.
   rhythm (after dotted quarters), why music has keys (after the key of F), the interval map (all
   intervals to the octave, inversions add to 9; Year 2 after perfect intervals) and the circle of
   fifths (after A major and G minor). Placed in their units and in the tree.
+- 2026-10-23: Exercise options carry over (Ignas: "remember default options, if I go 100% do next
+  also"). The tempo picked (`settings.tempo`, percent), Click, Guide notes and whether the Options
+  drawer is open (`settings.optionsOpen`) are saved when changed and are where the next exercise
+  starts. A remembered tempo wins over the tempo ladder's step (the ladder line still says which
+  tempo counts); a ladder moving by itself does not change the remembered tempo. The demo keeps
+  its own options and never saves them. Demo scene "Options carry over".

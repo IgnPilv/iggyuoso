@@ -7,7 +7,7 @@ import { parse } from 'yaml';
 import { loadContent, parseExercise } from '../content/load';
 import { h, type View } from './dom';
 import { pathMap } from './pathMap';
-import { mountExercise } from './players';
+import { mountExercise, resetDemoOptions } from './players';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
 import { demoProgress, lessonGoals, nodeOfLesson } from '../progress';
@@ -331,6 +331,34 @@ function scenes(): Scene[] {
       setView(box, 'falling');
       timers.push(window.setTimeout(() => press(box, 'Play'), 900));
       return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Options carry over',
+    caption: 'Tempo, click, guide notes and whether Options is open are remembered: set 100% (or switch the click off) on one exercise, and the next one starts the same way.',
+    run: (box, next) => {
+      resetDemoOptions();
+      const timers: number[] = [];
+      const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+      const first = parseExercise(parse(SAMPLES.ladder));
+      let cleanup = mountExercise(box, first, DEMO_CALIBRATION, () => {});
+      setView(box, 'classic');
+      const change = (sel: string, f: (el: HTMLInputElement & HTMLSelectElement) => void) => {
+        const el = box.querySelector<HTMLInputElement & HTMLSelectElement>(sel);
+        if (el) { f(el); el.dispatchEvent(new Event('change')); }
+      };
+      later(1200, () => { const d = box.querySelector('details.drawer') as HTMLDetailsElement | null; if (d) d.open = true; });
+      later(2600, () => change('select[aria-label=tempo]', (el) => { el.value = '100'; }));
+      later(3800, () => change('.drawer input[type=checkbox]', (el) => { el.checked = false; }));
+      later(6000, () => {
+        cleanup();
+        box.replaceChildren();
+        const other = allExercises().find((e) => isTimed(e) && e.id !== first.id && !!e.ladder) ?? parseExercise(parse(SAMPLES.sixEight));
+        cleanup = mountExercise(box, other, DEMO_CALIBRATION, () => {});
+        setView(box, 'classic');
+      });
+      later(11000, next);
+      return () => { timers.forEach(clearTimeout); cleanup(); resetDemoOptions(); };
     },
   });
   out.push({
