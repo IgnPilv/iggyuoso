@@ -1,0 +1,81 @@
+id: interval-map-quiz
+title: Interval map quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Which interval?
+  choices: [Perfect 5th, Minor 6th, Major 6th]
+  correct: 2
+  why: 6 letters, 9 semitones.
+  staff: C4:h A4:h
+  clef: treble
+- ask: Which interval?
+  choices: [Major 7th, Minor 7th, Major 6th]
+  correct: 1
+  why: 7 letters, 10 semitones.
+  staff: G4:h F5:h
+  clef: treble
+- ask: Which interval?
+  choices: [Octave, Minor 7th, Major 7th]
+  correct: 2
+  why: 7 letters, 11 semitones.
+  staff: C4:h B4:h
+  clef: treble
+- ask: Which interval?
+  choices: [Minor 7th, Minor 6th, Major 6th]
+  correct: 1
+  why: 6 letters, 8 semitones.
+  staff: E4:h C5:h
+  clef: treble
+- ask: Which interval?
+  choices: [Major 3rd, Perfect 4th, Perfect 5th]
+  correct: 1
+  why: 4 letters, 5 semitones.
+  staff: A3:h D4:h
+  clef: treble
+- ask: Which interval?
+  choices: [Perfect 4th, Tritone (augmented 4th), Perfect 5th]
+  correct: 1
+  why: 'F to B: 4 letters, 6 semitones.'
+  staff: F4:h B4:h
+  clef: treble
+- ask: How many semitones in a major 6th?
+  choices: ['8', '10', '9']
+  correct: 2
+  why: C to A.
+- ask: How many semitones in a minor 7th?
+  choices: ['10', '11', '9']
+  correct: 0
+  why: C to B♭.
+- ask: One semitone smaller than a perfect 5th is...
+  choices: [A perfect 4th, A diminished 5th, A minor 5th]
+  correct: 1
+  why: Perfect intervals become diminished, not minor.
+- ask: A major 3rd upside down becomes...
+  choices: [A minor 6th, A major 6th, A minor 3rd]
+  correct: 0
+  why: 3 + 6 = 9, major flips to minor.
+- ask: A minor 2nd upside down becomes...
+  choices: [A major 7th, A minor 7th, A major 2nd]
+  correct: 0
+  why: 2 + 7 = 9, minor flips to major.
+- ask: Inverted interval numbers always add up to...
+  choices: ['8', '9', '12']
+  correct: 1
+  why: A 3rd and a 6th, a 4th and a 5th...
+- ask: Which interval is 6 semitones?
+  choices: [A perfect 5th, The tritone, A minor 6th]
+  correct: 1
+  why: Exactly half an octave.
+- ask: Listen. Which interval?
+  choices: [Perfect 5th, Major 6th, Octave]
+  correct: 1
+  why: 'Wide and warm: 9 semitones.'
+  sound: C4:h A4:h
+- ask: Listen. Which interval?
+  choices: [Major 7th, Octave, Perfect 5th]
+  correct: 1
+  why: 'The same note, higher: 12 semitones.'
+  sound: C4:h C5:h

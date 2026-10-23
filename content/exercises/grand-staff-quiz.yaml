@@ -1,0 +1,74 @@
+id: grand-staff-quiz
+title: Grand staff map quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Which note is this?
+  choices: [G, A, F]
+  correct: 0
+  why: 'The treble clef''s line: G.'
+  staff: G4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [F, E, G]
+  correct: 0
+  why: 'The bass clef''s line: F.'
+  staff: F3:w
+  clef: bass
+- ask: Which note is this?
+  choices: [F, G, E]
+  correct: 0
+  why: 'Top line of the treble staff: F.'
+  staff: F5:w
+  clef: treble
+- ask: Which note is this?
+  choices: [G, F, A]
+  correct: 0
+  why: 'Bottom line of the bass staff: G.'
+  staff: G2:w
+  clef: bass
+- ask: Which note is this?
+  choices: [C, D, E]
+  correct: 1
+  why: 'E G B **D** F: the fourth line.'
+  staff: D5:w
+  clef: treble
+- ask: Which note is this?
+  choices: [C, D, B]
+  correct: 0
+  why: 'F A **C** E: the third space.'
+  staff: C5:w
+  clef: treble
+- ask: Which note is this?
+  choices: [C, D, E]
+  correct: 1
+  why: 'G B **D** F A: the middle line of the bass staff.'
+  staff: D3:w
+  clef: bass
+- ask: Which note is this?
+  choices: [E, D, F]
+  correct: 0
+  why: 'A C **E** G: the third space of the bass staff.'
+  staff: E3:w
+  clef: bass
+- ask: The treble lines from the bottom are...
+  choices: [F A C E, E G B D F, G B D F A]
+  correct: 1
+  why: Every Good Boy Deserves Fruit.
+- ask: The bass lines from the bottom are...
+  choices: [G B D F A, E G B D F, A C E G]
+  correct: 0
+  why: Good Boys Deserve Fun Always.
+- ask: The bass spaces from the bottom are...
+  choices: [A C E G, F A C E, G B D F]
+  correct: 0
+  why: All Cows Eat Grass.
+- ask: Going from a line to the space just above is...
+  choices: [Two letters up, A semitone, The next letter]
+  correct: 2
+  why: Each line and space is one white key.
+- {ask: Play this note., play: G4, why: 'Treble G landmark: five white keys above middle C.', staff: 'G4:w', clef: treble}
+- {ask: Play this note., play: F3, why: 'Bass F landmark: five white keys below middle C.', staff: 'F3:w', clef: bass}
+- {ask: Play this note., play: F5, why: Top line of the treble staff., staff: 'F5:w', clef: treble}

@@ -1,0 +1,58 @@
+id: circle-of-fifths
+title: 'Big idea: the circle of fifths'
+unit: pedal-and-genres
+skills: [keys, key-signature, circle-of-fifths]
+steps:
+- explain: |
+    You now know eight keys. Is there an order behind their sharps and flats? Yes: the **circle of fifths**.
+  terms: [circle of fifths]
+- explain: |
+    Start on C (no sharps). Go **up a 5th** to G: one sharp. Up a 5th again to D: two sharps. Then A: three.
+    Each step up a 5th adds **one sharp**.
+  keys: {notes: C4 G4 D5 A5, labels: names}
+  sound: C4+E4+G4:h G4+B4+D5:h D4+F#4+A4:h A4+C#5+E5:h
+  callout: |
+    C (0) → G (1♯) → D (2♯) → A (3♯) → E (4♯) → B (5♯)...
+  check:
+    ask: Which key has two sharps?
+    choices: [A major, D major, G major]
+    correct: 1
+    why: C, up a 5th to G (1♯), up another to D (2♯).
+- explain: |
+    The new sharp is always the **7th note of the new key**, the leading note: F♯ in G, C♯ in D, G♯ in A.
+    That gives the **order of sharps**: **F C G D A E B**.
+  staff: {notes: 'D4:q F#4:q A4:q C#5:q | D5:w', key: D}
+  terms: [order of sharps]
+- explain: |
+    Now go the other way. From C, go **down a 5th** (or up a 4th) to F: one flat. Then B♭: two flats. Then E♭: three.
+    Each step adds **one flat**, in the order **B E A D G C F**: the sharps backwards.
+  keys: {notes: C4 F4 Bb4 Eb5, labels: names}
+  callout: |
+    C (0) → F (1♭) → B♭ (2♭) → E♭ (3♭)...
+  check:
+    ask: Which key has two flats?
+    choices: [B♭ major, F major, E♭ major]
+    correct: 0
+    why: C, down a 5th to F (1♭), down another to B♭ (2♭).
+- explain: |
+    Each major key's **relative minor** shares its signature, three semitones down:
+    C/A minor, G/E minor, D/B minor, F/D minor, B♭/G minor.
+  terms: [relative minor]
+- explain: |
+    Two quick tricks for reading a signature:
+    - **Sharps:** the last sharp is the leading note, so the key is one semitone above it (last sharp C♯ → D major).
+    - **Flats:** the second-to-last flat names the key (B♭ E♭ → B♭ major). One flat is F major.
+  staff: {notes: 'A4:q C#5:q E5:q A5:q', key: A}
+  check:
+    ask: The last sharp is G♯. The major key is...
+    choices: [G major, A major, E major]
+    correct: 1
+    why: 'One semitone above the last sharp: A.'
+    staff: {notes: 'A4:w', key: A}
+- explain: |
+    Explore: this playground is in D major. Walk up the scale and watch: F and C show as sharps with no sign.
+- playground: {clef: treble, notes: C4-C6, prompt: 'D major: play D E F♯ G A B C♯ D.', key: D}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: circle-of-fifths-quiz}
+recap: Up a 5th adds a sharp (F C G D A E B); down a 5th adds a flat (B E A D G C F).

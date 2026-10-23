@@ -1,0 +1,56 @@
+id: grand-staff-map
+title: 'Big idea: the grand staff map'
+unit: meet-the-keyboard
+skills: [staff, treble-clef, bass-clef, reading]
+steps:
+- explain: |
+    You have met the treble staff and the bass staff. Piano music joins them into one picture,
+    the **grand staff**, that covers almost the whole keyboard. This lesson is a map of it.
+  staff: {notes: 'C3:h C5:h', clef: grand}
+  terms: [grand staff, brace]
+- explain: |
+    Every line and space is one white key, going up in letter order: line, space, line, space...
+    So you never need to learn every note by heart. Learn a few **landmarks** and count from them.
+  callout: |
+    Line → space → line = the next letter each time.
+- explain: |
+    **Landmark 1: middle C.** On its own ledger line, just below the treble staff and just above the bass staff.
+    It is the same key in both places.
+  staff: {notes: 'C4:w', clef: grand, labels: names}
+  keys: {notes: C4, labels: names}
+  check: {ask: 'Play the note the landmark shows: middle C.', play: C4, why: Middle C sits between the staffs on
+      its own ledger line.}
+- explain: |
+    **Landmark 2: treble G.** The treble clef curls round the second line from the bottom: **G**, five notes above middle C.
+    **Landmark 3: bass F.** The bass clef's two dots sit either side of the fourth line: **F**, five notes below middle C.
+  staff: {notes: 'F3:h G4:h', clef: grand, labels: names}
+  keys: {notes: F3 C4 G4, labels: names}
+  callout: |
+    G clef = G above middle C. F clef = F below middle C. Both are a 5th away from middle C.
+  check:
+    ask: The bass clef is also called the F clef because...
+    choices: [It is for the fingers, Its dots sit around the F line, F is the lowest note]
+    correct: 1
+    why: The two dots mark the line for F below middle C.
+- explain: |
+    **Landmark 4: the outside lines.** The treble staff's top line is **F** (F5); the bass staff's bottom line is **G** (G2).
+    The treble staff's bottom line is **E**, the bass staff's top line is **A**.
+  staff: {notes: 'G2:q A3:q E4:q F5:q', clef: grand, labels: names}
+- explain: |
+    Some old rhymes help: treble lines from the bottom are **E G B D F** ("Every Good Boy Deserves Fruit"),
+    treble spaces spell **F A C E**. Bass lines are **G B D F A** ("Good Boys Deserve Fun Always"), bass spaces **A C E G**.
+  staff: {notes: 'E4:q G4:q B4:q D5:q F5:q | F4:q A4:q C5:q E5:q', labels: names}
+  check:
+    ask: The treble spaces, bottom to top, spell...
+    choices: [E G B D, A C E G, F A C E]
+    correct: 2
+    why: 'F, A, C, E: the word FACE.'
+- explain: |
+    Now explore. Play any key and watch where it lands on the grand staff. Try walking up from the
+    lowest C, and look for each landmark as you pass it.
+- playground: {clef: grand, notes: C2-C6, prompt: 'Play anywhere from the C two octaves below middle C to the C
+      two octaves above. Find the landmarks: bass F, middle C, treble G.'}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: grand-staff-quiz}
+recap: 'Landmarks: bass F, middle C, treble G, and the outside lines. Count from the nearest one.'

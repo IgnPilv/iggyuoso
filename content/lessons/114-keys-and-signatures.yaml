@@ -1,0 +1,52 @@
+id: keys-and-signatures
+title: 'Big idea: why music has keys'
+unit: first-chords
+skills: [key, key-signature, major-scale]
+steps:
+- explain: |
+    A **key** is a family of seven notes with one note as home. Listen: the same tune in C, then in G.
+    It sounds like the same song, just higher. That's only possible because both keys follow the same pattern.
+  sound: C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q B4:q G4:q | B4:q C5:q D5:h
+  terms: [key, tonic, home note]
+- explain: |
+    The pattern is the major scale's steps: **T T S T T T S**. On C it fits the white keys exactly.
+    Move it to G and one note has to change to keep the pattern: F becomes **F♯**.
+    Move it to F and B has to become **B♭**.
+  keys: {notes: G4 A4 B4 C5 D5 E5 F#5 G5, labels: names}
+  check:
+    ask: Why does G major need F♯ and not F?
+    choices: [To keep the T T S T T T S pattern, Because F♯ sounds nicer, Because G is a black key]
+    correct: 0
+    why: 'E to the 7th note must be a tone, and the 7th to G a semitone: that note is F♯.'
+- explain: |
+    Writing ♯ before every F would be tiring, so music puts the key's sharps or flats once, at the start of each line:
+    the **key signature**. It changes that note in every octave, all the way through.
+  staff: {notes: 'G4:q B4:q D5:q F#5:q | G5:w', key: G}
+  terms: [key signature]
+- explain: |
+    So far you know three keys:
+    - **C major**: no sharps or flats
+    - **G major**: one sharp, F♯
+    - **F major**: one flat, B♭
+  staff: {notes: 'F4:q A4:q C5:q Bb4:q | A4:w', key: F}
+  callout: |
+    No signs = C. One sharp = G. One flat = F.
+  check:
+    ask: Every B in this music is played as...
+    choices: [B, B♭, B♯]
+    correct: 1
+    why: 'One flat on the B line: F major, every B is B♭.'
+    staff: {notes: 'B4:w', key: F}
+- explain: |
+    A **key signature** tells you the notes. The **home note** (often the first and last bass note) tells you which key of that family
+    you're in. Look at both before you play.
+  callout: |
+    Check the signature, then check where the music ends.
+- explain: |
+    Try it. This playground has the G major key signature: play any F and watch it show as F♯ with no sign,
+    because the key signature already says so. Play F natural and a ♮ appears.
+- playground: {clef: treble, notes: C4-C6, prompt: 'In G major: play G A B C D E F♯ G, then try F natural.', key: G}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: keys-quiz}
+recap: A key is seven notes and a home. The pattern decides the sharps or flats; the key signature writes them once.

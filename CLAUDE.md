@@ -308,3 +308,8 @@ never copied pages). Start small, adapt as we go.
   check; new quizzes for ties, sixteenths, inversions, triplets, transposing, pedal and key
   signatures (order of sharps F C G D A E B, flats B E A D G C F); every older Year 2 quiz has a
   `why` on each question; theory papers open both Year 2 checkpoints and the exam.
+- 2026-10-23: Standalone "Big idea" theory lessons, each with a playground step and a 12–15 question
+  quiz: the grand staff map (landmarks and line/space rhymes; after the bass staff), counting any
+  rhythm (after dotted quarters), why music has keys (after the key of F), the interval map (all
+  intervals to the octave, inversions add to 9; Year 2 after perfect intervals) and the circle of
+  fifths (after A major and G minor). Placed in their units and in the tree.
