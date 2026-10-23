@@ -1,16 +1,26 @@
 id: chromatic-scale
-title: "The chromatic scale"
+title: The chromatic scale
 unit: pedal-and-genres
 skills: [technique, scales]
 steps:
-  - explain: |
-      The **chromatic scale** plays every key, white and black, in order: twelve semitones to the
-      octave. It has no key and no home; it's pure colour (*chroma* is Greek for colour).
-
-      The fingering is simple: **3 on every black key**, thumb on the white keys. Where two white
-      keys sit together (E-F and B-C), use 1-2 in the right hand going up, and 2-1 in the left hand.
-      Keep the hand close to the black keys so the thumb doesn't have far to go.
-  - exercise: build-chromatic
-  - exercise: chromatic-rh
-  - exercise: chromatic-lh
-recap: "Every key in order: 3 on black, 1 on white, 2 where two whites meet."
+- explain: |
+    The **chromatic scale** plays every key, white and black, in order: **twelve semitones** to the
+    octave. It has no key and no home; it's pure colour (*chroma* is Greek for colour).
+  sound: C4:e C#4:e D4:e D#4:e E4:e F4:e F#4:e G4:e G#4:e A4:e A#4:e B4:e C5:q
+  terms: [chromatic scale]
+  keys: {notes: C4 C#4 D4 D#4 E4 F4 F#4 G4 G#4 A4 A#4 B4 C5, labels: none}
+- explain: |
+    The fingering is simple: **3 on every black key**, thumb on the white keys. Where two white
+    keys sit together (E–F and B–C), use **1-2** in the right hand going up, and **2-1** in the left hand.
+  keys: {notes: C4 C#4 D4 D#4 E4 F4 F#4 G4 G#4 A4 A#4 B4 C5, labels: fingers, fingers: 1 3 1 3 1 2 3 1 3 1 3 1 2}
+  callout: |
+    Keep the hand close to the black keys so the thumb doesn't have far to go.
+  check:
+    ask: 'Chromatic scale: which finger plays the black keys?'
+    choices: ['3', '2', '4']
+    correct: 0
+    why: Always 3 on black, thumb on white.
+- {exercise: build-chromatic}
+- {exercise: chromatic-rh}
+- {exercise: chromatic-lh}
+recap: 'Every key in order: 3 on black, 1 on white, 2 where two whites meet.'

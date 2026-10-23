@@ -1,11 +1,54 @@
 id: major-or-minor-scale
-title: "Major or minor scale?"
+title: Major or minor scale?
 kind: quiz
-prompt: "Listen to the scale. Major or minor?"
+prompt: Listen to the scale. Major or minor?
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 1, sound: "C4:e D4:e E4:e F4:e G4:e A4:e B4:e C5:e" }
-  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 0, sound: "A3:e B3:e C4:e D4:e E4:e F4:e G4:e A4:e" }
-  - { ask: "This scale is…", choices: ["Major", "Minor"], correct: 1, sound: "D4:e E4:e F4:e G4:e A4:e Bb4:e C5:e D5:e" }
-  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 1, sound: "G3:e A3:e B3:e C4:e D4:e E4:e F#4:e G4:e" }
-  - { ask: "This scale is…", choices: ["Minor", "Major"], correct: 0, sound: "E4:e F#4:e G4:e A4:e B4:e C5:e D5:e E5:e" }
+- ask: This scale is...
+  choices: [Minor, Major]
+  correct: 1
+  why: 'C major: a major 3rd, C–E, at the bottom.'
+  sound: C4:e D4:e E4:e F4:e G4:e A4:e B4:e C5:e
+- ask: This scale is...
+  choices: [Major, Minor]
+  correct: 1
+  why: 'A natural minor: A–C is a minor 3rd.'
+  sound: A3:e B3:e C4:e D4:e E4:e F4:e G4:e A4:e
+- ask: This scale is...
+  choices: [Major, Minor]
+  correct: 1
+  why: 'D natural minor: D–F is a minor 3rd.'
+  sound: D4:e E4:e F4:e G4:e A4:e Bb4:e C5:e D5:e
+- ask: This scale is...
+  choices: [Minor, Major]
+  correct: 1
+  why: 'G major: G–B is a major 3rd.'
+  sound: G3:e A3:e B3:e C4:e D4:e E4:e F#4:e G4:e
+- ask: This scale is...
+  choices: [Major, Minor]
+  correct: 1
+  why: 'E natural minor: E–G is a minor 3rd.'
+  sound: E4:e F#4:e G4:e A4:e B4:e C5:e D5:e E5:e
+- ask: This scale is...
+  choices: [Minor, Major]
+  correct: 1
+  why: 'F major: F–A is a major 3rd.'
+  sound: F4:e G4:e A4:e Bb4:e C5:e D5:e E5:e F5:e
+- ask: The natural minor pattern is...
+  choices: [T S T T T S T, T T S T T T S, T S T T S T T]
+  correct: 2
+  why: Semitones between 2–3 and 5–6.
+- ask: A natural minor uses the notes of...
+  choices: [A major, C major, G major]
+  correct: 1
+  why: It is C major's relative minor.
+- ask: The biggest difference you hear between major and minor is degree...
+  choices: ['8', '5', '3']
+  correct: 2
+  why: The 3rd is a semitone lower in minor.
+- ask: Which notes make the A natural minor scale?
+  choices: [A B C♯ D E F♯ G♯, A B C D E F G, A B C D E F♯ G]
+  correct: 1
+  why: All white keys from A.

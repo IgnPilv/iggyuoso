@@ -1,17 +1,29 @@
 id: harmonic-minor
-title: "The harmonic minor scale"
+title: The harmonic minor scale
 unit: minor-keys
 skills: [theory, scales, minor]
 steps:
-  - explain: |
-      In the natural minor, the 7th note (G in A minor) is a whole tone below the tonic, so it
-      doesn't pull home strongly. Composers fixed this by **raising the 7th** by a semitone: G
-      becomes **G#**. Now it leans right into the tonic, just like B does in C major.
-
-      This is the **harmonic minor**. Between degrees 6 and 7 (F to G#) there is now a big gap of
-      three semitones, which gives it its exotic, slightly Middle-Eastern sound.
-
-      The raised 7th is never in the key signature. It is written as an accidental each time.
-  - exercise: build-harmonic-minor
-  - exercise: natural-or-harmonic
-recap: "Harmonic minor raises the 7th so it pulls up to the tonic."
+- explain: |
+    In the natural minor, the 7th note (G in A minor) is a **whole tone** below the tonic, so it
+    doesn't pull home strongly. Listen: the end sounds a little lazy.
+  sound: A4:e B4:e C5:e D5:e E5:e F5:e G5:e A5:q
+- explain: |
+    Composers fixed this by **raising the 7th** by a semitone: G becomes **G♯**. Now it leans right into the
+    tonic, just like B does in C major. This is the **harmonic minor**.
+  sound: A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:q
+  staff: {notes: 'A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:e', labels: names}
+  terms: [harmonic minor, raised 7th, leading note]
+- explain: |
+    Between degrees 6 and 7 (F to G♯) there is now a big gap of **three semitones**, which gives it its exotic,
+    slightly Middle-Eastern sound. The raised 7th is never in the key signature: it is written as an accidental each time.
+  keys: {notes: F5 G#5, labels: names}
+  callout: |
+    Harmonic minor = natural minor with the 7th raised.
+  check:
+    ask: In D harmonic minor, which note is raised?
+    choices: [C becomes C♯, B♭ becomes B, F becomes F♯]
+    correct: 0
+    why: The 7th of D minor is C; raised, it is C♯.
+- {exercise: build-harmonic-minor}
+- {exercise: natural-or-harmonic}
+recap: Harmonic minor raises the 7th so it pulls up to the tonic.

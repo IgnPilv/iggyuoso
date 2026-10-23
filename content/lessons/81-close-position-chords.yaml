@@ -1,18 +1,30 @@
 id: close-position-chords
-title: "Chords that move smoothly"
+title: Chords that move smoothly
 unit: inversions
 skills: [technique, inversions, harmony]
 steps:
-  - explain: |
-      Jumping from root position to root position (C, then F, then G) makes the hand leap around.
-      Pianists use inversions so the chords move as little as possible. This is called playing in
-      **close position**:
-
-      - C major: **C E G**
-      - F major as **C F A** (second inversion): C stays, E and G step up
-      - G major as **B D G** (first inversion): everything steps down or stays
-
-      The left hand plays the roots, so the harmony is still clear.
-  - exercise: close-position-c
-  - exercise: close-position-g
-recap: "Inversions let chords move by step. The left hand keeps the root."
+- explain: |
+    Jumping from root position to root position (C, then F, then G) makes the hand leap around.
+  staff: {notes: 'C4+E4+G4:h F4+A4+C5:h | G4+B4+D5:h C4+E4+G4:h'}
+  sound: C4+E4+G4:h F4+A4+C5:h G4+B4+D5:h C4+E4+G4:h
+- explain: |
+    Pianists use inversions so the chords move as little as possible. This is called playing in
+    **close position**:
+    - C major: **C E G**
+    - F major as **C F A** (second inversion): C stays, E and G step up
+    - G major as **B D G** (first inversion): everything steps down or stays
+  staff: {notes: 'C4+E4+G4:h C4+F4+A4:h | B3+D4+G4:h C4+E4+G4:h'}
+  sound: C4+E4+G4:h C4+F4+A4:h B3+D4+G4:h C4+E4+G4:h
+  terms: [close position, voice leading]
+  check:
+    ask: From C E G to C F A, which note stays put?
+    choices: [C, E, G]
+    correct: 0
+    why: C is in both chords, so it stays; E and G step up to F and A.
+- explain: |
+    The left hand plays the roots, so the harmony is still clear.
+  callout: |
+    Keep common notes. Move the others by the smallest step.
+- {exercise: close-position-c}
+- {exercise: close-position-g}
+recap: Inversions let chords move by step. The left hand keeps the root.

@@ -1,11 +1,52 @@
 id: primary-triads-quiz
-title: "Primary triads"
+title: Primary triads
 kind: quiz
-prompt: "I, IV and V are the three most important chords in any key."
+prompt: I, IV and V are the three most important chords in any key.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "I, IV and V in G major are…", choices: ["G, C and D", "G, A and D", "G, C and E minor"], correct: 0 }
-  - { ask: "I, IV and V in F major are…", choices: ["F, G and C", "F, Bb and C", "F, B and C"], correct: 1 }
-  - { ask: "Chord V in D major is…", choices: ["A major", "G major", "E minor"], correct: 0 }
-  - { ask: "Chord IV in C major is…", choices: ["F major", "G major", "D minor"], correct: 0 }
-  - { ask: "Together, I, IV and V contain…", choices: ["Just three notes", "Only the black keys", "Every note of the scale"], correct: 2 }
+- ask: I, IV and V in G major are...
+  choices: ['G, C and D', 'G, A and D', 'G, C and E minor']
+  correct: 0
+  why: 'G A B C D: 1, 4, 5 = G, C, D.'
+- ask: I, IV and V in F major are...
+  choices: ['F, B and C', 'F, G and C', 'F, B♭ and C']
+  correct: 2
+  why: 'F G A B♭ C: the 4th is B♭.'
+- ask: I, IV and V in D major are...
+  choices: ['D, G and A', 'D, E and A', 'D, G and B']
+  correct: 0
+  why: 'D E F♯ G A: 1, 4, 5.'
+- ask: Chord V in D major is...
+  choices: [G major, A major, E minor]
+  correct: 1
+  why: 'D E F♯ G A: 5 is A.'
+- ask: Chord IV in C major is...
+  choices: [G major, D minor, F major]
+  correct: 2
+  why: 'C D E F: 4 is F.'
+- ask: Together, I, IV and V contain...
+  choices: [Only the black keys, Just three notes, Every note of the scale]
+  correct: 2
+  why: C E G + F A C + G B D.
+- ask: Chord I is called the...
+  choices: [Subdominant, Tonic, Dominant]
+  correct: 1
+  why: Home.
+- ask: Chord V is called the...
+  choices: [Subdominant, Dominant, Tonic]
+  correct: 1
+  why: The strongest pull home.
+- ask: Chord IV is called the...
+  choices: [Dominant, Subdominant, Leading chord]
+  correct: 1
+  why: Sub = below the dominant.
+- ask: In C major, which chord contains the note B?
+  choices: [V (G B D), IV (F A C), I (C E G)]
+  correct: 0
+  why: B is only in the G chord.
+- ask: In C major, which chord contains the note A?
+  choices: [V (G B D), IV (F A C), I (C E G)]
+  correct: 1
+  why: A is only in the F chord.

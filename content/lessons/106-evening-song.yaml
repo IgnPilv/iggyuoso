@@ -1,14 +1,20 @@
 id: evening-song
-title: "Evening song"
+title: Evening song
 unit: pedal-and-genres
 skills: [repertoire, pedal, character-piece]
 steps:
-  - explain: |
-      Your **character piece**: a short piece that paints one mood, like Schumann's *Album for the
-      Young* or Tchaikovsky's *Children's Album*. This one is a quiet evening song in **E minor**.
-
-      Let the right hand sing over the left hand's open 5ths, and use **legato pedal**, changing just
-      after each bar's first beat. In bar 7, the **D#** is the raised 7th of E harmonic minor: it
-      pulls you home to E.
-  - exercise: evening-song
-recap: "A character piece paints one mood. Sing the melody; the pedal does the rest."
+- explain: |
+    Your **character piece**: a short piece that paints one mood, like Schumann's *Album for the
+    Young* or Tchaikovsky's *Children's Album*. This one is a quiet evening song in **E minor**.
+- explain: |
+    Let the right hand sing over the left hand's open 5ths, and use **legato pedal**, changing just
+    after each bar's first beat. In bar 7, the **D♯** is the raised 7th of E harmonic minor: it
+    pulls you home to E.
+  keys: {notes: D#4 E4, labels: names}
+  check:
+    ask: D♯ in E minor is...
+    choices: ['The raised 7th, the leading note', The tonic, A wrong note]
+    correct: 0
+    why: E harmonic minor raises D to D♯ so it leans up to E.
+- {exercise: evening-song}
+recap: A character piece paints one mood. Sing the melody; the pedal does the rest.

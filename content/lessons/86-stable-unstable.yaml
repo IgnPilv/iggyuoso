@@ -1,18 +1,27 @@
 id: stable-unstable
-title: "Notes that rest, notes that pull"
+title: Notes that rest, notes that pull
 unit: harmonising
 skills: [theory, ear, scale-degrees]
 steps:
-  - explain: |
-      In any key, three degrees feel **stable**: 1, 3 and 5. They are the notes of chord I, home.
-      The other four are **unstable**: they lean towards a neighbour.
-
-      - **7** pulls up to 1 (that's why it's called the *leading note*)
-      - **4** sinks down to 3
-      - **2** steps down to 1, or up to 3
-      - **6** falls to 5
-
-      Melodies are built from this tug between rest and pull. Harmony works the same way.
-  - exercise: stable-unstable-quiz
-  - exercise: ear-degrees-g-resolve
-recap: "1, 3, 5 rest; 2, 4, 6, 7 pull towards them."
+- explain: |
+    In any key, three degrees feel **stable**: **1, 3 and 5**. They are the notes of chord I, home.
+    The other four are **unstable**: they lean towards a neighbour.
+  sound: C4+E4+G4:h | B4:h C5:h | F4:h E4:h
+  terms: [stable, unstable, resolution]
+- explain: |
+    - **7** pulls up to 1 (that's why it's called the *leading note*)
+    - **4** sinks down to 3
+    - **2** steps down to 1, or up to 3
+    - **6** falls to 5
+  callout: |
+    Unstable notes resolve by step to the nearest stable note.
+  check:
+    ask: In C major, F (degree 4) usually moves to...
+    choices: [E, G, C]
+    correct: 0
+    why: '4 sinks to 3: F to E, a semitone down.'
+- explain: |
+    Melodies are built from this tug between rest and pull. Harmony works the same way.
+- {exercise: stable-unstable-quiz}
+- {exercise: ear-degrees-g-resolve}
+recap: 1, 3, 5 rest; 2, 4, 6, 7 pull towards them.

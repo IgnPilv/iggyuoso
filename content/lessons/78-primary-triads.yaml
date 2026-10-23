@@ -1,14 +1,24 @@
 id: primary-triads
-title: "The primary triads"
+title: The primary triads
 unit: inversions
 skills: [theory, triads, harmony]
 steps:
-  - explain: |
-      Of the seven chords in a key, three do most of the work: **I** (the tonic, home), **IV** (the
-      subdominant, moving away) and **V** (the dominant, wanting to go home).
-
-      Between them they contain every note of the scale, so they can harmonise almost any simple
-      tune. Thousands of folk songs, hymns and pop songs use nothing else.
-  - exercise: primary-triads-quiz
-  - exercise: build-primary-triads
-recap: "I, IV and V: home, away, and the pull back home."
+- explain: |
+    Of the seven chords in a key, three do most of the work: **I** (the **tonic**, home), **IV** (the
+    **subdominant**, moving away) and **V** (the **dominant**, wanting to go home).
+  sound: C4+E4+G4:h F4+A4+C5:h G4+B4+D5:h C4+E4+G4:h
+  terms: [tonic, subdominant, dominant]
+- explain: |
+    Between them they contain **every note of the scale**, so they can harmonise almost any simple
+    tune. Thousands of folk songs, hymns and pop songs use nothing else.
+  keys: {notes: C4 E4 G4 F4 A4 B4 D4, labels: names}
+  callout: |
+    I = C E G. IV = F A C. V = G B D. Together: C D E F G A B.
+  check:
+    ask: I, IV and V in G major are...
+    choices: ['G, C and D', 'G, A and D', 'G, C and E']
+    correct: 0
+    why: 'Count up from G: 1 = G, 4 = C, 5 = D.'
+- {exercise: primary-triads-quiz}
+- {exercise: build-primary-triads}
+recap: 'I, IV and V: home, away, and the pull back home.'

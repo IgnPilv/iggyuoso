@@ -1,0 +1,51 @@
+id: ties-quiz
+title: Ties quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A tie joins two notes of...
+  choices: [Different pitches, Different hands, The same pitch]
+  correct: 2
+  why: A tie only ever links one pitch to itself.
+- ask: With a tie you...
+  choices: [Play both notes, Play once and hold for both lengths, Play the second one only]
+  correct: 1
+  why: The second note is not struck again.
+- ask: A slur joins...
+  choices: [Two bars, Two notes of the same pitch, 'Different notes, played smoothly']
+  correct: 2
+  why: A slur means legato; a tie means hold.
+- ask: Why use a tie across a bar line?
+  choices: [To play louder, A note can't cross a bar line on its own, To repeat the note]
+  correct: 1
+  why: Each bar must add up; a tie carries the sound into the next bar.
+- ask: How many beats? (half tied to quarter)
+  choices: [Four, Two, Three]
+  correct: 2
+  why: 2 + 1 = 3.
+  staff: C4:q C4:q G4:h~ | G4:q r:q r:h
+- ask: How many beats? (whole tied to half)
+  choices: [Four, Five, Six]
+  correct: 2
+  why: 4 + 2 = 6.
+  staff: C4:w~ | C4:h r:h
+- ask: How many beats? (quarter tied to eighth)
+  choices: ['2', '1', 1½]
+  correct: 2
+  why: 1 + ½, the same as a dotted quarter.
+  staff: C4:q~ C4:e C4:e C4:h
+- ask: A quarter tied to an eighth lasts the same as...
+  choices: [Two quarters, A dotted quarter, A half note]
+  correct: 1
+  why: 1 + ½ = 1½ beats.
+- ask: In a tie, how many fingers play the note?
+  choices: [One, Two, Any]
+  correct: 0
+  why: It is one note held, so one finger.
+- ask: Listen. Is the long note played once or twice?
+  choices: [Once, Twice]
+  correct: 0
+  why: 'It sounded once and was held: that is a tie.'
+  sound: E4:q G4:h. E4:q

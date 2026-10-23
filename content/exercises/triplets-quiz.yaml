@@ -1,0 +1,50 @@
+id: triplets-quiz
+title: Triplets quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A triplet of eighth notes lasts...
+  choices: [Half a beat, One beat, One and a half beats]
+  correct: 1
+  why: Three triplet eighths fit in the time of two ordinary eighths.
+- ask: A triplet is marked by...
+  choices: [A small 3, A dot, A curved line only]
+  correct: 0
+  why: The 3 over or under the group.
+- ask: The three notes of a triplet are...
+  choices: [Long-short-short, All the same length, Short-short-long]
+  correct: 1
+  why: 'Even: tri-po-let.'
+- ask: How do you count a triplet on beat 1?
+  choices: [1-and, 1-trip-let, 1-e-and-a]
+  correct: 1
+  why: Three syllables per beat.
+- ask: 'Which is faster: two eighths or a triplet in one beat?'
+  choices: [The same, The triplet, Two eighths]
+  correct: 1
+  why: Three notes in the same time are quicker.
+- ask: How many beats in this bar?
+  choices: [Four, Five, Three]
+  correct: 0
+  why: 1 + 1 + 1 + 1.
+  staff: C4:e C4:e C4:e3 C4:e3 C4:e3 C4:q C4:q
+- ask: Listen. Two or three notes per beat?
+  choices: [Three, Two]
+  correct: 0
+  why: 'Each beat had three even notes: triplets.'
+  sound: C4:e3 D4:e3 E4:e3 F4:e3 G4:e3 F4:e3 E4:h
+- ask: Listen. Two or three notes per beat?
+  choices: [Three, Two]
+  correct: 1
+  why: 'Each beat had two notes: ordinary eighths.'
+  sound: C4:e D4:e E4:e F4:e G4:e F4:e E4:h
+- ask: Three quarter-note triplets last...
+  choices: [One beat, Three beats, Two beats]
+  correct: 2
+  why: Three in the time of two quarters.
+- ask: A common mistake with triplets is...
+  choices: [Playing them too evenly, Making them long-short-short, Counting the beat]
+  correct: 1
+  why: Keep all three exactly the same length.

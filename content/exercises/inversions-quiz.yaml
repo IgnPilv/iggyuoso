@@ -1,0 +1,65 @@
+id: inversions-quiz
+title: Inversions quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 0
+  why: C (the root) at the bottom, all 3rds.
+  staff: C4+E4+G4:w
+  clef: treble
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 1
+  why: E (the 3rd of C) at the bottom.
+  staff: E4+G4+C5:w
+  clef: treble
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 2
+  why: G (the 5th of C) at the bottom.
+  staff: G4+C5+E5:w
+  clef: treble
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 1
+  why: B is the 3rd of G B D.
+  staff: B3+D4+G4:w
+  clef: treble
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 2
+  why: C is the 5th of F A C.
+  staff: C4+F4+A4:w
+  clef: treble
+- ask: Which chord is E G C?
+  choices: [E minor, G major, C major]
+  correct: 2
+  why: 'Stack it in 3rds: C E G.'
+- ask: Which chord is B D G?
+  choices: [G major, B minor, D major]
+  correct: 0
+  why: 'Stack it in 3rds: G B D.'
+- ask: Which chord is A C F?
+  choices: [A minor, F major, C major]
+  correct: 1
+  why: 'Stack it in 3rds: F A C.'
+- ask: In first inversion, the bottom note is the chord's...
+  choices: [5th, 3rd, Root]
+  correct: 1
+  why: Root moved up; the 3rd is lowest.
+- ask: In second inversion, the bottom note is the chord's...
+  choices: [Root, 5th, 3rd]
+  correct: 1
+  why: Root and 3rd moved up; the 5th is lowest.
+- ask: 'Right-hand fingers for a first inversion triad:'
+  choices: [1 2 3, 1 3 5, 1 2 5]
+  correct: 2
+  why: The 4th sits at the top, between 2 and 5.
+- ask: Where is the 4th in a second inversion triad?
+  choices: [There isn't one, At the top, At the bottom]
+  correct: 2
+  why: G–C at the bottom of G C E.

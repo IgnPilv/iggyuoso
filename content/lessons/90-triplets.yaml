@@ -1,17 +1,30 @@
 id: triplets
-title: "Triplets"
+title: Triplets
 unit: harmonising
 skills: [rhythm, triplets]
 steps:
-  - explain: |
-      Two eighth notes split a beat in half. A **triplet** splits it into **three** equal parts.
-      It is written as three eighths with a small **3** over them.
-
-      Say **tri-po-let** (or "1-trip-let") on each click, evenly. Don't let it turn into a long-
-      short-short rhythm: all three are the same length.
-  - exercise: tap-triplets
-  - exercise: triplets-rh
-  - explain: |
-      Fresh rhythms with triplets mixed in.
-  - exercise: gen-rhythm-triplets
-recap: "Three even notes in one beat: tri-po-let."
+- explain: |
+    Two eighth notes split a beat in half. A **triplet** splits it into **three** equal parts.
+    It is written as three eighths with a small **3** over them.
+  staff: {notes: 'C4:e C4:e C4:e3 C4:e3 C4:e3 C4:q C4:q'}
+  sound: C4:e C4:e C4:e3 C4:e3 C4:e3 C4:q C4:q
+  terms: [triplet]
+- explain: |
+    Say **tri-po-let** (or "1-trip-let") on each click, evenly. Don't let it turn into a long-
+    short-short rhythm: all three are the same length.
+  callout: |
+    Two eighths: 1-and. Triplet: 1-trip-let.
+  check:
+    ask: How many triplet eighths fit in one beat?
+    choices: [Two, Three, Four]
+    correct: 1
+    why: 'A triplet squeezes three equal notes into the time of two eighths: one beat.'
+- {exercise: tap-triplets}
+- {exercise: triplets-rh}
+- explain: |
+    Fresh rhythms with triplets mixed in.
+- {exercise: gen-rhythm-triplets}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: triplets-quiz}
+recap: 'Three even notes in one beat: tri-po-let.'

@@ -1,13 +1,79 @@
 id: thirds-quiz
-title: "Major and minor 3rds"
+title: Major and minor 3rds
 kind: quiz
-prompt: "Count the semitones from the lower note."
+prompt: Count the semitones from the lower note.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "C up to E is a…", choices: ["Minor 3rd (3 semitones)", "Major 3rd (4 semitones)"], correct: 1, staff: "C4:h E4:h" }
-  - { ask: "D up to F is a…", choices: ["Minor 3rd (3 semitones)", "Major 3rd (4 semitones)"], correct: 0, staff: "D4:h F4:h" }
-  - { ask: "G up to B is a…", choices: ["Minor 3rd (3 semitones)", "Major 3rd (4 semitones)"], correct: 1, staff: "G4:h B4:h" }
-  - { ask: "A up to C is a…", choices: ["Major 3rd (4 semitones)", "Minor 3rd (3 semitones)"], correct: 1, staff: "A4:h C5:h" }
-  - { ask: "E up to G# is a…", choices: ["Major 3rd (4 semitones)", "Minor 3rd (3 semitones)"], correct: 0, staff: "E4:h G#4:h" }
-  - { ask: "A major chord has which 3rd at the bottom?", choices: ["Major 3rd", "Minor 3rd"], correct: 0 }
-  - { ask: "A minor chord has which 3rd at the bottom?", choices: ["Major 3rd", "Minor 3rd"], correct: 1 }
+- ask: C up to E is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: 4 semitones.
+  staff: C4:h E4:h
+- ask: D up to F is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 3 semitones.
+  staff: D4:h F4:h
+- ask: G up to B is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: 4 semitones.
+  staff: G4:h B4:h
+- ask: A up to C is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 3 semitones.
+  staff: A4:h C5:h
+- ask: E up to G♯ is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: 'E to G is minor (3); G♯ adds one: 4.'
+  staff: E4:h G#4:h
+- ask: E up to G is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 3 semitones.
+  staff: E4:h G4:h
+- ask: F up to A is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: 4 semitones.
+  staff: F4:h A4:h
+- ask: B up to D is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 3 semitones.
+  staff: B3:h D4:h
+- ask: D up to F♯ is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: D to F is minor; F♯ makes it major.
+  staff: D4:h F#4:h
+- ask: A major chord has which 3rd at the bottom?
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: 'C–E in C major: 4 semitones.'
+- ask: A minor chord has which 3rd at the bottom?
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 'A–C in A minor: 3 semitones.'
+- ask: How many semitones in a major 3rd?
+  choices: ['5', '4', '3']
+  correct: 1
+  why: Two tones.
+- ask: How many semitones in a minor 3rd?
+  choices: ['4', '2', '3']
+  correct: 2
+  why: A tone and a semitone.
+- ask: Listen. Major or minor 3rd?
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: 'Bright: 4 semitones.'
+  sound: C4:h E4:h
+- ask: Listen. Major or minor 3rd?
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 'Dark: 3 semitones.'
+  sound: A4:h C5:h

@@ -1,12 +1,55 @@
 id: relative-minor-quiz
-title: "Relative keys"
+title: Relative keys
 kind: quiz
-prompt: "Every major key has a relative minor that uses the same notes."
+prompt: Every major key has a relative minor that uses the same notes.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "A minor is the relative minor of…", choices: ["C major", "G major", "F major"], correct: 0 }
-  - { ask: "The relative minor starts how far below the major key's tonic?", choices: ["3 semitones (a minor 3rd)", "2 semitones", "5 semitones"], correct: 0 }
-  - { ask: "The relative minor of G major is…", choices: ["D minor", "E minor", "A minor"], correct: 1 }
-  - { ask: "The relative minor of F major is…", choices: ["D minor", "E minor", "C minor"], correct: 0 }
-  - { ask: "A minor's key signature has…", choices: ["One sharp", "No sharps or flats, like C major", "One flat"], correct: 1 }
-  - { ask: "Which degree of a major scale is the tonic of its relative minor?", choices: ["2", "5", "6"], correct: 2 }
+- ask: A minor is the relative minor of...
+  choices: [F major, G major, C major]
+  correct: 2
+  why: Both use only white keys.
+- ask: The relative minor starts how far below the major key's tonic?
+  choices: [2 semitones, 5 semitones, 3 semitones (a minor 3rd)]
+  correct: 2
+  why: C down a minor 3rd is A.
+- ask: The relative minor of G major is...
+  choices: [A minor, E minor, D minor]
+  correct: 1
+  why: G down 3 semitones is E. One sharp each.
+- ask: The relative minor of F major is...
+  choices: [E minor, C minor, D minor]
+  correct: 2
+  why: F down 3 semitones is D. One flat each.
+- ask: The relative major of A minor is...
+  choices: [E major, A major, C major]
+  correct: 2
+  why: A up 3 semitones is C.
+- ask: The relative major of E minor is...
+  choices: [B major, E major, G major]
+  correct: 2
+  why: E up 3 semitones is G.
+- ask: A minor's key signature has...
+  choices: ['No sharps or flats, like C major', One sharp, One flat]
+  correct: 0
+  why: Relatives share their key signature.
+- ask: Which degree of a major scale is the tonic of its relative minor?
+  choices: ['5', '2', '6']
+  correct: 2
+  why: 'C D E F G **A**: the 6th.'
+- ask: Relative keys share...
+  choices: [The same tonic, Nothing, The same notes and key signature]
+  correct: 2
+  why: Same notes, different home.
+- ask: 'One sharp in the key signature: which two keys could it be?'
+  choices: [F major or D minor, G major or E minor, G major or G minor]
+  correct: 1
+  why: Relatives share a signature.
+- ask: What key is this in?
+  choices: [D major, F major, D minor]
+  correct: 2
+  why: One flat could be F major or D minor; it starts and ends on D, and the raised C♯ points to D minor.
+  staff: D4:q F4:q A4:q C#5:q | D5:h. r:q
+  key: Dm
+  clef: treble

@@ -1,0 +1,57 @@
+id: key-signatures-quiz
+title: Key signatures quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: How many sharps in D major?
+  choices: ['Two: F♯ and C♯', 'Three: F♯ C♯ G♯', 'One: F♯']
+  correct: 0
+  why: D E F♯ G A B C♯.
+- ask: How many sharps in A major?
+  choices: ['One: G♯', 'Three: F♯ C♯ G♯', 'Two: F♯ C♯']
+  correct: 1
+  why: A B C♯ D E F♯ G♯.
+- ask: How many flats in G minor?
+  choices: ['One: B♭', None, 'Two: B♭ and E♭']
+  correct: 2
+  why: Relative of B♭ major.
+- ask: The relative major of G minor is...
+  choices: [D major, G major, B♭ major]
+  correct: 2
+  why: G up 3 semitones.
+- ask: The relative minor of D major is...
+  choices: [A minor, B minor, D minor]
+  correct: 1
+  why: D down 3 semitones.
+- ask: Sharps are always written in the order...
+  choices: [C D E F G A B, B E A D G C F, F C G D A E B]
+  correct: 2
+  why: Father Charles Goes Down And Ends Battle.
+- ask: Flats are always written in the order...
+  choices: [F C G D A E B, A B C D E F G, B E A D G C F]
+  correct: 2
+  why: The sharps backwards.
+- ask: G harmonic minor raises...
+  choices: [B♭ to B, F to F♯, E♭ to E]
+  correct: 1
+  why: The 7th of G minor is F.
+- ask: What key? Two sharps, starting and ending on D.
+  choices: [D major, A major, B minor]
+  correct: 0
+  why: 'Two sharps: D major or B minor; it''s built on D.'
+- ask: What key is this in?
+  choices: [A major, D major, F♯ minor]
+  correct: 0
+  why: Three sharps, built on A.
+  staff: A4:q C#5:q E5:q A4:q
+  clef: treble
+  key: A
+- ask: What key is this in?
+  choices: [G minor, G major, B♭ major]
+  correct: 0
+  why: 'Two flats: B♭ major or G minor. It''s built on G with the raised F♯: G minor.'
+  staff: G4:q Bb4:q D5:q F#5:q | G5:h. r:q
+  clef: treble
+  key: Gm

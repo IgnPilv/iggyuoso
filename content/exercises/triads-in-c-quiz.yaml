@@ -1,10 +1,70 @@
 id: triads-in-c-quiz
-title: "Triads in C major"
+title: Triads in C major
 kind: quiz
-prompt: "Think of the triads you just built."
+prompt: Think of the triads you just built.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "Which triads in C major are major?", choices: ["C, D and E", "C, F and G (I, IV, V)", "D, E and A (ii, iii, vi)"], correct: 1 }
-  - { ask: "Which triads in C major are minor?", choices: ["B only", "D, E and A (ii, iii, vi)", "C, F and G"], correct: 1 }
-  - { ask: "The triad on degree 7 (B D F) is…", choices: ["Diminished: two minor 3rds", "Minor", "Major"], correct: 0 }
-  - { ask: "Roman numerals: capitals (I, IV, V) mean…", choices: ["Minor chords", "Loud chords", "Major chords"], correct: 2 }
+- ask: Which triads in C major are major?
+  choices: ['D, E and A (ii, iii, vi)', 'C, F and G (I, IV, V)', 'C, D and E']
+  correct: 1
+  why: I, IV and V are major in every major key.
+- ask: Which triads in C major are minor?
+  choices: ['C, F and G', 'D, E and A (ii, iii, vi)', B only]
+  correct: 1
+  why: ii, iii and vi are minor.
+- ask: The triad on degree 7 (B D F) is...
+  choices: ['Diminished: two minor 3rds', Minor, Major]
+  correct: 0
+  why: B–D and D–F are both 3 semitones.
+- ask: Roman numerals in capitals (I, IV, V) mean...
+  choices: [Loud chords, Major chords, Minor chords]
+  correct: 1
+  why: Capitals major, small letters minor.
+- ask: What kind of triad is this?
+  choices: [Major, Minor, Diminished]
+  correct: 1
+  why: 'E–G minor 3rd, G–B major 3rd: E minor, iii in C.'
+  staff: E4+G4+B4:w
+  clef: treble
+- ask: What kind of triad is this?
+  choices: [Major, Minor, Diminished]
+  correct: 0
+  why: 'F–A major 3rd, A–C minor 3rd: F major, IV in C.'
+  staff: F4+A4+C5:w
+  clef: treble
+- ask: What kind of triad is this?
+  choices: [Major, Minor, Diminished]
+  correct: 2
+  why: 'Two minor 3rds: B diminished, vii° in C.'
+  staff: B4+D5+F5:w
+  clef: treble
+- ask: What kind of triad is this?
+  choices: [Major, Minor, Diminished]
+  correct: 1
+  why: 'A–C minor 3rd at the bottom: A minor, vi in C.'
+  staff: A4+C5+E5:w
+  clef: treble
+- ask: In C major, which numeral is the A minor triad?
+  choices: [iv, vi, VI]
+  correct: 1
+  why: 'A is degree 6, and it is minor: small vi.'
+- ask: In C major, which numeral is the D minor triad?
+  choices: [II, ii, iii]
+  correct: 1
+  why: 'D is degree 2, minor: ii.'
+- ask: Listen. What kind of triad?
+  choices: [Major, Minor, Diminished]
+  correct: 0
+  why: 'Bright: major 3rd at the bottom.'
+  sound: G3+B3+D4:w
+- ask: Listen. What kind of triad?
+  choices: [Major, Minor, Diminished]
+  correct: 2
+  why: 'Tight and tense: two minor 3rds.'
+  sound: B3+D4+F4:w
+- ask: A minor triad is built from...
+  choices: [Two major 3rds, 'A major 3rd, then a minor 3rd', 'A minor 3rd, then a major 3rd']
+  correct: 2
+  why: The bottom 3rd decides major or minor.

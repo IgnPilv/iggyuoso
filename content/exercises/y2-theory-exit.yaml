@@ -1,0 +1,101 @@
+id: y2-theory-exit
+title: 'Year 2 exam: theory'
+kind: quiz
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: A up to C is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 3 semitones.
+  staff: A4:h C5:h
+  clef: treble
+- ask: E up to F is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 0
+  why: 1 semitone.
+  staff: E4:h F4:h
+  clef: treble
+- ask: Which interval?
+  choices: [Perfect 4th, Perfect 5th, Major 3rd]
+  correct: 1
+  why: 'D to A: 7 semitones.'
+  staff: D4:h A4:h
+  clef: treble
+- ask: What kind of triad?
+  choices: [Major, Minor, Diminished]
+  correct: 0
+  why: Major 3rd at the bottom.
+  staff: G4+B4+D5:w
+  clef: treble
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 1
+  why: E, the 3rd of C, at the bottom.
+  staff: E4+G4+C5:w
+  clef: treble
+- ask: I, IV and V in D major are...
+  choices: ['D, G and A', 'D, E and A', 'D, F♯ and A']
+  correct: 0
+  why: Degrees 1, 4, 5.
+- ask: The relative minor of G major is...
+  choices: [D minor, E minor, G minor]
+  correct: 1
+  why: G down 3 semitones.
+- ask: D harmonic minor raises...
+  choices: [C to C♯, F to F♯, B♭ to B]
+  correct: 0
+  why: The 7th of D minor.
+- ask: 'Going up with the 6th and 7th raised, coming down natural:'
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 2
+  why: That's melodic minor.
+- ask: A major has...
+  choices: [Two sharps, Three flats, Three sharps]
+  correct: 2
+  why: F♯ C♯ G♯.
+- ask: G minor has...
+  choices: [One flat, Two flats, Two sharps]
+  correct: 1
+  why: B♭ and E♭.
+- ask: What key is this in?
+  choices: [G major, D major, B minor]
+  correct: 1
+  why: Two sharps, built on D.
+  staff: D4:q F#4:q A4:q D5:q
+  clef: treble
+  key: D
+- ask: A perfect cadence is...
+  choices: [I – V, V – I, IV – I]
+  correct: 1
+  why: Dominant to tonic.
+- ask: Degree 7 resolves to...
+  choices: [Degree 5, Degree 6, Degree 8 (the tonic)]
+  correct: 2
+  why: The leading note leads up.
+- ask: 'Chromatic scale: black keys are played with finger...'
+  choices: ['3', '2', '1']
+  correct: 0
+  why: 3 on every black key.
+- ask: Legato pedal changes...
+  choices: [Before the new chord, Just after the new chord]
+  correct: 1
+  why: Hands first, then the foot.
+- ask: In 3/8, how many eighth notes per bar?
+  choices: [Three, Six, Four]
+  correct: 0
+  why: Top number 3, beat = eighth.
+- ask: A quarter tied to a half lasts...
+  choices: [Two notes, 2 beats, 3 beats]
+  correct: 2
+  why: 1 + 2, played once.
+- ask: Three triplet eighths last...
+  choices: [One beat, Half a beat, 1½ beats]
+  correct: 0
+  why: Three in the time of two.
+- ask: Alberti bass on F A C goes...
+  choices: [F A C A, F C A C, C A F A]
+  correct: 1
+  why: Low, high, middle, high.

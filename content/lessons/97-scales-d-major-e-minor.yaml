@@ -1,16 +1,27 @@
 id: scales-d-major-e-minor
-title: "D major and E minor"
+title: D major and E minor
 unit: pedal-and-genres
 skills: [scales, keys]
 steps:
-  - explain: |
-      Two new keys. **D major** has two sharps, **F# and C#**. **E minor** is the relative minor of
-      G major, so it has one sharp (F#), and its harmonic form raises the 7th to **D#**.
-
-      Both use the same fingering as C major. In D major the thumbs land on D and G; your hands are
-      now resting over black keys, so keep the fingers a little further in.
-  - exercise: d-major-2oct-rh
-  - exercise: d-major-2oct-ht
-  - exercise: e-minor-2oct-rh
-  - exercise: e-minor-2oct-ht
-recap: "D major: F# and C#. E minor: F#, and D# in the harmonic form."
+- explain: |
+    Two new keys. **D major** has two sharps, **F♯ and C♯**.
+  staff: {notes: 'D4:e E4:e F#4:e G4:e A4:e B4:e C#5:e D5:e', key: D, labels: names}
+  sound: D4:e E4:e F#4:e G4:e A4:e B4:e C#5:e D5:q
+  terms: [D major]
+- explain: |
+    **E minor** is the relative minor of G major, so it has one sharp (F♯), and its harmonic form raises the 7th to **D♯**.
+  staff: {notes: 'E4:e F#4:e G4:e A4:e B4:e C5:e D#5:e E5:e', key: Em, labels: names}
+  sound: E4:e F#4:e G4:e A4:e B4:e C5:e D#5:e E5:q
+  check:
+    ask: E harmonic minor raises which note?
+    choices: [D to D♯, C to C♯, F to F♯]
+    correct: 0
+    why: The 7th of E minor is D.
+- explain: |
+    Both use the same fingering as C major. In D major the thumbs land on D and G; your hands are
+    now resting over black keys, so keep the fingers a little further in.
+- {exercise: d-major-2oct-rh}
+- {exercise: d-major-2oct-ht}
+- {exercise: e-minor-2oct-rh}
+- {exercise: e-minor-2oct-ht}
+recap: 'D major: F# and C#. E minor: F#, and D# in the harmonic form.'

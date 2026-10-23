@@ -1,0 +1,47 @@
+id: transposing-quiz
+title: Transposing quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Transposing means...
+  choices: [Playing it backwards, Playing the same tune from a different note, Changing the rhythm]
+  correct: 1
+  why: All the intervals stay; only the starting note changes.
+- ask: A transposed tune sounds...
+  choices: [Out of tune, 'Like the same song, higher or lower', Like a different song]
+  correct: 1
+  why: Same shape, new place.
+- ask: Degree 5 of G major is...
+  choices: [D, C, G]
+  correct: 0
+  why: G A B C D.
+- ask: Degree 3 of F major is...
+  choices: [B♭, A, G]
+  correct: 1
+  why: F G A.
+- ask: Degree 4 of F major is...
+  choices: [B, C, B♭]
+  correct: 2
+  why: F G A B♭.
+- ask: C E G (1 3 5 in C) transposed to G major is...
+  choices: [G B D, D F♯ A, G A B]
+  correct: 0
+  why: Degrees 1 3 5 of G.
+- ask: The tune C D E C transposed to G is...
+  choices: [G A B G, D E F♯ D, G A B♭ G]
+  correct: 0
+  why: Degrees 1 2 3 1 in G.
+- ask: The tune E D C (3 2 1 in C) transposed to F is...
+  choices: [A G E, B♭ A G, A G F]
+  correct: 2
+  why: Degrees 3 2 1 in F.
+- ask: The easiest way to transpose at the piano is to think in...
+  choices: [Degrees, Letter names, Finger numbers only]
+  correct: 0
+  why: Degrees mean the same in every key.
+- ask: A tune moves from C major to G major. Which note needs a sharp?
+  choices: [B, C, F]
+  correct: 2
+  why: G major has F♯.

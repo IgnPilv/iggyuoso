@@ -1,18 +1,26 @@
 id: harmonise-i-v
-title: "Harmonising with two chords"
+title: Harmonising with two chords
 unit: harmonising
 skills: [harmony, creativity, chords]
 steps:
-  - explain: |
-      To **harmonise** a melody is to choose chords for it. The simplest method: look at the
-      melody notes in each bar and pick the chord that contains most of them.
-
-      With just two chords you can already do a lot. **I** (C E G) for bars that rest on C, E or G;
-      **V7** (G B D F) for bars that use D, F or B. Remember the left-hand G7 shape from Year 1:
-      **B F G**.
-
-      The tune is **Lightly Row**, a German children's song from the 1800s.
-  - exercise: lightly-row-chords-quiz
-  - exercise: lightly-row-rh
-  - exercise: lightly-row-i-v
-recap: "Pick the chord that holds the melody's notes. I for C E G, V7 for D F B."
+- explain: |
+    To **harmonise** a melody is to choose chords for it. The simplest method: look at the
+    melody notes in each bar and pick the chord that **contains most of them**.
+  terms: [harmonise]
+- explain: |
+    With just two chords you can already do a lot. **I** (C E G) for bars that rest on C, E or G;
+    **V7** (G B D F) for bars that use D, F or B. Remember the left-hand G7 shape from Year 1:
+    **B F G**.
+  staff: {notes: 'G4:q E4:q E4:h | F4:q D4:q D4:h'}
+  sound: C3+E3+G3+G4:q E4:q E4:h | B2+F3+G3+F4:q D4:q D4:h
+  check:
+    ask: 'A bar of F D D: which chord?'
+    choices: [I, V7]
+    correct: 1
+    why: F and D are in G7 (G B D F), not in C.
+- explain: |
+    The tune is **Lightly Row**, a German children's song from the 1800s.
+- {exercise: lightly-row-chords-quiz}
+- {exercise: lightly-row-rh}
+- {exercise: lightly-row-i-v}
+recap: Pick the chord that holds the melody's notes. I for C E G, V7 for D F B.

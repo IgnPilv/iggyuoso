@@ -1,0 +1,75 @@
+id: y2-theory-checkpoint-a
+title: 'Year 2, checkpoint 1: theory'
+kind: quiz
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: B up to C is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 0
+  why: 1 semitone.
+  staff: B4:h C5:h
+- ask: G up to A is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 1
+  why: 2 semitones.
+  staff: G4:h A4:h
+- ask: D up to F is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 0
+  why: 3 semitones.
+  staff: D4:h F4:h
+- ask: F up to A is a...
+  choices: [Minor 3rd, Major 3rd]
+  correct: 1
+  why: 4 semitones.
+  staff: F4:h A4:h
+- ask: The relative minor of F major is...
+  choices: [A minor, F minor, D minor]
+  correct: 2
+  why: F down 3 semitones.
+- ask: The relative major of E minor is...
+  choices: [C major, E major, G major]
+  correct: 2
+  why: E up 3 semitones.
+- ask: 'Natural minor pattern:'
+  choices: [T S T T S T T, T S T T T S T, T T S T T T S]
+  correct: 0
+  why: Semitones 2–3 and 5–6.
+- ask: In E harmonic minor, the raised note is...
+  choices: [F♯, D♯, C♯]
+  correct: 1
+  why: The 7th of E minor.
+- ask: A minor with F♯ and G♯ going up, F and G coming down, is...
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 2
+  why: 6 and 7 raised going up only.
+- ask: A half note tied to a quarter lasts...
+  choices: [3 beats, Two separate notes, 2 beats]
+  correct: 0
+  why: 2 + 1, played once.
+- ask: How many sixteenths in one beat?
+  choices: [Four, Eight, Two]
+  correct: 0
+  why: ¼ beat each.
+- ask: A phrase ending V–I is a...
+  choices: [Perfect cadence, Imperfect cadence]
+  correct: 0
+  why: A full stop.
+- ask: The 7th degree, a semitone below the tonic, is called the...
+  choices: [Subdominant, Leading note, Dominant]
+  correct: 1
+  why: It leads up to the tonic.
+- ask: 'F major, right hand: B♭ always gets finger...'
+  choices: ['4', '1', '3']
+  correct: 0
+  why: The thumb stays off black keys.
+- ask: What key is this in?
+  choices: [E major, E minor, G major]
+  correct: 1
+  why: 'One sharp: G major or E minor. It''s built on E and has the raised 7th, D♯: E minor.'
+  staff: E4:q G4:q B4:q D#5:q | E5:h. r:q
+  clef: treble
+  key: Em

@@ -1,12 +1,62 @@
 id: perfect-intervals-quiz
-title: "Perfect 4ths and 5ths"
+title: Perfect 4ths and 5ths
 kind: quiz
-prompt: "4ths and 5ths are called perfect."
+prompt: 4ths and 5ths are called perfect.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "A perfect 5th has how many semitones?", choices: ["4", "5", "7"], correct: 2 }
-  - { ask: "A perfect 4th has how many semitones?", choices: ["7", "5", "3"], correct: 1 }
-  - { ask: "C up a perfect 5th is…", choices: ["A", "F", "G"], correct: 2, staff: "C4:h G4:h" }
-  - { ask: "C up a perfect 4th is…", choices: ["E", "G", "F"], correct: 2, staff: "C4:h F4:h" }
-  - { ask: "D up a perfect 5th is…", choices: ["B", "A", "G"], correct: 1 }
-  - { ask: "B up to F is a 5th, but only 6 semitones. It is…", choices: ["A diminished 5th", "A major 5th", "A perfect 5th"], correct: 0 }
+- ask: A perfect 5th has how many semitones?
+  choices: ['4', '5', '7']
+  correct: 2
+  why: 'C to G: 7 semitones.'
+- ask: A perfect 4th has how many semitones?
+  choices: ['3', '5', '7']
+  correct: 1
+  why: 'C to F: 5 semitones.'
+- ask: C up a perfect 5th is...
+  choices: [A, F, G]
+  correct: 2
+  why: C D E F G.
+  staff: C4:h G4:h
+- ask: C up a perfect 4th is...
+  choices: [E, F, G]
+  correct: 1
+  why: C D E F.
+  staff: C4:h F4:h
+- ask: D up a perfect 5th is...
+  choices: [A, B, G]
+  correct: 0
+  why: D E F G A, 7 semitones.
+- ask: G up a perfect 4th is...
+  choices: [B, D, C]
+  correct: 2
+  why: G A B C, 5 semitones.
+- ask: F up a perfect 4th is...
+  choices: [A, B, B♭]
+  correct: 2
+  why: 'F to B is 6 semitones; a perfect 4th needs 5: B♭.'
+- ask: B up to F is a 5th, but only 6 semitones. It is...
+  choices: [A major 5th, A perfect 5th, A diminished 5th]
+  correct: 2
+  why: One semitone smaller than perfect.
+- ask: Which intervals are called perfect?
+  choices: ['2nd, 3rd, 6th', Only the octave, 'Unison, 4th, 5th, octave']
+  correct: 2
+  why: The others come in major and minor.
+- ask: A perfect 5th turned upside down becomes...
+  choices: [A perfect 4th, A major 3rd, A perfect 5th]
+  correct: 0
+  why: 7 + 5 = 12, an octave.
+- ask: Which interval?
+  choices: [Major 3rd, Perfect 4th, Perfect 5th]
+  correct: 1
+  why: 'E F G A: 4 letters, 5 semitones.'
+  staff: E4:h A4:h
+  clef: treble
+- ask: Which interval?
+  choices: [Perfect 4th, Perfect 5th, Major 3rd]
+  correct: 1
+  why: 'A B C D E: 5 letters, 7 semitones.'
+  staff: A3:h E4:h
+  clef: treble

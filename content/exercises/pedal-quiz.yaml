@@ -1,0 +1,47 @@
+id: pedal-quiz
+title: Pedal quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: The right-hand pedal is the...
+  choices: [Sustain pedal, Soft pedal, Volume pedal]
+  correct: 0
+  why: It keeps notes ringing.
+- ask: While the sustain pedal is down...
+  choices: [Notes are quieter, Notes stop, Notes keep ringing after you let go]
+  correct: 2
+  why: The dampers lift off the strings.
+- ask: Your heel should be...
+  choices: [On the floor, On the pedal, In the air]
+  correct: 0
+  why: Press with the ball of the foot.
+- ask: Ped. under the staff means...
+  choices: [Press the pedal, Play softer, Lift the pedal]
+  correct: 0
+  why: And the end of the line means lift.
+- ask: Simple pedal is lifted...
+  choices: [Before the next chord, At the end of the piece, Just after the next chord]
+  correct: 0
+  why: Each chord rings on its own.
+- ask: Legato pedal is changed...
+  choices: [Just after the new chord, Before the new chord, Only once]
+  correct: 0
+  why: Hands first, then the foot.
+- ask: When should you change the pedal?
+  choices: [When the harmony changes, Never in legato music, Every beat]
+  correct: 0
+  why: New chord, fresh pedal.
+- ask: Two different chords ringing together make...
+  choices: [A blur, A cadence, A tie]
+  correct: 0
+  why: Change the pedal to clear it.
+- ask: Legato pedal is also called...
+  choices: [Syncopated pedal, Simple pedal, Staccato pedal]
+  correct: 0
+  why: Because the foot moves off the beat, just after the hands.
+- ask: Baroque pieces like the Minuet in G are usually played...
+  choices: [With simple pedal on every note, Without pedal, With pedal held all the way]
+  correct: 1
+  why: Clear fingers, no pedal.

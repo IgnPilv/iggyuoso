@@ -1,10 +1,50 @@
 id: cadence-quiz
-title: "Cadences"
+title: Cadences
 kind: quiz
-prompt: "A cadence is the end of a phrase."
+prompt: A cadence is the end of a phrase.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "A perfect cadence is…", choices: ["IV to V", "I to V", "V to I"], correct: 2 }
-  - { ask: "A phrase that ends on V has…", choices: ["No cadence", "An imperfect cadence", "A perfect cadence"], correct: 1 }
-  - { ask: "In F major, the perfect cadence is…", choices: ["C to F", "F to C", "Bb to F"], correct: 0 }
-  - { ask: "In G major, the perfect cadence is…", choices: ["C to G", "G to D", "D to G"], correct: 2 }
+- ask: A perfect cadence is...
+  choices: [I to V, IV to V, V to I]
+  correct: 2
+  why: 'Dominant to tonic: the full stop.'
+- ask: A phrase that ends on V has...
+  choices: [An imperfect cadence, No cadence, A perfect cadence]
+  correct: 0
+  why: Ending on V is a comma.
+- ask: In F major, the perfect cadence is...
+  choices: [B♭ to F, F to C, C to F]
+  correct: 2
+  why: V of F is C.
+- ask: In G major, the perfect cadence is...
+  choices: [G to D, D to G, C to G]
+  correct: 1
+  why: V of G is D.
+- ask: In C major, the perfect cadence is...
+  choices: [F to C, C to G, G to C]
+  correct: 2
+  why: V of C is G.
+- ask: The most common way to end a piece is...
+  choices: [I – IV – I, IV – V – I, V – IV – I]
+  correct: 1
+  why: Away, pull, home.
+- ask: A perfect cadence sounds...
+  choices: [Unfinished, Sad, Finished]
+  correct: 2
+  why: It arrives home.
+- ask: An imperfect cadence sounds like...
+  choices: [A crash, 'A comma, or a question', A full stop]
+  correct: 1
+  why: It waits for more.
+- ask: Listen. Perfect or imperfect?
+  choices: [Imperfect, Perfect]
+  correct: 1
+  why: 'It ended C → F: V–I in F major.'
+  sound: F3+A3+C4:h Bb3+D4+F4:h | C4+E4+G4:h F3+A3+C4+F4:h
+- ask: Listen. Perfect or imperfect?
+  choices: [Imperfect, Perfect]
+  correct: 0
+  why: 'It ended on C, chord V of F: waiting.'
+  sound: F3+A3+C4:h Bb3+D4+F4:h | F3+A3+C4:h C4+E4+G4:h

@@ -1,14 +1,22 @@
 id: two-octave-d-minor
-title: "D minor over two octaves"
+title: D minor over two octaves
 unit: minor-keys
 skills: [scales, minor]
 steps:
-  - explain: |
-      D minor is the relative minor of F major, so it has **Bb** in its key signature. The harmonic
-      form adds **C#**. Fingering: same as C major in both hands.
-
-      Bb and C# sit next to each other near the top of each octave. Say them as you play: "B-flat,
-      C-sharp, D".
-  - exercise: d-minor-2oct-rh
-  - exercise: d-minor-2oct-ht
-recap: "D harmonic minor: Bb from the key, C# raised. C's fingering."
+- explain: |
+    D minor is the relative minor of F major, so it has **B♭** in its key signature. The harmonic
+    form adds **C♯**. Fingering: same as C major in both hands.
+  staff: {notes: 'D4:e E4:e F4:e G4:e A4:e Bb4:e C#5:e D5:e', key: Dm, labels: names}
+  sound: D4:e E4:e F4:e G4:e A4:e Bb4:e C#5:e D5:q
+- explain: |
+    B♭ and C♯ sit next to each other near the top of each octave. Say them as you play: "B-flat,
+    C-sharp, D".
+  keys: {notes: Bb4 C#5 D5, labels: names}
+  check:
+    ask: 'D harmonic minor: from B♭ to C♯ is...'
+    choices: [1 semitone, 2 semitones, 3 semitones]
+    correct: 2
+    why: 'B♭, B, C, C♯: the harmonic minor''s wide step between 6 and 7.'
+- {exercise: d-minor-2oct-rh}
+- {exercise: d-minor-2oct-ht}
+recap: 'D harmonic minor: Bb from the key, C# raised. C''s fingering.'
