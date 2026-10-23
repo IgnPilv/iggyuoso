@@ -60,11 +60,23 @@ export function renderProfile(p: { store: Store; mastery: Mastery }, now = new D
         title: c.log ? `${c.day}: ${min} min, ${c.log.takes} takes, ${c.log.xp} XP` : `${c.day}: no practice`,
       });
     }));
+  // Month names over the week where a month starts, weekday names down the side.
+  const weeks = Math.ceil(cells.length / 7);
+  let lastMonth = -1;
+  const months = h('div', { class: 'cal-months', 'aria-hidden': 'true' }, ...Array.from({ length: weeks }, (_, w) => {
+    const first = cells.slice(w * 7, w * 7 + 7).find((c) => c);
+    const m = first ? new Date(`${first.day}T12:00:00`).getMonth() : lastMonth;
+    const label = m !== lastMonth ? new Date(2000, m, 1).toLocaleString('en', { month: 'short' }) : '';
+    lastMonth = m;
+    return h('span', {}, label);
+  }));
+  const weekdays = h('div', { class: 'cal-weekdays', 'aria-hidden': 'true' }, ...['Mon', '', 'Wed', '', 'Fri', '', ''].map((d) => h('span', {}, d)));
+  const calendar = h('div', { class: 'cal-wrap' }, h('span'), months, weekdays, grid);
   const lessons = [...content.lessons.values()];
   const lessonsDone = lessons.filter((l) => p.store.lessonDone(lessonGoals(l))).length;
   const calendarCard = h('section', { class: 'card' },
     h('h2', {}, 'Practice'),
-    grid,
+    calendar,
     h('div', { class: 'cal-legend small' }, 'Less', ...[0, 1, 2, 3, 4].map((s) => h('span', { class: `cal-day s${s}` })), 'More'),
     h('div', { class: 'stats' },
       stat(totals.days, 'days practised'),

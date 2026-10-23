@@ -277,3 +277,9 @@ never copied pages). Start small, adapt as we go.
   every lesson" is gone. Today's next lesson = the first not done whose requirements are met,
   else the first not done. Mastery states, reps, XP and rewards are unchanged. Demo scene
   "Clean takes and the path".
+- 2026-10-23: After Ignas's UX audit (design thread): phone layout with icon-only nav and no
+  sideways scroll; the exercise screen leads with Listen / Play / Stop, with tempo, click, guide
+  and loops in an Options drawer; the home page shows a path map (years → unit stations with
+  progress rings → lesson tiles with strand dots, only the current unit open, no "Ahead" badges)
+  and a shorter hero for returning players; the practice calendar has month and weekday labels.
+

@@ -1,11 +1,12 @@
 import { audio } from '../audio/audio';
-import { content, exerciseTitle } from '../content';
+import { content, exerciseTitle, tree } from '../content';
 import type { EarExercise, Exercise, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
 import { parse } from 'yaml';
 import { parseExercise } from '../content/load';
 import { h, type View } from './dom';
+import { pathMap } from './pathMap';
 import { mountExercise } from './players';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
@@ -195,8 +196,8 @@ function pathDemo() {
     h('ol', { class: 'lessons' },
       item('Steps up and down', 'done'),
       item('Five-finger tune', 'next'),
-      item('Skips', 'ahead', 'Ahead'),
-      item('Checkpoint: first tunes', 'ahead', 'Ahead')),
+      item('Skips', 'ahead'),
+      item('Checkpoint: first tunes', 'ahead')),
     h('div', { class: 'banner advice' }, h('p', {}, h('strong', {}, 'Ahead of your path. '),
       'Recommended first: Five-finger tune. You can play this now; your takes count all the same.')));
 }
@@ -279,7 +280,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Clean takes and the path',
-    caption: 'One good take is not enough: an exercise is done after three clean takes (★★★, 92 or more, at full tempo), and some need them on different days. Nothing is locked: lessons further along are marked Ahead and say what is recommended first (checkpoints: everything before them Mastered), but you can open and play any of them.',
+    caption: 'One good take is not enough: an exercise is done after three clean takes (★★★, 92 or more, at full tempo), and some need them on different days. Nothing is locked: lessons further along look a little quieter on the home page and say what is recommended first (checkpoints: everything before them Mastered), but you can open and play any of them.',
     run: (box, next, p) => {
       const timers: number[] = [];
       let takes = 0;
@@ -336,6 +337,16 @@ function scenes(): Scene[] {
         timers.push(window.setTimeout(next, 16000));
       }, 5000));
       return () => { timers.forEach(clearTimeout); cleanup?.(); };
+    },
+  });
+  out.push({
+    title: 'Your path',
+    caption: 'The home page shows the path: each year is a road of units, each with a ring that fills as its lessons are done. Only the unit you are in is open; tap any other to see its lessons. The dots say which strand a lesson trains.',
+    run: (box, next) => {
+      const first = tree[0]?.units[0]?.nodes.find((n) => n.lesson)?.lesson;
+      box.append(pathMap(first));
+      const t = window.setTimeout(next, 9000);
+      return () => clearTimeout(t);
     },
   });
   out.push({
