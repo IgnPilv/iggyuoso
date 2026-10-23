@@ -4,8 +4,8 @@
 
 ## What it is
 A browser-based piano tutor (iggy + virtuoso) for an adult beginner who is "not musical", using a
-MIDI keyboard. Not a song player; a **trainer**: short exercises that each isolate one skill,
-hands apart first, then together. Each hand is scored separately and the feedback says which hand
+MIDI keyboard. Not a song player; a **trainer**: short exercises that each isolate one skill, with
+both hands working together early. Each hand is scored separately and the feedback says which hand
 or which habit gave way. Slogan: *easy as C D E.*
 
 The curriculum teaches from scratch, like a first-year music-school pupil: music theory and playing
@@ -55,9 +55,12 @@ never copied pages). Start small, adapt as we go.
   move) in the same PR. The demo never saves progress or calibration.
 
 ## Content
-- Lessons are grouped in units; each lesson pairs one piece of theory with one playing skill.
-  Format: `content/README.md`. 5-year design: `docs/mastery-curriculum.md` (tree data in
-  `content/tree/`). Original unit 1 plan: `docs/beta-curriculum-proposal.md`.
+- A **growing mastery tree**, no years: seven branches (technique, reading, rhythm, theory, ear,
+  pieces, creativity) over nine stages, a trunk of milestones, and songs that open after them.
+  Requirements cross branches. Data in `content/tree/`, format in `content/README.md`, design in
+  `docs/mastery-curriculum.md`.
+- Most lessons are **generated** by `tools/content/build.py` (see `content/README.md`). Change
+  generated lessons in the scripts, and commit hand edits before running `rebuild.sh`.
 
 ## Decision log
 - 2026-10-23: Repo `IgnPilv/iggyuoso`, public (free GitHub Pages for https/Web MIDI).
@@ -363,3 +366,40 @@ never copied pages). Start small, adapt as we go.
   `rhythm-echo` (`tap` with `echo: true`): Play sounds the rhythm unseen, a full bar of count-in,
   the player taps it back (no Listen button, no falling notes, no lit keys, no loops); the staff
   appears on the result, marked. Demo scenes "Two-hand tapping" and "Rhythm echo".
+- 2026-10-23: The growing tree (Ignas: "drop year1 year2 format, just mastery trees... a tree that
+  grows"; "branch out theory and playing and pitch training and rhythm but combine them as starting
+  points... prerequisites for one another"). Years and units are gone. `content/tree/` has one file
+  per branch (technique, reading, rhythm, theory, ear, repertoire shown as Pieces, creativity), plus
+  `milestones.yaml` (the trunk), `songs.yaml` and `stages.yaml` (nine stages, one milestone each).
+  Requirements cross branches and never point to a later stage (nor to a milestone of the same
+  stage). The old Year 1–2 nodes were restructured by hand (`tools/content/tree_base.py`); the old
+  checkpoints are milestones 1–6, now also needing nodes from every new branch; milestones 7–9 are
+  new. Nothing is locked (unchanged).
+- 2026-10-23: Home is the tree (`src/ui/treeView.ts`): a drawn tree whose whole shape shows faintly
+  from day one while colour grows along it (trunk with milestones, branches and leaves with nodes,
+  buds where something is open, songs as blossom); "Growing now" (open nodes, at most two per
+  branch); the Songs card; "The whole tree" by stage (current open, the next four nodes per
+  branch). Pages: `#/branch/<id>` (nodes after what they need, with "Grows after") and `#/songs`
+  (songbook shelves per milestone). Demo scene "Your tree".
+- 2026-10-23: Songs section: public-domain songs (folk, carols, classics such as Ode to Joy and
+  Greensleeves) and our own, each opening after a milestone and recommended there. A song has a
+  rhythm tap, two-hand tap, by-ear echo, hands separately, together, other accompaniments, other
+  keys and a performance take.
+- 2026-10-23: Difficulty curve (Ignas: "should it at year 2 have one note at a time content?"):
+  two hands from stage 1 (mirror hands, taking turns, held bass, two-hand taps); after stage 2
+  nearly every playing exercise is hands together, with one-hand takes only as the first steps of
+  a piece. Chords and cadences early; scales hands together from stage 3.
+- 2026-10-23: Ear from zero ("assume the person has no pitch"): the ear branch starts with same or
+  different (far, then closer), higher or lower, contour, step or leap, loud or soft, how many
+  notes and two-note echoes on lit keys, and climbs through degrees, intervals (together, down, by
+  playing), chord qualities to sevenths and sus chords, cadences, chromatic degrees and eight-note
+  echoes (55 nodes).
+- 2026-10-23: Rhythm branch (55 nodes): tap the beat to odd meters, two hands from stage 1, inner
+  pulse with clicks only in the count-in, upbeats, syncopation, compound time, three against two,
+  hemiola, swing; a "rhythm workout" per stage of generated reading and echo drills.
+- 2026-10-23: Content ×6 (Ignas: "increase content by at least 500%"): 116 → 394 lessons, 308 →
+  1848 exercises; estimated time to finish everything cleanly about 19 → 110 hours (played once:
+  about 7 → 40 hours). Key studies and musicianship lessons for 23 keys, pieces as five-step
+  ladders (tap, RH, LH, together, polish), études, songs with arrangements, reading and spelling
+  drills. Generated by `tools/content/` (see `content/README.md`); G♯ minor is left out because
+  the note parser has no double sharps.

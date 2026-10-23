@@ -55,10 +55,16 @@ Fonts are bundled from npm (`@fontsource-variable/*`), so nothing loads from a f
   view toggle. Everything else (tempo, click, guide notes, looping) sits in an **Options drawer**
   (`details.drawer`), whose summary shows the meter and bpm. Status text is a small line
   (`.status-line`), never a headline.
-- **Path map** (`src/ui/pathMap.ts`): the home page draws the mastery tree year by year as a road of
-  unit stations. Each station has a progress ring, and only the current unit is open. Lessons are tiles
-  with a strand dot. Badges appear only for things worth acting on or celebrating (Review, Solid, Mastered,
-  reps in progress); "not yet recommended" is a quieter tile, never a warning badge.
+- **Growing tree** (`src/ui/treeView.ts`): the home page draws the player's tree. The whole shape is
+  always there faintly (trunk, a ring per milestone, dashed branches with name and count), and colour
+  grows along it: the trunk climbs with milestones passed, each branch lengthens and leafs out with its
+  nodes (pale leaf = Practised, full leaf = Solid or Mastered), a glowing bud marks something open, and
+  songs blossom in the crown. Branch colours: the strand tokens (`strand-stroke-*`, `strand-fill-*`).
+  Below it: "Growing now" (open nodes as tiles, at most two per branch), the Songs card, and "The whole
+  tree": stages up the trunk, the current one open, each branch as a row of its next four nodes with
+  the rest behind a "n more →" link to the branch page. Badges appear only for things worth acting on
+  or celebrating (Review, Solid, Mastered, reps in progress); "not grown yet" is a quieter dashed tile,
+  never a warning.
 - **Theory screen** (`src/ui/theory.ts` builds it, design styles it): large text (about 1.2–1.35 rem)
   beside a picture panel (staff, lit keys, Hear it) on wide screens, stacked on phones. The rule is a
   callout with a gradient edge, key terms are chips, and the check question is its own card with a gradient top
@@ -71,9 +77,6 @@ Fonts are bundled from npm (`@fontsource-variable/*`), so nothing loads from a f
 
 ## Scaling up
 
-- **Mastery tree:** build the nodes from the lesson-tile pattern (number or icon disc, state
-  colours `done` / `next` / locked = `--muted`), with edges in `--line-strong` and the active path in
-  `--brand-gradient`.
 - **Mini games:** draw them on a canvas through `palette()`, on the dark stage. Use the hand and
   meaning colours for gameplay, and brand colours only for celebration (streaks, stars).
 - **Motion:** use `--ease-spring` for rewards and `--ease-out` for everything else. Respect

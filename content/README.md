@@ -196,33 +196,41 @@ Note names are mapped to the player's real keys through calibration, never to fi
 finger count that doesn't match, missing lesson or exercise id).
 
 ## Mastery tree
-`content/tree/year-N.yaml`, one file per year (1–5). The design is in `docs/mastery-curriculum.md`.
+There are no years. The tree is a set of **branches** that grow side by side, joined by a trunk of
+**milestones**. Files in `content/tree/`:
+
+- `stages.yaml`: the stages between milestones, in order (`stage`, `title`, `summary`). Stage 1
+  ends at milestone 1, stage 2 at milestone 2, and so on.
+- One file per branch: `technique`, `reading`, `rhythm`, `theory`, `ear`, `repertoire` (shown as
+  Pieces), `creativity`; plus `milestones` (the trunk) and `songs` (open after milestones).
 
 ```yaml
-year: 1
-title: First steps
-level: ABRSM Initial–Grade 1, RCM Prep–Level 1
-goal: What the player can do at the end of the year.
-units:                 # in path order
-  - id: meet-the-keyboard
-    title: Meet the keyboard
-    nodes:             # a built unit
-      - { id: c-d-e, type: lesson, strand: theory, lesson: c-d-e, title: "C, D and E", requires: [high-and-low] }
-      - { id: ear-high-low, type: drill, strand: ear, planned: true, title: Higher or lower?, requires: [high-and-low] }
-  - id: minor-keys     # a unit that is still an outline
-    title: Minor keys
-    checkpoint: y2-checkpoint-a
-    outline:
-      theory: [Natural, harmonic and melodic minor]
+branch: ear
+title: Ear
+summary: "The ear from scratch: same or different, high or low, ..."
+nodes:
+  - { id: ear-high-low, stage: 1, lesson: ear-high-low, title: "Higher or lower?", type: drill, requires: [ear-same-different, high-and-low] }
 ```
 
-- `type`: `lesson`, `drill`, `piece`, `checkpoint`, `side-quest` (optional, never blocks the path).
-- `strand`: `technique`, `reading`, `rhythm`, `theory`, `ear`, `repertoire`, `creativity`;
-  checkpoints use `all`.
-- `requires`: node ids that must be Practised first. They must appear earlier in path order
-  (any year), which keeps the tree free of loops.
-- `lesson`: the lesson that teaches the node. A node without one must say `planned: true`.
-- Every lesson in `content/lessons/` must be placed in the tree, and every year has exactly three
-  checkpoints (as nodes, or `checkpoint:` on an outlined unit).
+- `type`: `lesson`, `drill`, `piece`, `checkpoint` (milestones only), `side-quest`, `song`.
+- `requires`: node ids from **any** branch. This is how the branches intertwine: an ear node can
+  need a theory node, a piece can need a technique node and a rhythm node. A node may only require
+  nodes of its own stage or earlier, and a milestone only from an earlier stage. No loops.
+- Each stage has exactly one milestone. A milestone requires a few nodes from every branch of its
+  stage and the previous milestone; songs require the milestone they open after.
+- `lesson`: the lesson that teaches the node. Every lesson in `content/lessons/` is placed in the
+  tree exactly once.
+- Nothing is ever closed: a node whose requirements are not grown yet still opens, with advice.
 
 `npm test` checks all of this.
+
+## Generated content (`tools/content/`)
+Most lessons are written by Python scripts, not by hand, so families (scales in every key, key
+studies, song arrangements, rhythm workouts) stay consistent. `python3 tools/content/build.py`
+removes the files it wrote last time (`generated.txt`), runs the branch modules (`patch`, `ear`,
+`rhythm`, `technique`, `reading`, `theory`, `pieces`, `creativity`, `keys`, `songs`,
+`milestones`), and writes the lessons, exercises and every tree file in full (the original nodes
+come from `tree_base.py`). `tools/content/rebuild.sh` first resets `content/` to the last commit,
+so **commit hand edits to content before running it**, and change generated lessons in the
+scripts, not in the YAML. Helpers live in `lib.py` (`timed`, `tap`, `tap2`, `ear`, `quiz`, `Q`,
+`gen`, `rread`, `accompany`, `transpose_string`, ...).
