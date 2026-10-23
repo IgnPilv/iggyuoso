@@ -333,3 +333,22 @@ never copied pages). Start small, adapt as we go.
   `sight-read` with `hand: together` writes a tune over a left hand on I, IV, V (`left: roots |
   fifths | chords`), grand staff, each bar's first tune note a chord note (`progression`,
   `src/engine/generate.ts`). Demo scene "Sight-reading, both hands".
+- 2026-10-23: Guest and accounts (Ignas: "use an account to track across devices or just use a
+  guest session which is local"; no import/export). Guest is the default: progress on this
+  device only, and the profile opens with a "Guest" card saying so. A signed-in account copies
+  progress to a server and back (`src/sync/`, `docs/accounts.md`); the app always plays from the
+  device's copy, so it works offline. Backend: **Supabase free plan**, over plain HTTPS (no SDK),
+  email-link sign-in, one `progress` table (one row per store key, `jsonb` value, `schema`,
+  server `updated_at`) under row-level security (`docs/supabase.sql`). The server sits behind
+  `SyncProvider`, so it can be swapped. Config from repository variables `SUPABASE_URL` /
+  `SUPABASE_ANON_KEY` at build time; without them the app is guest only ("accounts are
+  coming"). Every `iggyuoso.*` record syncs except `schema`, `calibration`, `settings`,
+  `account`, `sync.*` (new records sync with no change). Changes are stamped by a wrapper on the
+  store's backend; sync = pull rows changed since the last pull (1 min overlap), merge records
+  changed on both sides (exercise records, practice log, timing, XP keep the most of both, so
+  counts never double but can undercount if both devices practise offline at once; everything
+  else newer wins), push local changes. Rows from a newer schema are skipped with a reload
+  prompt; older ones run `Store.upgradeFrom`, so migration steps must accept upgraded data.
+  Signing in adds the guest's progress to the account; signing out keeps it on the device as a
+  guest. The sign-in link returns to the app with the session in the hash, turned into
+  `#/profile`. Demo scene "Guest or account" (pretend server, never saves).
