@@ -1,4 +1,5 @@
 import type { Calibration } from '../calibration';
+import { STAR_THRESHOLDS } from '../scoring/stars';
 
 // Progress lives in localStorage for now. Everything goes through a small key-value backend so
 // it can be swapped for an account later.
@@ -35,7 +36,27 @@ export interface ExerciseProgress {
   last?: Attempt;
   /** Passed (★ or better) at least once, at a tempo that counts. */
   passed?: boolean;
+  /** Clean takes (★★★ at a tempo that counts), and the days they were played on. */
+  clean?: number;
+  cleanDays?: string[];
 }
+
+/** What an exercise needs before it is done (from the content: `reps`, `days`). */
+export interface RepsGoal {
+  id: string;
+  reps: number;
+  days: number;
+}
+
+/** Where an exercise stands against its goal. */
+export interface RepsProgress {
+  clean: number;
+  days: number;
+  done: boolean;
+}
+
+/** Score of a clean take. */
+export const CLEAN_SCORE = STAR_THRESHOLDS[2];
 
 export interface Settings {
   /** Extra ms added to the measured audio latency; positive = the player hears clicks later. */
@@ -48,6 +69,14 @@ export interface Settings {
   theme: 'system' | 'light' | 'dark';
   /** Play with the computer keyboard (A S D F ... as white keys). Off unless switched on. */
   computerKeys?: boolean;
+  /** Open every lesson, ignoring the order (for trying things out). */
+  openAll?: boolean;
+}
+
+/** Local calendar day (YYYY-MM-DD) of an ISO time. */
+export function localDay(iso: string): string {
+  const d = new Date(iso);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
 const DEFAULT_SETTINGS: Settings = { latencyMs: 0, metronome: true, guide: false, theme: 'system' };
@@ -99,7 +128,13 @@ export class Store {
   set settings(s: Settings) { this.write('settings', s); }
 
   exercise(id: string): ExerciseProgress {
-    return this.read<ExerciseProgress>(`ex.${id}`) ?? { attempts: 0 };
+    const p = this.read<ExerciseProgress>(`ex.${id}`) ?? { attempts: 0 };
+    // Saved before clean takes were counted: a clean best counts as one.
+    if (p.clean === undefined && p.best?.counts && p.best.score >= CLEAN_SCORE) {
+      p.clean = 1;
+      p.cleanDays = [localDay(p.best.at)];
+    }
+    return p;
   }
 
   record(id: string, a: Attempt): ExerciseProgress {
@@ -108,13 +143,26 @@ export class Store {
     p.last = a;
     if (a.counts && (!p.best || a.score > p.best.score)) p.best = a;
     if (a.counts && a.stars >= 1) p.passed = true;
+    if (a.counts && a.score >= CLEAN_SCORE) {
+      p.clean = (p.clean ?? 0) + 1;
+      const day = localDay(a.at);
+      if (!p.cleanDays?.includes(day)) p.cleanDays = [...(p.cleanDays ?? []), day];
+    }
     this.write(`ex.${id}`, p);
     return p;
   }
 
-  /** A lesson is done when every exercise in it has been passed. */
-  lessonDone(exerciseIds: string[]): boolean {
-    return exerciseIds.length > 0 && exerciseIds.every((id) => this.exercise(id).passed);
+  /** Clean takes so far against the exercise's goal. */
+  reps(goal: RepsGoal): RepsProgress {
+    const p = this.exercise(goal.id);
+    const clean = p.clean ?? 0;
+    const days = p.cleanDays?.length ?? 0;
+    return { clean, days, done: clean >= goal.reps && days >= goal.days };
+  }
+
+  /** A lesson is done when every exercise in it is done: enough clean takes, on enough days. */
+  lessonDone(exercises: RepsGoal[]): boolean {
+    return exercises.length > 0 && exercises.every((e) => this.reps(e).done);
   }
 }
 

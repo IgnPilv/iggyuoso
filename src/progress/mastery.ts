@@ -78,14 +78,23 @@ export class Mastery {
     return 'solid';
   }
 
-  /** The node's state now: Locked until every node it requires is at least Practised. */
+  /**
+   * The node's state now: Locked until every node it requires is at least Practised. A checkpoint
+   * needs every node it requires Mastered.
+   */
   state(id: string): NodeState {
     const node = this.nodes.get(id);
     if (!node) return 'locked';
-    if (node.requires.some((r) => rank(this.state(r)) < rank('practised'))) {
+    if (this.missing(node).length) {
       return rank(this.rec(id).state) >= rank('practised') ? this.rec(id).state : 'locked';
     }
     return this.rec(id).state;
+  }
+
+  /** Nodes this one requires that are not far enough along yet to open it. */
+  missing(node: TreeNode): string[] {
+    const need = rank(node.type === 'checkpoint' ? 'mastered' : 'practised');
+    return node.requires.filter((r) => rank(this.state(r)) < need);
   }
 
   /** 1 = just practised, 0.5 = due for review. Only Solid and Mastered nodes fade. */

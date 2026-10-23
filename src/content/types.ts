@@ -34,6 +34,10 @@ interface ExerciseBase {
   clef?: 'treble' | 'bass';
   /** Key signature for the staff (`key: G`, `Bb`, `Em`). Notes are still written out in full. */
   key?: string;
+  /** Clean takes (★★★ at a tempo that counts) needed before the exercise is done. */
+  reps: number;
+  /** ...spread over at least this many different days. */
+  days: number;
 }
 
 export interface FindExercise extends ExerciseBase {

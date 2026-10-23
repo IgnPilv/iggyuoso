@@ -14,6 +14,18 @@ content/
 complete beginner, as if to a child) or `exercise: <exercise-id>`. Exercises can be reused by
 several lessons.
 
+## Reps and days (any exercise)
+An exercise is **done** after `reps` clean takes (★★★, 92 or more, at a tempo that counts),
+played on at least `days` different days. Defaults: `reps: 3`, `days: 1`; `days` cannot be more
+than `reps`. A lesson is done when every exercise in it is done, and the next lesson in the unit
+stays locked until then. A checkpoint node opens only when every node it `requires` is Mastered.
+Mastery states on the tree are unchanged (Practised still means every exercise ★ once).
+
+```yaml
+reps: 5   # five clean takes
+days: 2   # spread over at least two days
+```
+
 ## Exercise kinds
 - `find`: untimed. Press keys matching `targets`. A target is one of
   `{ blackGroup: 2|3 }`, `{ pitchClass: C }`, `{ region: low|high }`.

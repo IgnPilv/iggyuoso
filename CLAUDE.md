@@ -227,3 +227,12 @@ never copied pages). Start small, adapt as we go.
   timed exercises (not `tap`) and step-by-step reading exercises (`display: staff`) show the staff
   as a strip above the lane. It scrolls so the music being played sits a third of the way in, with
   a playhead, and marks notes like the sheet view.
+- 2026-10-23: Reps and locks (engine side of the pacing ask). Every exercise has `reps` (default 3)
+  and `days` (default 1): it is done after that many clean takes (★★★, 92+, at a tempo that
+  counts) on at least that many different days; `days` ≤ `reps`. Store keeps `clean` and
+  `cleanDays` per exercise (a clean best saved earlier counts as one). A lesson is done when every
+  exercise is done; lessons in a unit open one by one, and a lesson whose tree node is Locked stays
+  closed. Checkpoint nodes need every required node Mastered (other nodes still need Practised).
+  Mastery states themselves are unchanged. The result card says "n of m clean takes"; the recap
+  and the locked-lesson card list each exercise's count. Settings → Defaults "Open every lesson"
+  skips the order for trying things out. Demo scene "Clean takes and locks".
