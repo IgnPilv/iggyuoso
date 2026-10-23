@@ -171,7 +171,7 @@ def tree_edits(nodes):
     # Songbooks open with the milestones, like every song.
     sb = {'songbook-1': ('y1-checkpoint-a', 2), 'songbook-2': ('y1-checkpoint-b', 3), 'songbook-3': ('y1-checkpoint-b', 3), 'songbook-4': ('y1-exit', 4)}
     for id, (ms, st) in sb.items():
-        nodes[id].update(requires=[ms], stage=st, title=nodes[id]['title'].replace('Songbook: ', ''))
+        nodes[id].update(requires=[ms], stage=st, title=(lambda t: t[:1].upper() + t[1:])(nodes[id]['title'].replace('Songbook: ', '')))
     for n in nodes.values():
         if n['branch'] == 'milestones':
             n['requires'] = [r for r in n['requires'] if r not in sb]

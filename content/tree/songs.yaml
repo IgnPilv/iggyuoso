@@ -3,10 +3,10 @@ branch: songs
 title: Songs
 summary: "Tunes to play for fun, opened by the milestones."
 nodes:
-  - { id: songbook-1, stage: 2, lesson: songbook-1, title: "three old songs", requires: [y1-checkpoint-a] }
-  - { id: songbook-2, stage: 3, lesson: songbook-2, title: "hands together", requires: [y1-checkpoint-b] }
-  - { id: songbook-3, stage: 3, lesson: songbook-3, title: "tunes with chords", requires: [y1-checkpoint-b] }
-  - { id: songbook-4, stage: 4, lesson: songbook-4, title: "a round for two hands", requires: [y1-exit] }
+  - { id: songbook-1, stage: 2, lesson: songbook-1, title: "Three old songs", requires: [y1-checkpoint-a] }
+  - { id: songbook-2, stage: 3, lesson: songbook-2, title: "Hands together", requires: [y1-checkpoint-b] }
+  - { id: songbook-3, stage: 3, lesson: songbook-3, title: "Tunes with chords", requires: [y1-checkpoint-b] }
+  - { id: songbook-4, stage: 4, lesson: songbook-4, title: "A round for two hands", requires: [y1-exit] }
   - { id: song-rain-rain, stage: 2, lesson: song-rain-rain, title: "Rain, Rain, Go Away", requires: [y1-checkpoint-a], about: "Children's chant, England" }
   - { id: song-twinkle, stage: 2, lesson: song-twinkle, title: "Twinkle, Twinkle, Little Star", requires: [y1-checkpoint-a], about: "French tune \"Ah! vous dirai-je, maman\", 1761" }
   - { id: song-westminster, stage: 2, lesson: song-westminster, title: "Westminster Chimes", requires: [y1-checkpoint-a], about: "Clock chime, Cambridge 1793, Big Ben since 1859" }

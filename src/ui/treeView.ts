@@ -65,61 +65,73 @@ const GROUND = 396;
 export function growingTree(snap: Map<string, NodeView>, onBranch?: (b: BranchId) => void): SVGSVGElement {
   const passed = stages.filter((s) => s.milestone && grown(snap.get(s.milestone.id)!)).length;
   const reached = [...snap.values()].filter(grown).length;
-  // A seedling until something is practised; then the trunk rises with the milestones.
-  const trunkH = reached ? 150 + 170 * (passed / Math.max(1, stages.length)) : 70;
-  const top = GROUND - trunkH;
+  // The whole tree is always drawn faintly, so a beginner sees what they are growing; colour
+  // climbs the trunk with the milestones and runs out along each branch as its nodes grow.
+  const fullH = 320;
+  const top = GROUND - fullH;
+  const grownH = reached ? 60 + (fullH - 60) * (passed / Math.max(1, stages.length)) : 40;
   const parts: SVGElement[] = [];
 
   parts.push(svgEl('ellipse', { cx: W / 2, cy: GROUND + 6, rx: 180, ry: 12, class: 'tree-ground' }));
-  // Trunk: a tapering shape, wide at the roots.
-  const bw = reached ? 30 : 12;
-  const tw = reached ? 12 : 6;
-  parts.push(svgEl('path', {
-    class: 'tree-trunk',
-    d: `M ${W / 2 - bw / 2} ${GROUND} C ${W / 2 - bw / 2 + 4} ${GROUND - trunkH * 0.5}, ${W / 2 - tw / 2} ${top + 30}, ${W / 2 - tw / 2} ${top}
-        L ${W / 2 + tw / 2} ${top} C ${W / 2 + tw / 2} ${top + 30}, ${W / 2 + bw / 2 - 4} ${GROUND - trunkH * 0.5}, ${W / 2 + bw / 2} ${GROUND} Z`,
-  }));
-  // Milestone rings on the trunk.
-  for (let i = 0; i < passed; i++) {
-    const y = GROUND - 26 - i * ((trunkH - 50) / Math.max(1, stages.length));
-    parts.push(svgEl('circle', { cx: W / 2, cy: y, r: 5, class: 'tree-ring' }));
-  }
+  const trunk = (h: number, cls: string) => {
+    const t = GROUND - h;
+    const bw = 30;
+    const tw = 12 + 18 * (1 - h / fullH);
+    return svgEl('path', {
+      class: cls,
+      d: `M ${W / 2 - bw / 2} ${GROUND} C ${W / 2 - bw / 2 + 4} ${GROUND - h * 0.5}, ${W / 2 - tw / 2} ${t + 30}, ${W / 2 - tw / 2} ${t}
+        L ${W / 2 + tw / 2} ${t} C ${W / 2 + tw / 2} ${t + 30}, ${W / 2 + bw / 2 - 4} ${GROUND - h * 0.5}, ${W / 2 + bw / 2} ${GROUND} Z`,
+    });
+  };
+  parts.push(trunk(fullH, 'tree-trunk ghost'));
+  parts.push(trunk(grownH, 'tree-trunk'));
+  // A ring on the trunk for every milestone: filled once passed, faint until then.
+  stages.forEach((s, i) => {
+    if (!s.milestone) return;
+    const y = GROUND - 26 - i * ((fullH - 50) / Math.max(1, stages.length));
+    parts.push(svgEl('circle', { cx: W / 2, cy: y, r: 5, class: `tree-ring${i < passed ? '' : ' ghost'}` }));
+  });
 
   if (!reached) {
-    // A seedling: two small leaves and a bud.
-    parts.push(svgEl('ellipse', { cx: W / 2 - 16, cy: top + 6, rx: 16, ry: 7, transform: `rotate(-25 ${W / 2 - 16} ${top + 6})`, class: 'tree-leaf strand-fill-ear' }));
-    parts.push(svgEl('ellipse', { cx: W / 2 + 16, cy: top + 6, rx: 16, ry: 7, transform: `rotate(25 ${W / 2 + 16} ${top + 6})`, class: 'tree-leaf strand-fill-technique' }));
-    parts.push(svgEl('circle', { cx: W / 2, cy: top - 4, r: 7, class: 'tree-bud' }));
+    // A seedling at the foot of the tree: two small leaves and a bud.
+    const sy = GROUND - grownH;
+    parts.push(svgEl('ellipse', { cx: W / 2 - 16, cy: sy + 6, rx: 16, ry: 7, transform: `rotate(-25 ${W / 2 - 16} ${sy + 6})`, class: 'tree-leaf strand-fill-ear' }));
+    parts.push(svgEl('ellipse', { cx: W / 2 + 16, cy: sy + 6, rx: 16, ry: 7, transform: `rotate(25 ${W / 2 + 16} ${sy + 6})`, class: 'tree-leaf strand-fill-technique' }));
+    parts.push(svgEl('circle', { cx: W / 2, cy: sy - 4, r: 7, class: 'tree-bud' }));
   }
 
   GROWING.forEach((b, i) => {
     const nodes = [...snap.values()].filter((v) => v.node.branch === b && v.node.lesson);
-    if (!nodes.length || !reached) return;
-    const share = nodes.filter(grown).length / nodes.length;
+    if (!nodes.length) return;
+    const leaves = nodes.filter(grown);
+    const share = leaves.length / nodes.length;
     const side = b === 'creativity' ? 0 : i % 2 === 0 ? -1 : 1;
-    const at = b === 'creativity' ? top : GROUND - trunkH * (0.38 + 0.1 * Math.floor(i / 2));
-    const len = 60 + 190 * Math.sqrt(share);
+    const at = b === 'creativity' ? top : GROUND - fullH * (0.3 + 0.17 * Math.floor(i / 2));
+    const len = side ? 175 : 0;
     const x0 = W / 2;
     const y0 = at;
     const x1 = x0 + side * len;
-    const y1 = y0 - (side ? 40 + len * 0.35 : len * 0.55);
+    const y1 = y0 - (side ? 40 + len * 0.35 : 80);
     const cx = x0 + side * len * 0.45;
-    const cy = y0 - (side ? 8 : len * 0.4);
+    const cy = y0 - (side ? 8 : 40);
     const point = (t: number) => ({
       x: (1 - t) ** 2 * x0 + 2 * (1 - t) * t * cx + t * t * x1,
       y: (1 - t) ** 2 * y0 + 2 * (1 - t) * t * cy + t * t * y1,
     });
+    // How far along the colour has grown; the first part of the curve, split at t.
+    const t = leaves.length ? 0.2 + 0.8 * Math.sqrt(share) : 0;
+    const end = point(t);
+    const mid = { x: x0 + (cx - x0) * t, y: y0 + (cy - y0) * t };
     const g = svgEl('g', { class: `tree-branch branch-${b}`, role: 'link', tabindex: '0', 'aria-label': `${BRANCH_LABEL[b]} branch` });
-    g.append(svgEl('path', { d: `M ${x0} ${y0} Q ${cx} ${cy} ${x1} ${y1}`, class: `tree-limb strand-stroke-${b}` }));
-    // Leaves along the limb, alternating sides; at most 16, each standing for a share of the nodes.
-    const leaves = nodes.filter(grown);
+    g.append(svgEl('path', { d: `M ${x0} ${y0} Q ${cx} ${cy} ${x1} ${y1}`, class: `tree-limb ghost strand-stroke-${b}` }));
+    if (t) g.append(svgEl('path', { d: `M ${x0} ${y0} Q ${mid.x} ${mid.y} ${end.x} ${end.y}`, class: `tree-limb strand-stroke-${b}` }));
+    // Leaves along the grown part, alternating sides; at most 16, each standing for a share of the nodes.
     const shown = Math.min(16, leaves.length);
     for (let k = 0; k < shown; k++) {
       const v = leaves[Math.floor((k * leaves.length) / shown)];
-      const t = 0.18 + (0.78 * (k + 1)) / (shown + 1);
-      const p = point(t);
+      const p = point(0.12 + ((t - 0.12) * (k + 1)) / (shown + 1));
       const flip = k % 2 ? 1 : -1;
-      const angle = (side || 1) * -30 + flip * 45;
+      const angle = side ? side * -30 + flip * 45 : flip * 60;
       const full = v.state === 'solid' || v.state === 'mastered';
       g.append(svgEl('ellipse', {
         cx: p.x + flip * 7, cy: p.y - 6, rx: full ? 11 : 9, ry: full ? 5.5 : 4.5,
@@ -127,13 +139,21 @@ export function growingTree(snap: Map<string, NodeView>, onBranch?: (b: BranchId
         class: `tree-leaf strand-fill-${b}${full ? '' : ' pale'}`,
       }));
     }
+    // A glowing bud where something is open: at the tip of the colour, or at the branch's foot.
     const open = nodes.filter((v) => v.open && !v.done).length;
-    if (open) g.append(svgEl('circle', { cx: x1, cy: y1, r: 8, class: `tree-bud strand-fill-${b}` }));
+    const bud = t ? end : point(0.16);
+    if (open) g.append(svgEl('circle', { cx: bud.x, cy: bud.y, r: 7, class: `tree-bud strand-fill-${b}` }));
     const label = svgEl('text', {
       x: x1 + (side === 0 ? 0 : side * 14), y: y1 + (side === 0 ? -16 : 5),
       'text-anchor': side < 0 ? 'end' : side > 0 ? 'start' : 'middle', class: 'tree-label',
     });
-    label.textContent = `${BRANCH_LABEL[b]} ${nodes.filter(grown).length}/${nodes.length}`;
+    // Name over count, so the labels stay short enough for a phone.
+    const lx = label.getAttribute('x')!;
+    const name = svgEl('tspan', { x: lx, dy: side === 0 ? '-0.6em' : '-0.15em' });
+    name.textContent = BRANCH_LABEL[b];
+    const count = svgEl('tspan', { x: lx, dy: '1.15em', class: 'tree-count' });
+    count.textContent = `${leaves.length}/${nodes.length}`;
+    label.append(name, count);
     g.append(label);
     if (onBranch) {
       g.addEventListener('click', () => onBranch(b));
@@ -147,10 +167,10 @@ export function growingTree(snap: Map<string, NodeView>, onBranch?: (b: BranchId
   songs.slice(0, 24).forEach((_, k) => {
     const a = (k * 137.5 * Math.PI) / 180;
     const r = 30 + 9 * Math.sqrt(k);
-    parts.push(svgEl('circle', { cx: W / 2 + Math.cos(a) * r * 1.6, cy: top - 30 + Math.sin(a) * r * 0.6, r: 4.5, class: 'tree-blossom' }));
+    parts.push(svgEl('circle', { cx: W / 2 + Math.cos(a) * r * 1.6, cy: top - 10 + Math.sin(a) * r * 0.6, r: 4.5, class: 'tree-blossom' }));
   });
 
-  return svgEl('svg', { viewBox: `0 0 ${W} ${H}`, class: 'growing-tree', role: 'img', 'aria-label': 'Your tree' }, ...parts);
+  return svgEl('svg', { viewBox: `-50 -70 ${W + 100} ${H + 70}`, class: 'growing-tree', role: 'img', 'aria-label': 'Your tree' }, ...parts);
 }
 
 // ---------------------------------------------------------------- tiles
@@ -223,12 +243,28 @@ function stageStation(s: TreeStage, current: boolean, snap: Map<string, NodeView
     if (!vs.length) return '';
     return h('div', { class: 'stage-row' },
       h('span', { class: 'stage-row-label' }, h('span', { class: `strand-dot strand-${b === 'milestones' ? 'all' : b}` }), h('a', { href: `#/branch/${b}` }, BRANCH_LABEL[b])),
-      h('ol', { class: 'lessons path-nodes' }, ...vs.map((v) => nodeTile(v, { mastery: p.mastery }))));
+      h('ol', { class: 'lessons path-nodes' }, ...rowTiles(b, vs, p)));
   });
   return h('li', { class: `station ${state}` },
     h('details', { open: current }, h('summary', {}, head),
       s.summary ? h('p', { class: 'small stage-summary' }, s.summary) : '',
       ...rows));
+}
+
+/** A stage's row of one branch: the next few nodes not done yet, the rest behind a link. */
+const ROW_MAX = 4;
+function rowTiles(b: BranchId, vs: NodeView[], p: Progress): HTMLElement[] {
+  const todo = rootsFirst(vs).filter((v) => !v.done);
+  const shown = (todo.length ? [...todo.filter((v) => v.open), ...todo.filter((v) => !v.open)] : vs).slice(0, ROW_MAX);
+  const more = vs.length - shown.length;
+  const tiles = shown.map((v) => nodeTile(v, { mastery: p.mastery }));
+  if (more > 0) {
+    const doneCount = vs.length - todo.length;
+    const words = todo.length > ROW_MAX ? `${todo.length - ROW_MAX} more` : '';
+    const label = [words, doneCount ? `${doneCount} done` : ''].filter(Boolean).join(' · ');
+    tiles.push(h('li', { class: 'more' }, h('a', { href: b === 'milestones' ? '#/branch/milestones' : `#/branch/${b}` }, h('span', { class: 'tile-title' }, `${label} →`))));
+  }
+  return tiles;
 }
 
 /** Songs that opened with the milestones passed and are not done yet. */
@@ -249,6 +285,17 @@ export function songsCard(snap: Map<string, NodeView>): HTMLElement | '' {
 
 // ---------------------------------------------------------------- pages
 
+/** Nodes in an order where everything a node needs inside the list comes before it. */
+function rootsFirst(vs: NodeView[]): NodeView[] {
+  const left = new Map(vs.map((v) => [v.node.id, v]));
+  const out: NodeView[] = [];
+  while (left.size) {
+    const ready = [...left.values()].filter((v) => !v.node.requires.some((r) => left.has(r)));
+    for (const v of ready.length ? ready : [...left.values()]) { out.push(v); left.delete(v.node.id); }
+  }
+  return out;
+}
+
 /** One branch from its first node to its last, stage by stage. */
 export function branchPage(id: BranchId, p: Progress = { store: realStore, mastery: realMastery }): HTMLElement {
   const b = branches.find((x) => x.id === id);
@@ -256,7 +303,7 @@ export function branchPage(id: BranchId, p: Progress = { store: realStore, maste
   const snap = snapshot(p);
   const vs = b.nodes.map((n) => snap.get(n.id)!).filter(Boolean);
   const done = vs.filter((v) => v.done).length;
-  const byStage = stages.map((s) => ({ s, vs: vs.filter((v) => v.node.stage === s.stage) })).filter((x) => x.vs.length);
+  const byStage = stages.map((s) => ({ s, vs: rootsFirst(vs.filter((v) => v.node.stage === s.stage)) })).filter((x) => x.vs.length);
   return h('section', { class: 'card branch-page' },
     h('div', { class: 'unit-head' },
       h('h2', {}, h('span', { class: `strand-dot strand-${id === 'milestones' ? 'all' : id}` }), ' ', BRANCH_LABEL[id]),
@@ -270,7 +317,7 @@ export function branchPage(id: BranchId, p: Progress = { store: realStore, maste
         const tile = nodeTile(v, { mastery: p.mastery });
         if (!v.open && !v.done) {
           const need = p.mastery.missing(v.node).map((r) => treeNodes.get(r)?.title ?? r);
-          tile.append(h('span', { class: 'tile-needs' }, `Grows after: ${need.join(', ')}`));
+          tile.querySelector('.tile-text')?.append(h('span', { class: 'tile-needs' }, `Grows after: ${need.join(', ')}`));
         }
         return tile;
       })))));
