@@ -4,7 +4,9 @@ A browser piano tutor for adult beginners with a MIDI keyboard: short exercises 
 one skill, hands apart first, then together, scored per hand. See `CLAUDE.md` for the full brief.
 
 Live: https://ignpilv.github.io/iggyuoso/ (Chrome or Edge; Web MIDI needs https).
-No keyboard? Open https://ignpilv.github.io/iggyuoso/#/demo to watch the app play itself.
+No keyboard? Open https://ignpilv.github.io/iggyuoso/#/demo to watch the app play itself, or switch
+on Settings → Computer keyboard to play with A S D F G H J K L ; ' (white keys), W E T Y U O P (black
+keys) and Z / X (octave).
 Every new feature must also appear in the demo (see CLAUDE.md).
 
 ## Develop
@@ -26,7 +28,7 @@ content/            lessons and exercises (YAML, format in content/README.md)
 src/music/          note strings, pitches, timeline of expected notes
 src/content/        YAML loader + validation
 src/calibration.ts  lowest white key + highest key -> range and middle C
-src/midi/           Web MIDI input, chord grouping (60 ms)
+src/midi/           Web MIDI input, chord grouping (60 ms), computer-keyboard emulator
 src/engine/         TimedSession: clock, count-in, latency, capture, live judgement and score
 src/scoring/        timed scoring (per hand, habits, feedback), find/sequence sessions, stars
 src/progress/       localStorage store behind a swappable backend

@@ -1,4 +1,5 @@
 import { keyName, type Calibration } from '../calibration';
+import { computerKeys } from '../midi/computerKeys';
 import type { LiveState } from '../engine/timedSession';
 import { isBlack, pitchClass, type Hand } from '../music/notes';
 import { palette, tokenColor, type Palette } from './theme';
@@ -51,6 +52,9 @@ export class FallingView {
   private high: number;
   private whites = 0;
   private resize: ResizeObserver;
+  /** Last frame drawn, so a resize (or a computer-keyboard octave shift) can redraw it while idle. */
+  private last?: FrameState;
+  private offKeys: () => void;
 
   constructor(
     low: number, high: number,
@@ -70,10 +74,12 @@ export class FallingView {
     this.ctx = this.canvas.getContext('2d')!;
     this.resize = new ResizeObserver(() => this.layout());
     this.resize.observe(this.el);
+    this.offKeys = computerKeys.onChange(() => { if (this.last) this.draw(this.last); });
   }
 
   destroy() {
     this.resize.disconnect();
+    this.offKeys();
   }
 
   private layout() {
@@ -96,9 +102,12 @@ export class FallingView {
       if (isBlack(m)) this.keys.set(m, { x: wi * ww - ww * 0.31, w: ww * 0.62, black: true });
       else this.keys.set(m, { x: wi++ * ww, w: ww, black: false });
     }
+    // Setting the canvas size wiped it; without a running animation nothing else would redraw.
+    if (this.last) this.draw(this.last);
   }
 
   draw(s: FrameState) {
+    this.last = s;
     if (!this.width) this.layout();
     const { ctx, width, laneH } = this;
     const p = palette();
@@ -264,6 +273,14 @@ export class FallingView {
         ctx.strokeStyle = p.keyStroke;
         ctx.lineWidth = 1;
         ctx.stroke();
+        const hint = this.opts.labels !== 'middle-c' && computerKeys.enabled ? computerKeys.letterFor(m) : undefined;
+        if (hint) {
+          // The computer-keyboard letter that plays this key, near the top of the key.
+          ctx.fillStyle = black ? p.keyWhite : p.keyLabel;
+          ctx.font = `600 ${Math.min(11, k.w * 0.55)}px ${p.fontMono}`;
+          ctx.textAlign = 'center';
+          ctx.fillText(hint, k.x + k.w / 2, laneH + 13);
+        }
         if (!black && pitchClass(m) === 0 && (this.opts.labels !== 'middle-c' || m === this.cal.middleC)) {
           const mid = m === this.cal.middleC;
           ctx.fillStyle = mid ? p.middleC : p.keyLabel;

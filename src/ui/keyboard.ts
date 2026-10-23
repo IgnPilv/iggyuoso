@@ -1,4 +1,5 @@
 import { keyName, type Calibration } from '../calibration';
+import { computerKeys } from '../midi/computerKeys';
 import { isBlack, pitchClass } from '../music/notes';
 import { s } from './dom';
 
@@ -16,7 +17,8 @@ export class KeyboardView {
 
   /**
    * `labels: 'c'` writes the name under every C (not for "find the C" drills, where it would give
-   * the answer away). Middle C always gets a dot and a "middle C" caption.
+   * the answer away). Middle C always gets a dot and a "middle C" caption. While the computer
+   * keyboard is on, keys it can reach show their letter at the top (also not in those drills).
    */
   constructor(low: number, high: number, opts: { middleC?: number; cal?: Calibration; labels?: 'none' | 'c' } = {}) {
     // Start and end on white keys so the drawing is never cut through a black key.
@@ -34,16 +36,16 @@ export class KeyboardView {
       const g = s('g', { class: isBlack(m) ? 'key black' : 'key white', 'data-midi': m });
       if (isBlack(m)) {
         const x = wi * WW - BW / 2;
-        g.append(s('rect', { x, y: 0, width: BW, height: BH, rx: 2 }), s('text', { x: x + BW / 2, y: BH - 8, class: 'label' }));
+        g.append(s('rect', { x, y: 0, width: BW, height: BH, rx: 2 }), s('text', { x: x + BW / 2, y: BH - 8, class: 'label' }), s('text', { x: x + BW / 2, y: 12, class: 'hint' }));
         blackLayer.append(g);
       } else {
         const x = wi * WW;
-        g.append(s('rect', { x, y: 0, width: WW, height: WH, rx: 3 }), s('text', { x: x + WW / 2, y: WH - 10, class: 'label' }));
+        g.append(s('rect', { x, y: 0, width: WW, height: WH, rx: 3 }), s('text', { x: x + WW / 2, y: WH - 6, class: 'label' }), s('text', { x: x + WW / 2, y: BH + 12, class: 'hint' }));
         if (opts.labels === 'c' && opts.cal && pitchClass(m) === 0) {
-          g.append(s('text', { x: x + WW / 2, y: WH - 28, class: 'name' }, keyName(opts.cal, m)));
+          g.append(s('text', { x: x + WW / 2, y: WH - 18, class: 'name' }, keyName(opts.cal, m)));
         }
         if (m === opts.middleC) {
-          g.append(s('circle', { cx: x + WW / 2, cy: WH - 44, r: 4, class: 'middle-c' }));
+          g.append(s('circle', { cx: x + WW / 2, cy: WH - 34, r: 4, class: 'middle-c' }));
           whiteLayer.append(s('text', { x: x + WW / 2, y: WH + CAPTION - 2, class: 'middle-c-caption' }, 'middle C'));
         }
         whiteLayer.append(g);
@@ -52,6 +54,20 @@ export class KeyboardView {
       this.keys.set(m, g);
     }
     this.el.append(whiteLayer, blackLayer);
+    if (opts.labels === 'c') {
+      this.showHints();
+      const off = computerKeys.onChange(() => {
+        if (!this.el.isConnected) { off(); return; }
+        this.showHints();
+      });
+    }
+  }
+
+  /** Letters of the computer keyboard on the keys they play (empty while it is off). */
+  private showHints() {
+    for (const [m, g] of this.keys) {
+      g.querySelector('text.hint')!.textContent = computerKeys.enabled ? computerKeys.letterFor(m) ?? '' : '';
+    }
   }
 
   set(midi: number, cls: string, on = true, label?: string) {

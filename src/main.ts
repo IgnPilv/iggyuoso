@@ -1,5 +1,8 @@
 import './style.css';
 import { midi, MidiInput } from './midi/input';
+import { computerKeys } from './midi/computerKeys';
+import { demo, DEMO_CALIBRATION } from './demo/demo';
+import { store } from './progress/store';
 import { h, type View } from './ui/dom';
 import { demoView } from './ui/demoView';
 import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './ui/theme';
@@ -40,12 +43,26 @@ const brandMark = h('span', { class: 'brand-mark' });
 brandMark.innerHTML = '<svg viewBox="0 0 16 16"><rect x="2" y="2" width="3" height="12" rx="1.5" fill="#fff"/><rect x="6.5" y="2" width="3" height="8" rx="1.5" fill="#fff"/><rect x="11" y="2" width="3" height="12" rx="1.5" fill="#fff"/></svg>';
 
 const navLinks = [h('a', { href: '#/demo' }, 'Demo'), h('a', { href: '#/settings' }, 'Settings')];
+
+computerKeys.middleC = () => (demo.active ? DEMO_CALIBRATION : store.calibration)?.middleC ?? 60;
+computerKeys.allow = () => !demo.active;
+computerKeys.enable(!!store.settings.computerKeys);
+
+// While the computer keyboard is on, the header says where it plays and how to shift it.
+const keysPill = h('a', { href: '#/settings', class: 'keys-pill', title: 'Computer keyboard is on (Settings)' });
+const showPill = () => {
+  keysPill.hidden = !computerKeys.enabled;
+  keysPill.textContent = `⌨ A = C${4 + computerKeys.shift} · Z X octave`;
+};
+showPill();
+computerKeys.onChange(showPill);
+
 const main = h('main');
 document.getElementById('app')!.append(
   h('header', {},
     h('a', { href: '#/', class: 'brand' }, brandMark, 'iggyuoso'),
     h('span', { class: 'tagline' }, 'hands apart, then together'),
-    h('nav', {}, ...navLinks, themeBtn),
+    h('nav', {}, keysPill, ...navLinks, themeBtn),
   ),
   main,
 );
@@ -64,7 +81,7 @@ window.addEventListener('hashchange', render);
 if (MidiInput.supported()) {
   midi.start().then(render, (e) => {
     console.error(e);
-    main.prepend(h('p', { class: 'banner error' }, 'MIDI access was blocked. Allow MIDI for this site in the browser settings, then reload.'));
+    render(); // the banner now says access was blocked
   });
 }
 render();
