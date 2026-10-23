@@ -455,6 +455,7 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .key.black rect { fill: var(--key-black); }
 .key.pos.white rect { fill: var(--key-pos); }
 .key.target rect { fill: var(--target) !important; filter: drop-shadow(0 0 8px var(--target)); }
+.key.option rect { fill: var(--key-option); }
 .key.pressed rect { fill: var(--key-pressed) !important; }
 .key.hit rect { fill: var(--ok) !important; filter: drop-shadow(0 0 8px var(--ok)); }
 .key.wrong rect { fill: var(--bad) !important; filter: drop-shadow(0 0 8px var(--bad)); }
@@ -910,3 +911,8 @@ ol.path-nodes li.ahead a { opacity: 0.6; }
 .playground .theory-staff { width: min(100%, 560px); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--surface-sunken); border: 1px solid var(--line); }
 .playground-name { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; letter-spacing: -0.03em; }
 .playground .stage { width: 100%; }
+
+/* Rhythm pictures as answer choices (ear "which rhythm"). */
+.choices.pictures { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--space-2); }
+.choices.pictures button.choice { display: grid; gap: var(--space-1); justify-items: center; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); height: auto; }
+.rhythm-picture { width: 100%; max-width: 220px; height: auto; }

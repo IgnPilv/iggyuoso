@@ -158,5 +158,5 @@ export function resolution(key: Key, degreeMidi: number): number[] {
   return [degreeMidi, ...scale.filter((n) => n < degreeMidi).reverse()];
 }
 
-export const COMPARE = ['higher', 'lower', 'same'] as const;
+export const COMPARE = ['higher', 'lower', 'same', 'different'] as const;
 export type Compare = (typeof COMPARE)[number];

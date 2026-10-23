@@ -1,10 +1,10 @@
-import { audio, loadPiano, piano, stopAll } from '../audio/audio';
+import { audio, click, loadPiano, piano, stopAll } from '../audio/audio';
 import { keyWindow, toDevice, type Calibration } from '../calibration';
 import type { BuildExercise, DrillGoal, EarExercise, Exercise, QuizExercise } from '../content/types';
 import { demo } from '../demo/demo';
 import { BuildSession, EarSession, noteName, QuizSession, sequence, soundsEnd, type DrillOutcome, type DrillResult, type Sound } from '../engine/drills';
 import { midi } from '../midi/input';
-import { pitchToMidi } from '../music/notes';
+import { pitchToMidi, type NoteToken, type Pitch } from '../music/notes';
 import { h } from './dom';
 import { FallingView, type FallingNote, type Flash } from './falling';
 import { KeyboardView } from './keyboard';
@@ -12,7 +12,7 @@ import {
   animate, header, initialView, record, regenerate, showHeld, starText, viewToggle, type OnDone, type ViewMode,
 } from './players';
 import { markdown } from './markdown';
-import { renderStaff } from './staff';
+import { renderStaff, type StaffNote } from './staff';
 import { theoryKeys, theoryStaff } from './theory';
 
 // Players for the question kinds: ear (listen, then answer), quiz (theory questions) and build
@@ -24,7 +24,10 @@ import { theoryKeys, theoryStaff } from './theory';
 export function playSounds(sounds: Sound[], delay = 0): number {
   audio();
   const start = performance.now() + 80 + delay;
-  for (const s of sounds) for (const n of s.notes) piano(n, start + s.at, s.dur, 0.7 / Math.sqrt(s.notes.length));
+  for (const s of sounds) {
+    if (s.click) click(start + s.at, s.click === 'accent');
+    for (const n of s.notes) piano(n, start + s.at, s.dur, (s.vol ?? 0.7) / Math.sqrt(s.notes.length));
+  }
   return 80 + delay + soundsEnd(sounds);
 }
 
@@ -40,6 +43,7 @@ class AnswerStage {
   private stop = () => {};
   private flashes: Flash[] = [];
   private shown: number[] = [];
+  private opts: number[] = [];
   private done = new Map<number, string>();
   banner = '';
   /** No right / wrong colours (checkpoints with `feedback: none`). */
@@ -74,16 +78,23 @@ class AnswerStage {
       make();
       const stopAnim = animate((now) => {
         if (this.shown.join(',') !== notesKey) make();
-        fv!.draw({ beat: 0, held: midi.held, flashes: this.flashes, now, marked: this.done, banner: this.banner, noteState: () => 'now' });
+        fv!.draw({ beat: 0, held: midi.held, flashes: this.flashes, now, marked: this.marks(), banner: this.banner, noteState: () => 'now' });
       });
       this.stop = () => { stopAnim(); fv?.destroy(); };
     }
+  }
+
+  /** Option keys under the keys already played right (falling view). */
+  private marks(): Map<number, string> {
+    return new Map([...this.opts.map((k) => [k, '--key-option'] as [number, string]), ...this.done]);
   }
 
   private paint() {
     if (!this.kb) return;
     this.kb.clear('target');
     this.kb.clear('hit');
+    this.kb.clear('option');
+    this.opts.forEach((k) => this.kb!.set(k, 'option'));
     this.shown.forEach((k) => this.kb!.set(k, 'target'));
     this.done.forEach((_, k) => this.kb!.set(k, 'hit'));
   }
@@ -98,6 +109,12 @@ class AnswerStage {
   /** Show these keys as the answer (or [] to hide). */
   show(keys: number[]) {
     this.shown = keys;
+    this.paint();
+  }
+
+  /** Light these keys as the ones to choose from (or [] for none). */
+  options(keys: number[]) {
+    this.opts = keys;
     this.paint();
   }
 
@@ -137,8 +154,20 @@ function noteAnswer(feedback: HTMLElement, choices: HTMLElement, picked?: number
   });
 }
 
-const choiceButtons = (choices: string[], onPick: (i: number) => void) =>
-  h('div', { class: 'choices' }, ...choices.map((c, i) => h('button', { class: 'secondary choice', 'data-choice': i, onclick: () => onPick(i) }, c)));
+const choiceButtons = (choices: string[], onPick: (i: number) => void, pictures?: NoteToken[][], bar = 4) =>
+  h('div', { class: pictures ? 'choices pictures' : 'choices' }, ...choices.map((c, i) => h('button', { class: 'secondary choice', 'data-choice': i, onclick: () => onPick(i) },
+    pictures ? rhythmPicture(pictures[i], bar) : '', pictures ? h('span', { class: 'small' }, c) : c)));
+
+/** A rhythm drawn on one line of the staff (the middle line), for "which rhythm did you hear". */
+function rhythmPicture(tokens: NoteToken[], bar: number): Element {
+  const B4: Pitch = { letter: 'B', accidental: 0, octave: 4 };
+  const notes: StaffNote[] = tokens.map((t, i) => ({
+    pitches: t.pitches.length ? [B4] : [], beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie, key: String(i),
+  }));
+  const { svg } = renderStaff([{ clef: 'treble', notes }], { barQuarters: bar });
+  svg.classList.add('rhythm-picture');
+  return svg;
+}
 
 function markChoices(box: HTMLElement, picked: number, correct: number) {
   box.querySelectorAll<HTMLButtonElement>('button.choice').forEach((b, i) => {
@@ -182,11 +211,12 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
     const q = session.current;
     clearTimers();
     stage.show([]);
+    stage.options(q.lit ?? []);
     feedback.textContent = '';
     feedback.className = 'drill-feedback';
     nextBtn.hidden = true;
     count.textContent = `Question ${session.number + 1} of ${ex.questions}`;
-    choices.replaceChildren(q.choices ? choiceButtons(q.choices, (i) => answered(session.pick(i), i)) : '');
+    choices.replaceChildren(q.choices ? choiceButtons(q.choices, (i) => answered(session.pick(i), i), q.pictures, q.pictureBar) : '');
     setAsk('Listen…');
     plays = 1;
     const ends = playSounds(q.play);
@@ -281,7 +311,9 @@ function earNotes(ex: EarExercise): number[] {
     if (it.type === 'note') return it.pool.map(pitchToMidi);
     if (it.type === 'melody') return it.notes.map(pitchToMidi);
     if (it.type === 'interval') return it.from.flatMap((p) => [pitchToMidi(p) - 12, pitchToMidi(p) + 12]);
-    if (it.type === 'compare') return it.range.map(pitchToMidi);
+    if (it.type === 'compare' || it.type === 'contour' || it.type === 'motion' || it.type === 'count') return it.range.map(pitchToMidi);
+    if (it.type === 'rhythm') return [pitchToMidi(it.pitch)];
+    if (it.type === 'loudness') return it.notes.map(pitchToMidi);
     return [60 - 5, 60 + 19];
   });
 }

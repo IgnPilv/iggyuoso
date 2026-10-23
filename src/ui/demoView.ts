@@ -47,6 +47,28 @@ function sampleOf(kind: Exercise['kind'] | 'tap', yaml: string): Exercise {
 }
 
 const SAMPLES = {
+  earSteps: `
+id: demo-ear-steps
+kind: ear
+title: First ear steps
+prompt: Ear training from zero. Same or different, which way, how many, louder or softer.
+questions: 7
+items:
+  - { type: compare, pool: [same, different], gap: [4, 7] }
+  - { type: note, pool: [C4, G4], lit: true, reference: C4 }
+  - { type: contour, length: 3 }
+  - { type: motion }
+  - { type: count, pool: [1, 2, 3] }
+  - { type: loudness, notes: "C4 E4 G4" }
+  - { type: melody, notes: "C4 D4 E4", lit: true, plays: 2 }`,
+  earRhythm: `
+id: demo-ear-rhythm
+kind: ear
+title: Which rhythm?
+prompt: A bar of clicks, then a rhythm on one note. Pick its picture.
+questions: 3
+items:
+  - { type: rhythm, tempo: 80, pool: ["x:q x:q x:h", "x:h x:h", "x:q x:q x:q x:q", "x:h x:q x:q", "x:e x:e x:q x:h"] }`,
   ear: `
 id: demo-ear
 kind: ear
@@ -452,6 +474,8 @@ function scenes(): Scene[] {
       return () => { flips.forEach(clearTimeout); previewTheme(undefined); cleanup?.(); };
     },
   });
+  out.push({ title: 'First ear steps', caption: 'Ear training for someone who hears no pitch yet: same or different, which way a tune goes (arrows), a step or a leap, how many notes sound at once, louder or softer the second time. Note questions can light the keys to choose from and play a named note first; a melody can light the keys it uses.', run: exerciseScene(parseExercise(parse(SAMPLES.earSteps)), { view: 'classic' }) });
+  out.push({ title: 'Hearing rhythms', caption: 'A bar of clicks, then a rhythm played on one note. The answers are rhythm pictures: pick the one you heard.', run: exerciseScene(parseExercise(parse(SAMPLES.earRhythm)), { view: 'classic' }) });
   out.push({ title: 'Ear training', caption: 'The app plays a cadence to set the key, then a note, two notes or a phrase. The first key (or button) is the answer, and missed questions come back more often. The pianist gets one wrong.', run: exerciseScene(sampleOf('ear', SAMPLES.ear), { view: 'classic' }) });
   const checkpoint = allExercises().find((e) => (e.kind === 'ear' || e.kind === 'quiz') && e.feedback === 'none')
     ?? { ...(sampleOf('ear', SAMPLES.ear) as EarExercise), id: 'demo-checkpoint', feedback: 'none' as const };

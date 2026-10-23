@@ -135,18 +135,31 @@ export interface TimedExercise extends ExerciseBase {
 
 /** One kind of ear question; an ear exercise mixes several. */
 export type EarItem =
-  /** Press the key you heard. */
-  | { type: 'note'; pool: Pitch[] }
+  /** Press the key you heard. `lit` lights the pool's keys; `reference` sounds (and names) a note first. */
+  | { type: 'note'; pool: Pitch[]; lit: boolean; reference?: Pitch }
   /** Two notes; press the second (`answer: play`) or name the interval (`answer: name`). */
   | { type: 'interval'; from: Pitch[]; pool: string[]; direction: 'up' | 'down' | 'both'; answer: 'play' | 'name'; together: boolean }
   /** A chord; name its quality with buttons. */
   | { type: 'chord'; root: Pitch[]; pool: string[] }
   /** After the cadence, a scale degree; press it (any octave), then hear it resolve. */
   | { type: 'degree'; key: string; pool: string[]; resolve: boolean }
-  /** A short phrase; play it back, judged note by note (first key per note). */
-  | { type: 'melody'; notes: Pitch[]; plays: number }
-  /** Two notes; is the second higher, lower or the same? Buttons. */
-  | { type: 'compare'; pool: ('higher' | 'lower' | 'same')[]; range: [Pitch, Pitch] };
+  /** A short phrase; play it back, judged note by note (first key per note). `lit` lights its keys. */
+  | { type: 'melody'; notes: Pitch[]; plays: number; lit: boolean }
+  /**
+   * Two notes `gap` semitones apart (min, max): higher, lower or the same? With `different` in the
+   * pool, the buttons are Same / Different.
+   */
+  | { type: 'compare'; pool: ('higher' | 'lower' | 'same' | 'different')[]; range: [Pitch, Pitch]; gap: [number, number] }
+  /** `length` notes going up or down (steps of `gap` semitones); pick the shape. Pool: "up-down", ... */
+  | { type: 'contour'; length: number; pool: string[]; range: [Pitch, Pitch]; gap: [number, number] }
+  /** Two notes: the same, a step (1–2 semitones) or a leap (5 or more)? */
+  | { type: 'motion'; pool: ('same' | 'step' | 'leap')[]; range: [Pitch, Pitch] }
+  /** How many notes sound together? */
+  | { type: 'count'; pool: number[]; range: [Pitch, Pitch] }
+  /** A rhythm on one note after a bar of clicks; pick it from rhythm pictures. */
+  | { type: 'rhythm'; pool: NoteToken[][]; meter: Meter; tempo: number; pitch: Pitch }
+  /** A note or phrase twice: was the second time louder or softer? */
+  | { type: 'loudness'; pool: ('loud' | 'soft')[]; notes: Pitch[] };
 
 export interface EarExercise extends ExerciseBase {
   kind: 'ear';

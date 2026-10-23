@@ -373,10 +373,34 @@ function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
   const items = raw.items.map((r: unknown, i: number): EarItem => {
     const o = (r ?? {}) as Raw;
     try {
-      const type = oneOf(o, 'type', ['note', 'interval', 'chord', 'degree', 'melody', 'compare'] as const);
+      const type = oneOf(o, 'type', ['note', 'interval', 'chord', 'degree', 'melody', 'compare', 'contour', 'motion', 'count', 'rhythm', 'loudness'] as const);
       const need = <T>(xs: T[], what: string) => { if (!xs.length) throw new FieldError(`"${what}" should not be empty`); return xs; };
+      /** `range: [C4, C5]`, at least `min` semitones wide. */
+      const rangeOf = (fallback: [string, string], min = 4): [Pitch, Pitch] => {
+        const r = pitches(o, 'range');
+        if (r.length && r.length !== 2) throw new FieldError('"range" should be two notes, like [C4, C5]');
+        const [lo, hi] = r.length ? r : [parsePitch(fallback[0]), parsePitch(fallback[1])];
+        if (pitchToMidi(hi) - pitchToMidi(lo) < min) throw new FieldError(`"range" should span at least ${min} semitones`);
+        return [lo, hi];
+      };
+      /** `gap: [min, max]` in semitones. */
+      const gapOf = (fallback: [number, number]): [number, number] => {
+        if (o.gap === undefined) return fallback;
+        const g = (Array.isArray(o.gap) ? o.gap : [o.gap, o.gap]).map(Number);
+        if (g.length !== 2 || !g.every((x) => Number.isInteger(x) && x >= 1 && x <= 12) || g[0] > g[1]) throw new FieldError('"gap" should be [min, max] semitones, 1 to 12');
+        return [g[0], g[1]];
+      };
+      const only = <T extends string>(xs: string[], allowed: readonly T[], what: string): T[] => {
+        const bad = xs.find((x) => !allowed.includes(x as T));
+        if (bad) throw new FieldError(`"${bad}" should be one of ${allowed.join(', ')} (${what})`);
+        return xs as T[];
+      };
       switch (type) {
-        case 'note': return { type, pool: need(pitches(o, 'pool'), 'pool') };
+        case 'note': {
+          const pool = need(pitches(o, 'pool'), 'pool');
+          const ref = pitches(o, 'reference');
+          return { type, pool, lit: o.lit === true, ...(ref.length ? { reference: ref[0] } : {}) };
+        }
         case 'interval': {
           const pool = need(strings(o, 'pool'), 'pool');
           pool.forEach(interval);
@@ -403,17 +427,57 @@ function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
           const notes = need(pitches(o, 'notes'), 'notes');
           const plays = o.plays === undefined ? 2 : Number(o.plays);
           if (!Number.isInteger(plays) || plays < 1 || plays > 5) throw new FieldError('"plays" should be 1 to 5');
-          return { type, notes, plays };
+          return { type, notes, plays, lit: o.lit === true };
         }
         case 'compare': {
+          const pool = only(strings(o, 'pool'), COMPARE, 'compare');
+          if (pool.includes('different') && pool.some((p) => p === 'higher' || p === 'lower')) {
+            throw new FieldError('with "different" the pool is same / different only');
+          }
+          const gap = gapOf([2, 7]);
+          const range = rangeOf(['C4', 'C5'], Math.max(4, gap[0]));
+          return { type, pool: pool.length ? pool : ['higher', 'lower', 'same'], range, gap };
+        }
+        case 'contour': {
+          const length = o.length === undefined ? 3 : Number(o.length);
+          if (!Number.isInteger(length) || length < 2 || length > 5) throw new FieldError('"length" should be 2 to 5 notes');
           const pool = strings(o, 'pool');
-          const bad = pool.find((p) => !(COMPARE as readonly string[]).includes(p));
-          if (bad) throw new FieldError(`"${bad}" should be higher, lower or same`);
-          const range = pitches(o, 'range');
-          if (range.length && range.length !== 2) throw new FieldError('"range" should be two notes, like [C4, C5]');
-          const [lo, hi] = range.length ? range : [parsePitch('C4'), parsePitch('C5')];
-          if (pitchToMidi(hi) - pitchToMidi(lo) < 4) throw new FieldError('"range" should span at least a major 3rd');
-          return { type, pool: (pool.length ? pool : [...COMPARE]) as ('higher' | 'lower' | 'same')[], range: [lo, hi] };
+          for (const p of pool) {
+            const parts = p.split('-');
+            if (parts.length !== length - 1 || parts.some((x) => x !== 'up' && x !== 'down')) throw new FieldError(`"${p}" should be ${length - 1} of up / down joined by -, like up-down`);
+          }
+          const gap = gapOf([2, 5]);
+          return { type, length, pool: pool.length ? pool : contours(length), range: rangeOf(['C4', 'C5'], gap[1] * 2), gap };
+        }
+        case 'motion': {
+          const pool = only(strings(o, 'pool'), ['same', 'step', 'leap'] as const, 'motion');
+          return { type, pool: pool.length ? pool : ['same', 'step', 'leap'], range: rangeOf(['C4', 'C5'], 9) };
+        }
+        case 'count': {
+          const pool = (o.pool === undefined ? [1, 2, 3] : list(o, 'pool').map(Number));
+          if (!pool.every((n) => Number.isInteger(n) && n >= 1 && n <= 4)) throw new FieldError('"pool" should be numbers of notes, 1 to 4');
+          return { type, pool, range: rangeOf(['C3', 'C5'], 12) };
+        }
+        case 'rhythm': {
+          const meter = parseMeter(str(o, 'meter', false) ?? '4/4');
+          const tempo = o.tempo === undefined ? 80 : Number(o.tempo);
+          if (!(tempo >= 30 && tempo <= 200)) throw new FieldError('"tempo" should be 30 to 200');
+          const texts = need(strings(o, 'pool'), 'pool');
+          if (texts.length < 2) throw new FieldError('"pool" needs at least two rhythms to choose from');
+          const pool = texts.map((t) => {
+            if (/(^|[\s|+])(?!x:|r:)[^\s|]+:/.test(` ${t}`)) throw new FieldError(`"${t}" uses x for every note, like "x:q x:q x:h"`);
+            const tokens = parseTimedNotes(t.replace(/(^|[\s|])x:/g, '$1C4:'));
+            barLengths(tokens).forEach((len, b) => {
+              if (Math.abs(len - meter.quarters) > 1e-6) throw new FieldError(`"${t}": bar ${b + 1} has ${round(len)} beats, but ${meter.beats}/${meter.unit} needs ${round(meter.quarters)}`);
+            });
+            return tokens;
+          });
+          const pitch = pitches(o, 'pitch', 'C5')[0];
+          return { type, pool, meter, tempo, pitch };
+        }
+        case 'loudness': {
+          const pool = only(strings(o, 'pool'), ['loud', 'soft'] as const, 'loudness');
+          return { type, pool: pool.length ? pool : ['loud', 'soft'], notes: pitches(o, 'notes', 'C4') };
         }
         default: throw new FieldError('missing "type"');
       }
@@ -422,6 +486,13 @@ function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
     }
   });
   return { ...base, kind: 'ear', cadence: cadence === 'none' ? undefined : cadence, questions, items, pitchMatch, feedback: feedbackOf(raw) };
+}
+
+/** Every up / down shape of `length` notes, like up-down. */
+function contours(length: number): string[] {
+  let out = [''];
+  for (let i = 0; i < length - 1; i++) out = out.flatMap((p) => ['up', 'down'].map((d) => (p ? `${p}-${d}` : d)));
+  return out;
 }
 
 function parseQuiz(raw: Raw, base: Base, pitchMatch: Match): Exercise {

@@ -78,7 +78,9 @@ days: 2   # spread over at least two days
 - `ear`: the app plays, the player answers. `cadence: C` (key of a I-IV-V-I played before each
   question; leave out for none), `questions` (default 10), and `items`, a mixed pool. Missed
   items come back more often. The first key (or button) is the answer. Item types:
-  - `{ type: note, pool: [C4, E4, G4] }`: press the key you heard.
+  - `{ type: note, pool: [C4, E4, G4] }`: press the key you heard. `lit: true` lights the pool's
+    keys to pick from; `reference: C4` plays that note first ("The first note was C", lit), then
+    the question note.
   - `{ type: interval, pool: [M3, P5], from: C4, direction: up|down|both, answer: play|name, together: true }`:
     two notes (`together` = at once); press the second note, or (`answer: name`) pick the name.
     Intervals: P1 m2 M2 m3 M3 P4 TT P5 m6 M6 m7 M7 P8.
@@ -88,8 +90,23 @@ days: 2   # spread over at least two days
     press the degree you heard (any octave); then it resolves to the tonic (`resolve: false` to skip).
     Degrees 1 to 7, also `b3`, `#4`.
   - `{ type: melody, notes: "C4 D4 E4", plays: 2 }`: play the phrase back; each note's first key
-    counts. `plays` = how many times it can be heard.
-  - `{ type: compare, pool: [higher, lower, same], range: [C4, C5] }`: two notes, answer with buttons.
+    counts. `plays` = how many times it can be heard. `lit: true` lights the keys the phrase uses.
+  - `{ type: compare, pool: [higher, lower, same], range: [C4, C5], gap: [2, 7] }`: two notes,
+    answer with buttons; `gap` = how far apart in semitones when they differ (default 2 to 7).
+    `pool: [same, different]` gives Same / Different buttons instead (don't mix the two sets).
+  - `{ type: contour, length: 3, range: [C4, C5], gap: [2, 5] }`: `length` notes (2 to 5), each a
+    `gap` away from the last; answer with arrows (↗ ↘ per move). Optional
+    `pool: [up-up, up-down]` limits the shapes (default: all of them).
+  - `{ type: motion, pool: [same, step, leap], range: [C4, C5] }`: two notes; buttons The same /
+    A step (1–2 semitones) / A leap (5–9). The range needs at least 9 semitones.
+  - `{ type: count, pool: [1, 2, 3], range: [C3, C5] }`: how many notes sound at once (1 to 4,
+    at least a minor third apart); after the answer they are played one by one.
+  - `{ type: rhythm, pool: ["x:q x:q x:h", "x:h x:h"], meter: 4/4, tempo: 80, pitch: C5 }`: a bar
+    of clicks, then one pool rhythm on `pitch`; the choices are rhythm pictures (the right one and
+    up to three others). Every note is `x`, rests are `r`; each rhythm must fill whole bars.
+    The tempo counts the meter's beat (dotted quarters in 6/8). At least two rhythms.
+  - `{ type: loudness, pool: [loud, soft], notes: "C4 E4 G4" }`: the phrase (default one C4) is
+    played twice; "The second time: louder or softer?" (`loud` = the second is louder).
 - `quiz`: `questions`, each `{ ask, choices: [...], correct: <index from 0> }` or
   `{ ask, play: "G4" }` (answer by playing these notes in order). Optional `staff: "G4:w"`
   (a picture, with `clef`) and `sound: "C4:q E4:q"` (a play button). `shuffle: true` mixes the order.
