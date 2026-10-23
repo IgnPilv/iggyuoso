@@ -44,6 +44,13 @@ never copied pages). Start small, adapt as we go.
 - Stars: ★ 65 (pass), ★★ 80, ★★★ 92. Practice slow freely; records only at ≥90% tempo.
 - Flow: listen → count-in → play → scored result → next. Guide track on/off.
 
+## Demo (keep it current)
+- `#/demo` is a no-keyboard showcase: a demo pianist plays the real screens on a virtual 88-key
+  keyboard (with deliberate mistakes), plus a "watch any exercise" list built from `content/`.
+- **Every user-facing feature must show up in the demo.** When you add or change a feature, add or
+  extend a scene in `src/ui/demoView.ts` (and `src/demo/pianist.ts` if the pianist needs a new
+  move) in the same PR. The demo never saves progress or calibration.
+
 ## Content
 - Lessons are grouped in units; each lesson pairs one piece of theory with one playing skill.
   Format: `content/README.md`. Original proposal and lesson plan: `docs/beta-curriculum-proposal.md`.
@@ -89,3 +96,6 @@ never copied pages). Start small, adapt as we go.
 - 2026-10-23: Saved data carries a schema version (`iggyuoso.schema`) with an upgrade step per
   version. A lesson is done when every exercise in it has been passed (★ or better, at a tempo that
   counts). Calibration ends with a "meet middle C" step: the player must press it before saving.
+- 2026-10-23: Demo mode (`#/demo`, linked from home and the header) so the app can be seen without
+  a MIDI keyboard; the demo pianist injects notes through the same MIDI path (`midi.inject`).
+  Rule: every new feature updates the demo in the same PR (see "Demo" above).

@@ -74,7 +74,15 @@ export class MidiInput {
   private handle(e: MIDIMessageEvent, port: string) {
     if (!e.data) return;
     const { time, fallback } = sanitizeTimestamp(e.timeStamp, performance.now());
-    const data = Array.from(e.data);
+    this.dispatch(Array.from(e.data), time, port, fallback);
+  }
+
+  /** Play a key from software (the demo pianist), exactly as if it came from a keyboard. */
+  inject(type: 'on' | 'off', note: number, velocity = 80) {
+    this.dispatch(type === 'on' ? [0x90, note, velocity] : [0x80, note, 0], performance.now(), 'Demo pianist', false);
+  }
+
+  private dispatch(data: number[], time: number, port: string, fallback: boolean) {
     if (data[0] === 0xfe || data[0] === 0xf8) return; // active sensing / clock
     this.rawListeners.forEach((l) => l({ data, time, port, fallbackClock: fallback }));
     const note = decodeNote(data, time);

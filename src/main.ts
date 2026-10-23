@@ -1,6 +1,7 @@
 import './style.css';
 import { midi, MidiInput } from './midi/input';
 import { h, type View } from './ui/dom';
+import { demoView } from './ui/demoView';
 import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './ui/views';
 
 const routes: Record<string, View> = {
@@ -10,6 +11,7 @@ const routes: Record<string, View> = {
   exercise: exerciseView,
   settings: settingsView,
   midi: testerView,
+  demo: demoView,
 };
 
 const main = h('main');
@@ -17,7 +19,7 @@ document.getElementById('app')!.append(
   h('header', {},
     h('a', { href: '#/', class: 'brand' }, 'iggyuoso'),
     h('span', { class: 'tagline' }, 'hands apart, then together'),
-    h('nav', {}, h('a', { href: '#/settings' }, 'Settings')),
+    h('nav', {}, h('a', { href: '#/demo' }, 'Demo'), ' ', h('a', { href: '#/settings' }, 'Settings')),
   ),
   main,
 );

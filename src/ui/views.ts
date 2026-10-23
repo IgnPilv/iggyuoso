@@ -2,6 +2,7 @@ import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibrati
 import { content, contentErrors } from '../content';
 import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
+import { demo, DEMO_CALIBRATION } from '../demo/demo';
 import { store } from '../progress/store';
 import { h, type View } from './dom';
 import { KeyboardView } from './keyboard';
@@ -13,6 +14,7 @@ const lessonExercises = (l: Lesson) => l.steps.flatMap((s) => ('exercise' in s ?
 export const go = (path: string) => { location.hash = path; };
 
 function midiBanner(): HTMLElement | null {
+  if (demo.active) return null;
   if (!MidiInput.supported()) {
     return h('p', { class: 'banner error' }, 'This browser cannot read MIDI keyboards. Please open iggyuoso in Chrome or Edge.');
   }
@@ -22,7 +24,7 @@ function midiBanner(): HTMLElement | null {
 }
 
 function needCalibration(root: HTMLElement): Calibration | undefined {
-  const c = store.calibration;
+  const c = demo.active ? DEMO_CALIBRATION : store.calibration;
   if (!c) {
     root.append(h('p', { class: 'banner' }, 'First, let the app get to know your keyboard. ', h('a', { href: '#/calibrate' }, 'Set up the keyboard')));
   }
@@ -37,6 +39,11 @@ export const homeView: View = (root) => {
   showBanner();
   const off = midi.onPorts(showBanner);
   root.append(banner);
+  root.append(h('section', { class: 'card demo-card' },
+    h('div', {},
+      h('h2', {}, 'See it first'),
+      h('p', { class: 'small' }, 'No keyboard needed: watch the app play itself through setup, the exercises and the live feedback.')),
+    h('button', { class: 'secondary', onclick: () => go('/demo') }, 'Watch the demo')));
   if (!store.calibration) {
     root.append(h('section', { class: 'card hero' },
       h('h2', {}, 'Welcome'),
@@ -88,7 +95,7 @@ export const calibrateView: View = (root) => {
     kb.set(c.middleC, 'target', true, 'C');
     msg.textContent = 'Now meet middle C.';
     const check = h('p', { class: 'ask' }, 'Press the lit key: that is middle C.');
-    const save = h('button', { disabled: true, onclick: () => { offTry(); store.calibration = c; go('/'); } }, 'Save');
+    const save = h('button', { disabled: true, onclick: () => { if (demo.active) return; offTry(); store.calibration = c; go('/'); } }, 'Save');
     offTry = midi.onNote((e) => {
       if (e.type !== 'on') return;
       if (e.note === c.middleC) {
