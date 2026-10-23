@@ -4,7 +4,7 @@ import type { Exercise, Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
-import { lessonGoals, lessonLock, mastery, nodeOfLesson, type LessonLock } from '../progress';
+import { lessonAdvice, lessonGoals, mastery, nodeOfLesson, type LessonAdvice } from '../progress';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
@@ -84,17 +84,17 @@ export const homeView: View = (root) => {
       h('p', { class: 'small' }, unit.summary),
       h('ol', { class: 'lessons' }, ...lessons.map((l) => {
         const goals = lessonGoals(l);
-        const locked = lessonLock(l).locked;
-        const cls = store.lessonDone(goals) ? 'done' : locked ? 'locked' : l.id === firstNotDone && store.calibration ? 'next' : '';
+        const ahead = !lessonAdvice(l).ready;
+        const cls = store.lessonDone(goals) ? 'done' : l.id === firstNotDone && store.calibration ? 'next' : ahead ? 'ahead' : '';
         const node = nodeOfLesson(l.id);
         const state = node ? mastery.state(node.id) : undefined;
         const exDone = goals.filter((e) => store.reps(e).done).length;
         return h('li', { class: `${cls}${state ? ` state-${state}` : ''}` },
           h('a', { href: `#/lesson/${l.id}` }, l.title,
-            locked ? h('span', { class: 'state-badge locked' }, 'Locked')
-              : exDone && exDone < goals.length ? h('span', { class: 'state-badge' }, `${exDone} / ${goals.length}`) : '',
+            exDone && exDone < goals.length ? h('span', { class: 'state-badge' }, `${exDone} / ${goals.length}`) : '',
             node && mastery.isDue(node.id) ? h('span', { class: 'state-badge due' }, 'Review')
-              : state === 'solid' || state === 'mastered' ? h('span', { class: `state-badge ${state}` }, state === 'solid' ? 'Solid' : 'Mastered') : ''));
+              : state === 'solid' || state === 'mastered' ? h('span', { class: `state-badge ${state}` }, state === 'solid' ? 'Solid' : 'Mastered')
+                : ahead && cls !== 'next' && !store.lessonDone(goals) ? h('span', { class: 'state-badge ahead', title: 'Best after the lessons before it; open it any time' }, 'Ahead') : ''));
       })),
     ));
   }
@@ -226,8 +226,7 @@ export const lessonView: View = (root, id?: string) => {
   if (!lesson) { root.append(h('p', {}, 'Lesson not found. ', h('a', { href: '#/' }, 'Home'))); return; }
   const cal = needCalibration(root);
   if (!cal) return;
-  const lock = lessonLock(lesson);
-  if (lock.locked) { root.append(lockedCard(lesson, lock)); return; }
+  const advice = lessonAdvice(lesson);
   const body = h('div');
   const nav = h('div', { class: 'controls' });
   const progress = h('span', { class: 'small' });
@@ -267,14 +266,15 @@ export const lessonView: View = (root, id?: string) => {
     const goals = lessonGoals(l);
     const done = store.lessonDone(goals);
     body.append(p, h('p', { class: done ? 'banner ok' : 'banner' },
-      done ? 'Lesson done: every exercise has its clean takes. The next lesson is open.'
-        : `${goals.filter((e) => store.reps(e).done).length} of ${goals.length} exercises done. Each one needs clean takes (★★★, 92 or more, at full tempo); the next lesson opens when all are done.`),
+      done ? 'Lesson done: every exercise has its clean takes. On to the next one.'
+        : `${goals.filter((e) => store.reps(e).done).length} of ${goals.length} exercises done. Each one needs clean takes (★★★, 92 or more, at full tempo); the lesson is done when all are. You can go on to the next lesson any time.`),
       repsTable(goals));    const order = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
     const nextId = order[order.indexOf(l.id) + 1];
     nav.append(nextId ? h('button', { onclick: () => go(`/lesson/${nextId}`) }, 'Next lesson') : h('button', { onclick: () => go('/') }, 'Home'));
   };
 
-  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('h2', {}, lesson.title), progress), bar, body, nav));
+  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('h2', {}, lesson.title), progress),
+    advice.ready ? '' : adviceBanner(advice), bar, body, nav));
   show();
   return () => cleanup?.();
 };
@@ -289,22 +289,21 @@ function repsTable(goals: Exercise[]) {
   }));
 }
 
-function lockedCard(l: Lesson, lock: Extract<LessonLock, { locked: true }>) {
-  const title = (id: string) => treeNodes.get(id)?.title ?? id;
+/** What is recommended before this lesson. Only advice: the lesson below plays and counts as usual. */
+function adviceBanner(advice: Extract<LessonAdvice, { ready: false }>) {
   const links = (ids: string[]) => ids.flatMap((id, i) => {
     const n = treeNodes.get(id);
-    return [i ? ', ' : '', n?.lesson ? h('a', { href: `#/lesson/${n.lesson}` }, title(id)) : title(id)];
+    const title = n?.title ?? id;
+    return [i ? ', ' : '', n?.lesson ? h('a', { href: `#/lesson/${n.lesson}` }, title) : title];
   });
-  const why = lock.reason === 'previous'
-    ? h('p', {}, 'This lesson opens when ', h('a', { href: `#/lesson/${lock.lesson.id}` }, lock.lesson.title), ' is done: every exercise in it played clean (★★★) enough times.')
-    : lock.reason === 'reviews'
-      ? h('p', {}, 'Reviews first: something you learned is fading. New lessons open once today\'s reviews are done. ',
-        h('a', { href: '#/today' }, 'Start today\'s practice'), ' (due: ', ...links(lock.due.slice(0, 5)), ').')
-      : h('p', {}, lock.checkpoint ? 'A checkpoint opens when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ' : 'This lesson opens after: ',
-        ...links(lock.nodes), '.');
-  return h('section', { class: 'card' }, h('span', { class: 'eyebrow' }, 'Locked'), h('h2', {}, l.title), why,
-    lock.reason === 'previous' ? repsTable(lessonGoals(lock.lesson)) : '',
-    h('div', { class: 'controls' }, h('button', { class: 'secondary', onclick: () => go('/') }, 'Home')));
+  const why = advice.reason === 'previous'
+    ? ['Recommended first: ', h('a', { href: `#/lesson/${advice.lesson.id}` }, advice.lesson.title), ' (every exercise in it played clean enough times).']
+    : advice.checkpoint
+      ? ['A checkpoint works best when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ', ...links(advice.nodes), '.']
+      : ['Recommended first: ', ...links(advice.nodes), '.'];
+  return h('div', { class: 'banner advice' },
+    h('p', {}, h('strong', {}, 'Ahead of your path. '), ...why, ' You can play this now; your takes count all the same.'),
+    advice.reason === 'previous' ? h('details', { class: 'small' }, h('summary', {}, `Where you are in ${advice.lesson.title}`), repsTable(lessonGoals(advice.lesson))) : '');
 }
 
 export const exerciseView: View = (root, id?: string) => {
@@ -353,7 +352,6 @@ export const settingsView: View = (root) => {
       h('h2', {}, 'Defaults'),
       h('div', { class: 'controls' }, toggle('metronome', 'Click while playing'), toggle('guide', 'Guide notes while playing')),
       h('div', { class: 'controls' }, h('label', {}, 'View ', viewPref())),
-      h('div', { class: 'controls' }, openAllToggle()),
       h('p', { class: 'small' }, 'The piano you hear in the app is the Salamander Grand Piano by Alexander Holm (',
         h('a', { href: 'https://creativecommons.org/licenses/by/3.0/', target: '_blank', rel: 'noopener' }, 'CC BY 3.0'), ').'),
     ),
@@ -361,13 +359,6 @@ export const settingsView: View = (root) => {
   );
   return appearance.off;
 };
-
-/** Lessons normally open one by one; this opens all of them, for trying things out. */
-function openAllToggle() {
-  const box = h('input', { type: 'checkbox', checked: !!store.settings.openAll });
-  box.onchange = () => { store.settings = { ...store.settings, openAll: box.checked }; };
-  return h('label', {}, box, ' Open every lesson (skip the order; for trying things out)');
-}
 
 const THEME_CHOICES: [ThemeChoice, string][] = [['system', 'Follow the device'], ['dark', 'Dark'], ['light', 'Light']];
 

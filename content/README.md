@@ -17,8 +17,10 @@ several lessons.
 ## Reps and days (any exercise)
 An exercise is **done** after `reps` clean takes (★★★, 92 or more, at a tempo that counts),
 played on at least `days` different days. Defaults: `reps: 3`, `days: 1`; `days` cannot be more
-than `reps`. A lesson is done when every exercise in it is done, and the next lesson in the unit
-stays locked until then. A checkpoint node opens only when every node it `requires` is Mastered.
+than `reps`. A lesson is done when every exercise in it is done. Nothing is ever locked: a lesson whose
+previous lesson is not done, or whose tree node still needs its `requires`, is marked *Ahead* and
+says what is recommended first (for a checkpoint: every node it `requires` Mastered), but it can
+be opened and played, and its takes count.
 Mastery states on the tree are unchanged (Practised still means every exercise ★ once).
 
 ```yaml

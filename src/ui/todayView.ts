@@ -18,7 +18,7 @@ function itemTitle(item: DailyItem) {
   return ex ? exerciseTitle(ex) : content.lessons.get(item.lesson)?.title ?? item.lesson;
 }
 
-/** The plan with what is done; reviews must be done before new work counts as open. */
+/** The plan with what is done. */
 function status(input: PlanInput) {
   const plan = todayPlan(input);
   const done = plan.items.map((i) => itemDone(input, i));
@@ -81,13 +81,11 @@ export function runToday(root: HTMLElement, cal: Calibration, p: { store: Store;
       h('span', { class: 'small' }, `${at + 1} of ${st.plan.items.length} · about ${Math.round(st.left)} min left`));
     const skip = h('button', { class: 'secondary', onclick: () => { at++; show(); } }, 'Skip for now');
     if (item.why === 'lesson') {
-      if (st.reviewsLeft) {
-        body.append(h('p', { class: 'banner' }, 'Reviews first: the new lesson opens once the reviews above are done.'));
-        nav.append(h('button', { onclick: () => { at = 0; show(); } }, 'Back to the reviews'));
-      } else {
-        body.append(h('p', {}, 'Next on your path. Read it through and play its exercises; it is done when each has its clean takes.'));
-        nav.append(h('button', { onclick: () => { location.hash = `#/lesson/${item.lesson}`; } }, 'Open the lesson'), skip);
-      }
+      body.append(h('p', {}, 'Next on your path. Read it through and play its exercises; it is done when each has its clean takes.'));
+      // Reviews come first in a teacher's order, but they never hold the lesson back.
+      if (st.reviewsLeft) body.append(h('p', { class: 'small' }, 'Some reviews above are still to do. They work best first, but the lesson is open.'));
+      nav.append(h('button', { onclick: () => { location.hash = `#/lesson/${item.lesson}`; } }, 'Open the lesson'), skip);
+      if (st.reviewsLeft) nav.append(h('button', { class: 'secondary', onclick: () => { at = 0; show(); } }, 'Back to the reviews'));
       return;
     }
     const ex = content.exercises.get(item.exercise!);

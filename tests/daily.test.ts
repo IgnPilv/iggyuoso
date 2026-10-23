@@ -16,8 +16,8 @@ const first = [...content.units].sort((a, b) => a.order - b.order)[0].lessons;
 function setup() {
   const store = new Store(memoryBackend());
   const mastery = new Mastery(store, nodes, (id) => { const l = content.lessons.get(id); return l ? goals(l).map((e) => e.id) : []; });
-  // Only the first lesson of the first unit is open, as for a new player.
-  const input: PlanInput = { content, nodes, store, mastery, lessonGoals: goals, locked: (l) => l.id !== first[0] && !store.lessonDone(goals(content.lessons.get(first[0])!)) };
+  // Only the first lesson of the first unit is recommended, as for a new player.
+  const input: PlanInput = { content, nodes, store, mastery, lessonGoals: goals, ready: (l) => l.id === first[0] || store.lessonDone(goals(content.lessons.get(first[0])!)) };
   return { store, mastery, input };
 }
 

@@ -186,8 +186,8 @@ function seedReviews(s: Store) {
   s.put('daily.plan', undefined);
 }
 
-/** A unit's lesson list as it looks on home: one done, the next just opened, the rest locked. */
-function lockDemo() {
+/** A unit's lesson list as it looks on home: one done, the next recommended, the rest ahead (still open). */
+function pathDemo() {
   const item = (title: string, cls: string, badge?: string) =>
     h('li', { class: cls }, h('a', { href: '#/demo' }, title, badge ? h('span', { class: `state-badge ${cls}` }, badge) : ''));
   return h('section', { class: 'card' },
@@ -195,8 +195,10 @@ function lockDemo() {
     h('ol', { class: 'lessons' },
       item('Steps up and down', 'done'),
       item('Five-finger tune', 'next'),
-      item('Skips', 'locked', 'Locked'),
-      item('Checkpoint: first tunes', 'locked', 'Locked')));
+      item('Skips', 'ahead', 'Ahead'),
+      item('Checkpoint: first tunes', 'ahead', 'Ahead')),
+    h('div', { class: 'banner advice' }, h('p', {}, h('strong', {}, 'Ahead of your path. '),
+      'Recommended first: Five-finger tune. You can play this now; your takes count all the same.')));
 }
 
 const press = (box: HTMLElement, label: string) =>
@@ -276,8 +278,8 @@ function scenes(): Scene[] {
     },
   });
   out.push({
-    title: 'Clean takes and locks',
-    caption: 'One good take is not enough: an exercise is done after three clean takes (★★★, 92 or more, at full tempo), and some need them on different days. The next lesson stays locked until every exercise in this one is done. Checkpoints open only when everything before them is Mastered.',
+    title: 'Clean takes and the path',
+    caption: 'One good take is not enough: an exercise is done after three clean takes (★★★, 92 or more, at full tempo), and some need them on different days. Nothing is locked: lessons further along are marked Ahead and say what is recommended first (checkpoints: everything before them Mastered), but you can open and play any of them.',
     run: (box, next, p) => {
       const timers: number[] = [];
       let takes = 0;
@@ -287,7 +289,7 @@ function scenes(): Scene[] {
       demo.onRunEnd = (mode) => {
         if (mode !== 'play') return;
         if (++takes < 3) timers.push(window.setTimeout(() => press(box, 'Play'), 2600));
-        else timers.push(window.setTimeout(() => { box.append(lockDemo()); timers.push(window.setTimeout(next, 5000)); }, 1500));
+        else timers.push(window.setTimeout(() => { box.append(pathDemo()); timers.push(window.setTimeout(next, 5000)); }, 1500));
       };
       const cleanup = mountExercise(box, ex, DEMO_CALIBRATION, () => {});
       setView(box, 'falling');

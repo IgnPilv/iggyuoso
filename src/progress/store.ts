@@ -71,8 +71,6 @@ export interface Settings {
   theme: 'system' | 'light' | 'dark';
   /** Play with the computer keyboard (A S D F ... as white keys). Off unless switched on. */
   computerKeys?: boolean;
-  /** Open every lesson, ignoring the order (for trying things out). */
-  openAll?: boolean;
 }
 
 /** Local calendar day (YYYY-MM-DD) of an ISO time. */
