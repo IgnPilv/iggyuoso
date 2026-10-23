@@ -267,3 +267,13 @@ never copied pages). Start small, adapt as we go.
   (quarters to sixteenths, rests, triplets, 3/4, 3/8) and sight-reading (one hand, 4–8 bars,
   every key met so far). Mastery bars: 90–95% accuracy, middle answer times of 2–3.5 s for the
   question drills, reps 3–7 on 2–4 days. Today's practice draws on them automatically.
+- 2026-10-23: No hard locks (Ignas: "it says all are locked, lets not do that, lets give
+  requirements, but not forbid to skip"). Every lesson and checkpoint can always be opened and
+  played, and its takes count as usual. `lessonAdvice` (`src/progress/index.ts`, replacing
+  `lessonLock`) only says what is recommended first: the previous lesson in the unit (not done
+  yet), or the tree node's requirements (Practised; Mastered for a checkpoint). Home marks such
+  lessons "Ahead" (still clickable); the lesson shows an "Ahead of your path" note with links.
+  Reviews never hold a lesson back (Today's practice still puts them first). Settings "Open
+  every lesson" is gone. Today's next lesson = the first not done whose requirements are met,
+  else the first not done. Mastery states, reps, XP and rewards are unchanged. Demo scene
+  "Clean takes and the path".

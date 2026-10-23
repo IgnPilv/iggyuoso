@@ -12,41 +12,32 @@ export const lessonExercises = (l: Lesson) => l.steps.flatMap((s) => ('exercise'
 export const lessonGoals = (l: Lesson): Exercise[] =>
   lessonExercises(l).map((id) => content.exercises.get(id)).filter((e): e is Exercise => !!e);
 
-export type LessonLock =
-  | { locked: false }
+export type LessonAdvice =
+  | { ready: true }
   /** The lesson before it in the unit is not done yet. */
-  | { locked: true; reason: 'previous'; lesson: Lesson }
-  /** Its tree node needs other nodes first (Practised; Mastered for a checkpoint). */
-  | { locked: true; reason: 'tree'; nodes: string[]; checkpoint: boolean }
-  /** A new lesson waits until today's reviews are done. */
-  | { locked: true; reason: 'reviews'; due: string[] };
+  | { ready: false; reason: 'previous'; lesson: Lesson }
+  /** Its tree node is best after other nodes (Practised; Mastered for a checkpoint). */
+  | { ready: false; reason: 'tree'; nodes: string[]; checkpoint: boolean };
 
 /**
- * Whether a lesson can be opened. Lessons in a unit open one by one: the next opens when the one
- * before is done. A lesson whose tree node is still Locked stays closed too. A lesson never played
- * waits while reviews are due (unless `ignoreReviews`).
+ * Whether a lesson is the right one to take now. Nothing is ever closed: this only says what is
+ * recommended first, so the player can skip ahead knowingly. Lessons in a unit are meant one by
+ * one, and a lesson whose tree node is still Locked is best after the nodes it needs.
  */
-export function lessonLock(l: Lesson, p: { store: Store; mastery: Mastery } = { store, mastery }, ignoreReviews = false): LessonLock {
-  if (p.store.settings.openAll) return { locked: false };
+export function lessonAdvice(l: Lesson, p: { store: Store; mastery: Mastery } = { store, mastery }): LessonAdvice {
   const order = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
   const prev = content.lessons.get(order[order.indexOf(l.id) - 1]);
-  if (prev && !p.store.lessonDone(lessonGoals(prev))) return { locked: true, reason: 'previous', lesson: prev };
+  if (prev && !p.store.lessonDone(lessonGoals(prev))) return { ready: false, reason: 'previous', lesson: prev };
   const node = nodeOfLesson(l.id);
   if (node && p.mastery.state(node.id) === 'locked') {
-    return { locked: true, reason: 'tree', nodes: p.mastery.missing(node), checkpoint: node.type === 'checkpoint' };
+    return { ready: false, reason: 'tree', nodes: p.mastery.missing(node), checkpoint: node.type === 'checkpoint' };
   }
-  if (!ignoreReviews) {
-    const goals = lessonGoals(l);
-    const fresh = goals.every((e) => !p.store.exercise(e.id).attempts);
-    const due = fresh && goals.length ? p.mastery.reviewQueue() : [];
-    if (due.length) return { locked: true, reason: 'reviews', due };
-  }
-  return { locked: false };
+  return { ready: true };
 }
 
 /** Today's practice plan and progress, for the real progress or the demo's. */
 export function dailyInput(p: { store: Store; mastery: Mastery } = { store, mastery }): PlanInput {
-  return { content, nodes: treeNodes, store: p.store, mastery: p.mastery, locked: (l) => lessonLock(l, p, true).locked, lessonGoals };
+  return { content, nodes: treeNodes, store: p.store, mastery: p.mastery, ready: (l) => lessonAdvice(l, p).ready, lessonGoals };
 }
 
 const exercisesOf = (lessonId: string) => {

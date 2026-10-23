@@ -49,8 +49,8 @@ export interface PlanInput {
   nodes: ReadonlyMap<string, TreeNode>;
   store: Store;
   mastery: Mastery;
-  /** Whether a lesson is closed, apart from today's reviews. */
-  locked: (l: Lesson) => boolean;
+  /** Whether a lesson is the recommended next step (nothing is ever closed). */
+  ready: (l: Lesson) => boolean;
   lessonGoals: (l: Lesson) => Exercise[];
 }
 
@@ -76,9 +76,11 @@ export function makePlan(p: PlanInput, now = new Date()): DailyPlan {
     add({ why: 'review', exercise: weakest.id, lesson: lesson.id, node: nodeId, minutes });
   }
 
-  // 2. The next lesson on the path: the first one open and not done yet.
+  // 2. The next lesson on the path: the first one not done whose requirements are met, else the
+  // first one not done at all.
   const lessons = pathLessons(p.content);
-  const next = lessons.find((l) => !p.locked(l) && !p.store.lessonDone(p.lessonGoals(l)));
+  const open = lessons.filter((l) => !p.store.lessonDone(p.lessonGoals(l)));
+  const next = open.find((l) => p.ready(l)) ?? open[0];
   if (next) {
     const left = p.lessonGoals(next).filter((e) => !p.store.reps(e).done);
     // Each exercise needs its clean takes still to come; a try often misses, so most of a try each.
