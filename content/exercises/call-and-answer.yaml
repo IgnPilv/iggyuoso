@@ -4,7 +4,9 @@ kind: timed
 hand: alternating
 display: staff
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:q E4:q G4:h | r:w | G4:q F4:q E4:q D4:q | r:w"
 left:  "r:w | C4:q A3:q F3:h | r:w | G3:q A3:q B3:q C4:q"
+days: 2

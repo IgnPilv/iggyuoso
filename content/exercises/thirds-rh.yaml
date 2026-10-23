@@ -6,6 +6,7 @@ prompt: "Both notes land at exactly the same moment. Fingers 1+3, then 2+4, then
 display: staff
 clef: treble
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4+E4:h D4+F4:h | E4+G4:h F4+A4:h | G4+B4:h F4+A4:h | E4+G4:h D4+F4:h | C4+E4:w"

@@ -4,6 +4,7 @@ hand: right
 display: staff
 clef: treble
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "C4:q D4:q E4:h | E4:q D4:q C4:h | C4:q E4:q D4:q E4:q | C4:w"

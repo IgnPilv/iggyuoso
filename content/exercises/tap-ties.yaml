@@ -3,6 +3,7 @@ title: "Ties"
 kind: tap
 prompt: "A tie joins two notes into one long one. Tap once and hold through the tie."
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 rhythm: "x:q x:q x:h~ | x:q x:q x:h | x:h~ x:q x:q | x:w"

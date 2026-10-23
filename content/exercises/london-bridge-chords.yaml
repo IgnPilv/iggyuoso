@@ -1,0 +1,13 @@
+id: london-bridge-chords
+kind: timed
+title: "London Bridge with chords"
+hand: together
+prompt: "Left hand: C (C E G) or G7 (B F G). Change chord on the first beat."
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "G4:q A4:q G4:q F4:q | E4:q F4:q G4:h | D4:q E4:q F4:h | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q F4:q G4:h | D4:h G4:h | E4:h C4:h"
+left: "C3+E3+G3:w | C3+E3+G3:w | B2+F3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | B2+F3+G3:w | C3+E3+G3:w"
+days: 2

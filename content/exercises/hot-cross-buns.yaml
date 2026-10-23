@@ -5,7 +5,9 @@ hand: right
 display: staff
 clef: treble
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "E4:q D4:q C4:h | E4:q D4:q C4:h | C4:q C4:q D4:q D4:q | E4:q D4:q C4:h"
 fingers: "3 2 1 3 2 1 1 1 2 2 3 2 1"
+days: 2

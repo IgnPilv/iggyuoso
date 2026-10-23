@@ -6,7 +6,9 @@ prompt: "Eight bars in G major. Remember every F#."
 display: staff
 key: G
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "B4:q A4:q G4:q D5:q | C5:h B4:h | A4:q B4:q C5:q E5:q | D5:w | G5:q F#5:q E5:q D5:q | C5:q B4:q A4:h | B4:q G4:q A4:q F#4:q | G4:w"
 left: "G3:w | E3:h G3:h | C3:w | D3:h F#3:h | E3:w | A2:h D3:h | G2:h D3:h | G2:w"
+days: 2

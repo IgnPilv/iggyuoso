@@ -1,0 +1,13 @@
+id: au-clair-rh
+kind: timed
+title: "Au clair de la lune"
+hand: right
+display: staff
+clef: treble
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "C4:q C4:q C4:q D4:q | E4:h D4:h | C4:q E4:q D4:q D4:q | C4:w | C4:q C4:q C4:q D4:q | E4:h D4:h | C4:q E4:q D4:q D4:q | C4:w"
+fingers: "1 1 1 2 3 2 1 3 2 2 1 1 1 1 2 3 2 1 3 2 2 1"
+days: 2

@@ -1,0 +1,13 @@
+id: saints-ht
+kind: timed
+title: "When the Saints Go Marching In"
+hand: together
+prompt: "Each phrase starts after a rest. Count it: 'one', then play."
+display: staff
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "r:q C4:q E4:q F4:q | G4:w | r:q C4:q E4:q F4:q | G4:w | r:q C4:q E4:q F4:q | G4:h E4:h | C4:h E4:h | D4:w | r:q E4:q E4:q D4:q | C4:h. C4:q | E4:h G4:h | G4:q F4:h. | r:q E4:q F4:q G4:q | E4:h C4:h | D4:h D4:h | C4:w"
+left: "C3:w | C3:w | C3:w | C3:w | C3:w | C3:w | C3:w | G3:w | C3:w | C3:w | C3:w | F3:w | C3:w | C3:w | G3:w | C3:w"
+days: 2

@@ -1,0 +1,13 @@
+id: frere-jacques-rh
+kind: timed
+title: "Frère Jacques with eighth notes"
+hand: right
+prompt: "Bars 5 and 6: two eighth notes to a beat. Stretch finger 5 up to A."
+display: staff
+clef: treble
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:q C4:q | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | E4:q F4:q G4:h | G4:e A4:e G4:e F4:e E4:q C4:q | G4:e A4:e G4:e F4:e E4:q C4:q | C4:q G3:q C4:h | C4:q G3:q C4:h"
+days: 2

@@ -3,6 +3,7 @@ title: "Sixteenth notes"
 kind: tap
 prompt: "Four sixteenths fit in one beat. Count 1-e-and-a."
 tempo: 60
+tempoLadder: true
 meter: 4/4
 countIn: 1
 rhythm: "x:q x:s x:s x:s x:s x:q x:q | x:e x:s x:s x:e x:s x:s x:h | x:s x:s x:s x:s x:s x:s x:s x:s x:q x:q | x:w"

@@ -3,7 +3,9 @@ title: "Mary Had a Little Lamb, hands together"
 kind: timed
 hand: together
 tempo: 80
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h | E4:q D4:q C4:q D4:q | E4:q E4:q E4:q E4:q | D4:q D4:q E4:q D4:q | C4:w"
 left:  "C3:w | C3:w | G3:w | C3:w | C3:w | C3:w | G3:w | C3:w"
+days: 2

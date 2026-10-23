@@ -31,7 +31,8 @@ units:
       - { id: c-position-reading, type: drill, strand: reading, lesson: c-position-reading, title: Reading in C position, requires: [bass-staff, steps-and-skips] }
       - { id: ear-echo-three-notes, type: drill, strand: ear, lesson: ear-echo-three-notes, title: Echo three notes, requires: [ear-high-low, middle-c-position] }
       - { id: first-pieces-alternating, type: piece, strand: repertoire, lesson: first-pieces-alternating, title: First pieces, hands taking turns, requires: [c-position-reading, three-four-time] }
-      - { id: y1-checkpoint-a, type: checkpoint, strand: all, lesson: y1-checkpoint-a, title: "Checkpoint 1: steady hands", requires: [legato-and-non-legato, tap-rhythm-echo, ear-echo-three-notes, first-pieces-alternating] }
+      - { id: songbook-1, type: piece, strand: repertoire, lesson: songbook-1, title: "Songbook: three old songs", requires: [first-pieces-alternating] }
+      - { id: y1-checkpoint-a, type: checkpoint, strand: all, lesson: y1-checkpoint-a, title: "Checkpoint 1: steady hands", requires: [legato-and-non-legato, tap-rhythm-echo, ear-echo-three-notes, first-pieces-alternating, songbook-1] }
 
   - id: two-hands-at-once
     title: Two hands at once
@@ -44,6 +45,7 @@ units:
       - { id: ear-major-minor, type: drill, strand: ear, lesson: ear-major-minor, title: Happy or sad? Major and minor, requires: [ear-echo-three-notes] }
       - { id: pentatonic-improv, type: lesson, strand: creativity, lesson: pentatonic-improv, title: Black-key improvising, requires: [sharps-flats-naturals] }
       - { id: pieces-hands-together, type: piece, strand: repertoire, lesson: pieces-hands-together, title: First pieces hands together, requires: [hands-together-parallel, dynamics] }
+      - { id: songbook-2, type: piece, strand: repertoire, lesson: songbook-2, title: "Songbook: hands together", requires: [pieces-hands-together] }
 
   - id: first-chords
     title: First chords
@@ -56,8 +58,9 @@ units:
       - { id: f-position-key-of-f, type: lesson, strand: theory, lesson: f-position-key-of-f, title: "One flat: F position and the key of F", requires: [sharps-flats-naturals, g-position] }
       - { id: ear-degrees-1-5, type: drill, strand: ear, lesson: ear-degrees-1-5, title: "Home and five: scale degrees 1 and 5", requires: [ear-major-minor] }
       - { id: lead-sheet-melody, type: piece, strand: repertoire, lesson: lead-sheet-melody, title: A tune with chords, requires: [lh-chords] }
+      - { id: songbook-3, type: piece, strand: repertoire, lesson: songbook-3, title: "Songbook: tunes with chords", requires: [lead-sheet-melody] }
       - { id: note-naming, type: side-quest, strand: ear, lesson: note-naming, title: Note naming (perfect pitch side quest), requires: [ear-degrees-1-5] }
-      - { id: y1-checkpoint-b, type: checkpoint, strand: all, lesson: y1-checkpoint-b, title: "Checkpoint 2: first chords", requires: [lead-sheet-melody, ear-degrees-1-5, pieces-hands-together, pentatonic-improv] }
+      - { id: y1-checkpoint-b, type: checkpoint, strand: all, lesson: y1-checkpoint-b, title: "Checkpoint 2: first chords", requires: [lead-sheet-melody, ear-degrees-1-5, pieces-hands-together, pentatonic-improv, songbook-2, songbook-3] }
 
   - id: scales-and-eighths
     title: Scales and eighth notes
@@ -68,6 +71,7 @@ units:
       - { id: thumb-under, type: drill, strand: technique, lesson: thumb-under, title: Thumb under, requires: [y1-checkpoint-b] }
       - { id: c-scale-hands-apart, type: drill, strand: technique, lesson: c-scale-hands-apart, title: "C major scale, hands apart", requires: [thumb-under, major-scale-pattern] }
       - { id: c-scale-hands-together, type: drill, strand: technique, lesson: c-scale-hands-together, title: "C major scale, hands together", requires: [c-scale-hands-apart] }
+      - { id: songbook-4, type: piece, strand: repertoire, lesson: songbook-4, title: "Songbook: a round for two hands", requires: [eighth-notes, c-scale-hands-together] }
       - { id: g-and-f-scales, type: drill, strand: technique, lesson: g-and-f-scales, title: "G and F major scales, hands apart", requires: [c-scale-hands-apart, key-of-g, f-position-key-of-f] }
       - { id: minor-five-finger, type: lesson, strand: technique, lesson: minor-five-finger, title: "A minor and D minor positions", requires: [y1-checkpoint-b] }
       - { id: ear-degree-3-and-thirds, type: drill, strand: ear, lesson: ear-degree-3-and-thirds, title: "Degree 3, major and minor thirds", requires: [ear-degrees-1-5] }
@@ -79,4 +83,4 @@ units:
       - { id: ear-echo-four-notes, type: drill, strand: ear, lesson: ear-echo-four-notes, title: Echo four notes, requires: [ear-degree-3-and-thirds] }
       - { id: improvise-over-drone, type: lesson, strand: creativity, lesson: improvise-over-drone, title: Improvise in C, requires: [pentatonic-improv, c-scale-hands-together] }
       - { id: recital-three-pieces, type: piece, strand: repertoire, lesson: recital-three-pieces, title: Three contrasting pieces, requires: [c-scale-hands-together, dotted-quarter] }
-      - { id: y1-exit, type: checkpoint, strand: all, lesson: y1-exit, title: Year 1 exit exam, requires: [sight-reading-y1, ear-echo-four-notes, improvise-over-drone, recital-three-pieces, g-and-f-scales, c-scale-hands-together] }
+      - { id: y1-exit, type: checkpoint, strand: all, lesson: y1-exit, title: Year 1 exit exam, requires: [sight-reading-y1, ear-echo-four-notes, improvise-over-drone, recital-three-pieces, g-and-f-scales, c-scale-hands-together, songbook-4] }

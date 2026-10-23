@@ -2,7 +2,7 @@ id: ear-echo-six
 title: "Echo five and six notes"
 kind: ear
 prompt: "Listen, then play it back. You can hear it twice."
-questions: 8
+questions: 20
 items:
   - { type: melody, notes: "C4 E4 D4 F4 E4 C4", plays: 2 }
   - { type: melody, notes: "G4 F4 E4 D4 E4 C4", plays: 2 }

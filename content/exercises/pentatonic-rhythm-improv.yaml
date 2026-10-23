@@ -2,6 +2,7 @@ id: pentatonic-rhythm-improv
 kind: tap
 prompt: Improvise! Play any black keys you like, in this rhythm. End on F sharp if you can.
 tempo: 80
+tempoLadder: true
 meter: 4/4
 countIn: 1
 rhythm: "x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:w"

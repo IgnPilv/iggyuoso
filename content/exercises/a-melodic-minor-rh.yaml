@@ -4,6 +4,7 @@ kind: timed
 hand: right
 prompt: "F# and G# going up, F and G coming down."
 tempo: 66
+tempoLadder: true
 meter: 4/4
 countIn: 1
 right: "A4:q B4:q C5:q D5:q | E5:q F#5:q G#5:q A5:q | G5:q F5:q E5:q D5:q | C5:q B4:q A4:h"

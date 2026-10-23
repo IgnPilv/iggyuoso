@@ -10,3 +10,4 @@ questions:
   - { ask: "A melody bar of D F D B fits which chord in C?", choices: ["IV", "V7", "I"], correct: 1 }
   - { ask: "The phrase ends on chord V. The cadence is…", choices: ["Imperfect", "Perfect"], correct: 0 }
   - { ask: "The triad on degree 7 of a major key is…", choices: ["Diminished", "Major", "Minor"], correct: 0 }
+reps: 1

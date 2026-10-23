@@ -9,3 +9,4 @@ questions:
   - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 1, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q E4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h" }
   - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 4, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h" }
   - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 3, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q E4:q C4:h" }
+reps: 1

@@ -2,6 +2,7 @@ id: tap-eighths
 kind: tap
 prompt: Two eighth notes fit in one beat. Say "ti-ti" for each pair.
 tempo: 72
+tempoLadder: true
 meter: 4/4
 countIn: 1
 rhythm: "x:q x:q x:e x:e x:q | x:e x:e x:e x:e x:h | x:q x:e x:e x:q x:q | x:w"
