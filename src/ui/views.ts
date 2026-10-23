@@ -59,7 +59,7 @@ export const homeView: View = (root) => {
     return l && !store.lessonDone(lessonGoals(l));
   });
   const nextLesson = firstNotDone ? content.lessons.get(firstNotDone) : undefined;
-  const title = h('h1', {}, 'Hands apart, ', h('span', { class: 'gradient-text' }, 'then together.'));
+  const title = h('h1', {}, 'Easy as ', h('span', { class: 'gradient-text' }, 'C D E.'));
   root.append(h('section', { class: store.calibration ? 'card hero compact' : 'card hero' },
     heroKeys(),
     h('span', { class: 'eyebrow' }, 'Piano trainer · MIDI keyboard'),
