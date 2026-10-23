@@ -192,6 +192,7 @@ export class TimedSession {
 
   private samePitch(a: number, b: number) {
     if (this.ex.pitchMatch === 'any') return true;
+    if (this.ex.pitchMatch === 'side') return (a >= 60) === (b >= 60);
     return this.ex.pitchMatch === 'pitchClass' ? pitchClass(a) === pitchClass(b) : a === b;
   }
 

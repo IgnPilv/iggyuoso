@@ -107,6 +107,19 @@ describe('generated drills', () => {
     expect(() => gen({ generator: 'sight-read', left: 'chords' })).toThrow(/together/);
   });
 
+  it('writes two-hand rhythms and echoes', () => {
+    for (let s = 1; s < 20; s++) {
+      const r = generate(gen({ generator: 'rhythm-read', hands: 'both', durations: ['q', 'h', 'e'], bars: 3 }), seeded(s)) as TimedExercise;
+      expect(r).toMatchObject({ tap: true, pitchMatch: 'side', hand: 'together', bars: 3 });
+      expect(r.left!.every((t) => t.beats >= 1)).toBe(true); // the left hand moves in longer values
+      const e = generate(gen({ generator: 'rhythm-echo', durations: ['q', 'h', 'e'], bars: 2 }), seeded(s)) as TimedExercise;
+      expect(e).toMatchObject({ tap: true, echo: true, pitchMatch: 'any', bars: 2 });
+      const e2 = generate(gen({ generator: 'rhythm-echo', hands: 'both', bars: 2 }), seeded(s)) as TimedExercise;
+      expect(e2).toMatchObject({ echo: true, pitchMatch: 'side' });
+    }
+    expect(() => gen({ generator: 'sight-read', hands: 'both' })).toThrow(/rhythm-read/);
+  });
+
   it('puts rests in rhythms when durations list them, never first', () => {
     let rests = 0;
     for (let s = 1; s < 30; s++) {

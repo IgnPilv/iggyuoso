@@ -79,6 +79,10 @@ days: 2   # spread over at least two days
 
 - `tap`: rhythm only, scored like `timed` but any key counts. `tempo`, `meter`, `countIn`, and
   `rhythm` written as a note string with `x` for every note: `"x:q x:q x:h | x:e x:e x:q r:q"`.
+  Two hands: `right: "x:q x:q x:h"` and `left: "x:h x:h"` instead of `rhythm`; any key from
+  middle C up is the right hand, any key below is the left, and each hand is scored on its own
+  (a key on the wrong side is a wrong note). `echo: true`: Play sounds the rhythm without showing
+  it, then after a bar of count-in the player taps it back; the staff shows on the result.
 - `ear`: the app plays, the player answers. `cadence: C` (key of a I-IV-V-I played before each
   question; leave out for none), `questions` (default 10), and `items`, a mixed pool. Missed
   items come back more often. The first key (or button) is the answer. Item types:
@@ -129,7 +133,10 @@ days: 2   # spread over at least two days
   - `find-notes`: "Find F♯, any one"; any octave counts.
   - `intervals`: two notes on the staff (one after the other or together); name the interval.
     Needs `intervals: [M2, M3, P5]` (two or more).
-  - `rhythm-read`: a rhythm on the staff to tap on any key (like `tap`).
+  - `rhythm-read`: a rhythm on the staff to tap on any key (like `tap`). `hands: both`: two lines,
+    tapped as a two-hand `tap` (the left line uses only the quarter-or-longer `durations`).
+  - `rhythm-echo`: the same pool, played to the player unseen and tapped back (`tap` with
+    `echo: true`); also takes `hands: both`.
   - `sight-read`: a short tune to play, mostly steps and some skips, ending on the key note.
     With `hand: together` it is a piece for both hands on the grand staff: the tune (from `notes`)
     in the right hand over a left hand on I, IV and V of the key (i, iv, V in minor; starts and
@@ -140,7 +147,7 @@ days: 2   # spread over at least two days
   The pool, at the top level or under `pool:`: `notes` (a range `C4-G5`, meaning every note of
   the key in between, or a list `"C4 E4 G4"`; default `C4-G4`), `clef: treble|bass|grand` (grand
   picks by the note), `keys: [C, G, F]` (one is picked per question or tune; default C).
-  `rhythm-read` and `sight-read` also take `durations: [q, h, e, r:q]` (eighths come in pairs;
+  `rhythm-read`, `rhythm-echo` and `sight-read` also take `durations: [q, h, e, r:q]` (eighths come in pairs;
   `r:q`, `r:h`, `r:e` add rests, never at the very start; default `[q, h]`), `meter` (default 4/4), `bars` (default 4), `tempo` (default 72) and `hand`. The last
   bar is one long note.
   `questions` (default 30) for the question drills. `mastery: { accuracy: 90, medianMs: 2500 }`:

@@ -465,6 +465,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   if (rungs) ladder = { ...ladder, rung: Math.min(ladder.rung, rungs.length - 1) };
   const expected = expectedNotes(ex);
   void loadPiano(expected.map((e) => e.midi));
+  // Rhythm echo: Play sounds the rhythm unseen, then the player taps it back; the staff shows after.
+  const echo = !!ex.echo;
+  let revealed = false;
   const devices = expected.map((e) => toDevice(cal, e.midi));
   const [lo, hi] = keyWindow(cal, devices);
 
@@ -480,7 +483,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     offHeld();
     stage.replaceChildren();
     falling = undefined; staff = undefined; kb = undefined; strip = undefined;
-    if (view === 'falling') {
+    if (view === 'falling' && !echo) {
       falling = new FallingView(lo, hi, cal,
         expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })),
         { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex) });
@@ -496,12 +499,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), key: ex.key });
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
-      stage.append(h('div', { class: 'staff-wrap' }, staff.svg), kb.el);
+      stage.append(h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg), kb.el);
     }
   };
 
   const hud = h('div', { class: 'hud' });
-  const status = h('div', { class: 'status-line' }, 'Press Listen to hear it, then Play.');
+  const status = h('div', { class: 'status-line' }, echo ? 'Press Play to hear the rhythm.' : 'Press Listen to hear it, then Play.');
   const result = h('div');
   // The player's last pick wins over the ladder's step (the ladder line still says which counts).
   const startPercent = loop.percent ?? settings.tempo ?? (rungs ? rungs[ladder.rung] : 100);
@@ -524,7 +527,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     const a = Number(loopFrom.value), b = Number(loopTo.value);
     loop.setLoop([Math.min(a, b), Math.max(a, b)], Number(tempoSel.value));
   } }, looping ? 'Loop these' : 'Loop');
-  const loopControls = loop.whole.bars > 1
+  // An echo is heard whole each time, so it has no loops.
+  const loopControls = loop.whole.bars > 1 && !echo
     ? h('div', { class: 'controls loop-controls' },
       h('span', { class: 'small' }, 'Loop bars'), loopFrom, h('span', { class: 'small' }, 'to'), loopTo, loopBtn,
       looping ? h('button', { class: 'secondary', onclick: () => loop.setLoop(undefined, Number(tempoSel.value)) }, 'Whole piece') : '')
@@ -551,7 +555,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     falling?.draw({ beat: -1, held: midi.held, noteState: () => 'coming', flashes: [], now: performance.now(), banner: 'Press Listen or Play' });
   }
 
-  const start = (mode: 'listen' | 'play') => {
+  /** `echoTurn`: the tap-back half of an echo, right after the app played the rhythm. */
+  const start = (mode: 'listen' | 'play', echoTurn = false) => {
     run?.cancel();
     clearTimeout(again);
     audio();
@@ -562,10 +567,10 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     const tempo = Math.round((ex.tempo * Number(tempoSel.value)) / 100);
     const session = new TimedSession(ex, cal, {
       tempo, mode, startAt: performance.now() + 600, latencyMs: outputLatencyMs() + store.settings.latencyMs,
-      countIn: countSel.value as CountIn,
+      countIn: echoTurn ? 'bar' : (countSel.value as CountIn),
     });
     for (const c of session.clicks(metro.checked)) click(c.time, c.accent);
-    if (mode === 'listen' || guide.checked) for (const g of session.guide()) piano(g.midi, g.time, g.durMs);
+    if (mode === 'listen' || (guide.checked && !echo)) for (const g of session.guide()) piano(g.midi, g.time, g.durMs);
     session.pedalStart(midi.pedalDown);
     if (mode === 'play') demo.onTimed?.(session);
 
@@ -583,7 +588,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         if (text !== '✓') lastMessage = `${HAND_LABEL[j.expected!.hand]}: ${Math.abs(off)} ms ${text}`;
       } else if (j.kind === 'wrong') {
         flashes.push({ device: e.note, kind: 'wrong', text: '✗', until });
-        lastMessage = `Wrong key: ${keyName(cal, e.note)}, the note was ${keyName(cal, toDevice(cal, j.expected!.midi))}`;
+        lastMessage = ex.pitchMatch === 'side'
+          ? `Wrong side: that was the ${j.expected!.midi >= 60 ? 'right' : 'left'} hand's beat (right hand from middle C up)`
+          : `Wrong key: ${keyName(cal, e.note)}, the note was ${keyName(cal, toDevice(cal, j.expected!.midi))}`;
         kb?.flash(e.note, 'wrong');
       } else {
         flashes.push({ device: e.note, kind: 'extra', text: 'extra', until });
@@ -605,7 +612,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       const now = performance.now();
       const pos = session.position(now);
       const noteState = (i: number) => session.liveState(expected[i], pos.beat);
-      status.textContent = pos.phase === 'count-in' ? (pos.count ? `Count in… ${pos.count}` : 'Get ready…') : pos.phase === 'playing' ? (mode === 'listen' ? 'Listen and watch the keys…' : 'Play!') : pos.phase === 'waiting' ? 'Get ready…' : '';
+      status.textContent = pos.phase === 'count-in' ? (pos.count ? `${echoTurn ? 'Your turn: ' : ''}Count in… ${pos.count}` : 'Get ready…')
+        : pos.phase === 'playing' ? (mode === 'listen' ? (echo ? 'Listen…' : 'Listen and watch the keys…') : echo ? 'Tap it back!' : 'Play!')
+        : pos.phase === 'waiting' ? 'Get ready…' : '';
       falling?.draw({
         beat: pos.beat, count: pos.phase === 'count-in' ? pos.count : undefined, held: midi.held, noteState, flashes, now, pedalDown: midi.pedalDown,
         banner: pos.phase === 'waiting' ? 'Get ready' : undefined,
@@ -619,7 +628,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       expected.forEach((e, i) => {
         if (pos.beat >= e.beat && pos.beat < e.beat + e.beats) {
           // Generated drills test reading: the keys stay dark while the player plays.
-          if (!(ex.goal && mode === 'play')) kb?.set(devices[i], 'target', true, e.finger ? String(e.finger) : '');
+          if (!(ex.goal && mode === 'play') && !echo) kb?.set(devices[i], 'target', true, e.finger ? String(e.finger) : '');
           staff?.mark(`${e.hand}:${e.index}`, 'current');
         }
         if (staff && mode === 'play') {
@@ -657,7 +666,13 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
     const finish = () => {
       stop();
+      if (mode === 'listen' && echo) { start('play', true); return; }
       if (mode === 'listen') { status.textContent = 'Now you try: press Play.'; idle(); demo.onRunEnd?.('listen'); return; }
+      if (echo && !revealed) {
+        // Now the rhythm can be seen, marked with how each note went.
+        revealed = true;
+        stage.querySelector<HTMLElement>('.staff-wrap')?.removeAttribute('hidden');
+      }
       status.textContent = '';
       const raw = session.result();
       const goal = applyGoal(raw.score, ex.goal);
@@ -691,13 +706,13 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         showLadder();
       }
       const tricky = trickyBars(r, ex, session.beatMs);
-      const loopTip = tricky && loop.whole.bars > 1
+      const loopTip = tricky && loop.whole.bars > 1 && !echo
         ? h('p', { class: 'small' }, 'Most mistakes were in ', h('strong', {}, barsText(tricky)), '. ',
           h('button', { class: 'secondary', onclick: () => loop.setLoop(tricky, Number(tempoSel.value)) }, `Loop ${barsText(tricky)}`))
         : '';
       // Go again from the card, without scrolling back up to Play.
       const againRow = h('div', { class: 'controls' },
-        h('button', { onclick: () => { stage.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); start('play'); } }, 'Try again'),
+        h('button', { onclick: () => { stage.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); start(echo ? 'listen' : 'play'); } }, 'Try again'),
         regenerate.has(ex) ? h('button', { class: 'secondary', onclick: () => regenerate.get(ex)!() }, ex.tap ? 'New rhythm' : 'New tune') : '');
       result.replaceChildren(timedResult(r, ex, tempo, cal), reward, ladderNote, loopTip, againRow);
       onDone(r);
@@ -712,7 +727,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   };
 
   listenBtn.onclick = () => start('listen');
-  playBtn.onclick = () => start('play');
+  playBtn.onclick = () => start(echo ? 'listen' : 'play');
+  if (echo) listenBtn.hidden = true;
   stopBtn.onclick = () => { run?.cancel(); clearTimeout(again); status.textContent = 'Stopped.'; idle(); };
 
   // Transport up front (Listen, Play, Stop, view); tempo, click, guide and looping in a drawer.
@@ -733,10 +749,11 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       loopControls));
   drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
   root.append(
-    header(ex, ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
+    header(ex, echo ? 'Press Play: listen to the rhythm, then tap it back after a bar of count-in.' : ex.pitchMatch === 'side' ? 'Tap the rhythm: right hand on any key from middle C up, left hand on any key below.'
+      : ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
     h('div', { class: 'transport' },
       h('div', { class: 'transport-main' }, listenBtn, playBtn, stopBtn),
-      toggle.el,
+      echo ? '' : toggle.el,
     ),
     drawer,
     rungs ? ladderLine : '',
@@ -758,7 +775,9 @@ function timedResult(r: TimedResult, ex: TimedExercise, tempo: number, cal: Cali
     return h('li', {}, h('strong', {}, `${HAND_LABEL[hr.hand]} ${hr.score}`), ` · ${hr.hits}/${hr.notes} notes${timing}`);
   });
   const wrongKeys = r.notes.filter((n) => n.outcome === 'wrong').slice(0, 3)
-    .map((n) => `${keyName(cal, toDevice(cal, n.played!.midi))} instead of ${keyName(cal, toDevice(cal, n.expected.midi))}`);
+    .map((n) => ex.pitchMatch === 'side'
+      ? `a ${n.played!.midi >= 60 ? 'right' : 'left'}-hand key on a ${n.expected.midi >= 60 ? 'right' : 'left'}-hand beat`
+      : `${keyName(cal, toDevice(cal, n.played!.midi))} instead of ${keyName(cal, toDevice(cal, n.expected.midi))}`);
   return h('div', { class: 'result' },
     h('div', { class: 'score' }, h('span', { class: 'stars' }, starText(r.stars)), ` ${r.score}`),
     h('ul', { class: 'hands' }, ...handLine,

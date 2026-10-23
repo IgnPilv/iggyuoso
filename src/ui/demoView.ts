@@ -117,6 +117,21 @@ prompt: Rhythm only. Tap the rhythm on any key.
 tempo: 84
 meter: 4/4
 rhythm: "x:q x:q x:h | x:e x:e x:q x:h"`,
+  tapBoth: `
+id: demo-tap-both
+kind: generated
+generator: rhythm-read
+hands: both
+durations: [q, h, e]
+bars: 2
+tempo: 72`,
+  echo: `
+id: demo-echo
+kind: generated
+generator: rhythm-echo
+durations: [q, h, e, r:q]
+bars: 2
+tempo: 80`,
   rhythms: `
 id: demo-rhythms
 kind: timed
@@ -537,6 +552,16 @@ function scenes(): Scene[] {
   out.push({ title: 'Theory screens', caption: 'Theory comes with pictures: a staff (with note names), lit keys with fingers, a sound to hear, the rule in a box and its key terms. A quick check holds Next until it is answered right; a wrong answer explains why. Then a playground: press any key and see it on the staff.', run: theoryScene });
   out.push({ title: 'Theory quiz', caption: 'Short theory questions, with a picture or a sound. Answer with a button, or by playing the answer. After each answer the quiz says why, with a picture, and waits for Next.', run: exerciseScene(parseExercise(parse(SAMPLES.quiz)), { view: 'classic' }) });
   out.push({ title: 'Build it', caption: 'Play a named chord (hold it down), interval or scale, untimed. "Show me" lights the keys, but then it does not count as a first try.', run: exerciseScene(sampleOf('build', SAMPLES.build), { view: 'falling', switchAt: 6000 }) });
+  const played = (ex: Exercise, wait = 4000): Scene['run'] => (box, next, p) => {
+    const timers: number[] = [];
+    demo.onTimed = (s) => p.playTimed(s);
+    demo.onRunEnd = (mode) => { if (mode === 'play') timers.push(window.setTimeout(next, wait)); };
+    const cleanup = mountExercise(box, ex, DEMO_CALIBRATION, () => {});
+    timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+    return () => { timers.forEach(clearTimeout); cleanup(); };
+  };
+  out.push({ title: 'Two-hand tapping', caption: 'Rhythm for both hands: the right hand taps any key from middle C up, the left hand any key below, and each hand is scored on its own. Here a fresh two-line rhythm to read (rhythm-read with hands: both).', run: played(parseExercise(parse(SAMPLES.tapBoth))) });
+  out.push({ title: 'Rhythm echo', caption: 'Play sounds a rhythm you cannot see. After a bar of count-in it is your turn: tap it back on any key. Then the staff shows what it was, marked note by note. A new rhythm every run.', run: played(parseExercise(parse(SAMPLES.echo)), 5000) });
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
   out.push({
     title: 'MIDI tester',

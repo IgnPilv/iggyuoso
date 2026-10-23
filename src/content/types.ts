@@ -116,6 +116,8 @@ export interface TimedExercise extends ExerciseBase {
   kind: 'timed';
   /** Written as `kind: tap`: rhythm only, any key counts (notes are placeholders on middle C). */
   tap?: boolean;
+  /** Echo a rhythm (`echo: true` on a tap): Play sounds it first, unseen, then the player taps it back; the staff shows on the result. */
+  echo?: boolean;
   tempo: number;
   meter: Meter;
   countIn: number;
@@ -131,7 +133,8 @@ export interface TimedExercise extends ExerciseBase {
   pedal?: PedalToken[];
   /** Finger numbers per hand, one per note (chords take one number for the whole chord). */
   fingers: Record<Hand, number[]>;
-  pitchMatch: 'exact' | 'pitchClass' | 'any';
+  /** `any`: any key counts (tap); `side`: any key on the hand's side of middle C (two-hand tap). */
+  pitchMatch: 'exact' | 'pitchClass' | 'any' | 'side';
   bars: number;
 }
 
@@ -221,7 +224,7 @@ export interface BuildExercise extends ExerciseBase {
   pitchMatch: 'exact' | 'pitchClass';
 }
 
-export const GENERATORS = ['read-notes', 'find-notes', 'intervals', 'rhythm-read', 'sight-read'] as const;
+export const GENERATORS = ['read-notes', 'find-notes', 'intervals', 'rhythm-read', 'rhythm-echo', 'sight-read'] as const;
 export type Generator = (typeof GENERATORS)[number];
 
 /** A drill made fresh every run from a pool (`kind: generated`); see src/engine/generate.ts. */
@@ -246,6 +249,8 @@ export interface GeneratedExercise extends ExerciseBase {
   questions: number;
   /** Answer reading drills by playing the note, or by naming it with buttons. */
   answer: 'play' | 'name';
+  /** Rhythm reading and echo: one line (any key) or `both` hands (right and left lines). */
+  hands: 'one' | 'both';
   /** Sight-reading with `hand: together`: what the left hand plays under the tune. */
   leftPart: 'roots' | 'fifths' | 'chords';
   mastery: DrillGoal;
