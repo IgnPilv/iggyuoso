@@ -595,6 +595,16 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .state-badge.solid { background: var(--ok-soft); color: var(--ok); }
 .state-badge.mastered { background: var(--accent-soft); color: var(--accent-ink); }
 .state-badge.due { background: var(--warn-soft); color: var(--warn); }
+ol.lessons li.locked a { opacity: 0.55; }
+ol.lessons li.locked a:hover { transform: none; }
+
+/* Clean takes per exercise: the line under a result, and the list on a recap or a locked lesson. */
+.reps-line { margin: var(--space-2) 0 0; color: var(--ink-2); }
+.reps-line.done { color: var(--ok); }
+.reps-list { list-style: none; padding: 0; margin: var(--space-3) 0; display: grid; gap: var(--space-1); }
+.reps-list li { display: flex; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--surface-sunken); }
+.reps-list li.done .reps-count { color: var(--ok); }
+.reps-count { color: var(--ink-2); font-family: var(--font-mono); font-size: var(--text-sm); text-align: right; }
 .progress-stats { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); font-size: var(--text-lg); }
 .progress-stats strong { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
 .reward { margin: var(--space-3) 0 0; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--accent-soft); }

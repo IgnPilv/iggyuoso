@@ -1,18 +1,16 @@
 import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibration';
 import { content, contentErrors, exerciseTitle, treeNodes } from '../content';
-import type { Lesson } from '../content/types';
+import type { Exercise, Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
-import { mastery, nodeOfLesson } from '../progress';
+import { lessonGoals, lessonLock, mastery, nodeOfLesson, type LessonLock } from '../progress';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
 import { markdown } from './markdown';
-import { mountExercise } from './players';
+import { mountExercise, repsText } from './players';
 import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
-
-const lessonExercises = (l: Lesson) => l.steps.flatMap((s) => ('exercise' in s ? [s.exercise] : []));
 
 export const go = (path: string) => { location.hash = path; };
 
@@ -55,7 +53,7 @@ export const homeView: View = (root) => {
   root.append(banner);
   const firstNotDone = content.units.flatMap((u) => u.lessons).find((id) => {
     const l = content.lessons.get(id);
-    return l && !store.lessonDone(lessonExercises(l));
+    return l && !store.lessonDone(lessonGoals(l));
   });
   const nextLesson = firstNotDone ? content.lessons.get(firstNotDone) : undefined;
   const title = h('h1', {}, 'Hands apart, ', h('span', { class: 'gradient-text' }, 'then together.'));
@@ -76,18 +74,23 @@ export const homeView: View = (root) => {
   root.append(progressCard());
   for (const unit of content.units) {
     const lessons = unit.lessons.map((id) => content.lessons.get(id)).filter((l): l is Lesson => !!l);
-    const done = lessons.filter((l) => store.lessonDone(lessonExercises(l))).length;
+    const done = lessons.filter((l) => store.lessonDone(lessonGoals(l))).length;
     root.append(h('section', { class: 'card' },
       h('div', { class: 'unit-head' },
         h('h2', {}, unit.title),
         h('span', { class: 'unit-progress' }, `${done} / ${lessons.length} done`)),
       h('p', { class: 'small' }, unit.summary),
       h('ol', { class: 'lessons' }, ...lessons.map((l) => {
-        const cls = store.lessonDone(lessonExercises(l)) ? 'done' : l.id === firstNotDone && store.calibration ? 'next' : '';
+        const goals = lessonGoals(l);
+        const locked = lessonLock(l).locked;
+        const cls = store.lessonDone(goals) ? 'done' : locked ? 'locked' : l.id === firstNotDone && store.calibration ? 'next' : '';
         const node = nodeOfLesson(l.id);
         const state = node ? mastery.state(node.id) : undefined;
+        const exDone = goals.filter((e) => store.reps(e).done).length;
         return h('li', { class: `${cls}${state ? ` state-${state}` : ''}` },
           h('a', { href: `#/lesson/${l.id}` }, l.title,
+            locked ? h('span', { class: 'state-badge locked' }, 'Locked')
+              : exDone && exDone < goals.length ? h('span', { class: 'state-badge' }, `${exDone} / ${goals.length}`) : '',
             node && mastery.isDue(node.id) ? h('span', { class: 'state-badge due' }, 'Review')
               : state === 'solid' || state === 'mastered' ? h('span', { class: `state-badge ${state}` }, state === 'solid' ? 'Solid' : 'Mastered') : ''));
       })),
@@ -219,6 +222,8 @@ export const lessonView: View = (root, id?: string) => {
   if (!lesson) { root.append(h('p', {}, 'Lesson not found. ', h('a', { href: '#/' }, 'Home'))); return; }
   const cal = needCalibration(root);
   if (!cal) return;
+  const lock = lessonLock(lesson);
+  if (lock.locked) { root.append(lockedCard(lesson, lock)); return; }
   const body = h('div');
   const nav = h('div', { class: 'controls' });
   const progress = h('span', { class: 'small' });
@@ -255,11 +260,12 @@ export const lessonView: View = (root, id?: string) => {
   const showRecap = (l: Lesson) => {
     const p = h('div', { class: 'explain recap' });
     p.innerHTML = markdown(`**Recap.** ${l.recap}`);
-    const ids = lessonExercises(l);
-    const passed = ids.filter((x) => store.exercise(x).passed).length;
-    body.append(p, h('p', { class: store.lessonDone(ids) ? 'banner ok' : 'banner' },
-      store.lessonDone(ids) ? 'Lesson done: every exercise passed.' : `${passed} of ${ids.length} exercises passed. Go back to try the others (★ or better at full tempo).`));
-    const order = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
+    const goals = lessonGoals(l);
+    const done = store.lessonDone(goals);
+    body.append(p, h('p', { class: done ? 'banner ok' : 'banner' },
+      done ? 'Lesson done: every exercise has its clean takes. The next lesson is open.'
+        : `${goals.filter((e) => store.reps(e).done).length} of ${goals.length} exercises done. Each one needs clean takes (★★★, 92 or more, at full tempo); the next lesson opens when all are done.`),
+      repsTable(goals));    const order = content.units.find((u) => u.id === l.unit)?.lessons ?? [];
     const nextId = order[order.indexOf(l.id) + 1];
     nav.append(nextId ? h('button', { onclick: () => go(`/lesson/${nextId}`) }, 'Next lesson') : h('button', { onclick: () => go('/') }, 'Home'));
   };
@@ -268,6 +274,30 @@ export const lessonView: View = (root, id?: string) => {
   show();
   return () => cleanup?.();
 };
+
+/** Each exercise of a lesson with its clean takes so far. */
+function repsTable(goals: Exercise[]) {
+  return h('ul', { class: 'reps-list' }, ...goals.map((e) => {
+    const r = store.reps(e);
+    return h('li', { class: r.done ? 'done' : '' },
+      h('span', {}, exerciseTitle(e)),
+      h('span', { class: 'reps-count' }, repsText(e, r)));
+  }));
+}
+
+function lockedCard(l: Lesson, lock: Extract<LessonLock, { locked: true }>) {
+  const title = (id: string) => treeNodes.get(id)?.title ?? id;
+  const why = lock.reason === 'previous'
+    ? h('p', {}, 'This lesson opens when ', h('a', { href: `#/lesson/${lock.lesson.id}` }, lock.lesson.title), ' is done: every exercise in it played clean (★★★) enough times.')
+    : h('p', {}, lock.checkpoint ? 'A checkpoint opens when everything before it is Mastered (Solid, then passed again on a later day). Still to go: ' : 'This lesson opens after: ',
+      ...lock.nodes.flatMap((id, i) => {
+        const n = treeNodes.get(id);
+        return [i ? ', ' : '', n?.lesson ? h('a', { href: `#/lesson/${n.lesson}` }, title(id)) : title(id)];
+      }), '.');
+  return h('section', { class: 'card' }, h('span', { class: 'eyebrow' }, 'Locked'), h('h2', {}, l.title), why,
+    lock.reason === 'previous' ? repsTable(lessonGoals(lock.lesson)) : '',
+    h('div', { class: 'controls' }, h('button', { class: 'secondary', onclick: () => go('/') }, 'Home')));
+}
 
 export const exerciseView: View = (root, id?: string) => {
   const ex = id ? content.exercises.get(id) : undefined;
@@ -315,6 +345,7 @@ export const settingsView: View = (root) => {
       h('h2', {}, 'Defaults'),
       h('div', { class: 'controls' }, toggle('metronome', 'Click while playing'), toggle('guide', 'Guide notes while playing')),
       h('div', { class: 'controls' }, h('label', {}, 'View ', viewPref())),
+      h('div', { class: 'controls' }, openAllToggle()),
       h('p', { class: 'small' }, 'The piano you hear in the app is the Salamander Grand Piano by Alexander Holm (',
         h('a', { href: 'https://creativecommons.org/licenses/by/3.0/', target: '_blank', rel: 'noopener' }, 'CC BY 3.0'), ').'),
     ),
@@ -322,6 +353,13 @@ export const settingsView: View = (root) => {
   );
   return appearance.off;
 };
+
+/** Lessons normally open one by one; this opens all of them, for trying things out. */
+function openAllToggle() {
+  const box = h('input', { type: 'checkbox', checked: !!store.settings.openAll });
+  box.onchange = () => { store.settings = { ...store.settings, openAll: box.checked }; };
+  return h('label', {}, box, ' Open every lesson (skip the order; for trying things out)');
+}
 
 const THEME_CHOICES: [ThemeChoice, string][] = [['system', 'Follow the device'], ['dark', 'Dark'], ['light', 'Light']];
 

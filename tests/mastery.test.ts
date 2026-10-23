@@ -9,8 +9,8 @@ const node = (id: string, lesson: string, requires: string[] = []): TreeNode =>
 
 function setup() {
   const store = new Store(memoryBackend());
-  const nodes = new Map([['a', node('a', 'la')], ['b', node('b', 'lb', ['a'])]]);
-  const lessons: Record<string, string[]> = { la: ['e1', 'e2'], lb: ['e3'] };
+  const nodes = new Map([['a', node('a', 'la')], ['b', node('b', 'lb', ['a'])], ['cp', { ...node('cp', 'lc', ['a']), type: 'checkpoint' as const }]]);
+  const lessons: Record<string, string[]> = { la: ['e1', 'e2'], lb: ['e3'], lc: ['e4'] };
   const m = new Mastery(store, nodes, (l) => lessons[l] ?? []);
   const play = (ex: string, score: number, day: string, counts = true) => {
     const now = new Date(`${day}T12:00:00`);
@@ -40,6 +40,19 @@ describe('mastery', () => {
     expect(m.state('a')).toBe('solid'); // same day does not count
     play('e1', 80, '2026-11-02');
     expect(m.state('a')).toBe('mastered');
+  });
+
+  it('opens a checkpoint only when everything it requires is Mastered', () => {
+    const { m, play } = setup();
+    play('e1', 95, '2026-11-01');
+    play('e2', 95, '2026-11-01');
+    expect(m.state('a')).toBe('solid');
+    expect(m.state('b')).toBe('introduced');
+    expect(m.state('cp')).toBe('locked');
+    expect(m.missing({ ...node('cp', 'lc', ['a']), type: 'checkpoint' })).toEqual(['a']);
+    play('e1', 95, '2026-11-02');
+    expect(m.state('a')).toBe('mastered');
+    expect(m.state('cp')).toBe('introduced');
   });
 
   it('slow practice never promotes', () => {

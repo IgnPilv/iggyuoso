@@ -6,7 +6,7 @@ import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
 import { expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
-import { store } from '../progress/store';
+import { CLEAN_SCORE, store, type RepsGoal, type RepsProgress } from '../progress/store';
 import { treeNodes } from '../content';
 import { RECORD_TEMPO_FRACTION } from '../scoring/stars';
 import type { TimedResult } from '../scoring/timed';
@@ -89,13 +89,27 @@ function untimedResult(r: UntimedResult, retry: () => void) {
  * Save an attempt and update the mastery tree. Returns a line for the result card (XP, a node
  * going up or down), or '' when there is nothing to tell. The demo uses throwaway progress.
  */
-export function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>): HTMLElement | '' {
+export function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>): HTMLElement {
   const p = demo.active ? demoProgress() : { store, mastery };
   const written = ex.kind === 'timed' ? ex.tempo : tempo;
   const a = { at: new Date().toISOString(), score, stars, tempo, hands, counts: tempo >= RECORD_TEMPO_FRACTION * written };
   const before = p.store.exercise(ex.id).best?.stars ?? 0;
+  const wasDone = p.store.reps(ex).done;
   p.store.record(ex.id, a);
-  return rewardLine(p.mastery.onAttempt(ex.id, a, before), p.mastery);
+  const reps = p.store.reps(ex);
+  const clean = a.counts && score >= CLEAN_SCORE;
+  const repsLine = h('p', { class: `reps-line${reps.done ? ' done' : ''}` },
+    reps.done && !wasDone ? h('strong', {}, 'Exercise done! ') : clean ? h('strong', {}, 'Clean take. ') : '',
+    repsText(ex, reps),
+    !reps.done && !clean ? (a.counts ? ' A clean take needs 92 or more.' : ' Takes count at full tempo.') : '');
+  return h('div', { class: 'take-summary' }, rewardLine(p.mastery.onAttempt(ex.id, a, before), p.mastery), repsLine);
+}
+
+/** "2 of 3 clean takes · 1 of 2 days", or how it was done. */
+export function repsText(goal: RepsGoal, r: RepsProgress): string {
+  if (r.done) return `Done: ${r.clean} clean ${r.clean === 1 ? 'take' : 'takes'}${goal.days > 1 ? ` on ${r.days} days` : ''}.`;
+  const takes = `${Math.min(r.clean, goal.reps)} of ${goal.reps} clean takes`;
+  return goal.days > 1 ? `${takes} · ${Math.min(r.days, goal.days)} of ${goal.days} days.` : `${takes}.`;
 }
 
 const STATE_LABEL: Record<NodeState, string> = { locked: 'Locked', introduced: 'Introduced', practised: 'Practised', solid: 'Solid', mastered: 'Mastered' };

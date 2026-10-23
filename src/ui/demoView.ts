@@ -124,6 +124,16 @@ meter: 4/4
 right: "E4:h G4:h | A4:h G4:h | F4:h E4:h | D4:w"
 left: "C3+G3:h C3+G3:h | F2+C3:h C3+G3:h | G2+D3:h C3+G3:h | G2+D3:w"
 pedal: "x:h x:h | x:h x:h | x:h x:h | x:w"`,
+  reps: `
+id: demo-reps
+kind: timed
+hand: right
+prompt: Three clean takes to finish this one.
+tempo: 100
+meter: 4/4
+reps: 3
+right: "C4:q D4:q E4:q F4:q | G4:q F4:q E4:h"
+fingers: "1 2 3 4 5 4 3"`,
   sixEight: `
 id: demo-six-eight
 kind: timed
@@ -133,6 +143,19 @@ tempo: 50
 meter: 6/8
 right: "C4:e D4:e E4:e F4:q E4:e | D4:q. G4:q. | E4:e F4:e G4:e A4:q F4:e | E4:q. C4:q."`,
 };
+
+/** A unit's lesson list as it looks on home: one done, the next just opened, the rest locked. */
+function lockDemo() {
+  const item = (title: string, cls: string, badge?: string) =>
+    h('li', { class: cls }, h('a', { href: '#/demo' }, title, badge ? h('span', { class: `state-badge ${cls}` }, badge) : ''));
+  return h('section', { class: 'card' },
+    h('p', { class: 'small' }, 'On the home page:'),
+    h('ol', { class: 'lessons' },
+      item('Steps up and down', 'done'),
+      item('Five-finger tune', 'next'),
+      item('Skips', 'locked', 'Locked'),
+      item('Checkpoint: first tunes', 'locked', 'Locked')));
+}
 
 const press = (box: HTMLElement, label: string) =>
   [...box.querySelectorAll('button')].find((b) => b.textContent === label)?.click();
@@ -205,6 +228,26 @@ function scenes(): Scene[] {
         } else if (loops++ >= 2) timers.push(window.setTimeout(next, 2500));
       };
       const cleanup = mountExercise(box, parseExercise(parse(SAMPLES.ladder)), DEMO_CALIBRATION, () => {});
+      setView(box, 'falling');
+      timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Clean takes and locks',
+    caption: 'One good take is not enough: an exercise is done after three clean takes (★★★, 92 or more, at full tempo), and some need them on different days. The next lesson stays locked until every exercise in this one is done. Checkpoints open only when everything before them is Mastered.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      let takes = 0;
+      // A fresh id each time, so the throwaway progress starts from zero.
+      const ex = { ...parseExercise(parse(SAMPLES.reps)), id: `demo-reps-${Date.now()}` };
+      demo.onTimed = (s) => p.playTimed(s, { slips: false });
+      demo.onRunEnd = (mode) => {
+        if (mode !== 'play') return;
+        if (++takes < 3) timers.push(window.setTimeout(() => press(box, 'Play'), 2600));
+        else timers.push(window.setTimeout(() => { box.append(lockDemo()); timers.push(window.setTimeout(next, 5000)); }, 1500));
+      };
+      const cleanup = mountExercise(box, ex, DEMO_CALIBRATION, () => {});
       setView(box, 'falling');
       timers.push(window.setTimeout(() => press(box, 'Play'), 900));
       return () => { timers.forEach(clearTimeout); cleanup(); };

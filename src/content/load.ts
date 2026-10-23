@@ -120,6 +120,17 @@ function parseTarget(t: unknown): FindTarget {
   throw new FieldError(`target ${JSON.stringify(t)} should be { blackGroup: 2|3 }, { pitchClass: C } or { region: low|high }`);
 }
 
+/** Clean takes an exercise needs by default, and the days they are spread over. */
+export const DEFAULT_REPS = 3;
+export const DEFAULT_DAYS = 1;
+
+function count(raw: Raw, key: string, fallback: number): number {
+  const v = raw[key];
+  if (v === undefined) return fallback;
+  if (typeof v !== 'number' || !Number.isInteger(v) || v < 1 || v > 50) throw new FieldError(`"${key}" should be a whole number from 1 to 50`);
+  return v;
+}
+
 const HANDS = ['right', 'left', 'alternating', 'together'] as const;
 
 export function parseExercise(raw: Raw): Exercise {
@@ -134,7 +145,10 @@ export function parseExercise(raw: Raw): Exercise {
     display: oneOf(raw, 'display', ['keys', 'staff'] as const) ?? 'keys',
     clef: oneOf(raw, 'clef', ['treble', 'bass'] as const),
     ...(raw.key !== undefined ? { key: checkKey(str(raw, 'key')!) } : {}),
+    reps: count(raw, 'reps', DEFAULT_REPS),
+    days: count(raw, 'days', DEFAULT_DAYS),
   };
+  if (base.days > base.reps) throw new FieldError('"days" cannot be more than "reps" (one clean take a day at least)');
   const pitchMatch = raw.pitchMatch === 'pitchClass' ? 'pitchClass' : 'exact';
   if (raw.pitchMatch !== undefined && raw.pitchMatch !== 'pitchClass') throw new FieldError('"pitchMatch" can only be pitchClass');
 
@@ -226,7 +240,7 @@ export function parseExercise(raw: Raw): Exercise {
   };
 }
 
-type Base = Pick<Exercise, 'id' | 'prompt' | 'hand' | 'display' | 'clef'>;
+type Base = Pick<Exercise, 'id' | 'title' | 'prompt' | 'hand' | 'display' | 'clef' | 'key' | 'reps' | 'days'>;
 type Match = 'exact' | 'pitchClass';
 
 const list = (o: Raw, key: string): unknown[] => {
