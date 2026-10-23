@@ -1,0 +1,82 @@
+# Year 1 of the mastery tree. Format: content/README.md, "Mastery tree".
+year: 1
+title: Hands apart, then together
+level: ABRSM Initial–Grade 1, RCM Prep–Level 1
+goal: >-
+  Play simple pieces in five-finger positions with both hands, read both clefs, keep a steady
+  beat, build the C, G and F scales and chords, and hear major against minor.
+units:
+  - id: meet-the-keyboard
+    title: Meet the keyboard
+    nodes:
+      - { id: high-and-low, type: lesson, strand: theory, lesson: high-and-low, title: High and low }
+      - { id: ear-high-low, type: drill, strand: ear, planned: true, title: Higher or lower?, requires: [high-and-low] }
+      - { id: finger-numbers, type: lesson, strand: technique, lesson: finger-numbers, title: Finger numbers, requires: [high-and-low] }
+      - { id: c-d-e, type: lesson, strand: theory, lesson: c-d-e, title: "C, D and E", requires: [high-and-low] }
+      - { id: f-g-a-b, type: lesson, strand: theory, lesson: f-g-a-b, title: "F, G, A and B", requires: [c-d-e] }
+      - { id: steady-beat, type: lesson, strand: rhythm, lesson: steady-beat, title: Steady beat, requires: [c-d-e] }
+      - { id: half-and-whole-notes, type: lesson, strand: rhythm, lesson: half-and-whole-notes, title: Half and whole notes, requires: [steady-beat] }
+      - { id: middle-c-position, type: lesson, strand: technique, lesson: middle-c-position, title: Middle C position, requires: [finger-numbers, f-g-a-b] }
+      - { id: treble-staff, type: lesson, strand: reading, lesson: treble-staff, title: The treble staff, requires: [middle-c-position] }
+      - { id: bass-staff, type: lesson, strand: reading, lesson: bass-staff, title: The bass staff, requires: [treble-staff] }
+      - { id: rests-and-taking-turns, type: lesson, strand: rhythm, lesson: rests-and-taking-turns, title: Rests and taking turns, requires: [half-and-whole-notes, bass-staff] }
+
+  - id: steady-hands
+    title: Steady hands
+    nodes:
+      - { id: legato-and-non-legato, type: lesson, strand: technique, planned: true, title: Detached and smooth, requires: [middle-c-position] }
+      - { id: steps-and-skips, type: lesson, strand: theory, planned: true, title: "Steps and skips (2nds and 3rds)", requires: [treble-staff] }
+      - { id: three-four-time, type: lesson, strand: rhythm, planned: true, title: "3/4 time and the dotted half note", requires: [rests-and-taking-turns] }
+      - { id: tap-rhythm-echo, type: drill, strand: rhythm, planned: true, title: Tap it back, requires: [three-four-time] }
+      - { id: c-position-reading, type: drill, strand: reading, planned: true, title: Reading in C position, requires: [bass-staff, steps-and-skips] }
+      - { id: ear-echo-three-notes, type: drill, strand: ear, planned: true, title: Echo three notes, requires: [ear-high-low, middle-c-position] }
+      - { id: first-pieces-alternating, type: piece, strand: repertoire, planned: true, title: First pieces, hands taking turns, requires: [c-position-reading, three-four-time] }
+      - { id: y1-checkpoint-a, type: checkpoint, strand: all, planned: true, title: "Checkpoint 1: steady hands", requires: [legato-and-non-legato, tap-rhythm-echo, ear-echo-three-notes, first-pieces-alternating] }
+
+  - id: two-hands-at-once
+    title: Two hands at once
+    nodes:
+      - { id: hands-together-held, type: lesson, strand: technique, planned: true, title: One hand holds, one hand moves, requires: [y1-checkpoint-a] }
+      - { id: hands-together-parallel, type: drill, strand: technique, planned: true, title: Both hands moving, requires: [hands-together-held] }
+      - { id: dynamics, type: lesson, strand: theory, planned: true, title: "Loud and soft (f, p, mf, mp)", requires: [y1-checkpoint-a] }
+      - { id: sharps-flats-naturals, type: lesson, strand: theory, planned: true, title: "Sharps, flats and semitones", requires: [y1-checkpoint-a] }
+      - { id: g-position, type: lesson, strand: technique, planned: true, title: G position, requires: [hands-together-held] }
+      - { id: ear-major-minor, type: drill, strand: ear, planned: true, title: Happy or sad? Major and minor, requires: [ear-echo-three-notes] }
+      - { id: pentatonic-improv, type: lesson, strand: creativity, planned: true, title: Black-key improvising, requires: [sharps-flats-naturals] }
+      - { id: pieces-hands-together, type: piece, strand: repertoire, planned: true, title: First pieces hands together, requires: [hands-together-parallel, dynamics] }
+
+  - id: first-chords
+    title: First chords
+    nodes:
+      - { id: intervals-to-fifth, type: lesson, strand: theory, planned: true, title: "Intervals: 2nd to 5th and the octave", requires: [steps-and-skips] }
+      - { id: tonic-triad, type: lesson, strand: theory, planned: true, title: "Triads: C, F and G", requires: [intervals-to-fifth] }
+      - { id: chord-symbols, type: lesson, strand: theory, planned: true, title: "Chord symbols and I, IV, V, V7", requires: [tonic-triad] }
+      - { id: lh-chords, type: drill, strand: technique, planned: true, title: Left-hand chords under a melody, requires: [chord-symbols, hands-together-parallel] }
+      - { id: key-of-g, type: lesson, strand: theory, planned: true, title: "One sharp: the key of G", requires: [sharps-flats-naturals, g-position] }
+      - { id: f-position-key-of-f, type: lesson, strand: theory, planned: true, title: "One flat: F position and the key of F", requires: [sharps-flats-naturals, g-position] }
+      - { id: ear-degrees-1-5, type: drill, strand: ear, planned: true, title: "Home and five: scale degrees 1 and 5", requires: [ear-major-minor] }
+      - { id: lead-sheet-melody, type: piece, strand: repertoire, planned: true, title: A tune with chords, requires: [lh-chords] }
+      - { id: note-naming, type: side-quest, strand: ear, planned: true, title: Note naming (perfect pitch side quest), requires: [ear-degrees-1-5] }
+      - { id: y1-checkpoint-b, type: checkpoint, strand: all, planned: true, title: "Checkpoint 2: first chords", requires: [lead-sheet-melody, ear-degrees-1-5, pieces-hands-together, pentatonic-improv] }
+
+  - id: scales-and-eighths
+    title: Scales and eighth notes
+    nodes:
+      - { id: eighth-notes, type: lesson, strand: rhythm, planned: true, title: Eighth notes, requires: [y1-checkpoint-b] }
+      - { id: dotted-quarter-and-upbeat, type: lesson, strand: rhythm, planned: true, title: Dotted quarter and the upbeat, requires: [eighth-notes] }
+      - { id: major-scale-pattern, type: lesson, strand: theory, planned: true, title: "The major scale: tones and semitones", requires: [y1-checkpoint-b] }
+      - { id: thumb-under, type: drill, strand: technique, planned: true, title: Thumb under, requires: [y1-checkpoint-b] }
+      - { id: c-scale-hands-apart, type: drill, strand: technique, planned: true, title: "C major scale, hands apart", requires: [thumb-under, major-scale-pattern] }
+      - { id: c-scale-hands-together, type: drill, strand: technique, planned: true, title: "C major scale, hands together", requires: [c-scale-hands-apart] }
+      - { id: g-and-f-scales, type: drill, strand: technique, planned: true, title: "G and F major scales, hands apart", requires: [c-scale-hands-apart, key-of-g, f-position-key-of-f] }
+      - { id: minor-five-finger, type: lesson, strand: technique, planned: true, title: "A minor and D minor positions", requires: [y1-checkpoint-b] }
+      - { id: ear-degree-3-and-thirds, type: drill, strand: ear, planned: true, title: "Degree 3, major and minor thirds", requires: [ear-degrees-1-5] }
+
+  - id: year-1-recital
+    title: Year 1 recital
+    nodes:
+      - { id: sight-reading-y1, type: drill, strand: reading, planned: true, title: "Sight-reading: any five-finger position", requires: [g-and-f-scales, minor-five-finger] }
+      - { id: ear-spot-the-change, type: drill, strand: ear, planned: true, title: Spot the change, requires: [ear-degree-3-and-thirds] }
+      - { id: improvise-over-drone, type: lesson, strand: creativity, planned: true, title: Improvise over a drone, requires: [pentatonic-improv, c-scale-hands-together] }
+      - { id: recital-three-pieces, type: piece, strand: repertoire, planned: true, title: Three contrasting pieces, requires: [c-scale-hands-together, dotted-quarter-and-upbeat] }
+      - { id: y1-exit, type: checkpoint, strand: all, planned: true, title: Year 1 exit exam, requires: [sight-reading-y1, ear-spot-the-change, improvise-over-drone, recital-three-pieces, g-and-f-scales, c-scale-hands-together] }

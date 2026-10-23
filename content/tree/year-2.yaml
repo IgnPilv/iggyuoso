@@ -1,0 +1,48 @@
+# Year 2 outline. Units list their topics per strand; nodes are written when the year is built.
+year: 2
+title: Two octaves, two hands
+level: ABRSM Grades 2–3, RCM Levels 2–3
+goal: >-
+  Play 2-octave scales hands together in keys up to 2 sharps or flats, read hands together outside
+  five-finger position, know interval quality and the three minor scales, harmonise with I–IV–V,
+  and play one piece from each of the four genres.
+units:
+  - id: two-octave-scales
+    title: Two-octave scales
+    outline:
+      technique: [2-octave scales hands together in G and F, then A minor and D minor]
+      theory: ["Interval quality: major and minor 2nds and 3rds"]
+      ear: [All major scale degrees after a cadence]
+  - id: reading-hands-together
+    title: Reading hands together
+    outline:
+      reading: [Hands together outside five-finger position, ties, two-note chords, up to 8 bars]
+      rhythm: [Sixteenth notes]
+  - id: minor-keys
+    title: Minor keys
+    checkpoint: y2-checkpoint-a
+    outline:
+      theory: [Natural, harmonic and melodic minor, relative keys]
+      technique: [A minor and D minor hands together]
+      ear: [Perfect vs imperfect cadence]
+  - id: inversions
+    title: Chord inversions
+    outline:
+      technique: [Triads and inversions, staccato]
+      theory: [Primary triads, first inversion, P4 and P5]
+      ear: ["Melodic m3, M3, P5, then P4"]
+  - id: harmonising
+    title: Harmonising a melody
+    checkpoint: y2-checkpoint-b
+    outline:
+      theory: [Stable and unstable degrees, perfect cadence, harmonise with I–V then I–IV–V]
+      rhythm: [Dotted quarter and eighth, triplets]
+      creativity: [Transpose a melody, I–IV–V accompaniment patterns]
+  - id: pedal-and-genres
+    title: Pedal and the four genres
+    checkpoint: y2-exit
+    outline:
+      technique: [Simple then legato pedal, chromatic scale 1 octave, scales in D, A, E minor and G minor]
+      rhythm: [Simple syncopation, 3/8]
+      ear: [Spot a change in 4 bars, 5–6-note playback]
+      repertoire: [One etude, one polyphonic piece, one large-form piece, one character piece]
