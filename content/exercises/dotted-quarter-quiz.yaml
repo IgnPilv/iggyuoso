@@ -1,0 +1,51 @@
+id: dotted-quarter-quiz
+title: Dotted notes quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A dot after a note adds...
+  choices: [Double its value, Half its value, One beat]
+  correct: 1
+  why: That is the rule for every dot.
+- ask: How long is a dotted quarter note?
+  choices: [2 beats, 1½ beats, 1 beat]
+  correct: 1
+  why: 1 + half of 1.
+- ask: How long is a dotted half note?
+  choices: [2½ beats, 3 beats, 4 beats]
+  correct: 1
+  why: 2 + half of 2.
+- ask: A dotted quarter is usually followed by...
+  choices: [An eighth note, A half rest, A whole note]
+  correct: 0
+  why: 1½ + ½ fills two beats exactly.
+- ask: How many beats is this?
+  choices: [Two, Three, One and a half]
+  correct: 0
+  why: 1½ + ½ = 2.
+  staff: C4:q. C4:e
+- ask: How many beats are in this bar?
+  choices: [Three, Five, Four]
+  correct: 2
+  why: 1½ + ½ + 2 = 4.
+  staff: C4:q. C4:e C4:h
+- ask: The rhythm of dotted quarter then eighth feels...
+  choices: [Even, Short-long, Long-short]
+  correct: 2
+  why: The long note comes first.
+- ask: When does the eighth after a dotted quarter on beat 1 come?
+  choices: [On the "and" of 2, On beat 2, On beat 3]
+  correct: 0
+  why: The dotted quarter lasts through 1 and 2; the eighth fills the second half of beat 2.
+- ask: Listen. Even or long-short?
+  choices: [Long-short, Even]
+  correct: 0
+  why: Each pair was a long note then a short one.
+  sound: C4:q. C4:e C4:q. C4:e C4:h
+- ask: Listen. Even or long-short?
+  choices: [Long-short, Even]
+  correct: 1
+  why: Every note was the same length.
+  sound: C4:q C4:q C4:q C4:q C4:h

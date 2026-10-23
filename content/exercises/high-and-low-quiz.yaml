@@ -1,0 +1,58 @@
+id: high-and-low-quiz
+title: High and low quiz
+kind: quiz
+shuffle: true
+pitchMatch: pitchClass
+reps: 2
+days: 2
+questions:
+- ask: Keys on the left of the piano sound...
+  choices: [Louder, Lower, Higher]
+  correct: 1
+  why: Left is low and right is high, on every piano.
+- ask: To play higher, move your hand to the...
+  choices: [Right, Front, Left]
+  correct: 0
+  why: Pitch goes up as you go right.
+- ask: Listen. Is the second note higher or lower?
+  choices: [Lower, Higher]
+  correct: 1
+  why: The second note was further to the right on the keyboard, so it sounded higher.
+  sound: C4:q G4:q
+- ask: Listen. Is the second note higher or lower?
+  choices: [Lower, Higher]
+  correct: 0
+  why: The second note came from further left, so it sounded lower.
+  sound: A4:q D4:q
+- ask: Listen. Is this note high or low?
+  choices: [Low, High]
+  correct: 1
+  why: 'That was near the right end of the piano: high, like a bird.'
+  sound: C7:h
+- ask: Listen. Is this note high or low?
+  choices: [Low, High]
+  correct: 0
+  why: 'That was near the left end of the piano: low, like a bear.'
+  sound: C1:h
+- ask: Black keys come in groups of...
+  choices: [One and two, Two and three, Three and four]
+  correct: 1
+  why: 'Every piano has the same pattern: a group of two, then a group of three, over and over.'
+- ask: How many black keys are in the small group?
+  choices: [One, Three, Two]
+  correct: 2
+  why: The small group has two black keys; the big group has three.
+- ask: How many black keys are in the big group?
+  choices: [Two, Four, Three]
+  correct: 2
+  why: The big group has three. There is never a group of four.
+- ask: After a group of three black keys comes a group of...
+  choices: [Three, Four, Two]
+  correct: 2
+  why: 'The groups take turns: two, three, two, three.'
+- ask: The word for how high or low a note sounds is...
+  choices: [Volume, Pitch, Beat]
+  correct: 1
+  why: Pitch is high or low. Volume is loud or soft, and the beat is the steady pulse.
+- {ask: Play the black key in the middle of a group of three., play: G#4, why: The middle of the three black keys.
+    Any group of three will do.}

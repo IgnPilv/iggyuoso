@@ -1,13 +1,24 @@
 id: tap-rhythm-echo
-title: "Tap it back"
+title: Tap it back
 unit: steady-hands
 skills: [rhythm-echo, pulse]
 steps:
-  - explain: |
-      Rhythm is the backbone of music. Here the notes don't matter, only **when** you play.
-      Listen to the rhythm, then tap it back on any key you like.
-      Count in your head the whole time.
-  - exercise: tap-four-four
-  - exercise: tap-three-four
-  - exercise: tap-with-rests
-recap: "Hear it, count it, tap it. Rests are part of the rhythm."
+- explain: |
+    Rhythm is the backbone of music. Here the notes don't matter, only **when** you play.
+    Listen to the rhythm, then tap it back on any key you like.
+  sound: C5:q C5:q C5:h | C5:q C5:q C5:h
+  terms: [rhythm]
+- explain: |
+    **Rhythm** is the pattern of long and short notes. The **beat** is the steady pulse under it.
+    Count the beat in your head the whole time, and fit the rhythm on top.
+  callout: |
+    Say it before you tap it: "ta ta ta-a".
+  check:
+    ask: The steady pulse under the music is the...
+    choices: [Beat, Rhythm, Melody]
+    correct: 0
+    why: The beat stays the same; the rhythm is the pattern of long and short notes on top of it.
+- {exercise: tap-four-four}
+- {exercise: tap-three-four}
+- {exercise: tap-with-rests}
+recap: Hear it, count it, tap it. Rests are part of the rhythm.

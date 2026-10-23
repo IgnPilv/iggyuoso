@@ -3,20 +3,40 @@ title: C, D and E
 unit: meet-the-keyboard
 skills: [note-names, keyboard-geography]
 steps:
-  - explain: |
-      Music uses only seven letters: **A B C D E F G**. After G it starts again at A,
-      over and over, all the way up the keyboard.
-  - explain: |
-      Find a group of **two** black keys. The white key just to the **left** of it is **C**.
-      Every group of two has a C next to it, so the piano has many Cs.
-  - exercise: find-all-c
-  - explain: |
-      **D** is the white key in the **middle** of the two black keys, like a dog in its kennel.
-      **E** is just to the **right** of the two black keys.
-  - exercise: find-all-d
-  - exercise: find-all-e
-  - exercise: name-c-d-e
-  - explain: |
-      Now make it automatic. The app names a key; find any one, as fast as you can.
-  - exercise: gen-find-c-d-e
+- explain: |
+    Music uses only **seven letters**: **A B C D E F G**.
+    After G it starts again at A, over and over, all the way up the keyboard.
+  terms: [note names, musical alphabet]
+  check:
+    ask: Which letter comes after G?
+    choices: [A, H, C]
+    correct: 0
+    why: The musical alphabet stops at G and starts again at A.
+- explain: |
+    Find a group of **two** black keys. The white key just to the **left** of it is **C**.
+    Every group of two has a C next to it, so the piano has many Cs.
+  keys: {notes: C3 C4 C5, labels: names}
+  sound: C3:q C4:q C5:q
+- explain: |
+    Listen: those three Cs are different heights, but they sound like the **same note**, only higher or lower.
+    Notes with the same name always sound alike. The distance from one C to the next is an **octave**.
+  sound: C4:h C5:h
+  terms: [octave]
+  check: {ask: Play any C., play: C4, why: C is the white key just left of a group of two black keys., pitchMatch: pitchClass}
+- {exercise: find-all-c}
+- explain: |
+    **D** is the white key in the **middle** of the two black keys, like a dog in its kennel.
+    **E** is just to the **right** of the two black keys.
+  keys: {notes: C4 D4 E4, labels: names}
+  callout: |
+    C D E: left of, between, right of the **two** black keys.
+- {exercise: find-all-d}
+- {exercise: find-all-e}
+- {exercise: name-c-d-e}
+- explain: |
+    Now make it automatic. The app names a key; find any one, as fast as you can.
+- {exercise: gen-find-c-d-e}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: c-d-e-quiz}
 recap: C is left of the two black keys, D is in the middle, E is on the right.

@@ -1,0 +1,51 @@
+id: minor-positions-quiz
+title: Minor positions quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Major and minor five-finger positions differ in their...
+  choices: [3rd note, 5th note, 1st note]
+  correct: 0
+  why: The 3rd is a semitone lower in minor.
+- ask: D major position is D E F♯ G A. D minor position is...
+  choices: [D E♭ F G A, D E F G A, D E F♯ G A♭]
+  correct: 1
+  why: Lower the 3rd, F♯, to F.
+- ask: C major position is C D E F G. C minor position is...
+  choices: [C D E♭ F G, C D E F♯ G, C D♭ E F G]
+  correct: 0
+  why: Lower the 3rd, E, to E♭.
+- ask: A minor position uses...
+  choices: [Two black keys, Only white keys, One black key]
+  correct: 1
+  why: 'A B C D E: all white.'
+- ask: The relative minor of C major is...
+  choices: [A minor, D minor, C minor]
+  correct: 0
+  why: A minor has the same notes as C major.
+- ask: Relative keys share...
+  choices: ['The same home, with different notes', Nothing, 'The same notes, with a different home']
+  correct: 2
+  why: C major and A minor use the same seven notes.
+- ask: Minor usually sounds...
+  choices: [Darker, Louder, Brighter]
+  correct: 0
+  why: The lower 3rd darkens the colour.
+- ask: Listen. Major or minor position?
+  choices: [Major, Minor]
+  correct: 1
+  why: 'The 3rd, F, was low: minor.'
+  sound: D4:q E4:q F4:q G4:q A4:h
+- ask: Listen. Major or minor position?
+  choices: [Minor, Major]
+  correct: 1
+  why: 'The 3rd, F♯, was high: major.'
+  sound: D4:q E4:q F#4:q G4:q A4:h
+- ask: In A minor position, right hand, which finger plays C?
+  choices: ['4', '3', '2']
+  correct: 1
+  why: A1 B2 C3.
+- {ask: 'Play D minor position, going up from the D above middle C.', play: D4 E4 F4 G4 A4, why: 'D E F G A: all
+    white keys.'}

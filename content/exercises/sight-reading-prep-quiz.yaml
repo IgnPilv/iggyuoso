@@ -1,0 +1,64 @@
+id: sight-reading-prep-quiz
+title: Before you play quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: What key is this in?
+  choices: [F major, C major, G major]
+  correct: 2
+  why: 'One sharp (F♯) in the key signature: G major.'
+  staff: G4:q B4:q D5:q G4:q
+  clef: treble
+  key: G
+- ask: What key is this in?
+  choices: [C major, F major, G major]
+  correct: 1
+  why: 'One flat (B♭) in the key signature: F major.'
+  staff: F4:q A4:q C5:q F4:q
+  clef: treble
+  key: F
+- ask: What key is this in?
+  choices: [C major, G major, F major]
+  correct: 0
+  why: 'No sharps or flats, and it starts and ends on C: C major.'
+  staff: C4:q E4:q G4:q C4:q
+  clef: treble
+- ask: What is the first note?
+  choices: [A, F, G]
+  correct: 2
+  why: 'Second line of the treble staff: G.'
+  staff: G4:q B4:q A4:q G4:q
+  clef: treble
+  key: G
+- ask: What is the first note?
+  choices: [C, E, D]
+  correct: 2
+  why: 'Hanging under the bottom line: D.'
+  staff: D4:q F4:q E4:q D4:q
+  clef: treble
+- ask: What is the first note?
+  choices: [F, G, E]
+  correct: 0
+  why: The F line, between the bass clef's dots.
+  staff: F3:q A3:q G3:q F3:q
+  clef: bass
+- ask: Before sight-reading, check...
+  choices: ['Nothing: just start', 'Key, time signature, first note, tricky spots', Only the last note]
+  correct: 1
+  why: Ten seconds of looking saves a lot of stopping.
+- ask: You play a wrong note while sight-reading. You should...
+  choices: [Stop and fix it, Keep going in time, Start again from the top]
+  correct: 1
+  why: Keeping the beat matters most; stops are what a listener notices.
+- ask: While playing, your eyes should be...
+  choices: [On your hands, A little ahead of your fingers, On the note you are playing]
+  correct: 1
+  why: Reading ahead gives you time to get ready.
+- ask: How many beats per bar here?
+  choices: [Four, Three, Two]
+  correct: 1
+  why: 'Each bar holds three beats: 3/4.'
+  staff: C4:q E4:q G4:q | C5:h.
+  clef: treble

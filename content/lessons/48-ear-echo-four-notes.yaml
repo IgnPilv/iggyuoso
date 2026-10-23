@@ -1,10 +1,22 @@
 id: ear-echo-four-notes
-title: "Echo four notes"
+title: Echo four notes
 unit: year-1-recital
 skills: [playing-by-ear, melodic-memory]
 steps:
-  - explain: |
-      Longer tunes are easier to remember in **chunks**. Hear four notes as two pairs, or notice
-      the shape: up then down? A skip then steps? Your right hand is in C position, covering C to G.
-  - exercise: ear-echo-four
-recap: "Hear tunes in chunks and shapes, not single notes."
+- explain: |
+    Longer tunes are easier to remember in **chunks**. Hear four notes as two pairs, or notice
+    the shape: up then down? A skip then steps?
+  sound: C4:q E4:q D4:q C4:q
+  terms: [chunking, contour]
+- explain: |
+    The shape of a tune, its ups and downs, is called its **contour**. Remember the contour first,
+    then fit the exact notes to it. Your right hand is in C position, covering C to G.
+  keys: {notes: C4 D4 E4 F4 G4, labels: names}
+  check:
+    ask: Listen again. The shape was...
+    choices: ['Skip up, then steps down', Steps up all the way, Down then up]
+    correct: 0
+    why: 'C up to E (a skip), then D, C: stepping down.'
+  sound: C4:q E4:q D4:q C4:q
+- {exercise: ear-echo-four}
+recap: Hear tunes in chunks and shapes, not single notes.

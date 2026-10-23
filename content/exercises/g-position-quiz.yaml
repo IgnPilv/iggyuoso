@@ -1,0 +1,57 @@
+id: g-position-quiz
+title: G position quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: In G position, the right thumb plays...
+  choices: [The G above middle C, Middle C, The G below middle C]
+  correct: 0
+  why: The right hand moves up so the thumb lands on G4.
+- ask: Which five notes does each hand cover in G position?
+  choices: [G A B C D, G A B C# D, C D E F G]
+  correct: 0
+  why: Five white keys from G.
+- ask: In G position, which right-hand finger plays D?
+  choices: ['5', '3', '4']
+  correct: 0
+  why: G1 A2 B3 C4 D5.
+- ask: In G position, which left-hand finger plays B?
+  choices: ['4', '2', '3']
+  correct: 2
+  why: Left hand G5 A4 B3 C2 D1.
+- ask: In G position, the left thumb plays...
+  choices: [G, Middle C, The D above middle C]
+  correct: 2
+  why: The left hand covers G3 to D4, so its thumb is on D.
+- ask: Moving a tune to a new starting note with the same shape is called...
+  choices: [Transposing, Improvising, Legato]
+  correct: 0
+  why: Same shape, new place.
+- ask: Which note is this?
+  choices: [G, A, F]
+  correct: 0
+  why: The second line, the G line.
+  staff: G4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [A, C, B]
+  correct: 2
+  why: The middle line of the treble staff is B.
+  staff: B4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [C, D, E]
+  correct: 1
+  why: The fourth line of the treble staff is D.
+  staff: D5:w
+  clef: treble
+- ask: Which note is this?
+  choices: [G, F, A]
+  correct: 0
+  why: The top space of the bass staff is G.
+  staff: G3:w
+  clef: bass
+- {ask: 'Play these notes, right hand in G position.', play: G4 B4 A4 C5 D5, why: 'G, skip up to B, step down to
+    A, skip up to C, step up to D.', staff: 'G4:q B4:q A4:q C5:q | D5:w', clef: treble}

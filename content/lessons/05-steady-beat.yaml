@@ -3,17 +3,36 @@ title: Steady beat
 unit: meet-the-keyboard
 skills: [pulse, quarter-note]
 steps:
-  - explain: |
-      Music has a **beat**, like a heartbeat or a clock ticking. It stays steady:
-      not faster, not slower. You can hear it in the metronome clicks.
-  - explain: |
-      A **quarter note** lasts **one beat**. It looks like a filled-in dot with a stem.
-      Count it "1, 2, 3, 4" or say "ta, ta, ta, ta".
-  - explain: |
-      The app counts in first ("1, 2, 3, 4"), then you play. Play any **C** on every click.
-  - exercise: quarter-beats-rh
-  - exercise: quarter-beats-lh
-  - explain: |
-      A new rhythm every time. Read it, then tap it with the click.
-  - exercise: gen-rhythm-quarters-halves
+- explain: |
+    Music has a **beat**, like a heartbeat or a clock ticking. It stays steady: not faster, not slower.
+    Listen to the clicks and tap your foot with them.
+  sound: C5:q C5:q C5:q C5:q C5:q C5:q C5:q C5:q
+  terms: [beat, pulse, tempo]
+- explain: |
+    How fast the beat goes is the **tempo**. It is counted in beats per minute: 60 is one beat a second,
+    120 is two. A slow tempo is still steady; it just has more space between the beats.
+  check:
+    ask: At a tempo of 60, how many beats are there in a second?
+    choices: [One, Two, Sixty]
+    correct: 0
+    why: '60 beats per minute is 60 beats in 60 seconds: one a second.'
+- explain: |
+    A **quarter note** lasts **one beat**. It looks like a filled-in dot with a stem.
+    Count it "1, 2, 3, 4" or say "ta, ta, ta, ta".
+  staff: {notes: 'C4:q C4:q C4:q C4:q'}
+  sound: C4:q C4:q C4:q C4:q
+  terms: [quarter note, ta]
+- explain: |
+    The app counts in first ("1, 2, 3, 4"), then you play. Play any **C** on every click.
+    Don't rush to the next note: wait for the click.
+  callout: |
+    Steady beats beat fast beats. Rushing is the most common habit to fix.
+- {exercise: quarter-beats-rh}
+- {exercise: quarter-beats-lh}
+- explain: |
+    A new rhythm every time. Read it, then tap it with the click.
+- {exercise: gen-rhythm-quarters-halves}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: steady-beat-quiz}
 recap: The beat stays steady. A quarter note is one beat.

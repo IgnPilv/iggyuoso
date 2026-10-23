@@ -1,16 +1,18 @@
 id: songbook-3
-title: "Songbook: tunes with chords"
+title: 'Songbook: tunes with chords'
 unit: first-chords
 skills: [repertoire, chords]
 steps:
-  - explain: |
-      Now the left hand plays chords under the tune, like a pianist accompanying a singer. You
-      only need two: **C** (C E G) and **G7** (B F G).
-
-      **London Bridge** is an English nursery rhyme, centuries old.
-  - exercise: london-bridge-chords
-  - explain: |
-      You know **Au clair de la lune** already. Here the chord sometimes changes halfway through
-      a bar, so the left hand has to move while the right hand keeps singing.
-  - exercise: au-clair-chords
-recap: "Two chords, many songs. Keep the left hand quieter than the tune."
+- explain: |
+    Now the left hand plays chords under the tune, like a pianist accompanying a singer. You
+    only need two: **C** (C E G) and **G7** (B F G).
+  keys: {notes: C3 E3 G3, labels: names}
+  sound: C3+E3+G3:h B2+F3+G3:h C3+E3+G3:h
+- explain: |
+    **London Bridge** is an English nursery rhyme, centuries old.
+- {exercise: london-bridge-chords}
+- explain: |
+    You know **Au clair de la lune** already. Here the chord sometimes changes halfway through
+    a bar, so the left hand has to move while the right hand keeps singing.
+- {exercise: au-clair-chords}
+recap: Two chords, many songs. Keep the left hand quieter than the tune.

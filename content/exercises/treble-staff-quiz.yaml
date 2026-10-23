@@ -1,0 +1,60 @@
+id: treble-staff-quiz
+title: Treble staff quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: How many lines does a staff have?
+  choices: [Four, Five, Six]
+  correct: 1
+  why: Five lines with four spaces between them.
+- ask: How many spaces does a staff have?
+  choices: [Five, Four, Three]
+  correct: 1
+  why: Five lines leave four spaces between them.
+- ask: The treble clef is used mostly for the...
+  choices: [Right hand, Pedal, Left hand]
+  correct: 0
+  why: Treble means high; the right hand plays the higher part.
+- ask: A short extra line above or below the staff is a...
+  choices: [Ledger line, Bar line, Tie]
+  correct: 0
+  why: Ledger lines stretch the staff for notes that don't fit on it, like middle C.
+- ask: Which note is this?
+  choices: [C, E, D]
+  correct: 0
+  why: A note on the ledger line below the treble staff is middle C.
+  staff: C4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [C, D, E]
+  correct: 1
+  why: D hangs just under the bottom line, one step above middle C.
+  staff: D4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [E, F, D]
+  correct: 0
+  why: E sits on the bottom line of the treble staff.
+  staff: E4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [G, A, F]
+  correct: 0
+  why: G is on the second line, the line the treble clef curls around.
+  staff: G4:w
+  clef: treble
+- ask: The higher a note sits on the staff, the...
+  choices: [Louder it is, Higher it sounds, Longer it lasts]
+  correct: 1
+  why: Up on the staff means up in pitch, to the right on the keyboard.
+- ask: 'Two notes: one on the bottom line, one in the space just above. The second is...'
+  choices: [One step higher, Two steps higher, The same note]
+  correct: 0
+  why: 'Line to the next space is the next letter up: E to F.'
+- {ask: Play this note., play: C4, why: 'Ledger line below the treble staff: middle C.', staff: 'C4:w', clef: treble}
+- {ask: Play this note., play: E4, why: 'Bottom line of the treble staff: the E above middle C.', staff: 'E4:w',
+  clef: treble}
+- {ask: Play these notes., play: C4 D4 E4, why: 'Ledger line, below the bottom line, on the bottom line: C, D, E
+    going up from middle C.', staff: 'C4:q D4:q E4:h', clef: treble}

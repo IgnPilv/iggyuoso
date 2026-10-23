@@ -1,13 +1,24 @@
 id: ear-major-minor
-title: "Major and minor"
+title: Major and minor
 unit: two-hands-at-once
 skills: [listening, chord-quality]
 steps:
-  - explain: |
-      Most music has a **mood**. **Major** chords sound bright and settled. **Minor** chords
-      sound darker, softer or sadder. People often say "happy" and "sad", though it's more
-      subtle than that.
-
-      Don't think too hard. Listen to the colour and trust your first feeling.
-  - exercise: ear-major-minor-chords
-recap: "Major = bright. Minor = darker. Trust your first impression."
+- explain: |
+    Most music has a **mood**. Listen to two chords: the first is **major**, the second **minor**.
+  sound: C4+E4+G4:h C4+Eb4+G4:h
+  terms: [major, minor, chord]
+- explain: |
+    **Major** chords sound bright and settled. **Minor** chords sound darker, softer or sadder.
+    People often say "happy" and "sad", though it's more subtle than that.
+    Only **one note** is different: the middle one is a semitone lower in minor.
+  keys: {notes: C4 E4 G4, labels: names}
+  check:
+    ask: Listen. Major or minor?
+    choices: [Major, Minor]
+    correct: 1
+    why: 'The middle note was lowered: the darker colour of minor.'
+  sound: A3+C4+E4:h
+- explain: |
+    Don't think too hard. Listen to the colour and trust your first feeling.
+- {exercise: ear-major-minor-chords}
+recap: Major = bright. Minor = darker. Trust your first impression.

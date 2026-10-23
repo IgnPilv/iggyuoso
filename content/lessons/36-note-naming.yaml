@@ -1,17 +1,22 @@
 id: note-naming
-title: "Note naming (side quest)"
+title: Note naming (side quest)
 unit: first-chords
 skills: [absolute-pitch, side-quest]
 steps:
-  - explain: |
-      This is an optional side quest. A few people can name any note without a reference:
-      that's called **perfect pitch**. Studies show some adults can learn a lot of it with many short
-      sessions, though only a few learn all twelve notes. It never blocks your path, so treat it as a game.
-
-      Start with two very different notes: C and F sharp. Try to remember each one's colour.
-  - exercise: note-naming-two
-  - exercise: note-naming-three
-  - explain: |
-      Speed naming: two octaves around middle C, both clefs.
-  - exercise: gen-name-notes-grand
-recap: "Side quest: name notes with no reference. Add one new note at a time."
+- explain: |
+    This is an optional side quest. A few people can name any note without a reference:
+    that's called **perfect pitch** (or absolute pitch).
+  terms: [perfect pitch, relative pitch]
+- explain: |
+    Studies show some adults can learn a lot of it with many short sessions, though only a few learn all twelve notes.
+    It never blocks your path, so treat it as a game. What every musician needs is **relative pitch**:
+    hearing how notes relate to each other, which the main ear lessons train.
+- explain: |
+    Start with two very different notes: C and F sharp. Try to remember each one's colour.
+  sound: C4:h F#4:h C4:h F#4:h
+- {exercise: note-naming-two}
+- {exercise: note-naming-three}
+- explain: |
+    Speed naming: two octaves around middle C, both clefs.
+- {exercise: gen-name-notes-grand}
+recap: 'Side quest: name notes with no reference. Add one new note at a time.'

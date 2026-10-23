@@ -1,0 +1,49 @@
+id: articulation-quiz
+title: Detached and smooth quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Legato means...
+  choices: ['Smooth, no gaps', Detached, Very loud]
+  correct: 0
+  why: 'Legato means bound together: each note joins the next.'
+- ask: Non legato means...
+  choices: [Slow, Smooth, 'Detached, with small gaps']
+  correct: 2
+  why: 'Non legato is not joined: lift before the next note.'
+- ask: Listen. Smooth or detached?
+  choices: [Detached, Smooth]
+  correct: 0
+  why: There were small silences between the notes.
+  sound: C4:e r:e E4:e r:e G4:e r:e E4:e r:e C4:h
+- ask: Listen. Smooth or detached?
+  choices: [Detached, Smooth]
+  correct: 1
+  why: Each note joined the next with no gap.
+  sound: C4:q E4:q G4:q E4:q C4:h
+- ask: To play legato, a finger lets go of its key...
+  choices: [Just as the next key goes down, Long after the next key, Before the next key]
+  correct: 0
+  why: 'Like walking: one foot lifts as the other lands.'
+- ask: A curved line joining several notes is a...
+  choices: [Bar line, Ledger line, Slur]
+  correct: 2
+  why: A slur means play those notes legato.
+- ask: How notes are started and joined is called...
+  choices: [Articulation, Tempo, Pitch]
+  correct: 0
+  why: Articulation is about how notes connect, not which notes or how fast.
+- ask: In detached playing, the sound of each note comes from...
+  choices: [Pushing hard with the finger, Arm weight dropping into the key, Hitting from high up]
+  correct: 1
+  why: 'Let the arm''s weight fall into the key, then float up: relaxed and even.'
+- ask: Which do music schools usually teach first?
+  choices: [Detached, Legato]
+  correct: 0
+  why: Detached teaches arm weight and a free wrist before the harder hand-over of legato.
+- ask: Playing legato, you hear two notes sounding together for a moment. You are...
+  choices: [Lifting too early, Playing perfectly, Holding the old key too long]
+  correct: 2
+  why: Lift the old finger as the new one lands, not after.

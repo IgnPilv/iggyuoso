@@ -1,15 +1,29 @@
 id: pentatonic-improv
-title: "Black-key improvising"
+title: Black-key improvising
 unit: two-hands-at-once
 skills: [improvisation, pentatonic]
 steps:
-  - explain: |
-      The five black keys make a **pentatonic scale**: five notes that always sound good together.
-      Folk music all over the world uses it. Because nothing clashes, it's the perfect place to start
-      making up your own music.
-  - exercise: black-key-pentatonic
-  - explain: |
-      Now **improvise**: make up a tune on the spot. You only have to keep the rhythm; the notes
-      are yours. Try going up, then coming back down. There are no wrong notes here.
-  - exercise: pentatonic-rhythm-improv
-recap: "Black keys = pentatonic. No wrong notes, so make up your own tunes."
+- explain: |
+    The five black keys make a **pentatonic scale**: five notes that always sound good together.
+    *Penta* means five. Listen.
+  keys: {notes: C#4 D#4 F#4 G#4 A#4, labels: none}
+  sound: C#4:q D#4:q F#4:q G#4:q A#4:q C#5:h
+  terms: [pentatonic, scale]
+- explain: |
+    A **scale** is a set of notes in order, from a home note up to the same note an octave higher.
+    Folk music all over the world uses the pentatonic: Scottish, Chinese, West African, American blues.
+    Because no two notes are a semitone apart, nothing clashes.
+  check:
+    ask: Why does the black-key pentatonic never clash?
+    choices: [No two of its notes are a semitone apart, It is always played softly, It has seven notes]
+    correct: 0
+    why: Semitone neighbours rub against each other; the pentatonic leaves them out.
+- {exercise: black-key-pentatonic}
+- explain: |
+    Now **improvise**: make up a tune on the spot. You only have to keep the rhythm; the notes
+    are yours. Try going up, then coming back down. There are no wrong notes here.
+  terms: [improvise]
+  callout: |
+    A good tune often ends on the note it started on.
+- {exercise: pentatonic-rhythm-improv}
+recap: Black keys = pentatonic. No wrong notes, so make up your own tunes.

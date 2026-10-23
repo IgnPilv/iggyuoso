@@ -1,14 +1,32 @@
 id: hands-together-parallel
-title: "Both hands moving"
+title: Both hands moving
 unit: two-hands-at-once
 skills: [hands-together, parallel-motion, contrary-motion]
 steps:
-  - explain: |
-      Now both hands move together. In **parallel motion** they go the same way, but notice
-      the fingers are different: the right thumb starts while the left little finger starts.
-  - exercise: parallel-c-position
-  - explain: |
-      In **contrary motion** the hands move away from each other like a mirror. Here the
-      fingers match: thumbs together, then 2 and 2, and so on. Many people find this one easier.
-  - exercise: contrary-c
-recap: "Parallel = same direction, different fingers. Contrary = mirror image, same fingers."
+- explain: |
+    Now both hands move together. In **parallel motion** they go the same way, the same distance,
+    an octave apart.
+  staff: {notes: 'C4:q D4:q E4:q F4:q | G4:w'}
+  sound: C3+C4:q D3+D4:q E3+E4:q F3+F4:q G3+G4:w
+  terms: [parallel motion]
+- explain: |
+    Notice the fingers are **different**: the right thumb starts while the left little finger starts.
+    Your brain has to send two different finger numbers at once, which is why it feels strange at first.
+  callout: |
+    Parallel: same notes, **different** fingers (RH 1 with LH 5).
+  check:
+    ask: Parallel motion in C position, both hands play E. Which fingers?
+    choices: [RH 3 and LH 3, RH 3 and LH 1, RH 1 and LH 5]
+    correct: 0
+    why: E is the middle of the five, so it is finger 3 in both hands.
+- {exercise: parallel-c-position}
+- explain: |
+    In **contrary motion** the hands move away from each other like a mirror. Here the
+    fingers **match**: thumbs together, then 2 and 2, and so on. Many people find this one easier.
+  sound: C4:q D4+B3:q E4+A3:q F4+G3:q G4+F3:w
+  terms: [contrary motion, mirror]
+- {exercise: contrary-c}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: hands-together-quiz}
+recap: Parallel = same direction, different fingers. Contrary = mirror image, same fingers.

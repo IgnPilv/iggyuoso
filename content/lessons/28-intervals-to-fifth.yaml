@@ -1,16 +1,41 @@
 id: intervals-to-fifth
-title: "Intervals up to the 5th"
+title: Intervals up to the 5th
 unit: first-chords
 skills: [intervals]
 steps:
-  - explain: |
-      Count an interval by its letters, **including both ends**. C to G: C D E F G = 5 letters,
-      so it's a **5th**. C up to the next C is 8 letters: an **octave**.
-
-      On the staff: 2nds and 4ths go line to space; 3rds and 5ths go line to line or space to space.
-  - exercise: name-the-interval
-  - exercise: play-the-interval
-  - explain: |
-      Read intervals at a glance: line to space is a 2nd, line to line a 3rd, and so on.
-  - exercise: gen-intervals-to-fifth
-recap: "Count the letters including both ends. Odd intervals stay on lines or on spaces."
+- explain: |
+    You know steps (2nds) and skips (3rds). Intervals keep growing: 4th, 5th, all the way to the **octave** (8th).
+    Listen to C with each note above it.
+  sound: C4+D4:h C4+E4:h C4+F4:h C4+G4:h C4+C5:h
+  terms: [interval, 4th, 5th, octave]
+- explain: |
+    Count an interval by its letters, **including both ends**. C to G: C D E F G = 5 letters,
+    so it's a **5th**. C up to the next C is 8 letters: an **octave**.
+  keys: {notes: C4 D4 E4 F4 G4, labels: names}
+  check:
+    ask: D up to G is a...
+    choices: [3rd, 4th, 5th]
+    correct: 1
+    why: 'D E F G: four letters, counting both ends.'
+- explain: |
+    On the staff there's a shortcut. **Even** intervals (2nds, 4ths) go **line to space** or space to line.
+    **Odd** intervals (3rds, 5ths) stay **line to line** or **space to space**.
+  staff: {notes: 'E4:h A4:h | E4:h B4:h', labels: names}
+  callout: |
+    Odd = same kind (lines or spaces). Even = one of each.
+  check:
+    ask: Both notes are on lines, with one line between them. The interval is a...
+    choices: [4th, 3rd, 5th]
+    correct: 2
+    why: 'Line, skip a line, line: E to B, five letters. Odd interval, same kind of place.'
+    staff: {notes: 'E4:h B4:h'}
+- explain: |
+    Intervals sound different too. A 2nd rubs, a 3rd is sweet, a 5th is open and hollow, an octave
+    sounds almost like one note.
+  sound: C4+D4:h C4+E4:h C4+G4:h C4+C5:h
+- {exercise: name-the-interval}
+- {exercise: play-the-interval}
+- explain: |
+    Read intervals at a glance: line to space is a 2nd, line to line a 3rd, and so on.
+- {exercise: gen-intervals-to-fifth}
+recap: Count the letters including both ends. Odd intervals stay on lines or on spaces.

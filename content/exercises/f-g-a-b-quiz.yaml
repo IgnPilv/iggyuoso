@@ -1,0 +1,45 @@
+id: f-g-a-b-quiz
+title: White keys quiz
+kind: quiz
+shuffle: true
+pitchMatch: pitchClass
+reps: 2
+days: 2
+questions:
+- ask: F is just left of a group of...
+  choices: [White keys only, Two black keys, Three black keys]
+  correct: 2
+  why: F is left of the three; C is left of the two.
+- ask: Which note comes after F?
+  choices: [E, G, A]
+  correct: 1
+  why: 'The letters go up in order: F, G, A, B.'
+- ask: Which note comes after B?
+  choices: [C, H, A]
+  correct: 0
+  why: After B you have used A to G, so the next one is C again.
+- ask: Which note comes before C?
+  choices: [D, B, A]
+  correct: 1
+  why: Going down (left) from C you meet B.
+- ask: Which white key is between the 2nd and 3rd keys of a group of three black keys?
+  choices: [A, G, B]
+  correct: 0
+  why: G sits between the first two black keys, A between the last two.
+- ask: Which pair has no black key between them?
+  choices: [A and B, B and C, G and A]
+  correct: 1
+  why: E–F and B–C are the two pairs with nothing in between.
+- ask: Which pair has no black key between them?
+  choices: [D and E, F and G, E and F]
+  correct: 2
+  why: E–F and B–C are the two pairs with nothing in between.
+- ask: Going up from E, which white key comes next?
+  choices: [D, G, F]
+  correct: 2
+  why: E is right of the two black keys; the very next white key is F, left of the three.
+- {ask: Play any F., play: F4, why: F is just left of the three black keys.}
+- {ask: Play any G., play: G4, why: G sits between the first and second of the three black keys.}
+- {ask: Play any A., play: A4, why: A sits between the second and third of the three black keys.}
+- {ask: Play any B., play: B4, why: B is just right of the three black keys.}
+- {ask: 'Play F, G, A, B, going up.', play: F4 G4 A4 B4, why: 'Four white keys in a row, around one group of three.'}

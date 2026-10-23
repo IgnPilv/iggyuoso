@@ -1,13 +1,23 @@
 id: ear-degrees-1-5
-title: "Home and five"
+title: Home and five
 unit: first-chords
 skills: [scale-degrees, listening]
 steps:
-  - explain: |
-      Every key has a **home** note, called **1** (the tonic). It sounds finished and restful.
-      **5** (the dominant) sounds strong but open, like a question.
-
-      First you'll hear chords that set the key. Then one note. Play it back: home or 5? After
-      your answer, the note slides home so you can hear where it belongs.
-  - exercise: ear-degrees-one-five
-recap: "1 = home, at rest. 5 = strong but open. Hearing notes in a key is the core ear skill."
+- explain: |
+    Every key has a **home** note, called **1** (the tonic). It sounds finished and restful.
+    **5** (the dominant) sounds strong but open, like a question.
+  sound: C4+E4+G4:h F4+A4+C5:h G3+B3+D4:h C4+E4+G4:h | C4:h G4:h
+  terms: [tonic, dominant, scale degree]
+- explain: |
+    First you'll hear chords that set the key. Then one note. Play it back: home or 5? After
+    your answer, the note slides home so you can hear where it belongs.
+  callout: |
+    Sing the home note quietly before each answer: is this note it, or not?
+  check:
+    ask: Listen. Home (1) or 5?
+    choices: ['1', '5']
+    correct: 1
+    why: 'It was G in the key of C: strong, but not at rest.'
+  sound: C4+E4+G4:h G3+B3+D4:h C4+E4+G4:h | G4:w
+- {exercise: ear-degrees-one-five}
+recap: 1 = home, at rest. 5 = strong but open. Hearing notes in a key is the core ear skill.

@@ -3,18 +3,48 @@ title: Half and whole notes
 unit: meet-the-keyboard
 skills: [half-note, whole-note, bar-lines, time-signature]
 steps:
-  - explain: |
-      A **half note** is an empty dot with a stem. It lasts **two beats**: play on 1, hold through 2.
-      A **whole note** is an empty dot with no stem. It lasts **four beats**: play on 1, hold through 2, 3, 4.
-  - explain: |
-      Music is cut into **bars** (also called measures) by **bar lines**. The **4/4** at the start
-      means every bar holds four beats. A double bar line means the end.
-  - explain: |
-      Keep holding the key down for the whole length of the note. Let go right when the next one starts.
-  - exercise: long-notes-rh
-  - exercise: long-notes-lh
-  - exercise: two-keys-mixed-rh
-  - explain: |
-      Fresh rhythms with whole notes in. Count every beat of the long ones.
-  - exercise: gen-rhythm-with-wholes
+- explain: |
+    Some notes are longer than one beat. A **half note** is an **empty** dot with a stem.
+    It lasts **two beats**: play on 1, hold through 2. Say "ta-a".
+  staff: {notes: 'C4:h C4:h'}
+  sound: C4:h C4:h
+  terms: [half note, ta-a]
+- explain: |
+    A **whole note** is an empty dot with **no stem**. It lasts **four beats**: play on 1, hold through 2, 3, 4.
+    Say "ta-a-a-a".
+  staff: {notes: 'C4:w'}
+  sound: C4:w
+  check:
+    ask: How many beats is a whole note?
+    choices: [Two, Four, One]
+    correct: 1
+    why: Whole = four, half = two, quarter = one. Each is half of the one before.
+- explain: |
+    Each note is **half** of the one before: one whole = two halves = four quarters.
+  staff: {notes: 'C4:w | C4:h C4:h | C4:q C4:q C4:q C4:q'}
+  terms: [note values]
+- explain: |
+    Music is cut into **bars** (also called measures) by **bar lines**.
+    The **4/4** at the start is the **time signature**: the top 4 means every bar holds four beats,
+    the bottom 4 means the beat is a quarter note. A **double bar line** means the end.
+  staff: {notes: 'E4:q E4:q E4:h | D4:h D4:h | C4:w'}
+  terms: [bar, bar line, time signature, 4/4]
+  check:
+    ask: In 4/4, a half note and two quarter notes make...
+    choices: [One full bar, Half a bar, Two bars]
+    correct: 0
+    why: 2 + 1 + 1 = 4 beats, exactly one bar of 4/4.
+- explain: |
+    Keep holding the key down for the whole length of the note. Let go right when the next one starts.
+  callout: |
+    Count out loud while you hold: "1, 2, 3, 4". Lifting early is a habit the app reports.
+- {exercise: long-notes-rh}
+- {exercise: long-notes-lh}
+- {exercise: two-keys-mixed-rh}
+- explain: |
+    Fresh rhythms with whole notes in. Count every beat of the long ones.
+- {exercise: gen-rhythm-with-wholes}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: note-values-quiz}
 recap: Quarter = 1 beat, half = 2 beats, whole = 4 beats. In 4/4 each bar has four beats.

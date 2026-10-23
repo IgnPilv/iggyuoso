@@ -3,14 +3,37 @@ title: Middle C position
 unit: meet-the-keyboard
 skills: [middle-c, five-finger-position]
 steps:
-  - explain: |
-      **Middle C** is the C closest to the middle of the keyboard. On most pianos it is right in front of the brand name.
-      The app found yours during setup and lights it up.
-  - explain: |
-      Put **both thumbs** on middle C. Your **right** hand fingers sit on C D E F G going up.
-      Your **left** hand fingers sit on C B A G F going down.
-  - exercise: middle-c-walk-rh
-  - exercise: middle-c-walk-lh
-  - exercise: middle-c-steps-rh
-  - exercise: middle-c-steps-lh
-recap: Both thumbs share middle C. RH plays C D E F G with fingers 1 to 5; LH plays C B A G F with fingers 1 to 5.
+- explain: |
+    **Middle C** is the C closest to the middle of the keyboard. On most pianos it is right in front of the brand name.
+    The app found yours during setup and lights it up.
+  keys: {notes: C4, labels: names}
+  sound: C4:h
+  terms: [middle C]
+  check: {ask: Play middle C., play: C4, why: 'Middle C is the C nearest the middle, just left of the two black
+      keys there.'}
+- explain: |
+    A **five-finger position** puts one finger on each of five white keys next to each other.
+    You don't have to look for notes: each finger already sits on its own key.
+  terms: [five-finger position, position]
+- explain: |
+    Put **both thumbs** on middle C. Your **right** hand fingers sit on **C D E F G** going up.
+  keys: {notes: C4 D4 E4 F4 G4, labels: fingers, fingers: 1 2 3 4 5}
+  sound: C4:q D4:q E4:q F4:q G4:h
+- explain: |
+    Your **left** hand fingers sit on **C B A G F** going down: thumb on C, little finger on F.
+  keys: {notes: F3 G3 A3 B3 C4, labels: fingers, fingers: 5 4 3 2 1}
+  sound: C4:q B3:q A3:q G3:q F3:h
+  check:
+    ask: In middle C position, which note does the left hand's finger 3 play?
+    choices: [B, G, A]
+    correct: 2
+    why: 'Left hand going down from middle C: 1 = C, 2 = B, 3 = A.'
+- {exercise: middle-c-walk-rh}
+- {exercise: middle-c-walk-lh}
+- {exercise: middle-c-steps-rh}
+- {exercise: middle-c-steps-lh}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: middle-c-position-quiz}
+recap: Both thumbs share middle C. RH plays C D E F G with fingers 1 to 5; LH plays C B A G F with fingers 1 to
+  5.

@@ -1,15 +1,18 @@
 id: recital-three-pieces
-title: "Three contrasting pieces"
+title: Three contrasting pieces
 unit: year-1-recital
 skills: [repertoire, performance]
 steps:
-  - explain: |
-      A recital programme has **contrast**: different moods, keys and metres. Here are three:
-      Ode to Joy (C major, 4/4) with left-hand chords, a waltz in G (3/4), and a song in D minor.
-
-      To pass, play each at full tempo with the guide notes off. Perform it as if someone is listening:
-      start in time and don't stop for slips.
-  - exercise: recital-ode-to-joy
-  - exercise: recital-waltz-in-g
-  - exercise: recital-minor-song
-recap: "Contrast in mood, key and metre. Perform: keep going through slips."
+- explain: |
+    A recital programme has **contrast**: different moods, keys and metres. Here are three:
+    Ode to Joy (C major, 4/4) with left-hand chords, a waltz in G (3/4), and a song in D minor.
+  terms: [contrast, programme]
+- explain: |
+    To pass, play each at full tempo with the guide notes off. Perform it as if someone is listening:
+    start in time and don't stop for slips.
+  callout: |
+    Before each piece: breathe, hear the first bar in your head at the right tempo, then begin.
+- {exercise: recital-ode-to-joy}
+- {exercise: recital-waltz-in-g}
+- {exercise: recital-minor-song}
+recap: 'Contrast in mood, key and metre. Perform: keep going through slips.'

@@ -1,8 +1,56 @@
 id: key-of-f-quiz
-title: "Key of F quiz"
+title: Key of F quiz
 kind: quiz
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "The key signature of F major has one...", choices: [Sharp, Flat], correct: 1 }
-  - { ask: "Which note is flat in F major?", choices: [B, E, A], correct: 0 }
-  - { ask: "Play the fourth note of F position", play: "Bb4" }
+- ask: The key signature of F major has one...
+  choices: [Flat, Sharp]
+  correct: 0
+  why: 'F major needs B♭: one flat.'
+- ask: Which note is flat in F major?
+  choices: [B, A, E]
+  correct: 0
+  why: Every B becomes B♭.
+- ask: The flat in F major's key signature sits on...
+  choices: [The bottom line, The F line, The B line]
+  correct: 2
+  why: 'Signs in a key signature sit on the line or space of the note they change: the middle line, B.'
+- ask: In F position, the right thumb plays...
+  choices: [B♭, Middle C, The F above middle C]
+  correct: 2
+  why: F G A B♭ C, thumb on F.
+- ask: In F position, which finger plays a black key?
+  choices: ['3', '2', '4']
+  correct: 2
+  why: 'B♭ is the 4th note: finger 4.'
+- ask: What is the 4th note of the F major scale?
+  choices: [B♭, A, B]
+  correct: 0
+  why: 'F G A B♭: the 4th is B♭.'
+- ask: Which key has one sharp?
+  choices: [G major, C major, F major]
+  correct: 0
+  why: 'G major: F♯.'
+- ask: Which key has no sharps or flats?
+  choices: [F major, G major, C major]
+  correct: 2
+  why: C major uses only white keys.
+- ask: Which note is this, in F major?
+  choices: [A, B, B♭]
+  correct: 2
+  why: The middle line is B, and the key signature makes it B♭.
+  staff: B4:w
+  clef: treble
+  key: F
+- ask: Which note is this, in F major?
+  choices: [B♭, G, A]
+  correct: 2
+  why: The second space is A; only Bs change in F major.
+  staff: A4:w
+  clef: treble
+  key: F
+- {ask: Play the fourth note of F position., play: Bb4, why: 'F G A B♭: the black key under finger 4.'}
+- {ask: Play the F major scale up from the F above middle C., play: F4 G4 A4 Bb4 C5 D5 E5 F5, why: All white keys
+    except B♭.}

@@ -1,0 +1,50 @@
+id: rests-quiz
+title: Rests quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A rest means...
+  choices: ['Silence, but keep counting', Stop counting, Play softly]
+  correct: 0
+  why: The beat goes on through a rest; you just don't play.
+- ask: How long is a quarter rest?
+  choices: [One beat, Two beats, A whole bar]
+  correct: 0
+  why: 'It matches the quarter note: one beat.'
+- ask: How long is a half rest?
+  choices: [One beat, Two beats, Four beats]
+  correct: 1
+  why: 'It matches the half note: two beats.'
+- ask: A whole rest...
+  choices: [Is a zigzag, Hangs from a line, Sits on a line]
+  correct: 1
+  why: Whole rest hangs like a hole; half rest sits like a hat.
+- ask: A half rest...
+  choices: [Hangs from a line, Sits on a line, Has a stem]
+  correct: 1
+  why: Half rest sits like a hat.
+- ask: How many beats are in this bar?
+  choices: [Three, Two, Four]
+  correct: 2
+  why: 1 + 1 (rest) + 2 = 4. Rests count towards the bar.
+  staff: C4:q r:q C4:h
+- ask: How many notes do you play in this bar?
+  choices: [Four, Three, Two]
+  correct: 2
+  why: 'Two quarter notes and two quarter rests: you play twice.'
+  staff: C4:q r:q C4:q r:q
+- ask: When one hand rests while the other plays, the resting hand should...
+  choices: [Go to your lap, Keep playing quietly, 'Stay in position, ready']
+  correct: 2
+  why: Staying in position means it is ready to play on its next turn.
+- ask: Which takes a whole bar of 4/4?
+  choices: [A quarter rest, A half rest, A whole rest]
+  correct: 2
+  why: A whole rest is four beats of silence.
+- ask: Listen. On which beat is the silence?
+  choices: [Beat 4, Beat 2, Beat 1]
+  correct: 1
+  why: 'Play, (silence), play, play: the rest is on beat 2.'
+  sound: C4:q r:q C4:q C4:q

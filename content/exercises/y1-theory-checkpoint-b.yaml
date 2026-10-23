@@ -1,0 +1,79 @@
+id: y1-theory-checkpoint-b
+title: 'Checkpoint 2: theory'
+kind: quiz
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 2
+  why: 'E F G A: four letters.'
+  staff: E4:h A4:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 3
+  why: 'D E F G A: five letters.'
+  staff: D4:h A4:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 1
+  why: 'A B C: three letters.'
+  staff: A3:h C4:h
+  clef: bass
+- ask: Which chord is this?
+  choices: [C, F, G]
+  correct: 1
+  why: 'Root F: F A C.'
+  staff: F4+A4+C5:w
+  clef: treble
+- ask: Which notes make a G triad?
+  choices: [G C E, G B D, G A B]
+  correct: 1
+  why: Stacked 3rds from G.
+- ask: In the key of C, V is...
+  choices: [D, F, G]
+  correct: 2
+  why: C D E F G.
+- ask: G7 adds which note to a G triad?
+  choices: [F, A, E]
+  correct: 0
+  why: Another 3rd above D.
+- ask: One sharp in the key signature means...
+  choices: [F major, G major, D major]
+  correct: 1
+  why: 'F♯ only: G major.'
+- ask: One flat in the key signature means...
+  choices: [F major, G major, B♭ major]
+  correct: 0
+  why: 'B♭ only: F major.'
+- ask: Which note is this, in G major?
+  choices: [G, F, F♯]
+  correct: 2
+  why: Every F is F♯ in G.
+  staff: F4:w
+  clef: treble
+  key: G
+- ask: B to C is a...
+  choices: [Semitone, Tone]
+  correct: 0
+  why: No black key between them.
+- ask: Another name for D♭ is...
+  choices: [C♯, D♯, C♭]
+  correct: 0
+  why: The same black key, from C up or from D down.
+- ask: mf means...
+  choices: [Medium loud, Medium soft, Very loud]
+  correct: 0
+  why: Mezzo forte.
+- ask: Parallel motion means...
+  choices: [The hands move apart, Both hands move the same way]
+  correct: 1
+  why: Side by side, same direction.
+- ask: The five black keys make a...
+  choices: [Pentatonic scale, Major scale, Triad]
+  correct: 0
+  why: Penta = five.

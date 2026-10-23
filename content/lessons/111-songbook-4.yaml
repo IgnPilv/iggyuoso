@@ -1,15 +1,22 @@
 id: songbook-4
-title: "Songbook: a round for two hands"
+title: 'Songbook: a round for two hands'
 unit: scales-and-eighths
 skills: [repertoire, eighth-notes, hands-together]
 steps:
-  - explain: |
-      **Frère Jacques** again, now the whole song, with its quick eighth notes in bars 5 and 6.
-      Learn it in the right hand first.
-  - exercise: frere-jacques-rh
-  - explain: |
-      A **round** (or *canon*) is a tune that chases itself: a second voice starts the same melody
-      a little later. Here the left hand is the second voice, two bars behind and an octave lower.
-      Each hand must keep its own place, which is a real hands-together workout.
-  - exercise: frere-jacques-canon
-recap: "A canon: two hands, one tune, two bars apart."
+- explain: |
+    **Frère Jacques** again, now the whole song, with its quick eighth notes in bars 5 and 6.
+    Learn it in the right hand first.
+  sound: C4:q D4:q E4:q C4:q | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | E4:q F4:q G4:h
+- {exercise: frere-jacques-rh}
+- explain: |
+    A **round** (or *canon*) is a tune that chases itself: a second voice starts the same melody
+    a little later. Here the left hand is the second voice, two bars behind and an octave lower.
+    Each hand must keep its own place, which is a real hands-together workout.
+  terms: [round, canon, voice]
+  check:
+    ask: In a canon, the second voice plays...
+    choices: ['The same tune, starting later', A different tune, The tune backwards]
+    correct: 0
+    why: 'The tune chases itself: same melody, delayed.'
+- {exercise: frere-jacques-canon}
+recap: 'A canon: two hands, one tune, two bars apart.'

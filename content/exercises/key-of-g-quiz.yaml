@@ -1,9 +1,57 @@
 id: key-of-g-quiz
-title: "Key of G quiz"
+title: Key of G quiz
 kind: quiz
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "The key signature of G major has one...", choices: [Sharp, Flat], correct: 0 }
-  - { ask: "Which note is sharp in G major?", choices: [C, F, B], correct: 1 }
-  - { ask: "In G major, every F is played as...", choices: [F, F sharp, F flat], correct: 1 }
-  - { ask: "Play the note just below G in G major", play: "F#4" }
+- ask: The key signature of G major has one...
+  choices: [Flat, Sharp]
+  correct: 1
+  why: G major needs F♯, so one sharp.
+- ask: Which note is sharp in G major?
+  choices: [B, F, C]
+  correct: 1
+  why: Every F becomes F♯.
+- ask: In G major, every F is played as...
+  choices: [F sharp, F, F flat]
+  correct: 0
+  why: The key signature changes every F.
+- ask: The key signature is written...
+  choices: [At the start of every line, Over each note, Only at the end]
+  correct: 0
+  why: It sits right after the clef on each line, so you never forget it.
+- ask: Does the key signature F♯ also change the F an octave higher?
+  choices: ['Yes, every F', 'No, only that one line']
+  correct: 0
+  why: A key signature applies to that note name in every octave.
+- ask: What is the home note of G major?
+  choices: [C, F♯, G]
+  correct: 2
+  why: The key is named after its home note.
+- ask: What is the 7th note of the G major scale?
+  choices: [F, E, F♯]
+  correct: 2
+  why: 'G A B C D E F♯ G: the 7th is F♯.'
+- ask: Which note is this, in G major?
+  choices: [E, F, F♯]
+  correct: 2
+  why: The top line is F, and the key signature makes it F♯.
+  staff: F5:w
+  clef: treble
+  key: G
+- ask: Which note is this, in G major?
+  choices: [A, F♯, G]
+  correct: 2
+  why: The second line is G; only Fs change in G major.
+  staff: G4:w
+  clef: treble
+  key: G
+- ask: One sharp in the key signature means...
+  choices: [F major, G major, C major]
+  correct: 1
+  why: G major has exactly one sharp, F♯.
+- {ask: 'Play the note just below G, in G major.', play: F#4, why: 'In G major the note below G is F♯, the black
+    key.'}
+- {ask: Play the G major scale up from the G above middle C., play: G4 A4 B4 C5 D5 E5 F#5 G5, why: All white keys
+    except F♯.}

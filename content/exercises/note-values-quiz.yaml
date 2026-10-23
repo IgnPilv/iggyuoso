@@ -1,0 +1,59 @@
+id: note-values-quiz
+title: Note values quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: How many beats is this note?
+  choices: [Two, Four, One]
+  correct: 0
+  why: 'An empty dot with a stem is a half note: two beats.'
+  staff: C4:h
+- ask: How many beats is this note?
+  choices: [Three, Four, Two]
+  correct: 1
+  why: 'An empty dot with no stem is a whole note: four beats.'
+  staff: C4:w
+- ask: How many beats is this note?
+  choices: [One, Half, Two]
+  correct: 0
+  why: 'A filled dot with a stem is a quarter note: one beat.'
+  staff: C4:q
+- ask: How many half notes make a whole note?
+  choices: [Three, Four, Two]
+  correct: 2
+  why: 2 + 2 = 4 beats.
+- ask: How many quarter notes make a half note?
+  choices: [Two, Four, One]
+  correct: 0
+  why: 1 + 1 = 2 beats.
+- ask: How many quarter notes make a whole note?
+  choices: [Two, Eight, Four]
+  correct: 2
+  why: Four beats of one each.
+- ask: In 4/4, what does the top number tell you?
+  choices: [Play with finger 4, Four beats in every bar, Four bars in the piece]
+  correct: 1
+  why: The top number of a time signature counts the beats in each bar.
+- ask: The lines that cut music into bars are called...
+  choices: [Staff lines, Bar lines, Ledger lines]
+  correct: 1
+  why: Bar lines go up and down across the staff and mark where each bar ends.
+- ask: How many beats are in this bar?
+  choices: [Three, Five, Four]
+  correct: 2
+  why: 2 + 1 + 1 = 4. Every bar of 4/4 adds up to four.
+  staff: C4:h C4:q C4:q
+- ask: A double bar line means...
+  choices: [Repeat the bar, The end, Play louder]
+  correct: 1
+  why: Two lines (the last one thick) close the piece.
+- ask: You hold a half note for only one beat. What went wrong?
+  choices: [It was early, It was too loud, It was lifted too early]
+  correct: 2
+  why: A half note must be held for two beats. Lifting after one turns it into a quarter note.
+- ask: Which fills one bar of 4/4?
+  choices: [Three quarter notes, One whole note, One half note]
+  correct: 1
+  why: A whole note is four beats, exactly a 4/4 bar.

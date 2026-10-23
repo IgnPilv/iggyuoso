@@ -1,0 +1,81 @@
+id: y1-theory-checkpoint-a
+title: 'Checkpoint 1: theory'
+kind: quiz
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: Which note is this?
+  choices: [E, G, D]
+  correct: 0
+  why: Bottom line of the treble staff.
+  staff: E4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [A, B, F]
+  correct: 0
+  why: Top line of the bass staff.
+  staff: A3:w
+  clef: bass
+- ask: Which note is this?
+  choices: [C, D, E]
+  correct: 1
+  why: Just under the treble staff's bottom line.
+  staff: D4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [A, C, B]
+  correct: 2
+  why: Just above the bass staff's top line.
+  staff: B3:w
+  clef: bass
+- ask: Which white key is between the two black keys?
+  choices: [E, D, C]
+  correct: 1
+  why: C left, D between, E right.
+- ask: F is just left of...
+  choices: [The three black keys, The two black keys]
+  correct: 0
+  why: F G A B sit around the three.
+- ask: How many beats is a dotted half note?
+  choices: [Two, Three, Four]
+  correct: 1
+  why: 2 + half of 2 = 3.
+- ask: How many beats is a whole note?
+  choices: [Two, Three, Four]
+  correct: 2
+  why: Whole = 4, half = 2, quarter = 1.
+- ask: In 3/4, the top 3 means...
+  choices: [Play with finger 3, Three bars, Three beats in a bar]
+  correct: 2
+  why: The top number counts the beats in each bar.
+- ask: Step or skip?
+  choices: [Step, Skip]
+  correct: 1
+  why: 'Line to line: a skip (3rd).'
+  staff: G4:h B4:h
+  clef: treble
+- ask: Step or skip?
+  choices: [Skip, Step]
+  correct: 1
+  why: 'Line to the next space: a step (2nd).'
+  staff: A3:h G3:h
+  clef: bass
+- ask: A rest means...
+  choices: ['Silence, but keep counting', Stop counting]
+  correct: 0
+  why: Rests are beats too.
+- ask: Legato means...
+  choices: ['Smooth, no gaps', Detached]
+  correct: 0
+  why: Each note joins the next.
+- ask: 'Left hand in middle C position: which finger plays A?'
+  choices: ['3', '4', '2']
+  correct: 0
+  why: C1 B2 A3 G4 F5.
+- ask: How many beats are in this bar?
+  choices: [Three, Five, Four]
+  correct: 2
+  why: 1 + 1 + 2 = 4.
+  staff: C4:q r:q C4:h

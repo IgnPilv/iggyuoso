@@ -3,17 +3,40 @@ title: The bass staff
 unit: meet-the-keyboard
 skills: [staff, bass-clef, reading]
 steps:
-  - explain: |
-      The **bass clef** looks like a backwards C with two dots. It is used mostly for the **left** hand and the lower notes.
-  - explain: |
-      On the bass staff, **middle C** sits just **above** the staff on a ledger line.
-      **B** hangs just above the top line. **A** sits on the top line.
-  - exercise: read-c-b-a-bass
-  - exercise: read-c-b-a-bass-rhythm
-  - explain: |
-      Put the two staffs together and you have the **grand staff** that piano music uses:
-      treble on top for the right hand, bass below for the left. Middle C is in between, shared by both.
-  - explain: |
-      The same on the bass staff, from the C below middle C up to middle C.
-  - exercise: gen-read-bass-c-c
+- explain: |
+    The **bass clef** looks like a backwards C with two dots. It is used mostly for the **left** hand and the lower notes.
+    Its two dots sit either side of the fourth line, which is **F**, so it is also called the **F clef**.
+  staff: {notes: 'F3:w', clef: bass, labels: names}
+  terms: [bass clef, F clef]
+- explain: |
+    On the bass staff, **middle C** sits just **above** the staff on a ledger line.
+    **B** hangs just above the top line. **A** sits on the top line.
+  staff: {notes: 'C4:q B3:q A3:h', clef: bass, labels: names}
+  keys: {notes: A3 B3 C4, labels: names}
+  sound: C4:q B3:q A3:h
+  check:
+    ask: Which note sits on the top line of the bass staff?
+    choices: [A, B, C]
+    correct: 0
+    why: Middle C is on a ledger line above, B hangs over the top line, A sits on it.
+- {exercise: read-c-b-a-bass}
+- {exercise: read-c-b-a-bass-rhythm}
+- explain: |
+    Put the two staffs together and you have the **grand staff** that piano music uses:
+    treble on top for the right hand, bass below for the left, joined by a brace.
+    **Middle C** sits in between, shared by both: one ledger line below the treble staff, one above the bass staff.
+  terms: [grand staff, brace]
+  check:
+    ask: On the grand staff, which staff is usually for the left hand?
+    choices: [The top one (treble), The bottom one (bass)]
+    correct: 1
+    why: Treble on top for the right hand, bass below for the left.
+- explain: |
+    The same reading drill on the bass staff, from the C below middle C up to middle C.
+  callout: |
+    Landmarks: middle C on the ledger line above, A on the top line, F on the line between the clef's dots.
+- {exercise: gen-read-bass-c-c}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: bass-staff-quiz}
 recap: Bass clef is for the left hand. Middle C sits above the bass staff; B and A are just below it.

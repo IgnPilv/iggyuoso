@@ -1,16 +1,42 @@
 id: dynamics
-title: "Loud and soft"
+title: Loud and soft
 unit: two-hands-at-once
 skills: [dynamics, terms]
 steps:
-  - explain: |
-      **Dynamics** say how loud to play. The words are Italian, the language of early music printing.
-
-      - **p** (piano) = soft, **f** (forte) = loud
-      - **mp** (mezzo piano) = medium soft, **mf** (mezzo forte) = medium loud
-      - **<** crescendo = getting louder, **>** diminuendo = getting softer
-
-      Loud comes from more arm weight and a faster key, not from hitting harder.
-  - exercise: dynamics-quiz
-  - exercise: echo-loud-soft
-recap: "p soft, mp medium soft, mf medium loud, f loud. Crescendo grows, diminuendo fades."
+- explain: |
+    **Dynamics** say how loud to play. Listen: the same tune softly, then loudly.
+  sound: C4:q E4:q G4:h | C4:q E4:q G4:h
+  terms: [dynamics]
+- explain: |
+    The words are Italian, the language of early music printing.
+    **p** (piano) = soft, **f** (forte) = loud. The piano's full name, *pianoforte*, means soft-loud:
+    it was the first keyboard that could play both.
+  terms: [piano (p), forte (f)]
+  check:
+    ask: f stands for forte. It means...
+    choices: [Soft, Loud, Fast]
+    correct: 1
+    why: 'Forte is Italian for strong: loud.'
+- explain: |
+    Between them: **mp** (mezzo piano) = medium soft, **mf** (mezzo forte) = medium loud.
+    *Mezzo* means half. From softest to loudest: **p, mp, mf, f**.
+  terms: [mezzo piano (mp), mezzo forte (mf)]
+  callout: |
+    p → mp → mf → f: soft to loud.
+- explain: |
+    A long opening sign **<** is a **crescendo**: getting gradually louder.
+    A closing sign **>** is a **diminuendo** (or decrescendo): getting gradually softer.
+  terms: [crescendo, diminuendo]
+  check:
+    ask: < means...
+    choices: [Getting louder, Getting softer, Getting faster]
+    correct: 0
+    why: 'The sign opens up, like the sound growing: crescendo.'
+- explain: |
+    Loud comes from more arm weight and a faster key, not from hitting harder.
+    Soft comes from a slow, gentle key, with the fingertip close to the key before you play.
+  callout: |
+    Speed of the key makes the volume, not force.
+- {exercise: dynamics-quiz}
+- {exercise: echo-loud-soft}
+recap: p soft, mp medium soft, mf medium loud, f loud. Crescendo grows, diminuendo fades.

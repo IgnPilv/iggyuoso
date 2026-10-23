@@ -1,0 +1,44 @@
+id: middle-c-position-quiz
+title: Middle C position quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Middle C is...
+  choices: [The lowest C, The C closest to the middle of the keyboard, Any C]
+  correct: 1
+  why: There are many Cs; middle C is the one nearest the middle, often in front of the brand name.
+- ask: In middle C position, which fingers share middle C?
+  choices: [Both thumbs, Right thumb and left finger 5, Both little fingers]
+  correct: 0
+  why: Both thumbs sit on middle C; the hands spread out from there.
+- ask: 'Right hand in middle C position: which note does finger 5 play?'
+  choices: [G, F, A]
+  correct: 0
+  why: C D E F G with fingers 1 2 3 4 5, so 5 plays G.
+- ask: 'Right hand in middle C position: which note does finger 3 play?'
+  choices: [F, D, E]
+  correct: 2
+  why: 1 = C, 2 = D, 3 = E.
+- ask: 'Left hand in middle C position: which note does finger 5 play?'
+  choices: [E, G, F]
+  correct: 2
+  why: C B A G F with fingers 1 2 3 4 5, so 5 plays F.
+- ask: 'Left hand in middle C position: which note does finger 2 play?'
+  choices: [A, D, B]
+  correct: 2
+  why: Going down from middle C, finger 2 is on B.
+- ask: 'Right hand in middle C position: which finger plays F?'
+  choices: ['5', '4', '3']
+  correct: 1
+  why: C1 D2 E3 F4 G5.
+- ask: 'Left hand in middle C position: which finger plays G?'
+  choices: ['3', '4', '2']
+  correct: 1
+  why: C1 B2 A3 G4 F5.
+- {ask: Play middle C., play: C4, why: The C nearest the middle of the piano.}
+- {ask: 'Right hand: play the five notes of middle C position, going up.', play: C4 D4 E4 F4 G4, why: 'Fingers 1
+    to 5 on C D E F G, starting on middle C.'}
+- {ask: 'Left hand: play the five notes of middle C position, going down from middle C.', play: C4 B3 A3 G3 F3,
+  why: 'Thumb on middle C, then B A G F below it.'}

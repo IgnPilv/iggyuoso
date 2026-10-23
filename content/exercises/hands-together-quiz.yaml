@@ -1,0 +1,54 @@
+id: hands-together-quiz
+title: Two hands quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: In C position, where does the left hand's finger 5 go?
+  choices: [Middle C, The G below middle C, The C below middle C]
+  correct: 2
+  why: The left hand moves down so its little finger sits on the C an octave below middle C.
+- ask: In C position, which note does the left thumb play?
+  choices: [F, G, C]
+  correct: 1
+  why: 'Left hand 5 4 3 2 1 on C D E F G: the thumb is on G.'
+- ask: Both hands move the same way. This is...
+  choices: [Oblique motion, Parallel motion, Contrary motion]
+  correct: 1
+  why: Parallel lines run side by side, the same way.
+- ask: The hands move away from each other like a mirror. This is...
+  choices: [Contrary motion, Parallel motion, A slur]
+  correct: 0
+  why: 'Contrary means opposite: one goes up, the other down.'
+- ask: In which motion do both hands use the same finger numbers?
+  choices: [Parallel, Contrary]
+  correct: 1
+  why: In a mirror, thumbs move with thumbs and 2s with 2s.
+- ask: 'Parallel motion in C position: the right hand plays C with 1. Which left finger plays its C?'
+  choices: ['2', '1', '5']
+  correct: 2
+  why: 'In parallel motion the fingers differ: RH 1 goes with LH 5.'
+- ask: 'Parallel motion in C position: the right hand plays G with 5. Which left finger plays its G?'
+  choices: ['1', '5', '4']
+  correct: 0
+  why: 'RH 5 goes with LH 1: the opposite ends of the hands.'
+- ask: One hand holds a note while the other moves. The holding hand should...
+  choices: [Let go early, 'Stay relaxed, just keeping the key down', Press as hard as it can]
+  correct: 1
+  why: Holding takes almost no force; tension spreads to the moving hand.
+- ask: Listen. Parallel or contrary?
+  choices: [Parallel, Contrary]
+  correct: 1
+  why: One line went up while the other went down.
+  sound: C4:q D4+B3:q E4+A3:q F4+G3:h
+- ask: Listen. Parallel or contrary?
+  choices: [Contrary, Parallel]
+  correct: 1
+  why: Both lines climbed together.
+  sound: C3+C4:q D3+D4:q E3+E4:q F3+F4:h
+- ask: Hands apart, then together, means...
+  choices: [Keep the hands far apart on the keyboard, Learn each hand alone before joining them, Never play with
+      both hands]
+  correct: 1
+  why: Each hand learns its part first, so together you only have to join them.

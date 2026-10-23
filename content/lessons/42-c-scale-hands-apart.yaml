@@ -1,14 +1,25 @@
 id: c-scale-hands-apart
-title: "C major scale, hands apart"
+title: C major scale, hands apart
 unit: scales-and-eighths
 skills: [scales]
 steps:
-  - explain: |
-      The **C major scale**, one octave, hands separately. Right hand: 1 2 3, thumb under, 1 2 3 4 5.
-      Left hand: 5 4 3 2 1, cross 3 over, 3 2 1.
-
-      Slow and even beats fast and bumpy. The app moves the tempo up once you have played it cleanly a
-      few times.
-  - exercise: c-scale-rh
-  - exercise: c-scale-lh
-recap: "Right: 123-12345. Left: 54321-321. Even before fast."
+- explain: |
+    The **C major scale**, one octave, hands separately. Right hand: **1 2 3**, thumb under, **1 2 3 4 5**.
+  keys: {notes: C4 D4 E4 F4 G4 A4 B4 C5, labels: fingers, fingers: 1 2 3 1 2 3 4 5}
+  sound: C4:q D4:q E4:q F4:q G4:q A4:q B4:q C5:q
+- explain: |
+    Left hand: **5 4 3 2 1**, cross 3 over, **3 2 1**.
+  keys: {notes: C3 D3 E3 F3 G3 A3 B3 C4, labels: fingers, fingers: 5 4 3 2 1 3 2 1}
+  check:
+    ask: Left hand going up, after 5 4 3 2 1 on C D E F G, which finger plays A?
+    choices: ['4', '3', '2']
+    correct: 1
+    why: Finger 3 crosses over the thumb to A, then 2 on B and 1 on C.
+- explain: |
+    Slow and even beats fast and bumpy. The app moves the tempo up once you have played it cleanly a
+    few times.
+  callout: |
+    Listen for evenness: every note the same length and the same loudness, especially at the crossing.
+- {exercise: c-scale-rh}
+- {exercise: c-scale-lh}
+recap: 'Right: 123-12345. Left: 54321-321. Even before fast.'

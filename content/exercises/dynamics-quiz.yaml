@@ -1,11 +1,57 @@
 id: dynamics-quiz
-title: "Dynamics quiz"
+title: Dynamics quiz
 kind: quiz
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "What does p (piano) mean?", choices: [Soft, Loud, Slow], correct: 0 }
-  - { ask: "What does f (forte) mean?", choices: [Fast, Loud, Soft], correct: 1 }
-  - { ask: "Which is louder?", choices: [mp, mf], correct: 1 }
-  - { ask: "Which is softer?", choices: [p, mp], correct: 0 }
-  - { ask: "A crescendo (<) means...", choices: [Getting louder, Getting softer, Getting faster], correct: 0 }
-  - { ask: "A diminuendo (>) means...", choices: [Getting slower, Getting softer, Getting louder], correct: 1 }
+- ask: What does p (piano) mean?
+  choices: [Loud, Soft, Slow]
+  correct: 1
+  why: Piano is Italian for soft (and flat, gentle).
+- ask: What does f (forte) mean?
+  choices: [Loud, Fast, Soft]
+  correct: 0
+  why: 'Forte means strong: loud.'
+- ask: Which is louder?
+  choices: [mf, mp]
+  correct: 0
+  why: mf is mezzo forte, medium loud; mp is medium soft.
+- ask: Which is softer?
+  choices: [p, mp]
+  correct: 0
+  why: p is soft; mp (half soft) is a little louder.
+- ask: What does mezzo mean?
+  choices: [Very, 'Half, medium', Getting]
+  correct: 1
+  why: Mezzo piano is half soft, mezzo forte half loud.
+- ask: Put these in order from soft to loud.
+  choices: ['p, mp, mf, f', 'mp, p, f, mf', 'p, mf, mp, f']
+  correct: 0
+  why: p, then medium soft, then medium loud, then f.
+- ask: A crescendo (<) means...
+  choices: [Getting louder, Getting softer, Getting faster]
+  correct: 0
+  why: Crescendo means growing.
+- ask: A diminuendo (>) means...
+  choices: [Getting slower, Getting softer, Getting louder]
+  correct: 1
+  why: Diminuendo means making smaller.
+- ask: Words for dynamics are usually in...
+  choices: [Italian, German, Latin]
+  correct: 0
+  why: Early music printing was centred in Italy, so the words stuck.
+- ask: To play louder on the piano, you...
+  choices: [Press harder after the key is down, Lift the finger higher and hit, 'Send the key down faster, with
+      more arm weight']
+  correct: 2
+  why: Volume comes from how fast the hammer travels, which comes from how fast the key goes down.
+- ask: Listen. The second phrase is...
+  choices: [Softer, The same, Louder]
+  correct: 2
+  why: The second time the notes were played louder.
+  sound: C4:q E4:q G4:h | C4:q E4:q G4:h
+- ask: The full name pianoforte means...
+  choices: [Hammer harp, Soft-loud, Big keyboard]
+  correct: 1
+  why: It was the first keyboard that could play both soft and loud.

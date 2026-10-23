@@ -1,11 +1,78 @@
 id: tone-or-semitone
-title: "Tone or semitone?"
+title: Tone or semitone?
 kind: quiz
 shuffle: true
+pitchMatch: pitchClass
+reps: 2
+days: 2
 questions:
-  - { ask: "E to F is a...", choices: [Semitone, Tone], correct: 0 }
-  - { ask: "C to D is a...", choices: [Semitone, Tone], correct: 1 }
-  - { ask: "B to C is a...", choices: [Semitone, Tone], correct: 0 }
-  - { ask: "F to F sharp is a...", choices: [Semitone, Tone], correct: 0 }
-  - { ask: "G to A is a...", choices: [Semitone, Tone], correct: 1 }
-  - { ask: "Play a semitone up from E", play: "E4 F4" }
+- ask: E to F is a...
+  choices: [Semitone, Tone]
+  correct: 0
+  why: 'No black key between E and F: they are next-door keys.'
+- ask: C to D is a...
+  choices: [Tone, Semitone]
+  correct: 0
+  why: 'The black key C♯ sits between them: two semitones.'
+- ask: B to C is a...
+  choices: [Semitone, Tone]
+  correct: 0
+  why: No black key between B and C.
+- ask: F to F♯ is a...
+  choices: [Tone, Semitone]
+  correct: 1
+  why: A sharp is always one semitone up.
+- ask: G to A is a...
+  choices: [Tone, Semitone]
+  correct: 0
+  why: G♯ sits between them.
+- ask: D to E♭ is a...
+  choices: [Tone, Semitone]
+  correct: 1
+  why: E♭ is the very next key above D.
+- ask: How many semitones make a tone?
+  choices: [One, Two, Three]
+  correct: 1
+  why: 'A tone skips one key: two semitones.'
+- ask: A sharp makes a note...
+  choices: [One semitone lower, One tone higher, One semitone higher]
+  correct: 2
+  why: Sharp raises by the smallest step, to the next key right.
+- ask: A flat makes a note...
+  choices: [One semitone lower, One semitone higher, Softer]
+  correct: 0
+  why: Flat lowers by one semitone, to the next key left.
+- ask: A natural sign...
+  choices: [Raises a note, Cancels a sharp or flat, Makes a note louder]
+  correct: 1
+  why: Natural means play the plain note again.
+- ask: Which is another name for G♭?
+  choices: [F♯, A♭, G♯]
+  correct: 0
+  why: The key just left of G is also the key just right of F.
+- ask: Which is another name for A♯?
+  choices: [A♭, C♭, B♭]
+  correct: 2
+  why: The key just right of A is the key just left of B.
+- ask: What is the sharp of E?
+  choices: [E♭, F♯, F]
+  correct: 2
+  why: 'One semitone up from E is the white key F: there is no black key between them.'
+- ask: Which note is this?
+  choices: [F, F♯, G♭]
+  correct: 1
+  why: 'The bottom space is F, and the ♯ before it raises it: F♯.'
+  staff: F#4:w
+  clef: treble
+- ask: Listen. Tone or semitone?
+  choices: [Semitone, Tone]
+  correct: 0
+  why: 'E to F: next-door keys.'
+  sound: E4:h F4:h
+- ask: Listen. Tone or semitone?
+  choices: [Semitone, Tone]
+  correct: 1
+  why: 'C to D: one key skipped.'
+  sound: C4:h D4:h
+- {ask: Play a semitone up from E., play: E4 F4, why: The next key up from E is F.}
+- {ask: Play B flat (the black key just left of B)., play: Bb4, why: Flat = one key to the left., pitchMatch: pitchClass}
