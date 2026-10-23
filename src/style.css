@@ -1,0 +1,61 @@
+/* Minimal styling; the design thread owns the look later. */
+:root {
+  --bg: #f6f5f2; --card: #fff; --ink: #1d1d1f; --muted: #6b6b70; --line: #ddd9d2;
+  --accent: #3b5bdb; --ok: #2f9e44; --bad: #e03131; --target: #fab005; --pos: #dbe4ff;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--ink); background: var(--bg);
+}
+body { margin: 0; }
+header { display: flex; align-items: baseline; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--card); }
+header .brand { font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+header .tagline { color: var(--muted); font-size: .9rem; }
+header nav { margin-left: auto; }
+main { max-width: 960px; margin: 0 auto; padding: 16px; }
+a { color: var(--accent); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.card h2 { margin: 0 0 8px; font-size: 1.2rem; }
+.small { color: var(--muted); font-size: .9rem; }
+.banner { background: #fff9db; border: 1px solid #ffe066; padding: 8px 12px; border-radius: 8px; }
+.banner.error { background: #fff5f5; border-color: #ffc9c9; }
+button { font: inherit; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+button.secondary { background: #fff; color: var(--accent); }
+button:disabled { opacity: .45; cursor: default; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-top: 12px; }
+.lessons li.done::after { content: ' ✓'; color: var(--ok); }
+.lesson-head { display: flex; justify-content: space-between; align-items: baseline; }
+.explain { font-size: 1.1rem; line-height: 1.55; }
+.ask { font-size: 1.4rem; margin: 12px 0; min-height: 1.8rem; }
+.hand-badge { display: inline-block; font-size: .8rem; padding: 2px 8px; border-radius: 999px; background: #e7f5ff; }
+.hand-badge.left { background: #fff0f6; }
+.prompt { margin: 6px 0; }
+.result { margin-top: 12px; padding: 12px; border-radius: 8px; background: #f8f9fa; }
+.result .score { font-size: 1.6rem; font-weight: 700; }
+.result .stars { color: var(--target); }
+.feedback li.clean { color: var(--ok); }
+.log { max-height: 260px; overflow: auto; background: #111; color: #cfc; padding: 8px; font-size: 12px; border-radius: 6px; }
+
+.keyboard { width: 100%; height: auto; display: block; margin: 8px 0; }
+.key rect { stroke: #333; stroke-width: 1; }
+.key.white rect { fill: #fff; }
+.key.black rect { fill: #222; }
+.key.pos.white rect { fill: var(--pos); }
+.key.target rect { fill: var(--target) !important; }
+.key.pressed rect { fill: #74c0fc !important; }
+.key.hit rect { fill: var(--ok) !important; }
+.key.wrong rect { fill: var(--bad) !important; }
+.key text { font-size: 12px; text-anchor: middle; font-weight: 700; fill: #000; }
+.key.black text { fill: #fff; font-size: 9px; }
+.middle-c { fill: var(--accent); }
+
+.staff-wrap { overflow-x: auto; }
+.staff { min-width: 480px; width: 100%; height: auto; }
+.staff .line, .staff .ledger, .staff .bar { stroke: #444; stroke-width: 1; }
+.staff .stem, .staff .flag { stroke: #000; stroke-width: 1.3; fill: none; }
+.staff .clef { font-size: 56px; }
+.staff .clef.bass { font-size: 34px; }
+.staff .head { fill: #000; stroke: #000; stroke-width: 1.2; }
+.staff .head.open { fill: #fff; }
+.staff .rest { fill: #000; }
+.staff .note.current .head, .staff .note.current .rest { fill: var(--target); stroke: #b08000; }
+.staff .note.hit .head { fill: var(--ok); stroke: var(--ok); }
+.staff .note.hit .head.open { fill: #fff; }
+.staff .note.miss .head, .staff .note.wrong .head { fill: var(--bad); stroke: var(--bad); }

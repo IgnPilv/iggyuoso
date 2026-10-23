@@ -60,3 +60,20 @@ never copied pages). Start small, adapt as we go.
 - 2026-10-23: Unit 1 "Meet the keyboard" (10 lessons, 27 exercises) is the beta starting point.
 - 2026-10-23: Ignas does not review PRs. Sessions have autonomy to open and merge their own PRs
   after validating the change; no review requests needed.
+- 2026-10-23: Engine v1 (technical thread). Plain TypeScript + DOM/SVG, no UI framework; hash
+  routing so the build works under `/iggyuoso/` with a relative base. Deploy via GitHub Actions
+  (`pages.yml`, Pages source "GitHub Actions"); PRs run tests + build (`ci.yml`).
+- 2026-10-23: Middle C = the C nearest the middle of the calibrated range (lower one on a tie, as
+  on 61-key boards); the player confirms it and can move it by an octave. Note names map to keys
+  through `offset = middleC - 60`.
+- 2026-10-23: Timed scoring: hit window ±45% of a beat (150–350 ms), full marks within 50 ms,
+  half at the edge; wrong note = leftover press near an unplayed note; extras −0.5; long notes
+  (≥ half) released before 75% lose 30%. Habits reported per hand: missed, wrong, extra, early,
+  late, rushing, dragging, uneven, short holds; plus weaker hand and hands-together gap (≥ 50 ms).
+- 2026-10-23: Untimed `find` with `coverAll` accepts any order (prompt can still suggest bottom to
+  top); black-key groups cut off at the keyboard edge count. Score = right / (right + wrong).
+  `low`/`high` = an octave or more from middle C, or the outer third of the keyboard.
+- 2026-10-23: Note strings also accept chords (`C4+E4:q`), dotted durations (`h.`) and sharps/flats.
+- 2026-10-23: Latency: played times are corrected by the AudioContext output latency plus a user
+  setting (Settings → Timing). The app plays clicks and optional guide notes; the piano makes its
+  own sound.

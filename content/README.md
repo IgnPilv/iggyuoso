@@ -30,6 +30,10 @@ Common fields: `hand` (`right`, `left`, `alternating`, later `together`), `displ
 
 ## Note strings
 `<Note><octave>:<duration>` separated by spaces, bars separated by `|`. C4 is middle C.
-Durations: `w` whole (4), `h` half (2), `q` quarter (1), `e` eighth (0.5). Rest: `r:q`.
+Durations: `w` whole (4), `h` half (2), `q` quarter (1), `e` eighth (0.5); a dot adds half
+(`h.` = 3). Rest: `r:q`. Chord: join notes with `+`, e.g. `C4+E4+G4:w`. Sharps and flats: `F#4`, `Bb3`.
 Each bar must add up to the meter; in a two-hand exercise both hands have the same bar count.
 Note names are mapped to the player's real keys through calibration, never to fixed MIDI numbers.
+
+`npm test` loads every file here and fails on any problem (bad note, bar that doesn't add up,
+finger count that doesn't match, missing lesson or exercise id).
