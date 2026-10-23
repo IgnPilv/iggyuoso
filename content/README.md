@@ -24,7 +24,11 @@ several lessons.
 - `timed`: notes with durations against a metronome; scored per hand. Fields: `tempo` (bpm),
   `meter`, `countIn` (bars), `right` / `left` note strings, optional `fingers` (one-hand
   exercises) or `rightFingers` / `leftFingers` (both hands; one number per note or chord),
-  `pitchMatch: pitchClass` (any octave counts). Shown as falling notes; `display: staff` starts on
+  `pitchMatch: pitchClass` (any octave counts), `tempoLadder: true` (steps 60 70 80 90 100% of
+  `tempo`) or `tempoLadder: [60, 80, 100]`: the tempo starts on the player's step, three clean
+  takes (92+) on it move up a step, two failed takes in a row move down. Any timed exercise of two
+  bars or more can loop a few bars (the player picks them, or the result card suggests the bars
+  with the most mistakes); loop takes are practice and are not saved. Shown as falling notes; `display: staff` starts on
   sheet music instead (the player can switch).
 
 - `tap`: rhythm only, scored like `timed` but any key counts. `tempo`, `meter`, `countIn`, and

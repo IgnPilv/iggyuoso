@@ -94,6 +94,16 @@ tempo: 66
 meter: 4/4
 pickup: q
 right: "G4:q | C5:q. D5:e E5:e3 F5:e3 E5:e3 D5:q~ | D5:q C5:s D5:s E5:e C5:h"`,
+  ladder: `
+id: demo-ladder
+kind: timed
+hand: right
+prompt: A tune on the tempo ladder.
+tempo: 96
+tempoLadder: [70, 85, 100]
+meter: 4/4
+right: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:e A4:e G4:e F4:e E4:q C4:q | C4:q G3:q C4:h"
+fingers: "1 2 3 1 3 4 5 5 5 4 3 3 1 1 1 1"`,
   sixEight: `
 id: demo-six-eight
 kind: timed
@@ -158,6 +168,26 @@ function scenes(): Scene[] {
   const rhythms = parseExercise(parse(SAMPLES.rhythms));
   out.push({ title: 'Upbeats, ties and triplets', caption: 'Note strings can start on an upbeat, tie notes across a bar line, and mix dotted notes, triplets and sixteenths. On the staff a tie is an arc, and the tied note is held, not played again.', run: exerciseScene(rhythms, { view: 'classic' }) });
   out.push({ title: 'Six-eight', caption: 'In 6/8 the click and the tempo count dotted quarters, two to a bar, as musicians count it.', run: exerciseScene(parseExercise(parse(SAMPLES.sixEight)), { view: 'falling' }) });
+  out.push({
+    title: 'Tempo ladder and loops',
+    caption: 'Exercises can climb a tempo ladder: three clean takes (92+) on a step move up, two failed takes in a row move down. After a take, the result points at the bars with the most mistakes, and "Loop" plays just those bars round and round (loop takes are not saved).',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      let loops = 0;
+      demo.onTimed = (s) => p.playTimed(s);
+      demo.onRunEnd = () => {
+        const loopBtn = [...box.querySelectorAll('button')].find((b) => b.textContent?.startsWith('Loop bar'));
+        if (loops === 0 && loopBtn) {
+          loops++;
+          timers.push(window.setTimeout(() => { loopBtn.click(); timers.push(window.setTimeout(() => press(box, 'Play'), 1200)); }, 3000));
+        } else if (loops++ >= 2) timers.push(window.setTimeout(next, 2500));
+      };
+      const cleanup = mountExercise(box, parseExercise(parse(SAMPLES.ladder)), DEMO_CALIBRATION, () => {});
+      setView(box, 'falling');
+      timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
   const looks = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys');
   if (looks) out.push({
     title: 'Dark and light',

@@ -173,3 +173,11 @@ never copied pages). Start small, adapt as we go.
   flags and rests.
 - 2026-10-23: Checkpoint and exam ear exercises use `feedback: none` (`ear-checkpoint-a`,
   `ear-checkpoint-b`, `ear-year-1-exit`); pieces and scales carry `title:`.
+- 2026-10-23: Tempo ladder (`tempoLadder`, `src/engine/practice.ts`): rungs in percent of the
+  tempo, ending at 100; progress saved per exercise as `ladder.<id>`. Only takes at the current
+  rung's tempo count: 3 clean takes (92+) up, 2 fails (under 65) in a row down; a pass in between
+  resets the fails. Looping bars: any timed exercise of 2+ bars has "Loop bars [from] to [to]";
+  the result card names the 1–2 bars with the most misses, wrong notes, short holds and extras
+  and offers to loop them. A loop is the bars cut out as their own exercise (a tie into the loop
+  becomes a fresh note), plays round until Stop at the tempo the player was on, and is never
+  saved or counted (no records, ladder or XP). Demo scene "Tempo ladder and loops".
