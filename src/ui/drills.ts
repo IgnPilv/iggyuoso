@@ -206,9 +206,9 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
 
   const finish = () => {
     const r = session.result();
-    record(ex, r.score, r.stars, 0);
+    const reward = record(ex, r.score, r.stars, 0);
     setAsk('Done!');
-    result.replaceChildren(drillResultView(r, ex.questions === 1 ? 'answer' : 'answers', restart));
+    result.replaceChildren(drillResultView(r, ex.questions === 1 ? 'answer' : 'answers', restart), reward);
     onDone(r);
   };
 
@@ -339,9 +339,9 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
 
   const finish = () => {
     const r = session.result();
-    record(ex, r.score, r.stars, 0);
+    const reward = record(ex, r.score, r.stars, 0);
     ask.textContent = 'Done!';
-    result.replaceChildren(drillResultView(r, 'answers', restart));
+    result.replaceChildren(drillResultView(r, 'answers', restart), reward);
     onDone(r);
   };
 
@@ -412,10 +412,10 @@ export function buildPlayer(root: HTMLElement, ex: BuildExercise, cal: Calibrati
 
   const finish = () => {
     const r = session.result();
-    record(ex, r.score, r.stars, 0);
+    const reward = record(ex, r.score, r.stars, 0);
     ask.textContent = 'Done!';
     stage.banner = '';
-    result.replaceChildren(drillResultView(r, 'first tries', restart));
+    result.replaceChildren(drillResultView(r, 'first tries', restart), reward);
     onDone(r);
   };
 

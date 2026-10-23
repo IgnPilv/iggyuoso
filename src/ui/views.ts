@@ -1,9 +1,10 @@
 import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibration';
-import { content, contentErrors } from '../content';
+import { content, contentErrors, treeNodes } from '../content';
 import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
+import { mastery, nodeOfLesson } from '../progress';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
@@ -72,6 +73,7 @@ export const homeView: View = (root) => {
       h('button', { class: 'secondary', onclick: () => go('/demo') }, 'Watch the demo'),
       h('span', { class: 'small' }, 'The demo needs no keyboard.')),
   ));
+  root.append(progressCard());
   for (const unit of content.units) {
     const lessons = unit.lessons.map((id) => content.lessons.get(id)).filter((l): l is Lesson => !!l);
     const done = lessons.filter((l) => store.lessonDone(lessonExercises(l))).length;
@@ -82,7 +84,12 @@ export const homeView: View = (root) => {
       h('p', { class: 'small' }, unit.summary),
       h('ol', { class: 'lessons' }, ...lessons.map((l) => {
         const cls = store.lessonDone(lessonExercises(l)) ? 'done' : l.id === firstNotDone && store.calibration ? 'next' : '';
-        return h('li', { class: cls }, h('a', { href: `#/lesson/${l.id}` }, l.title));
+        const node = nodeOfLesson(l.id);
+        const state = node ? mastery.state(node.id) : undefined;
+        return h('li', { class: `${cls}${state ? ` state-${state}` : ''}` },
+          h('a', { href: `#/lesson/${l.id}` }, l.title,
+            node && mastery.isDue(node.id) ? h('span', { class: 'state-badge due' }, 'Review')
+              : state === 'solid' || state === 'mastered' ? h('span', { class: `state-badge ${state}` }, state === 'solid' ? 'Solid' : 'Mastered') : ''));
       })),
     ));
   }
@@ -91,6 +98,23 @@ export const homeView: View = (root) => {
   }
   return off;
 };
+
+/** XP, streak and what is due for review. Hidden until there is something to show. */
+function progressCard(): HTMLElement | '' {
+  const m = mastery.meta;
+  const due = mastery.reviewQueue();
+  if (!m.xp && !due.length) return '';
+  const link = (nodeId: string) => {
+    const n = treeNodes.get(nodeId);
+    return n?.lesson ? h('a', { href: `#/lesson/${n.lesson}` }, n.title) : h('span', {}, n?.title ?? nodeId);
+  };
+  return h('section', { class: 'card progress-card' },
+    h('div', { class: 'progress-stats' },
+      h('span', {}, h('strong', {}, String(m.xp)), ' XP'),
+      m.streak ? h('span', {}, h('strong', {}, String(m.streak)), m.streak === 1 ? ' day in a row' : ' days in a row') : '',
+      h('span', {}, h('strong', {}, String(due.length)), due.length === 1 ? ' review due' : ' reviews due')),
+    due.length ? h('p', { class: 'small' }, 'Due for review: ', ...due.slice(0, 5).flatMap((id, i) => [i ? ', ' : '', link(id)])) : '');
+}
 
 /** Decoration for the hero: one octave of keys, a few lit in the hand colours. */
 function heroKeys(): SVGSVGElement {
