@@ -1,0 +1,12 @@
+id: ear-checkpoint-b
+title: "Checkpoint 2: ears"
+kind: ear
+feedback: none
+prompt: Chords set the key, then one note. Play the degree you hear. Then major or minor?
+cadence: C
+questions: 12
+items:
+  - { type: degree, key: C, pool: [1, 5] }
+  - { type: degree, key: G, pool: [1, 5] }
+  - { type: chord, pool: [maj, min], root: C4 }
+  - { type: chord, pool: [maj, min], root: F4 }

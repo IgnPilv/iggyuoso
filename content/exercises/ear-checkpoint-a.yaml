@@ -1,5 +1,7 @@
 id: ear-checkpoint-a
+title: "Checkpoint 1: ears"
 kind: ear
+feedback: none
 prompt: Higher, lower, or the same? Then echo the tune.
 questions: 10
 items:
