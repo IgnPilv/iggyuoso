@@ -1,0 +1,16 @@
+id: bass-staff
+title: The bass staff
+unit: meet-the-keyboard
+skills: [staff, bass-clef, reading]
+steps:
+  - explain: |
+      The **bass clef** looks like a backwards C with two dots. It is used mostly for the **left** hand and the lower notes.
+  - explain: |
+      On the bass staff, **middle C** sits just **above** the staff on a ledger line.
+      **B** hangs just above the top line. **A** sits on the top line.
+  - exercise: read-c-b-a-bass
+  - exercise: read-c-b-a-bass-rhythm
+  - explain: |
+      Put the two staffs together and you have the **grand staff** that piano music uses:
+      treble on top for the right hand, bass below for the left. Middle C is in between, shared by both.
+recap: Bass clef is for the left hand. Middle C sits above the bass staff; B and A are just below it.

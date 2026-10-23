@@ -1,0 +1,6 @@
+id: find-three-black-groups
+kind: find
+prompt: Press one key from every group of three black keys, from the bottom to the top.
+targets:
+  - { blackGroup: 3 }
+coverAll: true

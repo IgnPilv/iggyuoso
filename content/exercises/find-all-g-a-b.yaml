@@ -1,0 +1,11 @@
+id: find-all-g-a-b
+kind: find
+prompt: Play the key the app names. Any octave is fine.
+order: random
+targets:
+  - { pitchClass: G }
+  - { pitchClass: A }
+  - { pitchClass: B }
+  - { pitchClass: G }
+  - { pitchClass: B }
+  - { pitchClass: A }

@@ -1,0 +1,8 @@
+id: finger-drill-lh
+kind: sequence
+hand: left
+display: keys
+prompt: Left hand, thumb on the lit key. Play the finger number you see.
+position: "F3 G3 A3 B3 C4"
+notes:   "C4 A3 B3 F3 G3 C4 F3 A3"
+fingers: "1  3  2  5  4  1  5  3"

@@ -1,0 +1,8 @@
+id: middle-c-steps-rh
+kind: timed
+hand: right
+tempo: 60
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:q F4:q | G4:h F4:q E4:q | D4:h C4:h | C4:w"
+fingers: "1 2 3 4 5 4 3 2 1 1"

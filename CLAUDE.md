@@ -45,8 +45,8 @@ never copied pages). Start small, adapt as we go.
 - Flow: listen → count-in → play → scored result → next. Guide track on/off.
 
 ## Content
-- Curriculum proposal: lessons grouped in units; each lesson pairs one piece of theory with one
-  playing skill. Data format is being agreed in the content conversation; see the Decision log.
+- Lessons are grouped in units; each lesson pairs one piece of theory with one playing skill.
+  Format: `content/README.md`. Original proposal and lesson plan: `docs/beta-curriculum-proposal.md`.
 
 ## Decision log
 - 2026-10-23: Repo `IgnPilv/iggyuoso`, public (free GitHub Pages for https/Web MIDI).
@@ -54,3 +54,9 @@ never copied pages). Start small, adapt as we go.
   "press middle C"). MIDI only; the prototype's computer-keyboard fallback is dropped for now.
 - 2026-10-23: Curriculum teaches from scratch with theory alongside playing, modelled on
   music-school textbooks; start with a small first unit and grow.
+- 2026-10-23: Content format agreed: YAML units / lessons / exercises under `content/`, described
+  in `content/README.md`. Exercise kinds `find`, `sequence`, `timed`; notes written as `C4:q`.
+- 2026-10-23: Lessons are written in English for now (translation possible later).
+- 2026-10-23: Unit 1 "Meet the keyboard" (10 lessons, 27 exercises) is the beta starting point.
+- 2026-10-23: Ignas does not review PRs. Sessions have autonomy to open and merge their own PRs
+  after validating the change; no review requests needed.

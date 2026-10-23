@@ -1,0 +1,7 @@
+id: read-c-d-e-treble
+kind: sequence
+hand: right
+display: staff
+clef: treble
+prompt: Read the note on the staff and play it. Right hand in middle C position.
+notes:   "C4 D4 E4 D4 C4 E4 C4 D4"

@@ -1,0 +1,9 @@
+id: taking-turns-tune
+kind: timed
+hand: alternating   # both hands, never at the same moment
+display: staff
+tempo: 60
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:h | r:w | E4:q D4:q C4:h | r:w"
+left:  "r:w | C4:q B3:q A3:h | r:w | A3:q B3:q C4:h"

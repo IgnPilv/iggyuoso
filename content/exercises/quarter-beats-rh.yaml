@@ -1,0 +1,8 @@
+id: quarter-beats-rh
+kind: timed
+hand: right
+tempo: 60
+meter: 4/4
+countIn: 1
+pitchMatch: pitchClass   # any C counts; pitch reading comes later
+right: "C4:q C4:q C4:q C4:q | C4:q C4:q C4:q C4:q"

@@ -1,0 +1,6 @@
+id: find-all-c
+kind: find
+prompt: Find every C on the keyboard, from the bottom to the top.
+targets:
+  - { pitchClass: C }
+coverAll: true

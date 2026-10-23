@@ -1,0 +1,16 @@
+id: middle-c-position
+title: Middle C position
+unit: meet-the-keyboard
+skills: [middle-c, five-finger-position]
+steps:
+  - explain: |
+      **Middle C** is the C closest to the middle of the keyboard. On most pianos it is right in front of the brand name.
+      The app found yours during setup and lights it up.
+  - explain: |
+      Put **both thumbs** on middle C. Your **right** hand fingers sit on C D E F G going up.
+      Your **left** hand fingers sit on C B A G F going down.
+  - exercise: middle-c-walk-rh
+  - exercise: middle-c-walk-lh
+  - exercise: middle-c-steps-rh
+  - exercise: middle-c-steps-lh
+recap: Both thumbs share middle C. RH plays C D E F G with fingers 1 to 5; LH plays C B A G F with fingers 1 to 5.

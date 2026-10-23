@@ -1,0 +1,9 @@
+id: play-low-play-high
+kind: find
+prompt: Play a low key, then a high key, as the app asks.
+order: random
+targets:
+  - { region: low }
+  - { region: high }
+  - { region: low }
+  - { region: high }

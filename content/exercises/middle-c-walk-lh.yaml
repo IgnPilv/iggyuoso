@@ -1,0 +1,8 @@
+id: middle-c-walk-lh
+kind: sequence
+hand: left
+display: keys
+prompt: Left hand in middle C position. Walk down and back up.
+position: "F3 G3 A3 B3 C4"
+notes:   "C4 B3 A3 G3 F3 G3 A3 B3 C4"
+fingers: "1  2  3  4  5  4  3  2  1"
