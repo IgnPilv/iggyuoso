@@ -1,0 +1,54 @@
+id: eighth-notes-quiz
+title: Eighth notes quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: How long is an eighth note?
+  choices: [Two beats, One beat, Half a beat]
+  correct: 2
+  why: Two eighths share one beat.
+- ask: Eighth notes in a row are joined by a...
+  choices: [Beam, Slur, Tie]
+  correct: 0
+  why: A beam replaces the flags of grouped eighths.
+- ask: A single eighth note has a...
+  choices: [Dot, Beam, Flag]
+  correct: 2
+  why: On its own, the eighth gets a little flag on its stem.
+- ask: How many eighth notes make a half note?
+  choices: [Two, Four, Eight]
+  correct: 1
+  why: A half note is 2 beats; each beat holds two eighths.
+- ask: How do you count four eighth notes from beat 1?
+  choices: [1 and 2 and, 1 e and a, 1 2 3 4]
+  correct: 0
+  why: 'Each eighth gets a number or an "and": 1-and-2-and.'
+- ask: Two eighths are said...
+  choices: [ti-ti, ta-a, ta]
+  correct: 0
+  why: Ta is one beat; ti-ti is the same beat split in two.
+- ask: How many beats are in this bar?
+  choices: [Three, Six, Four]
+  correct: 2
+  why: 1 + ½ + ½ + 1 + ½ + ½ = 4.
+  staff: C4:q C4:e C4:e C4:q C4:e C4:e
+- ask: How many notes do you play in this bar?
+  choices: [Eight, Four, Six]
+  correct: 2
+  why: 'Two quarters and four eighths: six notes in four beats.'
+  staff: C4:q C4:e C4:e C4:q C4:e C4:e
+- ask: Listen. Quarters or eighths?
+  choices: [Eighths, Quarters]
+  correct: 0
+  why: The notes went twice as fast as a walking beat.
+  sound: C4:e C4:e C4:e C4:e C4:e C4:e C4:e C4:e
+- ask: On the word "and", you are...
+  choices: [Resting, On the beat, Halfway between two beats]
+  correct: 2
+  why: '"And" marks the half-beat between the numbers.'
+- ask: Which takes the same time as one quarter note?
+  choices: [Four eighth notes, Two eighth notes, One eighth note]
+  correct: 1
+  why: ½ + ½ = 1.

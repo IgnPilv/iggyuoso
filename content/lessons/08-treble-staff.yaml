@@ -3,17 +3,45 @@ title: The treble staff
 unit: meet-the-keyboard
 skills: [staff, treble-clef, reading]
 steps:
-  - explain: |
-      Music is written on a **staff**: five lines with four spaces between them.
-      Notes sit **on a line** or **in a space**. The higher the note sits, the higher it sounds.
-  - explain: |
-      The curly sign at the start is the **treble clef**. It is used mostly for the **right** hand and the higher notes.
-  - explain: |
-      **Middle C** sits just below the staff on its own short line, called a **ledger line**.
-      **D** hangs just under the bottom line. **E** sits on the bottom line.
-  - exercise: read-c-d-e-treble
-  - exercise: read-c-d-e-treble-rhythm
-  - explain: |
-      Note-reading only gets fast with lots of reps. Play each note you see, in the right place.
-  - exercise: gen-read-treble-c-g
+- explain: |
+    Music is written on a **staff**: five lines with four spaces between them.
+    Notes sit **on a line** (the line goes through the middle of the dot) or **in a space**.
+  staff: {notes: 'E4:q F4:q G4:q A4:q B4:q C5:q D5:q E5:q F5:q'}
+  terms: [staff, line, space]
+- explain: |
+    The **higher** a note sits on the staff, the **higher** it sounds.
+    Each step up (line to space, space to line) is the next letter, the next white key.
+  staff: {notes: 'C4:q D4:q E4:q F4:q G4:q', labels: names}
+  sound: C4:q D4:q E4:q F4:q G4:q
+  check:
+    ask: A note moves from a line to the space just above it. It goes up by...
+    choices: [One letter, Two letters, An octave]
+    correct: 0
+    why: Line to the next space (or space to the next line) is the very next letter.
+- explain: |
+    The curly sign at the start is the **treble clef**. It is used mostly for the **right** hand and the higher notes.
+    It curls around the second line from the bottom, which is **G**, so it is also called the **G clef**.
+  staff: {notes: 'G4:w', labels: names}
+  terms: [treble clef, G clef]
+- explain: |
+    **Middle C** sits just **below** the staff on its own short line, called a **ledger line**.
+    **D** hangs just under the bottom line. **E** sits on the bottom line.
+  staff: {notes: 'C4:q D4:q E4:h', labels: names}
+  keys: {notes: C4 D4 E4, labels: names}
+  terms: [ledger line]
+  check:
+    ask: Which note sits on the bottom line of the treble staff?
+    choices: [D, C, E]
+    correct: 2
+    why: Middle C is on a ledger line, D hangs below the bottom line, E sits on it.
+- {exercise: read-c-d-e-treble}
+- {exercise: read-c-d-e-treble-rhythm}
+- explain: |
+    Note-reading only gets fast with lots of reps. Play each note you see, in the right place.
+  callout: |
+    Find a landmark first (middle C, or E on the bottom line), then count steps from it.
+- {exercise: gen-read-treble-c-g}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: treble-staff-quiz}
 recap: Five lines, four spaces. Treble clef is for the right hand. Middle C is on a ledger line below it.

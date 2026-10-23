@@ -1,0 +1,47 @@
+id: scale-fingering-quiz
+title: Scale fingering quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: 'C major, right hand, going up: the fingering is...'
+  choices: [1 2 3 4 1 2 3 4, 1 2 3 4 5 1 2 3, 1 2 3 1 2 3 4 5]
+  correct: 2
+  why: Three fingers, thumb under, then five.
+- ask: 'C major, left hand, going up: the fingering is...'
+  choices: [5 4 3 2 1 4 3 2, 1 2 3 1 2 3 4 5, 5 4 3 2 1 3 2 1]
+  correct: 2
+  why: Five down to the thumb, then 3 crosses over.
+- ask: Right hand going up, the thumb...
+  choices: [Jumps over the hand, Stays still, Passes under the hand]
+  correct: 2
+  why: Thumb under is how the hand moves on smoothly.
+- ask: Right hand coming down a scale, finger 3...
+  choices: [Passes under the thumb, Is not used, Crosses over the thumb]
+  correct: 2
+  why: The mirror of thumb under.
+- ask: 'G major, right hand: which finger plays F♯?'
+  choices: ['3', '4', '5']
+  correct: 1
+  why: 'Same fingering as C: 1 2 3 1 2 3 4 5, so the 7th note gets 4.'
+- ask: 'F major, right hand: the fingering is...'
+  choices: [1 2 3 1 2 3 4 5, 1 2 3 4 1 2 3 4, 1 2 3 4 5 1 2 3]
+  correct: 1
+  why: Four fingers so that 4 lands on B♭; the thumb tucks under to C.
+- ask: Why does F major's right hand use 4 on B♭?
+  choices: [Because 4 is the strongest finger, To skip a note, So the thumb doesn't land on a black key]
+  correct: 2
+  why: The thumb is short; it plays white keys while the long fingers take black keys.
+- ask: When you move the thumb under, the wrist should...
+  choices: [Drop down, Twist up high, Stay level]
+  correct: 2
+  why: Only the thumb moves; the wrist stays level and the elbow loose.
+- ask: A scale sounds bumpy at the thumb. The best fix is...
+  choices: [Slow down and move the thumb early, Play louder, Skip the thumb]
+  correct: 0
+  why: Get the thumb ready under the hand before it is needed.
+- ask: Hands together in C major, are the finger numbers the same in both hands?
+  choices: ['Yes, always', 'No, they cross at different moments']
+  correct: 1
+  why: 'Same notes, different fingers: that is the hard part of hands together.'

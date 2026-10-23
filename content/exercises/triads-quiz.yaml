@@ -1,0 +1,67 @@
+id: triads-quiz
+title: Triads quiz
+kind: quiz
+shuffle: true
+pitchMatch: pitchClass
+reps: 2
+days: 2
+questions:
+- ask: A triad has how many notes?
+  choices: [Three, Two, Four]
+  correct: 0
+  why: 'Tri means three: root, 3rd and 5th.'
+- ask: A triad is built from stacked...
+  choices: [Octaves, 2nds (steps), 3rds (skips)]
+  correct: 2
+  why: Skip, play, skip, play.
+- ask: The bottom note of a triad in skips is the...
+  choices: [5th, Top, Root]
+  correct: 2
+  why: The root names the chord.
+- ask: Which notes make a C triad?
+  choices: [C F A, C D E, C E G]
+  correct: 2
+  why: C, skip D, E, skip F, G.
+- ask: Which notes make an F triad?
+  choices: [F A C, F G A, F B D]
+  correct: 0
+  why: F, skip G, A, skip B, C.
+- ask: Which notes make a G triad?
+  choices: [G C E, G B D, G A B]
+  correct: 1
+  why: G, skip A, B, skip C, D.
+- ask: In the triad C–E–G, E is the...
+  choices: [3rd, 5th, Root]
+  correct: 0
+  why: E is a 3rd above the root C.
+- ask: In the triad G–B–D, D is the...
+  choices: [Root, 5th, 3rd]
+  correct: 1
+  why: 'D is a 5th above G: G A B C D.'
+- ask: Which chord is this?
+  choices: [C, F, G]
+  correct: 0
+  why: 'The bottom note is middle C on its ledger line: a C triad.'
+  staff: C4+E4+G4:w
+  clef: treble
+- ask: Which chord is this?
+  choices: [C, G, F]
+  correct: 1
+  why: 'Lines 2, 3 and 4, from G: a G triad.'
+  staff: G4+B4+D5:w
+  clef: treble
+- ask: Which chord is this?
+  choices: [G, F, C]
+  correct: 1
+  why: 'Spaces 1, 2 and 3, from F: an F triad.'
+  staff: F4+A4+C5:w
+  clef: treble
+- ask: On the staff, a triad in skips sits...
+  choices: [All on lines or all in spaces, Anywhere, 'Line, space, line']
+  correct: 0
+  why: Each 3rd keeps to the same kind of place, so the whole snowman does.
+- ask: Right hand plays a triad with fingers...
+  choices: ['1, 3, 5', '2, 3, 4', '1, 2, 3']
+  correct: 0
+  why: 'Thumb, middle, little: one finger skipped each time.'
+- {ask: 'Play a C triad, all three notes together.', play: C4 E4 G4, why: 'C, E and G at once.'}

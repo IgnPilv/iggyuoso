@@ -1,15 +1,33 @@
 id: key-of-g
-title: "One sharp: the key of G"
+title: 'One sharp: the key of G'
 unit: first-chords
 skills: [key-signatures, keys]
 steps:
-  - explain: |
-      A piece in **G major** uses G as home. To sound right it needs **F sharp** instead of F.
-      Rather than writing ♯ on every F, music puts one sharp at the very start of each line, on
-      the F line. That's the **key signature**: it means "every F is F sharp".
-  - exercise: key-of-g-quiz
-  - exercise: g-major-steps
-  - explain: |
-      Notes with the G major key signature: every F is F#.
-  - exercise: gen-read-key-of-g
-recap: "G major: one sharp, F sharp, shown in the key signature."
+- explain: |
+    A piece in **G major** uses G as home. Listen to the G major scale: to sound right it needs
+    **F sharp** instead of F.
+  sound: G4:q A4:q B4:q C5:q D5:q E5:q F#5:q G5:q
+  staff: {notes: 'G4:q A4:q B4:q C5:q | D5:q E5:q F#5:q G5:q', labels: names}
+  terms: [key, G major]
+- explain: |
+    Rather than writing ♯ on every F, music puts one sharp at the very start of each line, on
+    the F line. That's the **key signature**: it means "every F is F sharp", in every octave.
+  staff: {notes: 'G4:q A4:q B4:q C5:q | D5:q E5:q F#5:q G5:q', key: G}
+  terms: [key signature]
+  check:
+    ask: With this key signature, an F in the bottom space is played as...
+    choices: [F♯, F, G]
+    correct: 0
+    why: The key signature applies to every F, in every octave.
+    staff: {notes: 'F4:w', key: G}
+- explain: |
+    So the key signature tells you two things before you read a single note: which notes are sharp,
+    and which key the music is probably in.
+  callout: |
+    One sharp (F♯) = G major.
+- {exercise: key-of-g-quiz}
+- {exercise: g-major-steps}
+- explain: |
+    Notes with the G major key signature: every F is F#.
+- {exercise: gen-read-key-of-g}
+recap: 'G major: one sharp, F sharp, shown in the key signature.'

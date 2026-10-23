@@ -1,15 +1,33 @@
 id: g-position
-title: "G position"
+title: G position
 unit: two-hands-at-once
 skills: [five-finger-position, hands-together]
 steps:
-  - explain: |
-      Five-finger positions can start on any key. In **G position** the right thumb sits on the
-      G above middle C (G A B C D). The left little finger sits on the G below middle C, so the
-      left hand covers G A B C D too, with its thumb on the D just above middle C.
-  - exercise: g-position-rh
-  - exercise: g-position-together
-  - explain: |
-      Endless short tunes in G position.
-  - exercise: gen-sight-read-g-rh
-recap: "G position: both hands cover G A B C D. Same shape as C position, new place."
+- explain: |
+    Five-finger positions can start on any key. In **G position** the right thumb sits on the
+    **G above middle C** and covers **G A B C D**.
+  keys: {notes: G4 A4 B4 C5 D5, labels: fingers, fingers: 1 2 3 4 5}
+  sound: G4:q A4:q B4:q C5:q D5:h
+- explain: |
+    The left little finger sits on the **G below middle C**, so the left hand covers G A B C D too,
+    with its thumb on the D just above middle C.
+  keys: {notes: G3 A3 B3 C4 D4, labels: fingers, fingers: 5 4 3 2 1}
+  check:
+    ask: In G position, which right-hand finger plays C?
+    choices: ['3', '1', '4']
+    correct: 2
+    why: G 1, A 2, B 3, C 4, D 5.
+- explain: |
+    It's the same hand shape as C position, just moved up. A tune that you know in C can be played in G
+    by starting on G and keeping the same shape: that is called **transposing**.
+  staff: {notes: 'G4:q A4:q B4:q G4:q | B4:q C5:q D5:h', labels: names}
+  terms: [transposing]
+- {exercise: g-position-rh}
+- {exercise: g-position-together}
+- explain: |
+    Endless short tunes in G position.
+- {exercise: gen-sight-read-g-rh}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: g-position-quiz}
+recap: 'G position: both hands cover G A B C D. Same shape as C position, new place.'

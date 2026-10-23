@@ -1,11 +1,79 @@
 id: steps-or-skips
-title: "Step or skip?"
+title: Step or skip?
 kind: quiz
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "Step or skip?", staff: "C4:h D4:h", clef: treble, choices: [Step, Skip], correct: 0 }
-  - { ask: "Step or skip?", staff: "E4:h G4:h", clef: treble, choices: [Step, Skip], correct: 1 }
-  - { ask: "Step or skip?", staff: "F4:h E4:h", clef: treble, choices: [Step, Skip], correct: 0 }
-  - { ask: "Step or skip?", staff: "G4:h E4:h", clef: treble, choices: [Step, Skip], correct: 1 }
-  - { ask: "Step or skip?", staff: "C4:h B3:h", clef: bass, choices: [Step, Skip], correct: 0 }
-  - { ask: "Step or skip?", staff: "A3:h F3:h", clef: bass, choices: [Step, Skip], correct: 1 }
+- ask: Step or skip?
+  choices: [Step, Skip]
+  correct: 0
+  why: 'Ledger line to the space below the staff: the very next note, a step.'
+  staff: C4:h D4:h
+  clef: treble
+- ask: Step or skip?
+  choices: [Step, Skip]
+  correct: 1
+  why: 'Line to line jumps over a space: a skip.'
+  staff: E4:h G4:h
+  clef: treble
+- ask: Step or skip?
+  choices: [Skip, Step]
+  correct: 1
+  why: 'Space down to the next line: a step.'
+  staff: F4:h E4:h
+  clef: treble
+- ask: Step or skip?
+  choices: [Step, Skip]
+  correct: 1
+  why: 'Line to line, going down: a skip.'
+  staff: G4:h E4:h
+  clef: treble
+- ask: Step or skip?
+  choices: [Step, Skip]
+  correct: 1
+  why: 'Space to space jumps over a line: a skip.'
+  staff: F4:h A4:h
+  clef: treble
+- ask: Step or skip?
+  choices: [Skip, Step]
+  correct: 1
+  why: 'Ledger line to the space just above the staff: a step.'
+  staff: C4:h B3:h
+  clef: bass
+- ask: Step or skip?
+  choices: [Step, Skip]
+  correct: 1
+  why: 'Line to line, going down: a skip.'
+  staff: A3:h F3:h
+  clef: bass
+- ask: Step or skip?
+  choices: [Skip, Step]
+  correct: 1
+  why: 'Space to the next line: a step.'
+  staff: G3:h A3:h
+  clef: bass
+- ask: A step is also called a...
+  choices: [2nd, 1st, 3rd]
+  correct: 0
+  why: 'Count both notes: C, D = 2. So a step is a 2nd.'
+- ask: A skip is also called a...
+  choices: [4th, 3rd, 2nd]
+  correct: 1
+  why: 'Count all three notes: C, D, E = 3. So a skip is a 3rd.'
+- ask: The distance between two notes is called...
+  choices: [A bar, An interval, A rest]
+  correct: 1
+  why: Steps (2nds) and skips (3rds) are the first intervals.
+- ask: Listen. Step or skip?
+  choices: [Step, Skip]
+  correct: 1
+  why: 'C to E jumps over D: a skip, a 3rd.'
+  sound: C4:h E4:h
+- ask: Listen. Step or skip?
+  choices: [Skip, Step]
+  correct: 1
+  why: 'G to A are neighbours: a step, a 2nd.'
+  sound: G4:h A4:h
+- {ask: 'Play C, then a skip up from it.', play: C4 E4, why: 'A skip up from middle C jumps over D, landing on E.',
+  staff: 'C4:h E4:h', clef: treble}

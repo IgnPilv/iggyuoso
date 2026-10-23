@@ -1,0 +1,54 @@
+id: steady-beat-quiz
+title: Beat and tempo quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A steady beat...
+  choices: [Speeds up as you go, Slows down at the end, Stays at the same speed]
+  correct: 2
+  why: Steady means every beat is the same distance apart, like a clock.
+- ask: How long is a quarter note?
+  choices: [Half a beat, One beat, Two beats]
+  correct: 1
+  why: A quarter note is the basic one-beat note.
+- ask: What does a quarter note look like?
+  choices: [A filled-in dot with a stem, An empty dot with a stem, An empty dot with no stem]
+  correct: 0
+  why: Filled dot plus stem is a quarter note; empty ones last longer.
+  staff: C4:q
+- ask: The speed of the beat is called the...
+  choices: [Rhythm, Tempo, Pitch]
+  correct: 1
+  why: Tempo is speed. Pitch is high or low; rhythm is the pattern of long and short notes.
+- ask: Which tempo is faster?
+  choices: ['120', '60']
+  correct: 0
+  why: 120 beats per minute is twice as many beats in the same time.
+- ask: At tempo 60, how far apart are the beats?
+  choices: [Two seconds, One second, Half a second]
+  correct: 1
+  why: '60 beats in 60 seconds: one each second.'
+- ask: Listen. Is the beat steady?
+  choices: ['Yes', 'No, it speeds up']
+  correct: 0
+  why: All the clicks were the same distance apart.
+  sound: C5:q C5:q C5:q C5:q C5:q C5:q
+- ask: How many quarter notes fill four beats?
+  choices: [Eight, Two, Four]
+  correct: 2
+  why: One beat each, so four of them fill four beats.
+  staff: C4:q C4:q C4:q C4:q
+- ask: What do you say for a quarter note when you count rhythms?
+  choices: [Ta-a, Ti-ti, Ta]
+  correct: 2
+  why: 'One beat, one syllable: ta. A half note is ta-a, two eighths are ti-ti.'
+- ask: When the app counts in "1, 2, 3, 4", you...
+  choices: ['Wait, then start on the next 1', Play along with the count, Start whenever you are ready]
+  correct: 0
+  why: The count-in shows the tempo. Presses during it are ignored.
+- ask: The most common beat habit for beginners is...
+  choices: [Playing too softly, Rushing, Using finger 5]
+  correct: 1
+  why: Most people speed up without noticing. Listen for the click and wait for it.

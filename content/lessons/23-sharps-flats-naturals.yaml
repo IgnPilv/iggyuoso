@@ -1,20 +1,51 @@
 id: sharps-flats-naturals
-title: "Sharps, flats and semitones"
+title: Sharps, flats and semitones
 unit: two-hands-at-once
 skills: [accidentals, semitones]
 steps:
-  - explain: |
-      A **semitone** is the smallest step on the piano: from one key to the very next key,
-      black or white. Two semitones make a **tone**.
-
-      Most white keys have a black key between them, so they are a tone apart. But **E–F** and
-      **B–C** have no black key between them: they are only a semitone apart.
-  - exercise: tone-or-semitone
-  - explain: |
-      **Sharp (♯)** = one semitone higher. **Flat (♭)** = one semitone lower.
-      **Natural (♮)** cancels them. So the black key between F and G is both **F♯** and **G♭**.
-  - exercise: sharps-and-flats
-  - explain: |
-      Black keys have two names. Find each one as fast as you can.
-  - exercise: gen-find-black-keys
-recap: "Semitone = next key. Tone = two semitones. Sharp raises, flat lowers, natural cancels."
+- explain: |
+    A **semitone** is the smallest step on the piano: from one key to the very next key,
+    black or white, with nothing in between. Two semitones make a **tone**.
+  keys: {notes: C4 C#4 D4, labels: names}
+  sound: C4:h C#4:h D4:h
+  terms: [semitone, tone]
+- explain: |
+    Most white keys have a black key between them, so they are a **tone** apart.
+    But **E–F** and **B–C** have no black key between them: they are only a **semitone** apart.
+  keys: {notes: E4 F4 B4 C5, labels: names}
+  callout: |
+    Semitone = next key. Tone = skip one key.
+  check:
+    ask: C to D is a...
+    choices: [Tone, Semitone]
+    correct: 0
+    why: 'There is a black key between C and D, so C to D is two semitones: a tone.'
+- {exercise: tone-or-semitone}
+- explain: |
+    **Sharp (♯)** = one semitone **higher**. **Flat (♭)** = one semitone **lower**.
+    F♯ is the key just right of F. B♭ is the key just left of B.
+  keys: {notes: F4 F#4 Bb4 B4, labels: names}
+  terms: [sharp, flat]
+- explain: |
+    So the black key between F and G is both **F♯** and **G♭**: one key, two names.
+    Keys like that are called **enharmonic**. Which name you use depends on the music around it.
+  keys: {notes: F#4, labels: names}
+  terms: [enharmonic]
+  check:
+    ask: The black key between C and D is called...
+    choices: [C♭ or D♯, C♯ or D♭, Only C♯]
+    correct: 1
+    why: 'Up from C (sharp) or down from D (flat): the same key.'
+- explain: |
+    A **natural (♮)** cancels a sharp or flat: play the plain white key again.
+    On the staff, the sign goes just **before** the note it changes.
+  staff: {notes: 'F4:q F#4:q F4:h', labels: names}
+  sound: F4:q F#4:q F4:h
+  terms: [natural, accidental]
+  callout: |
+    Sharps, flats and naturals written in the music are called **accidentals**.
+- {exercise: sharps-and-flats}
+- explain: |
+    Black keys have two names. Find each one as fast as you can.
+- {exercise: gen-find-black-keys}
+recap: Semitone = next key. Tone = two semitones. Sharp raises, flat lowers, natural cancels.

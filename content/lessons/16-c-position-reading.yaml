@@ -1,17 +1,37 @@
 id: c-position-reading
-title: "Reading in middle C position"
+title: Reading in middle C position
 unit: steady-hands
 skills: [reading, steps-and-skips]
 steps:
-  - explain: |
-      Time to read real lines of music. Don't name every note: find the **first** one, then
-      read the **shape**. Is the next note a step or a skip? Up or down?
-  - exercise: read-c-position-rh
-  - exercise: read-c-position-lh
-  - explain: |
-      Endless sight-reading in C position. Look for steps and skips, then play without stopping.
-  - exercise: gen-sight-read-c-rh
-  - explain: |
-      And the left hand, on the bass staff.
-  - exercise: gen-sight-read-c-lh
-recap: "Find the first note, then read steps, skips and direction."
+- explain: |
+    Time to read real lines of music. Don't name every note: find the **first** one, then
+    read the **shape**.
+  staff: {notes: 'C4:q D4:q E4:q C4:q | E4:q F4:q G4:h', labels: names}
+- explain: |
+    For each next note, ask two questions: **up or down?** and **step or skip?**
+    A repeated note stays on the same line or space.
+  staff: {notes: 'E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q'}
+  terms: [direction, repeat]
+  check:
+    ask: From the first note to the second, the music...
+    choices: [Steps up, Skips up, Repeats]
+    correct: 2
+    why: 'Both notes sit on the same line: the same note again.'
+    staff: {notes: 'E4:h E4:h'}
+- explain: |
+    Keep your eyes on the music, not your hands. In C position each finger already sits on its key,
+    so a step is the next finger and a skip skips one finger.
+  callout: |
+    Step = next finger. Skip = skip a finger.
+- {exercise: read-c-position-rh}
+- {exercise: read-c-position-lh}
+- explain: |
+    Endless sight-reading in C position. Look for steps and skips, then play without stopping.
+- {exercise: gen-sight-read-c-rh}
+- explain: |
+    And the left hand, on the bass staff.
+- {exercise: gen-sight-read-c-lh}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: reading-shapes-quiz}
+recap: Find the first note, then read steps, skips and direction.

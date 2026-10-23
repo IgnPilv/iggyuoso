@@ -1,15 +1,27 @@
 id: hands-together-held
-title: "One hand holds, one hand moves"
+title: One hand holds, one hand moves
 unit: two-hands-at-once
 skills: [hands-together, c-position]
 steps:
-  - explain: |
-      Time for both hands at once. To make room, move the left hand down: its **little finger
-      (5) goes on the C below middle C**. Now each hand has its own five keys. This is
-      **C position**.
-  - explain: |
-      Start easy: one hand holds a long note while the other moves. Keep the holding hand
-      relaxed, not pressing hard.
-  - exercise: held-lh-moving-rh
-  - exercise: held-rh-moving-lh
-recap: "C position: left hand from the C below middle C, right hand from middle C. One holds, one moves."
+- explain: |
+    Time for both hands at once. To make room, move the left hand down: its **little finger
+    (5) goes on the C below middle C**. Now each hand has its own five keys. This is **C position**.
+  keys: {notes: C3 D3 E3 F3 G3 C4 D4 E4 F4 G4, labels: fingers, fingers: 5 4 3 2 1 1 2 3 4 5}
+  terms: [C position]
+- explain: |
+    Look at the fingers: both hands play **C D E F G**, but the left hand plays them with **5 4 3 2 1**
+    and the right with **1 2 3 4 5**. The thumbs are an octave less one note apart, G and middle C.
+  sound: C3+C4:q D3+D4:q E3+E4:q F3+F4:q G3+G4:h
+  check:
+    ask: In C position, which left-hand finger plays the C below middle C?
+    choices: ['1', '5', '3']
+    correct: 1
+    why: The left little finger goes on the low C; the left thumb lands on G.
+- explain: |
+    Start easy: one hand holds a long note while the other moves. Keep the holding hand
+    relaxed, not pressing hard.
+  callout: |
+    Holding a key down takes almost no force: just enough weight to keep it down.
+- {exercise: held-lh-moving-rh}
+- {exercise: held-rh-moving-lh}
+recap: 'C position: left hand from the C below middle C, right hand from middle C. One holds, one moves.'

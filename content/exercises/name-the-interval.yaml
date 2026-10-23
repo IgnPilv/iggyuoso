@@ -1,12 +1,89 @@
 id: name-the-interval
-title: "Name the interval"
+title: Name the interval
 kind: quiz
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "Which interval?", staff: "C4:h E4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 1 }
-  - { ask: "Which interval?", staff: "C4:h G4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 3 }
-  - { ask: "Which interval?", staff: "D4:h G4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 2 }
-  - { ask: "Which interval?", staff: "E4:h F4:h", clef: treble, choices: [2nd, 3rd, 4th, 5th], correct: 0 }
-  - { ask: "Which interval?", staff: "C3:h F3:h", clef: bass, choices: [2nd, 3rd, 4th, 5th], correct: 2 }
-  - { ask: "Which interval?", staff: "G3:h D4:h", clef: bass, choices: [2nd, 3rd, 4th, 5th], correct: 3 }
-  - { ask: "Which interval?", staff: "C4:h C5:h", clef: treble, choices: [4th, 5th, 6th, Octave], correct: 3 }
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 1
+  why: 'C D E: three letters. Line to line.'
+  staff: C4:h E4:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 3
+  why: 'C D E F G: five letters. Line to line.'
+  staff: C4:h G4:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 2
+  why: 'D E F G: four letters. Space to line.'
+  staff: D4:h G4:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 0
+  why: 'E F: next-door letters. Line to space.'
+  staff: E4:h F4:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 2
+  why: 'C D E F: four letters.'
+  staff: C3:h F3:h
+  clef: bass
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 3
+  why: 'G A B C D: five letters.'
+  staff: G3:h D4:h
+  clef: bass
+- ask: Which interval?
+  choices: [4th, 5th, 6th, Octave]
+  correct: 3
+  why: 'C to the next C: eight letters, an octave.'
+  staff: C4:h C5:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 1
+  why: 'G A B: three letters. Line to line.'
+  staff: G4:h B4:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 3
+  why: 'F G A B C: five letters. Space to space.'
+  staff: F4:h C5:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 0
+  why: 'A B: next-door letters.'
+  staff: A3:h B3:h
+  clef: bass
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 1
+  why: C to E, the sweet sound of a 3rd.
+  sound: C4:h E4:h
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 3
+  why: C to G, the open, hollow sound of a 5th.
+  sound: C4:h G4:h
+- ask: When you count an interval, you count...
+  choices: [Only the notes between, Only black keys, Both end notes and every letter between]
+  correct: 2
+  why: 'C to E is C, D, E: count both ends, so it is a 3rd.'
+- ask: Line to the next space is always a...
+  choices: [3rd, 5th, 2nd]
+  correct: 2
+  why: Line to space is the very next letter.
+- ask: Odd intervals (3rds and 5ths) on the staff go...
+  choices: [Line to space, Line to line or space to space, Off the staff]
+  correct: 1
+  why: Odd intervals keep to the same kind of place.

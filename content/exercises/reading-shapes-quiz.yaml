@@ -1,0 +1,61 @@
+id: reading-shapes-quiz
+title: Reading shapes quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: The second note...
+  choices: [Steps down, Steps up, Skips up]
+  correct: 1
+  why: 'It moves from the bottom line to the space above: one step up.'
+  staff: E4:h F4:h
+  clef: treble
+- ask: The second note...
+  choices: [Skips down, Steps down, Skips up]
+  correct: 0
+  why: 'Line to line, going down: a skip down.'
+  staff: G4:h E4:h
+  clef: treble
+- ask: The second note...
+  choices: [Steps down, Repeats, Steps up]
+  correct: 1
+  why: Both notes are in the same place on the staff.
+  staff: D4:h D4:h
+  clef: treble
+- ask: The second note...
+  choices: [Steps down, Repeats, Skips down]
+  correct: 0
+  why: 'From the ledger line to the space just above the staff: one step down.'
+  staff: C4:h B3:h
+  clef: bass
+- ask: The second note...
+  choices: [Skips down, Steps up, Skips up]
+  correct: 2
+  why: 'Line to line, going up: a skip up.'
+  staff: F3:h A3:h
+  clef: bass
+- ask: Right hand in C position. You play E with finger 3. The next note skips up. Which finger?
+  choices: ['2', '5', '4']
+  correct: 1
+  why: 'A skip skips a finger: from 3, skip 4, land on 5 (G).'
+- ask: Right hand in C position. You play F with finger 4. The next note steps down. Which finger?
+  choices: ['3', '2', '5']
+  correct: 0
+  why: 'A step is the next finger: 4 down to 3 (E).'
+- ask: Left hand in C position. You play C with finger 1. The next note skips down. Which note?
+  choices: [A, B, G]
+  correct: 0
+  why: Skip down from middle C jumps over B, landing on A (finger 3).
+- ask: When reading, your eyes should be mostly on...
+  choices: [The music, The metronome, Your hands]
+  correct: 0
+  why: In a fixed position your fingers already know the keys; keep reading ahead.
+- ask: What should you find first in a new line of music?
+  choices: [The last note, The first note, The highest note]
+  correct: 1
+  why: Find the first note, then read the shape from it.
+- {ask: Play these notes., play: C4 E4 D4 F4 E4, why: 'Middle C, skip up, step down, skip up, step down.', staff: 'C4:q
+    E4:q D4:q F4:q | E4:w', clef: treble}
+- {ask: Play these notes., play: C4 A3 B3 G3, why: 'Middle C, skip down to A, step up to B, skip down to G.', staff: 'C4:q
+    A3:q B3:q G3:q', clef: bass}

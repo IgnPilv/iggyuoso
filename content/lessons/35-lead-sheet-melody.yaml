@@ -1,11 +1,20 @@
 id: lead-sheet-melody
-title: "A tune with chords"
+title: A tune with chords
 unit: first-chords
 skills: [lead-sheet, accompaniment, repertoire]
 steps:
-  - explain: |
-      A **lead sheet** shows only the melody with chord symbols above it, like
-      "C ... G7 ... C". Pianists fill in the left hand themselves. Here's Ode to Joy that way:
-      C under the tune, G7 where it pulls toward home.
-  - exercise: ode-to-joy-chords
-recap: "Melody plus chord symbols = lead sheet. C and G7 can carry a whole tune."
+- explain: |
+    A **lead sheet** shows only the melody with chord symbols above it, like
+    "C ... G7 ... C". Pianists fill in the left hand themselves.
+  terms: [lead sheet]
+- explain: |
+    Here's Ode to Joy that way: C under the tune, G7 where it pulls toward home.
+    Choose the chord by the melody notes: if the tune is on C, E or G, C fits; on B, D or F, G7 fits.
+  staff: {notes: 'E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q'}
+  check:
+    ask: The melody note is D. Which chord fits better?
+    choices: [C, G7]
+    correct: 1
+    why: D is in G7 (G B D F), not in C (C E G).
+- {exercise: ode-to-joy-chords}
+recap: Melody plus chord symbols = lead sheet. C and G7 can carry a whole tune.

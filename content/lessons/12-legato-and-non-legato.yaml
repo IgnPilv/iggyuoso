@@ -1,18 +1,37 @@
 id: legato-and-non-legato
-title: "Detached and smooth"
+title: Detached and smooth
 unit: steady-hands
 skills: [non-legato, legato]
 steps:
-  - explain: |
-      There are two basic ways to join notes.
-
-      **Detached** (non legato): lift each finger before the next note, so there is a tiny gap.
-      Let the weight of your arm drop into each key, then float up.
-  - exercise: detached-steps-rh
-  - explain: |
-      **Smooth** (legato): hold each key down until the very moment the next one goes down,
-      like walking: one foot lifts as the other lands. Music-school pupils learn detached first,
-      then smooth, and so do we.
-  - exercise: smooth-steps-rh
-  - exercise: smooth-steps-lh
-recap: "Detached = small gaps. Smooth (legato) = one note hands over to the next with no gap."
+- explain: |
+    There are two basic ways to join notes. This is called **articulation**: how notes are
+    started and joined, not which notes they are.
+  terms: [articulation]
+- explain: |
+    **Detached** (non legato): lift each finger before the next note, so there is a tiny gap.
+    Let the weight of your arm drop into each key, then float up.
+    Listen to the little gaps.
+  sound: C4:e r:e D4:e r:e E4:e r:e F4:e r:e G4:h
+  terms: [non legato, detached]
+- {exercise: detached-steps-rh}
+- explain: |
+    **Smooth** (legato): hold each key down until the very moment the next one goes down,
+    like walking: one foot lifts as the other lands. Listen: no gaps at all.
+  sound: C4:q D4:q E4:q F4:q G4:h
+  terms: [legato, slur]
+- explain: |
+    In music, legato is shown by a curved line over or under the notes, called a **slur**.
+    Music-school pupils learn detached first, then smooth, and so do we.
+  callout: |
+    Legato is a hand-over: the next finger goes down **as** the last one comes up.
+  check:
+    ask: Legato means...
+    choices: ['Smooth, with no gaps', Short and bouncy, Loud]
+    correct: 0
+    why: 'Legato is Italian for tied together: each note joins the next.'
+- {exercise: smooth-steps-rh}
+- {exercise: smooth-steps-lh}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: articulation-quiz}
+recap: Detached = small gaps. Smooth (legato) = one note hands over to the next with no gap.

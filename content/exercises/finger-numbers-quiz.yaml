@@ -1,0 +1,51 @@
+id: finger-numbers-quiz
+title: Finger numbers quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Which finger is number 1?
+  choices: [Thumb, Little finger, Pointer]
+  correct: 0
+  why: Every hand counts from the thumb, so the thumb is 1.
+- ask: Which finger is number 5?
+  choices: [Ring finger, Little finger, Thumb]
+  correct: 1
+  why: The little finger is the last one, so it is 5.
+- ask: Which finger is number 3?
+  choices: [Ring finger, Pointer, Middle finger]
+  correct: 2
+  why: Thumb 1, pointer 2, middle 3.
+- ask: Which finger is number 2?
+  choices: [Middle finger, Pointer, Thumb]
+  correct: 1
+  why: The pointer comes right after the thumb, so it is 2.
+- ask: Which finger is number 4?
+  choices: [Ring finger, Little finger, Middle finger]
+  correct: 0
+  why: The ring finger sits between the middle (3) and little (5) fingers.
+- ask: Is the left thumb also number 1?
+  choices: ['Yes', 'No, it is 5']
+  correct: 0
+  why: Both hands use the same numbers. Thumbs are always 1.
+- ask: Right hand, five fingers on five white keys. Which finger plays the highest one?
+  choices: ['1', '5', '3']
+  correct: 1
+  why: In the right hand the little finger is furthest right, so it plays the highest key.
+- ask: Left hand, five fingers on five white keys. Which finger plays the highest one?
+  choices: ['1', '5', '2']
+  correct: 0
+  why: In the left hand the thumb is furthest right, so the thumb plays the highest key.
+- ask: Your fingers should be...
+  choices: [Tucked under, Flat and straight, 'Curved, like holding a ball']
+  correct: 2
+  why: A curved hand lets each fingertip land firmly and move quickly.
+- ask: Which part of the finger presses the key?
+  choices: [The flat pad, The nail, The round tip]
+  correct: 2
+  why: 'Play on the tips: the finger stays strong and the sound stays even.'
+- ask: A note has a small 3 above it. Which finger plays it?
+  choices: [Pointer, Middle finger, Ring finger]
+  correct: 1
+  why: A number over a note is a finger number. 3 is the middle finger, in either hand.

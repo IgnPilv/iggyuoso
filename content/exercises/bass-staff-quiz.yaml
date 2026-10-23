@@ -1,0 +1,58 @@
+id: bass-staff-quiz
+title: Bass staff quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: The bass clef is used mostly for the...
+  choices: [Left hand, Metronome, Right hand]
+  correct: 0
+  why: Bass means low; the left hand plays the lower part.
+- ask: The bass clef's two dots sit around which line?
+  choices: [The F line, The G line, The C line]
+  correct: 0
+  why: That is why it is also called the F clef.
+- ask: On the bass staff, middle C is...
+  choices: [On the bottom line, On a ledger line above the staff, On a ledger line below the staff]
+  correct: 1
+  why: Middle C is above the bass staff and below the treble staff.
+- ask: Which note is this?
+  choices: [C, A, B]
+  correct: 0
+  why: The ledger line above the bass staff is middle C.
+  staff: C4:w
+  clef: bass
+- ask: Which note is this?
+  choices: [A, C, B]
+  correct: 2
+  why: B hangs just above the top line, one step below middle C.
+  staff: B3:w
+  clef: bass
+- ask: Which note is this?
+  choices: [A, G, B]
+  correct: 0
+  why: A sits on the top line of the bass staff.
+  staff: A3:w
+  clef: bass
+- ask: Which note is this?
+  choices: [F, G, E]
+  correct: 0
+  why: The fourth line, between the clef's dots, is F.
+  staff: F3:w
+  clef: bass
+- ask: The two staffs joined together for piano are called the...
+  choices: [Bass staff, Double staff, Grand staff]
+  correct: 2
+  why: Treble plus bass, joined by a brace, make the grand staff.
+- ask: On the grand staff, middle C is...
+  choices: [At the top of the treble staff, Between the two staffs, At the bottom of the bass staff]
+  correct: 1
+  why: It sits on a ledger line in between, shared by both hands.
+- ask: A note on the top line of the bass staff and a note on the bottom line of the treble staff. Which is higher?
+  choices: [The bass one, They are the same, The treble one]
+  correct: 2
+  why: Bass top line is A below middle C; treble bottom line is E above it.
+- {ask: Play this note., play: C4, why: 'Ledger line above the bass staff: middle C.', staff: 'C4:w', clef: bass}
+- {ask: Play this note., play: A3, why: 'Top line of the bass staff: the A below middle C.', staff: 'A3:w', clef: bass}
+- {ask: Play these notes., play: C4 B3 A3, why: 'Down from middle C: C, B, A.', staff: 'C4:q B3:q A3:h', clef: bass}

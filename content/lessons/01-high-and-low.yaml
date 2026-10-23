@@ -3,13 +3,40 @@ title: High and low
 unit: meet-the-keyboard
 skills: [keyboard-geography]
 steps:
-  - explain: |
-      Sounds can be **low**, like a big bear growling, or **high**, like a little bird singing.
-      On the piano, the keys on the **left** sound **lower** and the keys on the **right** sound **higher**.
-  - exercise: play-low-play-high
-  - explain: |
-      Now look at the black keys. They are not all in one row: they come in little groups.
-      Some groups have **two** black keys, some have **three**. The groups take turns: two, three, two, three...
-  - exercise: find-two-black-groups
-  - exercise: find-three-black-groups
+- explain: |
+    Listen to two notes. The first one is **low**, like a big bear growling.
+    The second is **high**, like a little bird singing.
+  sound: C2:h C6:h
+  terms: [low, high, pitch]
+- explain: |
+    On the piano, the keys on the **left** sound **lower** and the keys on the **right** sound **higher**.
+    How high or low a sound is, is called its **pitch**.
+  keys: {notes: C2 C6, labels: none}
+  callout: |
+    Moving **right** = going **up**. Moving **left** = going **down**.
+  check:
+    ask: You play a key, then one further to the right. The second one sounds...
+    choices: [Higher, Lower, The same]
+    correct: 0
+    why: Keys get higher as you move right, so the second one is higher.
+- {exercise: play-low-play-high}
+- explain: |
+    Now look at the **black keys**. They are not one long row: they come in little **groups**.
+    Some groups have **two** black keys, some have **three**.
+  keys: {notes: C#4 D#4 F#4 G#4 A#4, labels: none}
+  terms: [black keys, group of two, group of three]
+- explain: |
+    The groups take turns all the way up the keyboard: two, three, two, three...
+    These groups are your map. In the next lessons every white key gets its name from them.
+  keys: {notes: C#3 D#3 F#3 G#3 A#3 C#4 D#4 F#4 G#4 A#4, labels: none}
+  check:
+    ask: After a group of two black keys comes a group of...
+    choices: [Two, Three, Four]
+    correct: 1
+    why: 'The groups always take turns: two, then three, then two again.'
+- {exercise: find-two-black-groups}
+- {exercise: find-three-black-groups}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: high-and-low-quiz}
 recap: Left is low, right is high. Black keys come in groups of two and three.

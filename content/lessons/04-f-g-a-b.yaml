@@ -3,16 +3,42 @@ title: F, G, A and B
 unit: meet-the-keyboard
 skills: [note-names, keyboard-geography]
 steps:
-  - explain: |
-      Now find a group of **three** black keys. The white key just to the **left** of it is **F**.
-      Going right, the next white keys are **G**, **A** and **B**.
-  - exercise: find-all-f
-  - exercise: find-all-g-a-b
-  - explain: |
-      Now every white key has a name: C D E around the two black keys, F G A B around the three.
-      Then it starts again at C.
-  - exercise: name-any-white-key
-  - explain: |
-      All seven letters now, in random order. Aim for under two seconds each.
-  - exercise: gen-find-white-keys
+- explain: |
+    Now find a group of **three** black keys. The white key just to the **left** of it is **F**.
+  keys: {notes: F4, labels: names}
+  callout: |
+    C is left of the **two**. F is left of the **three**.
+- explain: |
+    Going right from F, the next white keys are **G**, **A** and **B**.
+    G and A sit between the black keys; B is just right of the group of three.
+  keys: {notes: F4 G4 A4 B4, labels: names}
+  sound: F4:q G4:q A4:q B4:q
+  check:
+    ask: Which white key is just right of the three black keys?
+    choices: [A, B, C]
+    correct: 1
+    why: F G A B go left to right around the three black keys, so B is on the right.
+- {exercise: find-all-f}
+- {exercise: find-all-g-a-b}
+- explain: |
+    Now every white key has a name: **C D E** around the two black keys, **F G A B** around the three.
+    Then it starts again at C.
+  keys: {notes: C4 D4 E4 F4 G4 A4 B4 C5, labels: names}
+  sound: C4:q D4:q E4:q F4:q G4:q A4:q B4:q C5:q
+- explain: |
+    Two places have **no black key** between the white keys: **E–F** and **B–C**.
+    Remember them: they come up again when we meet semitones.
+  keys: {notes: E4 F4 B4 C5, labels: names}
+  check:
+    ask: Which pair of white keys has no black key between them?
+    choices: [F and G, C and D, E and F]
+    correct: 2
+    why: E–F and B–C are the two places where white keys touch with no black key in between.
+- {exercise: name-any-white-key}
+- explain: |
+    All seven letters now, in random order. Aim for under two seconds each.
+- {exercise: gen-find-white-keys}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: f-g-a-b-quiz}
 recap: F G A B sit around the three black keys. All seven letters repeat up the keyboard.

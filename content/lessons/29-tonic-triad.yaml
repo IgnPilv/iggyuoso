@@ -1,13 +1,39 @@
 id: tonic-triad
-title: "Triads"
+title: Triads
 unit: first-chords
 skills: [triads, chords]
 steps:
-  - explain: |
-      A **chord** is several notes played together. The most common chord is a **triad**:
-      three notes stacked in skips (3rds). Take a note, skip one, play one, skip one, play one.
-
-      The bottom note is the **root** and names the chord. C–E–G is a C triad. On the staff a
-      triad looks like a little snowman: all on lines or all on spaces.
-  - exercise: build-c-f-g
-recap: "Triad = root, 3rd and 5th, stacked in skips. The root names it."
+- explain: |
+    A **chord** is several notes played together. Listen: three notes, one sound.
+  sound: C4+E4+G4:w
+  terms: [chord]
+- explain: |
+    The most common chord is a **triad**: three notes stacked in skips (3rds).
+    Take a note, skip one, play one, skip one, play one. C, (D), E, (F), G.
+  keys: {notes: C4 E4 G4, labels: names, fingers: 1 3 5}
+  terms: [triad]
+- explain: |
+    The bottom note is the **root** and names the chord. The middle one is the **3rd**, the top one the **5th**,
+    counted up from the root. C–E–G is a **C triad**.
+  staff: {notes: 'C4+E4+G4:w', labels: names}
+  terms: [root, 3rd, 5th]
+  check:
+    ask: Which note is the root of the triad F–A–C?
+    choices: [F, A, C]
+    correct: 0
+    why: The root is the bottom note when the triad is stacked in 3rds. It names the chord.
+- explain: |
+    On the staff a triad looks like a little **snowman**: all on lines or all in spaces, stacked tight.
+  staff: {notes: 'C4+E4+G4:w | F4+A4+C5:w | G4+B4+D5:w'}
+  callout: |
+    Right hand: fingers 1, 3 and 5. Left hand: 5, 3 and 1.
+  check:
+    ask: 'Build a G triad: skip-stack from G. What are the notes?'
+    choices: [G A B, G C E, G B D]
+    correct: 2
+    why: G, skip A, B, skip C, D.
+- {exercise: build-c-f-g}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: triads-quiz}
+recap: Triad = root, 3rd and 5th, stacked in skips. The root names it.

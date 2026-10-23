@@ -1,11 +1,63 @@
 id: chord-symbols-quiz
-title: "Chord symbols and numbers quiz"
+title: Chord symbols and numbers quiz
 kind: quiz
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "Which chord is C, E and G?", choices: [C, F, G], correct: 0 }
-  - { ask: "Which chord is F, A and C?", choices: [C, F, G], correct: 1 }
-  - { ask: "In the key of C, which chord is I?", choices: [C, F, G], correct: 0 }
-  - { ask: "In the key of C, which chord is V?", choices: [C, F, G], correct: 2 }
-  - { ask: "In the key of C, which chord is IV?", choices: [C, F, G], correct: 1 }
-  - { ask: "G7 is a G triad plus...", choices: [F, A, C], correct: 0 }
+- ask: Which chord is C, E and G?
+  choices: [F, C, G]
+  correct: 1
+  why: The root C names it.
+- ask: Which chord is F, A and C?
+  choices: [C, G, F]
+  correct: 2
+  why: The root F names it.
+- ask: Which chord is G, B and D?
+  choices: [F, G, C]
+  correct: 1
+  why: The root G names it.
+- ask: In the key of C, which chord is I?
+  choices: [C, F, G]
+  correct: 0
+  why: I is the home note's chord.
+- ask: In the key of C, which chord is V?
+  choices: [G, F, C]
+  correct: 0
+  why: 'Count C D E F G: G is 5.'
+- ask: In the key of C, which chord is IV?
+  choices: [G, C, F]
+  correct: 2
+  why: 'Count C D E F: F is 4.'
+- ask: The three primary chords are...
+  choices: ['I, IV and V', 'IV, V and VI', 'I, II and III']
+  correct: 0
+  why: Home, the chord a 4th up and the chord a 5th up.
+- ask: G7 is a G triad plus...
+  choices: [F, C, A]
+  correct: 0
+  why: 'G B D plus another 3rd: F.'
+- ask: Which chord wants to go home most strongly?
+  choices: [IV, I, V7]
+  correct: 2
+  why: V7 pulls to I.
+- ask: Chord symbols like C or G7 are written...
+  choices: [Above the melody, In the key signature, Under the bass staff]
+  correct: 0
+  why: In songbooks and lead sheets the symbols sit over the tune.
+- ask: Listen. Does the music sound finished?
+  choices: ['Yes, it went home', 'No, it is waiting']
+  correct: 0
+  why: 'It ended on the C chord, I: home.'
+  sound: G3+B3+D4+F4:h C4+E4+G4:w
+- ask: Listen. Does the music sound finished?
+  choices: ['No, it is waiting', 'Yes, it went home']
+  correct: 0
+  why: It ended on G7, V7, which wants to go on to C.
+  sound: C4+E4+G4:h G3+B3+D4+F4:w
+- ask: Which chord is this?
+  choices: [C, G, G7]
+  correct: 2
+  why: 'Four notes stacked in 3rds from G: G B D F.'
+  staff: G4+B4+D5+F5:w
+  clef: treble

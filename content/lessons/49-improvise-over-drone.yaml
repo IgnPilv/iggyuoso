@@ -1,11 +1,24 @@
 id: improvise-over-drone
-title: "Improvise in C"
+title: Improvise in C
 unit: year-1-recital
 skills: [improvisation]
 steps:
-  - explain: |
-      Make up an 8-bar tune using only **C D E F G**. A trick from folk music: let the first four
-      bars ask a question (end on D, E or G), and let the last four answer it (end on C, home).
-      The rhythm is given; the notes are yours.
-  - exercise: improvise-in-c
-recap: "Question then answer: end the first half away from home, the second half on C."
+- explain: |
+    Make up an 8-bar tune using only **C D E F G**. A trick from folk music: let the first four
+    bars ask a **question**, and let the last four **answer** it.
+  terms: [phrase, question and answer]
+- explain: |
+    A question ends away from home (on D, E or G). The answer ends on **C**, home. Listen.
+  sound: C4:q D4:q E4:q F4:q | G4:h E4:h | F4:q E4:q D4:q E4:q | D4:w | C4:q D4:q E4:q F4:q | G4:h E4:h | D4:q E4:q
+    D4:q B3:q | C4:w
+  check:
+    ask: The answer phrase should end on...
+    choices: [D, 'C, home', G]
+    correct: 1
+    why: Ending on the home note makes the tune sound finished.
+- explain: |
+    The rhythm is given; the notes are yours. Mostly steps with a few skips sound like a real tune.
+  callout: |
+    Repeat an idea from the question in the answer: it makes your tune hang together.
+- {exercise: improvise-in-c}
+recap: 'Question then answer: end the first half away from home, the second half on C.'

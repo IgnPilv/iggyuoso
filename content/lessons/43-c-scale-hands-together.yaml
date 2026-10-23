@@ -1,11 +1,19 @@
 id: c-scale-hands-together
-title: "C major scale, hands together"
+title: C major scale, hands together
 unit: scales-and-eighths
 skills: [scales, hands-together]
 steps:
-  - explain: |
-      Now both hands. The fingers don't match: the hands cross at different moments. Watch for
-      the two spots where one hand's thumb tucks under while the other hand crosses over.
-      If it falls apart, slow down, don't stop.
-  - exercise: c-scale-together
-recap: "Hands together: different fingers, same notes. Slow down rather than stop."
+- explain: |
+    Now both hands. The fingers don't match: the hands cross at different moments.
+  keys: {notes: C3 D3 E3 F3 G3 A3 B3 C4, labels: fingers, fingers: 5 4 3 2 1 3 2 1}
+- explain: |
+    Watch for the two spots where one hand's thumb tucks under while the other hand crosses over:
+    going up, the right thumb tucks under on **F**; one note later the left thumb reaches G, so on **A** the left 3
+    crosses over. If it falls apart, slow down, don't stop.
+  check:
+    ask: Hands together going up, on the note F, the right hand plays...
+    choices: ['4', '1', '3']
+    correct: 1
+    why: Right hand 1 2 3, then thumb under on F.
+- {exercise: c-scale-together}
+recap: 'Hands together: different fingers, same notes. Slow down rather than stop.'

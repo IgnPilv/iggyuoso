@@ -1,12 +1,24 @@
 id: lh-chords
-title: "Left-hand chords"
+title: Left-hand chords
 unit: first-chords
 skills: [accompaniment, hands-together]
 steps:
-  - explain: |
-      Here's how most popular music is played: the **right hand plays the tune**, the **left hand
-      plays chords**. Move between C and G7 by changing only the fingers that must move: the G stays.
-
-      Play the chords softly and hold them for the full bar.
-  - exercise: melody-over-chords
-recap: "Right hand sings, left hand holds chords. Change only the fingers that must move."
+- explain: |
+    Here's how most popular music is played: the **right hand plays the tune**, the **left hand
+    plays chords**. Listen.
+  sound: E4:q D4:q C4:h | D4:q D4:q D4:h
+- explain: |
+    Move between C and G7 by changing only the fingers that must move: the **G stays**,
+    C goes down a semitone to B, and E goes up a semitone to F. C–E–G becomes B–F–G.
+  keys: {notes: C3 E3 G3, labels: names, fingers: 5 3 1}
+  callout: |
+    Keep the common note down. Moving as little as possible is called **good voice leading**.
+  check:
+    ask: From C (C E G) to G7 (B F G), which note stays?
+    choices: [C, E, G]
+    correct: 2
+    why: G is in both chords, so finger 1 stays on it.
+- explain: |
+    Play the chords softly and hold them for the full bar. The tune goes a little louder on top.
+- {exercise: melody-over-chords}
+recap: Right hand sings, left hand holds chords. Change only the fingers that must move.

@@ -1,0 +1,106 @@
+id: y1-theory-exit
+title: 'Year 1 exam: theory'
+kind: quiz
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: Which note is this?
+  choices: [F, G, E]
+  correct: 0
+  why: The F line of the bass clef.
+  staff: F3:w
+  clef: bass
+- ask: Which note is this?
+  choices: [A, C, B]
+  correct: 2
+  why: Middle line of the treble staff.
+  staff: B4:w
+  clef: treble
+- ask: Which note is this?
+  choices: [C, D, E]
+  correct: 1
+  why: Fourth line of the treble staff.
+  staff: D5:w
+  clef: treble
+- ask: Which note is this?
+  choices: [C, D, B]
+  correct: 0
+  why: 'Ledger line above the bass staff: middle C.'
+  staff: C4:w
+  clef: bass
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 3
+  why: G A B C D.
+  staff: G4:h D5:h
+  clef: treble
+- ask: Which interval?
+  choices: [2nd, 3rd, 4th, 5th]
+  correct: 2
+  why: A B C D.
+  staff: A3:h D4:h
+  clef: bass
+- ask: Which chord is this?
+  choices: [C, G, F]
+  correct: 1
+  why: G B D.
+  staff: G4+B4+D5:w
+  clef: treble
+- ask: In the key of C, which chord is IV?
+  choices: [D, G, F]
+  correct: 2
+  why: C D E F.
+- ask: The major scale pattern is...
+  choices: [T T S T T T S, T T T S T T S, T S T T S T T]
+  correct: 0
+  why: Semitones between 3–4 and 7–8.
+- ask: Which black keys does D major need?
+  choices: [B♭, F♯ only, F♯ and C♯]
+  correct: 2
+  why: D E F♯ G A B C♯ D.
+- ask: The relative minor of C major is...
+  choices: [A minor, C minor, D minor]
+  correct: 0
+  why: Same notes, home on A.
+- ask: D minor position is...
+  choices: [D E F♯ G A, D E F G A, D E♭ F G A]
+  correct: 1
+  why: 'Lowered 3rd: F.'
+- ask: How many beats is a dotted quarter?
+  choices: ['2', '3', 1½]
+  correct: 2
+  why: 1 + ½.
+- ask: How many beats are in this bar?
+  choices: [Three, Five, Four]
+  correct: 2
+  why: 1½ + ½ + 1 + ½ + ½ = 4.
+  staff: C4:q. C4:e C4:q C4:e C4:e
+- ask: What key is this in?
+  choices: [D minor, F major, G major]
+  correct: 1
+  why: One flat (B♭), starting and ending on F.
+  staff: F4:q A4:q C5:q F4:q
+  clef: treble
+  key: F
+- ask: A natural sign...
+  choices: [Cancels a sharp or flat, Raises a note]
+  correct: 0
+  why: Plays the plain note.
+- ask: A crescendo means...
+  choices: [Getting softer, Getting louder]
+  correct: 1
+  why: Crescendo = growing.
+- ask: In F major, right hand, B♭ is played with finger...
+  choices: ['3', '4', '1']
+  correct: 1
+  why: 1 2 3 4, thumb under to C.
+- ask: A major third has how many semitones?
+  choices: [Five, Four, Three]
+  correct: 1
+  why: 'C to E: four semitones.'
+- ask: A dot after a note...
+  choices: [Makes it staccato, Adds half its value]
+  correct: 1
+  why: The rule for every dot.

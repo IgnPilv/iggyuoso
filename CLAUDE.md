@@ -297,3 +297,10 @@ never copied pages). Start small, adapt as we go.
   note sits small under the first step only, and a short day-one Today's practice says why.
   Demo scenes "Theory screens" and "Theory quiz". The home path map, tree view and exercise
   controls drawer belong to the design thread.
+- 2026-10-23: Theory pass (Ignas's audit: "theory should be bigger, there should be quizzes... not just
+  1 line"). Every exercise has a `title`. Year 1 theory is written as several screens per idea using
+  the theory blocks (picture on the staff or keys, a sound, a callout, key terms, a quick check that
+  must be answered right). Each theory lesson ends with a 10–20 question quiz mixing pick, read the
+  staff, hear and play questions, and **every quiz question carries a `why`**. Checkpoints and exams
+  open with a theory paper (`feedback: none`, reps 1). Theory quizzes default to `reps: 2, days: 2`.
+  Scratch scripts mix choice order with a seeded shuffle (the app shuffles questions only).

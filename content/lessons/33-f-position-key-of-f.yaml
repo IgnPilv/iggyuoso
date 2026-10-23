@@ -1,15 +1,34 @@
 id: f-position-key-of-f
-title: "One flat: the key of F"
+title: 'One flat: the key of F'
 unit: first-chords
 skills: [key-signatures, five-finger-position]
 steps:
-  - explain: |
-      **F major** needs **B flat**. Its key signature is one flat, on the B line.
-      In **F position** the right thumb sits on F above middle C: F G A B♭ C. Finger 4 goes on the
-      black key, so let the hand move slightly in toward the piano.
-  - exercise: key-of-f-quiz
-  - exercise: f-position-rh
-  - explain: |
-      Endless short tunes in F position.
-  - exercise: gen-sight-read-f-rh
-recap: "F major: one flat, B flat. F position puts finger 4 on a black key."
+- explain: |
+    **F major** uses F as home and needs **B flat**. Listen: with B♮ it sounds wrong; with B♭ it sounds right.
+  sound: F4:q G4:q A4:q B4:q C5:h | F4:q G4:q A4:q Bb4:q C5:h
+  terms: [F major]
+- explain: |
+    Its key signature is **one flat, on the B line**. Every B is B♭.
+  staff: {notes: 'F4:q G4:q A4:q Bb4:q | C5:q D5:q E5:q F5:q', key: F}
+  callout: |
+    One flat (B♭) = F major. One sharp (F♯) = G major.
+  check:
+    ask: One flat in the key signature means...
+    choices: [F major, G major, B major]
+    correct: 0
+    why: F major is the key with just B♭.
+- explain: |
+    In **F position** the right thumb sits on F above middle C: **F G A B♭ C**.
+    Finger 4 goes on the black key, so let the hand move slightly in toward the piano.
+  keys: {notes: F4 G4 A4 Bb4 C5, labels: fingers, fingers: 1 2 3 4 5}
+  check:
+    ask: In F position, which finger plays B♭?
+    choices: ['3', '5', '4']
+    correct: 2
+    why: F1 G2 A3 B♭4 C5.
+- {exercise: key-of-f-quiz}
+- {exercise: f-position-rh}
+- explain: |
+    Endless short tunes in F position.
+- {exercise: gen-sight-read-f-rh}
+recap: 'F major: one flat, B flat. F position puts finger 4 on a black key.'

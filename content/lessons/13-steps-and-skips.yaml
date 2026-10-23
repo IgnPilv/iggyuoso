@@ -1,19 +1,39 @@
 id: steps-and-skips
-title: "Steps and skips"
+title: Steps and skips
 unit: steady-hands
 skills: [intervals, reading]
 steps:
-  - explain: |
-      The distance between two notes is called an **interval**.
-
-      A **step** goes to the very next white key. On the staff it moves from a line to the next
-      space, or from a space to the next line. Musicians call it a **2nd**.
-
-      A **skip** jumps over one white key. On the staff it goes line to line, or space to space.
-      That is a **3rd**.
-  - exercise: steps-or-skips
-  - exercise: play-steps-and-skips
-  - explain: |
-      Notes on both staves now, from the C below middle C to the G above.
-  - exercise: gen-read-grand-c-position
-recap: "Step = 2nd = next key, line to space. Skip = 3rd = skip a key, line to line or space to space."
+- explain: |
+    The distance between two notes is called an **interval**. Reading by intervals is the secret
+    of fast reading: you don't name every note, you see how far the next one moves.
+  terms: [interval]
+- explain: |
+    A **step** goes to the very next white key. On the staff it moves from a line to the next
+    space, or from a space to the next line. Musicians call it a **2nd**.
+  staff: {notes: 'E4:h F4:h | F4:h G4:h', labels: names}
+  keys: {notes: E4 F4, labels: names}
+  sound: E4:h F4:h
+  terms: [step, 2nd]
+- explain: |
+    A **skip** jumps over one white key. On the staff it goes **line to line**, or **space to space**.
+    That is a **3rd**.
+  staff: {notes: 'E4:h G4:h | F4:h A4:h', labels: names}
+  keys: {notes: E4 G4, labels: names}
+  sound: E4:h G4:h
+  terms: [skip, 3rd]
+  check:
+    ask: Two notes on neighbouring lines are a...
+    choices: [Step (2nd), Skip (3rd), Repeat]
+    correct: 1
+    why: 'Line to the next line jumps over the space between: a skip.'
+    staff: {notes: 'E4:h G4:h'}
+- explain: |
+    To count an interval, count **both** notes: C to D is C, D = **2**nd. C to E is C, D, E = **3**rd.
+  callout: |
+    Count the starting note as 1. That is why a step is a 2nd, not a 1st.
+- {exercise: steps-or-skips}
+- {exercise: play-steps-and-skips}
+- explain: |
+    Notes on both staves now, from the C below middle C to the G above.
+- {exercise: gen-read-grand-c-position}
+recap: Step = 2nd = next key, line to space. Skip = 3rd = skip a key, line to line or space to space.

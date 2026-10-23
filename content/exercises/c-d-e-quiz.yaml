@@ -1,0 +1,44 @@
+id: c-d-e-quiz
+title: C, D and E quiz
+kind: quiz
+shuffle: true
+pitchMatch: pitchClass
+reps: 2
+days: 2
+questions:
+- ask: How many letters does music use?
+  choices: [Eight, Twelve, Seven]
+  correct: 2
+  why: 'A B C D E F G: seven letters, then they start again.'
+- ask: Which letter comes after G?
+  choices: [A, H, F]
+  correct: 0
+  why: The alphabet stops at G and goes back to A.
+- ask: C sits next to a group of two black keys. On which side?
+  choices: [Right, Left, In the middle]
+  correct: 1
+  why: C is just to the left of the two black keys.
+- ask: Which white key is between the two black keys?
+  choices: [E, D, C]
+  correct: 1
+  why: D sits in the middle, like a dog in its kennel.
+- ask: Which white key is just right of the two black keys?
+  choices: [D, F, E]
+  correct: 2
+  why: E is on the right side of the group of two.
+- ask: How many Cs does a piano have?
+  choices: [Just one, 'Many, one by every group of two', Two]
+  correct: 1
+  why: Every group of two black keys has a C to its left, so there are seven or eight of them.
+- ask: Two keys with the same letter sound...
+  choices: [Exactly the same height, 'Alike, one higher than the other', Completely different]
+  correct: 1
+  why: Notes an octave apart share a name because they sound alike, just higher or lower.
+- ask: The distance from one C up to the next C is called...
+  choices: [An octave, A bar, A step]
+  correct: 0
+  why: 'Octave comes from eight: C D E F G A B C is eight notes.'
+- {ask: Play any D., play: D4, why: D is between the two black keys.}
+- {ask: Play any E., play: E4, why: E is just right of the two black keys.}
+- {ask: Play any C., play: C4, why: C is just left of the two black keys.}
+- {ask: 'Play C, then D, then E.', play: C4 D4 E4, why: 'Left of, between, then right of the same group of two.'}

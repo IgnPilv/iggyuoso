@@ -1,15 +1,43 @@
 id: chord-symbols
-title: "Chord symbols and numbers"
+title: Chord symbols and numbers
 unit: first-chords
 skills: [chord-symbols, roman-numerals, primary-chords]
 steps:
-  - explain: |
-      Musicians name chords two ways. **Chord symbols** use the root's letter: C, F, G.
-      **Roman numerals** count from the key's home note: in the key of C, C is **I**, F is **IV**
-      and G is **V**. These three are the **primary chords**; thousands of songs use only them.
-  - exercise: chord-symbols-quiz
-  - explain: |
-      **V7** (G7 in C) adds one more note on top: G B D **F**. It sounds like it wants to go home
-      to C. For the left hand there's a short version that sits right next to the C chord.
-  - exercise: build-g7
-recap: "I, IV and V are the primary chords. V7 pulls back home to I."
+- explain: |
+    Musicians name chords two ways. **Chord symbols** use the root's letter: C, F, G.
+    You'll see them written above the melody in songbooks.
+  staff: {notes: 'C4+E4+G4:w | F4+A4+C5:w | G4+B4+D5:w | C4+E4+G4:w'}
+  sound: C4+E4+G4:h F4+A4+C5:h G4+B4+D5:h C4+E4+G4:h
+  terms: [chord symbol]
+- explain: |
+    **Roman numerals** count from the key's **home note**: in the key of C, C is **I**, D is II, E is III,
+    F is **IV** and G is **V**. A chord built on that note gets its number.
+  keys: {notes: C4 D4 E4 F4 G4, labels: names}
+  terms: [roman numerals, I, IV, V]
+  check:
+    ask: In the key of C, which chord is V?
+    choices: [F, G, E]
+    correct: 1
+    why: 'Count up from C: C 1, D 2, E 3, F 4, G 5.'
+- explain: |
+    I, IV and V are the **primary chords**. Between them they contain every note of the scale,
+    which is why thousands of songs use only these three.
+  terms: [primary chords]
+  callout: |
+    I = home. IV = moving away. V = wanting to go home.
+- {exercise: chord-symbols-quiz}
+- explain: |
+    **V7** (G7 in C) adds one more 3rd on top: G B D **F**. Listen: it sounds like it wants to go home to C.
+  sound: G3+B3+D4+F4:h C4+E4+G4:h
+  terms: [V7, seventh chord]
+- explain: |
+    For the left hand there's a short version that sits right next to the C chord:
+    **B F G**. Only two fingers move from C–E–G.
+  keys: {notes: B3 F4 G4, labels: names}
+  check:
+    ask: G7 is a G triad plus which note?
+    choices: [F, A, C]
+    correct: 0
+    why: 'G B D, then one more 3rd up: F.'
+- {exercise: build-g7}
+recap: I, IV and V are the primary chords. V7 pulls back home to I.

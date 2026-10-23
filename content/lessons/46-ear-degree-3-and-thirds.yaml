@@ -1,12 +1,26 @@
 id: ear-degree-3-and-thirds
-title: "Degree 3, major and minor thirds"
+title: Degree 3, major and minor thirds
 unit: scales-and-eighths
 skills: [scale-degrees, intervals, listening]
 steps:
-  - explain: |
-      **3** sits between home and 5. It gives the key its colour: in major it's bright, in minor
-      it's a semitone lower and darker. That's why a **major third** (4 semitones) and a **minor
-      third** (3 semitones) are the first intervals worth hearing.
-  - exercise: ear-degree-three
-  - exercise: ear-major-minor-thirds
-recap: "Degree 3 colours the key. Major third = bright, minor third = dark."
+- explain: |
+    **3** sits between home and 5. It gives the key its colour: in major it's bright, in minor
+    it's a semitone lower and darker.
+  sound: C4+E4+G4:h | C4:q E4:q G4:q E4:q | C4:w
+  terms: [degree 3, mediant]
+- explain: |
+    That's why a **major third** (4 semitones) and a **minor third** (3 semitones) are the first
+    intervals worth hearing. Listen: major third, then minor third.
+  sound: C4:h E4:h | C4:h Eb4:h
+  keys: {notes: C4 E4, labels: names}
+  callout: |
+    Major 3rd = 4 semitones, bright. Minor 3rd = 3 semitones, dark.
+  terms: [major third, minor third]
+  check:
+    ask: How many semitones in a major third?
+    choices: [Three, Two, Four]
+    correct: 2
+    why: 'C, C♯, D, D♯, E: four semitone steps.'
+- {exercise: ear-degree-three}
+- {exercise: ear-major-minor-thirds}
+recap: Degree 3 colours the key. Major third = bright, minor third = dark.

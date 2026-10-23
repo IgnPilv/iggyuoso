@@ -3,15 +3,34 @@ title: Rests and taking turns
 unit: meet-the-keyboard
 skills: [rests, hands-alternating]
 steps:
-  - explain: |
-      A **rest** means silence: you don't play, but you keep counting.
-      A **quarter rest** is one beat of silence. A **whole rest** (a little block hanging from a line) is a whole bar of silence.
-  - exercise: quarter-rests-rh
-  - explain: |
-      Now the hands **take turns**. When one hand plays, the other one rests and waits.
-      Keep both hands in middle C position the whole time.
-  - exercise: taking-turns-tune
-  - explain: |
-      Rhythms with rests. A rest is a beat you count but don't play.
-  - exercise: gen-rhythm-with-rests
+- explain: |
+    A **rest** means silence: you don't play, but you **keep counting**. Silence is part of the music.
+    A **quarter rest** is one beat of silence. It looks like a little zigzag.
+  staff: {notes: 'C4:q r:q C4:q r:q'}
+  sound: C4:q r:q C4:q r:q
+  terms: [rest, quarter rest]
+- explain: |
+    A **half rest** is two beats: a little block sitting **on** the middle line, like a hat.
+    A **whole rest** is a whole bar of silence: a block hanging **from** the line, like a hole.
+  staff: {notes: 'C4:h r:h | r:w'}
+  terms: [half rest, whole rest]
+  callout: |
+    Half rest sits like a **hat**; whole rest hangs like a **hole**.
+  check:
+    ask: How many beats is a quarter rest?
+    choices: [One, Two, None]
+    correct: 0
+    why: 'A rest lasts as long as the note with the same name: quarter = one beat.'
+- {exercise: quarter-rests-rh}
+- explain: |
+    Now the hands **take turns**. When one hand plays, the other one rests and waits.
+    Keep both hands in middle C position the whole time, so each one is ready for its turn.
+  staff: {notes: 'C4:q D4:q E4:h | r:w'}
+- {exercise: taking-turns-tune}
+- explain: |
+    Rhythms with rests. A rest is a beat you count but don't play.
+- {exercise: gen-rhythm-with-rests}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: rests-quiz}
 recap: Rests are silence that still counts. Your hands can take turns, one plays while the other rests.

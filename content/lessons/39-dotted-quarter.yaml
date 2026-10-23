@@ -1,17 +1,35 @@
 id: dotted-quarter
-title: "Dotted quarter notes"
+title: Dotted quarter notes
 unit: scales-and-eighths
 skills: [dotted-rhythm]
 steps:
-  - explain: |
-      A dot adds half the note's value. A **dotted quarter** = 1 + ½ = **1½ beats**. It's
-      usually followed by an eighth note, making a long-short pattern.
-
-      Now you can play Ode to Joy the way Beethoven wrote it: listen for the little limp at the
-      end of each line.
-  - exercise: tap-dotted-quarter
-  - exercise: ode-to-joy-dotted
-  - explain: |
-      Rhythms with dotted quarters mixed in.
-  - exercise: gen-rhythm-dotted
-recap: "Dotted quarter = 1½ beats, usually followed by an eighth: long-short."
+- explain: |
+    A dot adds half the note's value. You met the dotted half (2 + 1 = 3).
+    A **dotted quarter** = 1 + ½ = **1½ beats**.
+  staff: {notes: 'C4:q. C4:e C4:h'}
+  sound: C4:q. C4:e C4:h
+  terms: [dotted quarter]
+- explain: |
+    It's usually followed by an **eighth note**, making a **long-short** pattern that fills two beats.
+    Count it "1 - - and 2": play on 1, hold through 2, play the eighth on the "and" of 2.
+  staff: {notes: 'C4:q. C4:e C4:q. C4:e'}
+  callout: |
+    Dotted quarter + eighth = 2 beats, long-short.
+  check:
+    ask: A dotted quarter and an eighth together last...
+    choices: [Two beats, One and a half beats, Three beats]
+    correct: 0
+    why: 1½ + ½ = 2.
+- explain: |
+    Now you can play Ode to Joy the way Beethoven wrote it: listen for the little limp at the
+    end of each line.
+  sound: E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | E4:q. D4:e D4:h
+- {exercise: tap-dotted-quarter}
+- {exercise: ode-to-joy-dotted}
+- explain: |
+    Rhythms with dotted quarters mixed in.
+- {exercise: gen-rhythm-dotted}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: dotted-quarter-quiz}
+recap: 'Dotted quarter = 1½ beats, usually followed by an eighth: long-short.'

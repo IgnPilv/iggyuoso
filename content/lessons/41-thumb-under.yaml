@@ -1,13 +1,24 @@
 id: thumb-under
-title: "Thumb under"
+title: Thumb under
 unit: scales-and-eighths
 skills: [scale-technique, fingering]
 steps:
-  - explain: |
-      A scale has eight notes but a hand has five fingers. The trick: the **thumb passes under**
-      the hand (or a finger crosses over the thumb) so the hand moves on without a bump.
-
-      Move only the thumb, early and smoothly. The wrist stays level and the elbow stays loose.
-  - exercise: thumb-under-rh
-  - exercise: thumb-under-lh
-recap: "Thumb under going up (right hand), finger over the thumb (left hand). No bumps."
+- explain: |
+    A scale has eight notes but a hand has five fingers. The trick: the **thumb passes under**
+    the hand (or a finger crosses over the thumb) so the hand moves on without a bump.
+  keys: {notes: C4 D4 E4 F4 G4 A4 B4 C5, labels: fingers, fingers: 1 2 3 1 2 3 4 5}
+  terms: [thumb under, finger crossing]
+- explain: |
+    Going **up** with the right hand, the thumb slides under 3 to land on the next key.
+    Going **down**, finger 3 crosses **over** the thumb. The left hand does the mirror: down is thumb under,
+    up is a finger over.
+  callout: |
+    Move only the thumb, early and smoothly. The wrist stays level and the elbow stays loose.
+  check:
+    ask: Right hand going up C D E, then F. Which finger plays F?
+    choices: [1 (thumb under), '4', '5']
+    correct: 0
+    why: After 1 2 3 on C D E, the thumb passes under to F.
+- {exercise: thumb-under-rh}
+- {exercise: thumb-under-lh}
+recap: Thumb under going up (right hand), finger over the thumb (left hand). No bumps.
