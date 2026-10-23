@@ -1,0 +1,25 @@
+id: ks-g-musicianship
+title: Reading and hearing G major
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: G major, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: G4:q A4:q B4:q C5:q D5:q E5:q F#5:q G5:q
+    key: G
+  sound: G4:q A4:q B4:q C5:q D5:q E5:q F#5:q G5:q
+- exercise: ks-g-quiz
+- exercise: ks-g-triads
+- exercise: ks-g-read
+- exercise: ks-g-read-bass
+- exercise: ks-g-sight
+- exercise: ks-g-sight-rh
+- exercise: ks-g-sight-lh
+- exercise: ks-g-intervals
+- exercise: ks-g-degrees
+- exercise: ks-g-echo
+recap: G major for the eyes and ears.

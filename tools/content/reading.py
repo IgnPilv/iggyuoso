@@ -191,3 +191,23 @@ def run(base):
         SIGHT('rd-sight-any-key', 'Any key, both hands', 'C4-E5', hand='together', keys=['C', 'G', 'D', 'A', 'E', 'F', 'Bb', 'Eb', 'Ab', 'Am', 'Em', 'Bm', 'Dm', 'Gm', 'Cm'], left='fifths', bars=8, tempo=60, durations=('q', 'h', 'e', 'q.'), reps=6, days=3),
         SIGHT('rd-sight-any-key-34', 'Any key, waltz time', 'C4-E5', hand='together', keys=['C', 'G', 'D', 'F', 'Bb', 'Am', 'Dm', 'Gm'], left='roots', meter='3/4', bars=8, durations=('q', 'h', 'h.', 'e'), tempo=76),
     ], 'Any key, any time.')
+
+    L('reading-find-anywhere', 2, 'Find it anywhere', ['reading-landmarks', 'sharps-flats-naturals'], [
+        S("""Every letter appears many times on the keyboard. Find the note named, in any octave: fast."""),
+        X(gen('rd-find-white', 'Find the white keys', 'find-notes', reps=3, days=2, notes='C4-B4', questions=30, mastery={'accuracy': 95, 'medianMs': 2000})),
+        X(gen('rd-find-black', 'Find the black keys', 'find-notes', reps=3, days=2, notes='C#4 D#4 F#4 G#4 A#4 Db4 Eb4 Gb4 Ab4 Bb4', questions=30, mastery={'accuracy': 95, 'medianMs': 2500})),
+    ], 'Any octave, any key, without counting.')
+
+    L('reading-interval-fluency', 6, 'Intervals at a glance', ['reading-wide-intervals'], [
+        S("""Intervals in both clefs and in keys, fast."""),
+        INTERVALS('rd-intervals-bass-wide', 'Every interval in the bass', ['M2', 'M3', 'P4', 'P5', 'M6', 'm7', 'P8'], notes='C2-C4', clef='bass', ms=3000),
+        INTERVALS('rd-intervals-keys', 'Intervals with key signatures', ['m2', 'M2', 'm3', 'M3', 'P4', 'P5', 'm6', 'M6'], notes='C4-C5', keys=['G', 'F', 'D', 'Bb'], ms=3500),
+        INTERVALS('rd-intervals-fast', 'Intervals, fast', ['M2', 'M3', 'P4', 'P5', 'M6', 'P8'], notes='C4-C5', ms=2000, reps=4, days=3),
+    ], 'Read the distance in a glance.')
+
+    L('reading-ledger-fluency', 8, 'Ledger lines, fast', ['reading-high-and-low', 'reading-fluency'], [
+        S("""Two and three ledger lines above the treble and below the bass."""),
+        NOTES('rd-ledger-high', 'High ledger lines', 'A5-E6', clef='treble', questions=30, ms=3000),
+        NOTES('rd-ledger-low', 'Low ledger lines', 'C1-E2', clef='bass', questions=30, ms=3000),
+        NOTES('rd-ledger-mixed', 'Ledger lines everywhere', 'C1-E6', clef='grand', questions=40, ms=2500, reps=5, days=3),
+    ], 'Ledger lines read like the staff, extended.')

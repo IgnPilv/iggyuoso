@@ -26,7 +26,10 @@ def lits(o):
     if isinstance(o, str) and not isinstance(o, Lit) and '\n' in o: return Lit(o if o.endswith('\n') else o + '\n')
     return o
 
+WRITTEN = set()
+
 def dump(path, d):
+    WRITTEN.add(os.path.relpath(path, ROOT))
     d = lits(d)
     s = yaml.dump(d, sort_keys=False, allow_unicode=True, width=120, default_flow_style=False)
     with open(path, 'w') as f: f.write(s)
@@ -99,7 +102,7 @@ def transpose(note, steps, semis):
 # Keys: name -> (tonic letter+acc, mode)
 KEY_TONIC = {
     'C': 'C', 'G': 'G', 'D': 'D', 'A': 'A', 'E': 'E', 'B': 'B', 'F#': 'F#', 'F': 'F', 'Bb': 'Bb', 'Eb': 'Eb', 'Ab': 'Ab', 'Db': 'Db',
-    'Am': 'A', 'Em': 'E', 'Bm': 'B', 'F#m': 'F#', 'C#m': 'C#', 'Dm': 'D', 'Gm': 'G', 'Cm': 'C', 'Fm': 'F',
+    'Am': 'A', 'Em': 'E', 'Bm': 'B', 'F#m': 'F#', 'C#m': 'C#', 'Dm': 'D', 'Gm': 'G', 'Cm': 'C', 'Fm': 'F', 'G#m': 'G#', 'Bbm': 'Bb', 'Ebm': 'Eb', 'Gb': 'Gb',
 }
 def key_mode(k): return 'minor' if k.endswith('m') else 'major'
 def tonic_note(k, octave):
@@ -435,12 +438,13 @@ def keys(notes, labels=None, fingers=None):
     return d
 
 def check(ask, right, wrong, why, at=None, **pic):
-    ch = list(wrong)
+    ch = [w for i, w in enumerate(wrong) if w != right and w not in list(wrong)[:i]]
     pos = at if at is not None else random.Random(ask).randint(0, len(wrong))
     ch.insert(pos, right)
     return {'ask': ask, 'choices': ch, 'correct': ch.index(right), 'why': why, **pic}
 
 def Q(ask, right, wrong, why, fixed=False, **kw):
+    wrong = [w for i, w in enumerate(wrong) if w != right and w not in list(wrong)[:i]]
     ch = [right] + list(wrong)
     if not fixed: random.Random(ask + str(right)).shuffle(ch)
     q = {'ask': ask, 'choices': ch, 'correct': ch.index(right), 'why': why}
@@ -528,3 +532,16 @@ def rread(id, title, durations, meter='4/4', bars=4, tempo=72, reps=4, days=2, h
     if prompt: kw = dict(prompt=prompt, **kw)
     if hands: kw['hands'] = hands
     return gen(id, title, 'rhythm-echo' if echo else 'rhythm-read', reps=reps, days=days, **kw)
+
+def rhythm_of(s):
+    """The rhythm of a note string, for tapping: every note or chord becomes x, rests stay. None if it has ties."""
+    if '~' in s: return None
+    return ' | '.join(' '.join(('r' if p == 'r' else 'x') + ':' + d for p, d, _ in bar) for bar in tokens(s))
+
+def first_notes(s, n):
+    """The first n pitches of a melody (top note of a chord), for an ear echo."""
+    out = []
+    for bar in tokens(s):
+        for p, _, _ in bar:
+            if p != 'r': out.append(p.split('+')[-1])
+    return out[:n]

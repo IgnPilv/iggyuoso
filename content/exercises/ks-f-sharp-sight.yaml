@@ -1,0 +1,20 @@
+id: ks-f-sharp-sight
+title: Sight-read in F♯ major
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: F#4-F#5
+keys:
+- F#
+left: chords
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

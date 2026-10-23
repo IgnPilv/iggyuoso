@@ -1,0 +1,77 @@
+id: ks-e-flat-minor-triads
+title: Chords of E♭ minor
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: In E♭ minor, the triad on degree 1 (E♭ G♭ B♭) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 0
+  why: 'E♭ G♭ B♭: minor 3rd + major 3rd, so minor. Roman numeral: i.'
+  whyStaff:
+    notes: Eb4+Gb4+Bb4:w
+    key: Ebm
+- ask: In E♭ minor, the triad on degree 2 (F A♭ C♭) is...
+  choices:
+  - Diminished
+  - Major
+  - Minor
+  correct: 0
+  why: 'F A♭ C♭: two minor 3rds, so diminished. Roman numeral: ii°.'
+  whyStaff:
+    notes: F4+Ab4+Cb5:w
+    key: Ebm
+- ask: In E♭ minor, the triad on degree 3 (G♭ B♭ D) is...
+  choices:
+  - Augmented
+  - Minor
+  - Major
+  correct: 0
+  why: 'G♭ B♭ D: two major 3rds, so augmented. Roman numeral: III+.'
+  whyStaff:
+    notes: Gb4+Bb4+D5:w
+    key: Ebm
+- ask: In E♭ minor, the triad on degree 4 (A♭ C♭ E♭) is...
+  choices:
+  - Diminished
+  - Major
+  - Minor
+  correct: 2
+  why: 'A♭ C♭ E♭: minor 3rd + major 3rd, so minor. Roman numeral: iv.'
+  whyStaff:
+    notes: Ab4+Cb5+Eb5:w
+    key: Ebm
+- ask: In E♭ minor, the triad on degree 5 (B♭ D F) is...
+  choices:
+  - Minor
+  - Diminished
+  - Major
+  correct: 2
+  why: 'B♭ D F: major 3rd + minor 3rd, so major. Roman numeral: V.'
+  whyStaff:
+    notes: Bb4+D5+F5:w
+    key: Ebm
+- ask: In E♭ minor, the triad on degree 6 (C♭ E♭ G♭) is...
+  choices:
+  - Major
+  - Diminished
+  - Minor
+  correct: 0
+  why: 'C♭ E♭ G♭: major 3rd + minor 3rd, so major. Roman numeral: VI.'
+  whyStaff:
+    notes: Cb5+Eb5+Gb5:w
+    key: Ebm
+- ask: In E♭ minor, the triad on degree 7 (D F A♭) is...
+  choices:
+  - Diminished
+  - Minor
+  - Major
+  correct: 0
+  why: 'D F A♭: two minor 3rds, so diminished. Roman numeral: vii°.'
+  whyStaff:
+    notes: D5+F5+Ab5:w
+    key: Ebm

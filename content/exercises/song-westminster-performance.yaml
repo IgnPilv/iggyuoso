@@ -1,0 +1,14 @@
+id: song-westminster-performance
+title: 'Westminster Chimes: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 80
+meter: 3/4
+countIn: 1
+right: E4:q D4:q C4:q | G3:h. | C4:q E4:q D4:q | G3:h. | C4:q D4:q E4:q | C4:h. | E4:q C4:q D4:q | G3:h. | G3:q D4:q E4:q
+  | C4:h.
+left: C3+G3:h. | G2+D3:h. | C3+G3:h. | G2+D3:h. | C3+G3:h. | C3+G3:h. | C3+G3:h. | G2+D3:h. | G2+D3:h. | C3+G3:h.
+reps: 2
+days: 2

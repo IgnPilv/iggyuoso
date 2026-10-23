@@ -1,0 +1,29 @@
+id: ks-d-flat
+title: 'Key study: D♭ major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: D♭ major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in D♭ major. Its chords: **D♭**, **G♭** and **A♭7**.
+  staff:
+    notes: Db4:q Eb4:q F4:q Gb4:q Ab4:q Bb4:q C5:q Db5:q
+    key: Db
+  sound: Db4:q Eb4:q F4:q Gb4:q Ab4:q Bb4:q C5:q Db5:q
+- exercise: ks-d-flat-thirds
+- exercise: mirror-d-flat
+- exercise: triad-d-flat
+- exercise: cadence-d-flat
+- exercise: dom7-d-flat
+- exercise: scale-d-flat-1-e
+- exercise: scale-d-flat-2-e
+- exercise: scale-d-flat-contrary
+- exercise: ks-d-flat-pedal
+- exercise: ks-d-flat-harmonised-scale
+- exercise: ks-d-flat-chord-pattern
+- exercise: ks-d-flat-inversions
+- exercise: ks-d-flat-broken
+- exercise: ks-d-flat-alberti
+- exercise: ks-d-flat-pulse
+- exercise: ks-d-flat-waltz
+recap: D♭ major under both hands.

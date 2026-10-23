@@ -1,0 +1,12 @@
+id: rhythm-odd-meters
+title: Five and seven
+skills:
+- rhythm
+steps:
+- explain: |
+    Some music counts in **5** or **7**. 5/4 is felt as 3 + 2 (or 2 + 3); 7/8 as 2 + 2 + 3. Accent the start of each group.
+- exercise: rt-54
+- exercise: rt-54-hands
+- exercise: rt-78
+- exercise: gen-read-54
+recap: 'Odd meters: groups of twos and threes.'

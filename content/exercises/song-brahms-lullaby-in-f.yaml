@@ -1,0 +1,21 @@
+id: song-brahms-lullaby-in-f
+title: Lullaby in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 76
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: A4:e A4:e | C5:h A4:e A4:e | C5:h A4:e C5:e | F5:q E5:q. D5:e | D5:q C5:q G4:e A4:e | Bb4:q G4:q G4:e A4:e | Bb4:h
+  G4:e Bb4:e | E5:q D5:q C5:q | E5:q F5:q F4:e F4:e | F5:h D5:e Bb4:e | C5:h A4:e F4:e | Bb4:q C5:q D5:q | C5:h F4:e F4:e
+  | F5:h D5:e Bb4:e | C5:h A4:e F4:e | Bb4:q A4:q G4:q | F4:h
+left: r:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q E3+G3:q |
+  C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | Bb2:q D3+F3+Bb3:q D3+F3+Bb3:q
+  | F2:q C3+F3+A3:q C3+F3+A3:q | Bb2:q D3+F3+Bb3:q D3+F3+Bb3:q | F2:q C3+F3+A3:q C3+F3+A3:q | Bb2:q D3+F3+Bb3:q D3+F3+Bb3:q
+  | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q E3+G3:q | C3+F3+A3:h
+reps: 2
+days: 1

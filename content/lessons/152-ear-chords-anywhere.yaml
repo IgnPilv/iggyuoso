@@ -1,0 +1,10 @@
+id: ear-chords-anywhere
+title: Major and minor anywhere
+skills:
+- ear
+steps:
+- explain: |
+    Major or minor, on any root. The quality is the same wherever it sits.
+- exercise: ear-maj-min-roots
+- exercise: ear-maj-min-dim-anywhere
+recap: Chord colours stay the same in every key.

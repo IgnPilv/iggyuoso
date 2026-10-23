@@ -1,0 +1,17 @@
+id: ear-hl-half-step
+title: A half step up or down?
+kind: ear
+questions: 20
+reps: 3
+days: 3
+items:
+- type: compare
+  pool:
+  - higher
+  - lower
+  range:
+  - C2
+  - C6
+  gap:
+  - 1
+  - 1

@@ -1,0 +1,16 @@
+id: song-mary-lamb-in-g
+title: Mary Had a Little Lamb in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4:q A4:q G4:q A4:q | B4:q B4:q B4:h | A4:q A4:q A4:h | B4:q D5:q D5:h | B4:q A4:q G4:q A4:q | B4:q B4:q B4:q B4:q
+  | A4:q A4:q B4:q A4:q | G4:w
+left: G2:w | G2:w | D3:w | G2:w | G2:w | G2:w | D3:w | G2:w
+reps: 2
+days: 1

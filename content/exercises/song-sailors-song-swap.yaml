@@ -1,0 +1,17 @@
+id: song-sailors-song-swap
+title: 'Sailor''s Song in D Minor: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+key: Dm
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4+F4+A4:w | D4+F4+A4:h C#4+E4+A4:h | C4+E4+G4:w | D4+F4+A4:w | D4+F4+A4:w | C4+E4+G4:w | D4+F4+A4:h C#4+E4+A4:h |
+  D4+F4+A4:w
+left: D3:q F3:q A3:q A3:q | G3:q F3:q E3:h | C3:q E3:q G3:q G3:q | F3:q E3:q D3:h | A3:q A3:q A3:q F3:q | G3:q G3:q G3:q E3:q
+  | F3:q E3:q D3:q C#3:q | D3:w
+reps: 2
+days: 1

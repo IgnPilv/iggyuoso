@@ -1,0 +1,25 @@
+id: ks-g-minor-musicianship
+title: Reading and hearing G minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: G minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: G4:q A4:q Bb4:q C5:q D5:q Eb5:q F#5:q G5:q
+    key: Gm
+  sound: G4:q A4:q Bb4:q C5:q D5:q Eb5:q F#5:q G5:q
+- exercise: ks-g-minor-quiz
+- exercise: ks-g-minor-triads
+- exercise: ks-g-minor-read
+- exercise: ks-g-minor-read-bass
+- exercise: ks-g-minor-sight
+- exercise: ks-g-minor-sight-rh
+- exercise: ks-g-minor-sight-lh
+- exercise: ks-g-minor-intervals
+- exercise: ks-g-minor-degrees
+- exercise: ks-g-minor-echo
+recap: G minor for the eyes and ears.

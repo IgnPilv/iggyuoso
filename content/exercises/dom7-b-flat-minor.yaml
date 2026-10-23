@@ -1,0 +1,12 @@
+id: dom7-b-flat-minor
+title: The dominant 7th in B♭ minor
+kind: timed
+hand: together
+prompt: Four notes of the dominant 7th, then the chord, then it resolves home.
+key: Bbm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:q A4:q C5:q Eb5:q | F5:h A4+C5+Eb5:h | Bb4:q Db5:q F5:q Db5:q | Bb4+Db5+F5:w
+left: F3:w | F3:w | Bb2:w | Bb2:w

@@ -1,0 +1,12 @@
+id: lh-close-a
+title: Smooth left-hand chords in A major
+kind: timed
+hand: together
+display: staff
+key: A
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#5:h D5:h | B4:h A4:h | C#5:q D5:q E5:q C#5:q | B4:h A4:h
+left: A2+C#3+E3:h A2+D3+F#3:h | B2+E3+G#3:h C#3+E3+A3:h | C#3+E3+A3:w | B2+E3+G#3:h C#3+E3+A3:h

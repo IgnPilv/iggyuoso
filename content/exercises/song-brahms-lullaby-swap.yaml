@@ -1,0 +1,18 @@
+id: song-brahms-lullaby-swap
+title: 'Lullaby: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: r:q | C4+E4+G4:h. | C4+E4+G4:h. | C4+E4+G4:h. | B3+D4+G4:h. | B3+D4+G4:h. | B3+D4+G4:h. | B3+D4+G4:h. | C4+E4+G4:h.
+  | C4+F4+A4:h. | C4+E4+G4:h. | C4+F4+A4:h. | C4+E4+G4:h. | C4+F4+A4:h. | C4+E4+G4:h. | B3+D4+G4:h. | C4+E4+G4:h
+left: E3:e E3:e | G3:h E3:e E3:e | G3:h E3:e G3:e | C4:q B3:q. A3:e | A3:q G3:q D3:e E3:e | F3:q D3:q D3:e E3:e | F3:h D3:e
+  F3:e | B3:q A3:q G3:q | B3:q C4:q C3:e C3:e | C4:h A3:e F3:e | G3:h E3:e C3:e | F3:q G3:q A3:q | G3:h C3:e C3:e | C4:h A3:e
+  F3:e | G3:h E3:e C3:e | F3:q E3:q D3:q | C3:h
+reps: 2
+days: 1

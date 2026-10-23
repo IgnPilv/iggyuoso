@@ -1,0 +1,18 @@
+id: ks-c-sharp-minor-sight-lh
+title: Sight-read the left hand in C♯ minor
+kind: generated
+generator: sight-read
+hand: left
+clef: bass
+tempo: 66
+notes: C#3-C#4
+keys:
+- C#m
+durations:
+- q
+- h
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

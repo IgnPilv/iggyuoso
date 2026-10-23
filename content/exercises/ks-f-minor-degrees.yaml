@@ -1,0 +1,18 @@
+id: ks-f-minor-degrees
+title: Every degree of F minor
+kind: ear
+cadence: Fm
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Fm
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

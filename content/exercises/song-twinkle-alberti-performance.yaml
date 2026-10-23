@@ -1,0 +1,17 @@
+id: song-twinkle-alberti-performance
+title: 'Twinkle with an Alberti bass: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 84
+meter: 4/4
+countIn: 1
+right: C5:q C5:q G5:q G5:q | A5:q A5:q G5:h | F5:q F5:q E5:q E5:q | D5:q D5:q C5:h | G5:q G5:q F5:q F5:q | E5:q E5:q D5:h
+  | G5:q G5:q F5:q F5:q | E5:q E5:q D5:h | C5:q C5:q G5:q G5:q | A5:q A5:q G5:h | F5:q F5:q E5:q E5:q | D5:q D5:q C5:h
+left: C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e G3:e E3:e
+  G3:e | B2:e G3:e D3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e A3:e F3:e A3:e | C3:e G3:e E3:e G3:e B2:e G3:e
+  D3:e G3:e | C3:e G3:e E3:e G3:e C3:e A3:e F3:e A3:e | C3:e G3:e E3:e G3:e B2:e G3:e D3:e G3:e | C3:e G3:e E3:e G3:e C3:e
+  G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e G3:e E3:e G3:e | B2+D3+G3:h C3+E3+G3:h
+reps: 2
+days: 2

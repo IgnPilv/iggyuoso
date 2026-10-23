@@ -1,0 +1,17 @@
+id: song-twinkle-in-g
+title: Twinkle, Twinkle, Little Star in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q G4:q D5:q D5:q | E5:q E5:q D5:h | C5:q C5:q B4:q B4:q | A4:q A4:q G4:h | D5:q D5:q C5:q C5:q | B4:q B4:q A4:h
+  | D5:q D5:q C5:q C5:q | B4:q B4:q A4:h | G4:q G4:q D5:q D5:q | E5:q E5:q D5:h | C5:q C5:q B4:q B4:q | A4:q A4:q G4:h
+left: G2:w | C3:h G2:h | C3:h G2:h | D3:h G2:h | G2:h C3:h | G2:h D3:h | G2:h C3:h | G2:h D3:h | G2:w | C3:h G2:h | C3:h G2:h
+  | D3:h G2:h
+reps: 2
+days: 1

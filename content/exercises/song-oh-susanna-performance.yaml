@@ -1,0 +1,19 @@
+id: song-oh-susanna-performance
+title: 'Oh! Susanna: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 96
+meter: 4/4
+pickup: e e
+countIn: 1
+right: C4:e D4:e | E4:q G4:q G4:q. A4:e | G4:q E4:q C4:q. D4:e | E4:q E4:q D4:q C4:q | D4:h. C4:e D4:e | E4:q G4:q G4:q. A4:e
+  | G4:q E4:q C4:q. D4:e | E4:q E4:q D4:q D4:q | C4:h. r:q | F4:h F4:h | A4:q A4:h A4:q | G4:q G4:q E4:q C4:q | D4:h. C4:e
+  D4:e | E4:q G4:q G4:q. A4:e | G4:q E4:q C4:q. D4:e | E4:q E4:q D4:q D4:q | C4:h.
+left: r:q | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | G2:q B2+D3+G3:q D3:q B2+D3+G3:q
+  | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G2:q B2+D3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | F2:q
+  C3+F3+A3:q C3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | C3:q E3+G3:q G3:q E3+G3:q | G2:q B2+D3+G3:q D3:q B2+D3+G3:q
+  | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G2:q B2+D3+G3:q | C3+E3+G3:h.
+reps: 2
+days: 2

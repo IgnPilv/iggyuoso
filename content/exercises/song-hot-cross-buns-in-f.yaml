@@ -1,0 +1,15 @@
+id: song-hot-cross-buns-in-f
+title: Hot Cross Buns in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q G4:q F4:h | A4:q G4:q F4:h | F4:e F4:e F4:e F4:e G4:e G4:e G4:e G4:e | A4:q G4:q F4:h
+left: C3+F3+A3:w | C3+F3+A3:w | C3+F3+A3:h C3+E3+G3:h | C3+F3+A3:w
+reps: 2
+days: 1

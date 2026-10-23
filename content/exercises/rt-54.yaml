@@ -1,0 +1,8 @@
+id: rt-54
+title: 'Five beats: 3 + 2'
+kind: tap
+tempo: 88
+tempoLadder: true
+meter: 5/4
+countIn: 1
+rhythm: x:h. x:h | x:q x:q x:q x:q x:q | x:h. x:q x:q | x:w x:q

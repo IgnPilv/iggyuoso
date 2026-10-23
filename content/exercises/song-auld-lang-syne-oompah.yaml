@@ -1,0 +1,18 @@
+id: song-auld-lang-syne-oompah
+title: Auld Lang Syne, with bass, then chord
+kind: timed
+hand: together
+prompt: 'Another left hand: bass, then chord.'
+display: staff
+key: F
+tempo: 80
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: C4:q | F4:q. F4:e F4:q A4:q | G4:q. F4:e G4:q A4:q | F4:q. F4:e A4:q C5:q | D5:h. D5:q | C5:q. A4:e A4:q F4:q | G4:q.
+  F4:e G4:q A4:q | F4:q. D4:e D4:q C4:q | F4:h.
+left: r:q | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | C3:q E3+G3:q G3:q E3+G3:q | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | Bb2:q D3+F3+Bb3:q
+  F3:q D3+F3+Bb3:q | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | C3:q E3+G3:q G3:q E3+G3:q | Bb2:q D3+F3:q C3:q E3+G3:q | C3+F3+A3:h.
+reps: 2
+days: 1

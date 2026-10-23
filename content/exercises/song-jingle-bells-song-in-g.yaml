@@ -1,0 +1,17 @@
+id: song-jingle-bells-song-in-g
+title: Jingle Bells in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4:q B4:q B4:h | B4:q B4:q B4:h | B4:q D5:q G4:q. A4:e | B4:w | C5:q C5:q C5:q. C5:e | C5:q B4:q B4:q B4:e B4:e | B4:q
+  A4:q A4:q B4:q | A4:h D5:h | B4:q B4:q B4:h | B4:q B4:q B4:h | B4:q D5:q G4:q. A4:e | B4:w | C5:q C5:q C5:q. C5:e | C5:q
+  B4:q B4:q B4:e B4:e | D5:q D5:q C5:q A4:q | G4:w
+left: G2:w | G2:w | G2:w | G2:w | C3:w | G2:w | D3:w | D3:w | G2:w | G2:w | G2:w | G2:w | C3:w | G2:w | D3:w | G2:w
+reps: 2
+days: 1

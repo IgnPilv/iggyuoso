@@ -1,0 +1,16 @@
+id: piece-etude-alberti-g-lh
+title: 'Alberti Study in G: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D3:e B3:e G3:e B3:e D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e D3:e B3:e
+  G3:e B3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e D3:e G3:e B2:e
+  G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e A2:e F#3:e D3:e F#3:e | B2+D3+G3:w
+reps: 2
+days: 1

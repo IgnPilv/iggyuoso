@@ -43,6 +43,25 @@ song('going-home', 'Going Home', 'Dvořák, Symphony "From the New World", 1893'
      story='Antonín Dvořák wrote this slow melody for the cor anglais in his New World Symphony, after a stay in America. Words were added later and it became a song.',
      tips='Very slow and very smooth. Breathe at the end of bar 4.')
 
+
+song('hot-cross-buns', 'Hot Cross Buns', 'Street cry, London, 1700s', 'C', '4/4', 88,
+     'E4:q D4:q C4:h | E4:q D4:q C4:h | C4:e C4:e C4:e C4:e D4:e D4:e D4:e D4:e | E4:q D4:q C4:h',
+     'C | C | C G | C', M1, ('root', 'block'),
+     story='Bakers in London sang this to sell spiced buns at Easter: "one a penny, two a penny".',
+     tips='Three notes only: E, D, C. The eighths in bar 3 are twice as fast: "one-and two-and".')
+
+song('mary-lamb', 'Mary Had a Little Lamb', 'Tune by Lowell Mason, words by Sarah Josepha Hale, 1830', 'C', '4/4', 96,
+     'E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h | E4:q D4:q C4:q D4:q | E4:q E4:q E4:q E4:q | D4:q D4:q E4:q D4:q | C4:w',
+     'C | C | G | C | C | C | G | C', M1, ('root', 'fifth'),
+     story='A poem about a real girl whose lamb followed her to school, set to a simple tune in 1830.',
+     tips='Right thumb on C. Only the left hand moves, once, to G in bar 3 and bar 7.')
+
+song('this-old-man', 'This Old Man', 'Counting song, England', 'C', '4/4', 100,
+     'G4:q E4:q G4:h | G4:q E4:q G4:h | A4:q G4:q F4:q E4:q | D4:q E4:q F4:h | E4:e F4:e G4:q C4:q C4:e C4:e | C4:e D4:e E4:e F4:e G4:h | G4:q D4:q F4:q E4:q | D4:q C4:h.',
+     'C | C | F | G | C | C | G | G C', M1, ('root', 'block'),
+     story='A counting song: "he played one, he played knick-knack on my thumb". Each verse counts one higher.',
+     tips='Bar 5 has eighths: "knick-knack pad-dy-whack". Bar 6 runs straight up the C position.')
+
 # ---------------------------------------------------------------- after Milestone 2: chords in the left hand
 
 song('yankee-doodle', 'Yankee Doodle', 'Folk song, America, 1700s', 'C', '4/4', 104,
@@ -74,6 +93,18 @@ song('happy-birthday', 'Happy Birthday', 'Mildred and Patty Hill, 1893; public d
      '- | C | G | G | C | C | F | C G | C', M3, ('root', 'waltz'), pickup='e e',
      story='The tune began as a classroom greeting song, "Good Morning to All", in 1893. It is now free for everyone to play.',
      tips='Starts on an upbeat. The big leap in bar 5 goes up an octave: G below middle C to the G above it.')
+
+song('ode-to-joy-song', 'Ode to Joy', 'Ludwig van Beethoven, Symphony No. 9, 1824', 'C', '4/4', 96,
+     'E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | E4:q. D4:e D4:h | E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | D4:q. C4:e C4:h | D4:q D4:q E4:q C4:q | D4:q E4:e F4:e E4:q C4:q | D4:q E4:e F4:e E4:q D4:q | C4:q D4:q G3:h | E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | D4:q. C4:e C4:h',
+     'C | G | C | G | C | G | C | G C | G C | G C | G C | C G | C | G | C | G C', M2, ('root', 'block'),
+     story='The big tune from the last movement of Beethoven\'s Ninth Symphony, now the anthem of Europe. Almost all of it is in steps.',
+     tips='The middle section has eighths ("E F E") and a dip to G below middle C: let the thumb reach down.')
+
+song('jingle-bells-song', 'Jingle Bells', 'James Lord Pierpont, 1857', 'C', '4/4', 112,
+     'E4:q E4:q E4:h | E4:q E4:q E4:h | E4:q G4:q C4:q. D4:e | E4:w | F4:q F4:q F4:q. F4:e | F4:q E4:q E4:q E4:e E4:e | E4:q D4:q D4:q E4:q | D4:h G4:h | E4:q E4:q E4:h | E4:q E4:q E4:h | E4:q G4:q C4:q. D4:e | E4:w | F4:q F4:q F4:q. F4:e | F4:q E4:q E4:q E4:e E4:e | G4:q G4:q F4:q D4:q | C4:w',
+     'C | C | C | C | F | C | G | G | C | C | C | C | F | C | G | C', M2, ('root', 'block'),
+     story='Written for a Thanksgiving concert in 1857, it became the best-known winter song in the world.',
+     tips='Three E\'s, three E\'s: count them. The last line climbs to G before coming home.')
 
 # ---------------------------------------------------------------- after Milestone 3: eighths, 3/4, dotted notes
 
@@ -159,6 +190,20 @@ song('aura-lee-pedal', 'Aura Lee, with pedal', 'George Poulton, 1861, arranged',
      story='The same song as before, now with a flowing left hand and the sustain pedal changing with every chord.',
      tips='Pedal down just after each new bass note; lift as the next chord sounds.')
 
+# ---------------------------------------------------------------- after Milestones 7 and 8: pedalled arrangements
+
+song('greensleeves-pedal', 'Greensleeves, with pedal', 'English ballad, 1500s, arranged', 'Am', '3/4', 76,
+     'A4:q | C5:h D5:q | E5:q. F5:e E5:q | D5:h B4:q | G4:q. A4:e B4:q | C5:h A4:q | A4:q. G#4:e A4:q | B4:h G#4:q | E4:h A4:q | C5:h D5:q | E5:q. F5:e E5:q | D5:h B4:q | G4:q. A4:e B4:q | C5:q. B4:e A4:q | G#4:q. F#4:e G#4:q | A4:h. | A4:h',
+     '- | Am | C | G | Em | Am | E | E | E | Am | C | G | Em | Am | E | Am | Am', M7, ('broken', 'arp'), pickup='q', pedal=True,
+     story='The Tudor tune again, now with a flowing left hand and the pedal changing on every chord.',
+     tips='Pedal just after each new bass note. Keep the left hand softer than the tune.')
+
+song('silent-night-arp', 'Silent Night, flowing', 'Franz Gruber, 1818, arranged', 'C', '3/4', 66,
+     'G4:q. A4:e G4:q | E4:h. | G4:q. A4:e G4:q | E4:h. | D5:h D5:q | B4:h. | C5:h C5:q | G4:h. | A4:h A4:q | C5:q. B4:e A4:q | G4:q. A4:e G4:q | E4:h. | A4:h A4:q | C5:q. B4:e A4:q | G4:q. A4:e G4:q | E4:h. | D5:h D5:q | F5:q. D5:e B4:q | C5:h. | E5:h. | C5:q G4:q E4:q | G4:q. F4:e D4:q | C4:h.',
+     'C | C | C | C | G | G | C | C | F | F | C | C | F | F | C | C | G | G | C | C | C | G | C', M8, ('waltz', 'arp'), pedal=True,
+     story='The carol with rolling left-hand arpeggios and pedal, like a harp.',
+     tips='Root, fifth, octave in the left hand; the pedal joins them into one sound.')
+
 def write_songs():
     out = []
     for s in SONGS:
@@ -173,6 +218,15 @@ def write_songs():
         pedal = pedal_for(s['chords'], meter, pkv) if s['pedal'] else None
         ids = []
         lo = min(midi(p) for p in pitches_in(mel))
+        rr, rl = rhythm_of(mel), rhythm_of(lh1)
+        tapkw = dict(meter=meter, tempo=tempo, reps=2, days=1, ladder=False, **({'pickup': pk} if pk else {}))
+        if rr:
+            ids.append(tap(f'{sid}-tap', f"{s['title']}: tap the rhythm", rr, prompt='First the rhythm alone, on any key: tap the tune while you hum it.', display='staff', **tapkw))
+        if rr and rl and rhythm_of(lh1).count('x') > 0:
+            ids.append(tap2(f'{sid}-tap-hands', f"{s['title']}: tap both hands", rr, rl, prompt='Both rhythms at once on any keys: right hand from middle C up, left hand below.', display='staff', **tapkw))
+        if mel.count(':') >= 6:
+            ids.append(ear(f'{sid}-by-ear', f"{s['title']}: by ear", [{'type': 'melody', 'notes': ' '.join(first_notes(mel, 6)), 'plays': 3, 'lit': True}, {'type': 'melody', 'notes': ' '.join(first_notes(mel, 4)), 'plays': 3}], questions=4, reps=2, days=1,
+                           prompt='Play the start of the tune back from hearing it. Lit keys help the first time.'))
         common = dict(meter=meter, key=key if key != 'C' else None, display='staff', pickup=pk)
         ids.append(timed(f'{sid}-rh', f"{s['title']}: the tune", right=mel, tempo=tempo, prompt='The tune alone, right hand. Sing it in your head as you play.', reps=2, days=1, **common))
         ids.append(timed(f'{sid}-lh', f"{s['title']}: left hand", left=lh1, tempo=tempo, prompt='The left hand alone: find each chord change before it comes.', reps=2, days=1, **common))
@@ -180,6 +234,31 @@ def write_songs():
         if lh2:
             ids.append(timed(f'{sid}-arranged', f"{s['title']}, full arrangement", right=mel, left=lh2, tempo=tempo,
                              prompt=f"A fuller left hand ({STYLE_WORDS[styles[1]]}).", reps=3, days=2, pedal=pedal, **common))
+        # The tune in the left hand under right-hand chords, when it fits the left hand.
+        low = shift_octave(mel, -1)
+        if all(midi('E2') <= midi(p) <= midi('C5') for p in pitches_in(low)) and not s['pedal']:
+            ids.append(timed(f'{sid}-swap', f"{s['title']}: swap hands", right=shift_octave(accompany(s['chords'], meter, 'block', pickup=pkv), 1), left=low, tempo=tempo,
+                             prompt='The tune in the left hand, an octave lower; the right hand plays the chords.', reps=2, days=1, **common))
+        if key in MOVE and not s['pedal']:
+            k2, st, se = MOVE[key]
+            ch2 = ' | '.join(' '.join(x if x in ('-', 'r') else transpose(parse_chord(x)[0] + '4', st, se)[:-1] + parse_chord(x)[1] for x in b.split()) for b in s['chords'].split('|'))
+            mel2 = transpose_string(mel, st, se)
+            if all(midi('C3') <= midi(p) <= midi('A5') for p in pitches_in(mel2)):
+                ids.append(timed(f'{sid}-in-{k2.lower()}', f"{s['title']} in {key_words(k2)}", right=mel2, left=accompany(ch2, meter, styles[0], pickup=pkv), tempo=tempo,
+                                 prompt=f'The same song moved to {key_words(k2)}: think in degrees, and mind the key signature.', reps=2, days=1, **{**common, 'key': k2}))
+        third = {'3/4': 'waltz', '6/8': 'arp', '4/4': 'oompah'}.get(meter)
+        if third and third not in styles and meter != '6/8':
+            ids.append(timed(f'{sid}-{third}', f"{s['title']}, with {STYLE_WORDS[third]}", right=mel, left=accompany(s['chords'], meter, third, pickup=pkv), tempo=tempo,
+                             prompt=f"Another left hand: {STYLE_WORDS[third]}.", reps=2, days=1, **common))
+        ids.append(timed(f'{sid}-performance', f"{s['title']}: performance", right=mel, left=lh2 or lh1, tempo=tempo, ladder=False, pedal=pedal if lh2 else None,
+                         prompt='Full tempo, start to end, as if someone is listening.', reps=2, days=2, **common))
+        if key in MOVE2 and not s['pedal']:
+            k2, st, se = MOVE2[key]
+            ch2 = ' | '.join(' '.join(x if x in ('-', 'r') else transpose(parse_chord(x)[0] + '4', st, se)[:-1] + parse_chord(x)[1] for x in b.split()) for b in s['chords'].split('|'))
+            mel2 = transpose_string(mel, st, se)
+            if all(midi('C3') <= midi(p) <= midi('A5') for p in pitches_in(mel2)):
+                ids.append(timed(f'{sid}-in-{k2.lower()}', f"{s['title']} in {key_words(k2)}", right=mel2, left=accompany(ch2, meter, styles[-1], pickup=pkv), tempo=tempo,
+                                 prompt=f'Now in {key_words(k2)}, with a fuller left hand.', reps=2, days=1, **{**common, 'key': k2}))
         first_bars = ' | '.join(mel.split('|')[:2]).strip()
         steps = [S(f"**{s['title']}** · {s['about']}\n\n{s['story']}", staff=staff(first_bars, key=key if key != 'C' else None), sound=' | '.join(mel.split('|')[:4]).strip()),
                  S(f"**Before you play.** {s['tips']}\n\nThe steps: the tune, the left hand, then both together." + (" Last, a fuller arrangement." if lh2 else ''),
@@ -189,6 +268,10 @@ def write_songs():
         node(sid, 'songs', STAGE_AFTER[s['shelf']], s['title'], [s['shelf']], about=s['about'])
         out.append(sid)
     return out
+
+MOVE = {'C': ('G', 4, 7), 'G': ('C', -4, -7), 'F': ('C', -3, -5), 'Am': ('Dm', 3, 5), 'Dm': ('Am', -3, -5)}
+
+MOVE2 = {'C': ('F', 3, 5), 'G': ('F', -1, -2), 'F': ('Bb', 3, 5)}
 
 STYLE_WORDS = {'root': 'one bass note', 'fifth': 'root and fifth', 'block': 'held chords', 'pulse': 'a chord on every beat',
                'oompah': 'bass, then chord', 'waltz': 'bass, chord, chord', 'broken': 'broken chords', 'arp': 'rolling arpeggios', 'alberti': 'an Alberti bass'}

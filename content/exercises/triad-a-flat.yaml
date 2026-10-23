@@ -1,0 +1,14 @@
+id: triad-a-flat
+title: A♭ major triad, both hands
+kind: timed
+hand: together
+prompt: Broken, then all three notes together.
+key: Ab
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Ab4:q C5:q Eb5:q C5:q | Ab4+C5+Eb5:w | Ab4:q C5:q Eb5:q C5:q | Ab4+C5+Eb5:w
+left: Ab3:h Eb4:h | Ab3+Eb4:w | Ab3:h Eb4:h | Ab3+Eb4:w
+rightFingers: 1 3 5 3 1 1 3 5 3 1
+leftFingers: 5 1 5 5 1 5

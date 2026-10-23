@@ -1,0 +1,25 @@
+id: ks-e-minor
+title: 'Key study: E minor'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: E minor, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in E minor. Its chords: **Em**, **Am** and **B7**.
+  staff:
+    notes: E4:q F#4:q G4:q A4:q B4:q C5:q D#5:q E5:q
+    key: Em
+  sound: E4:q F#4:q G4:q A4:q B4:q C5:q D#5:q E5:q
+- exercise: ks-e-minor-thirds
+- exercise: dom7-e-minor
+- exercise: scale-e-minor-1-e
+- exercise: scale-e-minor-contrary
+- exercise: ks-e-minor-pedal
+- exercise: ks-e-minor-harmonised-scale
+- exercise: ks-e-minor-chord-pattern
+- exercise: ks-e-minor-inversions
+- exercise: ks-e-minor-broken
+- exercise: ks-e-minor-alberti
+- exercise: ks-e-minor-pulse
+- exercise: ks-e-minor-waltz
+recap: E minor under both hands.

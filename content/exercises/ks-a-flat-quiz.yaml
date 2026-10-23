@@ -1,0 +1,67 @@
+id: ks-a-flat-quiz
+title: 'Know the key: A♭ major'
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: The key signature of A♭ major is...
+  choices:
+  - F♯, C♯, G♯, D♯
+  - B♭, E♭, A♭, D♭
+  - B♭, E♭, A♭
+  - B♭, E♭, A♭, D♭, G♭
+  correct: 1
+  why: 'A♭ major: B♭, E♭, A♭, D♭.'
+  whyStaff:
+    notes: Ab4:w
+    key: Ab
+- ask: The notes of the A♭ major scale are...
+  choices:
+  - A♭ B♭ C D♭ E♭ F G
+  - A♭ B♭ C♭ D♭ E♭ F♭ G♭
+  correct: 0
+  why: 'Count the steps: W W H W W W H.'
+- ask: The tonic chord of A♭ major is...
+  choices:
+  - D♭ F A♭
+  - E♭ G B♭ D♭
+  - A♭ C E♭
+  correct: 2
+  why: 'Degrees 1, 3, 5: A♭ C E♭.'
+- ask: The IV chord of A♭ major is...
+  choices:
+  - A♭ C E♭
+  - E♭ G B♭ D♭
+  - D♭ F A♭
+  correct: 2
+  why: 'Degrees 4, 6, 8: D♭ F A♭.'
+- ask: The dominant 7th of A♭ major is...
+  choices:
+  - E♭ G B♭ D♭
+  - D♭ F A♭
+  - A♭ C E♭
+  correct: 0
+  why: 'Built on degree 5, E♭: E♭ G B♭ D♭.'
+- ask: The dominant note of A♭ major is...
+  choices:
+  - F
+  - B♭
+  - E♭
+  - D♭
+  correct: 2
+  why: Degree 5.
+- ask: The leading note of A♭ major is...
+  choices:
+  - B♭
+  - F
+  - G
+  correct: 2
+  why: Degree 7, a half step below the tonic.
+- ask: The relative minor of A♭ major is...
+  choices:
+  - E♭ major
+  - G major
+  - F minor
+  correct: 2
+  why: They share a key signature.

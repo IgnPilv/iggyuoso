@@ -1,0 +1,23 @@
+id: ks-d
+title: 'Key study: D major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: D major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in D major. Its chords: **D**, **G** and **A7**.
+  staff:
+    notes: D4:q E4:q F#4:q G4:q A4:q B4:q C#5:q D5:q
+    key: D
+  sound: D4:q E4:q F#4:q G4:q A4:q B4:q C#5:q D5:q
+- exercise: ks-d-thirds
+- exercise: scale-d-contrary
+- exercise: ks-d-pedal
+- exercise: ks-d-harmonised-scale
+- exercise: ks-d-chord-pattern
+- exercise: ks-d-inversions
+- exercise: ks-d-broken
+- exercise: ks-d-alberti
+- exercise: ks-d-pulse
+- exercise: ks-d-waltz
+recap: D major under both hands.

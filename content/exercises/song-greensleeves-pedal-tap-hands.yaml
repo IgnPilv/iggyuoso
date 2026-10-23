@@ -1,0 +1,16 @@
+id: song-greensleeves-pedal-tap-hands
+title: 'Greensleeves, with pedal: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 76
+meter: 3/4
+pickup: q
+countIn: 1
+right: x:q | x:h x:q | x:q. x:e x:q | x:h x:q | x:q. x:e x:q | x:h x:q | x:q. x:e x:q | x:h x:q | x:h x:q | x:h x:q | x:q.
+  x:e x:q | x:h x:q | x:q. x:e x:q | x:q. x:e x:q | x:q. x:e x:q | x:h. | x:h
+left: r:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q |
+  x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e
+  x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:e x:e x:e x:e x:q | x:h
+reps: 2
+days: 1

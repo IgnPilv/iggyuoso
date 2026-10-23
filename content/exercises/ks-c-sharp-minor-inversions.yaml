@@ -1,0 +1,13 @@
+id: ks-c-sharp-minor-inversions
+title: 'C♯ minor: climbing the inversions'
+kind: timed
+hand: together
+prompt: 'Root position, first inversion, second inversion, octave: the same chord climbing. The left hand holds the root.'
+key: C#m
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#4+E4+G#4:q E4+G#4+C#5:q G#4+C#5+E5:q C#5+E5+G#5:q | G#4+C#5+E5:q E4+G#4+C#5:q C#4+E4+G#4:h | F#4+A4+C#5:q A4+C#5+F#5:q
+  C#5+F#5+A5:q F#5+A5+C#6:q | C#4+E4+G#4:w
+left: C#3:w | C#3:w | F#2:w | C#3:w

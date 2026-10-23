@@ -1,0 +1,13 @@
+id: ks-e-inversions
+title: 'E major: climbing the inversions'
+kind: timed
+hand: together
+prompt: 'Root position, first inversion, second inversion, octave: the same chord climbing. The left hand holds the root.'
+key: E
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4+G#4+B4:q G#4+B4+E5:q B4+E5+G#5:q E5+G#5+B5:q | B4+E5+G#5:q G#4+B4+E5:q E4+G#4+B4:h | A4+C#5+E5:q C#5+E5+A5:q E5+A5+C#6:q
+  A5+C#6+E6:q | E4+G#4+B4:w
+left: E3:w | E3:w | A2:w | E3:w

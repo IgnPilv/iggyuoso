@@ -1,0 +1,15 @@
+id: song-hot-cross-buns-in-g
+title: Hot Cross Buns in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4:q A4:q G4:h | B4:q A4:q G4:h | G4:e G4:e G4:e G4:e A4:e A4:e A4:e A4:e | B4:q A4:q G4:h
+left: G2:w | G2:w | G2:h D3:h | G2:w
+reps: 2
+days: 1

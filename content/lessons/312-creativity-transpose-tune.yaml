@@ -1,0 +1,15 @@
+id: creativity-transpose-tune
+title: One tune, four keys
+skills:
+- creativity
+steps:
+- explain: |
+    Play the same tune with its chords in seven keys. Think in **degrees**: the tune is 3 2 1 2 3 3 3, whatever the key.
+- exercise: cr-mary-in-g
+- exercise: cr-mary-in-f
+- exercise: cr-mary-in-d
+- exercise: cr-mary-in-a
+- exercise: cr-mary-in-bb
+- exercise: cr-mary-in-e
+- exercise: cr-mary-in-eb
+recap: Degrees travel; letters change.

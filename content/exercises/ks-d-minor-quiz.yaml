@@ -1,0 +1,67 @@
+id: ks-d-minor-quiz
+title: 'Know the key: D minor'
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: The key signature of D minor is...
+  choices:
+  - B♭, E♭
+  - F♯
+  - No sharps or flats
+  - B♭
+  correct: 3
+  why: 'D minor: B♭.'
+  whyStaff:
+    notes: D4:w
+    key: Dm
+- ask: The notes of the D minor harmonic scale are...
+  choices:
+  - D E F♯ G A B C♯
+  - D E F G A B♭ C♯
+  correct: 1
+  why: 'Count the steps: W H W W H W+H H.'
+- ask: The tonic chord of D minor is...
+  choices:
+  - A C♯ E G
+  - D F A
+  - G B♭ D
+  correct: 1
+  why: 'Degrees 1, 3, 5: D F A.'
+- ask: The iv chord of D minor is...
+  choices:
+  - G B♭ D
+  - D F A
+  - A C♯ E G
+  correct: 0
+  why: 'Degrees 4, 6, 8: G B♭ D.'
+- ask: The dominant 7th of D minor is...
+  choices:
+  - G B♭ D
+  - A C♯ E G
+  - D F A
+  correct: 1
+  why: 'Built on degree 5, A: A C♯ E G.'
+- ask: The dominant note of D minor is...
+  choices:
+  - E
+  - B♭
+  - A
+  - G
+  correct: 2
+  why: Degree 5.
+- ask: The leading note of D minor is...
+  choices:
+  - C♯
+  - E
+  - B♭
+  correct: 0
+  why: Degree 7, a half step below the tonic (raised in harmonic minor).
+- ask: The relative major of D minor is...
+  choices:
+  - F major
+  - G major
+  - A minor
+  correct: 0
+  why: They share a key signature.

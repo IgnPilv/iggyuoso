@@ -50,3 +50,11 @@ nodes:
   - { id: ear-echo-eight, stage: 9, lesson: ear-echo-eight, title: "Echo eight-note phrases", type: drill, requires: [ear-echo-seven] }
   - { id: ear-sus-chords, stage: 9, lesson: ear-sus-chords, title: "Suspended chords", type: drill, requires: [ear-four-triads] }
   - { id: ear-perfect-pitch-c, stage: 2, lesson: ear-perfect-pitch-c, title: "Side quest: remember C", type: side-quest, requires: [note-naming] }
+  - { id: ear-intervals-by-playing, stage: 5, lesson: ear-intervals-by-playing, title: "Play the interval you hear", type: drill, requires: [ear-fourths-fifths-sixths, ear-together-intervals] }
+  - { id: ear-chords-anywhere, stage: 6, lesson: ear-chords-anywhere, title: "Major and minor anywhere", type: drill, requires: [ear-triad-qualities] }
+  - { id: ear-minor-phrases, stage: 6, lesson: ear-minor-phrases, title: "Echo minor phrases", type: drill, requires: [ear-minor-degrees, ear-echo-five] }
+  - { id: ear-bass-lines, stage: 7, lesson: ear-bass-lines, title: "Hearing the bass", type: drill, requires: [ear-minor-phrases, ear-seventh-chords] }
+  - { id: ear-intervals-down, stage: 8, lesson: ear-intervals-down, title: "Intervals, up and down", type: drill, requires: [ear-all-intervals] }
+  - { id: ear-echo-two-hands, stage: 9, lesson: ear-echo-two-hands, title: "Echo a tune and its bass", type: drill, requires: [ear-bass-lines, ear-echo-eight] }
+  - { id: ear-contour-five, stage: 3, lesson: ear-contour-five, title: "Five-note shapes", type: drill, requires: [ear-contour-four] }
+  - { id: ear-half-steps, stage: 4, lesson: ear-half-steps, title: "The smallest step", type: drill, requires: [ear-seconds-thirds] }

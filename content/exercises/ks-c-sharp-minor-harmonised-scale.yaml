@@ -1,0 +1,13 @@
+id: ks-c-sharp-minor-harmonised-scale
+title: 'C♯ minor: the scale with chords'
+kind: timed
+hand: together
+prompt: 'The scale in the right hand, the chords under it in the left: the scale turned into music.'
+key: C#m
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#4:q D#4:q E4:q F#4:q | G#4:q A4:q B#4:q C#5:q | B#4:q A4:q G#4:q F#4:q | E4:q D#4:q C#4:h
+left: C#3+E3+G#3:w | C#3+E3+G#3:h B#2+D#3+G#3:h | B#2+D#3+G#3:w | C#3+E3+G#3:w
+rightFingers: 3 4 1 2 3 1 2 3 2 1 3 2 1 4 3

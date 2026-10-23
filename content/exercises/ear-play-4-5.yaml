@@ -1,0 +1,28 @@
+id: ear-play-4-5
+title: Play fourths and fifths
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - P4
+  - P5
+  from: C4
+  direction: up
+  answer: play
+- type: interval
+  pool:
+  - P4
+  - P5
+  from: D4
+  direction: up
+  answer: play
+- type: interval
+  pool:
+  - P4
+  - P5
+  from: A3
+  direction: up
+  answer: play

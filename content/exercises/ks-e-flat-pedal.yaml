@@ -1,0 +1,13 @@
+id: ks-e-flat-pedal
+title: 'E♭ major: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: Eb
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:h Bb4:h | Ab4:h C5:h | F4:h D4:h | Eb4:w
+left: Eb3:q Bb3:q Eb4:q Bb3:q | Ab2:q Eb3:q Ab3:q Eb3:q | Bb2:q F3:q Bb3:q F3:q | Eb3+G3+Bb3:w
+pedal: x:w | x:w | x:w | x:w

@@ -1,0 +1,25 @@
+id: ks-c-musicianship
+title: Reading and hearing C major
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: C major, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: C4:q D4:q E4:q F4:q G4:q A4:q B4:q C5:q
+    key: C
+  sound: C4:q D4:q E4:q F4:q G4:q A4:q B4:q C5:q
+- exercise: ks-c-quiz
+- exercise: ks-c-triads
+- exercise: ks-c-read
+- exercise: ks-c-read-bass
+- exercise: ks-c-sight
+- exercise: ks-c-sight-rh
+- exercise: ks-c-sight-lh
+- exercise: ks-c-intervals
+- exercise: ks-c-degrees
+- exercise: ks-c-echo
+recap: C major for the eyes and ears.

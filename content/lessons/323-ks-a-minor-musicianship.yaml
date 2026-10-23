@@ -1,0 +1,25 @@
+id: ks-a-minor-musicianship
+title: Reading and hearing A minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: A minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: A4:q B4:q C5:q D5:q E5:q F5:q G#5:q A5:q
+    key: Am
+  sound: A4:q B4:q C5:q D5:q E5:q F5:q G#5:q A5:q
+- exercise: ks-a-minor-quiz
+- exercise: ks-a-minor-triads
+- exercise: ks-a-minor-read
+- exercise: ks-a-minor-read-bass
+- exercise: ks-a-minor-sight
+- exercise: ks-a-minor-sight-rh
+- exercise: ks-a-minor-sight-lh
+- exercise: ks-a-minor-intervals
+- exercise: ks-a-minor-degrees
+- exercise: ks-a-minor-echo
+recap: A minor for the eyes and ears.

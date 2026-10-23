@@ -1,0 +1,31 @@
+id: ear-play-2-3
+title: Play seconds and thirds
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - M2
+  - m3
+  - M3
+  from: C4
+  direction: up
+  answer: play
+- type: interval
+  pool:
+  - M2
+  - m3
+  - M3
+  from: F4
+  direction: up
+  answer: play
+- type: interval
+  pool:
+  - M2
+  - m3
+  - M3
+  from: G4
+  direction: up
+  answer: play

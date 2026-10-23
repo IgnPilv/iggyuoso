@@ -55,11 +55,10 @@ questions:
   why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: A E C♯.'
 - ask: Move D F♯ A from D major to C major.
   choices:
-  - D F♯ A
   - C E G
   - C♯ E♯ G♯
   - D F♯ A
-  correct: 1
+  correct: 0
   why: 'Every note moves by the same interval, and the new key''s sharps or flats apply: C E G.'
 - ask: Move A C E from A minor to D minor.
   choices:

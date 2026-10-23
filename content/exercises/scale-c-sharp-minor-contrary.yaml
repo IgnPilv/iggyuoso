@@ -1,0 +1,14 @@
+id: scale-c-sharp-minor-contrary
+title: C♯ minor harmonic scale in contrary motion
+kind: timed
+hand: together
+prompt: Both hands start on the key note, an octave apart, and move away from each other, then back.
+key: C#m
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#4:q D#4:q E4:q F#4:q | G#4:q A4:q B#4:q C#5:q | B#4:q A4:q G#4:q F#4:q | E4:q D#4:q C#4:h
+left: C#3:q B#2:q A2:q G#2:q | F#2:q E2:q D#2:q C#2:q | D#2:q E2:q F#2:q G#2:q | A2:q B#2:q C#3:h
+rightFingers: 3 4 1 2 3 1 2 3 2 1 3 2 1 4 3
+leftFingers: 3 1 2 3 4 1 2 3 2 1 4 3 2 1 3

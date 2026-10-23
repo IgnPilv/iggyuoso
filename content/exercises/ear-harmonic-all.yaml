@@ -1,0 +1,25 @@
+id: ear-harmonic-all
+title: Every interval, together
+kind: ear
+questions: 25
+reps: 3
+days: 3
+items:
+- type: interval
+  pool:
+  - m2
+  - M2
+  - m3
+  - M3
+  - P4
+  - TT
+  - P5
+  - m6
+  - M6
+  - m7
+  - M7
+  - P8
+  from: C4
+  direction: up
+  answer: name
+  together: true

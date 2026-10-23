@@ -1,0 +1,20 @@
+id: song-deck-the-halls-oompah
+title: Deck the Halls, with bass, then chord
+kind: timed
+hand: together
+prompt: 'Another left hand: bass, then chord.'
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q. F4:e E4:q D4:q | C4:q D4:q E4:q C4:q | D4:e E4:e F4:e D4:e E4:q. D4:e | C4:q B3:q C4:h | G4:q. F4:e E4:q D4:q
+  | C4:q D4:q E4:q C4:q | D4:e E4:e F4:e D4:e E4:q. D4:e | C4:q B3:q C4:h | D4:q. E4:e F4:q D4:q | E4:q. F4:e G4:q D4:q |
+  E4:e F#4:e G4:q A4:e B4:e C5:q | B4:q A4:q G4:h | G4:q. F4:e E4:q D4:q | C4:q D4:q E4:q C4:q | A4:e A4:e A4:e A4:e G4:q.
+  F4:e | E4:q D4:q C4:h
+left: C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | G2:q B2+D3+G3:q C3:q E3+G3:q | G2:q B2+D3+G3:q C3:q E3+G3:q
+  | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | G2:q B2+D3+G3:q C3:q E3+G3:q | G2:q B2+D3+G3:q C3:q E3+G3:q |
+  G2:q B2+D3+G3:q D3:q B2+D3+G3:q | C3:q E3+G3:q G2:q B2+D3+G3:q | A2:q C3+E3+A3:q D3:q F#3+A3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q
+  | C3:q E3+G3:q G3:q E3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | B2+D3+G3:h C3+E3+G3:h
+reps: 2
+days: 1

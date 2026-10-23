@@ -1,0 +1,37 @@
+id: ks-c-echo
+title: Echo phrases in C major
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: C4 D4 E4 D4 C4
+  plays: 2
+- type: melody
+  notes: G4 F4 E4 D4 C4
+  plays: 2
+- type: melody
+  notes: C4 E4 G4 E4 C4
+  plays: 2
+- type: melody
+  notes: E4 F4 G4 F4 E4
+  plays: 2
+- type: melody
+  notes: C4 D4 E4 F4 G4
+  plays: 2
+- type: melody
+  notes: G4 A4 G4 F4 E4
+  plays: 2
+- type: melody
+  notes: C5 B4 A4 G4
+  plays: 2
+- type: melody
+  notes: E4 D4 C4 B4 C4
+  plays: 2
+- type: melody
+  notes: C4 G4 E4 C4
+  plays: 2
+- type: melody
+  notes: G4 E4 F4 D4 C4
+  plays: 2

@@ -1,0 +1,12 @@
+id: ks-b-flat-minor-harmonised-scale
+title: 'B♭ minor: the scale with chords'
+kind: timed
+hand: together
+prompt: 'The scale in the right hand, the chords under it in the left: the scale turned into music.'
+key: Bbm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Bb4:q C5:q Db5:q Eb5:q | F5:q Gb5:q A5:q Bb5:q | A5:q Gb5:q F5:q Eb5:q | Db5:q C5:q Bb4:h
+left: Bb2+Db3+F3:w | Bb2+Db3+F3:h A2+C3+F3:h | A2+C3+F3:w | Bb2+Db3+F3:w

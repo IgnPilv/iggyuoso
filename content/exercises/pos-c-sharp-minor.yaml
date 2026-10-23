@@ -1,0 +1,14 @@
+id: pos-c-sharp-minor
+title: C♯ minor position, hands together
+kind: timed
+hand: together
+prompt: 'Thumbs on different notes: right thumb on C#, left little finger on C#.'
+key: C#m
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#4:q D#4:q E4:q F#4:q | G#4:q F#4:q E4:q D#4:q | C#4:q E4:q G#4:q E4:q | C#4:w
+left: C#3:q D#3:q E3:q F#3:q | G#3:q F#3:q E3:q D#3:q | C#3:q E3:q G#3:q E3:q | C#3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 5 3 1
+leftFingers: 5 4 3 2 1 2 3 4 5 3 1 3 5

@@ -1,0 +1,14 @@
+id: piece-etude-chords-in-eb-rh
+title: 'Chorale in E♭: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: Eb
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:h Ab4:h | Bb4:h Bb4:h | C5:h Bb4:h | Ab4:h G4:h | G4:h F4:h | Eb4:h Ab4:h | G4:h F4:h | Eb4:w
+reps: 2
+days: 1

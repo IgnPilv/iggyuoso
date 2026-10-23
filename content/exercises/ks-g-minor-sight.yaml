@@ -1,0 +1,20 @@
+id: ks-g-minor-sight
+title: Sight-read in G minor
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: G4-G5
+keys:
+- Gm
+left: chords
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

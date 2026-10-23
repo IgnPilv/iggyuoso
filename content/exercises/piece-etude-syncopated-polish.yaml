@@ -1,0 +1,14 @@
+id: piece-etude-syncopated-polish
+title: 'Syncopated Study: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+key: F
+tempo: 84
+meter: 4/4
+countIn: 1
+right: F4:e A4:q C5:e r:e A4:e C5:q | Bb4:e D5:q Bb4:e r:e G4:e Bb4:q | A4:e C5:q A4:e r:e F4:e A4:q | G4:e E4:q C4:e F4:h
+left: F2:q C3:q F2:q C3:q | Bb2:q F3:q Bb2:q F3:q | F2:q C3:q F2:q C3:q | C3:q G2:q F2:h
+reps: 3
+days: 3

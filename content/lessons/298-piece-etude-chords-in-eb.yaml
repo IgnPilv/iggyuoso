@@ -1,0 +1,23 @@
+id: piece-etude-chords-in-eb
+title: Chorale in E♭
+skills:
+- repertoire
+steps:
+- explain: |
+    **Chorale in E♭** · Our own study
+
+    A hymn-like chorale in E♭ major: held chords, a slow tune.
+  staff:
+    notes: G4:h Ab4:h  |  Bb4:h Bb4:h
+    key: Eb
+  sound: G4:h Ab4:h  |  Bb4:h Bb4:h  |  C5:h Bb4:h  |  Ab4:h G4:h
+- explain: |
+    **How to learn it.** Smooth: hold each chord until the very moment the next one sounds.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-chords-in-eb-tap
+- exercise: piece-etude-chords-in-eb-rh
+- exercise: piece-etude-chords-in-eb-lh
+- exercise: piece-etude-chords-in-eb
+- exercise: piece-etude-chords-in-eb-polish
+recap: 'Chorale in E♭: learned hands alone, then together, then performed.'

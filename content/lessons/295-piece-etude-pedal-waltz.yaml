@@ -1,0 +1,23 @@
+id: piece-etude-pedal-waltz
+title: Pedal Waltz
+skills:
+- repertoire
+steps:
+- explain: |
+    **Pedal Waltz** · Our own study
+
+    A slow waltz with the pedal changing at every bar.
+  staff:
+    notes: A4:h.  |  C5:h A4:q
+    key: F
+  sound: A4:h.  |  C5:h A4:q  |  G4:h.  |  C5:h.
+- explain: |
+    **How to learn it.** Pedal down after each bass note, up and down again at the next bar line.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-pedal-waltz-tap
+- exercise: piece-etude-pedal-waltz-rh
+- exercise: piece-etude-pedal-waltz-lh
+- exercise: piece-etude-pedal-waltz
+- exercise: piece-etude-pedal-waltz-polish
+recap: 'Pedal Waltz: learned hands alone, then together, then performed.'

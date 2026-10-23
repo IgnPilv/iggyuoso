@@ -1,0 +1,17 @@
+id: piece-etude-minor-march
+title: March in D minor
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+key: Dm
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q A4:q A4:q. G4:e | F4:q E4:q D4:h | F4:q A4:q D5:q. C5:e | Bb4:q A4:q G4:h | A4:q Bb4:q C5:q A4:q | Bb4:q G4:q
+  A4:h | G4:q E4:q C#4:q E4:q | D4:w
+left: D3:q F3+A3:q A3:q F3+A3:q | D3:q F3+A3:q A2:q C#3+E3+A3:q | D3:q F3+A3:q A3:q F3+A3:q | G2:q D3+G3+Bb3:q C3:q E3+G3:q
+  | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | G2:q D3+G3+Bb3:q D3:q F3+A3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | D3+F3+A3:w
+reps: 3
+days: 2

@@ -1,0 +1,27 @@
+id: song-silent-night-arp
+title: Silent Night, flowing
+skills:
+- songs
+steps:
+- explain: |
+    **Silent Night, flowing** · Franz Gruber, 1818, arranged
+
+    The carol with rolling left-hand arpeggios and pedal, like a harp.
+  staff:
+    notes: G4:q. A4:e G4:q  |  E4:h.
+  sound: G4:q. A4:e G4:q  |  E4:h.  |  G4:q. A4:e G4:q  |  E4:h.
+- explain: |
+    **Before you play.** Root, fifth, octave in the left hand; the pedal joins them into one sound.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 3/4 · Tempo: 66
+- exercise: song-silent-night-arp-tap
+- exercise: song-silent-night-arp-tap-hands
+- exercise: song-silent-night-arp-by-ear
+- exercise: song-silent-night-arp-rh
+- exercise: song-silent-night-arp-lh
+- exercise: song-silent-night-arp
+- exercise: song-silent-night-arp-arranged
+- exercise: song-silent-night-arp-performance
+recap: 'Silent Night, flowing: tune, left hand, together. Come back to it any time; songs are for fun.'

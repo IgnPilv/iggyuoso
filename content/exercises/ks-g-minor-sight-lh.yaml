@@ -1,0 +1,18 @@
+id: ks-g-minor-sight-lh
+title: Sight-read the left hand in G minor
+kind: generated
+generator: sight-read
+hand: left
+clef: bass
+tempo: 66
+notes: G3-G4
+keys:
+- Gm
+durations:
+- q
+- h
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

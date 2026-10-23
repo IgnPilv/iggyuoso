@@ -1,0 +1,28 @@
+id: ks-b
+title: 'Key study: B major'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: B major, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in B major. Its chords: **B**, **E** and **F♯7**.
+  staff:
+    notes: B4:q C#5:q D#5:q E5:q F#5:q G#5:q A#5:q B5:q
+    key: B
+  sound: B4:q C#5:q D#5:q E5:q F#5:q G#5:q A#5:q B5:q
+- exercise: ks-b-thirds
+- exercise: mirror-b
+- exercise: triad-b
+- exercise: dom7-b
+- exercise: scale-b-1-e
+- exercise: scale-b-2-e
+- exercise: scale-b-contrary
+- exercise: ks-b-pedal
+- exercise: ks-b-harmonised-scale
+- exercise: ks-b-chord-pattern
+- exercise: ks-b-inversions
+- exercise: ks-b-broken
+- exercise: ks-b-alberti
+- exercise: ks-b-pulse
+- exercise: ks-b-waltz
+recap: B major under both hands.

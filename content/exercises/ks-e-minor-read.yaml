@@ -1,0 +1,14 @@
+id: ks-e-minor-read
+title: Read in E minor
+kind: generated
+generator: read-notes
+clef: treble
+notes: C4-A5
+keys:
+- Em
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 3
+days: 2

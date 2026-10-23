@@ -12,7 +12,7 @@ def pick(rng, items, n): return rng.sample(items, n)
 SHARPS = 'F C G D A E B'.split()
 FLATS = 'B E A D G C F'.split()
 MAJ_SIG = {'C': 0, 'G': 1, 'D': 2, 'A': 3, 'E': 4, 'B': 5, 'F#': 6, 'F': -1, 'Bb': -2, 'Eb': -3, 'Ab': -4, 'Db': -5, 'Gb': -6}
-REL_MINOR = {'C': 'Am', 'G': 'Em', 'D': 'Bm', 'A': 'F#m', 'E': 'C#m', 'B': 'G#m', 'F': 'Dm', 'Bb': 'Gm', 'Eb': 'Cm', 'Ab': 'Fm', 'Db': 'Bbm'}
+REL_MINOR = {'C': 'Am', 'G': 'Em', 'D': 'Bm', 'A': 'F#m', 'E': 'C#m', 'B': 'G#m', 'F': 'Dm', 'Bb': 'Gm', 'Eb': 'Cm', 'Ab': 'Fm', 'Db': 'Bbm', 'Gb': 'Ebm'}
 
 def pretty(n): return n.replace('#', '♯').replace('b', '♭') if len(n) > 1 else n
 def key_name(k): return pretty(k[:-1]) + ' minor' if k.endswith('m') else pretty(k) + ' major'
@@ -161,7 +161,7 @@ def run(base):
     for k in ['C', 'G', 'D', 'F', 'Bb', 'A', 'Eb']:
         c = MAJ_SIG[k]
         others = [sig_text(x) for x in (0, 1, 2, -1, -2, 3, -3) if x != c]
-        qs.append(Q(f'The key signature of {key_name(k)} is...', sig_text(c), pick(random.Random(k), others, 3), f'{key_name(k)}: {sig_text(c).lower()}.'))
+        qs.append(Q(f'The key signature of {key_name(k)} is...', sig_text(c), pick(random.Random(k), others, 3), f'{key_name(k)}: {sig_text(c)}.'))
         if k != 'C':
             qs.append(Q('Which major key has this key signature?', key_name(k), [key_name(x) for x in pick(random.Random(k + 'x'), [x for x in ('G', 'D', 'F', 'Bb', 'A', 'Eb') if x != k], 3)],
                         f'{sig_text(c)}: {key_name(k)}. Sharps: the key is a half step above the last sharp. Flats: the key is the second-to-last flat.', staff='C5:w', key=k))
@@ -278,7 +278,7 @@ def run(base):
     for k in ['C', 'G', 'D', 'F', 'Bb', 'A', 'Eb', 'E']:
         m = REL_MINOR[k]
         qs.append(Q(f'The relative minor of {key_name(k)} is...', key_name(m), [key_name(REL_MINOR[x]) for x in pick(random.Random(k), [x for x in REL_MINOR if x != k], 3)],
-                    f'Go down three half steps (a minor 3rd) from {pretty(k)}: {pretty(m[:-1])}. They share a key signature: {sig_text(MAJ_SIG[k]).lower()}.'))
+                    f'Go down three half steps (a minor 3rd) from {pretty(k)}: {pretty(m[:-1])}. They share a key signature: {sig_text(MAJ_SIG[k])}.'))
     for k in ['Em', 'Dm', 'Bm', 'Gm']:
         maj = next(x for x, y in REL_MINOR.items() if y == k)
         qs.append(Q(f'The key signature of {key_name(k)} is...', sig_text(MAJ_SIG[maj]), [sig_text(x) for x in pick(random.Random(k), [y for y in (0, 1, 2, 3, -1, -2, -3) if y != MAJ_SIG[maj]], 3)],
@@ -488,3 +488,38 @@ def run(base):
           check=check('After the leap E–A, the melody...', 'Steps back down', ['Leaps higher', 'Stops'], 'A–G, filling the gap.')),
         X(quiz('theory-melodies-quiz', 'Melody quiz', qs)),
     ], 'Steps, a leap, a peak, home.')
+
+    # ------------------------------------------------------------ spelling drills
+    qs = []
+    for k in ['G', 'D', 'A', 'E', 'F', 'Bb', 'Eb', 'Ab']:
+        right = ' '.join(pretty(x[:-1]) for x in scale(tonic_note(k, 4))[:7])
+        wrong = [' '.join(pretty(x[:-1]) for x in scale(tonic_note(k, 4), 'minor')[:7]), ' '.join(pretty(x[:-1].replace('#', '').replace('b', '')) if len(x) > 2 else pretty(x[:-1]) for x in scale(tonic_note(k, 4))[:7])]
+        qs.append(Q(f'Spell the {key_name(k)} scale.', right, [w for w in wrong if w != right], f'{key_name(k)}: {right}. Pattern W W H W W W H.'))
+    mqs = []
+    for k in ['Am', 'Em', 'Dm', 'Gm', 'Bm', 'Cm']:
+        right = ' '.join(pretty(x[:-1]) for x in scale(tonic_note(k, 4), 'harmonic')[:7])
+        nat = ' '.join(pretty(x[:-1]) for x in scale(tonic_note(k, 4), 'minor')[:7])
+        maj = ' '.join(pretty(x[:-1]) for x in scale(tonic_note(k, 4), 'major')[:7])
+        mqs.append(Q(f'Spell the {key_name(k)} harmonic scale.', right, [nat, maj], f'Natural minor with the 7th raised: {right}.'))
+    L('theory-scale-spelling', 5, 'Spelling scales', ['theory-keys-two-and-three', 'harmonic-minor'], [
+        S("""Spell a scale with **every letter once**, in order, and add the sharps or flats the pattern needs. That is why
+        G major has F♯ and not G♭: G already has its letter.""", staff=staff('G4:q A4:q B4:q C5:q D5:q E5:q F#5:q G5:q', labels='names')),
+        X(quiz('theory-major-spelling-quiz', 'Spell the major scales', qs, reps=2, days=2)),
+        X(quiz('theory-minor-spelling-quiz', 'Spell the minor scales', mqs, reps=2, days=2)),
+    ], 'Every letter once, then the accidentals.')
+
+    qs_up, qs_down = [], []
+    for base, iv in [('C4', 'M3'), ('D4', 'P5'), ('E4', 'm3'), ('F4', 'M6'), ('G4', 'P4'), ('A4', 'M2'), ('Bb4', 'M3'), ('Eb4', 'P5'), ('F#4', 'm3'), ('D4', 'M7'), ('A4', 'm7'), ('B4', 'P4')]:
+        steps, semis = {'M2': (1, 2), 'm3': (2, 3), 'M3': (2, 4), 'P4': (3, 5), 'P5': (4, 7), 'M6': (5, 9), 'm7': (6, 10), 'M7': (6, 11)}[iv]
+        up = step_up(base, steps, semis); dn = step_down(base, steps, semis)
+        wr = lambda n, d: [pretty(spell(n[0], octave_of(n), midi(n) + d)[:-1]) for _ in (0,)][0]
+        qs_up.append(Q(f'A {LONG[iv]} above {pretty(base[:-1])} is...', pretty(up[:-1]), [wr(up, 1) if '##' not in spell(up[0], octave_of(up), midi(up) + 1) else wr(up, -1), pretty(transpose(base, steps + 1, semis + 2)[:-1])],
+                       f'{steps + 1} letters up from {pretty(base[:-1])} is {up[0]}; {semis} half steps makes it {pretty(up[:-1])}.', whyStaff=staff(f'{base}:h {up}:h')))
+        qs_down.append(Q(f'A {LONG[iv]} below {pretty(base[:-1])} is...', pretty(dn[:-1]), [wr(dn, -1) if 'bb' not in spell(dn[0], octave_of(dn), midi(dn) - 1) else wr(dn, 1), pretty(transpose(base, -steps - 1, -semis - 2)[:-1])],
+                         f'{steps + 1} letters down from {pretty(base[:-1])} is {dn[0]}; {semis} half steps makes it {pretty(dn[:-1])}.', whyStaff=staff(f'{base}:h {dn}:h')))
+    L('theory-spelling-intervals', 6, 'Spelling intervals', ['theory-interval-quality', 'theory-scale-spelling'], [
+        S("""To write an interval: count the **letters** first (a 3rd above D is F), then fix the **quality** with a sharp or flat
+        (D to F is a minor 3rd; a major 3rd needs F♯).""", staff=staff('D4:h F#4:h')),
+        X(quiz('theory-intervals-up-quiz', 'Intervals above a note', qs_up, reps=2, days=2)),
+        X(quiz('theory-intervals-down-quiz', 'Intervals below a note', qs_down, reps=2, days=2)),
+    ], 'Letters first, then the sharp or flat.')

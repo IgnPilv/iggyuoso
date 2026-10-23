@@ -1,0 +1,17 @@
+id: song-jingle-bells-song-swap
+title: 'Jingle Bells: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:w | C4+E4+G4:w | C4+E4+G4:w | C4+E4+G4:w | C4+F4+A4:w | C4+E4+G4:w | B3+D4+G4:w | B3+D4+G4:w | C4+E4+G4:w
+  | C4+E4+G4:w | C4+E4+G4:w | C4+E4+G4:w | C4+F4+A4:w | C4+E4+G4:w | B3+D4+G4:w | C4+E4+G4:w
+left: E3:q E3:q E3:h | E3:q E3:q E3:h | E3:q G3:q C3:q. D3:e | E3:w | F3:q F3:q F3:q. F3:e | F3:q E3:q E3:q E3:e E3:e | E3:q
+  D3:q D3:q E3:q | D3:h G3:h | E3:q E3:q E3:h | E3:q E3:q E3:h | E3:q G3:q C3:q. D3:e | E3:w | F3:q F3:q F3:q. F3:e | F3:q
+  E3:q E3:q E3:e E3:e | G3:q G3:q F3:q D3:q | C3:w
+reps: 2
+days: 1

@@ -314,3 +314,35 @@ def run(base):
         T2('rt-groove-latin', 'Latin', 'q. q. q | rq q q rq | q. q. q | rq q q rq', 'q. e q. e | q. e q. e | q. e q. e | q. e q. e', tempo=84),
         T2('rt-groove-pop', 'Pop ballad', 'e e e e e e e e | e e e e e e e e | e e e e e e e e | w', 'q. e h | q. e h | q. e h | w', tempo=72),
     ], 'Lock in and repeat.')
+
+    # ------------------------------------------------------------ workouts: fresh rhythms every day
+    WORKOUTS = [
+        (1, 'rhythm-workout-1', 'Rhythm workout: first values', ['rhythm-two-hands-together'], ['q', 'h', 'w'], '4/4', 72),
+        (2, 'rhythm-workout-2', 'Rhythm workout: rests and 3/4', ['rhythm-inner-pulse', 'rhythm-waltz-patterns'], ['q', 'h', 'r:q'], '3/4', 80),
+        (3, 'rhythm-workout-3', 'Rhythm workout: eighths', ['rhythm-eighths-two-hands'], ['q', 'e', 'h', 'r:q'], '4/4', 72),
+        (4, 'rhythm-workout-4', 'Rhythm workout: dotted and sixteenths', ['rhythm-sixteenth-patterns', 'rhythm-dotted-patterns'], ['q', 'q.', 'e', 's'], '4/4', 60),
+        (5, 'rhythm-workout-5', 'Rhythm workout: triplets and off-beats', ['rhythm-triplet-patterns', 'rhythm-offbeat-eighths'], ['q', 'e', 'e3', 'r:e'], '4/4', 60),
+        (6, 'rhythm-workout-6', 'Rhythm workout: 6/8', ['rhythm-six-eight-hands'], ['q', 'e', 'q.'], '6/8', 56),
+        (7, 'rhythm-workout-7', 'Rhythm workout: 9/8 and 12/8', ['rhythm-compound-meters'], ['q', 'e', 'q.'], '12/8', 50),
+        (8, 'rhythm-workout-8', 'Rhythm workout: everything in 4/4', ['rhythm-sixteenth-syncopation'], ['q', 'q.', 'e', 's', 'r:e', 'h'], '4/4', 60),
+        (9, 'rhythm-workout-9', 'Rhythm workout: cut time and 3/4', ['rhythm-groove'], ['q', 'h', 'e', 'q.'], '2/2', 66),
+    ]
+    for stage, id, title, req, durs, meter, tempo in WORKOUTS:
+        n = id.split('-')[-1]
+        L(id, stage, title, req, [
+            S(f"""Fresh rhythms every time, read and by ear, one hand and two. Five minutes a day keeps the reading sharp."""),
+            READ(f'gen-workout-{n}-read', 'Read it', durs, meter=meter, bars=4, tempo=tempo, reps=3, days=3),
+            ECHO(f'gen-workout-{n}-echo', 'Hear it, tap it back', durs, meter=meter, bars=2, tempo=tempo, reps=3, days=3),
+            READ(f'gen-workout-{n}-read-hands', 'Read it, two hands', durs, meter=meter, bars=4, tempo=tempo, hands='both', reps=3, days=3),
+            ECHO(f'gen-workout-{n}-echo-hands', 'Hear it, two hands', durs, meter=meter, bars=2, tempo=tempo, hands='both', reps=3, days=3),
+            READ(f'gen-workout-{n}-read-long', 'Read eight bars', durs, meter=meter, bars=8, tempo=tempo, reps=3, days=3),
+            ECHO(f'gen-workout-{n}-echo-long', 'Hear four bars, tap them back', durs, meter=meter, bars=4, tempo=tempo, reps=3, days=3),
+        ], 'A daily workout: new rhythms every run.')
+
+    L('rhythm-odd-meters', 9, 'Five and seven', ['rhythm-hemiola', 'rhythm-workout-8'], [
+        S("""Some music counts in **5** or **7**. 5/4 is felt as 3 + 2 (or 2 + 3); 7/8 as 2 + 2 + 3. Accent the start of each group."""),
+        T('rt-54', 'Five beats: 3 + 2', 'h. h | q q q q q | h. q q | w q', meter='5/4', tempo=88),
+        T2('rt-54-hands', 'Five beats, two hands', 'q q q q q | q q q h | q q q q q | h. h', 'h. h | h. h | h. h | h. h', meter='5/4', tempo=80),
+        T('rt-78', 'Seven eighths: 2 + 2 + 3', 'q q q. | e e e e e e e | q q q. | e e q q.', meter='7/8', tempo=160),
+        READ('gen-read-54', 'Read in 5/4', ['q', 'h', 'e'], meter='5/4', bars=4, tempo=80, reps=3, days=2),
+    ], 'Odd meters: groups of twos and threes.')

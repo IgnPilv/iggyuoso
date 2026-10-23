@@ -1,0 +1,15 @@
+id: song-drunken-sailor-by-ear
+title: 'What Shall We Do with the Drunken Sailor?: by ear'
+kind: ear
+prompt: Play the start of the tune back from hearing it. Lit keys help the first time.
+questions: 4
+reps: 2
+days: 1
+items:
+- type: melody
+  notes: A4 A4 A4 D4 F4 A4
+  plays: 3
+  lit: true
+- type: melody
+  notes: A4 A4 A4 D4
+  plays: 3

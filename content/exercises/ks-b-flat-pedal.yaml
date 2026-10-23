@@ -1,0 +1,13 @@
+id: ks-b-flat-pedal
+title: 'B♭ major: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: Bb
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:h F5:h | Eb5:h G5:h | C5:h A4:h | Bb4:w
+left: Bb2:q F3:q Bb3:q F3:q | Eb3:q Bb3:q Eb4:q Bb3:q | F2:q C3:q F3:q C3:q | Bb2+D3+F3:w
+pedal: x:w | x:w | x:w | x:w

@@ -1,0 +1,16 @@
+id: piece-etude-scales-d
+title: Scale Study in D
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:e C#5:e B4:e A4:e G4:e F#4:e E4:e D4:e | A4:h F#4:h | G4:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e | F#5:h D5:h | B4:e
+  C#5:e D5:e B4:e A4:e B4:e G4:e E4:e | D4:e E4:e F#4:e G4:e A4:h | G4:e E4:e C#4:e E4:e A4:e G4:e F#4:e E4:e | D4:w
+left: D3+F#3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w
+reps: 3
+days: 2

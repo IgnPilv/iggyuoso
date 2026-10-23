@@ -1,0 +1,25 @@
+id: ks-f-musicianship
+title: Reading and hearing F major
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: F major, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: F4:q G4:q A4:q Bb4:q C5:q D5:q E5:q F5:q
+    key: F
+  sound: F4:q G4:q A4:q Bb4:q C5:q D5:q E5:q F5:q
+- exercise: ks-f-quiz
+- exercise: ks-f-triads
+- exercise: ks-f-read
+- exercise: ks-f-read-bass
+- exercise: ks-f-sight
+- exercise: ks-f-sight-rh
+- exercise: ks-f-sight-lh
+- exercise: ks-f-intervals
+- exercise: ks-f-degrees
+- exercise: ks-f-echo
+recap: F major for the eyes and ears.

@@ -1,0 +1,25 @@
+id: ks-c-sharp-minor-musicianship
+title: Reading and hearing C♯ minor
+skills:
+- reading
+- ear
+- theory
+steps:
+- explain: |
+    **Key study: C♯ minor, eyes and ears.** Its key signature, its chords on paper, reading and sight-reading in it,
+    and its sound: every degree and short phrases to play back.
+  staff:
+    notes: C#4:q D#4:q E4:q F#4:q G#4:q A4:q B#4:q C#5:q
+    key: C#m
+  sound: C#4:q D#4:q E4:q F#4:q G#4:q A4:q B#4:q C#5:q
+- exercise: ks-c-sharp-minor-quiz
+- exercise: ks-c-sharp-minor-triads
+- exercise: ks-c-sharp-minor-read
+- exercise: ks-c-sharp-minor-read-bass
+- exercise: ks-c-sharp-minor-sight
+- exercise: ks-c-sharp-minor-sight-rh
+- exercise: ks-c-sharp-minor-sight-lh
+- exercise: ks-c-sharp-minor-intervals
+- exercise: ks-c-sharp-minor-degrees
+- exercise: ks-c-sharp-minor-echo
+recap: C♯ minor for the eyes and ears.

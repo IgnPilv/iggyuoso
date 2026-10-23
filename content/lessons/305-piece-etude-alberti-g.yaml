@@ -1,0 +1,23 @@
+id: piece-etude-alberti-g
+title: Alberti Study in G
+skills:
+- repertoire
+steps:
+- explain: |
+    **Alberti Study in G** · Our own study
+
+    A classical-style study over an Alberti bass.
+  staff:
+    notes: D5:h B4:q G4:q  |  A4:h F#4:h
+    key: G
+  sound: D5:h B4:q G4:q  |  A4:h F#4:h  |  G4:q B4:q D5:q G5:q  |  F#5:h D5:h
+- explain: |
+    **How to learn it.** Left hand soft and even; right hand singing.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-alberti-g-tap
+- exercise: piece-etude-alberti-g-rh
+- exercise: piece-etude-alberti-g-lh
+- exercise: piece-etude-alberti-g
+- exercise: piece-etude-alberti-g-polish
+recap: 'Alberti Study in G: learned hands alone, then together, then performed.'

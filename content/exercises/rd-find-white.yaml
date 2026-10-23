@@ -1,0 +1,11 @@
+id: rd-find-white
+title: Find the white keys
+kind: generated
+generator: find-notes
+notes: C4-B4
+questions: 30
+mastery:
+  accuracy: 95
+  medianMs: 2000
+reps: 3
+days: 2

@@ -1,0 +1,13 @@
+id: ks-a-minor-pedal
+title: 'A minor: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: Am
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h E5:h | D5:h F5:h | B4:h G#4:h | A4:w
+left: A2:q E3:q A3:q E3:q | D3:q A3:q D4:q A3:q | E3:q B3:q E4:q B3:q | A2+C3+E3:w
+pedal: x:w | x:w | x:w | x:w

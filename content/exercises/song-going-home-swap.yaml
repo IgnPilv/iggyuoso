@@ -1,0 +1,15 @@
+id: song-going-home-swap
+title: 'Going Home: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:w | C4+E4+G4:w | B3+D4+G4:w | B3+D4+G4:w | C4+E4+G4:w | C4+E4+A4:w | B3+D4+G4:w | C4+E4+G4:w
+left: E3:q G3:q G3:h | E3:q D3:q C3:h | D3:q E3:q G3:q E3:q | D3:w | E3:q G3:q G3:h | E3:q D3:q C3:h | D3:q E3:q D3:q C3:q
+  | C3:w
+reps: 2
+days: 1

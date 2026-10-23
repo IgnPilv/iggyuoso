@@ -1,0 +1,18 @@
+id: ks-e-minor-degrees
+title: Every degree of E minor
+kind: ear
+cadence: Em
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Em
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

@@ -27,3 +27,20 @@ nodes:
   - { id: piece-nocturne-f, stage: 8, lesson: piece-nocturne-f, title: "Nocturne in F", type: piece, requires: [pedal-legato, technique-arpeggios-one-octave] }
   - { id: piece-blues-in-c, stage: 9, lesson: piece-blues-in-c, title: "Blues in C", type: piece, requires: [technique-blues-shapes, theory-twelve-bar-blues] }
   - { id: piece-etude-arpeggios, stage: 9, lesson: piece-etude-arpeggios, title: "Arpeggio Study", type: piece, requires: [technique-arpeggios-two-octaves] }
+  - { id: piece-turkish-march, stage: 7, lesson: piece-turkish-march, title: "Turkish March: the opening", type: piece, requires: [rhythm-sixteenths-two-hands, y2-exit] }
+  - { id: piece-etude-g-position, stage: 2, lesson: piece-etude-g-position, title: "Study in G position", type: piece, requires: [g-position] }
+  - { id: piece-etude-eighths-c, stage: 3, lesson: piece-etude-eighths-c, title: "Running Eighths", type: piece, requires: [eighth-notes, technique-c-position-two-hands] }
+  - { id: piece-etude-minor-song, stage: 4, lesson: piece-etude-minor-song, title: "Song in A minor", type: piece, requires: [natural-minor, technique-broken-chords] }
+  - { id: piece-etude-staccato-chords, stage: 5, lesson: piece-etude-staccato-chords, title: "Bouncing Chords", type: piece, requires: [staccato, primary-triads] }
+  - { id: piece-etude-pedal-waltz, stage: 6, lesson: piece-etude-pedal-waltz, title: "Pedal Waltz", type: piece, requires: [pedal-simple, three-four-time] }
+  - { id: piece-etude-six-eight, stage: 7, lesson: piece-etude-six-eight, title: "Study in 6/8", type: piece, requires: [rhythm-six-eight-hands, key-of-g] }
+  - { id: piece-etude-scales-d, stage: 8, lesson: piece-etude-scales-d, title: "Scale Study in D", type: piece, requires: [technique-two-octave-scales-ht] }
+  - { id: piece-etude-chords-in-eb, stage: 8, lesson: piece-etude-chords-in-eb, title: "Chorale in E♭", type: piece, requires: [technique-cadences-flat-keys] }
+  - { id: piece-etude-left-hand-melody, stage: 3, lesson: piece-etude-left-hand-melody, title: "Left-Hand Song", type: piece, requires: [bass-staff, technique-c-position-two-hands] }
+  - { id: piece-etude-walking-bass, stage: 4, lesson: piece-etude-walking-bass, title: "Walking Bass", type: piece, requires: [two-note-chords, technique-broken-chords] }
+  - { id: piece-etude-rocking-thirds, stage: 5, lesson: piece-etude-rocking-thirds, title: "Rocking Thirds", type: piece, requires: [thirds-major-minor, technique-arpeggios-one-octave] }
+  - { id: piece-etude-minor-march, stage: 6, lesson: piece-etude-minor-march, title: "March in D minor", type: piece, requires: [staccato, technique-minor-scales-ht] }
+  - { id: piece-etude-legato-pedal, stage: 7, lesson: piece-etude-legato-pedal, title: "Evening Bells", type: piece, requires: [pedal-legato, technique-arpeggios-one-octave] }
+  - { id: piece-etude-syncopated, stage: 7, lesson: piece-etude-syncopated, title: "Syncopated Study", type: piece, requires: [syncopation, rhythm-syncopation-hands] }
+  - { id: piece-etude-alberti-g, stage: 8, lesson: piece-etude-alberti-g, title: "Alberti Study in G", type: piece, requires: [technique-alberti, technique-two-octave-scales-ht] }
+  - { id: piece-etude-chromatic, stage: 9, lesson: piece-etude-chromatic, title: "Chromatic Study", type: piece, requires: [chromatic-scale, technique-octaves] }

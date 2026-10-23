@@ -1,0 +1,24 @@
+id: piece-turkish-march
+title: 'Turkish March: the opening'
+skills:
+- repertoire
+steps:
+- explain: |
+    **Turkish March: the opening** · W. A. Mozart, Rondo alla Turca, 1783 (first bars, arranged)
+
+    The last movement of Mozart's piano sonata in A major imitates a Turkish military band, all bright and bustling.
+  staff:
+    notes: B4:s A4:s G#4:s A4:s C5:e r:e  |  D5:s C5:s B4:s C5:s E5:e r:e
+    key: Am
+  sound: B4:s A4:s G#4:s A4:s C5:e r:e  |  D5:s C5:s B4:s C5:s E5:e r:e  |  F5:s E5:s D#5:s E5:s B5:s A5:s G#5:s A5:s  |  B5:s
+    A5:s G#5:s A5:s C6:q
+- explain: |
+    **How to learn it.** Sixteenths turning round a note: B A G♯ A. Keep the fingers close to the keys and light. The left hand answers in short chords.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-turkish-march-tap
+- exercise: piece-turkish-march-rh
+- exercise: piece-turkish-march-lh
+- exercise: piece-turkish-march
+- exercise: piece-turkish-march-polish
+recap: 'Turkish March: the opening: learned hands alone, then together, then performed.'

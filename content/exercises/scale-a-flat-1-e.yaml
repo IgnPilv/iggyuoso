@@ -1,0 +1,14 @@
+id: scale-a-flat-1-e
+title: A♭ major scale, one octave, eighths
+kind: timed
+hand: together
+prompt: 'Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.'
+key: Ab
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Ab4:e Bb4:e C5:e Db5:e Eb5:e F5:e G5:e Ab5:e | G5:e F5:e Eb5:e Db5:e C5:e Bb4:e Ab4:q
+left: Ab3:e Bb3:e C4:e Db4:e Eb4:e F4:e G4:e Ab4:e | G4:e F4:e Eb4:e Db4:e C4:e Bb3:e Ab3:q
+rightFingers: 3 4 1 2 3 1 2 3 2 1 3 2 1 4 3
+leftFingers: 3 2 1 4 3 2 1 3 1 2 3 4 1 2 3

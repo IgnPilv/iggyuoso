@@ -1,0 +1,15 @@
+id: piece-etude-minor-march-rh
+title: 'March in D minor: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: Dm
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q A4:q A4:q. G4:e | F4:q E4:q D4:h | F4:q A4:q D5:q. C5:e | Bb4:q A4:q G4:h | A4:q Bb4:q C5:q A4:q | Bb4:q G4:q
+  A4:h | G4:q E4:q C#4:q E4:q | D4:w
+reps: 2
+days: 1

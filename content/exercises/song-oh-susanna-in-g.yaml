@@ -1,0 +1,19 @@
+id: song-oh-susanna-in-g
+title: Oh! Susanna in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 4/4
+pickup: e e
+countIn: 1
+right: G4:e A4:e | B4:q D5:q D5:q. E5:e | D5:q B4:q G4:q. A4:e | B4:q B4:q A4:q G4:q | A4:h. G4:e A4:e | B4:q D5:q D5:q. E5:e
+  | D5:q B4:q G4:q. A4:e | B4:q B4:q A4:q A4:q | G4:h. r:q | C5:h C5:h | E5:q E5:h E5:q | D5:q D5:q B4:q G4:q | A4:h. G4:e
+  A4:e | B4:q D5:q D5:q. E5:e | D5:q B4:q G4:q. A4:e | B4:q B4:q A4:q A4:q | G4:h.
+left: r:q | G2:w | G2:w | G2:w | D3:w | G2:w | G2:w | G2:h D3:h | G2:w | C3:w | C3:w | G2:w | D3:w | G2:w | G2:w | G2:h D3:h
+  | G2:h.
+reps: 2
+days: 1

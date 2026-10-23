@@ -1,0 +1,18 @@
+id: ks-a-minor-degrees
+title: Every degree of A minor
+kind: ear
+cadence: Am
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Am
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

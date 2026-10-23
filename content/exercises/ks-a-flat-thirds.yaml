@@ -1,0 +1,14 @@
+id: ks-a-flat-thirds
+title: 'A♭ major: warm-up in thirds'
+kind: timed
+hand: together
+prompt: 'Skip a key, step back: 1 3 2 4 3 5. Both hands at once.'
+key: Ab
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Ab4:q C5:q Bb4:q Db5:q | C5:q Eb5:q Db5:q Bb4:q | Ab4:q C5:q Eb5:q C5:q | Ab4:w
+left: Ab3:q C4:q Bb3:q Db4:q | C4:q Eb4:q Db4:q Bb3:q | Ab3:q C4:q Eb4:q C4:q | Ab3:w
+rightFingers: 1 3 2 4 3 5 4 2 1 3 5 3 1
+leftFingers: 5 3 4 2 3 1 2 4 5 3 1 3 5

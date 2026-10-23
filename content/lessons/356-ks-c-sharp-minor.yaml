@@ -1,0 +1,30 @@
+id: ks-c-sharp-minor
+title: 'Key study: C♯ minor'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: C♯ minor, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in C♯ minor. Its chords: **C♯m**, **F♯m** and **G♯7**.
+  staff:
+    notes: C#4:q D#4:q E4:q F#4:q G#4:q A4:q B#4:q C#5:q
+    key: C#m
+  sound: C#4:q D#4:q E4:q F#4:q G#4:q A4:q B#4:q C#5:q
+- exercise: ks-c-sharp-minor-thirds
+- exercise: pos-c-sharp-minor
+- exercise: mirror-c-sharp-minor
+- exercise: triad-c-sharp-minor
+- exercise: cadence-c-sharp-minor
+- exercise: dom7-c-sharp-minor
+- exercise: scale-c-sharp-minor-1-e
+- exercise: scale-c-sharp-minor-2-e
+- exercise: scale-c-sharp-minor-contrary
+- exercise: ks-c-sharp-minor-pedal
+- exercise: ks-c-sharp-minor-harmonised-scale
+- exercise: ks-c-sharp-minor-chord-pattern
+- exercise: ks-c-sharp-minor-inversions
+- exercise: ks-c-sharp-minor-broken
+- exercise: ks-c-sharp-minor-alberti
+- exercise: ks-c-sharp-minor-pulse
+- exercise: ks-c-sharp-minor-waltz
+recap: C♯ minor under both hands.

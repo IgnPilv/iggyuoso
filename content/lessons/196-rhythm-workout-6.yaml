@@ -1,0 +1,14 @@
+id: rhythm-workout-6
+title: 'Rhythm workout: 6/8'
+skills:
+- rhythm
+steps:
+- explain: |
+    Fresh rhythms every time, read and by ear, one hand and two. Five minutes a day keeps the reading sharp.
+- exercise: gen-workout-6-read
+- exercise: gen-workout-6-echo
+- exercise: gen-workout-6-read-hands
+- exercise: gen-workout-6-echo-hands
+- exercise: gen-workout-6-read-long
+- exercise: gen-workout-6-echo-long
+recap: 'A daily workout: new rhythms every run.'

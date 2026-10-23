@@ -1,0 +1,14 @@
+id: song-aura-lee-pedal-tap-hands
+title: 'Aura Lee, with pedal: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 66
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w
+left: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e
+  x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e |
+  x:w
+reps: 2
+days: 1

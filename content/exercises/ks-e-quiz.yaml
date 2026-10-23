@@ -1,0 +1,67 @@
+id: ks-e-quiz
+title: 'Know the key: E major'
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: The key signature of E major is...
+  choices:
+  - B♭, E♭, A♭, D♭
+  - F♯, C♯, G♯, D♯, A♯
+  - F♯, C♯, G♯, D♯
+  - F♯, C♯, G♯
+  correct: 2
+  why: 'E major: F♯, C♯, G♯, D♯.'
+  whyStaff:
+    notes: E4:w
+    key: E
+- ask: The notes of the E major scale are...
+  choices:
+  - E F♯ G A B C D
+  - E F♯ G♯ A B C♯ D♯
+  correct: 1
+  why: 'Count the steps: W W H W W W H.'
+- ask: The tonic chord of E major is...
+  choices:
+  - B D♯ F♯ A
+  - E G♯ B
+  - A C♯ E
+  correct: 1
+  why: 'Degrees 1, 3, 5: E G♯ B.'
+- ask: The IV chord of E major is...
+  choices:
+  - A C♯ E
+  - E G♯ B
+  - B D♯ F♯ A
+  correct: 0
+  why: 'Degrees 4, 6, 8: A C♯ E.'
+- ask: The dominant 7th of E major is...
+  choices:
+  - A C♯ E
+  - B D♯ F♯ A
+  - E G♯ B
+  correct: 1
+  why: 'Built on degree 5, B: B D♯ F♯ A.'
+- ask: The dominant note of E major is...
+  choices:
+  - F♯
+  - B
+  - C♯
+  - A
+  correct: 1
+  why: Degree 5.
+- ask: The leading note of E major is...
+  choices:
+  - F♯
+  - D♯
+  - C♯
+  correct: 1
+  why: Degree 7, a half step below the tonic.
+- ask: The relative minor of E major is...
+  choices:
+  - C♯ minor
+  - A minor
+  - D major
+  correct: 0
+  why: They share a key signature.

@@ -1,0 +1,23 @@
+id: piece-etude-minor-march
+title: March in D minor
+skills:
+- repertoire
+steps:
+- explain: |
+    **March in D minor** · Our own study
+
+    A sturdy march in D minor with an oom-pah left hand.
+  staff:
+    notes: D4:q A4:q A4:q. G4:e  |  F4:q E4:q D4:h
+    key: Dm
+  sound: D4:q A4:q A4:q. G4:e  |  F4:q E4:q D4:h  |  F4:q A4:q D5:q. C5:e  |  Bb4:q A4:q G4:h
+- explain: |
+    **How to learn it.** Firm on the beat; the dotted rhythms snap.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-minor-march-tap
+- exercise: piece-etude-minor-march-rh
+- exercise: piece-etude-minor-march-lh
+- exercise: piece-etude-minor-march
+- exercise: piece-etude-minor-march-polish
+recap: 'March in D minor: learned hands alone, then together, then performed.'

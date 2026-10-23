@@ -1,0 +1,17 @@
+id: gen-workout-3-echo-hands
+title: Hear it, two hands
+kind: generated
+generator: rhythm-echo
+tempo: 72
+meter: 4/4
+durations:
+- q
+- e
+- h
+- r:q
+bars: 2
+mastery:
+  accuracy: 90
+hands: both
+reps: 3
+days: 3

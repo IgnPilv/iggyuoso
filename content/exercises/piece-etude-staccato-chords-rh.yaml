@@ -1,0 +1,13 @@
+id: piece-etude-staccato-chords-rh
+title: 'Bouncing Chords: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:e r:e E5:e r:e G5:e r:e E5:e r:e | F5:e r:e A5:e r:e G5:h | E5:e r:e C5:e r:e D5:e r:e B4:e r:e | C5:w
+reps: 2
+days: 1

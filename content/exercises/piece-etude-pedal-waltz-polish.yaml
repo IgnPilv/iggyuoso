@@ -1,0 +1,16 @@
+id: piece-etude-pedal-waltz-polish
+title: 'Pedal Waltz: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+key: F
+tempo: 104
+meter: 3/4
+countIn: 1
+right: A4:h. | C5:h A4:q | G4:h. | C5:h. | Bb4:h. | A4:h F4:q | G4:h E4:q | F4:h.
+left: F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | Bb2:q D3+F3:q
+  D3+F3:q | F2:q A2+C3+F3:q A2+C3+F3:q | C3:q E3+G3:q E3+G3:q | C3+F3+A3:h.
+pedal: x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
+reps: 3
+days: 3

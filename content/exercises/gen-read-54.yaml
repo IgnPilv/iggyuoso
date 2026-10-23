@@ -1,0 +1,15 @@
+id: gen-read-54
+title: Read in 5/4
+kind: generated
+generator: rhythm-read
+tempo: 80
+meter: 5/4
+durations:
+- q
+- h
+- e
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

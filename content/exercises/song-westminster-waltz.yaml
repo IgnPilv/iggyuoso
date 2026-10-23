@@ -1,0 +1,16 @@
+id: song-westminster-waltz
+title: Westminster Chimes, with bass, chord, chord
+kind: timed
+hand: together
+prompt: 'Another left hand: bass, chord, chord.'
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: E4:q D4:q C4:q | G3:h. | C4:q E4:q D4:q | G3:h. | C4:q D4:q E4:q | C4:h. | E4:q C4:q D4:q | G3:h. | G3:q D4:q E4:q
+  | C4:h.
+left: C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3:q E3+G3:q
+  E3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3+E3+G3:h.
+reps: 2
+days: 1

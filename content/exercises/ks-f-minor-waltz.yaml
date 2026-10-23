@@ -1,0 +1,12 @@
+id: ks-f-minor-waltz
+title: 'F minor: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: Fm
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: Ab4:h C5:q | Bb4:h Db5:q | G4:h E4:q | F4:h.
+left: F2:q C3+F3+Ab3:q C3+F3+Ab3:q | Bb2:q Db3+F3+Bb3:q Db3+F3+Bb3:q | C3:q E3+Bb3:q E3+Bb3:q | C3+F3+Ab3:h.

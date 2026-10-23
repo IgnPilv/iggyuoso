@@ -1,0 +1,13 @@
+id: ks-a-pulse
+title: 'A major: a chord on every beat'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with a chord on every beat in the left hand.
+key: A
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#5:h E5:h | D5:h F#5:h | B4:h G#4:h | A4:w
+left: A2+C#3+E3:q A2+C#3+E3:q A2+C#3+E3:q A2+C#3+E3:q | A2+D3+F#3:q A2+D3+F#3:q A2+D3+F#3:q A2+D3+F#3:q | B2+E3+G#3:q B2+E3+G#3:q
+  B2+E3+G#3:q B2+E3+G#3:q | C#3+E3+A3:w

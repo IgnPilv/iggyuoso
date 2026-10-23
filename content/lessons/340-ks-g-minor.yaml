@@ -1,0 +1,27 @@
+id: ks-g-minor
+title: 'Key study: G minor'
+skills:
+- technique
+steps:
+- explain: |
+    **Key study: G minor, the hands.** The five-finger position, the scale, its chords and the common
+    accompaniments, all in G minor. Its chords: **Gm**, **Cm** and **D7**.
+  staff:
+    notes: G4:q A4:q Bb4:q C5:q D5:q Eb5:q F#5:q G5:q
+    key: Gm
+  sound: G4:q A4:q Bb4:q C5:q D5:q Eb5:q F#5:q G5:q
+- exercise: ks-g-minor-thirds
+- exercise: triad-g-minor
+- exercise: dom7-g-minor
+- exercise: scale-g-minor-1-e
+- exercise: scale-g-minor-2-e
+- exercise: scale-g-minor-contrary
+- exercise: ks-g-minor-pedal
+- exercise: ks-g-minor-harmonised-scale
+- exercise: ks-g-minor-chord-pattern
+- exercise: ks-g-minor-inversions
+- exercise: ks-g-minor-broken
+- exercise: ks-g-minor-alberti
+- exercise: ks-g-minor-pulse
+- exercise: ks-g-minor-waltz
+recap: G minor under both hands.

@@ -1,0 +1,62 @@
+id: theory-major-spelling-quiz
+title: Spell the major scales
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Spell the G major scale.
+  choices:
+  - G A B C D E F♯
+  - G A B C D E F
+  - G A B♭ C D E♭ F
+  correct: 0
+  why: 'G major: G A B C D E F♯. Pattern W W H W W W H.'
+- ask: Spell the D major scale.
+  choices:
+  - D E F♯ G A B C♯
+  - D E F G A B C
+  - D E F G A B♭ C
+  correct: 0
+  why: 'D major: D E F♯ G A B C♯. Pattern W W H W W W H.'
+- ask: Spell the A major scale.
+  choices:
+  - A B C D E F G
+  - A B C♯ D E F♯ G♯
+  correct: 1
+  why: 'A major: A B C♯ D E F♯ G♯. Pattern W W H W W W H.'
+- ask: Spell the E major scale.
+  choices:
+  - E F♯ G♯ A B C♯ D♯
+  - E F♯ G A B C D
+  - E F G A B C D
+  correct: 0
+  why: 'E major: E F♯ G♯ A B C♯ D♯. Pattern W W H W W W H.'
+- ask: Spell the F major scale.
+  choices:
+  - F G A B C D E
+  - F G A B♭ C D E
+  - F G A♭ B♭ C D♭ E♭
+  correct: 1
+  why: 'F major: F G A B♭ C D E. Pattern W W H W W W H.'
+- ask: Spell the B♭ major scale.
+  choices:
+  - B C D E F G A
+  - B♭ C D♭ E♭ F G♭ A♭
+  - B♭ C D E♭ F G A
+  correct: 2
+  why: 'B♭ major: B♭ C D E♭ F G A. Pattern W W H W W W H.'
+- ask: Spell the E♭ major scale.
+  choices:
+  - E♭ F G♭ A♭ B♭ C♭ D♭
+  - E♭ F G A♭ B♭ C D
+  - E F G A B C D
+  correct: 1
+  why: 'E♭ major: E♭ F G A♭ B♭ C D. Pattern W W H W W W H.'
+- ask: Spell the A♭ major scale.
+  choices:
+  - A♭ B♭ C♭ D♭ E♭ F♭ G♭
+  - A♭ B♭ C D♭ E♭ F G
+  - A B C D E F G
+  correct: 1
+  why: 'A♭ major: A♭ B♭ C D♭ E♭ F G. Pattern W W H W W W H.'

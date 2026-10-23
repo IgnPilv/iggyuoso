@@ -1,0 +1,14 @@
+id: ks-c-sharp-minor-thirds
+title: 'C♯ minor: warm-up in thirds'
+kind: timed
+hand: together
+prompt: 'Skip a key, step back: 1 3 2 4 3 5. Both hands at once.'
+key: C#m
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C#4:q E4:q D#4:q F#4:q | E4:q G#4:q F#4:q D#4:q | C#4:q E4:q G#4:q E4:q | C#4:w
+left: C#3:q E3:q D#3:q F#3:q | E3:q G#3:q F#3:q D#3:q | C#3:q E3:q G#3:q E3:q | C#3:w
+rightFingers: 1 3 2 4 3 5 4 2 1 3 5 3 1
+leftFingers: 5 3 4 2 3 1 2 4 5 3 1 3 5

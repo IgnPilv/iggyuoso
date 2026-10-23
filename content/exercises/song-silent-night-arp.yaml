@@ -1,0 +1,20 @@
+id: song-silent-night-arp
+title: Silent Night, flowing
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:q. A4:e G4:q | E4:h. | G4:q. A4:e G4:q | E4:h. | D5:h D5:q | B4:h. | C5:h C5:q | G4:h. | A4:h A4:q | C5:q. B4:e
+  A4:q | G4:q. A4:e G4:q | E4:h. | A4:h A4:q | C5:q. B4:e A4:q | G4:q. A4:e G4:q | E4:h. | D5:h D5:q | F5:q. D5:e B4:q | C5:h.
+  | E5:h. | C5:q G4:q E4:q | G4:q. F4:e D4:q | C4:h.
+left: C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q
+  | G2:q B2+D3+G3:q B2+D3+G3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q
+  C3+F3+A3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q
+  E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3:q E3+G3:q E3+G3:q
+  | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | C3+E3+G3:h.
+reps: 3
+days: 2

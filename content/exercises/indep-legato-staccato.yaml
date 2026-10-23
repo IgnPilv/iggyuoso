@@ -1,0 +1,12 @@
+id: indep-legato-staccato
+title: Smooth against short
+kind: timed
+hand: together
+prompt: Right hand smooth (legato), left hand short (staccato). Then try swapping in your head.
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q D4:q E4:q F4:q | G4:w | G4:q F4:q E4:q D4:q | C4:w
+left: C3:e r:e G3:e r:e C3:e r:e G3:e r:e | C3:e r:e G3:e r:e C3:e r:e G3:e r:e | G2:e r:e D3:e r:e G2:e r:e D3:e r:e | C3:w
+rightFingers: 1 2 3 4 5 5 4 3 2 1

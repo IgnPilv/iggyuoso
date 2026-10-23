@@ -1,0 +1,12 @@
+id: rd-ledger-low
+title: Low ledger lines
+kind: generated
+generator: read-notes
+clef: bass
+notes: C1-E2
+questions: 30
+mastery:
+  accuracy: 90
+  medianMs: 3000
+reps: 4
+days: 2

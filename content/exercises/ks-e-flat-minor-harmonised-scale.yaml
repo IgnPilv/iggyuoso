@@ -1,0 +1,12 @@
+id: ks-e-flat-minor-harmonised-scale
+title: 'E♭ minor: the scale with chords'
+kind: timed
+hand: together
+prompt: 'The scale in the right hand, the chords under it in the left: the scale turned into music.'
+key: Ebm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Eb4:q F4:q Gb4:q Ab4:q | Bb4:q Cb5:q D5:q Eb5:q | D5:q Cb5:q Bb4:q Ab4:q | Gb4:q F4:q Eb4:h
+left: Eb3+Gb3+Bb3:w | Eb3+Gb3+Bb3:h D3+F3+Bb3:h | D3+F3+Bb3:w | Eb3+Gb3+Bb3:w

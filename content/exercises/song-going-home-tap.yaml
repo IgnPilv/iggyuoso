@@ -1,0 +1,11 @@
+id: song-going-home-tap
+title: 'Going Home: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 60
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:h | x:q x:q x:h | x:q x:q x:q x:q | x:w | x:q x:q x:h | x:q x:q x:h | x:q x:q x:q x:q | x:w
+reps: 2
+days: 1

@@ -1,0 +1,12 @@
+id: ks-e-flat-waltz
+title: 'E♭ major: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: Eb
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:h Bb4:q | Ab4:h C5:q | F4:h D4:q | Eb4:h.
+left: Eb3:q G3+Bb3:q G3+Bb3:q | Ab2:q C3+Eb3+Ab3:q C3+Eb3+Ab3:q | Bb2:q D3+Ab3:q D3+Ab3:q | Bb2+Eb3+G3:h.

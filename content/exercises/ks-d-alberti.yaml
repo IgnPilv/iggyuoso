@@ -1,0 +1,13 @@
+id: ks-d-alberti
+title: 'D major: an Alberti bass'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with an Alberti bass in the left hand.
+key: D
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4:h A4:h | G4:h B4:h | E4:h C#4:h | D4:w
+left: D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e D3:e B3:e G3:e B3:e | C#3:e A3:e E3:e A3:e C#3:e A3:e
+  E3:e A3:e | D3+F#3+A3:w

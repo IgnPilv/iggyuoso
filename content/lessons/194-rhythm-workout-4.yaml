@@ -1,0 +1,14 @@
+id: rhythm-workout-4
+title: 'Rhythm workout: dotted and sixteenths'
+skills:
+- rhythm
+steps:
+- explain: |
+    Fresh rhythms every time, read and by ear, one hand and two. Five minutes a day keeps the reading sharp.
+- exercise: gen-workout-4-read
+- exercise: gen-workout-4-echo
+- exercise: gen-workout-4-read-hands
+- exercise: gen-workout-4-echo-hands
+- exercise: gen-workout-4-read-long
+- exercise: gen-workout-4-echo-long
+recap: 'A daily workout: new rhythms every run.'

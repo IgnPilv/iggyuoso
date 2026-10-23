@@ -1,0 +1,16 @@
+id: song-westminster-in-f
+title: Westminster Chimes in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 80
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: A4:q G4:q F4:q | C4:h. | F4:q A4:q G4:q | C4:h. | F4:q G4:q A4:q | F4:h. | A4:q F4:q G4:q | C4:h. | C4:q G4:q A4:q
+  | F4:h.
+left: F2+C3:h. | C3+G3:h. | F2+C3:h. | C3+G3:h. | F2+C3:h. | F2+C3:h. | F2+C3:h. | C3+G3:h. | C3+G3:h. | F2+C3:h.
+reps: 2
+days: 1

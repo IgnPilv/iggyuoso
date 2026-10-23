@@ -1,0 +1,13 @@
+id: ks-g-chord-pattern
+title: 'G major: broken I, IV, V7, I'
+kind: timed
+hand: together
+prompt: Each chord broken in the right hand, its root held in the left. The hand barely moves.
+key: G
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q B4:q D5:q B4:q | G4:q C5:q E5:q C5:q | F#4:q A4:q C5:q D5:q | G4:q B4:q D5:h
+left: G2:w | C3:w | D3:w | G2:w
+rightFingers: 1 3 5 3 1 2 4 2 1 2 4 5 1 3 5

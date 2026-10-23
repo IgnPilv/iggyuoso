@@ -1,0 +1,31 @@
+id: song-this-old-man
+title: This Old Man
+skills:
+- songs
+steps:
+- explain: |
+    **This Old Man** · Counting song, England
+
+    A counting song: "he played one, he played knick-knack on my thumb". Each verse counts one higher.
+  staff:
+    notes: G4:q E4:q G4:h  |  G4:q E4:q G4:h
+  sound: G4:q E4:q G4:h  |  G4:q E4:q G4:h  |  A4:q G4:q F4:q E4:q  |  D4:q E4:q F4:h
+- explain: |
+    **Before you play.** Bar 5 has eighths: "knick-knack pad-dy-whack". Bar 6 runs straight up the C position.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 100
+- exercise: song-this-old-man-tap
+- exercise: song-this-old-man-tap-hands
+- exercise: song-this-old-man-by-ear
+- exercise: song-this-old-man-rh
+- exercise: song-this-old-man-lh
+- exercise: song-this-old-man
+- exercise: song-this-old-man-arranged
+- exercise: song-this-old-man-swap
+- exercise: song-this-old-man-in-g
+- exercise: song-this-old-man-oompah
+- exercise: song-this-old-man-performance
+- exercise: song-this-old-man-in-f
+recap: 'This Old Man: tune, left hand, together. Come back to it any time; songs are for fun.'

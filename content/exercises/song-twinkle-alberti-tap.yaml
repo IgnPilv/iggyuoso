@@ -1,0 +1,12 @@
+id: song-twinkle-alberti-tap
+title: 'Twinkle with an Alberti bass: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 84
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q |
+  x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h
+reps: 2
+days: 1

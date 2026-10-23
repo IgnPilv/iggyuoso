@@ -1,0 +1,16 @@
+id: song-aura-lee-pedal-oompah
+title: Aura Lee, with pedal, with bass, then chord
+kind: timed
+hand: together
+prompt: 'Another left hand: bass, then chord.'
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q A4:q B4:q | C5:w | G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q
+  A4:q B4:q | C5:w
+left: C3:q E3+G3:q G3:q E3+G3:q | D3:q F#3:q A3:q F#3:q | G2:q B2+D3+G3:q D3:q B2+D3+G3:q | C3:q E3+G3:q G3:q E3+G3:q | C3:q
+  E3+G3:q G3:q E3+G3:q | D3:q F#3:q A3:q F#3:q | G2:q B2+D3+G3:q D3:q B2+D3+G3:q | C3+E3+G3:w
+reps: 2
+days: 1

@@ -1,0 +1,12 @@
+id: ks-f-waltz
+title: 'F major: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: F
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: A4:h C5:q | Bb4:h D5:q | G4:h E4:q | F4:h.
+left: F2:q C3+F3+A3:q C3+F3+A3:q | Bb2:q D3+F3+Bb3:q D3+F3+Bb3:q | C3:q E3+Bb3:q E3+Bb3:q | C3+F3+A3:h.

@@ -1,0 +1,16 @@
+id: song-row-your-boat-in-g
+title: Row, Row, Row Your Boat in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: G4:q. G4:q. | G4:q A4:e B4:q. | B4:q A4:e B4:q C5:e | D5:h. | G5:e G5:e G5:e D5:e D5:e D5:e | B4:e B4:e B4:e G4:e G4:e
+  G4:e | D5:q C5:e B4:q A4:e | G4:h.
+left: G2:h. | G2:h. | G2:q. D3:q. | G2:h. | G2:h. | G2:h. | D3:h. | G2:h.
+reps: 2
+days: 1

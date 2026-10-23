@@ -1,0 +1,77 @@
+id: ks-c-sharp-minor-triads
+title: Chords of C♯ minor
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: In C♯ minor, the triad on degree 1 (C♯ E G♯) is...
+  choices:
+  - Minor
+  - Diminished
+  - Major
+  correct: 0
+  why: 'C♯ E G♯: minor 3rd + major 3rd, so minor. Roman numeral: i.'
+  whyStaff:
+    notes: C#4+E4+G#4:w
+    key: C#m
+- ask: In C♯ minor, the triad on degree 2 (D♯ F♯ A) is...
+  choices:
+  - Diminished
+  - Minor
+  - Major
+  correct: 0
+  why: 'D♯ F♯ A: two minor 3rds, so diminished. Roman numeral: ii°.'
+  whyStaff:
+    notes: D#4+F#4+A4:w
+    key: C#m
+- ask: In C♯ minor, the triad on degree 3 (E G♯ B♯) is...
+  choices:
+  - Major
+  - Minor
+  - Augmented
+  correct: 2
+  why: 'E G♯ B♯: two major 3rds, so augmented. Roman numeral: III+.'
+  whyStaff:
+    notes: E4+G#4+B#4:w
+    key: C#m
+- ask: In C♯ minor, the triad on degree 4 (F♯ A C♯) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 0
+  why: 'F♯ A C♯: minor 3rd + major 3rd, so minor. Roman numeral: iv.'
+  whyStaff:
+    notes: F#4+A4+C#5:w
+    key: C#m
+- ask: In C♯ minor, the triad on degree 5 (G♯ B♯ D♯) is...
+  choices:
+  - Diminished
+  - Minor
+  - Major
+  correct: 2
+  why: 'G♯ B♯ D♯: major 3rd + minor 3rd, so major. Roman numeral: V.'
+  whyStaff:
+    notes: G#4+B#4+D#5:w
+    key: C#m
+- ask: In C♯ minor, the triad on degree 6 (A C♯ E) is...
+  choices:
+  - Major
+  - Minor
+  - Diminished
+  correct: 0
+  why: 'A C♯ E: major 3rd + minor 3rd, so major. Roman numeral: VI.'
+  whyStaff:
+    notes: A4+C#5+E5:w
+    key: C#m
+- ask: In C♯ minor, the triad on degree 7 (B♯ D♯ F♯) is...
+  choices:
+  - Minor
+  - Major
+  - Diminished
+  correct: 2
+  why: 'B♯ D♯ F♯: two minor 3rds, so diminished. Roman numeral: vii°.'
+  whyStaff:
+    notes: B#4+D#5+F#5:w
+    key: C#m

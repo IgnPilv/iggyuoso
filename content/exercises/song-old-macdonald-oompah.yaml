@@ -1,0 +1,17 @@
+id: song-old-macdonald-oompah
+title: Old MacDonald Had a Farm, with bass, then chord
+kind: timed
+hand: together
+prompt: 'Another left hand: bass, then chord.'
+display: staff
+key: G
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q G4:q G4:q D4:q | E4:q E4:q D4:h | B4:q B4:q A4:q A4:q | G4:h. D4:q | G4:q G4:q G4:q D4:q | E4:q E4:q D4:h | B4:q
+  B4:q A4:q A4:q | G4:w
+left: G2:q D3+G3+B3:q D3:q D3+G3+B3:q | C3:q E3+G3:q G2:q B2+D3+G3:q | G2:q B2+D3+G3:q D3:q F#3:q | G2:q B2+D3+G3:q D3:q B2+D3+G3:q
+  | G2:q B2+D3+G3:q D3:q B2+D3+G3:q | C3:q E3+G3:q G2:q B2+D3+G3:q | G2:q B2+D3+G3:q D3:q F#3:q | B2+D3+G3:w
+reps: 2
+days: 1

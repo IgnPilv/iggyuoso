@@ -1,0 +1,23 @@
+id: piece-etude-six-eight
+title: Study in 6/8
+skills:
+- repertoire
+steps:
+- explain: |
+    **Study in 6/8** · Our own study
+
+    A rocking study in 6/8, two big beats a bar.
+  staff:
+    notes: D5:q B4:e G4:q B4:e  |  C5:q A4:e F#4:q.
+    key: G
+  sound: D5:q B4:e G4:q B4:e  |  C5:q A4:e F#4:q.  |  G4:q B4:e D5:q G5:e  |  F#5:q. D5:q.
+- explain: |
+    **How to learn it.** Long-short, long-short: the 6/8 lilt.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-six-eight-tap
+- exercise: piece-etude-six-eight-rh
+- exercise: piece-etude-six-eight-lh
+- exercise: piece-etude-six-eight
+- exercise: piece-etude-six-eight-polish
+recap: 'Study in 6/8: learned hands alone, then together, then performed.'

@@ -1,0 +1,13 @@
+id: ks-e-flat-minor-pulse
+title: 'E♭ minor: a chord on every beat'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with a chord on every beat in the left hand.
+key: Ebm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Gb4:h Bb4:h | Ab4:h Cb5:h | F4:h D4:h | Eb4:w
+left: Eb3+Gb3+Bb3:q Eb3+Gb3+Bb3:q Eb3+Gb3+Bb3:q Eb3+Gb3+Bb3:q | Eb3+Ab3+Cb4:q Eb3+Ab3+Cb4:q Eb3+Ab3+Cb4:q Eb3+Ab3+Cb4:q |
+  D3+F3+Bb3:q D3+F3+Bb3:q D3+F3+Bb3:q D3+F3+Bb3:q | Eb3+Gb3+Bb3:w

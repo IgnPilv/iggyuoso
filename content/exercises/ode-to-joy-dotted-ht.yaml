@@ -1,0 +1,12 @@
+id: ode-to-joy-dotted-ht
+title: Ode to Joy with a bass
+kind: timed
+hand: together
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | E4:q. D4:e D4:h | E4:q E4:q F4:q G4:q | G4:q F4:q
+  E4:q D4:q | C4:q C4:q D4:q E4:q | D4:q. C4:e C4:h
+left: C3:w | G2:w | C3:w | G2:w | C3:w | G2:w | C3:w | G2:h C3:h

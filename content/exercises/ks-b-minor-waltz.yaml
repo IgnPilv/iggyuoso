@@ -1,0 +1,12 @@
+id: ks-b-minor-waltz
+title: 'B minor: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: Bm
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: D5:h F#5:q | E5:h G5:q | C#5:h A#4:q | B4:h.
+left: B2:q D3+F#3:q D3+F#3:q | E3:q G3:q G3:q | F#2:q A#2+C#3+F#3:q A#2+C#3+F#3:q | B2+D3+F#3:h.

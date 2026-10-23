@@ -1,0 +1,13 @@
+id: piece-etude-six-eight-tap
+title: 'Study in 6/8: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 60
+meter: 6/8
+countIn: 1
+right: x:q x:e x:q x:e | x:q x:e x:q. | x:q x:e x:q x:e | x:q. x:q. | x:q x:e x:q x:e | x:q x:e x:q. | x:q x:e x:q x:e | x:h.
+left: x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e
+  x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:h.
+reps: 2
+days: 1

@@ -1,0 +1,15 @@
+id: song-hark-the-herald-performance
+title: 'Hark! The Herald Angels Sing: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 96
+meter: 4/4
+countIn: 1
+right: G4:q C5:q C5:q. B4:e | C5:q E5:q E5:q D5:q | G5:q G5:q G5:q. F5:e | E5:q D5:q E5:h | G4:q C5:q C5:q. B4:e | C5:q E5:q
+  E5:q D5:q | G5:q D5:q D5:q. B4:e | B4:q A4:q G4:h
+left: C3+E3+G3:w | C3+E3+G3:h B2+D3+G3:h | C3+E3+G3:w | B2+D3+G3:h C3+E3+G3:h | C3+E3+G3:w | C3+E3+G3:h B2+D3+G3:h | B2+D3+G3:w
+  | A2+D3+F#3:h B2+D3+G3:h
+reps: 2
+days: 2

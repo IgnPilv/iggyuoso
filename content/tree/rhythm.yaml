@@ -48,3 +48,13 @@ nodes:
   - { id: rhythm-shuffle, stage: 9, lesson: rhythm-shuffle, title: "Swing and shuffle", type: lesson, requires: [rhythm-three-against-two, rhythm-compound-meters] }
   - { id: rhythm-hemiola, stage: 9, lesson: rhythm-hemiola, title: "Hemiola: threes against twos in the bar", type: lesson, requires: [rhythm-shuffle, rhythm-six-eight-hands] }
   - { id: rhythm-groove, stage: 9, lesson: rhythm-groove, title: "Groove for two hands", type: lesson, requires: [rhythm-sixteenth-syncopation, rhythm-shuffle] }
+  - { id: rhythm-workout-1, stage: 1, lesson: rhythm-workout-1, title: "Rhythm workout: first values", type: lesson, requires: [rhythm-two-hands-together] }
+  - { id: rhythm-workout-2, stage: 2, lesson: rhythm-workout-2, title: "Rhythm workout: rests and 3/4", type: lesson, requires: [rhythm-inner-pulse, rhythm-waltz-patterns] }
+  - { id: rhythm-workout-3, stage: 3, lesson: rhythm-workout-3, title: "Rhythm workout: eighths", type: lesson, requires: [rhythm-eighths-two-hands] }
+  - { id: rhythm-workout-4, stage: 4, lesson: rhythm-workout-4, title: "Rhythm workout: dotted and sixteenths", type: lesson, requires: [rhythm-sixteenth-patterns, rhythm-dotted-patterns] }
+  - { id: rhythm-workout-5, stage: 5, lesson: rhythm-workout-5, title: "Rhythm workout: triplets and off-beats", type: lesson, requires: [rhythm-triplet-patterns, rhythm-offbeat-eighths] }
+  - { id: rhythm-workout-6, stage: 6, lesson: rhythm-workout-6, title: "Rhythm workout: 6/8", type: lesson, requires: [rhythm-six-eight-hands] }
+  - { id: rhythm-workout-7, stage: 7, lesson: rhythm-workout-7, title: "Rhythm workout: 9/8 and 12/8", type: lesson, requires: [rhythm-compound-meters] }
+  - { id: rhythm-workout-8, stage: 8, lesson: rhythm-workout-8, title: "Rhythm workout: everything in 4/4", type: lesson, requires: [rhythm-sixteenth-syncopation] }
+  - { id: rhythm-workout-9, stage: 9, lesson: rhythm-workout-9, title: "Rhythm workout: cut time and 3/4", type: lesson, requires: [rhythm-groove] }
+  - { id: rhythm-odd-meters, stage: 9, lesson: rhythm-odd-meters, title: "Five and seven", type: lesson, requires: [rhythm-hemiola, rhythm-workout-8] }

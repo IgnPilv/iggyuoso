@@ -1,0 +1,15 @@
+id: gen-workout-2-read
+title: Read it
+kind: generated
+generator: rhythm-read
+tempo: 80
+meter: 3/4
+durations:
+- q
+- h
+- r:q
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 3

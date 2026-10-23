@@ -1,0 +1,22 @@
+id: piece-etude-walking-bass
+title: Walking Bass
+skills:
+- repertoire
+steps:
+- explain: |
+    **Walking Bass** · Our own study
+
+    The left hand walks in quarter notes under two-note chords.
+  staff:
+    notes: E4+G4:h E4+G4:h  |  F4+A4:h F4+A4:h
+  sound: E4+G4:h E4+G4:h  |  F4+A4:h F4+A4:h  |  D4+F4:h D4+G4:h  |  E4+G4:w
+- explain: |
+    **How to learn it.** Steady quarters in the left hand, like footsteps.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-walking-bass-tap
+- exercise: piece-etude-walking-bass-rh
+- exercise: piece-etude-walking-bass-lh
+- exercise: piece-etude-walking-bass
+- exercise: piece-etude-walking-bass-polish
+recap: 'Walking Bass: learned hands alone, then together, then performed.'

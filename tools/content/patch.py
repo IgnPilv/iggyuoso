@@ -117,10 +117,19 @@ def ht_exercises():
         X(timed('d-minor-position-ht', 'D minor position, hands together', right='D4:q E4:q F4:q G4:q | A4:w | A4:q G4:q F4:q E4:q | D4:w',
                 left='D3:q E3:q F3:q G3:q | A3:w | A3:q G3:q F3:q E3:q | D3:w', tempo=72, rf='1 2 3 4 5 5 4 3 2 1', lf='5 4 3 2 1 1 2 3 4 5')))
 
+def more_ht():
+    add('dotted-quarter', 'ode-to-joy-dotted', S('With the left hand on the roots: C under the home bars, G under the bars that lean away.'),
+        X(timed('ode-to-joy-dotted-ht', 'Ode to Joy with a bass', right='E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | E4:q. D4:e D4:h | E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | D4:q. C4:e C4:h',
+                left=accompany('C | G | C | G | C | G | C | G C', '4/4', 'root'), tempo=72, display='staff')))
+    add('eighth-notes', 'hot-cross-buns-eighths', S('Eighths in the right hand over a slow left hand.'),
+        X(timed('hot-cross-buns-eighths-ht', 'Hot Cross Buns, eighths and a bass', right='E4:q D4:q C4:h | E4:q D4:q C4:h | C4:e C4:e C4:e C4:e D4:e D4:e D4:e D4:e | E4:q D4:q C4:h',
+                left='C3:w | C3:w | C3:h G2:h | C3:w', tempo=72, rf='3 2 1 3 2 1 1 1 1 1 2 2 2 2 3 2 1', lf='5 5 5 1 5')))
+
 def lesson_ids(d): return [s['exercise'] for s in d['steps'] if 'exercise' in s]
 
 def apply():
     ht_exercises()
+    more_ht()
     lesson_files = {f for f in os.listdir(os.path.join(C, 'lessons'))}
     for f in sorted(lesson_files):
         rel = f'content/lessons/{f}'

@@ -1,0 +1,12 @@
+id: piece-eine-kleine-tap
+title: 'Eine kleine Nachtmusik: the opening: the rhythm, both hands'
+kind: tap
+prompt: 'Learn the rhythm first: tap both hands on any keys, right hand from middle C up.'
+display: staff
+tempo: 80
+meter: 4/4
+countIn: 1
+right: x:q r:e x:e x:q r:e x:e | x:e x:e x:e x:e x:h | x:q r:e x:e x:q r:e x:e | x:e x:e x:e x:e x:h
+left: x:h x:h | x:w | x:h x:h | x:w
+reps: 2
+days: 1

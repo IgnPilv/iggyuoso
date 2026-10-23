@@ -1,0 +1,14 @@
+id: piece-etude-g-position-lh
+title: 'Study in G position: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: G
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: G2:w | G2:w | C3:h G2:h | D3:w | G2:w | G2:w | D3:w | G2:w
+reps: 2
+days: 1

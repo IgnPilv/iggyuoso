@@ -1,0 +1,13 @@
+id: ks-d-flat-inversions
+title: 'D♭ major: climbing the inversions'
+kind: timed
+hand: together
+prompt: 'Root position, first inversion, second inversion, octave: the same chord climbing. The left hand holds the root.'
+key: Db
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Db4+F4+Ab4:q F4+Ab4+Db5:q Ab4+Db5+F5:q Db5+F5+Ab5:q | Ab4+Db5+F5:q F4+Ab4+Db5:q Db4+F4+Ab4:h | Gb4+Bb4+Db5:q Bb4+Db5+Gb5:q
+  Db5+Gb5+Bb5:q Gb5+Bb5+Db6:q | Db4+F4+Ab4:w
+left: Db3:w | Db3:w | Gb2:w | Db3:w

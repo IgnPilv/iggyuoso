@@ -1,0 +1,17 @@
+id: ear-sd-half-step
+title: Same or a half step apart?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: compare
+  pool:
+  - same
+  - different
+  range:
+  - C2
+  - C6
+  gap:
+  - 1
+  - 1

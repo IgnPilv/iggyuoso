@@ -1,0 +1,19 @@
+id: ks-e-flat-intervals
+title: Intervals from the key note of E♭ major
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - M2
+  - M3
+  - P4
+  - P5
+  - M6
+  - M7
+  - P8
+  from: Eb4
+  direction: up
+  answer: play

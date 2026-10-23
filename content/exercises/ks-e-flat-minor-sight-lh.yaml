@@ -1,0 +1,18 @@
+id: ks-e-flat-minor-sight-lh
+title: Sight-read the left hand in E♭ minor
+kind: generated
+generator: sight-read
+hand: left
+clef: bass
+tempo: 66
+notes: Eb3-Eb4
+keys:
+- Ebm
+durations:
+- q
+- h
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

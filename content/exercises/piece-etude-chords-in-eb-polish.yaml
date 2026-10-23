@@ -1,0 +1,15 @@
+id: piece-etude-chords-in-eb-polish
+title: 'Chorale in E♭: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+key: Eb
+tempo: 60
+meter: 4/4
+countIn: 1
+right: G4:h Ab4:h | Bb4:h Bb4:h | C5:h Bb4:h | Ab4:h G4:h | G4:h F4:h | Eb4:h Ab4:h | G4:h F4:h | Eb4:w
+left: Eb3+G3+Bb3:w | Eb3+G3+Bb3:w | C3+Eb3+Ab3:h Bb2+Eb3+G3:h | Bb2+D3+Ab3:h Bb2+Eb3+G3:h | Bb2+Eb3+G3:h Bb2+D3+F3:h | Bb2+Eb3+G3:h
+  C3+Eb3+Ab3:h | Bb2+Eb3+G3:h Bb2+D3+Ab3:h | Bb2+Eb3+G3:w
+reps: 3
+days: 3

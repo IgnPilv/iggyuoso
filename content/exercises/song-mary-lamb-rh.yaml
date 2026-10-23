@@ -1,0 +1,14 @@
+id: song-mary-lamb-rh
+title: 'Mary Had a Little Lamb: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h | E4:q D4:q C4:q D4:q | E4:q E4:q E4:q E4:q
+  | D4:q D4:q E4:q D4:q | C4:w
+reps: 2
+days: 1

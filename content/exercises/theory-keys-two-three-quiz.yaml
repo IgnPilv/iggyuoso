@@ -12,7 +12,7 @@ questions:
   - F♯, C♯, G♯
   - F♯
   correct: 0
-  why: 'C major: no sharps or flats.'
+  why: 'C major: No sharps or flats.'
 - ask: The key signature of G major is...
   choices:
   - F♯
@@ -20,7 +20,7 @@ questions:
   - No sharps or flats
   - B♭
   correct: 0
-  why: 'G major: f♯.'
+  why: 'G major: F♯.'
 - ask: Which major key has this key signature?
   choices:
   - B♭ major
@@ -38,7 +38,7 @@ questions:
   - B♭, E♭
   - F♯, C♯, G♯
   correct: 1
-  why: 'D major: f♯, c♯.'
+  why: 'D major: F♯, C♯.'
 - ask: Which major key has this key signature?
   choices:
   - D major
@@ -56,7 +56,7 @@ questions:
   - B♭
   - F♯
   correct: 2
-  why: 'F major: b♭.'
+  why: 'F major: B♭.'
 - ask: Which major key has this key signature?
   choices:
   - F major
@@ -74,7 +74,7 @@ questions:
   - B♭, E♭
   - No sharps or flats
   correct: 2
-  why: 'B♭ major: b♭, e♭.'
+  why: 'B♭ major: B♭, E♭.'
 - ask: Which major key has this key signature?
   choices:
   - E♭ major
@@ -92,7 +92,7 @@ questions:
   - B♭
   - B♭, E♭, A♭
   correct: 0
-  why: 'A major: f♯, c♯, g♯.'
+  why: 'A major: F♯, C♯, G♯.'
 - ask: Which major key has this key signature?
   choices:
   - B♭ major
@@ -110,7 +110,7 @@ questions:
   - B♭
   - B♭, E♭, A♭
   correct: 3
-  why: 'E♭ major: b♭, e♭, a♭.'
+  why: 'E♭ major: B♭, E♭, A♭.'
 - ask: Which major key has this key signature?
   choices:
   - D major

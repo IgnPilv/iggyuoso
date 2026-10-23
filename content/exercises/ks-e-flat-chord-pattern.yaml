@@ -1,0 +1,13 @@
+id: ks-e-flat-chord-pattern
+title: 'E♭ major: broken I, IV, V7, I'
+kind: timed
+hand: together
+prompt: Each chord broken in the right hand, its root held in the left. The hand barely moves.
+key: Eb
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Eb4:q G4:q Bb4:q G4:q | Eb4:q Ab4:q C5:q Ab4:q | D4:q F4:q Ab4:q Bb4:q | Eb4:q G4:q Bb4:h
+left: Eb3:w | Ab2:w | Bb2:w | Eb3:w
+rightFingers: 1 3 5 3 1 2 4 2 1 2 4 5 1 3 5

@@ -1,0 +1,31 @@
+id: song-joy-to-the-world
+title: Joy to the World
+skills:
+- songs
+steps:
+- explain: |
+    **Joy to the World** · Arranged by Lowell Mason, 1839
+
+    The opening is a C major scale coming down, one note at a time: you know this one from your scale practice.
+  staff:
+    notes: C5:h B4:q. A4:e  |  G4:h. F4:q
+  sound: C5:h B4:q. A4:e  |  G4:h. F4:q  |  E4:h D4:h  |  C4:h. G4:q
+- explain: |
+    **Before you play.** Bar 1 to 4: the descending scale. Keep it even, like walking down stairs.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-joy-to-the-world-tap
+- exercise: song-joy-to-the-world-tap-hands
+- exercise: song-joy-to-the-world-by-ear
+- exercise: song-joy-to-the-world-rh
+- exercise: song-joy-to-the-world-lh
+- exercise: song-joy-to-the-world
+- exercise: song-joy-to-the-world-arranged
+- exercise: song-joy-to-the-world-swap
+- exercise: song-joy-to-the-world-in-g
+- exercise: song-joy-to-the-world-oompah
+- exercise: song-joy-to-the-world-performance
+- exercise: song-joy-to-the-world-in-f
+recap: 'Joy to the World: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,19 @@
+id: ks-g-minor-intervals
+title: Intervals from the key note of G minor
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - M2
+  - m3
+  - P4
+  - P5
+  - m6
+  - M7
+  - P8
+  from: G4
+  direction: up
+  answer: play

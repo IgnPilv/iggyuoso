@@ -1,0 +1,14 @@
+id: theory-scale-spelling
+title: Spelling scales
+skills:
+- theory
+steps:
+- explain: |
+    Spell a scale with **every letter once**, in order, and add the sharps or flats the pattern needs. That is why
+    G major has F♯ and not G♭: G already has its letter.
+  staff:
+    notes: G4:q A4:q B4:q C5:q D5:q E5:q F#5:q G5:q
+    labels: names
+- exercise: theory-major-spelling-quiz
+- exercise: theory-minor-spelling-quiz
+recap: Every letter once, then the accidentals.

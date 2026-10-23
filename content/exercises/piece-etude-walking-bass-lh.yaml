@@ -1,0 +1,14 @@
+id: piece-etude-walking-bass-lh
+title: 'Walking Bass: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:q D3:q E3:q G3:q | F3:q E3:q D3:q C3:q | B2:q G2:q A2:q B2:q | C3:q G2:q E2:q G2:q | C3:q D3:q E3:q G3:q | F3:q A3:q
+  G3:q F3:q | G3:q F3:q D3:q G2:q | C3:w
+reps: 2
+days: 1

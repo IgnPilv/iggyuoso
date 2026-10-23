@@ -272,3 +272,52 @@ def run(base):
         matter for playing. This side quest is just for fun: C, or not C?"""),
         X(ear('ear-absolute-c', 'C or not C?', [{'type': 'note', 'pool': ['C4', 'E4', 'G4', 'A4'], 'lit': True}], questions=20, reps=3, days=3)),
     ], 'A side quest: try it now and then, never worry about it.', type='side-quest')
+
+    # ------------------------------------------------------------ more practice in every stage
+    L('ear-intervals-by-playing', 5, 'Play the interval you hear', ['ear-fourths-fifths-sixths', 'ear-together-intervals'], [
+        S("""Now answer on the keys: you hear two notes, the first one is shown; play the second. Starting notes change, so you
+        have to hear the **distance**, not remember a key."""),
+        X(ear('ear-play-2-3', 'Play seconds and thirds', [{'type': 'interval', 'pool': ['M2', 'm3', 'M3'], 'from': f, 'direction': 'up', 'answer': 'play'} for f in ('C4', 'F4', 'G4')])),
+        X(ear('ear-play-4-5', 'Play fourths and fifths', [{'type': 'interval', 'pool': ['P4', 'P5'], 'from': f, 'direction': 'up', 'answer': 'play'} for f in ('C4', 'D4', 'A3')])),
+        X(ear('ear-play-mixed', 'Play any interval to the sixth', [{'type': 'interval', 'pool': ['M2', 'm3', 'M3', 'P4', 'P5', 'M6'], 'from': f, 'direction': 'up', 'answer': 'play'} for f in ('C4', 'E4', 'G3', 'Bb3')], reps=3, days=3)),
+    ], 'Hear the distance, find it from any key.')
+
+    L('ear-chords-anywhere', 6, 'Major and minor anywhere', ['ear-triad-qualities'], [
+        S("""Major or minor, on any root. The quality is the same wherever it sits."""),
+        X(ear('ear-maj-min-roots', 'Major or minor, any root', [{'type': 'chord', 'pool': ['maj', 'min'], 'root': r} for r in ('C4', 'D4', 'E4', 'F3', 'G3', 'A3', 'Bb3')])),
+        X(ear('ear-maj-min-dim-anywhere', 'Major, minor or diminished, any root', [{'type': 'chord', 'pool': ['maj', 'min', 'dim'], 'root': r} for r in ('C4', 'D4', 'E4', 'F3', 'G3', 'A3')], reps=3, days=3)),
+    ], 'Chord colours stay the same in every key.')
+
+    L('ear-minor-phrases', 6, 'Echo minor phrases', ['ear-minor-degrees', 'ear-echo-five'], [
+        S("""Phrases in A minor and D minor. The raised 7th (G♯, C♯) leans up into the key note."""),
+        X(ear('ear-echo-minor-five', 'Five-note phrases in minor', [{'type': 'melody', 'notes': n, 'plays': 2} for n in ['A4 B4 C5 B4 A4', 'E5 D5 C5 B4 A4', 'A4 C5 E5 C5 A4', 'C5 B4 A4 G#4 A4', 'D4 E4 F4 E4 D4', 'A4 G4 F4 E4 D4', 'D4 F4 A4 F4 D4', 'F4 E4 D4 C#4 D4']])),
+    ], 'Minor phrases have a home too.')
+
+    L('ear-bass-lines', 7, 'Hearing the bass', ['ear-minor-phrases', 'ear-seventh-chords'], [
+        S("""Low notes are harder to hear. Echo bass lines below middle C with the left hand."""),
+        X(ear('ear-echo-bass', 'Echo the bass', [{'type': 'melody', 'notes': n, 'plays': 3} for n in ['C3 G2 C3', 'C3 F2 G2 C3', 'A2 D3 E3 A2', 'G2 C3 D3 G2', 'C3 A2 F2 G2', 'F2 Bb2 C3 F2', 'D3 G2 A2 D3', 'E2 A2 B2 E2']])),
+        X(ear('ear-count-low', 'How many notes, low down?', [{'type': 'count', 'pool': [1, 2, 3], 'range': ['C2', 'C4']}])),
+    ], 'The bass is the floor of the harmony.')
+
+    L('ear-intervals-down', 8, 'Intervals, up and down', ['ear-all-intervals'], [
+        S("""Every interval, in either direction. Going down, a fourth sounds like the end of a phrase, a fifth like a horn call."""),
+        X(ear('ear-intervals-both-ways', 'Every interval, both ways', [{'type': 'interval', 'pool': ['m2', 'M2', 'm3', 'M3', 'P4', 'TT', 'P5', 'm6', 'M6', 'm7', 'M7', 'P8'], 'from': 'G4', 'direction': 'both', 'answer': 'name'}], questions=25)),
+        X(ear('ear-harmonic-all', 'Every interval, together', [{'type': 'interval', 'pool': ['m2', 'M2', 'm3', 'M3', 'P4', 'TT', 'P5', 'm6', 'M6', 'm7', 'M7', 'P8'], 'from': 'C4', 'direction': 'up', 'answer': 'name', 'together': True}], questions=25, reps=3, days=3)),
+    ], 'Every interval, every way.')
+
+    L('ear-echo-two-hands', 9, 'Echo a tune and its bass', ['ear-bass-lines', 'ear-echo-eight'], [
+        S("""Tunes that cross middle C: the low notes go to the left hand, the high ones to the right."""),
+        X(ear('ear-echo-wide', 'Echo across the keyboard', [{'type': 'melody', 'notes': n, 'plays': 3} for n in ['C3 G3 E4 C5', 'C5 G4 E4 C4 G3 C3', 'A2 E3 C4 A4', 'G2 D3 B3 G4 D5', 'F2 C3 A3 F4', 'E4 C4 G3 E3 C3']])),
+    ], 'The whole keyboard, by ear.')
+
+    L('ear-contour-five', 3, 'Five-note shapes', ['ear-contour-four'], [
+        S("""Five notes, four moves. Draw them in the air."""),
+        X(ear('ear-contour-5', 'Five notes: which shape?', [{'type': 'contour', 'length': 5, 'range': ['C4', 'C6'], 'gap': [2, 5]}])),
+        X(ear('ear-contour-5-steps', 'Five notes, small steps', [{'type': 'contour', 'length': 5, 'range': ['C4', 'C5'], 'gap': [1, 2]}], reps=3, days=3)),
+    ], 'Longer shapes, longer memory.')
+
+    L('ear-half-steps', 4, 'The smallest step', ['ear-seconds-thirds'], [
+        S("""The half step is the smallest distance on the piano. Hear it, both ways, in every register."""),
+        X(ear('ear-sd-half-step', 'Same or a half step apart?', [{'type': 'compare', 'pool': ['same', 'different'], 'range': ['C2', 'C6'], 'gap': [1, 1]}])),
+        X(ear('ear-hl-half-step', 'A half step up or down?', [{'type': 'compare', 'pool': ['higher', 'lower'], 'range': ['C2', 'C6'], 'gap': [1, 1]}], reps=3, days=3)),
+    ], 'One key apart, and you can hear it.')

@@ -1,0 +1,17 @@
+id: song-row-your-boat-in-f
+title: Row, Row, Row Your Boat in F major
+kind: timed
+hand: together
+prompt: Now in F major, with a fuller left hand.
+display: staff
+key: F
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: F4:q. F4:q. | F4:q G4:e A4:q. | A4:q G4:e A4:q Bb4:e | C5:h. | F5:e F5:e F5:e C5:e C5:e C5:e | A4:e A4:e A4:e F4:e
+  F4:e F4:e | C5:q Bb4:e A4:q G4:e | F4:h.
+left: F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e A2:e C3:e G3:e E3:e | F2:e C3:e A2:e F2:e
+  C3:e A2:e | F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e A2:e F2:e C3:e A2:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3+F3+A3:h.
+reps: 2
+days: 1

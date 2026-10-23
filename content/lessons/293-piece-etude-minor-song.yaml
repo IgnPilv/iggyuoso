@@ -1,0 +1,23 @@
+id: piece-etude-minor-song
+title: Song in A minor
+skills:
+- repertoire
+steps:
+- explain: |
+    **Song in A minor** · Our own study
+
+    A song in A minor over broken chords.
+  staff:
+    notes: A4:q C5:q E5:q C5:q  |  D5:q C5:q B4:h
+    key: Am
+  sound: A4:q C5:q E5:q C5:q  |  D5:q C5:q B4:h  |  C5:q B4:q A4:q G#4:q  |  A4:w
+- explain: |
+    **How to learn it.** The G♯ leans up into A: let it.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-minor-song-tap
+- exercise: piece-etude-minor-song-rh
+- exercise: piece-etude-minor-song-lh
+- exercise: piece-etude-minor-song
+- exercise: piece-etude-minor-song-polish
+recap: 'Song in A minor: learned hands alone, then together, then performed.'

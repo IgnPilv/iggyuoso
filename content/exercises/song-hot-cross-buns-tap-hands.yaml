@@ -1,0 +1,12 @@
+id: song-hot-cross-buns-tap-hands
+title: 'Hot Cross Buns: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 88
+meter: 4/4
+countIn: 1
+right: x:q x:q x:h | x:q x:q x:h | x:e x:e x:e x:e x:e x:e x:e x:e | x:q x:q x:h
+left: x:w | x:w | x:h x:h | x:w
+reps: 2
+days: 1

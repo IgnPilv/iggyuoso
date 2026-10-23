@@ -1,0 +1,13 @@
+id: ks-c-sharp-minor-pulse
+title: 'C♯ minor: a chord on every beat'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with a chord on every beat in the left hand.
+key: C#m
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:h G#4:h | F#4:h A4:h | D#4:h B#3:h | C#4:w
+left: C#3+E3+G#3:q C#3+E3+G#3:q C#3+E3+G#3:q C#3+E3+G#3:q | C#3+F#3+A3:q C#3+F#3+A3:q C#3+F#3+A3:q C#3+F#3+A3:q | B#2+D#3+G#3:q
+  B#2+D#3+G#3:q B#2+D#3+G#3:q B#2+D#3+G#3:q | C#3+E3+G#3:w

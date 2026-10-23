@@ -1,0 +1,15 @@
+id: song-mary-lamb
+title: Mary Had a Little Lamb
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h | E4:q D4:q C4:q D4:q | E4:q E4:q E4:q E4:q
+  | D4:q D4:q E4:q D4:q | C4:w
+left: C3:w | C3:w | G2:w | C3:w | C3:w | C3:w | G2:w | C3:w
+reps: 3
+days: 2

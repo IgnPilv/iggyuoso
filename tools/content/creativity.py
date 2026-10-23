@@ -54,9 +54,10 @@ def run(base):
     ], 'The same tune, six characters.')
 
     L('creativity-transpose-tune', 6, 'One tune, four keys', ['transposing', 'theory-transposition'], [
-        S("""Play the same tune with its chords in C, G, F and D. Think in **degrees**: the tune is 3 2 1 2 3 3 3, whatever the key."""),
-        *[X(timed(f'cr-mary-in-{k.lower()}', f'Mary in {k} major', right=transpose_string(MARY, st, se), left=accompany(ch, '4/4', 'block'), tempo=84, key=k, display='staff', reps=2, days=1))
-          for k, st, se, ch in [('G', 4, 7, 'G | G | D | G | G | G | D | G'), ('F', 3, 5, 'F | F | C | F | F | F | C | F'), ('D', 1, 2, 'D | D | A | D | D | D | A | D')]],
+        S("""Play the same tune with its chords in seven keys. Think in **degrees**: the tune is 3 2 1 2 3 3 3, whatever the key."""),
+        *[X(timed(f'cr-mary-in-{k.lower()}', f"Mary in {k.replace('b', '♭')} major", right=transpose_string(MARY, st, se), left=accompany(ch, '4/4', 'block'), tempo=84, key=k, display='staff', reps=2, days=1))
+          for k, st, se, ch in [('G', 4, 7, 'G | G | D | G | G | G | D | G'), ('F', 3, 5, 'F | F | C | F | F | F | C | F'), ('D', 1, 2, 'D | D | A | D | D | D | A | D'),
+                               ('A', 5, 9, 'A | A | E | A | A | A | E | A'), ('Bb', 6, 10, 'Bb | Bb | F | Bb | Bb | Bb | F | Bb'), ('E', 2, 4, 'E | E | B | E | E | E | B | E'), ('Eb', 5, 8, 'Eb | Eb | Bb | Eb | Eb | Eb | Bb | Eb')]],
     ], 'Degrees travel; letters change.')
 
     L('creativity-harmonise-minor', 7, 'Harmonising in minor', ['harmonise-i-iv-v', 'natural-minor', 'y2-exit'], [

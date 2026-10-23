@@ -1,0 +1,14 @@
+id: scale-a-flat-contrary
+title: A♭ major scale in contrary motion
+kind: timed
+hand: together
+prompt: Both hands start on the key note, an octave apart, and move away from each other, then back.
+key: Ab
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Ab4:q Bb4:q C5:q Db5:q | Eb5:q F5:q G5:q Ab5:q | G5:q F5:q Eb5:q Db5:q | C5:q Bb4:q Ab4:h
+left: Ab3:q G3:q F3:q Eb3:q | Db3:q C3:q Bb2:q Ab2:q | Bb2:q C3:q Db3:q Eb3:q | F3:q G3:q Ab3:h
+rightFingers: 3 4 1 2 3 1 2 3 2 1 3 2 1 4 3
+leftFingers: 3 1 2 3 4 1 2 3 2 1 4 3 2 1 3

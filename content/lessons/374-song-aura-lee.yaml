@@ -1,0 +1,31 @@
+id: song-aura-lee
+title: Aura Lee
+skills:
+- songs
+steps:
+- explain: |
+    **Aura Lee** · Song by George Poulton, 1861
+
+    A Civil War love song from 1861. Almost a hundred years later its tune came back as a famous ballad.
+  staff:
+    notes: G4:q C5:q B4:q C5:q  |  D5:q A4:q D5:h
+  sound: G4:q C5:q B4:q C5:q  |  D5:q A4:q D5:h  |  C5:q B4:q A4:q B4:q  |  C5:w
+- explain: |
+    **Before you play.** The left hand meets a new chord: D7, with an F♯. Find it before you start.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 76
+- exercise: song-aura-lee-tap
+- exercise: song-aura-lee-tap-hands
+- exercise: song-aura-lee-by-ear
+- exercise: song-aura-lee-rh
+- exercise: song-aura-lee-lh
+- exercise: song-aura-lee
+- exercise: song-aura-lee-arranged
+- exercise: song-aura-lee-swap
+- exercise: song-aura-lee-in-g
+- exercise: song-aura-lee-oompah
+- exercise: song-aura-lee-performance
+- exercise: song-aura-lee-in-f
+recap: 'Aura Lee: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,17 @@
+id: piece-etude-minor-song-polish
+title: 'Song in A minor: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+key: Am
+tempo: 72
+meter: 4/4
+countIn: 1
+right: A4:q C5:q E5:q C5:q | D5:q C5:q B4:h | C5:q B4:q A4:q G#4:q | A4:w | E5:q D5:q C5:q B4:q | A4:q B4:q C5:h | B4:q A4:q
+  G#4:q B4:q | A4:w
+left: A2:e E3:e C3:e E3:e A2:e E3:e C3:e E3:e | D3:e A3:e F3:e A3:e E3:e B3:e G#3:e B3:e | A2:e E3:e C3:e E3:e E3:e B3:e G#3:e
+  B3:e | A2:e E3:e C3:e E3:e A2:e E3:e C3:e E3:e | A2:e E3:e C3:e E3:e A2:e E3:e C3:e E3:e | A2:e E3:e C3:e E3:e A2:e E3:e
+  C3:e E3:e | E3:e B3:e G#3:e B3:e E3:e B3:e G#3:e B3:e | A2+C3+E3:w
+reps: 3
+days: 3

@@ -1,0 +1,14 @@
+id: piece-etude-left-hand-melody-lh
+title: 'Left-Hand Song: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:q D3:q E3:q C3:q | F3:q E3:q D3:h | G3:q F3:q E3:q D3:q | C3:q E3:q G3:h | C3:q D3:q E3:q C3:q | F3:q E3:q D3:h |
+  G3:q F3:q D3:q B2:q | C3:w
+reps: 2
+days: 1

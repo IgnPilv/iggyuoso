@@ -1,0 +1,31 @@
+id: song-sailors-song
+title: Sailor's Song in D Minor
+skills:
+- songs
+steps:
+- explain: |
+    **Sailor's Song in D Minor** · Our own tune, in the style of a sea shanty
+
+    A tune of our own in the style of a sea shanty, the songs sailors sang to pull ropes together.
+  staff:
+    notes: D4:q F4:q A4:q A4:q  |  G4:q F4:q E4:h
+    key: Dm
+  sound: D4:q F4:q A4:q A4:q  |  G4:q F4:q E4:h  |  C4:q E4:q G4:q G4:q  |  F4:q E4:q D4:h
+- explain: |
+    **Before you play.** D minor: one flat (B♭), and the C♯ in bar 7 is the leading note pulling home to D.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: D minor · Time: 4/4 · Tempo: 96
+- exercise: song-sailors-song-tap
+- exercise: song-sailors-song-tap-hands
+- exercise: song-sailors-song-by-ear
+- exercise: song-sailors-song-rh
+- exercise: song-sailors-song-lh
+- exercise: song-sailors-song
+- exercise: song-sailors-song-arranged
+- exercise: song-sailors-song-swap
+- exercise: song-sailors-song-in-am
+- exercise: song-sailors-song-oompah
+- exercise: song-sailors-song-performance
+recap: 'Sailor''s Song in D Minor: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,12 @@
+id: song-rain-rain-tap-hands
+title: 'Rain, Rain, Go Away: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 88
+meter: 4/4
+countIn: 1
+right: x:h x:h | x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h | x:h x:h | x:q x:q x:h | x:q x:q x:q x:q | x:q x:q x:h
+left: x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:h x:h
+reps: 2
+days: 1

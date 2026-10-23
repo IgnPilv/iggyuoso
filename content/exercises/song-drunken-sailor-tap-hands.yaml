@@ -1,0 +1,12 @@
+id: song-drunken-sailor-tap-hands
+title: 'What Shall We Do with the Drunken Sailor?: tap both hands'
+kind: tap
+prompt: 'Both rhythms at once on any keys: right hand from middle C up, left hand below.'
+display: staff
+tempo: 112
+meter: 4/4
+countIn: 1
+right: x:h x:h | x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:q x:q x:q x:q | x:h x:h
+left: x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w
+reps: 2
+days: 1

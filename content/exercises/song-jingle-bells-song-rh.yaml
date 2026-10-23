@@ -1,0 +1,15 @@
+id: song-jingle-bells-song-rh
+title: 'Jingle Bells: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q E4:q E4:h | E4:q E4:q E4:h | E4:q G4:q C4:q. D4:e | E4:w | F4:q F4:q F4:q. F4:e | F4:q E4:q E4:q E4:e E4:e | E4:q
+  D4:q D4:q E4:q | D4:h G4:h | E4:q E4:q E4:h | E4:q E4:q E4:h | E4:q G4:q C4:q. D4:e | E4:w | F4:q F4:q F4:q. F4:e | F4:q
+  E4:q E4:q E4:e E4:e | G4:q G4:q F4:q D4:q | C4:w
+reps: 2
+days: 1

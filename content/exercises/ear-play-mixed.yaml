@@ -1,0 +1,51 @@
+id: ear-play-mixed
+title: Play any interval to the sixth
+kind: ear
+questions: 20
+reps: 3
+days: 3
+items:
+- type: interval
+  pool:
+  - M2
+  - m3
+  - M3
+  - P4
+  - P5
+  - M6
+  from: C4
+  direction: up
+  answer: play
+- type: interval
+  pool:
+  - M2
+  - m3
+  - M3
+  - P4
+  - P5
+  - M6
+  from: E4
+  direction: up
+  answer: play
+- type: interval
+  pool:
+  - M2
+  - m3
+  - M3
+  - P4
+  - P5
+  - M6
+  from: G3
+  direction: up
+  answer: play
+- type: interval
+  pool:
+  - M2
+  - m3
+  - M3
+  - P4
+  - P5
+  - M6
+  from: Bb3
+  direction: up
+  answer: play

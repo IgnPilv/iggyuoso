@@ -1,0 +1,15 @@
+id: song-aura-lee-swap
+title: 'Aura Lee: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:w | A3+D4+F#4:w | B3+D4+G4:w | C4+E4+G4:w | C4+E4+G4:w | A3+D4+F#4:w | B3+D4+G4:w | C4+E4+G4:w
+left: G3:q C4:q B3:q C4:q | D4:q A3:q D4:h | C4:q B3:q A3:q B3:q | C4:w | G3:q C4:q B3:q C4:q | D4:q A3:q D4:h | C4:q B3:q
+  A3:q B3:q | C4:w
+reps: 2
+days: 1

@@ -1,0 +1,12 @@
+id: ks-f-sharp-waltz
+title: 'F♯ major: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: F#
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: A#4:h C#5:q | B4:h D#5:q | G#4:h E#4:q | F#4:h.
+left: F#2:q C#3+F#3+A#3:q C#3+F#3+A#3:q | B2:q D#3+F#3+B3:q D#3+F#3+B3:q | C#3:q E#3+B3:q E#3+B3:q | C#3+F#3+A#3:h.

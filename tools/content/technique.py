@@ -126,6 +126,20 @@ def scale_ht(k, octaves=1, eighths=False, tempo=60, suffix=''):
     return timed(f'scale-{slug(k)}-{octaves}{"-e" if eighths else ""}{suffix}', title, right=rs, left=ls, tempo=tempo, key=k, rf=rf, lf=lf,
                  prompt='Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.')
 
+def contrary(k, tempo=60):
+    """One octave in contrary motion: both hands start on the key note and move apart."""
+    kind = 'harmonic' if k.endswith('m') else 'major'
+    R = scale(tonic_note(k, 4), kind, 1, down=True)
+    up_l = scale(tonic_note(k, 2), kind, 1)
+    Lh = up_l[::-1] + up_l[1:]
+    def write(n):
+        return f"{' '.join(x + ':q' for x in n[:4])} | {' '.join(x + ':q' for x in n[4:8])} | {' '.join(x + ':q' for x in n[8:12])} | {n[12]}:q {n[13]}:q {n[14]}:h"
+    rh, lh = [list(x) for x in FING[k]]
+    lh_down = lh[::-1]
+    rf = ' '.join(rh + rh[-2::-1]); lf = ' '.join(lh_down + lh_down[-2::-1])
+    return timed(f'scale-{slug(k)}-contrary', f'{name_of(k)}{" harmonic" if kind == "harmonic" else ""} scale in contrary motion', right=write(R), left=write(Lh), tempo=tempo, key=k, rf=rf, lf=lf,
+                 prompt='Both hands start on the key note, an octave apart, and move away from each other, then back.')
+
 ARP_L = {'D': '5321', 'A': '5321', 'E': '5321', 'B': '5321'}
 
 @step
@@ -349,3 +363,26 @@ def run(base):
         X(timed('blues-twelve-bars', 'Twelve-bar blues in C', right=' | '.join(['E4+Bb4:w'] * 4 + ['Eb4+A4:w'] * 2 + ['E4+Bb4:w'] * 2 + ['F4+B4:w', 'Eb4+A4:w', 'E4+Bb4:w', 'F4+B4:w']),
                 left=' | '.join(['C3:q G3:q A3:q G3:q'] * 4 + ['F2:q C3:q D3:q C3:q'] * 2 + ['C3:q G3:q A3:q G3:q'] * 2 + ['G2:q D3:q E3:q D3:q', 'F2:q C3:q D3:q C3:q', 'C3:q G3:q A3:q G3:q', 'G2:q D3:q E3:q D3:q']), tempo=88)),
     ], 'Three chords, twelve bars.')
+
+    L('technique-finger-independence', 3, 'Quiet fingers', ['technique-positions-c-g-f', 'legato-and-non-legato'], [
+        S("""Hold some fingers down while others play: it trains each finger to move on its own. Keep the held keys down all bar."""),
+        X(timed('indep-hold-thumb', 'Thumb holds, fingers play', right='C4:w | C4:w | C4:w | C4:w', left='C3:q D3:q E3:q F3:q | G3:q F3:q E3:q D3:q | C3:q E3:q G3:q E3:q | C3:w', tempo=72,
+                prompt='Right thumb holds middle C for four bars. The left hand walks.')),
+        X(timed('indep-thirds-held', 'Hold one, play the other', right='C4+E4:h D4+F4:h | E4+G4:h D4+F4:h | C4+E4:h E4+G4:h | C4+E4:w', left='C3:w | G2:w | C3:w | C3:w', tempo=66,
+                rf='1 2 3 2 1 3 1', prompt='Two notes at once in the right hand: fingers 1 and 3, then 2 and 4, then 3 and 5.')),
+        X(timed('indep-legato-staccato', 'Smooth against short', right='C4:q D4:q E4:q F4:q | G4:w | G4:q F4:q E4:q D4:q | C4:w', left='C3:e r:e G3:e r:e C3:e r:e G3:e r:e | C3:e r:e G3:e r:e C3:e r:e G3:e r:e | G2:e r:e D3:e r:e G2:e r:e D3:e r:e | C3:w', tempo=72,
+                rf='1 2 3 4 5 5 4 3 2 1', prompt='Right hand smooth (legato), left hand short (staccato). Then try swapping in your head.')),
+    ], 'Fingers that move on their own.')
+
+    L('technique-lh-inversions', 6, 'Left-hand chords that move smoothly', ['close-position-chords', 'technique-cadences-first-keys'], [
+        S("""The left hand plays I, IV, V7, I in close position, moving to the nearest notes, under a right-hand tune."""),
+        *[X(timed(f'lh-close-{k.lower()}', f"Smooth left-hand chords in {name_of(k)}", right=r, left=accompany(ch, '4/4', 'block'), tempo=66, key=k, display='staff'))
+          for k, r, ch in [('C', 'E5:h F5:h | D5:h C5:h | E5:q F5:q G5:q E5:q | D5:h C5:h', 'C F | G7 C | C | G7 C'),
+                           ('G', 'B4:h C5:h | A4:h G4:h | B4:q C5:q D5:q B4:q | A4:h G4:h', 'G C | D7 G | G | D7 G'),
+                           ('F', 'A4:h Bb4:h | G4:h F4:h | A4:q Bb4:q C5:q A4:q | G4:h F4:h', 'F Bb | C7 F | F | C7 F'),
+                           ('D', 'F#4:h G4:h | E4:h D4:h | F#4:q G4:q A4:q F#4:q | E4:h D4:h', 'D G | A7 D | D | A7 D'),
+                           ('A', 'C#5:h D5:h | B4:h A4:h | C#5:q D5:q E5:q C#5:q | B4:h A4:h', 'A D | E7 A | A | E7 A'),
+                           ('Bb', 'D5:h Eb5:h | C5:h Bb4:h | D5:q Eb5:q F5:q D5:q | C5:h Bb4:h', 'Bb Eb | F7 Bb | Bb | F7 Bb'),
+                           ('Eb', 'G4:h Ab4:h | F4:h Eb4:h | G4:q Ab4:q Bb4:q G4:q | F4:h Eb4:h', 'Eb Ab | Bb7 Eb | Eb | Bb7 Eb'),
+                           ('E', 'G#4:h A4:h | F#4:h E4:h | G#4:q A4:q B4:q G#4:q | F#4:h E4:h', 'E A | B7 E | E | B7 E')]],
+    ], 'Close chords: the left hand barely moves.')

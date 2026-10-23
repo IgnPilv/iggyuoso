@@ -1,0 +1,24 @@
+id: piece-etude-syncopated
+title: Syncopated Study
+skills:
+- repertoire
+steps:
+- explain: |
+    **Syncopated Study** · Our own study
+
+    Right-hand notes that land between the beats, over a steady left hand.
+  staff:
+    notes: F4:e A4:q C5:e r:e A4:e C5:q  |  Bb4:e D5:q Bb4:e r:e G4:e Bb4:q
+    key: F
+  sound: F4:e A4:q C5:e r:e A4:e C5:q  |  Bb4:e D5:q Bb4:e r:e G4:e Bb4:q  |  A4:e C5:q A4:e r:e F4:e A4:q  |  G4:e E4:q C4:e
+    F4:h
+- explain: |
+    **How to learn it.** Count eighths out loud: "1 and 2 and".
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-syncopated-tap
+- exercise: piece-etude-syncopated-rh
+- exercise: piece-etude-syncopated-lh
+- exercise: piece-etude-syncopated
+- exercise: piece-etude-syncopated-polish
+recap: 'Syncopated Study: learned hands alone, then together, then performed.'

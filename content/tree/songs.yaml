@@ -12,11 +12,16 @@ nodes:
   - { id: song-westminster, stage: 2, lesson: song-westminster, title: "Westminster Chimes", requires: [y1-checkpoint-a], about: "Clock chime, Cambridge 1793, Big Ben since 1859" }
   - { id: song-old-macdonald, stage: 2, lesson: song-old-macdonald, title: "Old MacDonald Had a Farm", requires: [y1-checkpoint-a], about: "Folk song, England and America" }
   - { id: song-going-home, stage: 2, lesson: song-going-home, title: "Going Home", requires: [y1-checkpoint-a], about: "Dvořák, Symphony \"From the New World\", 1893" }
+  - { id: song-hot-cross-buns, stage: 2, lesson: song-hot-cross-buns, title: "Hot Cross Buns", requires: [y1-checkpoint-a], about: "Street cry, London, 1700s" }
+  - { id: song-mary-lamb, stage: 2, lesson: song-mary-lamb, title: "Mary Had a Little Lamb", requires: [y1-checkpoint-a], about: "Tune by Lowell Mason, words by Sarah Josepha Hale, 1830" }
+  - { id: song-this-old-man, stage: 2, lesson: song-this-old-man, title: "This Old Man", requires: [y1-checkpoint-a], about: "Counting song, England" }
   - { id: song-yankee-doodle, stage: 3, lesson: song-yankee-doodle, title: "Yankee Doodle", requires: [y1-checkpoint-b], about: "Folk song, America, 1700s" }
   - { id: song-aura-lee, stage: 3, lesson: song-aura-lee, title: "Aura Lee", requires: [y1-checkpoint-b], about: "Song by George Poulton, 1861" }
   - { id: song-drunken-sailor, stage: 3, lesson: song-drunken-sailor, title: "What Shall We Do with the Drunken Sailor?", requires: [y1-checkpoint-b], about: "Sea shanty, England" }
   - { id: song-oh-susanna, stage: 4, lesson: song-oh-susanna, title: "Oh! Susanna", requires: [y1-exit], about: "Stephen Foster, 1848" }
   - { id: song-happy-birthday, stage: 4, lesson: song-happy-birthday, title: "Happy Birthday", requires: [y1-exit], about: "Mildred and Patty Hill, 1893; public domain" }
+  - { id: song-ode-to-joy-song, stage: 3, lesson: song-ode-to-joy-song, title: "Ode to Joy", requires: [y1-checkpoint-b], about: "Ludwig van Beethoven, Symphony No. 9, 1824" }
+  - { id: song-jingle-bells-song, stage: 3, lesson: song-jingle-bells-song, title: "Jingle Bells", requires: [y1-checkpoint-b], about: "James Lord Pierpont, 1857" }
   - { id: song-auld-lang-syne, stage: 4, lesson: song-auld-lang-syne, title: "Auld Lang Syne", requires: [y1-exit], about: "Scottish song, words by Robert Burns, 1788" }
   - { id: song-silent-night, stage: 4, lesson: song-silent-night, title: "Silent Night", requires: [y1-exit], about: "Franz Gruber, 1818" }
   - { id: song-we-wish, stage: 4, lesson: song-we-wish, title: "We Wish You a Merry Christmas", requires: [y1-exit], about: "Folk carol, England" }
@@ -30,3 +35,5 @@ nodes:
   - { id: song-row-your-boat, stage: 7, lesson: song-row-your-boat, title: "Row, Row, Row Your Boat", requires: [y2-exit], about: "Round, England and America, 1852" }
   - { id: song-twinkle-alberti, stage: 6, lesson: song-twinkle-alberti, title: "Twinkle with an Alberti bass", requires: [y2-checkpoint-b], about: "Arranged in the style of Mozart" }
   - { id: song-aura-lee-pedal, stage: 7, lesson: song-aura-lee-pedal, title: "Aura Lee, with pedal", requires: [y2-exit], about: "George Poulton, 1861, arranged" }
+  - { id: song-greensleeves-pedal, stage: 8, lesson: song-greensleeves-pedal, title: "Greensleeves, with pedal", requires: [m7-flat-keys], about: "English ballad, 1500s, arranged" }
+  - { id: song-silent-night-arp, stage: 9, lesson: song-silent-night-arp, title: "Silent Night, flowing", requires: [m8-arpeggios], about: "Franz Gruber, 1818, arranged" }

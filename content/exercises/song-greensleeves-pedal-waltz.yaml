@@ -1,0 +1,19 @@
+id: song-greensleeves-pedal-waltz
+title: Greensleeves, with pedal, with bass, chord, chord
+kind: timed
+hand: together
+prompt: 'Another left hand: bass, chord, chord.'
+display: staff
+key: Am
+tempo: 76
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: A4:q | C5:h D5:q | E5:q. F5:e E5:q | D5:h B4:q | G4:q. A4:e B4:q | C5:h A4:q | A4:q. G#4:e A4:q | B4:h G#4:q | E4:h
+  A4:q | C5:h D5:q | E5:q. F5:e E5:q | D5:h B4:q | G4:q. A4:e B4:q | C5:q. B4:e A4:q | G#4:q. F#4:e G#4:q | A4:h. | A4:h
+left: r:q | A2:q C3+E3:q C3+E3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q B2+D3+G3:q | E3:q G3:q G3:q | A2:q C3+E3+A3:q C3+E3+A3:q
+  | E3:q G#3:q G#3:q | E3:q G#3:q G#3:q | E3:q G#3:q G#3:q | A2:q C3+E3+A3:q C3+E3+A3:q | C3:q E3+G3:q E3+G3:q | G2:q B2+D3+G3:q
+  B2+D3+G3:q | E3:q G3:q G3:q | A2:q C3+E3+A3:q C3+E3+A3:q | E3:q G#3:q G#3:q | A2:q C3+E3+A3:q C3+E3+A3:q | C3+E3+A3:h
+reps: 2
+days: 1

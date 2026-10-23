@@ -1,0 +1,31 @@
+id: song-ode-to-joy-song
+title: Ode to Joy
+skills:
+- songs
+steps:
+- explain: |
+    **Ode to Joy** · Ludwig van Beethoven, Symphony No. 9, 1824
+
+    The big tune from the last movement of Beethoven's Ninth Symphony, now the anthem of Europe. Almost all of it is in steps.
+  staff:
+    notes: E4:q E4:q F4:q G4:q  |  G4:q F4:q E4:q D4:q
+  sound: E4:q E4:q F4:q G4:q  |  G4:q F4:q E4:q D4:q  |  C4:q C4:q D4:q E4:q  |  E4:q. D4:e D4:h
+- explain: |
+    **Before you play.** The middle section has eighths ("E F E") and a dip to G below middle C: let the thumb reach down.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 96
+- exercise: song-ode-to-joy-song-tap
+- exercise: song-ode-to-joy-song-tap-hands
+- exercise: song-ode-to-joy-song-by-ear
+- exercise: song-ode-to-joy-song-rh
+- exercise: song-ode-to-joy-song-lh
+- exercise: song-ode-to-joy-song
+- exercise: song-ode-to-joy-song-arranged
+- exercise: song-ode-to-joy-song-swap
+- exercise: song-ode-to-joy-song-in-g
+- exercise: song-ode-to-joy-song-oompah
+- exercise: song-ode-to-joy-song-performance
+- exercise: song-ode-to-joy-song-in-f
+recap: 'Ode to Joy: tune, left hand, together. Come back to it any time; songs are for fun.'

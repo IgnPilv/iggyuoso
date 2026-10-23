@@ -1,0 +1,16 @@
+id: song-aura-lee-in-g
+title: Aura Lee in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:q G5:q F#5:q G5:q | A5:q E5:q A5:h | G5:q F#5:q E5:q F#5:q | G5:w | D5:q G5:q F#5:q G5:q | A5:q E5:q A5:h | G5:q
+  F#5:q E5:q F#5:q | G5:w
+left: G2:w | A2:w | D3:w | G2:w | G2:w | A2:w | D3:w | G2:w
+reps: 2
+days: 1

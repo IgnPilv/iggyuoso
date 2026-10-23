@@ -52,3 +52,5 @@ nodes:
   - { id: theory-sonata-and-rondo, stage: 9, lesson: theory-sonata-and-rondo, title: "Rondo and sonata form", type: lesson, requires: [theory-phrases-and-form, cadence-types] }
   - { id: theory-twelve-bar-blues, stage: 9, lesson: theory-twelve-bar-blues, title: "The twelve-bar blues", type: lesson, requires: [dominant-seventh-theory, theory-phrases-and-form] }
   - { id: theory-writing-melodies, stage: 9, lesson: theory-writing-melodies, title: "How melodies work", type: lesson, requires: [theory-passing-notes, cadence-types] }
+  - { id: theory-scale-spelling, stage: 5, lesson: theory-scale-spelling, title: "Spelling scales", type: lesson, requires: [theory-keys-two-and-three, harmonic-minor] }
+  - { id: theory-spelling-intervals, stage: 6, lesson: theory-spelling-intervals, title: "Spelling intervals", type: lesson, requires: [theory-interval-quality, theory-scale-spelling] }

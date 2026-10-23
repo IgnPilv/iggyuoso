@@ -29,15 +29,15 @@ def N(id, branch, stage, title, requires=(), type=None, about=None):
     BASE.append(dict(id=id, branch=branch, stage=stage, title=title, requires=list(requires), type=type, lesson=id, about=about))
 exec(open(os.path.join(os.path.dirname(__file__), 'tree_base.py')).read())
 
-import patch, songs, ear, rhythm, technique, reading, theory, pieces, creativity, milestones
-for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, songs, milestones):
+import patch, songs, ear, rhythm, technique, reading, theory, pieces, creativity, keys, milestones
+for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones):
     if hasattr(m, 'run'): m.run(BASE)
 songs.write_songs()
 
 # Merge: generated nodes may replace base nodes of the same id.
 nodes = {n['id']: n for n in BASE}
 for n in lib.NODES: nodes[n['id']] = n
-for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, songs, milestones):
+for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones):
     for f in getattr(m, 'TREE_EDITS', []): f(nodes)
 
 TITLES = {'technique': 'Technique', 'reading': 'Reading', 'rhythm': 'Rhythm', 'theory': 'Theory', 'ear': 'Ear',
@@ -68,11 +68,10 @@ for b in TITLES:
             if n.get('about'): parts.append(f"about: {json.dumps(n['about'], ensure_ascii=False)}")
             fh.write(f"  - {{ {', '.join(parts)} }}\n")
 
-after = snapshot()
-new = sorted(os.path.relpath(p, ROOT) for p in after if p not in before)
-changed = [p for p in after if p in before and after[p] != before[p]]
-# Only files that did not exist before the run are ours to delete next time.
-prev = open(MANIFEST).read().split() if os.path.exists(MANIFEST) else []
-keep = sorted(set(new) | (set(prev) & {os.path.relpath(p, ROOT) for p in after}))
-open(MANIFEST, 'w').write('\n'.join(keep) + '\n')
-print(f'{len(lib.EXERCISES)} exercises, {len(lib.LESSONS)} lessons, {len(lib.NODES)} nodes written; {len(new)} new files')
+# Every file this run wrote, except the hand-written ones it patched, is removed before the next run.
+import subprocess
+base_files = set(subprocess.run(['git', 'ls-tree', '-r', '--name-only', patch.BASE_REV, 'content'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.split())
+manifest = sorted(lib.WRITTEN - base_files)
+open(MANIFEST, 'w').write('\n'.join(manifest) + '\n')
+new = manifest
+print(f'{len(lib.EXERCISES)} exercises, {len(lib.LESSONS)} lessons, {len(lib.NODES)} nodes written; {len(new)} generated files')

@@ -1,0 +1,13 @@
+id: ks-d-minor-broken
+title: 'D minor: broken chords'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with broken chords in the left hand.
+key: Dm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:h A4:h | G4:h Bb4:h | E4:h C#4:h | D4:w
+left: D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | G2:e D3:e Bb2:e D3:e G2:e D3:e Bb2:e D3:e | A2:e E3:e C#3:e E3:e A2:e E3:e
+  C#3:e E3:e | D3+F3+A3:w

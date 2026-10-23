@@ -1,0 +1,31 @@
+id: song-twinkle
+title: Twinkle, Twinkle, Little Star
+skills:
+- songs
+steps:
+- explain: |
+    **Twinkle, Twinkle, Little Star** · French tune "Ah! vous dirai-je, maman", 1761
+
+    The tune is a French song from the 1760s. Mozart wrote twelve variations on it, and English children sing it as *Twinkle, Twinkle* and *Baa, Baa, Black Sheep*.
+  staff:
+    notes: C4:q C4:q G4:q G4:q  |  A4:q A4:q G4:h
+  sound: C4:q C4:q G4:q G4:q  |  A4:q A4:q G4:h  |  F4:q F4:q E4:q E4:q  |  D4:q D4:q C4:h
+- explain: |
+    **Before you play.** Two chords in most bars: the left hand moves on beat 3. Lift and move early, then land on time.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 92
+- exercise: song-twinkle-tap
+- exercise: song-twinkle-tap-hands
+- exercise: song-twinkle-by-ear
+- exercise: song-twinkle-rh
+- exercise: song-twinkle-lh
+- exercise: song-twinkle
+- exercise: song-twinkle-arranged
+- exercise: song-twinkle-swap
+- exercise: song-twinkle-in-g
+- exercise: song-twinkle-oompah
+- exercise: song-twinkle-performance
+- exercise: song-twinkle-in-f
+recap: 'Twinkle, Twinkle, Little Star: tune, left hand, together. Come back to it any time; songs are for fun.'

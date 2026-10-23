@@ -1,0 +1,22 @@
+id: piece-etude-staccato-chords
+title: Bouncing Chords
+skills:
+- repertoire
+steps:
+- explain: |
+    **Bouncing Chords** · Our own study
+
+    A bouncy study: short notes in the right hand, a chord on every beat in the left.
+  staff:
+    notes: C5:e r:e E5:e r:e G5:e r:e E5:e r:e  |  F5:e r:e A5:e r:e G5:h
+  sound: C5:e r:e E5:e r:e G5:e r:e E5:e r:e  |  F5:e r:e A5:e r:e G5:h  |  E5:e r:e C5:e r:e D5:e r:e B4:e r:e  |  C5:w
+- explain: |
+    **How to learn it.** Short and light: let the keys bounce your fingers back up.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-staccato-chords-tap
+- exercise: piece-etude-staccato-chords-rh
+- exercise: piece-etude-staccato-chords-lh
+- exercise: piece-etude-staccato-chords
+- exercise: piece-etude-staccato-chords-polish
+recap: 'Bouncing Chords: learned hands alone, then together, then performed.'

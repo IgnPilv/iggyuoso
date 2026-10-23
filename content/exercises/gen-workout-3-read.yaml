@@ -1,0 +1,16 @@
+id: gen-workout-3-read
+title: Read it
+kind: generated
+generator: rhythm-read
+tempo: 72
+meter: 4/4
+durations:
+- q
+- e
+- h
+- r:q
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 3

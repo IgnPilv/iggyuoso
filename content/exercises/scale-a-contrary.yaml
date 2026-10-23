@@ -1,0 +1,14 @@
+id: scale-a-contrary
+title: A major scale in contrary motion
+kind: timed
+hand: together
+prompt: Both hands start on the key note, an octave apart, and move away from each other, then back.
+key: A
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q B4:q C#5:q D5:q | E5:q F#5:q G#5:q A5:q | G#5:q F#5:q E5:q D5:q | C#5:q B4:q A4:h
+left: A3:q G#3:q F#3:q E3:q | D3:q C#3:q B2:q A2:q | B2:q C#3:q D3:q E3:q | F#3:q G#3:q A3:h
+rightFingers: 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1
+leftFingers: 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1

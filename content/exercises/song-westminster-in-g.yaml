@@ -1,0 +1,16 @@
+id: song-westminster-in-g
+title: Westminster Chimes in G major
+kind: timed
+hand: together
+prompt: 'The same song moved to G major: think in degrees, and mind the key signature.'
+display: staff
+key: G
+tempo: 80
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: B4:q A4:q G4:q | D4:h. | G4:q B4:q A4:q | D4:h. | G4:q A4:q B4:q | G4:h. | B4:q G4:q A4:q | D4:h. | D4:q A4:q B4:q
+  | G4:h.
+left: G2:h. | D3:h. | G2:h. | D3:h. | G2:h. | G2:h. | G2:h. | D3:h. | D3:h. | G2:h.
+reps: 2
+days: 1

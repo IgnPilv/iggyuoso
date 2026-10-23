@@ -1,0 +1,19 @@
+id: ks-d-minor-sight-rh
+title: Sight-read the right hand in D minor
+kind: generated
+generator: sight-read
+hand: right
+clef: treble
+tempo: 66
+notes: D4-D5
+keys:
+- Dm
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

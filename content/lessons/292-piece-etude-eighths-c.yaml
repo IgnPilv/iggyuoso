@@ -1,0 +1,23 @@
+id: piece-etude-eighths-c
+title: Running Eighths
+skills:
+- repertoire
+steps:
+- explain: |
+    **Running Eighths** · Our own study
+
+    Eighth notes running up and down the C position over held chords.
+  staff:
+    notes: C4:e D4:e E4:e F4:e G4:q G4:q  |  A4:e G4:e F4:e E4:e D4:h
+  sound: C4:e D4:e E4:e F4:e G4:q G4:q  |  A4:e G4:e F4:e E4:e D4:h  |  E4:e F4:e G4:e A4:e G4:q E4:q  |  D4:e E4:e D4:e B3:e
+    C4:h
+- explain: |
+    **How to learn it.** Even eighths, like a clock ticking twice as fast.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-eighths-c-tap
+- exercise: piece-etude-eighths-c-rh
+- exercise: piece-etude-eighths-c-lh
+- exercise: piece-etude-eighths-c
+- exercise: piece-etude-eighths-c-polish
+recap: 'Running Eighths: learned hands alone, then together, then performed.'

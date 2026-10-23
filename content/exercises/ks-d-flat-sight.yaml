@@ -1,0 +1,20 @@
+id: ks-d-flat-sight
+title: Sight-read in D♭ major
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: Db4-Db5
+keys:
+- Db
+left: chords
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

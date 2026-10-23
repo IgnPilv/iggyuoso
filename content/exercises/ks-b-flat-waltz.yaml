@@ -1,0 +1,12 @@
+id: ks-b-flat-waltz
+title: 'B♭ major: waltz'
+kind: timed
+hand: together
+prompt: Oom-pah-pah in the left hand, a long-short tune above.
+key: Bb
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: D5:h F5:q | Eb5:h G5:q | C5:h A4:q | Bb4:h.
+left: Bb2:q D3+F3:q D3+F3:q | Eb3:q G3:q G3:q | F2:q A2+C3+F3:q A2+C3+F3:q | Bb2+D3+F3:h.

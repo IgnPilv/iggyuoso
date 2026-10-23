@@ -1,0 +1,23 @@
+id: piece-waltz-a-minor
+title: Little Waltz in A minor
+skills:
+- repertoire
+steps:
+- explain: |
+    **Little Waltz in A minor** · Our own piece
+
+    A melancholy waltz with an oom-pah-pah left hand.
+  staff:
+    notes: E5:h C5:q  |  B4:h A4:q
+    key: Am
+  sound: E5:h C5:q  |  B4:h A4:q  |  G#4:h A4:q  |  B4:h.
+- explain: |
+    **How to learn it.** The G♯ is the raised 7th of A minor: it leans up to A.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-waltz-a-minor-tap
+- exercise: piece-waltz-a-minor-rh
+- exercise: piece-waltz-a-minor-lh
+- exercise: piece-waltz-a-minor
+- exercise: piece-waltz-a-minor-polish
+recap: 'Little Waltz in A minor: learned hands alone, then together, then performed.'

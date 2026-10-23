@@ -1,0 +1,14 @@
+id: scale-d-flat-1-e
+title: D♭ major scale, one octave, eighths
+kind: timed
+hand: together
+prompt: 'Hands together, an octave apart. Thumbs cross under at the same moment only in some keys: watch the fingers.'
+key: Db
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Db4:e Eb4:e F4:e Gb4:e Ab4:e Bb4:e C5:e Db5:e | C5:e Bb4:e Ab4:e Gb4:e F4:e Eb4:e Db4:q
+left: Db3:e Eb3:e F3:e Gb3:e Ab3:e Bb3:e C4:e Db4:e | C4:e Bb3:e Ab3:e Gb3:e F3:e Eb3:e Db3:q
+rightFingers: 2 3 1 2 3 4 1 2 1 4 3 2 1 3 2
+leftFingers: 3 2 1 4 3 2 1 3 1 2 3 4 1 2 3

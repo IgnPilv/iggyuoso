@@ -1,0 +1,67 @@
+id: ks-d-quiz
+title: 'Know the key: D major'
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: The key signature of D major is...
+  choices:
+  - F♯, C♯, G♯
+  - F♯, C♯
+  - B♭, E♭
+  - F♯
+  correct: 1
+  why: 'D major: F♯, C♯.'
+  whyStaff:
+    notes: D4:w
+    key: D
+- ask: The notes of the D major scale are...
+  choices:
+  - D E F G A B♭ C
+  - D E F♯ G A B C♯
+  correct: 1
+  why: 'Count the steps: W W H W W W H.'
+- ask: The tonic chord of D major is...
+  choices:
+  - A C♯ E G
+  - G B D
+  - D F♯ A
+  correct: 2
+  why: 'Degrees 1, 3, 5: D F♯ A.'
+- ask: The IV chord of D major is...
+  choices:
+  - D F♯ A
+  - A C♯ E G
+  - G B D
+  correct: 2
+  why: 'Degrees 4, 6, 8: G B D.'
+- ask: The dominant 7th of D major is...
+  choices:
+  - G B D
+  - D F♯ A
+  - A C♯ E G
+  correct: 2
+  why: 'Built on degree 5, A: A C♯ E G.'
+- ask: The dominant note of D major is...
+  choices:
+  - E
+  - G
+  - B
+  - A
+  correct: 3
+  why: Degree 5.
+- ask: The leading note of D major is...
+  choices:
+  - C♯
+  - B
+  - E
+  correct: 0
+  why: Degree 7, a half step below the tonic.
+- ask: The relative minor of D major is...
+  choices:
+  - G major
+  - B minor
+  - E♭ major
+  correct: 1
+  why: They share a key signature.

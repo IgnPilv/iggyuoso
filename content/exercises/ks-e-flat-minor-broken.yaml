@@ -1,0 +1,13 @@
+id: ks-e-flat-minor-broken
+title: 'E♭ minor: broken chords'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with broken chords in the left hand.
+key: Ebm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Gb4:h Bb4:h | Ab4:h Cb5:h | F4:h D4:h | Eb4:w
+left: Eb3:e Bb3:e Gb3:e Bb3:e Eb3:e Bb3:e Gb3:e Bb3:e | Ab2:e Eb3:e Cb3:e Eb3:e Ab2:e Eb3:e Cb3:e Eb3:e | Bb2:e F3:e D3:e
+  F3:e Bb2:e F3:e D3:e F3:e | Eb3+Gb3+Bb3:w

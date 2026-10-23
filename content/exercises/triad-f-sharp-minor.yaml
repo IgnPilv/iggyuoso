@@ -1,0 +1,14 @@
+id: triad-f-sharp-minor
+title: F♯ minor triad, both hands
+kind: timed
+hand: together
+prompt: Broken, then all three notes together.
+key: F#m
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4:q A4:q C#5:q A4:q | F#4+A4+C#5:w | F#4:q A4:q C#5:q A4:q | F#4+A4+C#5:w
+left: F#3:h C#4:h | F#3+C#4:w | F#3:h C#4:h | F#3+C#4:w
+rightFingers: 1 3 5 3 1 1 3 5 3 1
+leftFingers: 5 1 5 5 1 5

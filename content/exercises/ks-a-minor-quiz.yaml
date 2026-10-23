@@ -1,0 +1,67 @@
+id: ks-a-minor-quiz
+title: 'Know the key: A minor'
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: The key signature of A minor is...
+  choices:
+  - F♯
+  - B♭
+  - No sharps or flats
+  - F♯, C♯
+  correct: 2
+  why: 'A minor: No sharps or flats.'
+  whyStaff:
+    notes: A4:w
+    key: Am
+- ask: The notes of the A minor harmonic scale are...
+  choices:
+  - A B C♯ D E F♯ G♯
+  - A B C D E F G♯
+  correct: 1
+  why: 'Count the steps: W H W W H W+H H.'
+- ask: The tonic chord of A minor is...
+  choices:
+  - D F A
+  - A C E
+  - E G♯ B D
+  correct: 1
+  why: 'Degrees 1, 3, 5: A C E.'
+- ask: The iv chord of A minor is...
+  choices:
+  - A C E
+  - E G♯ B D
+  - D F A
+  correct: 2
+  why: 'Degrees 4, 6, 8: D F A.'
+- ask: The dominant 7th of A minor is...
+  choices:
+  - A C E
+  - E G♯ B D
+  - D F A
+  correct: 1
+  why: 'Built on degree 5, E: E G♯ B D.'
+- ask: The dominant note of A minor is...
+  choices:
+  - B
+  - E
+  - F
+  - D
+  correct: 1
+  why: Degree 5.
+- ask: The leading note of A minor is...
+  choices:
+  - F
+  - G♯
+  - B
+  correct: 1
+  why: Degree 7, a half step below the tonic (raised in harmonic minor).
+- ask: The relative major of A minor is...
+  choices:
+  - D major
+  - G major
+  - C major
+  correct: 2
+  why: They share a key signature.

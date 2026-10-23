@@ -1,0 +1,13 @@
+id: ks-d-minor-pulse
+title: 'D minor: a chord on every beat'
+kind: timed
+hand: together
+prompt: A tune on I, IV, V7 and I with a chord on every beat in the left hand.
+key: Dm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:h A4:h | G4:h Bb4:h | E4:h C#4:h | D4:w
+left: D3+F3+A3:q D3+F3+A3:q D3+F3+A3:q D3+F3+A3:q | D3+G3+Bb3:q D3+G3+Bb3:q D3+G3+Bb3:q D3+G3+Bb3:q | C#3+E3+A3:q C#3+E3+A3:q
+  C#3+E3+A3:q C#3+E3+A3:q | D3+F3+A3:w

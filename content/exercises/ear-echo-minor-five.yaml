@@ -1,0 +1,31 @@
+id: ear-echo-minor-five
+title: Five-note phrases in minor
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: A4 B4 C5 B4 A4
+  plays: 2
+- type: melody
+  notes: E5 D5 C5 B4 A4
+  plays: 2
+- type: melody
+  notes: A4 C5 E5 C5 A4
+  plays: 2
+- type: melody
+  notes: C5 B4 A4 G#4 A4
+  plays: 2
+- type: melody
+  notes: D4 E4 F4 E4 D4
+  plays: 2
+- type: melody
+  notes: A4 G4 F4 E4 D4
+  plays: 2
+- type: melody
+  notes: D4 F4 A4 F4 D4
+  plays: 2
+- type: melody
+  notes: F4 E4 D4 C#4 D4
+  plays: 2

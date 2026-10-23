@@ -1,0 +1,23 @@
+id: piece-etude-rocking-thirds
+title: Rocking Thirds
+skills:
+- repertoire
+steps:
+- explain: |
+    **Rocking Thirds** · Our own study
+
+    Thirds rocking back and forth, a hand position at a time.
+  staff:
+    notes: B4+D5:q G4+B4:q B4+D5:q G4+B4:q  |  C5+E5:q A4+C5:q C5+E5:q A4+C5:q
+    key: G
+  sound: B4+D5:q G4+B4:q B4+D5:q G4+B4:q  |  C5+E5:q A4+C5:q C5+E5:q A4+C5:q  |  A4+C5:q F#4+A4:q A4+C5:q F#4+A4:q  |  G4+B4:w
+- explain: |
+    **How to learn it.** Keep the wrist loose and let it rock.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-etude-rocking-thirds-tap
+- exercise: piece-etude-rocking-thirds-rh
+- exercise: piece-etude-rocking-thirds-lh
+- exercise: piece-etude-rocking-thirds
+- exercise: piece-etude-rocking-thirds-polish
+recap: 'Rocking Thirds: learned hands alone, then together, then performed.'

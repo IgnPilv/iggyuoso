@@ -1,0 +1,13 @@
+id: ks-d-minor-pedal
+title: 'D minor: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: Dm
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:h A4:h | G4:h Bb4:h | E4:h C#4:h | D4:w
+left: D3:q A3:q D4:q A3:q | G2:q D3:q G3:q D3:q | A2:q E3:q A3:q E3:q | D3+F3+A3:w
+pedal: x:w | x:w | x:w | x:w

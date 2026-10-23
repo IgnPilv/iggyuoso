@@ -1,0 +1,12 @@
+id: lh-close-bb
+title: Smooth left-hand chords in B♭ major
+kind: timed
+hand: together
+display: staff
+key: Bb
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:h Eb5:h | C5:h Bb4:h | D5:q Eb5:q F5:q D5:q | C5:h Bb4:h
+left: Bb2+D3+F3:h Bb2+Eb3+G3:h | A2+C3+F3:h Bb2+D3+F3:h | Bb2+D3+F3:w | A2+C3+F3:h Bb2+D3+F3:h

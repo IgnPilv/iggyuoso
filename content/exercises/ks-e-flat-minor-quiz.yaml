@@ -1,0 +1,67 @@
+id: ks-e-flat-minor-quiz
+title: 'Know the key: E♭ minor'
+kind: quiz
+shuffle: true
+reps: 1
+days: 1
+questions:
+- ask: The key signature of E♭ minor is...
+  choices:
+  - B♭, E♭, A♭, D♭, G♭, C♭
+  - F♯, C♯, G♯, D♯, A♯, E♯
+  - B♭, E♭, A♭, D♭, G♭, C♭, F♭
+  - B♭, E♭, A♭, D♭, G♭
+  correct: 0
+  why: 'E♭ minor: B♭, E♭, A♭, D♭, G♭, C♭.'
+  whyStaff:
+    notes: Eb4:w
+    key: Ebm
+- ask: The notes of the E♭ minor harmonic scale are...
+  choices:
+  - E♭ F G♭ A♭ B♭ C♭ D
+  - E♭ F G A♭ B♭ C D
+  correct: 0
+  why: 'Count the steps: W H W W H W+H H.'
+- ask: The tonic chord of E♭ minor is...
+  choices:
+  - E♭ G♭ B♭
+  - B♭ D F A♭
+  - A♭ C♭ E♭
+  correct: 0
+  why: 'Degrees 1, 3, 5: E♭ G♭ B♭.'
+- ask: The iv chord of E♭ minor is...
+  choices:
+  - A♭ C♭ E♭
+  - B♭ D F A♭
+  - E♭ G♭ B♭
+  correct: 0
+  why: 'Degrees 4, 6, 8: A♭ C♭ E♭.'
+- ask: The dominant 7th of E♭ minor is...
+  choices:
+  - B♭ D F A♭
+  - A♭ C♭ E♭
+  - E♭ G♭ B♭
+  correct: 0
+  why: 'Built on degree 5, B♭: B♭ D F A♭.'
+- ask: The dominant note of E♭ minor is...
+  choices:
+  - A♭
+  - F
+  - C♭
+  - B♭
+  correct: 3
+  why: Degree 5.
+- ask: The leading note of E♭ minor is...
+  choices:
+  - F
+  - D
+  - C♭
+  correct: 1
+  why: Degree 7, a half step below the tonic (raised in harmonic minor).
+- ask: The relative major of E♭ minor is...
+  choices:
+  - G major
+  - E minor
+  - G♭ major
+  correct: 2
+  why: They share a key signature.

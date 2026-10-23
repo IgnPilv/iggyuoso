@@ -1,0 +1,10 @@
+id: ear-half-steps
+title: The smallest step
+skills:
+- ear
+steps:
+- explain: |
+    The half step is the smallest distance on the piano. Hear it, both ways, in every register.
+- exercise: ear-sd-half-step
+- exercise: ear-hl-half-step
+recap: One key apart, and you can hear it.

@@ -1,0 +1,12 @@
+id: indep-thirds-held
+title: Hold one, play the other
+kind: timed
+hand: together
+prompt: 'Two notes at once in the right hand: fingers 1 and 3, then 2 and 4, then 3 and 5.'
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4:h D4+F4:h | E4+G4:h D4+F4:h | C4+E4:h E4+G4:h | C4+E4:w
+left: C3:w | G2:w | C3:w | C3:w
+rightFingers: 1 2 3 2 1 3 1

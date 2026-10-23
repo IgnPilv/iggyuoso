@@ -1,0 +1,12 @@
+id: ks-c-pedal
+title: 'C major: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:h G4:h | F4:h A4:h | D4:h B3:h | C4:w
+left: C3:q G3:q C4:q G3:q | F2:q C3:q F3:q C3:q | G2:q D3:q G3:q D3:q | C3+E3+G3:w
+pedal: x:w | x:w | x:w | x:w

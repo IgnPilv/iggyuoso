@@ -1,0 +1,13 @@
+id: ks-f-pedal
+title: 'F major: rolling chords with pedal'
+kind: timed
+hand: together
+prompt: Root, fifth, octave, fifth in the left hand; the pedal changes with each bar.
+key: F
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:h C5:h | Bb4:h D5:h | G4:h E4:h | F4:w
+left: F2:q C3:q F3:q C3:q | Bb2:q F3:q Bb3:q F3:q | C3:q G3:q C4:q G3:q | C3+F3+A3:w
+pedal: x:w | x:w | x:w | x:w

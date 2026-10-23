@@ -57,3 +57,28 @@ nodes:
   - { id: technique-scales-ab-db, stage: 8, lesson: technique-scales-ab-db, title: "A♭ and D♭ major, F♯ and C♯ minor", type: lesson, requires: [technique-scales-flat-keys] }
   - { id: technique-octaves, stage: 9, lesson: technique-octaves, title: "Octaves", type: lesson, requires: [technique-two-octave-scales-ht] }
   - { id: technique-blues-shapes, stage: 9, lesson: technique-blues-shapes, title: "Blues shapes", type: lesson, requires: [technique-dominant-sevenths, rhythm-shuffle] }
+  - { id: technique-finger-independence, stage: 3, lesson: technique-finger-independence, title: "Quiet fingers", type: lesson, requires: [technique-positions-c-g-f, legato-and-non-legato] }
+  - { id: technique-lh-inversions, stage: 6, lesson: technique-lh-inversions, title: "Left-hand chords that move smoothly", type: lesson, requires: [close-position-chords, technique-cadences-first-keys] }
+  - { id: ks-c, stage: 5, lesson: ks-c, title: "Key study: C major", type: drill, requires: [technique-cadences-first-keys] }
+  - { id: ks-g, stage: 5, lesson: ks-g, title: "Key study: G major", type: drill, requires: [technique-cadences-first-keys, ks-c] }
+  - { id: ks-f, stage: 5, lesson: ks-f, title: "Key study: F major", type: drill, requires: [technique-cadences-first-keys, ks-g] }
+  - { id: ks-a-minor, stage: 5, lesson: ks-a-minor, title: "Key study: A minor", type: drill, requires: [ear-minor-degrees, ks-f] }
+  - { id: ks-d-minor, stage: 5, lesson: ks-d-minor, title: "Key study: D minor", type: drill, requires: [technique-cadences-first-keys, ks-a-minor] }
+  - { id: ks-d, stage: 6, lesson: ks-d, title: "Key study: D major", type: drill, requires: [circle-of-fifths, ks-d-minor] }
+  - { id: ks-e-minor, stage: 6, lesson: ks-e-minor, title: "Key study: E minor", type: drill, requires: [technique-minor-scales-ht, ks-d] }
+  - { id: ks-a, stage: 6, lesson: ks-a, title: "Key study: A major", type: drill, requires: [technique-cadences-sharp-keys, ks-e-minor] }
+  - { id: ks-b-flat, stage: 6, lesson: ks-b-flat, title: "Key study: B♭ major", type: drill, requires: [circle-of-fifths, ks-a] }
+  - { id: ks-e, stage: 7, lesson: ks-e, title: "Key study: E major", type: drill, requires: [technique-scales-e-b, ks-b-flat] }
+  - { id: ks-b-minor, stage: 7, lesson: ks-b-minor, title: "Key study: B minor", type: drill, requires: [technique-scales-e-b, ks-e] }
+  - { id: ks-e-flat, stage: 7, lesson: ks-e-flat, title: "Key study: E♭ major", type: drill, requires: [technique-scales-flat-keys, ks-b-minor] }
+  - { id: ks-g-minor, stage: 7, lesson: ks-g-minor, title: "Key study: G minor", type: drill, requires: [technique-scales-flat-keys, ks-e-flat] }
+  - { id: ks-b, stage: 8, lesson: ks-b, title: "Key study: B major", type: drill, requires: [technique-scales-e-b, ks-g-minor] }
+  - { id: ks-f-sharp-minor, stage: 8, lesson: ks-f-sharp-minor, title: "Key study: F♯ minor", type: drill, requires: [technique-scales-ab-db, ks-b] }
+  - { id: ks-c-minor, stage: 8, lesson: ks-c-minor, title: "Key study: C minor", type: drill, requires: [technique-cadences-flat-keys, ks-f-sharp-minor] }
+  - { id: ks-a-flat, stage: 8, lesson: ks-a-flat, title: "Key study: A♭ major", type: drill, requires: [technique-scales-ab-db, ks-c-minor] }
+  - { id: ks-d-flat, stage: 9, lesson: ks-d-flat, title: "Key study: D♭ major", type: drill, requires: [technique-scales-ab-db, ks-a-flat] }
+  - { id: ks-f-sharp, stage: 9, lesson: ks-f-sharp, title: "Key study: F♯ major", type: drill, requires: [technique-positions-all-keys, ks-d-flat] }
+  - { id: ks-f-minor, stage: 9, lesson: ks-f-minor, title: "Key study: F minor", type: drill, requires: [technique-cadences-flat-keys, ks-f-sharp] }
+  - { id: ks-c-sharp-minor, stage: 9, lesson: ks-c-sharp-minor, title: "Key study: C♯ minor", type: drill, requires: [technique-scales-ab-db, ks-f-minor] }
+  - { id: ks-b-flat-minor, stage: 9, lesson: ks-b-flat-minor, title: "Key study: B♭ minor", type: drill, requires: [technique-positions-all-keys, ks-c-sharp-minor] }
+  - { id: ks-e-flat-minor, stage: 9, lesson: ks-e-flat-minor, title: "Key study: E♭ minor", type: drill, requires: [technique-positions-all-keys, ks-b-flat-minor] }

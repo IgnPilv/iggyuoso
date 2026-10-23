@@ -1,0 +1,18 @@
+id: ks-a-degrees
+title: Every degree of A major
+kind: ear
+cadence: A
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: A
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

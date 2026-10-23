@@ -1,0 +1,19 @@
+id: ks-e-sight-rh
+title: Sight-read the right hand in E major
+kind: generated
+generator: sight-read
+hand: right
+clef: treble
+tempo: 66
+notes: E4-E5
+keys:
+- E
+durations:
+- q
+- h
+- e
+bars: 8
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

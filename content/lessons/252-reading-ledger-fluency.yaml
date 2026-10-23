@@ -1,0 +1,11 @@
+id: reading-ledger-fluency
+title: Ledger lines, fast
+skills:
+- reading
+steps:
+- explain: |
+    Two and three ledger lines above the treble and below the bass.
+- exercise: rd-ledger-high
+- exercise: rd-ledger-low
+- exercise: rd-ledger-mixed
+recap: Ledger lines read like the staff, extended.

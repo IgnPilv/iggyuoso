@@ -1,0 +1,17 @@
+id: song-twinkle-alberti-swap
+title: 'Twinkle with an Alberti bass: swap hands'
+kind: timed
+hand: together
+prompt: The tune in the left hand, an octave lower; the right hand plays the chords.
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:w | C4+F4+A4:h C4+E4+G4:h | C4+F4+A4:h C4+E4+G4:h | B3+D4+G4:h C4+E4+G4:h | C4+E4+G4:h C4+F4+A4:h | C4+E4+G4:h
+  B3+D4+G4:h | C4+E4+G4:h C4+F4+A4:h | C4+E4+G4:h B3+D4+G4:h | C4+E4+G4:w | C4+F4+A4:h C4+E4+G4:h | C4+F4+A4:h C4+E4+G4:h
+  | B3+D4+G4:h C4+E4+G4:h
+left: C4:q C4:q G4:q G4:q | A4:q A4:q G4:h | F4:q F4:q E4:q E4:q | D4:q D4:q C4:h | G4:q G4:q F4:q F4:q | E4:q E4:q D4:h |
+  G4:q G4:q F4:q F4:q | E4:q E4:q D4:h | C4:q C4:q G4:q G4:q | A4:q A4:q G4:h | F4:q F4:q E4:q E4:q | D4:q D4:q C4:h
+reps: 2
+days: 1
