@@ -39,3 +39,35 @@ Note names are mapped to the player's real keys through calibration, never to fi
 
 `npm test` loads every file here and fails on any problem (bad note, bar that doesn't add up,
 finger count that doesn't match, missing lesson or exercise id).
+
+## Mastery tree
+`content/tree/year-N.yaml`, one file per year (1–5). The design is in `docs/mastery-curriculum.md`.
+
+```yaml
+year: 1
+title: Hands apart, then together
+level: ABRSM Initial–Grade 1, RCM Prep–Level 1
+goal: What the player can do at the end of the year.
+units:                 # in path order
+  - id: meet-the-keyboard
+    title: Meet the keyboard
+    nodes:             # a built unit
+      - { id: c-d-e, type: lesson, strand: theory, lesson: c-d-e, title: "C, D and E", requires: [high-and-low] }
+      - { id: ear-high-low, type: drill, strand: ear, planned: true, title: Higher or lower?, requires: [high-and-low] }
+  - id: minor-keys     # a unit that is still an outline
+    title: Minor keys
+    checkpoint: y2-checkpoint-a
+    outline:
+      theory: [Natural, harmonic and melodic minor]
+```
+
+- `type`: `lesson`, `drill`, `piece`, `checkpoint`, `side-quest` (optional, never blocks the path).
+- `strand`: `technique`, `reading`, `rhythm`, `theory`, `ear`, `repertoire`, `creativity`;
+  checkpoints use `all`.
+- `requires`: node ids that must be Practised first. They must appear earlier in path order
+  (any year), which keeps the tree free of loops.
+- `lesson`: the lesson that teaches the node. A node without one must say `planned: true`.
+- Every lesson in `content/lessons/` must be placed in the tree, and every year has exactly three
+  checkpoints (as nodes, or `checkpoint:` on an outlined unit).
+
+`npm test` checks all of this.
