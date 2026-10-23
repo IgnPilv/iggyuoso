@@ -197,3 +197,7 @@ never copied pages). Start small, adapt as we go.
   what is played or scored. The staff follows bar rules: an accidental shows where a note differs
   from the key or from an earlier note on that line or space in the bar, naturals included
   (also without a key). Untimed reading drills treat each note on its own. Demo "Key signatures".
+- 2026-10-23: After Ignas's "falling notes should also visualise the sheet music": in falling notes,
+  timed exercises (not `tap`) and step-by-step reading exercises (`display: staff`) show the staff
+  as a strip above the lane. It scrolls so the music being played sits a third of the way in, with
+  a playhead, and marks notes like the sheet view.

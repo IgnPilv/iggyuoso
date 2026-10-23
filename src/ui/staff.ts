@@ -164,6 +164,9 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
 
   return {
     svg,
+    width,
+    /** Where a beat (timed, counted like the falling notes) or a note number (untimed) sits. */
+    xOf: (at: number) => left + (timed ? (at - (opts.startQuarter ?? 0)) * BEAT_W : at * UNTIMED_W) + 14,
     mark(key: string, cls: string, on = true) {
       els.get(key)?.classList.toggle(cls, on);
     },

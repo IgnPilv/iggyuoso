@@ -182,7 +182,7 @@ function scenes(): Scene[] {
   const oneHand = pick(isTimed, (e) => !!e.right !== !!e.left && e.display === 'keys' && noteCount(e) >= 9 && e.fingers[e.right ? 'right' : 'left'].length > 0, (e) => !!e.right !== !!e.left && noteCount(e) >= 9);
   if (oneHand) out.push({ title: 'Falling notes', caption: 'Listen first: the app plays the tune and lights each key. Then the pianist plays it, with one wrong key, one late note and one missed note. The score and the mistakes show up live. The result card shows the XP earned (clean takes, new stars and promotions only).', run: exerciseScene(oneHand, { listenFirst: true, view: 'falling' }) });
   const twoHands = pick(isTimed, (e) => !!(e.right && e.left));
-  if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score.', run: exerciseScene(twoHands, { view: 'falling' }) });
+  if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score. The sheet music rides along above the falling notes, with a playhead on the note being played and notes turning green or red.', run: exerciseScene(twoHands, { view: 'falling' }) });
   const sheet = pick(isTimed, (e) => e.display === 'staff' && !(e.right && e.left));
   if (sheet) out.push({ title: 'Sheet music', caption: 'The same exercise on "Keyboard & sheet": the staff, with notes turning green or red as they are played.', run: exerciseScene(sheet, { view: 'classic' }) });
   const rhythms = parseExercise(parse(SAMPLES.rhythms));
