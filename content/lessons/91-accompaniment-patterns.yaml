@@ -1,18 +1,31 @@
 id: accompaniment-patterns
-title: "Accompaniment patterns"
+title: Accompaniment patterns
 unit: harmonising
 skills: [creativity, harmony, left-hand]
 steps:
-  - explain: |
-      Held chords are only one way to accompany. You can also **break** a chord into its notes.
-
-      - **Broken chord** (often called *Alberti bass*, after an Italian composer): low, high,
-        middle, high. Mozart and Haydn used it constantly.
-      - **Waltz pattern** in 3/4: the bass note on beat 1, the rest of the chord on beats 2 and 3:
-        *oom-pah-pah*.
-
-      The chords are the same; only the pattern changes. Choose a pattern to set the mood.
-  - exercise: alberti-lh
-  - exercise: waltz-pattern-lh
-  - exercise: twinkle-alberti
-recap: "Same chords, new pattern: broken chords and oom-pah-pah."
+- explain: |
+    Held chords are only one way to accompany. You can also **break** a chord into its notes.
+  sound: C3+E3+G3:w | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e
+  terms: [broken chord]
+- explain: |
+    **Alberti bass**, after an Italian composer: **low, high, middle, high**. Mozart and Haydn used it constantly.
+  staff: {notes: 'C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e', clef: bass, labels: names}
+  terms: [Alberti bass]
+  check:
+    ask: Alberti bass on C E G goes...
+    choices: [C E G E, C G E G, G E C E]
+    correct: 1
+    why: Low, high, middle, high.
+- explain: |
+    **Waltz pattern** in 3/4: the bass note on beat 1, the rest of the chord on beats 2 and 3: *oom-pah-pah*.
+  staff: {notes: 'C3:q E3+G3:q E3+G3:q | G2:q B2+F3:q B2+F3:q', clef: bass}
+  sound: C3:q E3+G3:q E3+G3:q G2:q B2+F3:q B2+F3:q
+  terms: [waltz bass, oom-pah-pah]
+- explain: |
+    The chords are the same; only the pattern changes. Choose a pattern to set the mood.
+  callout: |
+    Held chords = calm. Alberti = flowing. Oom-pah-pah = dancing.
+- {exercise: alberti-lh}
+- {exercise: waltz-pattern-lh}
+- {exercise: twinkle-alberti}
+recap: 'Same chords, new pattern: broken chords and oom-pah-pah.'

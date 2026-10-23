@@ -1,15 +1,23 @@
 id: two-octave-f
-title: "F major over two octaves"
+title: F major over two octaves
 unit: two-octave-scales
 skills: [scales, key-of-f]
 steps:
-  - explain: |
-      F major has one flat, **Bb**. The left hand fingers it like C. The right hand is different:
-      the 4th finger always plays **Bb**.
-
-      Right hand going up: **1 2 3 4** (F G A Bb), thumb under, **1 2 3** (C D E), thumb under,
-      **1 2 3 4**, then **1 2 3 4** to the top F. Think "4 on Bb" and the rest follows.
-  - exercise: f-scale-2oct-rh
-  - exercise: f-scale-2oct-lh
-  - exercise: f-scale-2oct-ht
-recap: "F major: the right hand's 4th finger always lands on Bb."
+- explain: |
+    F major has one flat, **B♭**. The left hand fingers it like C. The right hand is different:
+    the 4th finger always plays **B♭**.
+  keys: {notes: F4 G4 A4 Bb4 C5 D5 E5 F5, labels: fingers, fingers: 1 2 3 4 1 2 3 4}
+- explain: |
+    Right hand going up: **1 2 3 4** (F G A B♭), thumb under, **1 2 3** (C D E), thumb under,
+    **1 2 3 4**, then **1 2 3 4** to the top F. Think "4 on B♭" and the rest follows.
+  callout: |
+    Find the B♭ and put 4 on it: everything else falls into place.
+  check:
+    ask: 'F major, right hand: the thumb never plays...'
+    choices: [C, F, B♭]
+    correct: 2
+    why: The thumb stays on white keys; B♭ always gets finger 4.
+- {exercise: f-scale-2oct-rh}
+- {exercise: f-scale-2oct-lh}
+- {exercise: f-scale-2oct-ht}
+recap: 'F major: the right hand''s 4th finger always lands on Bb.'

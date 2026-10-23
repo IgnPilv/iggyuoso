@@ -1,17 +1,24 @@
 id: variations-lightly-row
-title: "Theme and variations"
+title: Theme and variations
 unit: pedal-and-genres
 skills: [repertoire, form, creativity]
 steps:
-  - explain: |
-      Your **large-form** piece is a **theme and variations**: a tune, then the same tune
-      changed in different ways. Mozart's Twinkle variations work like this, and so does this one.
-
-      - **Theme**: Lightly Row with held chords, as you learned it.
-      - **Variation 1**: the left hand breaks the chords (low, high, middle, high).
-      - **Variation 2**: the whole tune moves into **C minor**: every E becomes **Eb**, and the
-        C chord becomes C minor. Same tune, new mood.
-
-      It is 24 bars long. If one variation is harder, loop just those bars until they settle.
-  - exercise: variations-lightly-row
-recap: "One tune, three versions: held, broken, and minor."
+- explain: |
+    Your **large-form** piece is a **theme and variations**: a tune, then the same tune
+    changed in different ways. Mozart's Twinkle variations work like this, and so does this one.
+  terms: [theme and variations]
+- explain: |
+    - **Theme**: Lightly Row with held chords, as you learned it.
+    - **Variation 1**: the left hand breaks the chords (low, high, middle, high).
+    - **Variation 2**: the whole tune moves into **C minor**: every E becomes **E♭**, and the
+      C chord becomes C minor. Same tune, new mood.
+  sound: G4:q E4:q E4:h | G4:q Eb4:q Eb4:h
+  check:
+    ask: What turns the C major theme into C minor?
+    choices: [E becomes E♭, C becomes C♯, G becomes G♯]
+    correct: 0
+    why: Lowering the 3rd, E, makes C major into C minor.
+- explain: |
+    It is 24 bars long. If one variation is harder, loop just those bars until they settle.
+- {exercise: variations-lightly-row}
+recap: 'One tune, three versions: held, broken, and minor.'

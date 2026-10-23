@@ -1,19 +1,35 @@
 id: scales-a-major-g-minor
-title: "A major and G minor"
+title: A major and G minor
 unit: pedal-and-genres
 skills: [scales, keys]
 steps:
-  - explain: |
-      **A major** has three sharps: **F#, C# and G#**. **G minor** is the relative minor of Bb
-      major, so it has two flats, **Bb and Eb**, and the harmonic form raises the 7th to **F#**.
-
-      Fingering: like C major again in both hands. That's six scales with the same fingering. The
-      only thing that changes is which keys are black.
-  - exercise: a-major-2oct-rh
-  - exercise: a-major-2oct-ht
-  - exercise: g-minor-2oct-rh
-  - exercise: g-minor-2oct-ht
-  - explain: |
-      Every key you've met this year, in short tunes.
-  - exercise: gen-sight-read-y2-keys
-recap: "A major: F# C# G#. G harmonic minor: Bb Eb and F#."
+- explain: |
+    **A major** has three sharps: **F♯, C♯ and G♯**.
+  staff: {notes: 'A3:e B3:e C#4:e D4:e E4:e F#4:e G#4:e A4:e', key: A, labels: names}
+  sound: A3:e B3:e C#4:e D4:e E4:e F#4:e G#4:e A4:q
+- explain: |
+    **G minor** is the relative minor of B♭ major, so it has two flats, **B♭ and E♭**, and the harmonic
+    form raises the 7th to **F♯**.
+  staff: {notes: 'G3:e A3:e Bb3:e C4:e D4:e Eb4:e F#4:e G4:e', key: Gm, labels: names}
+  sound: G3:e A3:e Bb3:e C4:e D4:e Eb4:e F#4:e G4:q
+  check:
+    ask: 'Sharps in A major, in order:'
+    choices: ['F♯, C♯, G♯', 'F♯, G♯, C♯', 'C♯, F♯, G♯']
+    correct: 0
+    why: Sharps always come in the order F C G D A E B.
+- explain: |
+    Fingering: like C major again in both hands. That's six scales with the same fingering. The
+    only thing that changes is which keys are black.
+  callout: |
+    Order of sharps: F C G D A E B. Order of flats: B E A D G C F.
+- {exercise: a-major-2oct-rh}
+- {exercise: a-major-2oct-ht}
+- {exercise: g-minor-2oct-rh}
+- {exercise: g-minor-2oct-ht}
+- explain: |
+    Every key you've met this year, in short tunes.
+- {exercise: gen-sight-read-y2-keys}
+- explain: |
+    Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
+- {exercise: key-signatures-quiz}
+recap: 'A major: F# C# G#. G harmonic minor: Bb Eb and F#.'

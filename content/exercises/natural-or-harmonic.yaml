@@ -1,12 +1,60 @@
 id: natural-or-harmonic
-title: "Natural or harmonic?"
+title: Natural or harmonic?
 kind: quiz
-prompt: "Listen for the 7th note near the top."
+prompt: Listen for the 7th note near the top.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "This minor scale is…", choices: ["Natural", "Harmonic"], correct: 1, sound: "A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:e" }
-  - { ask: "This minor scale is…", choices: ["Natural", "Harmonic"], correct: 0, sound: "A4:e B4:e C5:e D5:e E5:e F5:e G5:e A5:e" }
-  - { ask: "This minor scale is…", choices: ["Harmonic", "Natural"], correct: 0, sound: "D4:e E4:e F4:e G4:e A4:e Bb4:e C#5:e D5:e" }
-  - { ask: "This minor scale is…", choices: ["Harmonic", "Natural"], correct: 1, sound: "E4:e F#4:e G4:e A4:e B4:e C5:e D5:e E5:e" }
-  - { ask: "This minor scale is…", choices: ["Natural", "Harmonic"], correct: 1, sound: "E4:e F#4:e G4:e A4:e B4:e C5:e D#5:e E5:e" }
-  - { ask: "In A harmonic minor, which note is raised?", choices: ["G becomes G#", "C becomes C#", "F becomes F#"], correct: 0 }
+- ask: This minor scale is...
+  choices: [Natural, Harmonic]
+  correct: 1
+  why: 'G♯ near the top: the raised 7th.'
+  sound: A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:e
+- ask: This minor scale is...
+  choices: [Harmonic, Natural]
+  correct: 1
+  why: 'Plain G: no raised 7th.'
+  sound: A4:e B4:e C5:e D5:e E5:e F5:e G5:e A5:e
+- ask: This minor scale is...
+  choices: [Natural, Harmonic]
+  correct: 1
+  why: 'C♯: the raised 7th of D minor.'
+  sound: D4:e E4:e F4:e G4:e A4:e Bb4:e C#5:e D5:e
+- ask: This minor scale is...
+  choices: [Harmonic, Natural]
+  correct: 1
+  why: 'Plain D: no raised 7th.'
+  sound: E4:e F#4:e G4:e A4:e B4:e C5:e D5:e E5:e
+- ask: This minor scale is...
+  choices: [Natural, Harmonic]
+  correct: 1
+  why: 'D♯: the raised 7th of E minor.'
+  sound: E4:e F#4:e G4:e A4:e B4:e C5:e D#5:e E5:e
+- ask: In A harmonic minor, which note is raised?
+  choices: [F becomes F♯, G becomes G♯, C becomes C♯]
+  correct: 1
+  why: The 7th of A minor is G.
+- ask: In E harmonic minor, which note is raised?
+  choices: [F♯ becomes G, C becomes C♯, D becomes D♯]
+  correct: 2
+  why: The 7th of E minor is D.
+- ask: Why raise the 7th?
+  choices: [To make it major, So it pulls strongly up to the tonic, To make it louder]
+  correct: 1
+  why: A semitone below home leans into it.
+- ask: The gap between degrees 6 and 7 in harmonic minor is...
+  choices: [2 semitones, 3 semitones, 1 semitone]
+  correct: 1
+  why: 'F to G♯ in A minor: F♯, G, G♯.'
+- ask: Is the raised 7th in the key signature?
+  choices: ['Yes', 'No, it is an accidental each time']
+  correct: 1
+  why: The key signature is shared with the relative major; the raised 7th is added in the music.
+- ask: Which note is this, in A minor?
+  choices: [G♯, G, A♭]
+  correct: 0
+  why: The raised 7th, written with a sharp.
+  staff: G#4:w
+  clef: treble
+  key: Am

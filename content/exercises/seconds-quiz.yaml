@@ -1,12 +1,74 @@
 id: seconds-quiz
-title: "Major and minor 2nds"
+title: Major and minor 2nds
 kind: quiz
-prompt: "A 2nd is the step to the next letter. Is it major or minor?"
+prompt: A 2nd is the step to the next letter. Is it major or minor?
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "E up to F is a…", choices: ["Minor 2nd (1 semitone)", "Major 2nd (2 semitones)"], correct: 0, staff: "E4:h F4:h" }
-  - { ask: "C up to D is a…", choices: ["Major 2nd (2 semitones)", "Minor 2nd (1 semitone)"], correct: 0, staff: "C4:h D4:h" }
-  - { ask: "B up to C is a…", choices: ["Minor 2nd (1 semitone)", "Major 2nd (2 semitones)"], correct: 0, staff: "B4:h C5:h" }
-  - { ask: "F up to G is a…", choices: ["Minor 2nd (1 semitone)", "Major 2nd (2 semitones)"], correct: 1, staff: "F4:h G4:h" }
-  - { ask: "A up to Bb is a…", choices: ["Major 2nd (2 semitones)", "Minor 2nd (1 semitone)"], correct: 1, staff: "A4:h Bb4:h" }
-  - { ask: "Another name for a major 2nd is a…", choices: ["Semitone", "Tone", "Third"], correct: 1 }
+- ask: E up to F is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 0
+  why: 'No black key between E and F: 1 semitone.'
+  staff: E4:h F4:h
+- ask: C up to D is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 1
+  why: 'C♯ lies between: 2 semitones.'
+  staff: C4:h D4:h
+- ask: B up to C is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 0
+  why: 'No black key between B and C: 1 semitone.'
+  staff: B4:h C5:h
+- ask: F up to G is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 1
+  why: 'F♯ lies between: 2 semitones.'
+  staff: F4:h G4:h
+- ask: A up to B♭ is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 0
+  why: B♭ is the very next key above A.
+  staff: A4:h Bb4:h
+- ask: F♯ up to G is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 0
+  why: 'F♯ to G: next-door keys.'
+  staff: F#4:h G4:h
+- ask: E up to F♯ is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 1
+  why: 'E, F, F♯: 2 semitones.'
+  staff: E4:h F#4:h
+- ask: B♭ up to C is a...
+  choices: [Minor 2nd, Major 2nd]
+  correct: 1
+  why: 'B♭, B, C: 2 semitones.'
+  staff: Bb4:h C5:h
+- ask: Another name for a major 2nd is a...
+  choices: [Tone, Third, Semitone]
+  correct: 0
+  why: A tone is 2 semitones.
+- ask: Another name for a minor 2nd is a...
+  choices: [Unison, Tone, Semitone]
+  correct: 2
+  why: The smallest step on the piano.
+- ask: An interval's number comes from...
+  choices: [Counting the semitones, Counting the letters, Counting black keys]
+  correct: 1
+  why: C–D is two letters, so a 2nd, whatever its quality.
+- ask: An interval's quality (major, minor) comes from...
+  choices: [Counting the semitones, Its loudness, Counting the letters]
+  correct: 0
+  why: Two 2nds can be different sizes; the semitones decide which.
+- ask: Listen. Major or minor 2nd?
+  choices: [Minor 2nd, Major 2nd]
+  correct: 0
+  why: 'Tight and tense: 1 semitone.'
+  sound: E4:h F4:h
+- ask: Listen. Major or minor 2nd?
+  choices: [Minor 2nd, Major 2nd]
+  correct: 1
+  why: 'An ordinary step: 2 semitones.'
+  sound: G4:h A4:h

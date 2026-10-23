@@ -1,13 +1,16 @@
 id: staccato-march
-title: "Toy-soldier march"
+title: Toy-soldier march
 unit: inversions
 skills: [repertoire, staccato, inversions]
 steps:
-  - explain: |
-      A march for wind-up toy soldiers. The right hand's staccato is the marching feet; the
-      left hand's chords use the inversions you learned: C, then G as **B D G**, then F as
-      **C F A**.
-
-      Keep the staccato light and the left hand steady. A march never slows down.
-  - exercise: staccato-march
-recap: "Staccato and inversions together in one piece."
+- explain: |
+    A march for wind-up toy soldiers. The right hand's staccato is the marching feet; the
+    left hand's chords use the inversions you learned: C, then G as **B D G**, then F as
+    **C F A**.
+  terms: [march]
+- explain: |
+    Keep the staccato light and the left hand steady. A march never slows down.
+  callout: |
+    Short notes, steady pulse: left, right, left, right.
+- {exercise: staccato-march}
+recap: Staccato and inversions together in one piece.

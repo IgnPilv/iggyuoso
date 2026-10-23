@@ -1,14 +1,21 @@
 id: two-octave-a-minor
-title: "A minor over two octaves"
+title: A minor over two octaves
 unit: minor-keys
 skills: [scales, minor]
 steps:
-  - explain: |
-      Scales in exams are usually played in the harmonic minor. A harmonic minor uses the same
-      fingering as C major in both hands: only the **G#** is new.
-
-      The right hand starts on the A below middle C.
-  - exercise: a-minor-2oct-rh
-  - exercise: a-minor-2oct-lh
-  - exercise: a-minor-2oct-ht
-recap: "A harmonic minor: C's fingering, and G# every time."
+- explain: |
+    Scales in exams are usually played in the **harmonic minor**. A harmonic minor uses the same
+    fingering as C major in both hands: only the **G♯** is new.
+  staff: {notes: 'A3:e B3:e C4:e D4:e E4:e F4:e G#4:e A4:e | B4:e C5:e D5:e E5:e F5:e G#5:e A5:q', key: Am}
+  sound: A3:e B3:e C4:e D4:e E4:e F4:e G#4:e A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:q
+- explain: |
+    The right hand starts on the A below middle C. G♯ falls under finger 4 going up.
+  check:
+    ask: 'A harmonic minor, right hand going up: which finger plays G♯?'
+    choices: ['3', '4', '5']
+    correct: 1
+    why: 'C-major fingering 1 2 3 1 2 3 4: the 7th note is under 4.'
+- {exercise: a-minor-2oct-rh}
+- {exercise: a-minor-2oct-lh}
+- {exercise: a-minor-2oct-ht}
+recap: 'A harmonic minor: C''s fingering, and G# every time.'

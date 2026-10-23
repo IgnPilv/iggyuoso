@@ -1,14 +1,21 @@
 id: two-octave-g
-title: "G major over two octaves"
+title: G major over two octaves
 unit: two-octave-scales
 skills: [scales, key-of-g]
 steps:
-  - explain: |
-      G major has one sharp, **F#**. The fingering is exactly the same as C major in both hands,
-      so all the new work is remembering the F# each time it comes round.
-
-      The right hand starts on the G below middle C.
-  - exercise: g-scale-2oct-rh
-  - exercise: g-scale-2oct-lh
-  - exercise: g-scale-2oct-ht
-recap: "G major: C's fingering, plus F# every time."
+- explain: |
+    G major has one sharp, **F♯**. The fingering is exactly the same as C major in both hands,
+    so all the new work is remembering the F♯ each time it comes round.
+  staff: {notes: 'G3:e A3:e B3:e C4:e D4:e E4:e F#4:e G4:e | A4:e B4:e C5:e D5:e E5:e F#5:e G5:q', key: G}
+  sound: G3:e A3:e B3:e C4:e D4:e E4:e F#4:e G4:e A4:e B4:e C5:e D5:e E5:e F#5:e G5:q
+- explain: |
+    The right hand starts on the G below middle C. F♯ always falls under finger **4** going up.
+  check:
+    ask: 'G major, right hand, two octaves: which finger plays each F♯?'
+    choices: ['3', '4', '1']
+    correct: 1
+    why: 'C-major fingering 1 2 3 1 2 3 4: the 7th note is under 4.'
+- {exercise: g-scale-2oct-rh}
+- {exercise: g-scale-2oct-lh}
+- {exercise: g-scale-2oct-ht}
+recap: 'G major: C''s fingering, plus F# every time.'

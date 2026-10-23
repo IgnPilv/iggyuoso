@@ -1,17 +1,27 @@
 id: two-note-chords
-title: "Two notes at once"
+title: Two notes at once
 unit: reading-hands-together
 skills: [reading, double-notes]
 steps:
-  - explain: |
-      A chord doesn't need three notes. Two notes played together are called a **double note** or
-      a **dyad**. On the staff they sit on top of each other on one stem.
-
-      In 3rds the notes are both on lines or both in spaces. In 5ths there is one empty line or
-      space between them. Your eye can see the shape before you name the notes.
-  - exercise: thirds-rh
-  - exercise: fifths-lh
-  - explain: |
-      Now a melody over left-hand 5ths. The left hand moves very little; let the right hand sing.
-  - exercise: dyads-ht
-recap: "Two notes on one stem are played together. Read the shape first, then the names."
+- explain: |
+    A chord doesn't need three notes. Two notes played together are called a **double note** or
+    a **dyad**. On the staff they sit on top of each other on one stem.
+  staff: {notes: 'C4+E4:h D4+F4:h | E4+G4:h C4+E4:h'}
+  sound: C4+E4:h D4+F4:h E4+G4:h C4+E4:h
+  terms: [dyad, double note]
+- explain: |
+    In 3rds the notes are both on lines or both in spaces, touching. In 5ths there is one empty line or
+    space between them. Your eye can see the shape before you name the notes.
+  staff: {notes: 'C4+E4:h E4+G4:h | C3+G3:h F3+C4:h', clef: grand}
+  check:
+    ask: Two notes on one stem, both on lines with one empty line between. They are a...
+    choices: [3rd, 5th, 2nd]
+    correct: 1
+    why: 'Line, skip a line, line: five letters, a 5th.'
+    staff: {notes: 'E4+B4:w'}
+- {exercise: thirds-rh}
+- {exercise: fifths-lh}
+- explain: |
+    Now a melody over left-hand 5ths. The left hand moves very little; let the right hand sing.
+- {exercise: dyads-ht}
+recap: Two notes on one stem are played together. Read the shape first, then the names.

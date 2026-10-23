@@ -1,24 +1,26 @@
 id: reading-ht-eight-bars
-title: "Reading eight bars, hands together"
+title: Reading eight bars, hands together
 unit: reading-hands-together
 skills: [reading, hands-together]
 steps:
-  - explain: |
-      This is your first full eight-bar piece read from the sheet, with both hands moving outside
-      a five-finger position.
-
-      Before you play, look it over the way musicians do:
-      1. What key? (Here: G major, so every F is F#.)
-      2. What time signature? Count one bar out loud.
-      3. Where does the right hand move? (Bars 3 and 5.)
-      4. Any repeated patterns? Spotting them halves the reading.
-
-      Then play slowly and don't stop for mistakes: keep the beat going.
-  - exercise: evening-bells
-  - explain: |
-      Longer tunes now: eight bars, wider range, more keys.
-  - exercise: gen-sight-read-y2-rh
-  - explain: |
-      And the left hand.
-  - exercise: gen-sight-read-y2-lh
-recap: "Look before you play: key, time, moves, patterns. Then keep going whatever happens."
+- explain: |
+    This is your first full eight-bar piece read from the sheet, with both hands moving outside
+    a five-finger position.
+- explain: |
+    Before you play, look it over the way musicians do:
+    1. What **key**? (Here: G major, so every F is F♯.)
+    2. What **time signature**? Count one bar out loud.
+    3. Where does the right hand **move**? (Bars 3 and 5.)
+    4. Any **repeated patterns**? Spotting them halves the reading.
+  callout: |
+    Key, time, moves, patterns: ten seconds before every new piece.
+- explain: |
+    Then play slowly and don't stop for mistakes: keep the beat going.
+- {exercise: evening-bells}
+- explain: |
+    Longer tunes now: eight bars, wider range, more keys.
+- {exercise: gen-sight-read-y2-rh}
+- explain: |
+    And the left hand.
+- {exercise: gen-sight-read-y2-lh}
+recap: 'Look before you play: key, time, moves, patterns. Then keep going whatever happens.'

@@ -1,9 +1,23 @@
 id: twinkle-chords-quiz
-title: "Which chord: I, IV or V7?"
+title: 'Which chord: I, IV or V7?'
 kind: quiz
-prompt: "Now there are three chords to choose from."
+prompt: Now there are three chords to choose from.
 questions:
-  - { ask: "Bar 2 starts A A. Which chord fits?", choices: ["V7 (G B D F)", "IV (F A C)", "I (C E G)"], correct: 1, sound: "A4:q A4:q G4:h" }
-  - { ask: "Then the G at the end of bar 2?", choices: ["V7 (G B D F)", "IV (F A C)", "I (C E G)"], correct: 2 }
-  - { ask: "Bar 4 starts D D. Which chord fits?", choices: ["I (C E G)", "IV (F A C)", "V7 (G B D F)"], correct: 2, sound: "D4:q D4:q C4:h" }
-  - { ask: "Which chord do almost all pieces end on?", choices: ["IV", "V7", "I"], correct: 2 }
+- ask: Bar 2 starts A A. Which chord fits?
+  choices: [V7 (G B D F), IV (F A C), I (C E G)]
+  correct: 1
+  sound: A4:q A4:q G4:h
+  why: A is in the F chord (F A C), so IV.
+- ask: Then the G at the end of bar 2?
+  choices: [V7 (G B D F), IV (F A C), I (C E G)]
+  correct: 2
+  why: 'G is in the C chord, and the phrase rests there: I.'
+- ask: Bar 4 starts D D. Which chord fits?
+  choices: [I (C E G), IV (F A C), V7 (G B D F)]
+  correct: 2
+  sound: D4:q D4:q C4:h
+  why: D is in G7 (G B D F), so V7.
+- ask: Which chord do almost all pieces end on?
+  choices: [IV, V7, I]
+  correct: 2
+  why: Ending on I, home, sounds finished.

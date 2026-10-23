@@ -1,0 +1,76 @@
+id: y2-theory-checkpoint-b
+title: 'Year 2, checkpoint 2: theory'
+kind: quiz
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: What kind of triad?
+  choices: [Major, Minor, Diminished]
+  correct: 1
+  why: Minor 3rd at the bottom.
+  staff: D4+F4+A4:w
+  clef: treble
+- ask: What kind of triad?
+  choices: [Major, Minor, Diminished]
+  correct: 2
+  why: Two minor 3rds.
+  staff: B3+D4+F4:w
+  clef: treble
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 2
+  why: D, the 5th of G, at the bottom.
+  staff: D4+G4+B4:w
+  clef: treble
+- ask: Which position?
+  choices: [Root position, First inversion, Second inversion]
+  correct: 1
+  why: A, the 3rd of F, at the bottom.
+  staff: A4+C5+F5:w
+  clef: treble
+- ask: In C major, vi is...
+  choices: [A major, A minor, F major]
+  correct: 1
+  why: Degree 6, minor.
+- ask: I, IV and V in F major are...
+  choices: ['F, G and C', 'F, B and C', 'F, B♭ and C']
+  correct: 2
+  why: F G A B♭ C.
+- ask: A perfect 4th has how many semitones?
+  choices: ['5', '4', '7']
+  correct: 0
+  why: C to F.
+- ask: G up a perfect 5th is...
+  choices: [C, D, E]
+  correct: 1
+  why: G A B C D.
+- ask: Degree 4 tends to move to...
+  choices: [Degree 3, Degree 7, Degree 5]
+  correct: 0
+  why: It sinks a step.
+- ask: Alberti bass goes...
+  choices: ['Low, middle, high, middle', 'Low, high, middle, high', 'High, low, high, low']
+  correct: 1
+  why: C G E G.
+- ask: A triplet fits how many notes in one beat?
+  choices: [Three, Two, Four]
+  correct: 0
+  why: Tri-po-let.
+- ask: A dot over a note head means...
+  choices: [Add half the value, 'Staccato: short']
+  correct: 1
+  why: Over or under the head = staccato.
+- ask: Transposed from C to G, the notes E D C become...
+  choices: [A G F, B A G, B♭ A G]
+  correct: 1
+  why: Degrees 3 2 1 of G.
+- ask: In F major, the perfect cadence is...
+  choices: [B♭ to C, F to C, C to F]
+  correct: 2
+  why: V to I.
+- ask: The melody notes D, F and B fit which chord in C?
+  choices: [IV, I, V7]
+  correct: 2
+  why: G B D F.

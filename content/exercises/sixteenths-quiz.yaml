@@ -1,0 +1,49 @@
+id: sixteenths-quiz
+title: Sixteenth notes quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: How long is a sixteenth note?
+  choices: [Half a beat, One beat, A quarter of a beat]
+  correct: 2
+  why: Four of them fill a beat.
+- ask: How many sixteenths make an eighth?
+  choices: [Three, Four, Two]
+  correct: 2
+  why: ¼ + ¼ = ½.
+- ask: How many sixteenths make a half note?
+  choices: [Eight, Four, Sixteen]
+  correct: 0
+  why: Four per beat, two beats.
+- ask: Sixteenth notes are joined by...
+  choices: [Two beams, A tie, One beam]
+  correct: 0
+  why: 'Each beam halves the value: one for eighths, two for sixteenths.'
+- ask: How do you count four sixteenths on beat 1?
+  choices: [1 e and a, 1 2 3 4, 1 and 2 and]
+  correct: 0
+  why: The beat number, then e, and, a.
+- ask: How many beats are in this bar?
+  choices: [Three, Five, Four]
+  correct: 2
+  why: 1 + 1 + 1 + 1 = 4.
+  staff: C4:s C4:s C4:s C4:s C4:e C4:e C4:q C4:q
+- ask: Which takes one beat?
+  choices: [Two eighths and a sixteenth, Three sixteenths, An eighth and two sixteenths]
+  correct: 2
+  why: ½ + ¼ + ¼ = 1.
+- ask: Playing fast notes, your fingers should...
+  choices: [Lift high, Stay close to the keys, Press very hard]
+  correct: 1
+  why: Fast notes need small movements.
+- ask: Listen. Eighths or sixteenths?
+  choices: [Sixteenths, Eighths]
+  correct: 0
+  why: Four notes to each beat.
+  sound: C4:s D4:s E4:s F4:s G4:s F4:s E4:s D4:s C4:h
+- ask: On "and" in "1 e and a" you are...
+  choices: [At the end of the bar, Halfway through the beat, On the beat]
+  correct: 1
+  why: '"And" is the half-beat, just like with eighths.'

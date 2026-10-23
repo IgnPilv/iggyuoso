@@ -304,3 +304,7 @@ never copied pages). Start small, adapt as we go.
   staff, hear and play questions, and **every quiz question carries a `why`**. Checkpoints and exams
   open with a theory paper (`feedback: none`, reps 1). Theory quizzes default to `reps: 2, days: 2`.
   Scratch scripts mix choice order with a seeded shuffle (the app shuffles questions only).
+- 2026-10-23: Year 2 theory pass, same shape as Year 1: lessons as screens with pictures, sound and a
+  check; new quizzes for ties, sixteenths, inversions, triplets, transposing, pedal and key
+  signatures (order of sharps F C G D A E B, flats B E A D G C F); every older Year 2 quiz has a
+  `why` on each question; theory papers open both Year 2 checkpoints and the exam.

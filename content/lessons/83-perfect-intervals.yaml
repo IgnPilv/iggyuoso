@@ -1,20 +1,37 @@
 id: perfect-intervals
-title: "Perfect 4ths and 5ths"
+title: Perfect 4ths and 5ths
 unit: inversions
 skills: [theory, intervals]
 steps:
-  - explain: |
-      4ths and 5ths (and unisons and octaves) don't come in major and minor. They are called
-      **perfect**, because they sound so pure and open.
-
-      - a **perfect 5th** is 7 semitones: C to G
-      - a **perfect 4th** is 5 semitones: C to F
-
-      A perfect 5th turned upside down (G up to C) becomes a perfect 4th. Together they make an
-      octave.
-  - exercise: perfect-intervals-quiz
-  - exercise: build-perfect-intervals
-  - explain: |
-      Mixed intervals up to the 5th, in your keys.
-  - exercise: gen-intervals-3rds-to-5ths
-recap: "Perfect 5th = 7 semitones, perfect 4th = 5. Flip one and you get the other."
+- explain: |
+    4ths and 5ths (and unisons and octaves) don't come in major and minor. They are called
+    **perfect**, because they sound so pure and open.
+  sound: C4+F4:h C4+G4:h C4+C5:h
+  terms: [perfect interval]
+- explain: |
+    - a **perfect 5th** is **7 semitones**: C to G
+    - a **perfect 4th** is **5 semitones**: C to F
+  keys: {notes: C4 F4 G4, labels: names}
+  terms: [perfect 5th, perfect 4th]
+  check:
+    ask: D up a perfect 5th is...
+    choices: [G, A, B]
+    correct: 1
+    why: 'D E F G A: five letters, and D to A is 7 semitones.'
+- explain: |
+    A perfect 5th turned upside down (G up to C) becomes a perfect 4th. Together they make an
+    octave: 7 + 5 = 12 semitones.
+  staff: {notes: 'C4:h G4:h | G4:h C5:h', labels: names}
+  callout: |
+    5th + 4th = octave. Flip one, get the other.
+  check:
+    ask: B up to F is a 5th by letters, but only 6 semitones. It is...
+    choices: [A diminished 5th, A perfect 5th, A major 5th]
+    correct: 0
+    why: 'One semitone short of perfect: diminished. It is the only white-key 5th that isn''t perfect.'
+- {exercise: perfect-intervals-quiz}
+- {exercise: build-perfect-intervals}
+- explain: |
+    Mixed intervals up to the 5th, in your keys.
+- {exercise: gen-intervals-3rds-to-5ths}
+recap: Perfect 5th = 7 semitones, perfect 4th = 5. Flip one and you get the other.

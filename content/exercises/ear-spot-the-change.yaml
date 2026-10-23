@@ -1,12 +1,42 @@
 id: ear-spot-the-change
-title: "Spot the change"
+title: Spot the change
 kind: quiz
-prompt: "A four-bar tune, a pause, then the tune again. Did one bar change?"
+prompt: A four-bar tune, a pause, then the tune again. Did one bar change?
 shuffle: true
 questions:
-  - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 2, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q E4:q | E4:q D4:q C4:h" }
-  - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 1, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q E4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h" }
-  - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 4, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h" }
-  - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 3, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q E4:q C4:h" }
-  - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 0, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q E4:q D4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h" }
-  - { ask: "Which bar changed?", choices: ["Bar 1", "Bar 2", "Bar 3", "Bar 4", "No change"], correct: 2, sound: "C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:h G4:q F4:q | E4:q D4:q C4:h" }
+- ask: Which bar changed?
+  choices: [Bar 1, Bar 2, Bar 3, Bar 4, No change]
+  correct: 2
+  sound: C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q
+    | E4:q F4:q G4:h | G4:q A4:q G4:q E4:q | E4:q D4:q C4:h
+  why: Bar 3 ended on E instead of F the second time.
+- ask: Which bar changed?
+  choices: [Bar 1, Bar 2, Bar 3, Bar 4, No change]
+  correct: 1
+  sound: C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q
+    | E4:q F4:q E4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h
+  why: Bar 2 ended on E instead of G the second time.
+- ask: Which bar changed?
+  choices: [Bar 1, Bar 2, Bar 3, Bar 4, No change]
+  correct: 4
+  sound: C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q
+    | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h
+  why: Both times were exactly the same.
+- ask: Which bar changed?
+  choices: [Bar 1, Bar 2, Bar 3, Bar 4, No change]
+  correct: 3
+  sound: C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q
+    | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q E4:q C4:h
+  why: Bar 4's second note was E instead of D the second time.
+- ask: Which bar changed?
+  choices: [Bar 1, Bar 2, Bar 3, Bar 4, No change]
+  correct: 0
+  sound: C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q E4:q D4:q C4:q
+    | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h
+  why: Bar 1 went C E D C instead of C D E C.
+- ask: Which bar changed?
+  choices: [Bar 1, Bar 2, Bar 3, Bar 4, No change]
+  correct: 2
+  sound: C4:q D4:q E4:q C4:q | E4:q F4:q G4:h | G4:q A4:q G4:q F4:q | E4:q D4:q C4:h | r:w | C4:q D4:q E4:q C4:q
+    | E4:q F4:q G4:h | G4:h G4:q F4:q | E4:q D4:q C4:h
+  why: 'Bar 3''s rhythm changed: a half note G instead of G A.'

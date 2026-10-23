@@ -1,10 +1,57 @@
 id: which-minor
-title: "Which minor?"
+title: Which minor?
 kind: quiz
-prompt: "Natural, harmonic or melodic? Listen to the top of the scale going up."
+prompt: Natural, harmonic or melodic? Listen to the top of the scale going up.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "This scale is…", choices: ["Natural minor", "Harmonic minor", "Melodic minor"], correct: 2, sound: "A4:e B4:e C5:e D5:e E5:e F#5:e G#5:e A5:e" }
-  - { ask: "This scale is…", choices: ["Melodic minor", "Natural minor", "Harmonic minor"], correct: 2, sound: "A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:e" }
-  - { ask: "This scale is…", choices: ["Melodic minor", "Natural minor", "Harmonic minor"], correct: 1, sound: "A4:e B4:e C5:e D5:e E5:e F5:e G5:e A5:e" }
-  - { ask: "The melodic minor coming down is the same as…", choices: ["The major scale", "The natural minor", "The harmonic minor"], correct: 1 }
+- ask: This scale is...
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 2
+  why: 'Both F♯ and G♯: melodic going up.'
+  sound: A4:e B4:e C5:e D5:e E5:e F#5:e G#5:e A5:e
+- ask: This scale is...
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 1
+  why: Only G♯ raised, with the big gap from F.
+  sound: A4:e B4:e C5:e D5:e E5:e F5:e G#5:e A5:e
+- ask: This scale is...
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 0
+  why: Nothing raised.
+  sound: A4:e B4:e C5:e D5:e E5:e F5:e G5:e A5:e
+- ask: This scale is...
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 1
+  why: Only the 7th, C♯, raised.
+  sound: D4:e E4:e F4:e G4:e A4:e Bb4:e C#5:e D5:e
+- ask: This scale is...
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 2
+  why: Both 6th (C♯) and 7th (D♯) raised.
+  sound: E4:e F#4:e G4:e A4:e B4:e C#5:e D#5:e E5:e
+- ask: Which minor raises only the 7th?
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 1
+  why: Harmonic = 7th raised.
+- ask: Which minor uses just the key signature?
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 0
+  why: Nothing added.
+- ask: Which minor is different going up and coming down?
+  choices: [Natural minor, Harmonic minor, Melodic minor]
+  correct: 2
+  why: 'Up: 6 and 7 raised. Down: natural.'
+- ask: The melodic minor coming down is the same as...
+  choices: [The harmonic minor, The natural minor, The major scale]
+  correct: 1
+  why: Both raised notes are lowered again.
+- ask: In A melodic minor going up, the raised notes are...
+  choices: [C♯ and G♯, G♯ only, F♯ and G♯]
+  correct: 2
+  why: Degrees 6 and 7 of A minor.
+- ask: Why raise the 6th in the melodic minor?
+  choices: [To smooth out the big jump from 6 to the raised 7th, So it is easier to finger, To make it major]
+  correct: 0
+  why: F to G♯ is 3 semitones, awkward to sing; F♯ to G♯ is a tone.

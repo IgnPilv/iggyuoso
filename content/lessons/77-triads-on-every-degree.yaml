@@ -1,18 +1,32 @@
 id: triads-on-every-degree
-title: "A chord on every note"
+title: A chord on every note
 unit: inversions
 skills: [theory, triads]
 steps:
-  - explain: |
-      You can build a triad (root, 3rd, 5th, skipping a letter each time) on **every** note of a
-      scale. In C major, using only white keys, you get seven chords.
-
-      Because the scale's steps aren't all the same size, the chords come out different: three
-      major, three minor, and one **diminished** (two minor 3rds stacked, tense and unstable).
-
-      Musicians number them with **Roman numerals**: capitals for major (I, IV, V), small letters for
-      minor (ii, iii, vi), and vii° for diminished.
-  - exercise: build-triads-in-c
-  - exercise: triads-in-c-quiz
-  - exercise: ear-maj-min-dim
-recap: "Seven triads in every major key: I ii iii IV V vi vii°."
+- explain: |
+    You can build a triad (root, 3rd, 5th, skipping a letter each time) on **every** note of a
+    scale. In C major, using only white keys, you get seven chords. Listen to them climb.
+  staff: {notes: 'C4+E4+G4:q D4+F4+A4:q E4+G4+B4:q F4+A4+C5:q | G4+B4+D5:q A4+C5+E5:q B4+D5+F5:q C5+E5+G5:q'}
+  sound: C4+E4+G4:q D4+F4+A4:q E4+G4+B4:q F4+A4+C5:q G4+B4+D5:q A4+C5+E5:q B4+D5+F5:q C5+E5+G5:q
+- explain: |
+    Because the scale's steps aren't all the same size, the chords come out different:
+    - **major**: a major 3rd then a minor 3rd (C E G)
+    - **minor**: a minor 3rd then a major 3rd (D F A)
+    - **diminished**: two minor 3rds (B D F), tense and unstable
+  sound: C4+E4+G4:h D4+F4+A4:h B3+D4+F4:h
+  terms: [major triad, minor triad, diminished triad]
+  check:
+    ask: 'D F A: D to F is a minor 3rd, F to A a major 3rd. The triad is...'
+    choices: [Major, Minor, Diminished]
+    correct: 1
+    why: 'Minor 3rd at the bottom, then major: a minor triad.'
+- explain: |
+    Musicians number them with **Roman numerals**: capitals for major (**I, IV, V**), small letters for
+    minor (**ii, iii, vi**), and **vii°** for diminished.
+  callout: |
+    Every major key: I ii iii IV V vi vii°.
+  terms: [Roman numerals]
+- {exercise: build-triads-in-c}
+- {exercise: triads-in-c-quiz}
+- {exercise: ear-maj-min-dim}
+recap: 'Seven triads in every major key: I ii iii IV V vi vii°.'

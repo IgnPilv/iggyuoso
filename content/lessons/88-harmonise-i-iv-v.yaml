@@ -1,17 +1,24 @@
 id: harmonise-i-iv-v
-title: "Harmonising with three chords"
+title: Harmonising with three chords
 unit: harmonising
 skills: [harmony, chords, inversions]
 steps:
-  - explain: |
-      Add **IV** (F A C) and you can harmonise almost any simple tune. Use it for bars built on
-      F, A or C that don't feel like home.
-
-      In the left hand, play the chords in close position, the way you learned in the last unit:
-      **C E G**, **C F A**, **B F G**. The little finger hardly moves.
-
-      The tune is *Twinkle Twinkle Little Star*, an old French melody (*Ah! vous dirai-je, maman*)
-      that Mozart wrote twelve variations on.
-  - exercise: twinkle-chords-quiz
-  - exercise: twinkle-i-iv-v
-recap: "I, IV and V7 in close position: enough to accompany most folk songs."
+- explain: |
+    Add **IV** (F A C) and you can harmonise almost any simple tune. Use it for bars built on
+    F, A or C that don't feel like home.
+  sound: C4+E4+G4:h F4+A4+C5:h | C4+E4+G4:h G3+B3+D4+F4:h | C4+E4+G4:w
+- explain: |
+    In the left hand, play the chords in close position, the way you learned in the last unit:
+    **C E G**, **C F A**, **B F G**. The little finger hardly moves.
+  keys: {notes: C3 E3 G3, labels: names}
+  check:
+    ask: 'A melody bar of A A G: which chord fits the A A?'
+    choices: [I (C E G), IV (F A C), V7 (G B D F)]
+    correct: 1
+    why: A is in F A C only.
+- explain: |
+    The tune is *Twinkle Twinkle Little Star*, an old French melody (*Ah! vous dirai-je, maman*)
+    that Mozart wrote twelve variations on.
+- {exercise: twinkle-chords-quiz}
+- {exercise: twinkle-i-iv-v}
+recap: 'I, IV and V7 in close position: enough to accompany most folk songs.'

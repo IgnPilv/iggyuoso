@@ -1,17 +1,27 @@
 id: pedal-simple
-title: "The sustain pedal"
+title: The sustain pedal
 unit: pedal-and-genres
 skills: [technique, pedal]
 steps:
-  - explain: |
-      The right-hand pedal is the **sustain pedal**. While it is down, the notes keep ringing
-      after you let go of the keys.
-
-      Keep your heel on the floor and press with the ball of the foot, all the way down. The pedal
-      is marked under the staff: **Ped.** means press, and the end of the line means lift.
-
-      Start with **simple pedal**: press it *with* the notes, keep it down while they ring, and lift
-      it before the next chord, in the rest. Each chord rings on its own, with a tiny gap between.
-  - exercise: pedal-simple-chords
-  - exercise: pedal-simple-broken
-recap: "Heel down, ball of the foot. Press with the chord, lift before the next."
+- explain: |
+    The right-hand pedal is the **sustain pedal**. While it is down, the notes keep ringing
+    after you let go of the keys. Listen: first without pedal, then with.
+  sound: C4+E4+G4:e r:e r:q r:h | C4+E4+G4:w
+  terms: [sustain pedal]
+- explain: |
+    Keep your heel on the floor and press with the ball of the foot, all the way down. The pedal
+    is marked under the staff: **Ped.** means press, and the end of the line (or a star ✱) means lift.
+  terms: [Ped.]
+  callout: |
+    Heel down, ball of the foot, all the way down and all the way up.
+- explain: |
+    Start with **simple pedal**: press it *with* the notes, keep it down while they ring, and lift
+    it before the next chord, in the rest. Each chord rings on its own, with a tiny gap between.
+  check:
+    ask: In simple pedal, when do you lift?
+    choices: [Before the next chord, Just after the next chord, Never]
+    correct: 0
+    why: Simple pedal lifts in the gap, before the next chord sounds.
+- {exercise: pedal-simple-chords}
+- {exercise: pedal-simple-broken}
+recap: Heel down, ball of the foot. Press with the chord, lift before the next.

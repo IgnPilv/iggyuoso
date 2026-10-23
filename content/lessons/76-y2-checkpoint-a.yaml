@@ -1,15 +1,18 @@
 id: y2-checkpoint-a
-title: "Year 2, checkpoint 1: scales, minor and reading"
+title: 'Year 2, checkpoint 1: scales, minor and reading'
 unit: minor-keys
 skills: [checkpoint]
 steps:
-  - explain: |
-      The first Year 2 checkpoint. Two-octave scales hands together, minor keys, reading with both
-      hands, and your ears. Take it on a fresh day, warmed up but not tired.
-  - exercise: c-scale-2oct-ht
-  - exercise: a-minor-2oct-ht
-  - exercise: sight-read-y2-am
-  - exercise: ear-y2-checkpoint-a
-  - exercise: cadences-checkpoint-a
-  - exercise: korobeiniki
-recap: "Two octaves, three minors, and reading with both hands: a third of Year 2 done."
+- explain: |
+    The first Year 2 checkpoint. Theory, two-octave scales hands together, minor keys, reading with both
+    hands, and your ears. Take it on a fresh day, warmed up but not tired.
+  callout: |
+    No hints in the theory paper: answers and reasons come at the end.
+- {exercise: y2-theory-checkpoint-a}
+- {exercise: c-scale-2oct-ht}
+- {exercise: a-minor-2oct-ht}
+- {exercise: sight-read-y2-am}
+- {exercise: ear-y2-checkpoint-a}
+- {exercise: cadences-checkpoint-a}
+- {exercise: korobeiniki}
+recap: 'Two octaves, three minors, and reading with both hands: a third of Year 2 done.'

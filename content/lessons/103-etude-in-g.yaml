@@ -1,15 +1,18 @@
 id: etude-in-g
-title: "Running etude in G"
+title: Running etude in G
 unit: pedal-and-genres
 skills: [repertoire, etude]
 steps:
-  - explain: |
-      The first of your four Year 2 pieces is an **etude**, a study for even, running fingers.
-      Music-school exams always ask for one, alongside a polyphonic piece, a large-form piece and a
-      character piece.
-
-      The right hand runs in eighth notes the whole way. The point isn't speed but **evenness**:
-      every note the same length and the same loudness. Use the tempo ladder: one clean take at
-      each step before you move up.
-  - exercise: etude-in-g
-recap: "An etude trains one thing. This one trains even fingers."
+- explain: |
+    The first of your four Year 2 pieces is an **etude**, a study for even, running fingers.
+    Music-school exams always ask for one, alongside a **polyphonic** piece, a **large-form** piece and a
+    **character** piece.
+  terms: [etude, polyphonic, large form, character piece]
+- explain: |
+    The right hand runs in eighth notes the whole way. The point isn't speed but **evenness**:
+    every note the same length and the same loudness. Use the tempo ladder: clean takes at
+    each step before you move up.
+  callout: |
+    Record yourself in your head: would every note sound the same if you closed your eyes?
+- {exercise: etude-in-g}
+recap: An etude trains one thing. This one trains even fingers.

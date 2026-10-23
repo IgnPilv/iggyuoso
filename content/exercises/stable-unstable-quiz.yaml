@@ -1,11 +1,54 @@
 id: stable-unstable-quiz
-title: "Stable and unstable"
+title: Stable and unstable
 kind: quiz
-prompt: "Some notes rest, some pull."
+prompt: Some notes rest, some pull.
 shuffle: true
+reps: 2
+days: 2
 questions:
-  - { ask: "Which degrees are stable (they feel at rest)?", choices: ["2, 4 and 7", "6 and 7", "1, 3 and 5"], correct: 2 }
-  - { ask: "Degree 7 (the leading note) wants to move to…", choices: ["The tonic above", "Degree 5", "Degree 3"], correct: 0 }
-  - { ask: "Degree 4 usually falls to…", choices: ["Degree 3", "Degree 6", "Degree 7"], correct: 0 }
-  - { ask: "Degree 2 usually goes to…", choices: ["Degree 7", "Degree 6", "Degree 1 (or up to 3)"], correct: 2 }
-  - { ask: "The stable degrees are the notes of…", choices: ["Chord IV", "Chord I", "Chord V"], correct: 1 }
+- ask: Which degrees are stable (they feel at rest)?
+  choices: ['2, 4 and 7', '1, 3 and 5', 6 and 7]
+  correct: 1
+  why: The notes of chord I.
+- ask: Degree 7 (the leading note) wants to move to...
+  choices: [The tonic above, Degree 5, Degree 3]
+  correct: 0
+  why: A semitone up to 8.
+- ask: Degree 4 usually falls to...
+  choices: [Degree 3, Degree 7, Degree 6]
+  correct: 0
+  why: 4 to 3 is a semitone down in major.
+- ask: Degree 2 usually goes to...
+  choices: [Degree 6, Degree 1 (or up to 3), Degree 7]
+  correct: 1
+  why: Step to the nearest stable note.
+- ask: Degree 6 usually falls to...
+  choices: [Degree 5, Degree 7, Degree 1]
+  correct: 0
+  why: A step down to a stable note.
+- ask: The stable degrees are the notes of...
+  choices: [Chord V, Chord IV, Chord I]
+  correct: 2
+  why: 1 3 5 = the tonic triad.
+- ask: In G major, the leading note is...
+  choices: [F, F♯, D]
+  correct: 1
+  why: Degree 7 of G major.
+- ask: In C major, which note is stable?
+  choices: [E, F, B]
+  correct: 0
+  why: E is degree 3.
+- ask: In C major, B wants to go to...
+  choices: [G, A, C]
+  correct: 2
+  why: The leading note resolves up to the tonic.
+- ask: Listen. Does the last note feel at rest?
+  choices: ['No, it pulls', 'Yes, at rest']
+  correct: 0
+  why: 'B is degree 7: it leans up to C.'
+  sound: C4+E4+G4:h F4+A4+C5:h G4+B4+D5:h C4+E4+G4:h | B4:w
+- ask: Listen. Does the last note feel at rest?
+  choices: ['No, it pulls', 'Yes, at rest']
+  correct: 1
+  why: 'G is degree 5: stable.'
+  sound: C4+E4+G4:h F4+A4+C5:h G4+B4+D5:h C4+E4+G4:h | G4:w
