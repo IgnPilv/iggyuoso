@@ -85,8 +85,8 @@ days: 2   # spread over at least two days
   The pool, at the top level or under `pool:`: `notes` (a range `C4-G5`, meaning every note of
   the key in between, or a list `"C4 E4 G4"`; default `C4-G4`), `clef: treble|bass|grand` (grand
   picks by the note), `keys: [C, G, F]` (one is picked per question or tune; default C).
-  `rhythm-read` and `sight-read` also take `durations: [q, h, e]` (eighths come in pairs; default
-  `[q, h]`), `meter` (default 4/4), `bars` (default 4), `tempo` (default 72) and `hand`. The last
+  `rhythm-read` and `sight-read` also take `durations: [q, h, e, r:q]` (eighths come in pairs;
+  `r:q`, `r:h`, `r:e` add rests, never at the very start; default `[q, h]`), `meter` (default 4/4), `bars` (default 4), `tempo` (default 72) and `hand`. The last
   bar is one long note.
   `questions` (default 30) for the question drills. `mastery: { accuracy: 90, medianMs: 2500 }`:
   reaching `accuracy` percent right counts as a clean take (score 92), and answering slower than

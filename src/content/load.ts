@@ -373,7 +373,8 @@ function parseGenerated(top: Raw, base: Base): Exercise {
   const keys = strings(raw, 'keys').flatMap((k) => k.split(/[\s,]+/)).filter(Boolean);
   keys.forEach(checkKey);
   const durations = strings(raw, 'durations').flatMap((d) => d.split(/\s+/)).filter(Boolean);
-  durations.forEach((d) => parseDuration(d));
+  durations.forEach((d) => parseDuration(d.replace(/^r:/, '')));
+  if (durations.length && durations.every((d) => d.startsWith('r:'))) throw new FieldError('"durations" needs at least one note value, not only rests');
   const meter = str(raw, 'meter', false) ?? '4/4';
   parseMeter(meter);
   const intervals = strings(raw, 'intervals').flatMap((d) => d.split(/[\s,]+/)).filter(Boolean);

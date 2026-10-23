@@ -73,6 +73,17 @@ describe('generated drills', () => {
     }
   });
 
+  it('puts rests in rhythms when durations list them, never first', () => {
+    let rests = 0;
+    for (let s = 1; s < 30; s++) {
+      const r = generate(gen({ generator: 'rhythm-read', durations: ['q', 'h', 'r:q', 'r:e', 'e'], bars: 3 }), seeded(s)) as TimedExercise;
+      expect(r.right![0].pitches.length).toBe(1);
+      rests += r.right!.filter((t) => !t.pitches.length).length;
+    }
+    expect(rests).toBeGreaterThan(0);
+    expect(() => gen({ generator: 'rhythm-read', durations: ['r:q'] })).toThrow();
+  });
+
   it('scores against the goal: its accuracy is a clean take, slow answers stay below', () => {
     expect(applyGoal(90, { accuracy: 90 }).score).toBe(92);
     expect(applyGoal(100, { accuracy: 90 }).score).toBe(100);

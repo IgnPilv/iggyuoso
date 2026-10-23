@@ -116,10 +116,15 @@ function intervals(ex: GeneratedExercise, rng: Rng): Raw {
 
 const BAR_VALUE: Record<number, string> = { 4: 'w', 3: 'h.', 2: 'h', 1.5: 'q.', 1: 'q' };
 
-/** Note values filling `bars` bars, as duration codes; eighths come in pairs on the beat. */
+/**
+ * Note values filling `bars` bars, as duration codes (`r:q` for a rest); eighths come in pairs on
+ * the beat, and an eighth rest is followed by an eighth note. The first bar starts on a note.
+ */
 function rhythm(ex: GeneratedExercise, rng: Rng): string[][] {
   const { quarters } = parseMeter(ex.meter);
-  const values = ex.durations.map((d) => ({ d, beats: parseDuration(d).beats })).sort((a, b) => b.beats - a.beats);
+  const values = ex.durations
+    .map((d) => ({ d: d.replace(/^r:/, ''), rest: d.startsWith('r:'), beats: parseDuration(d.replace(/^r:/, '')).beats }))
+    .sort((a, b) => b.beats - a.beats);
   const out: string[][] = [];
   for (let b = 0; b < ex.bars; b++) {
     const last = b === ex.bars - 1;
@@ -128,10 +133,10 @@ function rhythm(ex: GeneratedExercise, rng: Rng): string[][] {
     const bar: string[] = [];
     let left = quarters;
     while (left > 1e-6) {
-      const fits = values.filter((v) => v.beats <= left + 1e-6 && (v.beats !== 0.5 || left >= 1 - 1e-6));
+      const fits = values.filter((v) => v.beats <= left + 1e-6 && (v.beats !== 0.5 || left >= 1 - 1e-6) && !(v.rest && b === 0 && !bar.length));
       if (!fits.length) { bar.push(`r:${left === 0.5 ? 'e' : 'q'}`); left -= left === 0.5 ? 0.5 : 1; continue; }
       const v = pick(fits, rng);
-      if (v.beats === 0.5) { bar.push('e', 'e'); left -= 1; } else { bar.push(v.d); left -= v.beats; }
+      if (v.beats === 0.5) { bar.push(v.rest ? 'r:e' : 'e', 'e'); left -= 1; } else { bar.push(v.rest ? `r:${v.d}` : v.d); left -= v.beats; }
     }
     out.push(bar);
   }
