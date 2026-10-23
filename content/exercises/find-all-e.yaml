@@ -1,0 +1,6 @@
+id: find-all-e
+kind: find
+prompt: Find every E on the keyboard, from the bottom to the top.
+targets:
+  - { pitchClass: E }
+coverAll: true

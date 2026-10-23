@@ -1,0 +1,15 @@
+id: name-any-white-key
+kind: find
+prompt: Play the key the app names. Any octave is fine.
+order: random
+targets:
+  - { pitchClass: C }
+  - { pitchClass: D }
+  - { pitchClass: E }
+  - { pitchClass: F }
+  - { pitchClass: G }
+  - { pitchClass: A }
+  - { pitchClass: B }
+  - { pitchClass: F }
+  - { pitchClass: B }
+  - { pitchClass: D }

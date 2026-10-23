@@ -1,0 +1,6 @@
+id: find-all-f
+kind: find
+prompt: Find every F on the keyboard, from the bottom to the top.
+targets:
+  - { pitchClass: F }
+coverAll: true

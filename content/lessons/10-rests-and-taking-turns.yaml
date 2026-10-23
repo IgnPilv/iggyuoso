@@ -1,0 +1,14 @@
+id: rests-and-taking-turns
+title: Rests and taking turns
+unit: meet-the-keyboard
+skills: [rests, hands-alternating]
+steps:
+  - explain: |
+      A **rest** means silence: you don't play, but you keep counting.
+      A **quarter rest** is one beat of silence. A **whole rest** (a little block hanging from a line) is a whole bar of silence.
+  - exercise: quarter-rests-rh
+  - explain: |
+      Now the hands **take turns**. When one hand plays, the other one rests and waits.
+      Keep both hands in middle C position the whole time.
+  - exercise: taking-turns-tune
+recap: Rests are silence that still counts. Your hands can take turns, one plays while the other rests.

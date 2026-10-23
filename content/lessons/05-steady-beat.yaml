@@ -1,0 +1,16 @@
+id: steady-beat
+title: Steady beat
+unit: meet-the-keyboard
+skills: [pulse, quarter-note]
+steps:
+  - explain: |
+      Music has a **beat**, like a heartbeat or a clock ticking. It stays steady:
+      not faster, not slower. You can hear it in the metronome clicks.
+  - explain: |
+      A **quarter note** lasts **one beat**. It looks like a filled-in dot with a stem.
+      Count it "1, 2, 3, 4" or say "ta, ta, ta, ta".
+  - explain: |
+      The app counts in first ("1, 2, 3, 4"), then you play. Play any **C** on every click.
+  - exercise: quarter-beats-rh
+  - exercise: quarter-beats-lh
+recap: The beat stays steady. A quarter note is one beat.

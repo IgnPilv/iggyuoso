@@ -1,0 +1,8 @@
+id: middle-c-walk-rh
+kind: sequence
+hand: right
+display: keys
+prompt: Right hand in middle C position. Walk up and back down.
+position: "C4 D4 E4 F4 G4"
+notes:   "C4 D4 E4 F4 G4 F4 E4 D4 C4"
+fingers: "1  2  3  4  5  4  3  2  1"

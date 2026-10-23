@@ -1,0 +1,8 @@
+id: quarter-beats-lh
+kind: timed
+hand: left
+tempo: 60
+meter: 4/4
+countIn: 1
+pitchMatch: pitchClass
+left: "C3:q C3:q C3:q C3:q | C3:q C3:q C3:q C3:q"

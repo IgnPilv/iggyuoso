@@ -1,0 +1,6 @@
+id: find-all-d
+kind: find
+prompt: Find every D on the keyboard, from the bottom to the top.
+targets:
+  - { pitchClass: D }
+coverAll: true

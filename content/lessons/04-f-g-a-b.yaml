@@ -1,0 +1,15 @@
+id: f-g-a-b
+title: F, G, A and B
+unit: meet-the-keyboard
+skills: [note-names, keyboard-geography]
+steps:
+  - explain: |
+      Now find a group of **three** black keys. The white key just to the **left** of it is **F**.
+      Going right, the next white keys are **G**, **A** and **B**.
+  - exercise: find-all-f
+  - exercise: find-all-g-a-b
+  - explain: |
+      Now every white key has a name: C D E around the two black keys, F G A B around the three.
+      Then it starts again at C.
+  - exercise: name-any-white-key
+recap: F G A B sit around the three black keys. All seven letters repeat up the keyboard.

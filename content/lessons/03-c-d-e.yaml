@@ -1,0 +1,19 @@
+id: c-d-e
+title: C, D and E
+unit: meet-the-keyboard
+skills: [note-names, keyboard-geography]
+steps:
+  - explain: |
+      Music uses only seven letters: **A B C D E F G**. After G it starts again at A,
+      over and over, all the way up the keyboard.
+  - explain: |
+      Find a group of **two** black keys. The white key just to the **left** of it is **C**.
+      Every group of two has a C next to it, so the piano has many Cs.
+  - exercise: find-all-c
+  - explain: |
+      **D** is the white key in the **middle** of the two black keys, like a dog in its kennel.
+      **E** is just to the **right** of the two black keys.
+  - exercise: find-all-d
+  - exercise: find-all-e
+  - exercise: name-c-d-e
+recap: C is left of the two black keys, D is in the middle, E is on the right.

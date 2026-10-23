@@ -1,0 +1,16 @@
+id: treble-staff
+title: The treble staff
+unit: meet-the-keyboard
+skills: [staff, treble-clef, reading]
+steps:
+  - explain: |
+      Music is written on a **staff**: five lines with four spaces between them.
+      Notes sit **on a line** or **in a space**. The higher the note sits, the higher it sounds.
+  - explain: |
+      The curly sign at the start is the **treble clef**. It is used mostly for the **right** hand and the higher notes.
+  - explain: |
+      **Middle C** sits just below the staff on its own short line, called a **ledger line**.
+      **D** hangs just under the bottom line. **E** sits on the bottom line.
+  - exercise: read-c-d-e-treble
+  - exercise: read-c-d-e-treble-rhythm
+recap: Five lines, four spaces. Treble clef is for the right hand. Middle C is on a ledger line below it.

@@ -1,0 +1,11 @@
+id: name-c-d-e
+kind: find
+prompt: Play the key the app names. Any octave is fine.
+order: random
+targets:
+  - { pitchClass: C }
+  - { pitchClass: D }
+  - { pitchClass: E }
+  - { pitchClass: D }
+  - { pitchClass: C }
+  - { pitchClass: E }

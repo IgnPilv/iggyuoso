@@ -1,0 +1,17 @@
+id: half-and-whole-notes
+title: Half and whole notes
+unit: meet-the-keyboard
+skills: [half-note, whole-note, bar-lines, time-signature]
+steps:
+  - explain: |
+      A **half note** is an empty dot with a stem. It lasts **two beats**: play on 1, hold through 2.
+      A **whole note** is an empty dot with no stem. It lasts **four beats**: play on 1, hold through 2, 3, 4.
+  - explain: |
+      Music is cut into **bars** (also called measures) by **bar lines**. The **4/4** at the start
+      means every bar holds four beats. A double bar line means the end.
+  - explain: |
+      Keep holding the key down for the whole length of the note. Let go right when the next one starts.
+  - exercise: long-notes-rh
+  - exercise: long-notes-lh
+  - exercise: two-keys-mixed-rh
+recap: Quarter = 1 beat, half = 2 beats, whole = 4 beats. In 4/4 each bar has four beats.

@@ -1,0 +1,15 @@
+id: high-and-low
+title: High and low
+unit: meet-the-keyboard
+skills: [keyboard-geography]
+steps:
+  - explain: |
+      Sounds can be **low**, like a big bear growling, or **high**, like a little bird singing.
+      On the piano, the keys on the **left** sound **lower** and the keys on the **right** sound **higher**.
+  - exercise: play-low-play-high
+  - explain: |
+      Now look at the black keys. They are not all in one row: they come in little groups.
+      Some groups have **two** black keys, some have **three**. The groups take turns: two, three, two, three...
+  - exercise: find-two-black-groups
+  - exercise: find-three-black-groups
+recap: Left is low, right is high. Black keys come in groups of two and three.

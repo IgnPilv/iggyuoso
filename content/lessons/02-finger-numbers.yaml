@@ -1,0 +1,19 @@
+id: finger-numbers
+title: Finger numbers
+unit: meet-the-keyboard
+skills: [finger-numbers, hand-shape]
+steps:
+  - explain: |
+      Each finger has a number. The **thumb is 1**, the pointer is 2, the middle finger 3,
+      the ring finger 4 and the little finger 5. It is the same on **both** hands.
+  - explain: |
+      Sit tall, feet flat, elbows a little in front of your body. Curve your fingers
+      as if you were holding a small ball. Play with the round tips of your fingers, not the flat part.
+  - explain: |
+      Put your **right** thumb on the lit key and let each finger rest on its own white key.
+      Press the finger the app asks for. The other fingers stay on their keys.
+  - exercise: finger-drill-rh
+  - explain: |
+      Now the **left** hand. This time your **little finger (5)** is on the left and your thumb on the right.
+  - exercise: finger-drill-lh
+recap: Thumbs are 1, little fingers are 5, on both hands. Curved fingers, play on the tips.
