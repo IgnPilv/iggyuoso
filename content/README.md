@@ -127,6 +127,12 @@ days: 2   # spread over at least two days
     Needs `intervals: [M2, M3, P5]` (two or more).
   - `rhythm-read`: a rhythm on the staff to tap on any key (like `tap`).
   - `sight-read`: a short tune to play, mostly steps and some skips, ending on the key note.
+    With `hand: together` it is a piece for both hands on the grand staff: the tune (from `notes`)
+    in the right hand over a left hand on I, IV and V of the key (i, iv, V in minor; starts and
+    ends on I, V in the bar before the end), and each bar's first tune note belongs to its chord.
+    `left: roots` (default; the root held all bar), `left: fifths` (root, then the fifth, for half
+    a bar each; the last bar holds the root) or `left: chords` (the triad held, root position).
+    The left hand stays between E2 and middle C.
   The pool, at the top level or under `pool:`: `notes` (a range `C4-G5`, meaning every note of
   the key in between, or a list `"C4 E4 G4"`; default `C4-G4`), `clef: treble|bass|grand` (grand
   picks by the note), `keys: [C, G, F]` (one is picked per question or tune; default C).

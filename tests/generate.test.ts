@@ -73,6 +73,40 @@ describe('generated drills', () => {
     }
   });
 
+  it('sight-reads with both hands: a tune over I, IV, V roots, fifths or chords', () => {
+    const bass = (t: TimedExercise) => t.left!.map((x) => x.pitches.map(pitchToMidi));
+    for (let s = 1; s < 25; s++) {
+      for (const [key, left, meter] of [['C', 'roots', '4/4'], ['G', 'fifths', '3/4'], ['F', 'chords', '4/4'], ['Am', 'roots', '4/4'], ['D', 'fifths', '6/8']] as const) {
+        const t = generate(gen({ generator: 'sight-read', hand: 'together', left, notes: 'C4-C5', keys: [key], durations: meter === '6/8' ? ['q.', 'q', 'e'] : ['q', 'h'], meter, bars: 4 }), seeded(s)) as TimedExercise;
+        expect(t).toMatchObject({ kind: 'timed', hand: 'together', bars: 4 });
+        const lh = bass(t);
+        lh.flat().forEach((n) => { expect(n).toBeLessThanOrEqual(60); expect(n).toBeGreaterThanOrEqual(40); });
+        const tonic = { C: 0, G: 7, F: 5, Am: 9, D: 2 }[key];
+        expect(lh[0][0] % 12).toBe(tonic); // starts on I
+        expect(lh[lh.length - 1][0] % 12).toBe(tonic); // ends on I
+        if (left === 'chords') lh.forEach((c) => expect(c).toHaveLength(3));
+        else lh.forEach((c) => expect(c).toHaveLength(1));
+        // Each bar's first tune note belongs to the bar's chord.
+        let at = 0, bar = 0;
+        const barLen = { '4/4': 4, '3/4': 3, '6/8': 3 }[meter];
+        const leftAt = (beat: number) => { let b = 0; for (const x of t.left!) { if (beat < b + x.beats) return x; b += x.beats; } return t.left![t.left!.length - 1]; };
+        for (const x of t.right!) {
+          if (Math.abs(at - bar * barLen) < 1e-6 && x.pitches.length) {
+            const chordRoot = pitchToMidi(leftAt(at).pitches[0]) % 12;
+            const third = key === 'Am' && chordRoot !== 4 ? 3 : 4;
+            expect([chordRoot, (chordRoot + third) % 12, (chordRoot + 7) % 12]).toContain(pitchToMidi(x.pitches[0]) % 12);
+          }
+          at += x.beats;
+          if (at >= (bar + 1) * barLen - 1e-6) bar = Math.floor(at / barLen + 1e-6);
+        }
+      }
+    }
+    // The bar before the end is V: in A minor that is E major, with a G sharp.
+    const am = generate(gen({ generator: 'sight-read', hand: 'together', left: 'chords', keys: ['Am'], notes: 'A4-A5', bars: 4 }), seeded(3)) as TimedExercise;
+    expect(bass(am)[2].map((n) => n % 12)).toEqual([4, 8, 11]);
+    expect(() => gen({ generator: 'sight-read', left: 'chords' })).toThrow(/together/);
+  });
+
   it('puts rests in rhythms when durations list them, never first', () => {
     let rests = 0;
     for (let s = 1; s < 30; s++) {

@@ -575,8 +575,17 @@ function parseGenerated(top: Raw, base: Base): Exercise {
     durations: durations.length ? durations : ['q', 'h'],
     meter, bars, tempo, intervals, questions,
     answer: oneOf(raw, 'answer', ['play', 'name'] as const) ?? 'play',
+    leftPart: leftPartOf(raw, generator, base.hand),
     mastery: { accuracy, ...(medianMs !== undefined ? { medianMs } : {}) },
   };
+}
+
+/** `left: roots | fifths | chords` for sight-reading with both hands. */
+function leftPartOf(raw: Raw, generator: string, hand: Base['hand']): 'roots' | 'fifths' | 'chords' {
+  const left = oneOf(raw, 'left', ['roots', 'fifths', 'chords'] as const);
+  if (left && !(generator === 'sight-read' && hand === 'together')) throw new FieldError('"left" is for sight-read with hand: together');
+  if (generator === 'sight-read' && (hand === 'alternating')) throw new FieldError('sight-read takes hand: right, left or together');
+  return left ?? 'roots';
 }
 
 const octaveWords = (n: number) => (n === 1 ? 'one octave' : `${n} octaves`);

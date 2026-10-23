@@ -244,6 +244,8 @@ export interface GeneratedExercise extends ExerciseBase {
   questions: number;
   /** Answer reading drills by playing the note, or by naming it with buttons. */
   answer: 'play' | 'name';
+  /** Sight-reading with `hand: together`: what the left hand plays under the tune. */
+  leftPart: 'roots' | 'fifths' | 'chords';
   mastery: DrillGoal;
 }
 

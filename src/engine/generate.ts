@@ -1,6 +1,6 @@
 import { parseExercise } from '../content/load';
 import type { Exercise, GeneratedExercise } from '../content/types';
-import { diatonicStep, LETTERS, parseDuration, parseMeter, parsePitch, pitchToMidi, type Pitch } from '../music/notes';
+import { diatonicStep, LETTERS, parseDuration, parseMeter, parsePitch, pitchToMidi, type Meter, type Pitch } from '../music/notes';
 import { interval, keySignature, parseKey } from '../music/theory';
 
 // Generated drills (`kind: generated`): each run draws fresh questions from a pool and becomes an
@@ -164,19 +164,110 @@ function sightRead(ex: GeneratedExercise, rng: Rng): Raw {
     return pool[at];
   };
   const bars = rhythm(ex, rng);
-  const text = bars.map((bar, bi) => bar.map((d, i) => {
-    if (d.startsWith('r:')) return d;
-    const lastNote = bi === bars.length - 1 && i === bar.length - 1;
-    const p = bi === 0 && i === 0 ? pool[home] : lastNote ? pool[home] : move();
-    return `${pitchText(p)}:${d}`;
-  }).join(' ')).join(' | ');
+  const together = ex.hand === 'together';
+  const chords = together ? progression(k, bars.length, rng) : [];
+  // With a left hand, each bar's first note is a note of its chord, the nearest one in the pool.
+  const chordTone = (bi: number) => {
+    const pcs = chords[bi].pcs;
+    const fits = pool.map((p, i) => ({ p, i })).filter(({ p }) => pcs.includes(((pitchToMidi(p) % 12) + 12) % 12));
+    if (!fits.length) return move();
+    const best = fits.reduce((a, b) => (Math.abs(b.i - at) < Math.abs(a.i - at) || (Math.abs(b.i - at) === Math.abs(a.i - at) && rng() < 0.5) ? b : a));
+    at = best.i;
+    return best.p;
+  };
+  const text = bars.map((bar, bi) => {
+    let first = true;
+    return bar.map((d, i) => {
+      if (d.startsWith('r:')) return d;
+      const lastNote = bi === bars.length - 1 && i === bar.length - 1;
+      const p = (bi === 0 && i === 0) || lastNote ? pool[(at = home)] : together && first ? chordTone(bi) : move();
+      first = false;
+      return `${pitchText(p)}:${d}`;
+    }).join(' ');
+  }).join(' | ');
+  const prompt = ex.prompt ?? (together
+    ? 'A new piece for both hands. The left hand holds the harmony; look ahead, keep going, keep the beat.'
+    : 'A new tune to read. Look ahead, keep going, and keep the beat.');
+  if (together) {
+    const meter = parseMeter(ex.meter);
+    return {
+      kind: 'timed', display: 'staff', hand: 'together', tempo: ex.tempo, meter: ex.meter, right: text,
+      left: chords.map((c, i) => leftBar(c, i === chords.length - 1 && ex.leftPart === 'fifths' ? 'roots' : ex.leftPart, meter)).join(' | '),
+      ...(k !== 'C' ? { key: k } : {}), prompt,
+    };
+  }
   const hand = ex.hand === 'left' ? 'left' : 'right';
   return {
     kind: 'timed', display: 'staff', hand, tempo: ex.tempo, meter: ex.meter, [hand]: text,
     clef: ex.clefs === 'grand' ? (hand === 'left' ? 'bass' : 'treble') : ex.clefs,
     ...(k !== 'C' ? { key: k } : {}),
-    prompt: ex.prompt ?? 'A new tune to read. Look ahead, keep going, and keep the beat.',
+    prompt,
   };
+}
+
+interface BarChord {
+  /** The chord's notes, root first, spelled in the key, under middle C. */
+  notes: Pitch[];
+  /** Their pitch classes, for picking tune notes that fit. */
+  pcs: number[];
+}
+
+/**
+ * Chords for each bar from I, IV and V of the key (i, iv and V in minor): it starts and ends on I,
+ * the bar before the end is V, and no chord is repeated straight away except I at the very start.
+ */
+export function progression(key: string, bars: number, rng: Rng): BarChord[] {
+  const minor = key.endsWith('m');
+  const tonic = parsePitch(`${key.replace(/m$/, '')}3`);
+  const t = diatonicStep(tonic);
+  const at = (step: number) => pitchAt(step, key);
+  // IV and V go up from the tonic, or down when that would cross middle C.
+  const near = (up: number, down: number) => (pitchToMidi(at(t + up)) < 60 ? at(t + up) : at(t + down));
+  const roots: Record<'I' | 'IV' | 'V', Pitch> = { I: tonic, IV: near(3, -4), V: near(4, -3) };
+  const quality = { I: minor ? 'm3' : 'M3', IV: minor ? 'm3' : 'M3', V: 'M3' } as const;
+  const chord = (name: 'I' | 'IV' | 'V'): BarChord => {
+    const root = roots[name];
+    const notes = [root, above(root, quality[name])!, above(root, 'P5')!];
+    return { notes, pcs: notes.map((p) => ((pitchToMidi(p) % 12) + 12) % 12) };
+  };
+  const names: ('I' | 'IV' | 'V')[] = [];
+  for (let b = 0; b < bars; b++) {
+    if (b === 0 || b === bars - 1) names.push('I');
+    else if (b === bars - 2) names.push('V');
+    else {
+      const options = (['I', 'IV', 'V'] as const).filter((n) => n !== names[b - 1]);
+      names.push(pick(options, rng));
+    }
+  }
+  return names.map(chord);
+}
+
+/** Bar lengths as note values from the longest. */
+const BAR_FILL: [number, string][] = [[4, 'w'], [3, 'h.'], [2, 'h'], [1.5, 'q.'], [1, 'q'], [0.5, 'e']];
+const fill = (quarters: number, pulse: number) => {
+  const out: string[] = [];
+  let left = quarters;
+  // Compound meters count in dotted quarters.
+  for (const [b, d] of pulse === 1.5 ? BAR_FILL.filter(([x]) => x === 3 || x === 1.5) : BAR_FILL) while (left >= b - 1e-6) { out.push(d); left -= b; }
+  return out;
+};
+
+/** One bar of the left hand: the root held, root then fifth, or the chord held. (`fifths` ends on a held root.) */
+function leftBar(c: BarChord, part: 'roots' | 'fifths' | 'chords', { quarters, pulse }: Meter): string {
+  const [root, , fifth] = c.notes;
+  if (part === 'chords') {
+    // A chord reaching over middle C goes down an octave.
+    const down = pitchToMidi(c.notes[2]) > 60;
+    const ps = c.notes.map((p) => (down ? { ...p, octave: p.octave - 1 } : p));
+    return fill(quarters, pulse).map((d) => `${ps.map(pitchText).join('+')}:${d}`).join(' ');
+  }
+  if (part === 'fifths' && quarters / pulse >= 2) {
+    // Root on the first half of the bar, fifth on the rest (a fifth over middle C goes down).
+    const f = pitchToMidi(fifth) > 60 ? { ...fifth, octave: fifth.octave - 1 } : fifth;
+    const half = pulse * Math.ceil(quarters / pulse / 2);
+    return [...fill(half, pulse).map((d) => `${pitchText(root)}:${d}`), ...fill(quarters - half, pulse).map((d) => `${pitchText(f)}:${d}`)].join(' ');
+  }
+  return fill(quarters, pulse).map((d) => `${pitchText(root)}:${d}`).join(' ');
 }
 
 const MAKERS = { 'read-notes': readNotes, 'find-notes': findNotes, intervals, 'rhythm-read': rhythmRead, 'sight-read': sightRead } as const;
