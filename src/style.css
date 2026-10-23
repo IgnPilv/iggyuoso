@@ -652,3 +652,16 @@ ol.lessons li.locked a:hover { transform: none; }
 .timing-hand.left { border-left-color: var(--lh); }
 .timing-hand h3 { margin: 0; font-size: var(--text-sm); color: var(--muted); }
 .timing-big { margin: var(--space-1) 0; font-family: var(--font-display); font-size: var(--text-xl); }
+
+/* Today's practice: the day's list on home and in #/today. */
+.today-card .level-bar { margin: var(--space-2) 0 var(--space-3); }
+.today-list { list-style: none; padding: 0; margin: 0 0 var(--space-3); display: grid; gap: var(--space-1); }
+.today-list li { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--surface-sunken); }
+.today-list li.done { opacity: 0.6; }
+.today-list li.done .today-title { text-decoration: line-through; }
+.today-list .state-badge { margin-left: 0; min-width: 4.5em; text-align: center; }
+.today-title { flex: 1; }
+.today-min { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--muted); }
+.state-badge.why-review { background: var(--warn-soft); color: var(--warn); }
+.state-badge.why-lesson { background: var(--accent-soft); color: var(--accent-ink); }
+.state-badge.why-drill { background: var(--ok-soft); color: var(--ok); }
