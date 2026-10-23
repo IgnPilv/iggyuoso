@@ -183,6 +183,17 @@ notes: C4-G4
 durations: [q, h]
 bars: 4
 tempo: 76`,
+  sightReadTogether: `
+id: demo-sight-read-together
+kind: generated
+generator: sight-read
+hand: together
+left: fifths
+notes: C4-C5
+keys: [C, G, F]
+durations: [q, h]
+bars: 4
+tempo: 70`,
   sixEight: `
 id: demo-six-eight
 kind: timed
@@ -417,6 +428,18 @@ function scenes(): Scene[] {
         else timers.push(window.setTimeout(next, 4000));
       };
       const cleanup = mountExercise(box, parseExercise(parse(SAMPLES.sightRead)), DEMO_CALIBRATION, () => {});
+      timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Sight-reading, both hands',
+    caption: 'From the second stage on, fresh pieces have a left hand: it holds the root of I, IV or V (or root then fifth, or the whole chord), and the tune lands on a note of the chord at the start of each bar. Grand staff, a new piece every run.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      demo.onTimed = (s) => p.playTimed(s);
+      demo.onRunEnd = (mode) => { if (mode === 'play') timers.push(window.setTimeout(next, 4000)); };
+      const cleanup = mountExercise(box, parseExercise(parse(SAMPLES.sightReadTogether)), DEMO_CALIBRATION, () => {});
       timers.push(window.setTimeout(() => press(box, 'Play'), 900));
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },

@@ -329,3 +329,7 @@ never copied pages). Start small, adapt as we go.
   rhythm on one note; answers are rhythm pictures, 3–4 shown) and `loudness` (the phrase twice:
   was the second louder or softer, since one sound alone has nothing to compare with). Lit option
   keys use the `--key-option` token. Demo scenes "First ear steps" and "Hearing rhythms".
+- 2026-10-23: Two-hand sight-reading (tree thread's main fix for "one note at a time"): generated
+  `sight-read` with `hand: together` writes a tune over a left hand on I, IV, V (`left: roots |
+  fifths | chords`), grand staff, each bar's first tune note a chord note (`progression`,
+  `src/engine/generate.ts`). Demo scene "Sight-reading, both hands".
