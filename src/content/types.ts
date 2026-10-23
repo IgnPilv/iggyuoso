@@ -8,7 +8,54 @@ export interface Unit {
   order: number;
 }
 
-export type LessonStep = { explain: string } | { exercise: string };
+/** A staff picture in theory text or feedback. `grand` splits the notes at middle C. */
+export interface TheoryStaff {
+  notes: NoteToken[];
+  clef: 'treble' | 'bass' | 'grand';
+  key?: string;
+  /** `names` writes each note's letter under it. */
+  labels: 'names' | 'none';
+}
+
+/** A keyboard picture with these keys lit. */
+export interface TheoryKeys {
+  notes: Pitch[];
+  /** `names` or `fingers` (from `fingers`, one per key) on the lit keys. */
+  labels: 'names' | 'fingers' | 'none';
+  fingers?: number[];
+}
+
+/** A question inside theory text: Next waits until it is answered right. */
+export interface TheoryCheck {
+  ask: string;
+  choices?: string[];
+  correct?: number;
+  play?: Pitch[];
+  pitchMatch: 'exact' | 'pitchClass';
+  why?: string;
+  staff?: TheoryStaff;
+  keys?: TheoryKeys;
+}
+
+export interface ExplainStep {
+  explain: string;
+  staff?: TheoryStaff;
+  keys?: TheoryKeys;
+  /** A play button for these notes. */
+  sound?: NoteToken[];
+  /** A rule in a highlighted box (Markdown). */
+  callout?: string;
+  /** Key terms, shown as chips. */
+  terms?: string[];
+  check?: TheoryCheck;
+}
+
+/** Press any key and see it on the staff, named. Next is always allowed. */
+export interface PlaygroundStep {
+  playground: { clef: 'treble' | 'bass' | 'grand'; range: [Pitch, Pitch]; prompt?: string; key?: string };
+}
+
+export type LessonStep = ExplainStep | { exercise: string } | PlaygroundStep;
 
 export interface Lesson {
   id: string;
@@ -128,6 +175,13 @@ export interface QuizQuestion {
   key?: string;
   /** A play button for these notes. */
   sound?: NoteToken[];
+  /** Why the answer is right, shown after any answer. */
+  why?: string;
+  /** Per choice: why that choice is wrong, shown when it is picked. */
+  choiceWhy?: (string | undefined)[];
+  /** A picture shown with `why`. */
+  whyStaff?: TheoryStaff;
+  whyKeys?: TheoryKeys;
 }
 
 export interface QuizExercise extends ExerciseBase {

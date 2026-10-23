@@ -14,6 +14,29 @@ content/
 complete beginner, as if to a child) or `exercise: <exercise-id>`. Exercises can be reused by
 several lessons.
 
+### Theory blocks (on an `explain` step)
+Next to its text, an `explain` step can carry pictures, a sound and a check question:
+
+```yaml
+- explain: |
+    Markdown text
+  staff: { notes: "C4:q E4:q G4:h", clef: treble, key: G, labels: names }  # or just "C4:q E4:q"
+  keys: { notes: "C4 E4 G4", labels: fingers, fingers: "1 3 5" }           # or just "C4 E4 G4"
+  sound: "C4:q E4:q G4:h"     # a play button (no sound: no button)
+  callout: "**Rule.** The treble clef curls round the G line."
+  terms: [staff, treble clef, ledger line]
+  check: { ask: "Which line?", choices: [E, { text: G, why: "..." }], correct: 0, why: "..." }
+```
+
+- `staff`: `clef` is `treble`, `bass` or `grand` (split at middle C); `labels: names` writes each
+  note's letter under it. Notes are evenly spaced and drawn with their values.
+- `keys`: lit keys; `labels` is `names`, `fingers` (one number per key in `fingers`) or `none`.
+- `check`: `{ ask, choices, correct, why }` or `{ ask, play: G4, why }` (exact pitch unless
+  `pitchMatch: pitchClass`); it can carry its own `staff` / `keys` picture. Next waits until it is
+  answered right; a wrong answer shows `why` and can be tried again.
+- A step `- playground: { clef: treble, notes: C4-G5, prompt: "...", key: G }`: any key pressed in
+  that range shows on the staff with its name. Next is always allowed.
+
 ## Reps and days (any exercise)
 An exercise is **done** after `reps` clean takes (★★★, 92 or more, at a tempo that counts),
 played on at least `days` different days. Defaults: `reps: 3`, `days: 1`; `days` cannot be more
@@ -70,6 +93,9 @@ days: 2   # spread over at least two days
 - `quiz`: `questions`, each `{ ask, choices: [...], correct: <index from 0> }` or
   `{ ask, play: "G4" }` (answer by playing these notes in order). Optional `staff: "G4:w"`
   (a picture, with `clef`) and `sound: "C4:q E4:q"` (a play button). `shuffle: true` mixes the order.
+  `why:` (Markdown) is shown after any answer, with an optional picture (`whyStaff`, `whyKeys`,
+  shaped like the theory blocks); a choice can be `{ text: B, why: "..." }`, shown when that wrong
+  choice is picked. With a `why`, the quiz waits for Next instead of moving on by itself.
 - `build`: untimed, `tasks`, each one of `chord: Cm` (held together unless `together: false`),
   `interval: M3` + `from: D4` (+ `direction: down`), `scale: G major` (+ `octaves`), or
   `notes: "C4 E4 G4"`; optional `octave` (default 4), `order: listed|any`, `ask` (own wording).

@@ -21,6 +21,12 @@ export interface StaffNote {
   triplet?: boolean;
   /** Tied to the next note: drawn with an arc. */
   tie?: boolean;
+  /** A finger number, over the staff (or under it on a lower or bass staff). */
+  finger?: number;
+  /** Text under the note, such as its name. */
+  label?: string;
+  /** Takes its place in the line but draws nothing (no rest): the other staff of a picture has the note. */
+  spacer?: boolean;
 }
 
 export interface StaffPart {
@@ -63,6 +69,8 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
   const els = new Map<string, SVGGElement>();
 
   parts.forEach((part, pi) => {
+    // Fingers sit over the upper staff and under the lower one (and under a lone bass staff).
+    const fingersBelow = parts.length === 2 ? pi === 1 : part.clef === 'bass';
     const top = staffTop(pi);
     const bottom = top + STAFF_H;
     const bStep = BOTTOM_STEP[part.clef];
@@ -92,7 +100,20 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
       const g = s('g', { class: 'note' });
       const value = n.value ?? n.beats;
       const dotted = n.dotted ?? (n.beats !== undefined && [0.375, 0.75, 1.5, 3, 6].includes(n.beats));
-      if (!n.pitches.length) g.append(rest(x, top, value ?? 1));
+      if (!n.pitches.length && !n.spacer) g.append(rest(x, top, value ?? 1));
+      if (n.pitches.length && (n.finger !== undefined || n.label)) {
+        const ys = n.pitches.map((p) => y(diatonicStep(p)));
+        // Clear of the stem: up when the notes sit low on the staff (as drawn below).
+        const stem = value !== undefined && value < 4;
+        const up = Math.max(...n.pitches.map(diatonicStep)) < bStep + 4;
+        if (n.finger !== undefined) {
+          const fy = fingersBelow
+            ? Math.max(bottom + 16, Math.max(...ys) + (stem && !up ? 46 : 18))
+            : Math.min(top - 8, Math.min(...ys) - (stem && up ? 40 : 12));
+          g.append(s('text', { x, y: fy, class: 'finger' }, String(n.finger)));
+        }
+        if (n.label) g.append(s('text', { x, y: Math.max(bottom + 18, Math.max(...ys) + 20) + (n.finger !== undefined && fingersBelow ? 16 : 0), class: 'note-label' }, n.label));
+      }
       for (const p of n.pitches) {
         const step = diatonicStep(p);
         const ny = y(step);

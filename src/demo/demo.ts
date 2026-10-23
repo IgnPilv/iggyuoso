@@ -20,6 +20,8 @@ export const demo = {
   onSequence: undefined as ((s: SequenceSession) => void) | undefined,
   /** Called by ear, quiz and build when a question is ready to answer. */
   onAsk: undefined as ((a: DemoAsk) => void) | undefined,
+  /** Called when a check question in theory text is ready. */
+  onCheck: undefined as ((c: { keys?: number[]; correct?: number; choose?: (i: number) => void }) => void) | undefined,
   /** Called when a timed Listen or Play run ends. */
   onRunEnd: undefined as ((mode: 'listen' | 'play') => void) | undefined,
 };
@@ -41,5 +43,5 @@ export interface DemoAsk {
 
 export function stopDemo() {
   demo.active = false;
-  demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onAsk = undefined;
+  demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onAsk = demo.onCheck = undefined;
 }
