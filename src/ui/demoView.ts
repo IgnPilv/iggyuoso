@@ -33,7 +33,11 @@ const press = (box: HTMLElement, label: string) =>
   [...box.querySelectorAll('button')].find((b) => b.textContent === label)?.click();
 
 /** Mount an exercise and let the pianist play it; for timed ones, Listen first if asked. */
-function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: 'falling' | 'sheet' } = {}): Scene['run'] {
+type View2 = 'classic' | 'falling';
+const setView = (box: HTMLElement, v: View2) => box.querySelector<HTMLButtonElement>(`.view-toggle [data-view=${v}]`)?.click();
+
+/** `switchAt`: flip to the other view after this many ms, to show the toggle (untimed only). */
+function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: View2; switchAt?: number } = {}): Scene['run'] {
   return (box, next, p) => {
     demo.onFind = (s) => p.playFind(s);
     demo.onSequence = (s) => p.playSequence(s);
@@ -42,14 +46,14 @@ function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: 'fall
       if (mode === 'listen') window.setTimeout(() => press(box, 'Play'), 800);
     };
     const cleanup = mountExercise(box, ex, DEMO_CALIBRATION, () => window.setTimeout(next, 4000));
-    if (ex.kind === 'timed') {
-      if (opts.view) {
-        const sel = box.querySelector<HTMLSelectElement>('select[aria-label=view]');
-        if (sel && sel.value !== opts.view) { sel.value = opts.view; sel.dispatchEvent(new Event('change')); }
-      }
-      window.setTimeout(() => press(box, opts.listenFirst ? 'Listen' : 'Play'), 900);
+    if (opts.view) setView(box, opts.view);
+    const timers: number[] = [];
+    if (opts.switchAt && opts.view) {
+      const other: View2 = opts.view === 'classic' ? 'falling' : 'classic';
+      timers.push(window.setTimeout(() => setView(box, other), opts.switchAt));
     }
-    return cleanup;
+    if (ex.kind === 'timed') timers.push(window.setTimeout(() => press(box, opts.listenFirst ? 'Listen' : 'Play'), 900));
+    return () => { timers.forEach(clearTimeout); cleanup(); };
   };
 }
 
@@ -66,15 +70,15 @@ function scenes(): Scene[] {
     },
   });
   const find = pick((e): e is Exercise => e.kind === 'find', (e) => e.kind === 'find' && e.coverAll && e.targets.some((t) => 'pitchClass' in t));
-  if (find) out.push({ title: 'Finding keys', caption: `"${find.prompt ?? find.id}" Untimed. Found keys stay green; a wrong key flashes red.`, run: exerciseScene(find) });
+  if (find) out.push({ title: 'Finding keys', caption: `"${find.prompt ?? find.id}" Found keys stay green; a wrong key flashes red. Every exercise has a switch between "Keyboard & sheet" and "Falling notes"; watch it flip halfway.`, run: exerciseScene(find, { view: 'classic', switchAt: 3200 }) });
   const seq = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys' && e.fingers.length > 0);
-  if (seq) out.push({ title: 'Finger numbers', caption: 'The next key lights up with the finger to use. The pianist stumbles once.', run: exerciseScene(seq) });
+  if (seq) out.push({ title: 'Finger numbers', caption: 'In falling notes, each note falls to the keyboard and waits until you play it, with the finger number on it. The pianist stumbles once, then the view switches back to the keyboard.', run: exerciseScene(seq, { view: 'falling', switchAt: 4200 }) });
   const oneHand = pick(isTimed, (e) => !!e.right !== !!e.left && e.display === 'keys' && noteCount(e) >= 9 && e.fingers[e.right ? 'right' : 'left'].length > 0, (e) => !!e.right !== !!e.left && noteCount(e) >= 9);
   if (oneHand) out.push({ title: 'Falling notes', caption: 'Listen first: the app plays the tune and lights each key. Then the pianist plays it, with one wrong key, one late note and one missed note. The score and the mistakes show up live.', run: exerciseScene(oneHand, { listenFirst: true, view: 'falling' }) });
   const twoHands = pick(isTimed, (e) => !!(e.right && e.left));
   if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score.', run: exerciseScene(twoHands, { view: 'falling' }) });
   const sheet = pick(isTimed, (e) => e.display === 'staff' && !(e.right && e.left));
-  if (sheet) out.push({ title: 'Sheet music', caption: 'Reading exercises start on the staff. Notes turn green or red as they are played.', run: exerciseScene(sheet, { view: 'sheet' }) });
+  if (sheet) out.push({ title: 'Sheet music', caption: 'The same exercise on "Keyboard & sheet": the staff, with notes turning green or red as they are played.', run: exerciseScene(sheet, { view: 'classic' }) });
   out.push({
     title: 'MIDI tester',
     caption: 'In Settings, the MIDI tester shows each key you press and the raw MIDI messages, for checking that a keyboard is connected.',

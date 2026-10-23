@@ -244,9 +244,20 @@ export const settingsView: View = (root) => {
     h('section', { class: 'card' },
       h('h2', {}, 'Defaults'),
       h('div', { class: 'controls' }, toggle('metronome', 'Click while playing'), toggle('guide', 'Guide notes while playing')),
+      h('div', { class: 'controls' }, h('label', {}, 'View ', viewPref())),
     ),
   );
 };
+
+function viewPref() {
+  const sel = h('select', {},
+    h('option', { value: '' }, 'Each exercise decides'),
+    h('option', { value: 'classic' }, 'Keyboard & sheet'),
+    h('option', { value: 'falling' }, 'Falling notes'));
+  sel.value = store.settings.view ?? '';
+  sel.onchange = () => { store.settings = { ...store.settings, view: (sel.value || undefined) as 'classic' | 'falling' | undefined }; };
+  return sel;
+}
 
 // ---------------------------------------------------------------- MIDI tester
 
