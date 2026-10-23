@@ -1,0 +1,17 @@
+id: perfect-intervals
+title: "Perfect 4ths and 5ths"
+unit: inversions
+skills: [theory, intervals]
+steps:
+  - explain: |
+      4ths and 5ths (and unisons and octaves) don't come in major and minor. They are called
+      **perfect**, because they sound so pure and open.
+
+      - a **perfect 5th** is 7 semitones: C to G
+      - a **perfect 4th** is 5 semitones: C to F
+
+      A perfect 5th turned upside down (G up to C) becomes a perfect 4th. Together they make an
+      octave.
+  - exercise: perfect-intervals-quiz
+  - exercise: build-perfect-intervals
+recap: "Perfect 5th = 7 semitones, perfect 4th = 5. Flip one and you get the other."

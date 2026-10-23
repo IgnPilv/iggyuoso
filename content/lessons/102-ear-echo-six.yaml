@@ -1,0 +1,10 @@
+id: ear-echo-six
+title: "Echo six notes"
+unit: pedal-and-genres
+skills: [ear, melody]
+steps:
+  - explain: |
+      Six notes, about the length of a short phrase in a song. Listen for the shape, and for where
+      it starts and ends in the key. Hum it before you play it.
+  - exercise: ear-echo-six
+recap: "Six-note phrases: shape first, then the notes."

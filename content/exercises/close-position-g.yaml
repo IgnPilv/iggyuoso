@@ -1,0 +1,10 @@
+id: close-position-g
+title: "I–IV–V–I in G, close position"
+kind: timed
+hand: together
+tempo: 60
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "B3+D4+G4:w | C4+E4+G4:w | A3+D4+F#4:w | B3+D4+G4:w"
+left: "G2:w | C3:w | D3:w | G2:w"

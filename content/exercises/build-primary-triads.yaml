@@ -1,0 +1,11 @@
+id: build-primary-triads
+title: "Build I, IV and V"
+kind: build
+prompt: "Build the three primary triads in G major, then in F major."
+tasks:
+  - { chord: "G", octave: 3 }
+  - { chord: "C" }
+  - { chord: "D" }
+  - { chord: "F" }
+  - { chord: "Bb", octave: 3 }
+  - { chord: "C" }

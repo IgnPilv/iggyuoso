@@ -197,6 +197,24 @@ never copied pages). Start small, adapt as we go.
   what is played or scored. The staff follows bar rules: an accidental shows where a note differs
   from the key or from an earlier note on that line or space in the bar, naturals included
   (also without a key). Untimed reading drills treat each note on its own. Demo "Key signatures".
+- 2026-10-23: Octave audit (Ignas: "middle C5 is off in some exercises"). One convention everywhere:
+  middle C = C4 = written MIDI 60 (content, labels, staff, samples, emulator); only calibration
+  shifts to device keys, by whole octaves. Content and code already agreed; the bug was the
+  on-screen keyboard window: for tunes above middle C (G and F position, scales) it started on
+  middle C, cut its tag off and put C5 in the middle of the picture. Now `keyWindow`
+  (`src/calibration.ts`) draws every partial keyboard with middle C in view and room around it,
+  at least two octaves, on white-key edges. `tests/octaves.test.ts` checks the convention, the
+  window, that a right hand never goes below C3 nor a left hand above C5, and that any exercise
+  about middle C plays C4. G position: left hand from the G below middle C (G3), as in C position.
+- 2026-10-23: Year 2 content complete (units 7–12, 56 lessons, checkpoints `y2-checkpoint-a`,
+  `y2-checkpoint-b`, exam `y2-exit`); `content/tree/year-2.yaml` now has nodes for every unit.
+  Two-octave scales use the tempo ladder; exam scales are harmonic minor. Pieces: our own studies
+  and songs, plus public-domain Minuet in G (Petzold), Korobeiniki, Lightly Row and Twinkle
+  Twinkle. The four exam genres are etude, polyphonic (minuet), large form (theme and variations)
+  and character piece. Quiz choices are written in a mixed order (the app shuffles questions
+  only). "Spot the change" uses a quiz with a sound of both versions until there is an ear item
+  for it. Staccato is written as a note plus a rest, because release timing isn't scored yet.
+  Staff pieces outside C carry `key:`.
 - 2026-10-23: After Ignas's "falling notes should also visualise the sheet music": in falling notes,
   timed exercises (not `tap`) and step-by-step reading exercises (`display: staff`) show the staff
   as a strip above the lane. It scrolls so the music being played sits a third of the way in, with

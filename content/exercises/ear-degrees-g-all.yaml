@@ -1,0 +1,7 @@
+id: ear-degrees-g-all
+title: "All seven degrees in G"
+kind: ear
+prompt: "The same, in G major."
+questions: 14
+items:
+  - { type: degree, key: G, pool: [1, 2, 3, 4, 5, 6, 7] }

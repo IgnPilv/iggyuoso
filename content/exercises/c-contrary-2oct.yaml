@@ -1,0 +1,12 @@
+id: c-contrary-2oct
+title: "C major in contrary motion, two octaves"
+kind: timed
+hand: together
+prompt: "The hands move away from each other and back. Both thumbs cross at the same moment."
+tempo: 60
+meter: 4/4
+countIn: 1
+right: "C5:e D5:e E5:e F5:e G5:e A5:e B5:e C6:e | D6:e E6:e F6:e G6:e A6:e B6:e C7:e B6:e | A6:e G6:e F6:e E6:e D6:e C6:e B5:e A5:e | G5:e F5:e E5:e D5:e C5:h"
+left: "C4:e B3:e A3:e G3:e F3:e E3:e D3:e C3:e | B2:e A2:e G2:e F2:e E2:e D2:e C2:e D2:e | E2:e F2:e G2:e A2:e B2:e C3:e D3:e E3:e | F3:e G3:e A3:e B3:e C4:h"
+rightFingers: "1 2 3 1 2 3 4 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1 4 3 2 1 3 2 1"
+leftFingers: "1 2 3 1 2 3 4 1 2 3 1 2 3 4 5 4 3 2 1 3 2 1 4 3 2 1 3 2 1"

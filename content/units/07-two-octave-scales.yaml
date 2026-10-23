@@ -1,0 +1,12 @@
+id: two-octave-scales
+title: "Two-octave scales"
+summary: "C, G and F over two octaves with both hands, major and minor 2nds and 3rds, and every scale degree by ear."
+lessons:
+  - two-octave-c
+  - two-octave-c-together
+  - seconds-major-minor
+  - thirds-major-minor
+  - two-octave-g
+  - two-octave-f
+  - ear-all-degrees
+  - scale-study-in-c

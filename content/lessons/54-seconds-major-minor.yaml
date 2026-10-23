@@ -1,0 +1,21 @@
+id: seconds-major-minor
+title: "Major and minor 2nds"
+unit: two-octave-scales
+skills: [intervals, theory]
+steps:
+  - explain: |
+      In Year 1 you learned tones and semitones. Musicians have proper names for them when they are
+      steps between neighbouring letters:
+
+      - a **major 2nd** is a tone: 2 semitones, like C to D
+      - a **minor 2nd** is a semitone: 1 semitone, like E to F
+
+      Every interval has a **number** (count the letters, C-D is 2) and a **quality** (major, minor,
+      and soon perfect). The quality tells you exactly how far apart the two notes are.
+  - exercise: seconds-quiz
+  - exercise: build-seconds
+  - explain: |
+      A minor 2nd sounds tight and tense, like the shark music in films. A major 2nd sounds like
+      an ordinary step in a tune. Listen for that.
+  - exercise: ear-seconds
+recap: "A major 2nd is 2 semitones, a minor 2nd is 1. Number = letters, quality = semitones."

@@ -1,0 +1,11 @@
+id: variations-lightly-row
+title: "Lightly Row: theme and two variations"
+kind: timed
+hand: together
+prompt: "Theme with held chords, variation 1 with broken chords, variation 2 in C minor."
+tempo: 88
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q D4:q E4:q F4:q | G4:q G4:q G4:h | G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q E4:q G4:q G4:q | C4:w | G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q D4:q E4:q F4:q | G4:q G4:q G4:h | G4:q E4:q E4:h | F4:q D4:q D4:h | C4:q E4:q G4:q G4:q | C4:w | G4:q Eb4:q Eb4:h | F4:q D4:q D4:h | C4:q D4:q Eb4:q F4:q | G4:q G4:q G4:h | G4:q Eb4:q Eb4:h | F4:q D4:q D4:h | C4:q Eb4:q G4:q G4:q | C4:w"
+left: "C3+E3+G3:w | B2+F3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | B2+F3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e F3:e G3:e B2:e G3:e F3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e F3:e G3:e B2:e G3:e F3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:w | C3+Eb3+G3:w | B2+F3+G3:w | C3+Eb3+G3:w | C3+Eb3+G3:w | C3+Eb3+G3:w | B2+F3+G3:w | C3+Eb3+G3:w | C3+Eb3+G3:w"

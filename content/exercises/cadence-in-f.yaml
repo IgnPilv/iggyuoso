@@ -1,0 +1,10 @@
+id: cadence-in-f
+title: "I–IV–V–I in F"
+kind: timed
+hand: together
+tempo: 60
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "F4+A4+C5:w | F4+Bb4+D5:w | E4+G4+C5:w | F4+A4+C5:w"
+left: "F3:w | Bb2:w | C3:w | F3:w"

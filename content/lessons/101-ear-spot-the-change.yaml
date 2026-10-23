@@ -1,0 +1,13 @@
+id: ear-spot-the-change
+title: "Spot the change"
+unit: pedal-and-genres
+skills: [ear, memory]
+steps:
+  - explain: |
+      Musicians remember whole phrases, not just single notes. You'll hear four bars, a bar of
+      silence, then the same four bars again, maybe with one bar changed: a different note, or a
+      different rhythm.
+
+      Count the bars as you listen the first time: *one, two, three, four*. Then compare.
+  - exercise: ear-spot-the-change
+recap: "Hold four bars in your memory and compare them bar by bar."

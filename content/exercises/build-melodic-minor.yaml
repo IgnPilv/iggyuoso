@@ -1,0 +1,7 @@
+id: build-melodic-minor
+title: "Build melodic minor scales"
+kind: build
+prompt: "Going up only: raise both the 6th and the 7th."
+tasks:
+  - { scale: "A melodic minor" }
+  - { scale: "D melodic minor" }

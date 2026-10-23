@@ -1,0 +1,8 @@
+id: build-harmonic-minor
+title: "Build harmonic minor scales"
+kind: build
+prompt: "Play each scale going up. Watch the raised 7th."
+tasks:
+  - { scale: "A harmonic minor" }
+  - { scale: "D harmonic minor" }
+  - { scale: "E harmonic minor" }

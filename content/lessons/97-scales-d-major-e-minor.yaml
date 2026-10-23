@@ -1,0 +1,16 @@
+id: scales-d-major-e-minor
+title: "D major and E minor"
+unit: pedal-and-genres
+skills: [scales, keys]
+steps:
+  - explain: |
+      Two new keys. **D major** has two sharps, **F# and C#**. **E minor** is the relative minor of
+      G major, so it has one sharp (F#), and its harmonic form raises the 7th to **D#**.
+
+      Both use the same fingering as C major. In D major the thumbs land on D and G; your hands are
+      now resting over black keys, so keep the fingers a little further in.
+  - exercise: d-major-2oct-rh
+  - exercise: d-major-2oct-ht
+  - exercise: e-minor-2oct-rh
+  - exercise: e-minor-2oct-ht
+recap: "D major: F# and C#. E minor: F#, and D# in the harmonic form."

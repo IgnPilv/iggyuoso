@@ -1,0 +1,14 @@
+id: two-octave-a-minor
+title: "A minor over two octaves"
+unit: minor-keys
+skills: [scales, minor]
+steps:
+  - explain: |
+      Scales in exams are usually played in the harmonic minor. A harmonic minor uses the same
+      fingering as C major in both hands: only the **G#** is new.
+
+      The right hand starts on the A below middle C.
+  - exercise: a-minor-2oct-rh
+  - exercise: a-minor-2oct-lh
+  - exercise: a-minor-2oct-ht
+recap: "A harmonic minor: C's fingering, and G# every time."

@@ -1,0 +1,6 @@
+id: build-chromatic
+title: "Every key, in order"
+kind: build
+prompt: "Play the chromatic scale from C, every white and black key."
+tasks:
+  - { scale: "C chromatic" }

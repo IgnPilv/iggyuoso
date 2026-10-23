@@ -1,0 +1,12 @@
+id: shift-up-rh
+title: "Moving the hand up"
+kind: timed
+hand: right
+prompt: "Use the rest to move the whole hand up to A, with the thumb on A."
+display: staff
+clef: treble
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "C4:q D4:q E4:q F4:q | G4:h r:h | A4:q B4:q C5:q D5:q | E5:w"
+fingers: "1 2 3 4 5 1 2 3 4 5"

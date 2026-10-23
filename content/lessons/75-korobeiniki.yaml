@@ -1,0 +1,15 @@
+id: korobeiniki
+title: "Korobeiniki"
+unit: minor-keys
+skills: [repertoire, minor, reading]
+steps:
+  - explain: |
+      **Korobeiniki** is a Russian folk song from the 1800s about a travelling pedlar. You may know
+      it from a famous video game. It is in **A minor**.
+
+      The right hand has dotted quarters (bars 3, 5 and 6): long, then short. The left hand plays
+      the bass of each chord. Listen for the **G#** in bars 3 and 7: that is the raised 7th of
+      harmonic minor, building chord V (E major), which pulls back to A minor.
+  - exercise: korobeiniki-rh
+  - exercise: korobeiniki
+recap: "A real minor-key tune, and the raised 7th doing its job in the bass."

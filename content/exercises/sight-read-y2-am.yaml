@@ -1,0 +1,11 @@
+id: sight-read-y2-am
+title: "Sight-reading: A minor"
+kind: timed
+hand: together
+display: staff
+key: Am
+tempo: 66
+meter: 4/4
+countIn: 1
+right: "C5:q B4:q A4:q E4:q | F4:q E4:q D4:h | E4:q G#4:q B4:h | A4:w"
+left: "A2:w | D3:w | E3:w | A2:w"

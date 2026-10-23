@@ -1,0 +1,10 @@
+id: build-first-inversions
+title: "Build first inversions"
+kind: build
+prompt: "Play each chord with its 3rd at the bottom. Hold all three notes."
+tasks:
+  - { notes: "E4 G4 C5", together: true, ask: "C major, first inversion (E at the bottom)" }
+  - { notes: "A3 C4 F4", together: true, ask: "F major, first inversion (A at the bottom)" }
+  - { notes: "B3 D4 G4", together: true, ask: "G major, first inversion (B at the bottom)" }
+  - { notes: "C4 E4 A4", together: true, ask: "A minor, first inversion (C at the bottom)" }
+  - { notes: "F#4 A4 D5", together: true, ask: "D major, first inversion (F# at the bottom)" }

@@ -1,0 +1,10 @@
+id: cadence-quiz
+title: "Cadences"
+kind: quiz
+prompt: "A cadence is the end of a phrase."
+shuffle: true
+questions:
+  - { ask: "A perfect cadence is…", choices: ["IV to V", "I to V", "V to I"], correct: 2 }
+  - { ask: "A phrase that ends on V has…", choices: ["No cadence", "An imperfect cadence", "A perfect cadence"], correct: 1 }
+  - { ask: "In F major, the perfect cadence is…", choices: ["C to F", "F to C", "Bb to F"], correct: 0 }
+  - { ask: "In G major, the perfect cadence is…", choices: ["C to G", "G to D", "D to G"], correct: 2 }

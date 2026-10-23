@@ -1,0 +1,18 @@
+id: close-position-chords
+title: "Chords that move smoothly"
+unit: inversions
+skills: [technique, inversions, harmony]
+steps:
+  - explain: |
+      Jumping from root position to root position (C, then F, then G) makes the hand leap around.
+      Pianists use inversions so the chords move as little as possible. This is called playing in
+      **close position**:
+
+      - C major: **C E G**
+      - F major as **C F A** (second inversion): C stays, E and G step up
+      - G major as **B D G** (first inversion): everything steps down or stays
+
+      The left hand plays the roots, so the harmony is still clear.
+  - exercise: close-position-c
+  - exercise: close-position-g
+recap: "Inversions let chords move by step. The left hand keeps the root."

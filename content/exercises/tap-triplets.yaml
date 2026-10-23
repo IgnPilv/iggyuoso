@@ -1,0 +1,8 @@
+id: tap-triplets
+title: "Triplets"
+kind: tap
+prompt: "Three even taps in one beat. Count tri-po-let."
+tempo: 60
+meter: 4/4
+countIn: 1
+rhythm: "x:q x:q x:e3 x:e3 x:e3 x:q | x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:h | x:q x:e3 x:e3 x:e3 x:q x:e3 x:e3 x:e3 | x:w"

@@ -1,0 +1,12 @@
+id: staccato-march
+title: "Toy-soldier march"
+kind: timed
+hand: together
+prompt: "Staccato in the right hand, steady chords in the left. March!"
+display: staff
+tempo: 92
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "C5:e r:e G4:e r:e E4:e r:e G4:e r:e | C5:q E5:q C5:h | B4:e r:e G4:e r:e D4:e r:e G4:e r:e | B4:q D5:q B4:h | C5:e r:e G4:e r:e E4:e r:e G4:e r:e | A4:q C5:q A4:h | G4:q B4:q D5:q B4:q | C5:w"
+left: "C3+E3+G3:h C3+E3+G3:h | C3+E3+G3:w | B2+D3+G3:h B2+D3+G3:h | B2+D3+G3:w | C3+E3+G3:h C3+E3+G3:h | C3+F3+A3:w | B2+D3+G3:w | C3+E3+G3:w"

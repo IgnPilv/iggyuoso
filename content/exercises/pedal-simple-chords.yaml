@@ -1,0 +1,12 @@
+id: pedal-simple-chords
+title: "Simple pedal with chords"
+kind: timed
+hand: together
+prompt: "Pedal down with the chord, keep it down through the rest, lift on beat 4."
+tempo: 60
+meter: 4/4
+countIn: 1
+tempoLadder: true
+right: "C4+E4+G4:h r:h | C4+F4+A4:h r:h | B3+D4+G4:h r:h | C4+E4+G4:w"
+left: "C3:h r:h | F3:h r:h | G3:h r:h | C3:w"
+pedal: "x:h. r:q | x:h. r:q | x:h. r:q | x:w"

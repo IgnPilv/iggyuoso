@@ -1,0 +1,12 @@
+id: ear-year-2-exit
+title: "Year 2 exam: ears"
+kind: ear
+prompt: "The Year 2 ear test. Mixed questions, no hints."
+feedback: none
+questions: 16
+items:
+  - { type: degree, key: D, pool: [1, 2, 3, 4, 5, 6, 7] }
+  - { type: degree, key: Am, pool: [1, 2, 3, 4, 5] }
+  - { type: interval, pool: [m2, M2, m3, M3, P4, P5], from: [C4, D4, F4, G4], direction: up, answer: name }
+  - { type: chord, pool: [maj, min, dim], root: F4 }
+  - { type: melody, notes: "E4 G4 F4 D4 E4 C4", plays: 2 }

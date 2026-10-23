@@ -1,0 +1,12 @@
+id: harmony-checkpoint-b
+title: "Year 2, checkpoint 2: harmony"
+kind: quiz
+prompt: "No hints."
+feedback: none
+shuffle: true
+questions:
+  - { ask: "I, IV and V in D major are…", choices: ["D, E and A", "D, G and B minor", "D, G and A"], correct: 2 }
+  - { ask: "G B D with B at the bottom is…", choices: ["G major, second inversion", "G major, first inversion", "B minor"], correct: 1 }
+  - { ask: "A melody bar of D F D B fits which chord in C?", choices: ["IV", "V7", "I"], correct: 1 }
+  - { ask: "The phrase ends on chord V. The cadence is…", choices: ["Imperfect", "Perfect"], correct: 0 }
+  - { ask: "The triad on degree 7 of a major key is…", choices: ["Diminished", "Major", "Minor"], correct: 0 }

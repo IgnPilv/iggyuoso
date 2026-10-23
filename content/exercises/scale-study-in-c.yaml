@@ -1,0 +1,11 @@
+id: scale-study-in-c
+title: "Scale study in C"
+kind: timed
+hand: together
+prompt: "Scale runs in the right hand, quiet two-note chords in the left."
+display: staff
+tempo: 72
+meter: 4/4
+countIn: 1
+right: "C4:e D4:e E4:e F4:e G4:e A4:e B4:e C5:e | D5:e C5:e B4:e A4:e G4:h | E4:e F4:e G4:e A4:e B4:e C5:e D5:e E5:e | F5:e E5:e D5:e C5:e B4:h | C5:e B4:e A4:e G4:e F4:e E4:e D4:e C4:e | B3:e C4:e D4:e E4:e F4:h | E4:e G4:e F4:e D4:e E4:e C4:e D4:e B3:e | C4:w"
+left: "C3+G3:w | B2+G3:w | C3+G3:w | B2+F3:w | C3+E3:w | B2+F3:w | C3:h G2:h | C3:w"

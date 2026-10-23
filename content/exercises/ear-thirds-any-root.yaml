@@ -1,0 +1,8 @@
+id: ear-thirds-any-root
+title: "Hear major and minor 3rds"
+kind: ear
+prompt: "Two notes. Major 3rd (bright) or minor 3rd (darker)?"
+questions: 10
+items:
+  - { type: interval, pool: [m3, M3], from: [C4, D4, E4, F4, G4, A4, Bb3], direction: up, answer: name }
+  - { type: interval, pool: [m3, M3], from: [C4, D4, F4, G4], direction: up, answer: name, together: true }

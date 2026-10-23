@@ -1,0 +1,20 @@
+id: two-octave-c
+title: "C major over two octaves"
+unit: two-octave-scales
+skills: [scales, thumb-under]
+steps:
+  - explain: |
+      In Year 1 your scales went up one octave. Now they go up **two**.
+
+      The right hand uses the same groups of fingers as before: **1 2 3**, thumb under,
+      **1 2 3 4**, thumb under, **1 2 3**, thumb under, **1 2 3 4 5**. So the thumb now passes
+      under twice on the way up, and the 3rd and 4th fingers cross over it on the way down.
+
+      The scale is written in eighth notes, two to every click. Keep them even, like a ticking
+      clock. Slow and even beats fast and bumpy.
+  - exercise: c-scale-2oct-rh
+  - explain: |
+      The left hand starts with finger **5** and crosses **3** over the thumb, then **4**, then **3**
+      again: 5 4 3 2 1, 3 2 1, 4 3 2 1, 3 2 1. Going up, the left thumb passes under from the top.
+  - exercise: c-scale-2oct-lh
+recap: "Two octaves: the thumb passes under twice, and the finger groups repeat."

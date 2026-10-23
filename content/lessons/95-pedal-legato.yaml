@@ -1,0 +1,20 @@
+id: pedal-legato
+title: "Legato pedal"
+unit: pedal-and-genres
+skills: [technique, pedal]
+steps:
+  - explain: |
+      Simple pedal leaves a little gap between chords. **Legato pedal** (or *syncopated pedal*)
+      joins them without a gap and without blurring them together. It feels backwards at first:
+
+      1. Play the new chord.
+      2. **Then** lift the pedal and press it straight down again.
+
+      The foot moves *just after* the hands, not with them. The new chord is still held by the
+      fingers while the pedal clears the old sound, then the pedal catches the new one.
+
+      Change the pedal whenever the harmony changes. If two different chords ring together, that's
+      a blur.
+  - exercise: pedal-legato-chords
+  - exercise: pedal-legato-broken
+recap: "Hands first, then foot: up and down just after each new chord."

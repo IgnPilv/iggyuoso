@@ -1,0 +1,13 @@
+id: build-thirds
+title: "Build major and minor 3rds"
+kind: build
+prompt: "Play both notes of each 3rd."
+tasks:
+  - { interval: "M3", from: "C4" }
+  - { interval: "m3", from: "D4" }
+  - { interval: "M3", from: "F4" }
+  - { interval: "m3", from: "E4" }
+  - { interval: "M3", from: "D4" }
+  - { interval: "m3", from: "G4" }
+  - { interval: "M3", from: "A3" }
+  - { interval: "m3", from: "B3" }

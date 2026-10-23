@@ -1,5 +1,5 @@
 import { audio, click, loadPiano, outputLatencyMs, piano, stopAll } from '../audio/audio';
-import { keyName, toDevice, type Calibration } from '../calibration';
+import { keyName, keyWindow, toDevice, type Calibration } from '../calibration';
 import type { Exercise, FindExercise, SequenceExercise, TimedExercise } from '../content/types';
 import { midi } from '../midi/input';
 import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
@@ -16,7 +16,7 @@ import { FallingView, type Flash } from './falling';
 import { FindSession, positionKeys, SequenceSession, type UntimedResult } from '../scoring/untimed';
 import { demo } from '../demo/demo';
 import { h } from './dom';
-import { KeyboardView, rangeAround } from './keyboard';
+import { KeyboardView } from './keyboard';
 import { buildPlayer, earPlayer, quizPlayer } from './drills';
 import { renderStaff, type Clef, type StaffPart } from './staff';
 
@@ -273,7 +273,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
   let session = new SequenceSession(ex, cal);
   queueMicrotask(() => demo.onSequence?.(session));
   const pos = positionKeys(ex, cal);
-  const [lo, hi] = rangeAround([...session.keys, ...pos], cal.low, cal.high);
+  const [lo, hi] = keyWindow(cal, [...session.keys, ...pos]);
   const hand: Hand = ex.hand === 'left' ? 'left' : 'right';
   const ask = h('div', { class: 'ask' });
   const result = h('div');
@@ -407,7 +407,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   const expected = expectedNotes(ex);
   void loadPiano(expected.map((e) => e.midi));
   const devices = expected.map((e) => toDevice(cal, e.midi));
-  const [lo, hi] = rangeAround(devices, cal.low, cal.high);
+  const [lo, hi] = keyWindow(cal, devices);
 
   // Reading exercises start on the sheet, the rest on falling notes, until the player picks.
   const stage = h('div', { class: 'stage' });
