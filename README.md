@@ -25,10 +25,11 @@ src/music/          note strings, pitches, timeline of expected notes
 src/content/        YAML loader + validation
 src/calibration.ts  lowest white key + highest key -> range and middle C
 src/midi/           Web MIDI input, chord grouping (60 ms)
+src/engine/         TimedSession: clock, count-in, latency, capture, live judgement and score
 src/scoring/        timed scoring (per hand, habits, feedback), find/sequence sessions, stars
 src/progress/       localStorage store behind a swappable backend
 src/audio/          metronome click and guide notes
-src/ui/             minimal views: home, lesson, players, calibration, settings, MIDI tester
+src/ui/             views: home, lesson, players, falling notes (canvas), sheet, calibration, settings, MIDI tester
 tests/              vitest
 ```
 
@@ -43,5 +44,7 @@ tests/              vitest
   and spread (uneven beats). "Hands together" is the average gap between the hands on shared beats.
 - Feedback names the weaker hand and each habit that slipped. Stars: ★ 65, ★★ 80, ★★★ 92.
   Slower practice is free; records only count at 90% of the written tempo or faster.
+- Near-simultaneous presses (60 ms) in one hand count as one chord hit; gaps between hands are
+  kept, since that is what "hands together" measures. Presses during the count-in are ignored.
 - Times use MIDI event timestamps (falling back to `performance.now()` when a timestamp looks
   wrong), corrected for the audio output latency plus the player's own setting.

@@ -33,6 +33,8 @@ export interface ExerciseProgress {
   best?: Attempt;
   attempts: number;
   last?: Attempt;
+  /** Passed (★ or better) at least once, at a tempo that counts. */
+  passed?: boolean;
 }
 
 export interface Settings {
@@ -45,8 +47,30 @@ export interface Settings {
 const DEFAULT_SETTINGS: Settings = { latencyMs: 0, metronome: true, guide: false };
 const PREFIX = 'iggyuoso.';
 
+/**
+ * Version of everything saved under PREFIX. When the saved format changes, bump this and add a
+ * step to MIGRATIONS that upgrades data from the version before.
+ */
+export const SCHEMA_VERSION = 1;
+const MIGRATIONS: Record<number, (s: Store) => void> = {
+  // 0 -> 1: the first release saved the same shapes without a version number.
+  1: () => {},
+};
+
 export class Store {
-  constructor(private backend: Backend = localBackend) {}
+  constructor(private backend: Backend = localBackend) {
+    this.migrate();
+  }
+
+  private migrate() {
+    let v = this.read<number>('schema') ?? 0;
+    if (v > SCHEMA_VERSION) return; // saved by a newer app; leave it alone
+    while (v < SCHEMA_VERSION) {
+      v++;
+      MIGRATIONS[v]?.(this);
+    }
+    this.write('schema', SCHEMA_VERSION);
+  }
 
   private read<T>(key: string): T | undefined {
     const v = this.backend.get(PREFIX + key);
@@ -73,12 +97,15 @@ export class Store {
     p.attempts++;
     p.last = a;
     if (a.counts && (!p.best || a.score > p.best.score)) p.best = a;
+    if (a.counts && a.stars >= 1) p.passed = true;
     this.write(`ex.${id}`, p);
     return p;
   }
 
-  lessonDone(id: string): boolean { return this.read<boolean>(`lesson.${id}`) ?? false; }
-  markLessonDone(id: string) { this.write(`lesson.${id}`, true); }
+  /** A lesson is done when every exercise in it has been passed. */
+  lessonDone(exerciseIds: string[]): boolean {
+    return exerciseIds.length > 0 && exerciseIds.every((id) => this.exercise(id).passed);
+  }
 }
 
 export const store = new Store();

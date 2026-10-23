@@ -22,8 +22,10 @@ several lessons.
 - `sequence`: untimed. Play `notes` in order. Optional `fingers` (one per note), `position`
   (keys to light as the hand position).
 - `timed`: notes with durations against a metronome; scored per hand. Fields: `tempo` (bpm),
-  `meter`, `countIn` (bars), `right` / `left` note strings, optional `fingers`,
-  `pitchMatch: pitchClass` (any octave counts).
+  `meter`, `countIn` (bars), `right` / `left` note strings, optional `fingers` (one-hand
+  exercises) or `rightFingers` / `leftFingers` (both hands; one number per note or chord),
+  `pitchMatch: pitchClass` (any octave counts). Shown as falling notes; `display: staff` starts on
+  sheet music instead (the player can switch).
 
 Common fields: `hand` (`right`, `left`, `alternating`, later `together`), `display`
 (`keys` = light keys on the keyboard, `staff` = notation; with `clef: treble|bass`), `prompt`.

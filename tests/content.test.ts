@@ -27,6 +27,18 @@ describe('content validation', () => {
     expect(ex('kind: sequence\nnotes: "C4 D4"\nfingers: "1"')[0]).toMatch(/1 fingers for 2 notes/);
   });
 
+  it('takes fingering per hand when both hands play', () => {
+    const base = 'kind: timed\ntempo: 60\nmeter: 4/4\nright: "C4:h D4:h"\nleft: "C3:w"\n';
+    expect(ex(base + 'rightFingers: "1 2"\nleftFingers: "5"')).toEqual([]);
+    expect(ex(base + 'fingers: "1 2"')[0]).toMatch(/rightFingers/);
+    expect(ex(base + 'leftFingers: "5 4"')[0]).toMatch(/2 left fingers for 1 left notes/);
+  });
+
+  it('catches the same exercise id in two folders', () => {
+    const f = 'id: x\nkind: find\ntargets: [{ pitchClass: C }]';
+    expect(loadContent({ 'content/exercises/a/x.yaml': f, 'content/exercises/b/x.yaml': f }).errors[0]).toMatch(/duplicate exercise id/);
+  });
+
   it('catches an id that does not match the file name', () => {
     expect(loadContent({ 'content/exercises/y.yaml': 'id: x\nkind: find\ntargets: [{ pitchClass: C }]' }).errors[0]).toMatch(/match the file name/);
   });

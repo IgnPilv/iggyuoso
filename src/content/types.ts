@@ -54,7 +54,8 @@ export interface TimedExercise extends ExerciseBase {
   countIn: number;
   right?: NoteToken[];
   left?: NoteToken[];
-  fingers: number[];
+  /** Finger numbers per hand, one per note (chords take one number for the whole chord). */
+  fingers: Record<Hand, number[]>;
   pitchMatch: 'exact' | 'pitchClass';
   bars: number;
 }
