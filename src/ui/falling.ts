@@ -1,6 +1,7 @@
 import { keyName, type Calibration } from '../calibration';
 import type { LiveState } from '../engine/timedSession';
 import { isBlack, pitchClass, type Hand } from '../music/notes';
+import { palette, tokenColor, type Palette } from './theme';
 
 // Synthesia-style view: notes fall towards the keyboard and reach it on their beat. Drawn on a
 // canvas every frame from the session clock; the view owns no timing of its own.
@@ -28,16 +29,13 @@ export interface FrameState {
   noteState: (i: number) => LiveState;
   flashes: Flash[];
   now: number;
-  /** Keys to tint when nothing else lights them (hand position, keys already found). */
+  /** Keys to tint when nothing else lights them (hand position, keys already found): a colour or a CSS token name such as '--ok'. */
   marked?: ReadonlyMap<number, string>;
 }
 
-const COLORS: Record<Hand, { fill: string; bright: string; key: string }> = {
-  right: { fill: '#3b82f6', bright: '#93c5fd', key: '#60a5fa' },
-  left: { fill: '#22c55e', bright: '#86efac', key: '#4ade80' },
-};
-const MISSED = '#ef4444';
-const LANE_BG = '#14161c';
+// All colours come from the design tokens (styles/tokens.css) through palette().
+const handColors = (p: Palette, hand: Hand) =>
+  hand === 'right' ? { fill: p.rh, bright: p.rhBright, key: p.rhKey } : { fill: p.lh, bright: p.lhBright, key: p.lhKey };
 
 interface KeyGeom { x: number; w: number; black: boolean }
 
@@ -103,18 +101,24 @@ export class FallingView {
   draw(s: FrameState) {
     if (!this.width) this.layout();
     const { ctx, width, laneH } = this;
+    const p = palette();
     const ppb = laneH / this.opts.lookahead;
     const yOf = (beat: number) => laneH - (beat - s.beat) * ppb;
 
-    // Lane background, white-key lanes, beat and bar lines.
-    ctx.fillStyle = LANE_BG;
+    // Lane background with a faint glow rising from the hit line, white-key lanes, beat and bar lines.
+    ctx.fillStyle = p.laneBg;
     ctx.fillRect(0, 0, width, laneH);
+    const glow = ctx.createLinearGradient(0, laneH * 0.55, 0, laneH);
+    glow.addColorStop(0, 'transparent');
+    glow.addColorStop(1, withAlpha(p.hitLine, 0.12));
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, laneH * 0.55, width, laneH * 0.45);
     for (const [m, k] of this.keys) {
       if (k.black) continue;
-      ctx.fillStyle = pitchClass(m) === 0 ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.025)';
+      ctx.fillStyle = pitchClass(m) === 0 ? p.laneC : p.laneLine;
       ctx.fillRect(k.x + 0.5, 0, 1, laneH);
       if (m === this.cal.middleC) {
-        ctx.fillStyle = 'rgba(250,204,21,0.07)';
+        ctx.fillStyle = p.laneMiddleC;
         ctx.fillRect(k.x, 0, k.w, laneH);
       }
     }
@@ -122,13 +126,13 @@ export class FallingView {
     for (let b = Math.max(0, firstBeat); b <= Math.min(this.opts.totalBeats, s.beat + this.opts.lookahead); b++) {
       const y = yOf(b);
       const bar = b % this.opts.barQuarters === 0;
-      ctx.fillStyle = bar ? 'rgba(255,255,255,0.28)' : 'rgba(255,255,255,0.08)';
+      ctx.fillStyle = bar ? p.laneBar : p.laneBeat;
       ctx.fillRect(0, y, width, bar ? 1.5 : 1);
       if (bar && b < this.opts.totalBeats) {
-        ctx.fillStyle = 'rgba(255,255,255,0.4)';
-        ctx.font = '11px system-ui, sans-serif';
+        ctx.fillStyle = p.laneText;
+        ctx.font = `500 10px ${p.fontMono}`;
         ctx.textAlign = 'left';
-        ctx.fillText(`bar ${b / this.opts.barQuarters + 1}`, 6, y - 4);
+        ctx.fillText(`BAR ${b / this.opts.barQuarters + 1}`, 8, y - 5);
       }
     }
 
@@ -142,37 +146,61 @@ export class FallingView {
       const top = yOf(n.beat + n.beats) + 3;
       if (bottom < 0 || top > laneH) continue;
       const state = s.noteState(i);
-      const c = COLORS[n.hand];
+      const c = handColors(p, n.hand);
       const pad = k.black ? 1 : Math.max(2, k.w * 0.1);
       const x = k.x + pad;
       const w = k.w - 2 * pad;
       const yTop = Math.max(-4, top);
       const h = Math.min(laneH, bottom) - yTop;
-      ctx.globalAlpha = state === 'hit' ? 0.45 : 1;
-      ctx.fillStyle = state === 'missed' ? MISSED : state === 'now' ? c.bright : c.fill;
-      if (state === 'now') { ctx.shadowColor = c.bright; ctx.shadowBlur = 16; }
-      roundRect(ctx, x, yTop, w, h, Math.min(6, w / 3));
+      if (h <= 0) continue;
+      ctx.globalAlpha = state === 'hit' ? 0.35 : 1;
+      if (state === 'missed') ctx.fillStyle = p.bad;
+      else {
+        // Bright leading edge fading into the hand colour: notes read as light, not blocks.
+        const g = ctx.createLinearGradient(0, yTop, 0, yTop + h);
+        g.addColorStop(0, withAlpha(c.fill, 0.75));
+        g.addColorStop(1, state === 'now' ? c.bright : c.fill);
+        ctx.fillStyle = g;
+      }
+      ctx.shadowColor = state === 'missed' ? p.bad : c.fill;
+      ctx.shadowBlur = state === 'now' ? 24 : state === 'coming' ? 10 : 0;
+      roundRect(ctx, x, yTop, w, h, Math.min(7, w / 3));
       ctx.fill();
       ctx.shadowBlur = 0;
+      if (state !== 'hit' && state !== 'missed') {
+        ctx.strokeStyle = withAlpha(c.bright, 0.7);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
       ctx.globalAlpha = 1;
       // Label at the leading edge: note name, and finger number if given.
       if (h > 14 && w > 12) {
-        ctx.fillStyle = '#0b0d12';
+        ctx.fillStyle = p.noteInk;
         ctx.textAlign = 'center';
-        ctx.font = `700 ${Math.min(14, w * 0.5)}px system-ui, sans-serif`;
+        ctx.font = `700 ${Math.min(14, w * 0.5)}px ${p.fontDisplay}`;
         const label = keyName(this.cal, n.device).replace(/-?\d+$/, '');
         const ly = Math.min(laneH, bottom) - 6;
         ctx.fillText(label, x + w / 2, ly);
         if (n.finger && h > 32) {
-          ctx.font = `600 ${Math.min(12, w * 0.45)}px system-ui, sans-serif`;
+          ctx.font = `600 ${Math.min(12, w * 0.45)}px ${p.fontMono}`;
           ctx.fillText(String(n.finger), x + w / 2, ly - 16);
         }
       }
     }
 
-    // Hit line.
-    ctx.fillStyle = 'rgba(250,204,21,0.9)';
+    // Notes fade in from the dark at the top of the lane.
+    const fade = ctx.createLinearGradient(0, 0, 0, Math.min(60, laneH * 0.15));
+    fade.addColorStop(0, p.laneBg);
+    fade.addColorStop(1, withAlpha(p.laneBg, 0));
+    ctx.fillStyle = fade;
+    ctx.fillRect(0, 0, width, Math.min(60, laneH * 0.15));
+
+    // Hit line: a neon bar with a glow.
+    ctx.shadowColor = p.hitLine;
+    ctx.shadowBlur = 14;
+    ctx.fillStyle = p.hitLine;
     ctx.fillRect(0, laneH - 2, width, 2);
+    ctx.shadowBlur = 0;
 
     // Live judgements just above the hit line.
     for (const f of s.flashes) {
@@ -180,26 +208,32 @@ export class FallingView {
       if (!k || f.until < s.now) continue;
       const life = Math.max(0, Math.min(1, (f.until - s.now) / 900));
       ctx.globalAlpha = life;
-      ctx.fillStyle = f.kind === 'hit' ? '#4ade80' : MISSED;
-      ctx.font = '700 13px system-ui, sans-serif';
+      ctx.fillStyle = f.kind === 'hit' ? p.ok : p.bad;
+      ctx.shadowColor = ctx.fillStyle;
+      ctx.shadowBlur = 10;
+      ctx.font = `700 13px ${p.fontDisplay}`;
       ctx.textAlign = 'center';
       ctx.fillText(f.text, k.x + k.w / 2, laneH - 14 - (1 - life) * 24);
+      ctx.shadowBlur = 0;
       ctx.globalAlpha = 1;
     }
 
     // Count-in or banner.
     const big = s.count !== undefined ? String(s.count) : s.banner;
     if (big) {
-      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.fillStyle = p.laneBig;
+      ctx.shadowColor = p.laneBg;
+      ctx.shadowBlur = 24;
       ctx.textAlign = 'center';
-      ctx.font = `700 ${s.count !== undefined ? 72 : 28}px system-ui, sans-serif`;
-      ctx.fillText(big, width / 2, laneH / 2);
+      ctx.font = `700 ${s.count !== undefined ? 96 : 30}px ${p.fontDisplay}`;
+      ctx.fillText(big, width / 2, laneH / 2 + (s.count !== undefined ? 30 : 0));
+      ctx.shadowBlur = 0;
     }
 
-    this.drawKeyboard(s);
+    this.drawKeyboard(s, p);
   }
 
-  private drawKeyboard(s: FrameState) {
+  private drawKeyboard(s: FrameState, p: Palette) {
     const { ctx, laneH } = this;
     const kbH = this.height - laneH;
     const sounding = new Map<number, Hand>();
@@ -210,26 +244,30 @@ export class FallingView {
       if (state === 'now' || (s.beat >= n.beat && s.beat < n.beat + n.beats)) wanted.set(n.device, n.hand);
     });
     const wrong = new Set(s.flashes.filter((f) => f.kind !== 'hit' && f.until > s.now).map((f) => f.device));
-    const fill = (m: number, k: KeyGeom) => {
-      if (s.held.has(m)) return wrong.has(m) ? MISSED : wanted.has(m) ? COLORS[wanted.get(m)!].fill : '#94a3b8';
-      if (sounding.has(m)) return COLORS[sounding.get(m)!].key;
-      if (s.marked?.has(m)) return s.marked.get(m)!;
-      return k.black ? '#1f2128' : '#fafafa';
+    /** Fill and whether the key glows. */
+    const fill = (m: number, k: KeyGeom): [string, boolean] => {
+      if (s.held.has(m)) return wrong.has(m) ? [p.bad, true] : wanted.has(m) ? [handColors(p, wanted.get(m)!).fill, true] : [p.keyPressed, false];
+      if (sounding.has(m)) return [handColors(p, sounding.get(m)!).key, true];
+      if (s.marked?.has(m)) return [tokenColor(s.marked.get(m)!), false];
+      return [k.black ? p.keyBlack : p.keyWhite, false];
     };
     for (const black of [false, true]) {
       for (const [m, k] of this.keys) {
         if (k.black !== black) continue;
         const h = black ? kbH * 0.62 : kbH;
-        ctx.fillStyle = fill(m, k);
-        roundRect(ctx, k.x + (black ? 0 : 0.5), laneH, k.w - (black ? 0 : 1), h, 3);
+        const [color, lit] = fill(m, k);
+        ctx.fillStyle = color;
+        if (lit) { ctx.shadowColor = color; ctx.shadowBlur = 18; }
+        roundRect(ctx, k.x + (black ? 0 : 0.5), laneH, k.w - (black ? 0 : 1), h, black ? 3 : 4);
         ctx.fill();
-        ctx.strokeStyle = '#333';
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = p.keyStroke;
         ctx.lineWidth = 1;
         ctx.stroke();
         if (!black && pitchClass(m) === 0 && (this.opts.labels !== 'middle-c' || m === this.cal.middleC)) {
           const mid = m === this.cal.middleC;
-          ctx.fillStyle = mid ? '#b45309' : '#555';
-          ctx.font = `${mid ? 700 : 500} ${Math.min(12, k.w * 0.42)}px system-ui, sans-serif`;
+          ctx.fillStyle = mid ? p.middleC : p.keyLabel;
+          ctx.font = `${mid ? 700 : 500} ${Math.min(12, k.w * 0.42)}px ${p.fontDisplay}`;
           ctx.textAlign = 'center';
           ctx.fillText(keyName(this.cal, m), k.x + k.w / 2, laneH + kbH - 8);
           if (mid) {
@@ -240,7 +278,29 @@ export class FallingView {
         }
       }
     }
+    // A thin shadow where the keys meet the lane, like a key slip.
+    const slip = ctx.createLinearGradient(0, laneH, 0, laneH + 8);
+    slip.addColorStop(0, 'rgba(0,0,0,0.45)');
+    slip.addColorStop(1, 'transparent');
+    ctx.fillStyle = slip;
+    ctx.fillRect(0, laneH, this.width, 8);
   }
+}
+
+/** A colour with a new alpha. Accepts #rgb, #rrggbb and rgb()/rgba(). */
+function withAlpha(color: string, a: number): string {
+  const hex = color.match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);
+  if (hex) {
+    const v = hex[1].length === 3 ? hex[1].split('').map((c) => c + c).join('') : hex[1];
+    const n = parseInt(v, 16);
+    return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
+  }
+  const rgb = color.match(/^rgba?\(([^)]+)\)$/);
+  if (rgb) {
+    const [r, g, b] = rgb[1].split(',').map((x) => x.trim());
+    return `rgba(${r},${g},${b},${a})`;
+  }
+  return color;
 }
 
 function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {

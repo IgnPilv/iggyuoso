@@ -44,9 +44,11 @@ export interface Settings {
   guide: boolean;
   /** Last view the player picked; unset = each exercise's own default. */
   view?: 'classic' | 'falling';
+  /** Look of the app; 'system' follows the device. index.html reads this before first paint. */
+  theme: 'system' | 'light' | 'dark';
 }
 
-const DEFAULT_SETTINGS: Settings = { latencyMs: 0, metronome: true, guide: false };
+const DEFAULT_SETTINGS: Settings = { latencyMs: 0, metronome: true, guide: false, theme: 'system' };
 const PREFIX = 'iggyuoso.';
 
 /**

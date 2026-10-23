@@ -15,7 +15,7 @@ describe('progress store', () => {
   });
 
   it('has default settings', () => {
-    expect(new Store(memoryBackend()).settings).toEqual({ latencyMs: 0, metronome: true, guide: false });
+    expect(new Store(memoryBackend()).settings).toEqual({ latencyMs: 0, metronome: true, guide: false, theme: 'system' });
   });
 
   it('marks a lesson done only when every exercise passed at a tempo that counts', () => {

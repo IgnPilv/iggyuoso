@@ -99,8 +99,9 @@ function animate(draw: (now: number) => void) {
   return () => cancelAnimationFrame(raf);
 }
 
-const FOUND = '#4ade80';
-const POSITION = '#dbe4ff';
+// Key tints in falling notes, as design tokens (styles/tokens.css).
+const FOUND = '--ok';
+const POSITION = '--key-pos';
 
 // ---------------------------------------------------------------- find
 

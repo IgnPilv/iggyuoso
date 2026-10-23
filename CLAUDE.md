@@ -18,7 +18,7 @@ never copied pages). Start small, adapt as we go.
 - Work is split into separate conversations on the same repo:
   - **Content**: curriculum, lessons, exercises, how lessons are written.
   - **Technical**: engine, MIDI, audio, scoring, rendering, data model, deployment.
-  - **Design** (later): look, feel, copy.
+  - **Design**: look, feel, copy. Design system in `docs/design.md`; tokens in `src/styles/tokens.css`.
 
 ## Stack and conventions
 - Vite + TypeScript, built from scratch (the old single-file prototype is not reused).
@@ -104,3 +104,11 @@ never copied pages). Start small, adapt as we go.
   next note falls to the keyboard and waits until it is played). The player's pick is remembered
   for all exercises (`settings.view`, also in Settings); until then reading exercises start on
   the sheet and other timed ones on falling notes. The demo flips the toggle to show both.
+- 2026-10-23: Design system v1 (design thread). Dark-first "new-wave" look: near-black with soft
+  aurora glows, glass cards, brand gradient coral → pink → violet for brand and main actions;
+  type Space Grotesk (display) + Inter (body) + JetBrains Mono (data), bundled via npm. All
+  colours are tokens in `src/styles/tokens.css` (light and dark sets); canvas reads them through
+  `palette()` in `src/ui/theme.ts`. No hard-coded colours in components. Rules: `docs/design.md`.
+- 2026-10-23: Theme = Follow the device / Dark / Light (`settings.theme`, header button and
+  Settings → Appearance), applied before first paint by `index.html`. The falling-notes stage
+  stays dark in both themes. Demo scene "Dark and light" flips themes without saving.

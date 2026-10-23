@@ -5,6 +5,7 @@ import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
 import { h, type View } from './dom';
 import { mountExercise } from './players';
+import { currentTheme, previewTheme } from './theme';
 import { calibrateView, testerView } from './views';
 
 // The no-keyboard showcase. Scenes are picked from the live content, so the demo always shows
@@ -79,6 +80,17 @@ function scenes(): Scene[] {
   if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score.', run: exerciseScene(twoHands, { view: 'falling' }) });
   const sheet = pick(isTimed, (e) => e.display === 'staff' && !(e.right && e.left));
   if (sheet) out.push({ title: 'Sheet music', caption: 'The same exercise on "Keyboard & sheet": the staff, with notes turning green or red as they are played.', run: exerciseScene(sheet, { view: 'classic' }) });
+  const looks = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys');
+  if (looks) out.push({
+    title: 'Dark and light',
+    caption: 'The app comes in a dark look and a light one. Pick one with the button at the top right or in Settings → Appearance, or let it follow your device. Here it flips between the two while the pianist plays.',
+    run: (box, next, p) => {
+      const other = currentTheme() === 'dark' ? 'light' : 'dark';
+      const flips = [2200, 4600, 7000].map((t, i) => window.setTimeout(() => previewTheme(i % 2 === 0 ? other : undefined), t));
+      const cleanup = exerciseScene(looks, { view: 'classic' })(box, next, p);
+      return () => { flips.forEach(clearTimeout); previewTheme(undefined); cleanup?.(); };
+    },
+  });
   out.push({
     title: 'MIDI tester',
     caption: 'In Settings, the MIDI tester shows each key you press and the raw MIDI messages, for checking that a keyboard is connected.',
@@ -164,5 +176,5 @@ export const demoView: View = (root, arg) => {
     h('section', { class: 'card' }, h('h2', {}, 'Watch any exercise'), exercises),
   );
   if (arg === 'start') startBtn.click();
-  return () => { stopScene(); stopDemo(); };
+  return () => { stopScene(); stopDemo(); previewTheme(undefined); };
 };

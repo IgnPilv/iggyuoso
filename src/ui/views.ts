@@ -4,10 +4,11 @@ import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
 import { store } from '../progress/store';
-import { h, type View } from './dom';
+import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
 import { markdown } from './markdown';
 import { mountExercise } from './players';
+import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
 
 const lessonExercises = (l: Lesson) => l.steps.flatMap((s) => ('exercise' in s ? [s.exercise] : []));
 
@@ -39,25 +40,37 @@ export const homeView: View = (root) => {
   showBanner();
   const off = midi.onPorts(showBanner);
   root.append(banner);
-  root.append(h('section', { class: 'card demo-card' },
-    h('div', {},
-      h('h2', {}, 'See it first'),
-      h('p', { class: 'small' }, 'No keyboard needed: watch the app play itself through setup, the exercises and the live feedback.')),
-    h('button', { class: 'secondary', onclick: () => go('/demo') }, 'Watch the demo')));
-  if (!store.calibration) {
-    root.append(h('section', { class: 'card hero' },
-      h('h2', {}, 'Welcome'),
-      h('p', {}, 'iggyuoso teaches piano in small steps: hands apart, then together. First, show the app your keyboard.'),
-      h('button', { onclick: () => go('/calibrate') }, 'Set up the keyboard')));
-  }
+  const firstNotDone = content.units.flatMap((u) => u.lessons).find((id) => {
+    const l = content.lessons.get(id);
+    return l && !store.lessonDone(lessonExercises(l));
+  });
+  const nextLesson = firstNotDone ? content.lessons.get(firstNotDone) : undefined;
+  const title = h('h1', {}, 'Hands apart, ', h('span', { class: 'gradient-text' }, 'then together.'));
+  root.append(h('section', { class: 'card hero' },
+    heroKeys(),
+    h('span', { class: 'eyebrow' }, 'Piano trainer · MIDI keyboard'),
+    title,
+    h('p', {}, store.calibration
+      ? 'Short exercises, each training one skill. Every hand gets its own score, and the feedback says which hand or habit gave way.'
+      : 'Short exercises, each training one skill, scored hand by hand. First, show the app your keyboard.'),
+    h('div', { class: 'controls' },
+      !store.calibration
+        ? h('button', { onclick: () => go('/calibrate') }, 'Set up the keyboard')
+        : nextLesson ? h('button', { onclick: () => go(`/lesson/${nextLesson.id}`) }, `Continue: ${nextLesson.title}`) : null,
+      h('button', { class: 'secondary', onclick: () => go('/demo') }, 'Watch the demo'),
+      h('span', { class: 'small' }, 'The demo needs no keyboard.')),
+  ));
   for (const unit of content.units) {
+    const lessons = unit.lessons.map((id) => content.lessons.get(id)).filter((l): l is Lesson => !!l);
+    const done = lessons.filter((l) => store.lessonDone(lessonExercises(l))).length;
     root.append(h('section', { class: 'card' },
-      h('h2', {}, unit.title),
+      h('div', { class: 'unit-head' },
+        h('h2', {}, unit.title),
+        h('span', { class: 'unit-progress' }, `${done} / ${lessons.length} done`)),
       h('p', { class: 'small' }, unit.summary),
-      h('ol', { class: 'lessons' }, ...unit.lessons.map((id) => {
-        const l = content.lessons.get(id);
-        if (!l) return null;
-        return h('li', { class: store.lessonDone(lessonExercises(l)) ? 'done' : '' }, h('a', { href: `#/lesson/${id}` }, l.title));
+      h('ol', { class: 'lessons' }, ...lessons.map((l) => {
+        const cls = store.lessonDone(lessonExercises(l)) ? 'done' : l.id === firstNotDone && store.calibration ? 'next' : '';
+        return h('li', { class: cls }, h('a', { href: `#/lesson/${l.id}` }, l.title));
       })),
     ));
   }
@@ -66,6 +79,14 @@ export const homeView: View = (root) => {
   }
   return off;
 };
+
+/** Decoration for the hero: one octave of keys, a few lit in the hand colours. */
+function heroKeys(): SVGSVGElement {
+  const lit: Record<number, string> = { 0: 'lit-l', 2: 'lit-l', 4: 'lit-r', 6: 'lit-r' };
+  return svgEl('svg', { viewBox: '0 0 352 220', class: 'hero-keys', 'aria-hidden': 'true' },
+    ...[0, 1, 2, 3, 4, 5, 6].map((i) => svgEl('rect', { x: i * 50 + 1, y: 0, width: 48, height: 218, rx: 8, class: `w ${lit[i] ?? ''}` })),
+    ...[1, 2, 4, 5, 6].map((i) => svgEl('rect', { x: i * 50 - 15, y: 0, width: 30, height: 132, rx: 6, class: i === 5 ? 'b lit-r' : 'b' })));
+}
 
 // ---------------------------------------------------------------- calibration
 
@@ -156,6 +177,7 @@ export const lessonView: View = (root, id?: string) => {
   const body = h('div');
   const nav = h('div', { class: 'controls' });
   const progress = h('span', { class: 'small' });
+  const bar = h('div', { class: 'step-bar', 'aria-hidden': 'true' }, ...[...lesson.steps, null].map(() => h('span')));
   let step = 0;
   let cleanup: (() => void) | undefined;
 
@@ -165,6 +187,7 @@ export const lessonView: View = (root, id?: string) => {
     body.replaceChildren();
     nav.replaceChildren();
     progress.textContent = step < lesson.steps.length ? `Step ${step + 1} of ${lesson.steps.length}` : 'Recap';
+    [...bar.children].forEach((el, i) => { el.className = i < step ? 'done' : i === step ? 'current' : ''; });
     if (step > 0) nav.append(h('button', { class: 'secondary', onclick: () => { step--; show(); } }, 'Back'));
     if (step >= lesson.steps.length) return showRecap(lesson);
     const s = lesson.steps[step];
@@ -196,7 +219,7 @@ export const lessonView: View = (root, id?: string) => {
     nav.append(nextId ? h('button', { onclick: () => go(`/lesson/${nextId}`) }, 'Next lesson') : h('button', { onclick: () => go('/') }, 'Home'));
   };
 
-  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('h2', {}, lesson.title), progress), body, nav));
+  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('h2', {}, lesson.title), progress), bar, body, nav));
   show();
   return () => cleanup?.();
 };
@@ -227,6 +250,7 @@ export const settingsView: View = (root) => {
     box.onchange = () => { store.settings = { ...store.settings, [key]: box.checked }; };
     return h('label', {}, box, ` ${label}`);
   };
+  const appearance = themeSetting();
   root.append(
     h('section', { class: 'card' },
       h('h2', {}, 'Keyboard'),
@@ -246,8 +270,27 @@ export const settingsView: View = (root) => {
       h('div', { class: 'controls' }, toggle('metronome', 'Click while playing'), toggle('guide', 'Guide notes while playing')),
       h('div', { class: 'controls' }, h('label', {}, 'View ', viewPref())),
     ),
+    appearance.el,
   );
+  return appearance.off;
 };
+
+const THEME_CHOICES: [ThemeChoice, string][] = [['system', 'Follow the device'], ['dark', 'Dark'], ['light', 'Light']];
+
+/** Appearance card: System / Dark / Light, kept in sync with the header button. */
+export function themeSetting() {
+  const buttons = THEME_CHOICES.map(([v, label]) =>
+    h('button', { class: 'seg', 'data-theme-choice': v, onclick: () => setThemeChoice(v) }, label));
+  const sync = () => buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeChoice === themeChoice())));
+  sync();
+  window.addEventListener(THEME_CHOICE_EVENT, sync);
+  const el = h('section', { class: 'card' },
+    h('h2', {}, 'Appearance'),
+    h('div', { class: 'setting-row' },
+      h('p', { class: 'small' }, 'Dark is easy on the eyes at the piano. "Follow the device" switches with your system.'),
+      h('div', { class: 'segmented', role: 'group', 'aria-label': 'theme' }, ...buttons)));
+  return { el, off: () => window.removeEventListener(THEME_CHOICE_EVENT, sync) };
+}
 
 function viewPref() {
   const sel = h('select', {},
