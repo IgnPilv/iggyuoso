@@ -1,0 +1,24 @@
+id: song-old-macdonald
+title: Old MacDonald Had a Farm
+skills:
+- songs
+steps:
+- explain: |
+    **Old MacDonald Had a Farm** · Folk song, England and America
+
+    "E-I-E-I-O": a farm song sung in a hundred versions, one animal at a time.
+  staff:
+    notes: G4:q G4:q G4:q D4:q  |  E4:q E4:q D4:h
+    key: G
+  sound: G4:q G4:q G4:q D4:q  |  E4:q E4:q D4:h  |  B4:q B4:q A4:q A4:q  |  G4:h. D4:q
+- explain: |
+    **Before you play.** Right hand in G position, thumb on G... but the tune dips to D below it. Use your thumb for D and shift.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 100
+- exercise: song-old-macdonald-rh
+- exercise: song-old-macdonald-lh
+- exercise: song-old-macdonald
+- exercise: song-old-macdonald-arranged
+recap: 'Old MacDonald Had a Farm: tune, left hand, together. Come back to it any time; songs are for fun.'

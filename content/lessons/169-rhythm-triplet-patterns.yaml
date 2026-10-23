@@ -1,0 +1,13 @@
+id: rhythm-triplet-patterns
+title: Triplet patterns
+skills:
+- rhythm
+steps:
+- explain: |
+    Three even notes in one beat: "**tri**-pl-et". Triplets feel round where eighths feel square.
+  sound: C5:e3 C5:e3 C5:e3 C5:q C5:e C5:e C5:q
+- exercise: rt-trip-1
+- exercise: rt-trip-hands
+- exercise: ear-rt-triplets
+- exercise: gen-echo-triplets
+recap: Round triplets, square eighths.

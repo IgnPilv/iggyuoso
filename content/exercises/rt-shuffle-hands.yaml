@@ -1,0 +1,11 @@
+id: rt-shuffle-hands
+title: Boogie shuffle
+kind: tap
+prompt: The left hand shuffles; the right hand keeps it simple.
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w
+left: x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 | x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 | x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 x:q3
+  x:e3 | x:w

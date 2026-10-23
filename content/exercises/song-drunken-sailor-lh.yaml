@@ -1,0 +1,13 @@
+id: song-drunken-sailor-lh
+title: 'What Shall We Do with the Drunken Sailor?: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D3:w | D3:w | C3:w | C3:w | D3:w | D3:w | C3:h A2:h | D3:w
+reps: 2
+days: 1

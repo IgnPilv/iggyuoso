@@ -1,0 +1,12 @@
+id: cadence-f-minor
+title: 'F minor: i, iv, V7, i'
+kind: timed
+hand: together
+prompt: 'The right hand barely moves: keep the common notes, slide the others to the nearest key.'
+key: Fm
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4+Ab4+C5:h F4+Bb4+Db5:h | E4+Bb4+C5:h F4+Ab4+C5:h | F4+Ab4+C5:h F4+Bb4+Db5:h | E4+Bb4+C5:h F4+Ab4+C5:h
+left: F2:h Bb2:h | C3:h F2:h | F2:h Bb2:h | C3:h F2:h

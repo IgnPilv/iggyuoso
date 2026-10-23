@@ -1,0 +1,9 @@
+id: ear-four-triads
+title: All four triads
+skills:
+- ear
+steps:
+- explain: |
+    Major, minor, diminished and **augmented** (stretched, dreamlike, like a question).
+- exercise: ear-maj-min-dim-aug
+recap: Four triads, four moods.

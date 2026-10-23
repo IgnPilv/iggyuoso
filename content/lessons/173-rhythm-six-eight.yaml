@@ -1,0 +1,17 @@
+id: rhythm-six-eight
+title: '6/8: two big beats'
+skills:
+- rhythm
+steps:
+- explain: |
+    **6/8** has six eighths a bar, felt as **two** big beats of three: **ONE**-two-three **FOUR**-five-six. The
+    count-in and click follow the big beats.
+  sound: C5:q C5:e C5:q C5:e | C5:q. C5:q.
+  terms:
+  - 6/8
+  - compound time
+- exercise: rt-68-1
+- exercise: rt-68-2
+- exercise: ear-rt-68
+- exercise: gen-read-68
+recap: '6/8: two beats, each split in three.'

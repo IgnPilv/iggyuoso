@@ -1,0 +1,99 @@
+id: theory-all-signatures-quiz
+title: Key signatures quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: How many sharps has E major?
+  choices:
+  - '2'
+  - '1'
+  - '3'
+  - '4'
+  correct: 3
+  why: 'E major: F♯, C♯, G♯, D♯.'
+- ask: How many sharps has B major?
+  choices:
+  - '5'
+  - '7'
+  - '1'
+  - '2'
+  correct: 0
+  why: 'B major: F♯, C♯, G♯, D♯, A♯.'
+- ask: How many flats has A♭ major?
+  choices:
+  - '2'
+  - '7'
+  - '1'
+  - '4'
+  correct: 3
+  why: 'A♭ major: B♭, E♭, A♭, D♭.'
+- ask: How many flats has D♭ major?
+  choices:
+  - '3'
+  - '5'
+  - '1'
+  - '7'
+  correct: 1
+  why: 'D♭ major: B♭, E♭, A♭, D♭, G♭.'
+- ask: How many sharps has F♯ major?
+  choices:
+  - '6'
+  - '3'
+  - '4'
+  - '2'
+  correct: 0
+  why: 'F♯ major: F♯, C♯, G♯, D♯, A♯, E♯.'
+- ask: How many flats has E♭ major?
+  choices:
+  - '3'
+  - '5'
+  - '1'
+  - '2'
+  correct: 0
+  why: 'E♭ major: B♭, E♭, A♭.'
+- ask: How many sharps has A major?
+  choices:
+  - '7'
+  - '2'
+  - '5'
+  - '3'
+  correct: 3
+  why: 'A major: F♯, C♯, G♯.'
+- ask: How many flats has B♭ major?
+  choices:
+  - '1'
+  - '3'
+  - '2'
+  - '7'
+  correct: 2
+  why: 'B♭ major: B♭, E♭.'
+- ask: Going round the circle of fifths clockwise adds...
+  choices:
+  - One flat
+  - Two sharps
+  - One sharp each step
+  correct: 2
+  why: 'C G D A E B F♯: one more sharp each time.'
+- ask: F♯ major and G♭ major sound...
+  choices:
+  - A half step apart
+  - A fifth apart
+  - The same (enharmonic keys)
+  correct: 2
+  why: 'Six sharps or six flats: the same keys on the piano.'
+- ask: The last sharp in E major is...
+  choices:
+  - A♯
+  - G♯
+  - D♯
+  correct: 2
+  why: 'F♯ C♯ G♯ D♯: the key is a half step above, E.'
+- ask: The flats in A♭ major are...
+  choices:
+  - B♭ E♭ A♭
+  - B♭ E♭ A♭ D♭ G♭
+  - B♭ E♭ A♭ D♭
+  correct: 2
+  why: Second-to-last flat A♭ = the key.

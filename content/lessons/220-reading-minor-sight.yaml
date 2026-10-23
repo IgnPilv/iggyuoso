@@ -1,0 +1,10 @@
+id: reading-minor-sight
+title: Sight-reading in minor keys
+skills:
+- reading
+steps:
+- explain: |
+    Minor tunes in A, D and E minor. The raised 7th (G♯ in A minor) appears as an accidental in the music.
+- exercise: rd-sight-minor-rh
+- exercise: rd-sight-minor-together
+recap: Minor reads like major, with different home notes.

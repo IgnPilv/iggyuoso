@@ -1,0 +1,10 @@
+id: reading-two-hands-fifths
+title: 'Both hands: root and fifth'
+skills:
+- reading
+steps:
+- explain: |
+    The left hand now moves within each bar: root, then fifth. Read both staves in one glance: the left hand pattern repeats.
+- exercise: rd-sight-together-fifths
+- exercise: rd-sight-eighths
+recap: One glance, two staves.

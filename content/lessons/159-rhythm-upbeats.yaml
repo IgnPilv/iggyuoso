@@ -1,0 +1,16 @@
+id: rhythm-upbeats
+title: Starting before the beat
+skills:
+- rhythm
+steps:
+- explain: |
+    Many tunes start on an **upbeat**: one note before the first strong beat ("Happy BIRTH-day"). The
+    count-in counts the whole bar; the upbeat comes on its last beat.
+  sound: G4:e G4:e | A4:q G4:q C5:q | B4:h
+  terms:
+  - upbeat
+  - pickup
+- exercise: rt-upbeat-44
+- exercise: rt-upbeat-34
+- exercise: rt-upbeat-hands
+recap: An upbeat leans into the first strong beat.

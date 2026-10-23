@@ -1,0 +1,16 @@
+id: ear-seconds-thirds-up
+title: Seconds and thirds
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - m2
+  - M2
+  - m3
+  - M3
+  from: C4
+  direction: up
+  answer: name

@@ -1,0 +1,11 @@
+id: ear-sixths-sevenths
+title: Sixths and sevenths
+skills:
+- ear
+steps:
+- explain: |
+    The wide intervals. A **minor 7th** is a step short of an octave ("Somewhere" from West Side Story); a
+    **major 7th** is a half step short, and it rubs.
+  sound: C4:h A4:h | C4:h Bb4:h | C4:h B4:h
+- exercise: ear-sixths-sevenths-up
+recap: 'Sevenths: one step short of home.'

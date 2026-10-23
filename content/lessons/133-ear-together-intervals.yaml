@@ -1,0 +1,11 @@
+id: ear-together-intervals
+title: Two notes together
+skills:
+- ear
+steps:
+- explain: |
+    Now the two notes sound **at once**. A third sounds sweet, a fifth open, an octave like one note.
+  sound: C4+E4:h C4+G4:h | C4+C5:w
+- exercise: ear-harmonic-3-5-8
+- exercise: ear-count-2-3-4
+recap: Intervals played together are called harmonic intervals.

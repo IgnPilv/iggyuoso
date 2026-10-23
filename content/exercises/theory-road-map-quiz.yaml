@@ -1,0 +1,91 @@
+id: theory-road-map-quiz
+title: Road map quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A repeat sign at the end means...
+  choices:
+  - Play louder
+  - Go back to the start (or the facing repeat sign)
+  - Stop
+  correct: 1
+  why: 'Two dots before a double bar line: play that section again.'
+- ask: With 1st and 2nd endings, the second time through you...
+  choices:
+  - Skip the 1st ending and play the 2nd
+  - Play the 1st ending twice
+  - Play both endings
+  correct: 0
+  why: The brackets tell you which ending to take each time.
+- ask: D.C. al Fine means...
+  choices:
+  - Repeat the last bar
+  - Go to the sign
+  - Go back to the beginning and end at Fine
+  correct: 2
+  why: Da Capo = from the head (the start); Fine = the end.
+- ask: D.S. means...
+  choices:
+  - Go back to the sign 𝄋
+  - Play the coda
+  - Go back to the start
+  correct: 0
+  why: Dal Segno = from the sign.
+- ask: '"To Coda" tells you to...'
+  choices:
+  - Repeat
+  - Jump to the coda ending
+  - Play slower
+  correct: 1
+  why: The coda (tail) is a separate ending section, marked with ⊕.
+- ask: Fine means...
+  choices:
+  - The end
+  - Fine and slow
+  - A repeat
+  correct: 0
+  why: Fine (Italian) = end.
+- ask: A double bar line (thin, then thick) means...
+  choices:
+  - A key change
+  - The end of the piece
+  - A repeat
+  correct: 1
+  why: Without dots, the thick double bar is the final bar line.
+- ask: A piece is 8 bars with a repeat sign at the end. You play...
+  choices:
+  - 8 bars
+  - 24 bars
+  - 16 bars
+  correct: 2
+  why: Eight bars, then the same eight again.
+- ask: Da Capo is Italian for...
+  choices:
+  - From the sign
+  - With the tail
+  - From the head (the start)
+  correct: 2
+  why: Capo = head.
+- ask: Repeat signs facing each other enclose...
+  choices:
+  - The section to repeat
+  - A key change
+  - A section to skip
+  correct: 0
+  why: Only the bars between them repeat.
+- ask: After D.C. al Fine, do you take the repeats again?
+  choices:
+  - Always
+  - Only the first one
+  - Usually not
+  correct: 2
+  why: By convention repeats are skipped after a D.C. unless the music says otherwise.
+- ask: The 𝄋 sign is called...
+  choices:
+  - Fermata
+  - Segno
+  - Coda
+  correct: 1
+  why: Segno = sign.

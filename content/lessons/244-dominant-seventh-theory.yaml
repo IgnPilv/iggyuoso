@@ -1,0 +1,26 @@
+id: dominant-seventh-theory
+title: The dominant 7th chord
+skills:
+- theory
+steps:
+- explain: |
+    Add a fourth note to the dominant triad, a 7th above its root, and you get the **dominant 7th** (V7). In C: G B D **F**.
+    It is the most restless chord in a key: the **B** wants to rise to C and the **F** wants to fall to E.
+  staff:
+    notes: G3+B3+D4+F4:h C4+E4+G4:h
+    clef: treble
+  sound: G3+B3+D4+F4:h C4+E4+G4:h
+  terms:
+  - dominant 7th
+  - resolution
+  - tritone
+  check:
+    ask: V7 in F major is...
+    choices:
+    - 'C7: C E G B♭'
+    - 'F7: F A C E♭'
+    - 'C7: C E G B'
+    correct: 0
+    why: Degree 5 of F is C; the 7th above C in F major is B♭.
+- exercise: theory-dominant-seventh-quiz
+recap: 'V7: four notes that must go home.'

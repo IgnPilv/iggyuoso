@@ -1,0 +1,14 @@
+id: pos-e-flat
+title: E♭ major position, hands together
+kind: timed
+hand: together
+prompt: 'Thumbs on different notes: right thumb on Eb, left little finger on Eb.'
+key: Eb
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Eb4:q F4:q G4:q Ab4:q | Bb4:q Ab4:q G4:q F4:q | Eb4:q G4:q Bb4:q G4:q | Eb4:w
+left: Eb3:q F3:q G3:q Ab3:q | Bb3:q Ab3:q G3:q F3:q | Eb3:q G3:q Bb3:q G3:q | Eb3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 5 3 1
+leftFingers: 5 4 3 2 1 2 3 4 5 3 1 3 5

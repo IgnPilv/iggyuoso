@@ -1,0 +1,10 @@
+id: ear-perfect-pitch-c
+title: 'Side quest: remember C'
+skills:
+- ear
+steps:
+- explain: |
+    Can you remember what C sounds like without a reference? Most people cannot at first, and it does not
+    matter for playing. This side quest is just for fun: C, or not C?
+- exercise: ear-absolute-c
+recap: 'A side quest: try it now and then, never worry about it.'

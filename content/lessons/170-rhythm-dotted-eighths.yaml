@@ -1,0 +1,14 @@
+id: rhythm-dotted-eighths
+title: Dotted eighths
+skills:
+- rhythm
+steps:
+- explain: |
+    A dotted eighth and a sixteenth fill one beat: long-short, much snappier than a dotted quarter. It is the
+    "jumpy" rhythm of marches and the Scotch snap reversed.
+  staff:
+    notes: C5:e. C5:s C5:e. C5:s C5:q C5:q
+- exercise: rt-dotted-8th-1
+- exercise: rt-dotted-8th-hands
+- exercise: ear-rt-dotted-8th
+recap: Dotted eighths snap; even eighths flow.

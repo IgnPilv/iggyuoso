@@ -1,0 +1,15 @@
+id: technique-two-octave-scales-ht
+title: Two octaves in eighths
+skills:
+- technique
+steps:
+- explain: |
+    Two octaves, hands together, in eighths: the scale exam standard. Start slowly; the tempo ladder brings it up.
+- exercise: scale-c-2-e
+- exercise: scale-g-2-e
+- exercise: scale-d-2-e
+- exercise: scale-f-2-e
+- exercise: scale-a-minor-2-e
+- exercise: scale-e-minor-2-e
+- exercise: scale-d-minor-2-e
+recap: Two octaves, even and steady.

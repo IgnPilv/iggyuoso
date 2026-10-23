@@ -1,0 +1,25 @@
+id: ear-sus2-sus4-maj
+title: sus2, sus4 or major?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: chord
+  pool:
+  - sus2
+  - sus4
+  - maj
+  root: C4
+- type: chord
+  pool:
+  - sus2
+  - sus4
+  - maj
+  root: D4
+- type: chord
+  pool:
+  - sus2
+  - sus4
+  - maj
+  root: G3

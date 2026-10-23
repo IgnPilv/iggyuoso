@@ -1,8 +1,8 @@
 id: ear-year-1-exit
-title: "Year 1 exam: ears"
+title: "Milestone 3: ears"
 kind: ear
 feedback: none
-prompt: The Year 1 ear test. Mixed questions, no hints.
+prompt: The Milestone 3 ear test. Mixed questions, no hints.
 cadence: C
 questions: 25
 items:

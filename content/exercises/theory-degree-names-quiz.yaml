@@ -1,0 +1,119 @@
+id: theory-degree-names-quiz
+title: Degree names quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: In C major, the tonic is...
+  choices:
+  - A
+  - C
+  - G
+  - D
+  correct: 1
+  why: 'C major: C, D, E, F, G, A, B. Degree 1, the tonic, is C.'
+- ask: In C major, the leading note is...
+  choices:
+  - E
+  - F
+  - C
+  - B
+  correct: 3
+  why: 'C major: C, D, E, F, G, A, B. Degree 7, the leading note, is B.'
+- ask: In G major, the dominant is...
+  choices:
+  - B
+  - D
+  - A
+  - C
+  correct: 1
+  why: 'G major: G, A, B, C, D, E, F♯. Degree 5, the dominant, is D.'
+- ask: In G major, the subdominant is...
+  choices:
+  - D
+  - B
+  - C
+  - G
+  correct: 2
+  why: 'G major: G, A, B, C, D, E, F♯. Degree 4, the subdominant, is C.'
+- ask: In F major, the leading note is...
+  choices:
+  - C
+  - G
+  - D
+  - E
+  correct: 3
+  why: 'F major: F, G, A, B♭, C, D, E. Degree 7, the leading note, is E.'
+- ask: In F major, the mediant is...
+  choices:
+  - E
+  - F
+  - A
+  - B♭
+  correct: 2
+  why: 'F major: F, G, A, B♭, C, D, E. Degree 3, the mediant, is A.'
+- ask: In D major, the leading note is...
+  choices:
+  - F♯
+  - C♯
+  - D
+  - B
+  correct: 1
+  why: 'D major: D, E, F♯, G, A, B, C♯. Degree 7, the leading note, is C♯.'
+- ask: In D major, the tonic is...
+  choices:
+  - E
+  - G
+  - B
+  - D
+  correct: 3
+  why: 'D major: D, E, F♯, G, A, B, C♯. Degree 1, the tonic, is D.'
+- ask: In B♭ major, the tonic is...
+  choices:
+  - F
+  - B♭
+  - G
+  - D
+  correct: 1
+  why: 'B♭ major: B♭, C, D, E♭, F, G, A. Degree 1, the tonic, is B♭.'
+- ask: In B♭ major, the mediant is...
+  choices:
+  - D
+  - C
+  - E♭
+  - A
+  correct: 0
+  why: 'B♭ major: B♭, C, D, E♭, F, G, A. Degree 3, the mediant, is D.'
+- ask: In A major, the mediant is...
+  choices:
+  - C♯
+  - B
+  - D
+  - G♯
+  correct: 0
+  why: 'A major: A, B, C♯, D, E, F♯, G♯. Degree 3, the mediant, is C♯.'
+- ask: In A major, the leading note is...
+  choices:
+  - G♯
+  - B
+  - E
+  - C♯
+  correct: 0
+  why: 'A major: A, B, C♯, D, E, F♯, G♯. Degree 7, the leading note, is G♯.'
+- ask: The dominant is degree...
+  choices:
+  - '3'
+  - '4'
+  - '7'
+  - '5'
+  correct: 3
+  why: Dominant = 5, the second most important note.
+- ask: The subdominant is degree...
+  choices:
+  - '2'
+  - '5'
+  - '4'
+  - '6'
+  correct: 2
+  why: 'Sub-dominant: the "under-dominant", one below 5.'

@@ -1,0 +1,14 @@
+id: ear-motion-step-leap
+title: Step or leap?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: motion
+  pool:
+  - step
+  - leap
+  range:
+  - C4
+  - C5

@@ -1,0 +1,10 @@
+id: reading-sight-many-keys
+title: Sight-reading in six keys
+skills:
+- reading
+steps:
+- explain: |
+    Both hands, six keys, a new piece every time.
+- exercise: rd-sight-six-keys
+- exercise: rd-sight-six-keys-lh
+recap: Any of six keys, cold.

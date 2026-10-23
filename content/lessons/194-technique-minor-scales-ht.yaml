@@ -1,0 +1,11 @@
+id: technique-minor-scales-ht
+title: Minor scales, hands together
+skills:
+- technique
+steps:
+- explain: |
+    Harmonic minor scales in A, D and E, hands together. The raised seventh makes a wide step: keep it legato.
+- exercise: scale-a-minor-1
+- exercise: scale-d-minor-1
+- exercise: scale-e-minor-1
+recap: The wide step of the harmonic minor.

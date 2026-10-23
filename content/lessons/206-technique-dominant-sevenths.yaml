@@ -1,0 +1,16 @@
+id: technique-dominant-sevenths
+title: Dominant 7ths in every key
+skills:
+- technique
+steps:
+- explain: |
+    The dominant 7th, broken and blocked, resolving home, in eight keys.
+- exercise: dom7-c
+- exercise: dom7-g
+- exercise: dom7-f
+- exercise: dom7-d
+- exercise: dom7-b-flat
+- exercise: dom7-a
+- exercise: dom7-a-minor
+- exercise: dom7-d-minor
+recap: The dominant 7th wants to go home.

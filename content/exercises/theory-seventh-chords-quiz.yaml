@@ -1,0 +1,91 @@
+id: theory-seventh-chords-quiz
+title: Seventh chords quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Cmaj7 is...
+  choices:
+  - C E♭ G B♭
+  - C E G B
+  - C E G B♭
+  correct: 1
+  why: Major triad + major 7th.
+- ask: Dm7 is...
+  choices:
+  - D F♯ A C♯
+  - D F♯ A C
+  - D F A C
+  correct: 2
+  why: Minor triad + minor 7th.
+- ask: G7 is...
+  choices:
+  - G B♭ D F
+  - G B D F♯
+  - G B D F
+  correct: 2
+  why: 'Major triad + minor 7th: the dominant 7th.'
+- ask: Fmaj7 is...
+  choices:
+  - F A♭ C E♭
+  - F A C E♭
+  - F A C E
+  correct: 2
+  why: Major triad + major 7th.
+- ask: Am7 is...
+  choices:
+  - A C♯ E G
+  - A C E G
+  - A C♯ E G♯
+  correct: 1
+  why: Minor triad + minor 7th.
+- ask: Em7 is...
+  choices:
+  - E G♯ B D♯
+  - E G B D
+  - E G♯ B D
+  correct: 1
+  why: Minor triad + minor 7th.
+- ask: D7 is...
+  choices:
+  - D F♯ A C
+  - D F♯ A C♯
+  - D F A C
+  correct: 0
+  why: 'Major triad + minor 7th: the dominant 7th.'
+- ask: B♭maj7 is...
+  choices:
+  - B♭ D♭ F A♭
+  - B♭ D F A♭
+  - B♭ D F A
+  correct: 2
+  why: Major triad + major 7th.
+- ask: In C major, the 7th chord on degree 2 is...
+  choices:
+  - Dmaj7
+  - Dm7
+  - D7
+  correct: 1
+  why: 'D F A C: minor triad, minor 7th.'
+- ask: In C major, the 7th chord on degree 1 is...
+  choices:
+  - Cmaj7
+  - Cm7
+  - C7
+  correct: 0
+  why: 'C E G B: major 7th.'
+- ask: Which 7th chord occurs only on degree 5 of a major key?
+  choices:
+  - The minor 7th
+  - The dominant 7th
+  - The major 7th
+  correct: 1
+  why: Major triad + minor 7th happens only on V.
+- ask: ii7–V7–Imaj7 in C is...
+  choices:
+  - Dm7 G7 Cmaj7
+  - Dm7 Gmaj7 C
+  - D7 G7 C7
+  correct: 0
+  why: The jazz standard progression.

@@ -1,0 +1,14 @@
+id: cr-mary-block
+title: 'Mary Had a Little Lamb: held chords'
+kind: timed
+hand: together
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h | E4:q D4:q C4:q D4:q | E4:q E4:q E4:q E4:q
+  | D4:q D4:q E4:q D4:q | C4:w
+left: C3+E3+G3:w | C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:w
+reps: 2
+days: 1

@@ -1,0 +1,10 @@
+id: octaves-rh
+title: Right-hand octaves
+kind: timed
+hand: together
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+C5:q D4+D5:q E4+E5:q F4+F5:q | G4+G5:h E4+E5:h | F4+F5:q D4+D5:q B3+B4:q G3+G4:q | C4+C5:w
+left: C3:w | C3:w | G2:w | C3:w

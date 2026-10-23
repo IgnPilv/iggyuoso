@@ -1,0 +1,10 @@
+id: reading-sharp-keys-sight
+title: Sight-reading in sharp keys
+skills:
+- reading
+steps:
+- explain: |
+    A and E major, E and B minor.
+- exercise: rd-sight-sharps
+- exercise: rd-keys-a-e
+recap: Three and four sharps.

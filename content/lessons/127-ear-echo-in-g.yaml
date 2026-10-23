@@ -1,0 +1,12 @@
+id: ear-echo-in-g
+title: Echo three in G position
+skills:
+- ear
+steps:
+- explain: |
+    Same game, new place: G position, G A B C D.
+  keys:
+    notes: G4 A4 B4 C5 D5
+    labels: names
+- exercise: ear-echo-g-three
+recap: 'Echoing in a new position: the ear does not care where your hand is.'

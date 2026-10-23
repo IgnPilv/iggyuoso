@@ -1,0 +1,9 @@
+id: rt-sync-1
+title: Short-long-short
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e x:q x:e x:h | x:e x:q x:e x:h | x:e x:q x:e x:e x:q x:e | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w

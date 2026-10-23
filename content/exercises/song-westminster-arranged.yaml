@@ -1,0 +1,15 @@
+id: song-westminster-arranged
+title: Westminster Chimes, full arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (root and fifth).
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: E4:q D4:q C4:q | G3:h. | C4:q E4:q D4:q | G3:h. | C4:q D4:q E4:q | C4:h. | E4:q C4:q D4:q | G3:h. | G3:q D4:q E4:q
+  | C4:h.
+left: C3+G3:h. | G2+D3:h. | C3+G3:h. | G2+D3:h. | C3+G3:h. | C3+G3:h. | C3+G3:h. | G2+D3:h. | G2+D3:h. | C3+G3:h.
+reps: 3
+days: 2

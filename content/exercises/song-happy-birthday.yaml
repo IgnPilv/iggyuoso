@@ -1,0 +1,16 @@
+id: song-happy-birthday
+title: Happy Birthday
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 100
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: G3:e G3:e | A3:q G3:q C4:q | B3:h G3:e G3:e | A3:q G3:q D4:q | C4:h G3:e G3:e | G4:q E4:q C4:q | B3:q A3:q F4:e F4:e
+  | E4:q C4:q D4:q | C4:h
+left: r:q | C3:h. | G2:h. | G2:h. | C3:h. | C3:h. | F2:h. | C3:q. G2:q. | C3:h
+reps: 3
+days: 2

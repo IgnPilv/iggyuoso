@@ -1,0 +1,11 @@
+id: ear-tritone
+title: The tritone
+skills:
+- ear
+steps:
+- explain: |
+    Three whole tones: the **tritone**, the tense heart of the dominant 7th (B and F in G7). It sits
+    right between a fourth and a fifth.
+  sound: C4:h F4:h | C4:h F#4:h | C4:h G4:h
+- exercise: ear-4-tritone-5
+recap: The tritone wants to resolve.

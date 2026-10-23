@@ -1,0 +1,9 @@
+id: rt-diff-4
+title: Question and answer
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:h | r:w | x:q x:q x:q x:q | r:w
+left: r:w | x:h x:h | r:w | x:q x:q x:h

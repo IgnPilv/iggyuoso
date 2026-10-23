@@ -1,0 +1,10 @@
+id: ear-melody-steps
+title: Echo scale fragments
+skills:
+- ear
+steps:
+- explain: |
+    Four notes moving by step up or down the scale. No lit keys now: start from the first note you
+    hear and follow the steps.
+- exercise: ear-echo-scale-four
+recap: Scale steps are the commonest moves in all melodies.

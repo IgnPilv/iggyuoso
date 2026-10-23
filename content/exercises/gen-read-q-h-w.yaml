@@ -1,0 +1,15 @@
+id: gen-read-q-h-w
+title: 'Read: quarters, halves and wholes'
+kind: generated
+generator: rhythm-read
+tempo: 72
+meter: 4/4
+durations:
+- q
+- h
+- w
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

@@ -1,0 +1,28 @@
+id: rhythm-long-and-short
+title: Long and short
+skills:
+- rhythm
+steps:
+- explain: |
+    Notes last for different numbers of beats. A **quarter note** lasts one beat; a **half note**
+    lasts two (hold the key down for both clicks); a **whole note** lasts four.
+  staff:
+    notes: C5:q C5:q C5:h | C5:w
+  terms:
+  - quarter note
+  - half note
+  - whole note
+  check:
+    ask: A half note lasts...
+    choices:
+    - One beat
+    - Four beats
+    - Two beats
+    correct: 2
+    why: 'Half of a whole note (four beats): two beats.'
+- exercise: rt-ls-1
+- exercise: rt-ls-2
+- exercise: ear-rt-long-short
+- exercise: gen-echo-q-h
+- exercise: gen-read-q-h-w
+recap: Quarter = 1 beat, half = 2, whole = 4. Holding the long ones is half the skill.

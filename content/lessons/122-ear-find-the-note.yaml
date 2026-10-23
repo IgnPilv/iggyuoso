@@ -1,0 +1,21 @@
+id: ear-find-the-note
+title: Find the note you heard
+skills:
+- ear
+steps:
+- explain: |
+    Now the answer is on the keyboard. Two keys are lit: **C** and **G**. You hear one of them.
+    Press the one you heard. First you hear C as a reference, so you have something to compare with.
+  keys:
+    notes: C4 G4
+    labels: names
+  sound: C4:h G4:h | C4:h C4:h
+- exercise: ear-find-c-g
+- explain: |
+    Three keys now: C, E and G. Compare with the reference C: is the new note the same, a little higher (E) or higher still (G)?
+  keys:
+    notes: C4 E4 G4
+    labels: names
+- exercise: ear-find-c-e-g
+- exercise: ear-find-c-d-e
+recap: Compare with C, then find the key. This is how everyone learns to play by ear.

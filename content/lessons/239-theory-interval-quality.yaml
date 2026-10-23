@@ -1,0 +1,25 @@
+id: theory-interval-quality
+title: Major, minor and perfect
+skills:
+- theory
+steps:
+- explain: |
+    Every interval has a **number** (count the letters, both ends included) and a **quality**: 2nds, 3rds, 6ths and 7ths
+    are **major** or **minor**; unisons, 4ths, 5ths and octaves are **perfect**. Count half steps to tell which.
+  callout: |
+    m2 = 1, M2 = 2, m3 = 3, M3 = 4, P4 = 5, P5 = 7, m6 = 8, M6 = 9, m7 = 10, M7 = 11, P8 = 12 half steps.
+  check:
+    ask: E to G is a...
+    choices:
+    - Major 3rd
+    - Minor 3rd
+    - Perfect 4th
+    correct: 1
+    why: 'Three letters (a 3rd), three half steps: minor.'
+- explain: |
+    A trick: a **major** interval above the tonic is always in the major scale. C to A? A is in C major, so it is a major 6th.
+  staff:
+    notes: C4:h A4:h
+  sound: C4:h A4:h
+- exercise: theory-interval-quality-quiz
+recap: Number from letters, quality from half steps.

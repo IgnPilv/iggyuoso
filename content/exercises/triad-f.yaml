@@ -1,0 +1,14 @@
+id: triad-f
+title: F major triad, both hands
+kind: timed
+hand: together
+prompt: Broken, then all three notes together.
+key: F
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F4:q A4:q C5:q A4:q | F4+A4+C5:w | F4:q A4:q C5:q A4:q | F4+A4+C5:w
+left: F3:h C4:h | F3+C4:w | F3:h C4:h | F3+C4:w
+rightFingers: 1 3 5 3 1 1 3 5 3 1
+leftFingers: 5 1 5 5 1 5

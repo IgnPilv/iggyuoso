@@ -1,0 +1,11 @@
+id: rhythm-tied-notes
+title: Holding across the bar line
+skills:
+- rhythm
+steps:
+- explain: |
+    A tie joins two notes into one long one, even across the bar line. Play the first, hold through the second.
+- exercise: rt-ties-across
+- exercise: rt-ties-offbeat
+- exercise: ear-rt-ties
+recap: A tie is one note, written in two pieces.

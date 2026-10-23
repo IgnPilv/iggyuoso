@@ -1,0 +1,8 @@
+id: rt-24-march
+title: A march
+kind: tap
+tempo: 96
+tempoLadder: true
+meter: 2/4
+countIn: 1
+rhythm: x:q x:q | x:h | x:q x:q | x:h | x:q x:q | x:q x:q | x:h | x:h

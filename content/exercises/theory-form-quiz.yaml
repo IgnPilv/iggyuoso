@@ -1,0 +1,91 @@
+id: theory-form-quiz
+title: Form quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A phrase is...
+  choices:
+  - One note
+  - A whole piece
+  - A musical sentence, often four bars
+  correct: 2
+  why: 'Phrases are like sentences: they breathe at the end.'
+- ask: A phrase that sounds unfinished is often called a...
+  choices:
+  - Coda
+  - Question
+  - Answer
+  correct: 1
+  why: It ends away from home, usually on 2 or 5.
+- ask: An answering phrase usually ends on...
+  choices:
+  - The dominant
+  - The tonic
+  - The leading note
+  correct: 1
+  why: Coming home to 1 sounds finished.
+- ask: Form AB is called...
+  choices:
+  - Binary
+  - Ternary
+  - Rondo
+  correct: 0
+  why: 'Two sections: binary (bi = two).'
+- ask: Form ABA is called...
+  choices:
+  - Binary
+  - Theme and variations
+  - Ternary
+  correct: 2
+  why: 'Three sections with the first coming back: ternary.'
+- ask: In ABA, the second A is...
+  choices:
+  - The first section again (often exactly)
+  - A new tune
+  - The coda
+  correct: 0
+  why: The return of A makes the shape.
+- ask: Twinkle Twinkle has which form?
+  choices:
+  - AB
+  - ABAC
+  - ABA
+  correct: 2
+  why: '"Twinkle... are" (A), "Up above... high" (B), "Twinkle... are" again (A).'
+- ask: A minuet and trio usually makes the shape...
+  choices:
+  - 'Minuet, trio, minuet: ABA'
+  - AB
+  - ABAB
+  correct: 0
+  why: 'The minuet comes back after the trio: ternary.'
+- ask: A, A, B, A is a common shape for...
+  choices:
+  - A rondo
+  - A sonata
+  - A 32-bar song
+  correct: 2
+  why: 'Many songs: two A phrases, a bridge B, A again.'
+- ask: Repeating a melody higher or lower is called a...
+  choices:
+  - Canon
+  - Cadence
+  - Sequence
+  correct: 2
+  why: A sequence repeats a pattern starting on another note.
+- ask: A short repeated idea, like the four notes opening Beethoven's 5th, is a...
+  choices:
+  - Motif
+  - Coda
+  - Cadence
+  correct: 0
+  why: A motif is the smallest recognisable idea.
+- ask: Two phrases that start the same but end differently are...
+  choices:
+  - Parallel phrases
+  - Contrary motion
+  - A canon
+  correct: 0
+  why: 'Same start, different endings: question and answer.'

@@ -1,0 +1,18 @@
+id: piece-nocturne-f
+title: Nocturne in F
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+key: F
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:h. C5:q | Bb4:h G4:h | A4:q Bb4:q C5:q F5:q | E5:w | D5:h. Bb4:q | C5:h A4:h | G4:q A4:q Bb4:q E4:q | F4:w
+left: F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | G2:e D3:e Bb2:e D3:e C3:e G3:e E3:e G3:e | F2:e C3:e A2:e C3:e F2:e C3:e A2:e
+  C3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | Bb2:e F3:e D3:e F3:e Bb2:e F3:e D3:e F3:e | F2:e C3:e A2:e C3:e F2:e C3:e
+  A2:e C3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3+F3+A3:w
+pedal: x:w | x:h x:h | x:w | x:w | x:w | x:w | x:w | x:w
+reps: 3
+days: 2

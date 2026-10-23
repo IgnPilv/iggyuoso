@@ -1,0 +1,15 @@
+id: ear-rt-waltz
+title: Which waltz rhythm?
+kind: ear
+questions: 15
+reps: 2
+days: 2
+items:
+- type: rhythm
+  pool:
+  - x:q x:q x:q
+  - x:h x:q
+  - x:q x:h
+  - x:h.
+  meter: 3/4
+  tempo: 96

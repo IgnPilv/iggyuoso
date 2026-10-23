@@ -1,0 +1,9 @@
+id: rt-turns-halves
+title: Two beats each
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:h r:h | x:h r:h | x:q x:q r:h | x:w
+left: r:h x:h | r:h x:h | r:h x:q x:q | r:w

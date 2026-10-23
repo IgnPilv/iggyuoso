@@ -1,0 +1,23 @@
+id: song-twinkle-alberti
+title: Twinkle with an Alberti bass
+skills:
+- songs
+steps:
+- explain: |
+    **Twinkle with an Alberti bass** · Arranged in the style of Mozart
+
+    Mozart played this tune with a left hand like this: low, high, middle, high. It is called an Alberti bass, after Domenico Alberti.
+  staff:
+    notes: C5:q C5:q G5:q G5:q  |  A5:q A5:q G5:h
+  sound: C5:q C5:q G5:q G5:q  |  A5:q A5:q G5:h  |  F5:q F5:q E5:q E5:q  |  D5:q D5:q C5:h
+- explain: |
+    **Before you play.** Keep the Alberti bass quiet and even; the melody sings on top, an octave higher than before.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 84
+- exercise: song-twinkle-alberti-rh
+- exercise: song-twinkle-alberti-lh
+- exercise: song-twinkle-alberti
+- exercise: song-twinkle-alberti-arranged
+recap: 'Twinkle with an Alberti bass: tune, left hand, together. Come back to it any time; songs are for fun.'

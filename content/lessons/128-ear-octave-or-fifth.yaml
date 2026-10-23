@@ -1,0 +1,15 @@
+id: ear-octave-or-fifth
+title: 'Big jumps: octave or fifth?'
+skills:
+- ear
+steps:
+- explain: |
+    Two notes from C. The second is either the next **C** up (an **octave**: the same letter, higher)
+    or **G** (a **fifth**). The octave sounds like one note doubled; the fifth sounds open and strong.
+  sound: C4:h C5:h | C4:h G4:h
+  terms:
+  - octave
+  - fifth
+- exercise: ear-8-5
+- exercise: ear-8-5-4
+recap: 'Octave: the same note higher. Fifth: open. Fourth: like the start of a wedding march.'

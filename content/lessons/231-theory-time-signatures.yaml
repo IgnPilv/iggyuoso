@@ -1,0 +1,24 @@
+id: theory-time-signatures
+title: Time signatures
+skills:
+- theory
+steps:
+- explain: |
+    The two numbers at the start are the **time signature**. The **top** number says how many beats in a bar;
+    the **bottom** number says which note gets one beat: 4 = a quarter note, 2 = a half note, 8 = an eighth.
+  staff:
+    notes: C5:q C5:q C5:q | C5:h.
+  terms:
+  - time signature
+  - bar
+  - bar line
+  check:
+    ask: 3/4 means...
+    choices:
+    - Three bars of four
+    - Three quarter-note beats a bar
+    - Four beats, three times
+    correct: 1
+    why: 'Top: 3 beats. Bottom: 4 = quarter notes.'
+- exercise: theory-time-signatures-quiz
+recap: 'Top number: how many. Bottom number: what kind.'

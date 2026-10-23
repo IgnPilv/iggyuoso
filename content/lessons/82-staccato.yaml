@@ -1,24 +1,34 @@
 id: staccato
 title: Staccato
-skills: [technique, articulation]
+skills:
+- technique
+- articulation
 steps:
 - explain: |
     A dot **above or below** a note head (not after it) means **staccato**: play the note short
     and detached, as if the key were hot.
   sound: C4:e r:e E4:e r:e G4:e r:e E4:e r:e C4:h
-  terms: [staccato]
+  terms:
+  - staccato
 - explain: |
     The trick is a small bounce from the wrist. The finger goes down and the hand lifts straight
     away. Staccato notes take up the same beat; there is just silence in the second half. Here
     the silence is written as a rest so you can see it.
-  staff: {notes: 'C4:e r:e E4:e r:e G4:e r:e E4:e r:e'}
+  staff:
+    notes: C4:e r:e E4:e r:e G4:e r:e E4:e r:e
   callout: |
     Dot **after** a note = longer (dotted). Dot **over or under** = shorter (staccato).
   check:
     ask: A dot above a note head means...
-    choices: [Add half its value, Play it loud, Play it short]
+    choices:
+    - Add half its value
+    - Play it loud
+    - Play it short
     correct: 2
     why: A dot on the head is staccato; a dot after the note lengthens it.
-- {exercise: staccato-rh}
-- {exercise: staccato-lh}
+- exercise: staccato-rh
+- exercise: staccato-lh
+- explain: |
+    Now both hands bounce together: short notes in both, let go together.
+- exercise: staccato-ht
 recap: 'Staccato: short, light, bounced from the wrist. The beat stays the same length.'

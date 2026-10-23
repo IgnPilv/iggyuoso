@@ -1,0 +1,23 @@
+id: song-deck-the-halls
+title: Deck the Halls
+skills:
+- songs
+steps:
+- explain: |
+    **Deck the Halls** · Welsh carol "Nos Galan"
+
+    A Welsh New Year tune from the 1500s; the "fa la la" words came in 1862.
+  staff:
+    notes: G4:q. F4:e E4:q D4:q  |  C4:q D4:q E4:q C4:q
+  sound: G4:q. F4:e E4:q D4:q  |  C4:q D4:q E4:q C4:q  |  D4:e E4:e F4:e D4:e E4:q. D4:e  |  C4:q B3:q C4:h
+- explain: |
+    **Before you play.** "Fa la la la la" is eighth notes: count "1 and 2 and".
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 104
+- exercise: song-deck-the-halls-rh
+- exercise: song-deck-the-halls-lh
+- exercise: song-deck-the-halls
+- exercise: song-deck-the-halls-arranged
+recap: 'Deck the Halls: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,10 @@
+id: ear-triad-qualities
+title: Major, minor or diminished?
+skills:
+- ear
+steps:
+- explain: |
+    Three kinds of triad: **major** (bright), **minor** (darker), **diminished** (tense, squeezed).
+  sound: C4+E4+G4:h C4+Eb4+G4:h | C4+Eb4+Gb4:w
+- exercise: ear-maj-min-dim-roots
+recap: 'Bright, dark, tense: the three triads of the major scale.'

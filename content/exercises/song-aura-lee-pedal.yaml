@@ -1,0 +1,17 @@
+id: song-aura-lee-pedal
+title: Aura Lee, with pedal
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q A4:q B4:q | C5:w | G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q
+  A4:q B4:q | C5:w
+left: C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e
+  B2:e D3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | D3:e A3:e F#3:e A3:e D3:e
+  A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3+E3+G3:w
+reps: 3
+days: 2

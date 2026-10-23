@@ -1,0 +1,12 @@
+id: cr-harm-minor-1
+title: Minor tune with three chords
+kind: timed
+hand: together
+display: staff
+key: Am
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q B4:q C5:q A4:q | D5:h C5:h | B4:q G#4:q B4:q E5:q | A4:w
+left: A2+C3+E3:w | A2+D3+F3:h A2+C3+E3:h | B2+E3+G#3:w | C3+E3+A3:w

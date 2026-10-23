@@ -1,0 +1,12 @@
+id: c-pos-question-answer
+title: Hands answer each other
+kind: timed
+hand: together
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q D4:q E4:h | r:w | E4:q F4:q G4:h | r:w
+left: r:w | G3:q F3:q E3:h | r:w | E3:q D3:q C3:h
+rightFingers: 1 2 3 3 4 5
+leftFingers: 1 2 3 3 4 5

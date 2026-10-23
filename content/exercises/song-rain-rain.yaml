@@ -1,0 +1,15 @@
+id: song-rain-rain
+title: Rain, Rain, Go Away
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:h E4:h | G4:q G4:q E4:h | G4:q G4:q E4:q E4:q | A4:q G4:q E4:h | G4:h E4:h | G4:q G4:q E4:h | G4:q G4:q E4:q E4:q
+  | A4:q G4:q C4:h
+left: C3:w | C3:w | C3:w | F2:h C3:h | C3:w | C3:w | C3:w | F2:h C3:h
+reps: 3
+days: 2

@@ -1,0 +1,16 @@
+id: rhythm-eighth-patterns
+title: Eighth-note patterns
+skills:
+- rhythm
+steps:
+- explain: |
+    Two eighths fill one beat: "1-and". Say it out loud while you tap: **one and two and**.
+  staff:
+    notes: C5:q C5:q C5:e C5:e C5:q | C5:e C5:e C5:e C5:e C5:h
+  sound: C5:q C5:q C5:e C5:e C5:q
+- exercise: rt-eighths-1
+- exercise: rt-eighths-2
+- exercise: rt-eighths-offbeat
+- exercise: ear-rt-eighths
+- exercise: gen-echo-eighths
+recap: 'Eighths: two to a beat, "1-and".'

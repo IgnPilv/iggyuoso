@@ -1,0 +1,13 @@
+id: ties-ht
+title: Ties, hands together
+kind: timed
+hand: together
+prompt: Hold the tie in the right hand while the left hand plays on.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:h~ | G4:q F4:q E4:h | D4:h~ D4:q E4:q | C4:w
+left: C3:h E3:h | G2:w | G2:h B2:h | C3:w
+rightFingers: 1 3 5 4 3 2 3 1

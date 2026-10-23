@@ -1,0 +1,95 @@
+id: theory-compound-time-quiz
+title: Compound time quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: 6/8 is...
+  choices:
+  - The same as 3/4
+  - 'Simple triple: six beats'
+  - 'Compound duple: two beats of three eighths'
+  correct: 2
+  why: 'Six eighths grouped 3 + 3: two big beats.'
+- ask: 9/8 has how many big beats?
+  choices:
+  - '3'
+  - '2'
+  - '4'
+  - '9'
+  correct: 0
+  why: '9 eighths in groups of three: three big beats.'
+- ask: 12/8 has how many big beats?
+  choices:
+  - '4'
+  - '6'
+  - '12'
+  - '3'
+  correct: 0
+  why: '12 eighths in groups of three: four big beats.'
+- ask: In 6/8, one big beat is a...
+  choices:
+  - Dotted quarter note
+  - Half note
+  - Quarter note
+  correct: 0
+  why: Three eighths = one dotted quarter.
+- ask: 3/4 and 6/8 both have six eighths a bar. The difference is...
+  choices:
+  - Nothing
+  - 'The grouping: 3/4 = 2+2+2, 6/8 = 3+3'
+  - 6/8 is faster
+  correct: 1
+  why: Three beats of two eighths vs two beats of three.
+- ask: Simple time divides the beat into...
+  choices:
+  - Four
+  - Two
+  - Three
+  correct: 1
+  why: 'Simple: beats split in two. Compound: in three.'
+- ask: Compound time divides the beat into...
+  choices:
+  - Four
+  - Two
+  - Three
+  correct: 2
+  why: Compound beats split in three.
+- ask: Which is compound?
+  choices:
+  - 12/8
+  - 4/4
+  - 2/2
+  - 3/4
+  correct: 0
+  why: Top numbers 6, 9, 12 mean compound time.
+- ask: Which is simple triple?
+  choices:
+  - 9/8
+  - 3/8
+  - 6/8
+  - 3/4
+  correct: 3
+  why: '3/4: three beats, each split in two. (3/8 is usually felt in one.)'
+- ask: Which fills a bar of 6/8?
+  choices:
+  - A quarter, an eighth, a dotted quarter
+  - Two half notes
+  - Three quarters and an eighth
+  correct: 0
+  why: 1 + ½ + 1½ = 3 quarters = six eighths.
+- ask: A slow blues in 12/8 feels like...
+  choices:
+  - 2/4
+  - 3/4
+  - 4/4 with every beat split in three
+  correct: 2
+  why: Four big beats, each a triplet.
+- ask: The count for 6/8 is...
+  choices:
+  - 1-2 3-4 5-6
+  - 1-2-3 4-5-6, accents on 1 and 4
+  - 1 2 3 4 5 6 all equal
+  correct: 1
+  why: Two groups of three.

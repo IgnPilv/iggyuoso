@@ -1,0 +1,10 @@
+id: rt-turns-bars
+title: A bar each
+kind: tap
+prompt: Right hand for a bar, then the left hand.
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | r:w | x:q x:q x:q x:q | r:w
+left: r:w | x:q x:q x:q x:q | r:w | x:q x:q x:q x:q

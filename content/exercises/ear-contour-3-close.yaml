@@ -1,0 +1,15 @@
+id: ear-contour-3-close
+title: Three notes, small moves
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: contour
+  length: 3
+  range:
+  - C4
+  - C5
+  gap:
+  - 2
+  - 3

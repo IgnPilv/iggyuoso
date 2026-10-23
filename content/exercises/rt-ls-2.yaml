@@ -1,0 +1,8 @@
+id: rt-ls-2
+title: Mixing them up
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:h x:q x:q | x:q x:q x:h | x:q x:h x:q | x:w

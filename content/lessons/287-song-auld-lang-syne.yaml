@@ -1,0 +1,24 @@
+id: song-auld-lang-syne
+title: Auld Lang Syne
+skills:
+- songs
+steps:
+- explain: |
+    **Auld Lang Syne** · Scottish song, words by Robert Burns, 1788
+
+    Sung at midnight on New Year's Eve around the world. Robert Burns wrote down the words in 1788 from an old song.
+  staff:
+    notes: C4:q  |  F4:q. F4:e F4:q A4:q
+    key: F
+  sound: C4:q  |  F4:q. F4:e F4:q A4:q  |  G4:q. F4:e G4:q A4:q  |  F4:q. F4:e A4:q C5:q
+- explain: |
+    **Before you play.** Key of F: every B is B♭ (the left hand meets it in the B♭ chord).
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: F major · Time: 4/4 · Tempo: 80
+- exercise: song-auld-lang-syne-rh
+- exercise: song-auld-lang-syne-lh
+- exercise: song-auld-lang-syne
+- exercise: song-auld-lang-syne-arranged
+recap: 'Auld Lang Syne: tune, left hand, together. Come back to it any time; songs are for fun.'

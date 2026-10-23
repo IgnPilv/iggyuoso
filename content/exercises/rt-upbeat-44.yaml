@@ -1,0 +1,9 @@
+id: rt-upbeat-44
+title: One upbeat, 4/4
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+rhythm: x:q | x:h x:q x:q | x:h x:q x:q | x:q x:q x:q x:q | x:h.

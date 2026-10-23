@@ -1,0 +1,9 @@
+id: ear-sus-chords
+title: Suspended chords
+skills:
+- ear
+steps:
+- explain: |
+    A **sus** chord swaps the third for the second (sus2) or the fourth (sus4). It floats, neither major nor minor.
+- exercise: ear-sus2-sus4-maj
+recap: 'Suspended: the third is missing, so the chord floats.'

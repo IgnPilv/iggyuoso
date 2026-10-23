@@ -1,0 +1,16 @@
+id: ear-find-five-lit
+title: One of five, lit
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: note
+  pool:
+  - C4
+  - D4
+  - E4
+  - F4
+  - G4
+  lit: true
+  reference: C4

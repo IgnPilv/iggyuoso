@@ -1,0 +1,18 @@
+id: ear-sd-close
+title: 'Same or different: very close'
+kind: ear
+prompt: Only one or two keys apart. This one takes practice; come back to it on another day.
+questions: 20
+reps: 3
+days: 2
+items:
+- type: compare
+  pool:
+  - same
+  - different
+  range:
+  - C3
+  - C5
+  gap:
+  - 1
+  - 2

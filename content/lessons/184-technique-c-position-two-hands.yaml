@@ -1,0 +1,16 @@
+id: technique-c-position-two-hands
+title: C position with two hands
+skills:
+- technique
+steps:
+- explain: |
+    Now the hands sit in C position an octave apart: right thumb on middle C, left little finger on the C below.
+    This time the fingers **differ**: when the right thumb plays C, the left hand plays C with finger 5.
+  keys:
+    notes: C3 D3 E3 F3 G3 C4 D4 E4 F4 G4
+    fingers: 5 4 3 2 1 1 2 3 4 5
+- exercise: c-pos-unison-slow
+- exercise: pos-c
+- exercise: c-pos-held-c
+- exercise: c-pos-question-answer
+recap: 'C position, both hands: the home base for the first pieces.'

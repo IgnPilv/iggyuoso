@@ -1,0 +1,9 @@
+id: rt-diff-2
+title: A busy right hand
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w
+left: x:w | x:h x:h | x:h. x:q | x:w

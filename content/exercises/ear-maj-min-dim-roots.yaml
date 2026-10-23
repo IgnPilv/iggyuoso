@@ -1,0 +1,25 @@
+id: ear-maj-min-dim-roots
+title: Triads on C, F and G
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: C4
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: F4
+- type: chord
+  pool:
+  - maj
+  - min
+  - dim
+  root: G3

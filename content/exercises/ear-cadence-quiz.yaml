@@ -1,0 +1,116 @@
+id: ear-cadence-quiz
+title: Name the cadence
+kind: quiz
+prompt: Hear each ending. Every answer comes with the reason.
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Listen (1). Which cadence?
+  choices:
+  - Plagal
+  - Imperfect
+  - Perfect
+  - Interrupted
+  correct: 2
+  why: 'V to I: the full stop.'
+  sound: C4+E4+G4:h F4+A4+C5:h | G4+B4+D5:h C4+E4+G4:h
+- ask: Listen (2). Which cadence?
+  choices:
+  - Perfect
+  - Interrupted
+  - Plagal
+  - Imperfect
+  correct: 2
+  why: 'IV to I: the "Amen".'
+  sound: C4+E4+G4:h G4+B4+D5:h | F4+A4+C5:h C4+E4+G4:h
+- ask: Listen (3). Which cadence?
+  choices:
+  - Interrupted
+  - Plagal
+  - Imperfect
+  - Perfect
+  correct: 2
+  why: 'Ends on V: a comma, not a full stop.'
+  sound: C4+E4+G4:h F4+A4+C5:h | C4+E4+G4:h G4+B4+D5:h
+- ask: Listen (4). Which cadence?
+  choices:
+  - Interrupted
+  - Perfect
+  - Plagal
+  - Imperfect
+  correct: 0
+  why: 'V then vi: you expected I and got a minor chord.'
+  sound: C4+E4+G4:h F4+A4+C5:h | G4+B4+D5:h A4+C5+E5:h
+- ask: Listen (5). Which cadence?
+  choices:
+  - Imperfect
+  - Perfect
+  - Plagal
+  - Interrupted
+  correct: 1
+  why: V to I in G.
+  sound: G3+B3+D4:h C4+E4+G4:h | D4+F#4+A4:h G3+B3+D4:h
+- ask: Listen (6). Which cadence?
+  choices:
+  - Imperfect
+  - Plagal
+  - Interrupted
+  - Perfect
+  correct: 1
+  why: IV to I in F.
+  sound: F3+A3+C4:h Bb3+D4+F4:h | Bb3+D4+F4:h F3+A3+C4:h
+- ask: Listen (7). Which cadence?
+  choices:
+  - Imperfect
+  - Plagal
+  - Interrupted
+  - Perfect
+  correct: 0
+  why: Ends on V in F.
+  sound: F3+A3+C4:h Bb3+D4+F4:h | F3+A3+C4:h C4+E4+G4:h
+- ask: Listen (8). Which cadence?
+  choices:
+  - Imperfect
+  - Interrupted
+  - Plagal
+  - Perfect
+  correct: 1
+  why: V to vi in G.
+  sound: G3+B3+D4:h C4+E4+G4:h | D4+F#4+A4:h E4+G4+B4:h
+- ask: Listen (9). Which cadence?
+  choices:
+  - Interrupted
+  - Plagal
+  - Imperfect
+  - Perfect
+  correct: 3
+  why: V to i in A minor.
+  sound: A3+C4+E4:h D4+F4+A4:h | E4+G#4+B4:h A3+C4+E4:h
+- ask: Listen (10). Which cadence?
+  choices:
+  - Perfect
+  - Imperfect
+  - Plagal
+  - Interrupted
+  correct: 3
+  why: V to VI in A minor.
+  sound: A3+C4+E4:h D4+F4+A4:h | E4+G#4+B4:h F4+A4+C5:h
+- ask: Listen (11). Which cadence?
+  choices:
+  - Imperfect
+  - Interrupted
+  - Perfect
+  - Plagal
+  correct: 3
+  why: IV to I in G.
+  sound: G3+B3+D4:h D4+F#4+A4:h | C4+E4+G4:h G3+B3+D4:h
+- ask: Listen (12). Which cadence?
+  choices:
+  - Imperfect
+  - Plagal
+  - Interrupted
+  - Perfect
+  correct: 0
+  why: Ends on V in A minor.
+  sound: A3+C4+E4:h D4+F4+A4:h | A3+C4+E4:h E4+G#4+B4:h

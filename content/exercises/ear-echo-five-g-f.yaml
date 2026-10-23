@@ -1,0 +1,31 @@
+id: ear-echo-five-g-f
+title: Five notes in G and F
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: G4 A4 B4 D5 G4
+  plays: 2
+- type: melody
+  notes: D5 C5 B4 A4 G4
+  plays: 2
+- type: melody
+  notes: G4 B4 A4 F#4 G4
+  plays: 2
+- type: melody
+  notes: F4 G4 A4 C5 F4
+  plays: 2
+- type: melody
+  notes: C5 Bb4 A4 G4 F4
+  plays: 2
+- type: melody
+  notes: F4 A4 G4 E4 F4
+  plays: 2
+- type: melody
+  notes: B4 G4 A4 F#4 G4
+  plays: 2
+- type: melody
+  notes: A4 F4 G4 E4 F4
+  plays: 2

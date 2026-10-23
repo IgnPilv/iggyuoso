@@ -1,0 +1,23 @@
+id: theory-minor-key-signatures
+title: Minor key signatures
+skills:
+- theory
+steps:
+- explain: |
+    Every major key has a **relative minor** sharing its key signature: three half steps down from the tonic. C major and
+    A minor have none; G major and E minor one sharp. To tell them apart, look at the last note and for the raised 7th.
+  staff:
+    notes: E4:w
+    key: Em
+  terms:
+  - relative minor
+  check:
+    ask: The relative minor of F major is...
+    choices:
+    - A minor
+    - D minor
+    - F minor
+    correct: 1
+    why: 'F down three half steps: D.'
+- exercise: theory-minor-signatures-quiz
+recap: 'Each signature serves two keys: major and its relative minor.'

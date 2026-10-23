@@ -1,33 +1,49 @@
 id: minor-five-finger
 title: A minor and D minor positions
-skills: [minor, five-finger-position]
+skills:
+- minor
+- five-finger-position
 steps:
 - explain: |
     **Minor** keys have a darker sound. Listen: D major position, then D minor position.
   sound: D4:q E4:q F#4:q G4:q A4:h | D4:q E4:q F4:q G4:q A4:h
-  terms: [minor]
+  terms:
+  - minor
 - explain: |
     The difference is the **third note**: in a minor five-finger position it is a **semitone lower** than in major.
     D major position has **F♯**; **D minor** has plain **F**.
-  keys: {notes: D4 E4 F4 G4 A4, labels: names}
+  keys:
+    notes: D4 E4 F4 G4 A4
+    labels: names
   check:
     ask: A major five-finger position is turned minor by lowering...
-    choices: [The 3rd note, The 5th note, The 1st note]
+    choices:
+    - The 3rd note
+    - The 5th note
+    - The 1st note
     correct: 0
     why: Only the 3rd moves, down a semitone.
 - explain: |
     **A minor** uses only white keys, like C major. They share the same notes, so they are
     called **relative** keys: same notes, different home.
-  keys: {notes: A3 B3 C4 D4 E4, labels: names}
+  keys:
+    notes: A3 B3 C4 D4 E4
+    labels: names
   sound: A3:q B3:q C4:q D4:q E4:h
-  terms: [relative keys, A minor]
-- {exercise: a-minor-position-rh}
-- {exercise: d-minor-position-rh}
-- {exercise: d-minor-position-lh}
+  terms:
+  - relative keys
+  - A minor
+- exercise: a-minor-position-rh
+- exercise: d-minor-position-rh
+- exercise: d-minor-position-lh
+- explain: |
+    Both hands in A minor position and then D minor, an octave apart.
+- exercise: a-minor-position-ht
+- exercise: d-minor-position-ht
 - explain: |
     Short tunes in A minor position.
-- {exercise: gen-sight-read-a-minor}
+- exercise: gen-sight-read-a-minor
 - explain: |
     Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
-- {exercise: minor-positions-quiz}
+- exercise: minor-positions-quiz
 recap: 'Minor = lower third. A minor is C major''s relative: same notes, different home.'

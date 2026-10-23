@@ -1,0 +1,10 @@
+id: rt-upbeat-hands
+title: Upbeat with a bass
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: x:q | x:h x:q x:q | x:h x:q x:q | x:h.
+left: r:q | x:w | x:w | x:h.

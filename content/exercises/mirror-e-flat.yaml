@@ -1,0 +1,14 @@
+id: mirror-e-flat
+title: 'E♭ major: mirror image'
+kind: timed
+hand: together
+prompt: Both thumbs on the key note; the hands move apart and back. Same finger in both hands every time.
+key: Eb
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Eb4:q F4:q G4:q Ab4:q | Bb4:q Ab4:q G4:q F4:q | Eb4:h G4:h | Eb4:w
+left: Eb3:q D3:q C3:q Bb2:q | Ab2:q Bb2:q C3:q D3:q | Eb3:h C3:h | Eb3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 1
+leftFingers: 1 2 3 4 5 4 3 2 1 3 1

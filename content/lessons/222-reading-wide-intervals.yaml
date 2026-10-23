@@ -1,0 +1,10 @@
+id: reading-wide-intervals
+title: Wide intervals
+skills:
+- reading
+steps:
+- explain: |
+    6ths, 7ths and octaves: a 6th goes line to space with two in between; a 7th line to line with two lines between; an octave line to space far away.
+- exercise: rd-intervals-to-octave
+- exercise: rd-intervals-quality
+recap: Wide intervals read at a glance.

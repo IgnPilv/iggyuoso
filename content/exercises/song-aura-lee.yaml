@@ -1,0 +1,15 @@
+id: song-aura-lee
+title: Aura Lee
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q A4:q B4:q | C5:w | G4:q C5:q B4:q C5:q | D5:q A4:q D5:h | C5:q B4:q
+  A4:q B4:q | C5:w
+left: C3:w | D3:w | G2:w | C3:w | C3:w | D3:w | G2:w | C3:w
+reps: 3
+days: 2

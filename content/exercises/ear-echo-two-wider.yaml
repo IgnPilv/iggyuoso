@@ -1,0 +1,39 @@
+id: ear-echo-two-wider
+title: Echo two notes, C to G
+kind: ear
+questions: 16
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: C4 G4
+  plays: 3
+  lit: true
+- type: melody
+  notes: G4 C4
+  plays: 3
+  lit: true
+- type: melody
+  notes: E4 G4
+  plays: 3
+  lit: true
+- type: melody
+  notes: G4 E4
+  plays: 3
+  lit: true
+- type: melody
+  notes: C4 F4
+  plays: 3
+  lit: true
+- type: melody
+  notes: F4 E4
+  plays: 3
+  lit: true
+- type: melody
+  notes: D4 G4
+  plays: 3
+  lit: true
+- type: melody
+  notes: G4 F4
+  plays: 3
+  lit: true

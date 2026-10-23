@@ -1,22 +1,39 @@
 id: first-inversion
 title: First inversion
-skills: [technique, inversions, theory]
+skills:
+- technique
+- inversions
+- theory
 steps:
 - explain: |
     A chord doesn't have to have its root at the bottom. Move the root up an octave and the
     **3rd** is now the lowest note: that is the **first inversion**. C E G becomes **E G C**.
-  staff: {notes: 'C4+E4+G4:h E4+G4+C5:h', labels: names}
+  staff:
+    notes: C4+E4+G4:h E4+G4+C5:h
+    labels: names
   sound: C4+E4+G4:h E4+G4+C5:h
-  terms: [inversion, first inversion, root position]
+  terms:
+  - inversion
+  - first inversion
+  - root position
 - explain: |
     It is still a C major chord (same three letters), just stacked differently. The shape changes:
     now there is a **4th at the top** (G to C). Use fingers **1 2 5** in the right hand.
-  keys: {notes: E4 G4 C5, labels: fingers, fingers: 1 2 5}
+  keys:
+    notes: E4 G4 C5
+    labels: fingers
+    fingers: 1 2 5
   check:
     ask: G B D in first inversion is...
-    choices: [D G B, B D G, G B D]
+    choices:
+    - D G B
+    - B D G
+    - G B D
     correct: 1
     why: 'Move the root G up: the 3rd, B, is at the bottom.'
-- {exercise: build-first-inversions}
-- {exercise: root-and-first-rh}
+- exercise: build-first-inversions
+- exercise: root-and-first-rh
+- explain: |
+    The left hand holds the root of each chord low down; the right hand plays the chord and its first inversion above it.
+- exercise: inversions-ht
 recap: 'First inversion: the 3rd at the bottom. Same chord, new shape.'

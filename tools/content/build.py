@@ -37,7 +37,8 @@ songs.write_songs()
 # Merge: generated nodes may replace base nodes of the same id.
 nodes = {n['id']: n for n in BASE}
 for n in lib.NODES: nodes[n['id']] = n
-for f in getattr(patch, 'TREE_EDITS', []): f(nodes)
+for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, songs, milestones):
+    for f in getattr(m, 'TREE_EDITS', []): f(nodes)
 
 TITLES = {'technique': 'Technique', 'reading': 'Reading', 'rhythm': 'Rhythm', 'theory': 'Theory', 'ear': 'Ear',
           'repertoire': 'Pieces', 'creativity': 'Creativity', 'milestones': 'Milestones', 'songs': 'Songs'}

@@ -1,29 +1,41 @@
 id: ties
 title: Ties
-skills: [rhythm, ties, reading]
+skills:
+- rhythm
+- ties
+- reading
 steps:
 - explain: |
     A **tie** is a curved line joining two notes of the **same pitch**. You play the first one
     and keep holding it for both lengths added together. The second note is *not* played again.
-  staff: {notes: 'C4:q E4:q G4:h~ | G4:q E4:q C4:h'}
+  staff:
+    notes: C4:q E4:q G4:h~ | G4:q E4:q C4:h
   sound: C4:q E4:q G4:h. E4:q C4:h
-  terms: [tie]
+  terms:
+  - tie
 - explain: |
     Ties are how music holds a note across a bar line, where a single note can't go.
     A half note tied to a quarter lasts 2 + 1 = 3 beats.
   check:
     ask: A half note tied to a quarter note of the same pitch lasts...
-    choices: ['Three beats, played once', 'Two notes: two beats then one', Two beats]
+    choices:
+    - Three beats, played once
+    - 'Two notes: two beats then one'
+    - Two beats
     correct: 0
     why: 'A tie adds the lengths: play once, hold for 3.'
 - explain: |
     Don't confuse a tie with a **slur**: a slur joins *different* notes and means "play smoothly".
-  terms: [slur]
+  terms:
+  - slur
   callout: |
     Same pitch = tie (hold). Different pitches = slur (legato).
-- {exercise: tap-ties}
-- {exercise: ties-rh}
+- exercise: tap-ties
+- exercise: ties-rh
+- explain: |
+    Now with the left hand. While the right hand holds its tied note, the left hand moves; that is the whole trick of ties.
+- exercise: ties-ht
 - explain: |
     Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
-- {exercise: ties-quiz}
+- exercise: ties-quiz
 recap: A tie adds two notes together into one. Play once, hold for both.

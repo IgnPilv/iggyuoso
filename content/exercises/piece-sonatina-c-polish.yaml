@@ -1,0 +1,16 @@
+id: piece-sonatina-c-polish
+title: 'Sonatina in C: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+tempo: 72
+meter: 4/4
+countIn: 1
+right: C5:h E5:q G5:q | G5:h F5:h | D5:q F5:q A5:q F5:q | E5:h C5:h | C5:q E5:q D5:q C5:q | B4:h G4:h | A4:q B4:q C5:q D5:q
+  | C5:w
+left: C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e D3:e
+  G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e
+  D3:e G3:e | A2:e F3:e C3:e F3:e B2:e G3:e D3:e G3:e | C3+E3+G3:w
+reps: 3
+days: 3

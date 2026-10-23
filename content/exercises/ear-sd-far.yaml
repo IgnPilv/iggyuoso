@@ -1,0 +1,18 @@
+id: ear-sd-far
+title: 'Same or different: far apart'
+kind: ear
+prompt: Two notes. The same note twice, or two different notes?
+questions: 20
+reps: 3
+days: 2
+items:
+- type: compare
+  pool:
+  - same
+  - different
+  range:
+  - C3
+  - C6
+  gap:
+  - 7
+  - 12

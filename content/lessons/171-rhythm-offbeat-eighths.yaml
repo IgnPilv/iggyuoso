@@ -1,0 +1,11 @@
+id: rhythm-offbeat-eighths
+title: Off the beat
+skills:
+- rhythm
+steps:
+- explain: |
+    Notes on the "and" with a steady left hand on the beat. Feel the right hand bouncing **between** the left-hand notes.
+- exercise: rt-offbeat-1
+- exercise: rt-offbeat-2
+- exercise: gen-read-offbeats
+recap: Off-beats make music move.

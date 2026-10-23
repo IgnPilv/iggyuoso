@@ -1,0 +1,14 @@
+id: arp-a-minor-1
+title: A minor arpeggio, one octave
+kind: timed
+hand: together
+prompt: Stretch the hand over the chord; keep the wrist loose.
+key: Am
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q C5:q E5:q A5:q | E5:q C5:q A4:h
+left: A3:q C4:q E4:q A4:q | E4:q C4:q A3:h
+rightFingers: 1 2 3 5 3 2 1
+leftFingers: 5 4 2 1 2 4 5

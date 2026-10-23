@@ -1,0 +1,12 @@
+id: technique-scales-d-a-one-octave
+title: D and A major, hands together
+skills:
+- technique
+steps:
+- explain: |
+    Scales with sharps, hands together, one octave: same fingering as C.
+- exercise: scale-d-1
+- exercise: scale-a-1
+- exercise: scale-d-1-e
+- exercise: scale-a-1-e
+recap: 'D and A: the fingering of C with black keys.'

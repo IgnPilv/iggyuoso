@@ -1,0 +1,11 @@
+id: rhythm-sixteenths-two-hands
+title: Sixteenths over a bass
+skills:
+- rhythm
+steps:
+- explain: |
+    Sixteenths in one hand, steady quarters or eighths in the other.
+- exercise: rt-16-over-4
+- exercise: rt-16-over-8
+- exercise: gen-read-hands-16
+recap: The faster hand leans on the slower one.

@@ -1,0 +1,11 @@
+id: rhythm-hemiola
+title: 'Hemiola: threes against twos in the bar'
+skills:
+- rhythm
+steps:
+- explain: |
+    In 6/8, three quarter notes across the bar instead of two dotted quarters: the music seems to switch
+    from 6/8 to 3/4 for a moment. Baroque dances use it before their cadences.
+- exercise: rt-hemiola-1
+- exercise: rt-hemiola-hands
+recap: Two feels in one bar.

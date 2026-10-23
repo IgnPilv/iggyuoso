@@ -1,0 +1,10 @@
+id: ear-cadence-types
+title: Four kinds of cadence
+skills:
+- ear
+steps:
+- explain: |
+    A cadence is how a phrase ends. **Perfect** (V–I, full stop), **plagal** (IV–I, "Amen"),
+    **imperfect** (ends on V, a comma) and **interrupted** (V–vi, a surprise).
+- exercise: ear-cadence-quiz
+recap: Full stop, Amen, comma, surprise.

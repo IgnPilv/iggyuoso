@@ -1,0 +1,14 @@
+id: piece-eine-kleine-lh
+title: 'Eine kleine Nachtmusik: the opening: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+key: G
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: G2+D3:h G2+D3:h | G2+B2+D3:w | A2+C3+D3:h A2+C3+D3:h | F#2+A2+C3+D3:w
+reps: 2
+days: 1

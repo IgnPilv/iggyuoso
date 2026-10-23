@@ -1,0 +1,20 @@
+id: piece-prelude-in-c
+title: 'Prelude in C: the opening'
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:e G4:s C5:s E5:s G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s | r:e A4:s D5:s F5:s A4:s D5:s F5:s r:e A4:s D5:s
+  F5:s A4:s D5:s F5:s | r:e G4:s D5:s F5:s G4:s D5:s F5:s r:e G4:s D5:s F5:s G4:s D5:s F5:s | r:e G4:s C5:s E5:s G4:s C5:s
+  E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s | r:e A4:s E5:s A5:s A4:s E5:s A5:s r:e A4:s E5:s A5:s A4:s E5:s A5:s | r:e F#4:s
+  A4:s D5:s F#4:s A4:s D5:s r:e F#4:s A4:s D5:s F#4:s A4:s D5:s | r:e G4:s D5:s G5:s G4:s D5:s G5:s r:e G4:s D5:s G5:s G4:s
+  D5:s G5:s | r:e E4:s G4:s C5:s E4:s G4:s C5:s r:e E4:s G4:s C5:s E4:s G4:s C5:s
+left: C4+E4:h C4+E4:h | C4+D4:h C4+D4:h | B3+D4:h B3+D4:h | C4+E4:h C4+E4:h | C4+E4:h C4+E4:h | C4+D4:h C4+D4:h | B3+D4:h
+  B3+D4:h | B3+C4:h B3+C4:h
+pedal: x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w
+reps: 3
+days: 2

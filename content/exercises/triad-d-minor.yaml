@@ -1,0 +1,14 @@
+id: triad-d-minor
+title: D minor triad, both hands
+kind: timed
+hand: together
+prompt: Broken, then all three notes together.
+key: Dm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q F4:q A4:q F4:q | D4+F4+A4:w | D4:q F4:q A4:q F4:q | D4+F4+A4:w
+left: D3:h A3:h | D3+A3:w | D3:h A3:h | D3+A3:w
+rightFingers: 1 3 5 3 1 1 3 5 3 1
+leftFingers: 5 1 5 5 1 5

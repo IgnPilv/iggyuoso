@@ -1,0 +1,16 @@
+id: ear-harmonic-3-5-8
+title: Third, fifth or octave, together
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - M3
+  - P5
+  - P8
+  from: C4
+  direction: up
+  answer: name
+  together: true

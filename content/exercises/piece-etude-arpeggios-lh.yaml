@@ -1,0 +1,13 @@
+id: piece-etude-arpeggios-lh
+title: 'Arpeggio Study: left hand'
+kind: timed
+hand: left
+prompt: The left hand alone, until it runs by itself.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:w | A2:w | F2:w | G2:w | C2+C3:w
+reps: 2
+days: 1

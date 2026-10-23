@@ -1,0 +1,12 @@
+id: ear-minor-degrees
+title: Hearing in a minor key
+skills:
+- ear
+steps:
+- explain: |
+    After the chords of A minor, you hear 1, 3 or 5 of the A minor scale: A, C or E. Minor's home
+    note feels just as much like home as major's.
+  sound: A3+C4+E4:h E3+G#3+B3:h | A3+C4+E4:w
+- exercise: ear-am-135
+- exercise: ear-am-1-to-5
+recap: Minor keys have a home too.

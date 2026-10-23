@@ -1,0 +1,29 @@
+id: rd-sight-any-key-34
+title: Any key, waltz time
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 76
+meter: 3/4
+notes: C4-E5
+durations:
+- q
+- h
+- h.
+- e
+bars: 8
+mastery:
+  accuracy: 90
+keys:
+- C
+- G
+- D
+- F
+- Bb
+- Am
+- Dm
+- Gm
+left: roots
+reps: 4
+days: 2

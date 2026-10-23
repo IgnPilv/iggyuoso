@@ -1,0 +1,11 @@
+id: technique-broken-chords
+title: Broken chords under a melody
+skills:
+- technique
+steps:
+- explain: |
+    The left hand plays the chord **broken**: low, middle, high, middle (1-5-3-5 of the chord). It is the most common accompaniment of all.
+- exercise: broken-c-f-g
+- exercise: broken-g-c-d
+- exercise: broken-f-bb-c
+recap: 'Low-high-middle-high: the broken chord.'

@@ -1,0 +1,16 @@
+id: gen-read-rests
+title: Read with rests
+kind: generated
+generator: rhythm-read
+tempo: 72
+meter: 4/4
+durations:
+- q
+- h
+- r:q
+- r:h
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

@@ -1,0 +1,27 @@
+id: ear-which-way
+title: Which way did the tune go?
+skills:
+- ear
+steps:
+- explain: |
+    A melody is a line of notes going up, down or staying. Here are **three** notes: two moves.
+    Answer with the arrows: ↗ for up, ↘ for down. "↗ ↘" means up, then down.
+  sound: C4:q E4:q G4:h | C4:q G4:q E4:h
+  terms:
+  - melody
+  - contour
+  check:
+    ask: 'C, E, G: all going up. Which arrows?'
+    choices:
+    - ↗ ↗
+    - ↗ ↘
+    - ↘ ↗
+    - ↘ ↘
+    correct: 0
+    why: 'Each note is higher than the one before: up, up.'
+- explain: |
+    The shape of a tune is called its **contour**. Drawing it in the air with your finger while you
+    listen is a real musicians' trick.
+- exercise: ear-contour-3-wide
+- exercise: ear-contour-3-close
+recap: A tune has a shape. Hear the shape first; the exact notes come later.

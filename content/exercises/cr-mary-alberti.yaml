@@ -1,0 +1,16 @@
+id: cr-mary-alberti
+title: 'Mary Had a Little Lamb: Alberti bass'
+kind: timed
+hand: together
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q D4:q C4:q D4:q | E4:q E4:q E4:h | D4:q D4:q D4:h | E4:q G4:q G4:h | E4:q D4:q C4:q D4:q | E4:q E4:q E4:q E4:q
+  | D4:q D4:q E4:q D4:q | C4:w
+left: C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e D3:e
+  G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e
+  E3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e D3:e G3:e | C3+E3+G3:w
+reps: 2
+days: 1

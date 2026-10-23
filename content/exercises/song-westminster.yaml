@@ -1,0 +1,15 @@
+id: song-westminster
+title: Westminster Chimes
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: E4:q D4:q C4:q | G3:h. | C4:q E4:q D4:q | G3:h. | C4:q D4:q E4:q | C4:h. | E4:q C4:q D4:q | G3:h. | G3:q D4:q E4:q
+  | C4:h.
+left: C3:h. | G2:h. | C3:h. | G2:h. | C3:h. | C3:h. | C3:h. | G2:h. | G2:h. | C3:h.
+reps: 3
+days: 2

@@ -1,0 +1,10 @@
+id: rt-trip-hands
+title: Triplets over quarters
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 x:e3 | x:e3 x:e3 x:e3 x:q x:h | x:e3 x:e3 x:e3 x:e3 x:e3 x:e3
+  x:q x:q | x:w
+left: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:q x:q | x:w

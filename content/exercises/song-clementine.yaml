@@ -1,0 +1,16 @@
+id: song-clementine
+title: Oh My Darling, Clementine
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+right: C4:e C4:e | C4:q G3:q E4:e E4:e | E4:q C4:q C4:e E4:e | G4:q. F4:e E4:e D4:e | D4:h D4:e E4:e | F4:q F4:q E4:e D4:e
+  | E4:q C4:q C4:e E4:e | D4:q. G3:e B3:e D4:e | C4:h
+left: r:q | C3:h. | C3:h. | C3:h. | G2:h. | G2:h. | C3:h. | G2:h. | C3:h
+reps: 3
+days: 2

@@ -1,0 +1,23 @@
+id: song-going-home
+title: Going Home
+skills:
+- songs
+steps:
+- explain: |
+    **Going Home** · Dvořák, Symphony "From the New World", 1893
+
+    Antonín Dvořák wrote this slow melody for the cor anglais in his New World Symphony, after a stay in America. Words were added later and it became a song.
+  staff:
+    notes: E4:q G4:q G4:h  |  E4:q D4:q C4:h
+  sound: E4:q G4:q G4:h  |  E4:q D4:q C4:h  |  D4:q E4:q G4:q E4:q  |  D4:w
+- explain: |
+    **Before you play.** Very slow and very smooth. Breathe at the end of bar 4.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 60
+- exercise: song-going-home-rh
+- exercise: song-going-home-lh
+- exercise: song-going-home
+- exercise: song-going-home-arranged
+recap: 'Going Home: tune, left hand, together. Come back to it any time; songs are for fun.'

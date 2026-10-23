@@ -1,0 +1,9 @@
+id: ear-echo-g-five
+title: Echo five notes in G and F
+skills:
+- ear
+steps:
+- explain: |
+    Five-note phrases in G major and F major.
+- exercise: ear-echo-five-g-f
+recap: 'Phrases in new keys: the same ear, new home notes.'

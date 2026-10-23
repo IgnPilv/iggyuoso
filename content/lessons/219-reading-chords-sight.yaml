@@ -1,0 +1,10 @@
+id: reading-chords-sight
+title: Reading with chords in the left hand
+skills:
+- reading
+steps:
+- explain: |
+    The left hand holds whole triads. Read them as shapes: three notes stacked line-line-line or space-space-space are a root-position triad.
+- exercise: rd-sight-together-chords
+- exercise: rd-sight-together-eight-bars
+recap: Chords are shapes on the staff.

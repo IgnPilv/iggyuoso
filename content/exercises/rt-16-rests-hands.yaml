@@ -1,0 +1,10 @@
+id: rt-16-rests-hands
+title: A funky right hand
+kind: tap
+tempo: 52
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:s r:s x:s x:s x:s r:s x:s x:s x:s r:s x:s x:s x:s r:s x:s x:s | x:s r:s x:s x:s x:q x:s r:s x:s x:s x:q | x:s x:s
+  r:s x:s x:e x:e x:h | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:h | x:w

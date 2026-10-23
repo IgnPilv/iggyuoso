@@ -1,0 +1,10 @@
+id: octaves-lh
+title: Left-hand octaves
+kind: timed
+hand: together
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:w | G5:w | F5:h D5:h | C5:w
+left: C2+C3:q D2+D3:q E2+E3:q F2+F3:q | G2+G3:h E2+E3:h | F2+F3:q D2+D3:q G1+G2:q G2+G3:q | C2+C3:w

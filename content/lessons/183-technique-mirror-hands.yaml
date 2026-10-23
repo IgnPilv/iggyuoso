@@ -1,0 +1,24 @@
+id: technique-mirror-hands
+title: Mirror hands
+skills:
+- technique
+steps:
+- explain: |
+    **Both hands from the start.** Put both thumbs on a C: the right thumb on middle C, the left thumb
+    on the C below. Now walk away from each other: the right hand goes up, the left hand goes down.
+    Each hand plays the **same finger** at the same moment, like a mirror.
+  keys:
+    notes: F2 G2 A2 B2 C3 C4 D4 E4 F4 G4
+    fingers: 5 4 3 2 1 1 2 3 4 5
+  check:
+    ask: In the mirror, when the right hand plays finger 3, the left hand plays...
+    choices:
+    - Finger 1
+    - Finger 5
+    - Finger 3
+    correct: 2
+    why: 'Same finger in both hands, every time: that is why it is easy.'
+- exercise: mirror-c-steps
+- exercise: mirror-c
+- exercise: mirror-c-skips
+recap: In the mirror, both hands use the same fingers. It is the easiest way to play with two hands.

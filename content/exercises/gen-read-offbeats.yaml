@@ -1,0 +1,16 @@
+id: gen-read-offbeats
+title: Read eighth rests
+kind: generated
+generator: rhythm-read
+tempo: 66
+meter: 4/4
+durations:
+- q
+- e
+- r:e
+- h
+bars: 4
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

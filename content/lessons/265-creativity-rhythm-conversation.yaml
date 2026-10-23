@@ -1,0 +1,14 @@
+id: creativity-rhythm-conversation
+title: A rhythm conversation
+skills:
+- creativity
+steps:
+- explain: |
+    **Making music starts with play.** The app asks a question in rhythm; you answer. First copy it exactly. Then,
+    in the free rounds, answer with **your own** rhythm on any keys: the app only checks that you keep the beat.
+  callout: |
+    There are no wrong notes in the free rounds. Choose any keys, high or low.
+- exercise: gen-echo-conversation
+- exercise: cr-answer-quarters
+- exercise: cr-answer-long-short
+recap: Music is a conversation. You can already answer.

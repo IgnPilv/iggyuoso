@@ -1,0 +1,9 @@
+id: rt-16-rests
+title: Gaps in the sixteenths
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:s r:s x:s x:s x:s r:s x:s x:s x:q x:q | r:s x:s x:s x:s r:s x:s x:s x:s x:h | x:s x:s r:s x:s x:e x:e x:q x:q |
+  x:w

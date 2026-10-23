@@ -1,0 +1,23 @@
+id: song-clementine
+title: Oh My Darling, Clementine
+skills:
+- songs
+steps:
+- explain: |
+    **Oh My Darling, Clementine** · Folk ballad, America, 1880s
+
+    A gold-rush ballad, sad words to a cheerful waltz.
+  staff:
+    notes: C4:e C4:e  |  C4:q G3:q E4:e E4:e
+  sound: C4:e C4:e  |  C4:q G3:q E4:e E4:e  |  E4:q C4:q C4:e E4:e  |  G4:q. F4:e E4:e D4:e
+- explain: |
+    **Before you play.** Three beats in a bar. The left hand plays "oom-pah-pah".
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 3/4 · Tempo: 104
+- exercise: song-clementine-rh
+- exercise: song-clementine-lh
+- exercise: song-clementine
+- exercise: song-clementine-arranged
+recap: 'Oh My Darling, Clementine: tune, left hand, together. Come back to it any time; songs are for fun.'

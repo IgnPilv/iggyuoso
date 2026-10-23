@@ -13,7 +13,11 @@ C = os.path.join(ROOT, 'content')
 class Lit(str): pass
 yaml.add_representer(Lit, lambda d, s: d.represent_scalar('tag:yaml.org,2002:str', s, style='|'))
 
-def txt(t): return Lit(textwrap.dedent(t).strip() + "\n")
+def txt(t):
+    # Text may start right after the opening quotes, with the following lines indented like code.
+    first, _, rest = t.partition('\n')
+    t = first.strip() + '\n' + textwrap.dedent(rest) if first.strip() else textwrap.dedent(rest)
+    return Lit(t.strip() + "\n")
 
 def lits(o):
     """Multi-line strings as | blocks, everywhere in a structure."""
@@ -24,7 +28,7 @@ def lits(o):
 
 def dump(path, d):
     d = lits(d)
-    s = yaml.dump(d, sort_keys=False, allow_unicode=True, width=120, default_flow_style=None)
+    s = yaml.dump(d, sort_keys=False, allow_unicode=True, width=120, default_flow_style=False)
     with open(path, 'w') as f: f.write(s)
 
 # ---------------------------------------------------------------- pitch and spelling
@@ -488,3 +492,39 @@ def build_ex(id, title, tasks, prompt=None, reps=3, days=1):
     d['tasks'] = tasks
     d['reps'] = reps; d['days'] = days
     return ex(id, **d)
+
+# ---------------------------------------------------------------- rhythm shorthand
+
+def rx(s):
+    """Rhythm shorthand: "q q h | rq q h" -> "x:q x:q x:h | r:q x:q x:h"."""
+    out = []
+    for t in s.split():
+        if t == '|': out.append(t)
+        elif t.startswith('r'): out.append('r:' + t[1:])
+        else: out.append('x:' + t)
+    return ' '.join(out)
+
+def tap2(id, title, right, left, meter='4/4', tempo=72, prompt=None, reps=None, days=None, ladder=True, **kw):
+    """Two-hand tap: right hand from middle C up, left hand below."""
+    pk = sum(dur_value(x) for x in kw['pickup'].split()) if kw.get('pickup') else 0.0
+    check_bars(right, meter, pk, id); check_bars(left, meter, pk, id)
+    assert len(right.split('|')) == len(left.split('|')), f'{id}: bar counts differ'
+    d = dict(title=title, kind='tap')
+    if prompt: d['prompt'] = prompt
+    d['tempo'] = tempo
+    if ladder: d['tempoLadder'] = True
+    d['meter'] = meter
+    if kw.get('pickup'): d['pickup'] = kw.pop('pickup')
+    d['countIn'] = 1
+    d['right'] = right; d['left'] = left
+    d.update(kw)
+    if reps: d['reps'] = reps
+    if days: d['days'] = days
+    return ex(id, **d)
+
+def rread(id, title, durations, meter='4/4', bars=4, tempo=72, reps=4, days=2, hands=None, echo=False, prompt=None, accuracy=90):
+    """A generated rhythm-read (or rhythm-echo) drill."""
+    kw = dict(durations=durations, meter=meter, bars=bars, tempo=tempo, mastery={'accuracy': accuracy})
+    if prompt: kw = dict(prompt=prompt, **kw)
+    if hands: kw['hands'] = hands
+    return gen(id, title, 'rhythm-echo' if echo else 'rhythm-read', reps=reps, days=days, **kw)

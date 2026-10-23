@@ -1,0 +1,12 @@
+id: dom7-f
+title: The dominant 7th in F major
+kind: timed
+hand: together
+prompt: Four notes of the dominant 7th, then the chord, then it resolves home.
+key: F
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:q Bb4:q | C5:h E4+G4+Bb4:h | F4:q A4:q C5:q A4:q | F4+A4+C5:w
+left: C3:w | C3:w | F2:w | F2:w

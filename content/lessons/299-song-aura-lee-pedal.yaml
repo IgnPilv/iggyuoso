@@ -1,0 +1,23 @@
+id: song-aura-lee-pedal
+title: Aura Lee, with pedal
+skills:
+- songs
+steps:
+- explain: |
+    **Aura Lee, with pedal** · George Poulton, 1861, arranged
+
+    The same song as before, now with a flowing left hand and the sustain pedal changing with every chord.
+  staff:
+    notes: G4:q C5:q B4:q C5:q  |  D5:q A4:q D5:h
+  sound: G4:q C5:q B4:q C5:q  |  D5:q A4:q D5:h  |  C5:q B4:q A4:q B4:q  |  C5:w
+- explain: |
+    **Before you play.** Pedal down just after each new bass note; lift as the next chord sounds.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 66
+- exercise: song-aura-lee-pedal-rh
+- exercise: song-aura-lee-pedal-lh
+- exercise: song-aura-lee-pedal
+- exercise: song-aura-lee-pedal-arranged
+recap: 'Aura Lee, with pedal: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,15 @@
+id: ear-contour-4
+title: 'Four notes: which shape?'
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: contour
+  length: 4
+  range:
+  - C4
+  - C6
+  gap:
+  - 2
+  - 5

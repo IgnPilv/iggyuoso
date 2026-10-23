@@ -1,0 +1,28 @@
+id: theory-keys-two-and-three
+title: Keys with two and three sharps or flats
+skills:
+- theory
+steps:
+- explain: |
+    Sharps are added in the order **F C G D A E B**; flats in the reverse, **B E A D G C F**. D major has two sharps
+    (F♯, C♯), A major three (F♯ C♯ G♯). B♭ major has two flats (B♭ E♭), E♭ major three (B♭ E♭ A♭).
+  staff:
+    notes: D5:w
+    key: D
+  terms:
+  - key signature
+  check:
+    ask: With sharps, the major key is...
+    choices:
+    - The last sharp
+    - A half step above the last sharp
+    - A fifth below the first sharp
+    correct: 1
+    why: Last sharp C♯ → D major.
+- explain: |
+    With flats, the key is the **second-to-last flat**: B♭ E♭ → B♭ major; B♭ E♭ A♭ → E♭ major. (F major, one flat, you just remember.)
+  staff:
+    notes: Bb4:w
+    key: Bb
+- exercise: theory-keys-two-three-quiz
+recap: Last sharp + half step; second-to-last flat.

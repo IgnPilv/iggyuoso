@@ -1,0 +1,12 @@
+id: rhythm-four-bar-phrases
+title: Longer rhythm memory
+skills:
+- rhythm
+steps:
+- explain: |
+    Rhythms come in **phrases**, usually four bars long. Listen for the shape: which bars repeat? Most
+    four-bar phrases go **A A B A** or **A B A B**.
+- exercise: gen-echo-four-bars
+- exercise: gen-echo-four-bars-hands
+- exercise: gen-read-eight-bars
+recap: Listen in phrases, not single notes.

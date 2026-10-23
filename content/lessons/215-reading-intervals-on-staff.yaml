@@ -1,0 +1,15 @@
+id: reading-intervals-on-staff
+title: Intervals on the staff
+skills:
+- reading
+steps:
+- explain: |
+    An interval is the distance between two notes. On the staff: a **2nd** is line to space, a **3rd** line to line,
+    a **4th** line to space further, a **5th** line to line with one line between.
+  staff:
+    notes: E4:h F4:h | E4:h G4:h | E4:h A4:h | E4:h B4:h
+  sound: E4:h F4:h | E4:h G4:h | E4:h A4:h | E4:h B4:h
+- exercise: rd-intervals-2-3
+- exercise: rd-intervals-2-5
+- exercise: rd-intervals-bass
+recap: 'Read the distance: 2nd, 3rd, 4th, 5th.'

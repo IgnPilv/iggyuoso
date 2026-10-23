@@ -1,0 +1,14 @@
+id: song-deck-the-halls-lh
+title: 'Deck the Halls: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:w | C3:w | G2:h C3:h | G2:h C3:h | C3:w | C3:w | G2:h C3:h | G2:h C3:h | G2:w | C3:h G2:h | A2:h D3:h | G2:w | C3:w
+  | C3:w | F2:w | G2:h C3:h
+reps: 2
+days: 1

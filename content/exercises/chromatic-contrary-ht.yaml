@@ -1,0 +1,13 @@
+id: chromatic-contrary-ht
+title: Chromatic scale in contrary motion
+kind: timed
+hand: together
+prompt: 'From D, the hands mirror each other: 3 on every black key in both.'
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:e D#4:e E4:e F4:e F#4:e G4:e G#4:e A4:e | A#4:e B4:e C5:e C#5:e D5:e C#5:e C5:e B4:e | Bb4:e A4:e Ab4:e G4:e Gb4:e
+  F4:e E4:e Eb4:e | D4:w
+left: D4:e Db4:e C4:e B3:e Bb3:e A3:e Ab3:e G3:e | Gb3:e F3:e E3:e Eb3:e D3:e Eb3:e E3:e F3:e | F#3:e G3:e G#3:e A3:e A#3:e
+  B3:e C4:e C#4:e | D4:w

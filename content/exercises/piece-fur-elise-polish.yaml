@@ -1,0 +1,17 @@
+id: piece-fur-elise-polish
+title: 'Für Elise: the theme: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+key: Am
+tempo: 96
+meter: 3/8
+pickup: e
+countIn: 1
+right: E5:s D#5:s | E5:s D#5:s E5:s B4:s D5:s C5:s | A4:e r:s C4:s E4:s A4:s | B4:e r:s E4:s G#4:s B4:s | C5:e r:s E4:s E5:s
+  D#5:s | E5:s D#5:s E5:s B4:s D5:s C5:s | A4:e r:s C4:s E4:s A4:s | B4:e r:s E4:s C5:s B4:s | A4:q
+left: r:e | r:q. | A2:s E3:s A3:s r:s r:e | E2:s E3:s G#3:s r:s r:e | A2:s E3:s A3:s r:s r:e | r:q. | A2:s E3:s A3:s r:s r:e
+  | E2:s E3:s G#3:s r:s r:e | A2:s E3:s A3:s r:s
+reps: 3
+days: 3

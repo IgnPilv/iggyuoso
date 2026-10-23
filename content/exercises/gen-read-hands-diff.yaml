@@ -1,0 +1,17 @@
+id: gen-read-hands-diff
+title: Read two rhythms
+kind: generated
+generator: rhythm-read
+tempo: 66
+meter: 4/4
+durations:
+- q
+- h
+- w
+- r:q
+bars: 4
+mastery:
+  accuracy: 90
+hands: both
+reps: 4
+days: 2

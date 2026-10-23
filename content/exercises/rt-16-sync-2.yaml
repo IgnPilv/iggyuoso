@@ -1,0 +1,9 @@
+id: rt-16-sync-2
+title: Clave
+kind: tap
+prompt: 'The 3-2 son clave: the backbone of salsa.'
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q. x:q. x:q | r:q x:q x:q r:q | x:q. x:q. x:q | r:q x:q x:q r:q

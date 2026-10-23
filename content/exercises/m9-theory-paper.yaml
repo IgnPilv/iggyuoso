@@ -1,0 +1,93 @@
+id: m9-theory-paper
+title: Theory paper
+kind: quiz
+prompt: 'A theory paper: answers are only noted, and the results list what to revise.'
+shuffle: true
+feedback: none
+reps: 1
+days: 1
+questions:
+- ask: Rondo form is...
+  choices:
+  - A B
+  - A B A
+  - A B A C A
+  correct: 2
+  why: The theme keeps coming back.
+- ask: Sonata form's three parts are...
+  choices:
+  - Verse, chorus, bridge
+  - Exposition, development, recapitulation
+  - A, B, A
+  correct: 1
+  why: Present, travel, return.
+- ask: In a major-key exposition, the second theme is in...
+  choices:
+  - The subdominant
+  - The tonic
+  - The dominant
+  correct: 2
+  why: C major → G.
+- ask: Bar 9 of a twelve-bar blues is...
+  choices:
+  - V
+  - IV
+  - I
+  correct: 0
+  why: V IV I V to finish.
+- ask: The C blues scale is...
+  choices:
+  - C E♭ F F♯ G B♭
+  - C D E♭ F G A♭ B♭
+  - C D E G A
+  correct: 0
+  why: Minor pentatonic + the blue note.
+- ask: A hemiola makes 6/8 sound briefly like...
+  choices:
+  - 3/4
+  - 2/4
+  - 4/4
+  correct: 0
+  why: Three quarters across the bar.
+- ask: Swing eighths are played...
+  choices:
+  - Short-long
+  - Even
+  - Long-short
+  correct: 2
+  why: Like a triplet with the middle tied.
+- ask: After a leap, a good melody usually...
+  choices:
+  - Stops
+  - Steps back the other way
+  - Leaps again
+  correct: 1
+  why: It fills the gap.
+- ask: A sequence is...
+  choices:
+  - A pattern repeated on a different note
+  - A cadence
+  - A key change
+  correct: 0
+  why: Repetition at another pitch.
+- ask: ♭3 in C major is...
+  choices:
+  - D♯
+  - E♭
+  - E
+  correct: 1
+  why: 'Lowered third degree: E♭.'
+- ask: ♯4 in C major is...
+  choices:
+  - F
+  - F♯
+  - G♭
+  correct: 1
+  why: 'Raised fourth: F♯.'
+- ask: The recapitulation brings the second theme back in...
+  choices:
+  - The relative minor
+  - The tonic
+  - The dominant
+  correct: 1
+  why: Everything comes home.

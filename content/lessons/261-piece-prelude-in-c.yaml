@@ -1,0 +1,24 @@
+id: piece-prelude-in-c
+title: 'Prelude in C: the opening'
+skills:
+- repertoire
+steps:
+- explain: |
+    **Prelude in C: the opening** · J. S. Bach, Well-Tempered Clavier I, 1722 (first eight bars, arranged)
+
+    Bach's first prelude is one figure repeated: a chord spread out in a rising pattern, changing one or two notes each bar. Here the left hand holds the two lowest notes.
+  staff:
+    notes: r:e G4:s C5:s E5:s G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s  |  r:e A4:s D5:s F5:s A4:s D5:s F5:s r:e A4:s
+      D5:s F5:s A4:s D5:s F5:s
+  sound: r:e G4:s C5:s E5:s G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s  |  r:e A4:s D5:s F5:s A4:s D5:s F5:s r:e A4:s
+    D5:s F5:s A4:s D5:s F5:s  |  r:e G4:s D5:s F5:s G4:s D5:s F5:s r:e G4:s D5:s F5:s G4:s D5:s F5:s  |  r:e G4:s C5:s E5:s
+    G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s
+- explain: |
+    **How to learn it.** Learn the eight chords first as blocks. Then spread them. Pedal on each new bar.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-prelude-in-c-rh
+- exercise: piece-prelude-in-c-lh
+- exercise: piece-prelude-in-c
+- exercise: piece-prelude-in-c-polish
+recap: 'Prelude in C: the opening: learned hands alone, then together, then performed.'

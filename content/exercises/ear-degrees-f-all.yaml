@@ -1,0 +1,18 @@
+id: ear-degrees-f-all
+title: F major, every degree
+kind: ear
+cadence: F
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: F
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7

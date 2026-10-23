@@ -1,0 +1,16 @@
+id: reading-landmarks
+title: Landmark notes
+skills:
+- reading
+steps:
+- explain: |
+    Fluent readers do not count lines for every note. They know a few **landmarks** by heart and read the rest
+    as steps and skips from them: middle C, treble G (the line the treble clef curls round) and bass F (the line
+    between the bass clef's dots).
+  staff:
+    notes: F3:w C4:w G4:w
+    clef: grand
+    labels: names
+- exercise: rd-landmarks
+- exercise: rd-landmarks-near
+recap: Know three notes cold; read the rest as steps and skips.

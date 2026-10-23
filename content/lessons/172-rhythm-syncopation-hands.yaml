@@ -1,0 +1,13 @@
+id: rhythm-syncopation-hands
+title: Syncopation with two hands
+skills:
+- rhythm
+steps:
+- explain: |
+    **Syncopation**: an accent where you don't expect it, usually a note on the "and" held over the beat. The
+    left hand keeps the beat, so you can feel the right hand pull against it.
+- exercise: rt-sync-1
+- exercise: rt-sync-2
+- exercise: ear-rt-sync
+- exercise: gen-echo-sync
+recap: 'Syncopation: the pull against the beat.'

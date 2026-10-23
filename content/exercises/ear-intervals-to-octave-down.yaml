@@ -1,0 +1,21 @@
+id: ear-intervals-to-octave-down
+title: All intervals, going down
+kind: ear
+questions: 25
+reps: 3
+days: 3
+items:
+- type: interval
+  pool:
+  - m2
+  - M2
+  - m3
+  - M3
+  - P4
+  - P5
+  - m6
+  - M6
+  - P8
+  from: C5
+  direction: down
+  answer: name

@@ -1,0 +1,23 @@
+id: song-yankee-doodle
+title: Yankee Doodle
+skills:
+- songs
+steps:
+- explain: |
+    **Yankee Doodle** · Folk song, America, 1700s
+
+    A marching song from the American War of Independence, first sung to make fun of the colonists, who then took it as their own.
+  staff:
+    notes: C4:q C4:q D4:q E4:q  |  C4:q E4:q D4:q G3:q
+  sound: C4:q C4:q D4:q E4:q  |  C4:q E4:q D4:q G3:q  |  C4:q C4:q D4:q E4:q  |  C4:h B3:h
+- explain: |
+    **Before you play.** The tune dips below middle C to B, A and G: keep the thumb on C and reach down with the hand, not the arm.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 104
+- exercise: song-yankee-doodle-rh
+- exercise: song-yankee-doodle-lh
+- exercise: song-yankee-doodle
+- exercise: song-yankee-doodle-arranged
+recap: 'Yankee Doodle: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,15 @@
+id: gen-echo-triplets
+title: Echo triplets
+kind: generated
+generator: rhythm-echo
+tempo: 60
+meter: 4/4
+durations:
+- q
+- e3
+- h
+bars: 2
+mastery:
+  accuracy: 90
+reps: 3
+days: 2

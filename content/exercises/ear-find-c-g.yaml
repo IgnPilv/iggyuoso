@@ -1,0 +1,13 @@
+id: ear-find-c-g
+title: C or G?
+kind: ear
+questions: 15
+reps: 3
+days: 1
+items:
+- type: note
+  pool:
+  - C4
+  - G4
+  lit: true
+  reference: C4

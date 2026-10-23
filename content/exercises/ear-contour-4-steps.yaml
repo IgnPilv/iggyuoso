@@ -1,0 +1,15 @@
+id: ear-contour-4-steps
+title: Four notes, small steps
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: contour
+  length: 4
+  range:
+  - C4
+  - G5
+  gap:
+  - 1
+  - 2

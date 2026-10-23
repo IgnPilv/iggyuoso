@@ -1,0 +1,15 @@
+id: creativity-choose-accompaniment
+title: Choose an accompaniment
+skills:
+- creativity
+steps:
+- explain: |
+    One tune, six left hands. The **style** of the accompaniment changes the whole character: try them all and decide
+    which you like best.
+- exercise: cr-mary-fifth
+- exercise: cr-mary-block
+- exercise: cr-mary-pulse
+- exercise: cr-mary-oompah
+- exercise: cr-mary-broken
+- exercise: cr-mary-alberti
+recap: The same tune, six characters.

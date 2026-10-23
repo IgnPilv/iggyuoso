@@ -1,0 +1,10 @@
+id: reading-flat-keys-sight
+title: Sight-reading in flat keys
+skills:
+- reading
+steps:
+- explain: |
+    B♭ and E♭ major, G and C minor.
+- exercise: rd-sight-flats
+- exercise: rd-sight-flats-chords
+recap: Flats read just like sharps.

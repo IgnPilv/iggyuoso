@@ -1,0 +1,9 @@
+id: rt-dotted-8th-hands
+title: Snappy over steady
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e. x:s x:e. x:s x:e. x:s x:e. x:s | x:e. x:s x:q x:e. x:s x:q | x:e. x:s x:e. x:s x:h | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:h | x:w

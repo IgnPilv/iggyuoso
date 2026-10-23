@@ -1,0 +1,15 @@
+id: rhythm-sixteenth-patterns
+title: Sixteenth patterns
+skills:
+- rhythm
+steps:
+- explain: |
+    Four sixteenths to a beat: "**1**-e-and-a". The common shapes: four sixteenths, an eighth and two sixteenths
+    ("gal-lop-ing"), and two sixteenths and an eighth.
+  staff:
+    notes: C5:s C5:s C5:s C5:s C5:e C5:s C5:s C5:s C5:s C5:e C5:q
+- exercise: rt-16-1
+- exercise: rt-16-gallop
+- exercise: ear-rt-sixteenths
+- exercise: gen-echo-sixteenths
+recap: '1-e-and-a: four to a beat.'

@@ -1,0 +1,11 @@
+id: rhythm-groove
+title: Groove for two hands
+skills:
+- rhythm
+steps:
+- explain: |
+    A groove is a short pattern repeated until it locks in. Bass and right-hand chords interlock.
+- exercise: rt-groove-funk
+- exercise: rt-groove-latin
+- exercise: rt-groove-pop
+recap: Lock in and repeat.

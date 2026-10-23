@@ -1,0 +1,14 @@
+id: ear-loud-soft
+title: Loud or soft?
+skills:
+- ear
+steps:
+- explain: |
+    Music is not only high and low; it is also **loud and soft**. You will hear the same notes twice.
+    Was the second time louder or softer?
+  sound: C4:q E4:q G4:h
+  terms:
+  - dynamics
+- exercise: ear-loudness-one
+- exercise: ear-loudness-phrase
+recap: Loud and soft are called dynamics. Soon you will play them, too.

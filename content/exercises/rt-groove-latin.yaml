@@ -1,0 +1,9 @@
+id: rt-groove-latin
+title: Latin
+kind: tap
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q. x:q. x:q | r:q x:q x:q r:q | x:q. x:q. x:q | r:q x:q x:q r:q
+left: x:q. x:e x:q. x:e | x:q. x:e x:q. x:e | x:q. x:e x:q. x:e | x:q. x:e x:q. x:e

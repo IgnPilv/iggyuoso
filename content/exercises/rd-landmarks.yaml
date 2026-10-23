@@ -1,0 +1,12 @@
+id: rd-landmarks
+title: Find the landmarks
+kind: generated
+generator: read-notes
+clef: grand
+notes: F3 C4 G4
+questions: 20
+mastery:
+  accuracy: 90
+  medianMs: 2500
+reps: 3
+days: 1

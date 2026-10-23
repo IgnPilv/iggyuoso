@@ -1,0 +1,127 @@
+id: theory-time-signatures-quiz
+title: Time signatures quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: In 2/4, how many beats are in a bar?
+  choices:
+  - '3'
+  - '2'
+  - '6'
+  - '4'
+  correct: 1
+  why: 'The top number: 2 beats a bar.'
+- ask: In 2/4, which note gets one beat?
+  choices:
+  - A eighth note
+  - A quarter note
+  - A whole note
+  - A half note
+  correct: 1
+  why: 'The bottom number names the beat: 4 = quarter note.'
+- ask: In 3/4, how many beats are in a bar?
+  choices:
+  - '6'
+  - '4'
+  - '2'
+  - '3'
+  correct: 3
+  why: 'The top number: 3 beats a bar.'
+- ask: In 4/4, how many beats are in a bar?
+  choices:
+  - '4'
+  - '3'
+  - '2'
+  - '6'
+  correct: 0
+  why: 'The top number: 4 beats a bar.'
+- ask: In 2/2, how many beats are in a bar?
+  choices:
+  - '2'
+  - '4'
+  - '6'
+  - '3'
+  correct: 0
+  why: 'The top number: 2 beats a bar.'
+- ask: In 2/2, which note gets one beat?
+  choices:
+  - A whole note
+  - A quarter note
+  - A eighth note
+  - A half note
+  correct: 3
+  why: 'The bottom number names the beat: 2 = half note.'
+- ask: In 3/8, how many beats are in a bar?
+  choices:
+  - '2'
+  - '6'
+  - '4'
+  - '3'
+  correct: 3
+  why: 'The top number: 3 beats a bar.'
+- ask: In 3/8, which note gets one beat?
+  choices:
+  - A half note
+  - A eighth note
+  - A whole note
+  - A quarter note
+  correct: 1
+  why: 'The bottom number names the beat: 8 = eighth note.'
+- ask: In 3/2, how many beats are in a bar?
+  choices:
+  - '6'
+  - '2'
+  - '4'
+  - '3'
+  correct: 3
+  why: 'The top number: 3 beats a bar.'
+- ask: Which time signature fits this bar?
+  choices:
+  - 4/4
+  - 2/4
+  - 3/4
+  correct: 2
+  why: The bar adds up to 3 quarter beats.
+  staff: C5:q C5:q C5:q
+- ask: Which time signature fits this bar?
+  choices:
+  - 4/4
+  - 2/4
+  - 3/4
+  correct: 0
+  why: The bar adds up to 4 quarter beats.
+  staff: C5:h C5:h
+- ask: Which time signature fits this bar?
+  choices:
+  - 3/4
+  - 4/4
+  - 2/4
+  correct: 2
+  why: The bar adds up to 2 quarter beats.
+  staff: C5:q C5:q
+- ask: Which time signature fits this bar?
+  choices:
+  - 4/4
+  - 2/4
+  - 3/4
+  correct: 2
+  why: The bar adds up to 3 quarter beats.
+  staff: C5:h.
+- ask: Which time signature fits this bar?
+  choices:
+  - 4/4
+  - 2/4
+  - 3/4
+  correct: 0
+  why: The bar adds up to 4 quarter beats.
+  staff: C5:w
+- ask: Which time signature fits this bar?
+  choices:
+  - 4/4
+  - 2/4
+  - 3/4
+  correct: 2
+  why: The bar adds up to 3 quarter beats.
+  staff: C5:q C5:h

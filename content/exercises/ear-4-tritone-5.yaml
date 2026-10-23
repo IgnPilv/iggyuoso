@@ -1,0 +1,15 @@
+id: ear-4-tritone-5
+title: Fourth, tritone or fifth?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: interval
+  pool:
+  - P4
+  - TT
+  - P5
+  from: C4
+  direction: up
+  answer: name

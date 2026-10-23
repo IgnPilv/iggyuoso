@@ -1,0 +1,11 @@
+id: reading-high-and-low
+title: High treble, low bass
+skills:
+- reading
+steps:
+- explain: |
+    Higher in the treble (up to two ledger lines above: A5, B5, C6) and lower in the bass (down to C2).
+- exercise: rd-high-treble
+- exercise: rd-low-bass
+- exercise: rd-grand-wide
+recap: The whole grand staff.

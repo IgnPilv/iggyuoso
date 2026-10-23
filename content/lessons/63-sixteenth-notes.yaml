@@ -1,33 +1,45 @@
 id: sixteenth-notes
 title: Sixteenth notes
-skills: [rhythm, sixteenths]
+skills:
+- rhythm
+- sixteenths
 steps:
 - explain: |
     Cut an eighth note in half and you get a **sixteenth note**: **four** of them in one beat.
     It has two flags (or two beams when they are joined).
-  staff: {notes: 'C4:s C4:s C4:s C4:s C4:e C4:e C4:q C4:q'}
+  staff:
+    notes: C4:s C4:s C4:s C4:s C4:e C4:e C4:q C4:q
   sound: C4:s C4:s C4:s C4:s C4:e C4:e C4:q C4:q
-  terms: [sixteenth note, double beam]
+  terms:
+  - sixteenth note
+  - double beam
 - explain: |
     Count them **1-e-and-a, 2-e-and-a**: say "one ee and uh". The numbers stay on the click.
   callout: |
     1 e & a: the number on the beat, "&" halfway, "e" and "a" in between.
   check:
     ask: How many sixteenth notes fit in one beat?
-    choices: [Two, Four, Eight]
+    choices:
+    - Two
+    - Four
+    - Eight
     correct: 1
     why: Half of an eighth (½ beat) is ¼ beat, so four per beat.
 - explain: |
     Keep the fingers close to the keys; fast notes are small movements.
     A very common pattern is an eighth and two sixteenths ("1 - and a"), or two sixteenths and an eighth ("1 e and -").
-  staff: {notes: 'C4:e C4:s C4:s C4:s C4:s C4:e C4:q C4:q'}
+  staff:
+    notes: C4:e C4:s C4:s C4:s C4:s C4:e C4:q C4:q
   sound: C4:e C4:s C4:s C4:s C4:s C4:e C4:q C4:q
-- {exercise: tap-sixteenths}
-- {exercise: sixteenths-rh}
+- exercise: tap-sixteenths
+- exercise: sixteenths-rh
+- explain: |
+    The left hand keeps the beat in quarter notes while the right hand runs in sixteenths: four to every left-hand note.
+- exercise: sixteenths-ht
 - explain: |
     Fresh rhythms with sixteenth notes.
-- {exercise: gen-rhythm-sixteenths}
+- exercise: gen-rhythm-sixteenths
 - explain: |
     Theory check. Every answer comes with the reason, so a wrong one still teaches you something.
-- {exercise: sixteenths-quiz}
+- exercise: sixteenths-quiz
 recap: 'Four sixteenths to a beat: 1-e-and-a. Small, close movements.'

@@ -1,0 +1,10 @@
+id: ear-all-intervals
+title: Every interval to the octave
+skills:
+- ear
+steps:
+- explain: |
+    All the intervals in one set. Missed ones come back more often until they stick.
+- exercise: ear-intervals-to-octave
+- exercise: ear-intervals-to-octave-down
+recap: Every interval, both ways.

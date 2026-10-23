@@ -1,0 +1,11 @@
+id: technique-alberti
+title: Alberti bass
+skills:
+- technique
+steps:
+- explain: |
+    **Alberti bass**: low, high, middle, high in even eighths, named after an 18th-century composer. Mozart's sonatas are full of it.
+- exercise: alberti-c
+- exercise: alberti-g
+- exercise: alberti-f
+recap: 'Alberti: the left hand of the classical era.'

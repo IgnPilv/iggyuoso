@@ -1,0 +1,12 @@
+id: cadence-b
+title: 'B major: I, IV, V7, I'
+kind: timed
+hand: together
+prompt: 'The right hand barely moves: keep the common notes, slide the others to the nearest key.'
+key: B
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4+D#5+F#5:h B4+E5+G#5:h | A#4+E5+F#5:h B4+D#5+F#5:h | B4+D#5+F#5:h B4+E5+G#5:h | A#4+E5+F#5:h B4+D#5+F#5:h
+left: B2:h E3:h | F#2:h B2:h | B2:h E3:h | F#2:h B2:h

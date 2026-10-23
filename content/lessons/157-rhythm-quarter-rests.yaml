@@ -1,0 +1,27 @@
+id: rhythm-quarter-rests
+title: Silent beats
+skills:
+- rhythm
+steps:
+- explain: |
+    A **rest** is a beat of silence, and it still counts. Lift your hand off the key on a rest, and
+    keep counting in your head.
+  staff:
+    notes: C5:q r:q C5:q r:q | C5:h r:h
+  terms:
+  - quarter rest
+  - half rest
+  check:
+    ask: During a rest you...
+    choices:
+    - Count, and play nothing
+    - Wait for the click to stop
+    - Hold the last note
+    correct: 0
+    why: A rest is silence that is counted, just like a note.
+- exercise: rt-rests-1
+- exercise: rt-rests-2
+- exercise: rt-rests-hands
+- exercise: gen-read-rests
+- exercise: gen-echo-rests
+recap: Silence is part of rhythm. Count the rests as carefully as the notes.

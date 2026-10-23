@@ -1,0 +1,22 @@
+id: theory-aug-dim
+title: Augmented and diminished
+skills:
+- theory
+steps:
+- explain: |
+    Two more triads. **Diminished**: two minor 3rds (B D F); its outer notes make a tritone. **Augmented**: two major 3rds
+    (C E G♯); it sounds stretched and unresolved.
+  sound: B3+D4+F4:h C4+E4+G#4:h
+  terms:
+  - diminished
+  - augmented
+  check:
+    ask: C E♭ G♭ is...
+    choices:
+    - C diminished
+    - C minor
+    - C augmented
+    correct: 0
+    why: Minor 3rd + minor 3rd.
+- exercise: theory-aug-dim-quiz
+recap: 'Four triads: major, minor, diminished, augmented.'

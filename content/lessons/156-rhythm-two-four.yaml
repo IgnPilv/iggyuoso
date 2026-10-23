@@ -1,0 +1,17 @@
+id: rhythm-two-four
+title: Marching in 2/4
+skills:
+- rhythm
+steps:
+- explain: |
+    **2/4**: two beats a bar, LEFT right, like a march. The first beat of every bar is the strong one.
+  staff:
+    notes: C5:q C5:q | C5:h | C5:q C5:q | C5:h
+  terms:
+  - 2/4
+- exercise: rt-24-march
+- exercise: rt-24-left-right
+- exercise: rt-24-drum
+- exercise: ear-rt-two-four
+- exercise: gen-read-two-four
+recap: '2/4: two beats, strong and weak. Marches and polkas live here.'

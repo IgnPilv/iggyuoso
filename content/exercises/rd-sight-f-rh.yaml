@@ -1,0 +1,18 @@
+id: rd-sight-f-rh
+title: F position, right hand
+kind: generated
+generator: sight-read
+hand: right
+clef: treble
+tempo: 66
+notes: F4-C5
+durations:
+- q
+- h
+bars: 4
+mastery:
+  accuracy: 90
+keys:
+- F
+reps: 4
+days: 2

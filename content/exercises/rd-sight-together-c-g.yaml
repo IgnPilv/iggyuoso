@@ -1,0 +1,20 @@
+id: rd-sight-together-c-g
+title: Tunes in C and G
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 60
+notes: C4-D5
+durations:
+- q
+- h
+bars: 4
+mastery:
+  accuracy: 90
+keys:
+- C
+- G
+left: roots
+reps: 4
+days: 2

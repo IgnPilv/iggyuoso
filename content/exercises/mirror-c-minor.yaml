@@ -1,0 +1,14 @@
+id: mirror-c-minor
+title: 'C minor: mirror image'
+kind: timed
+hand: together
+prompt: Both thumbs on the key note; the hands move apart and back. Same finger in both hands every time.
+key: Cm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q D4:q Eb4:q F4:q | G4:q F4:q Eb4:q D4:q | C4:h Eb4:h | C4:w
+left: C3:q Bb2:q Ab2:q G2:q | F2:q G2:q Ab2:q Bb2:q | C3:h Ab2:h | C3:w
+rightFingers: 1 2 3 4 5 4 3 2 1 3 1
+leftFingers: 1 2 3 4 5 4 3 2 1 3 1

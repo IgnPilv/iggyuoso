@@ -1,0 +1,12 @@
+id: cadence-e-flat
+title: 'E♭ major: I, IV, V7, I'
+kind: timed
+hand: together
+prompt: 'The right hand barely moves: keep the common notes, slide the others to the nearest key.'
+key: Eb
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: Eb4+G4+Bb4:h Eb4+Ab4+C5:h | D4+Ab4+Bb4:h Eb4+G4+Bb4:h | Eb4+G4+Bb4:h Eb4+Ab4+C5:h | D4+Ab4+Bb4:h Eb4+G4+Bb4:h
+left: Eb3:h Ab2:h | Bb2:h Eb3:h | Eb3:h Ab2:h | Bb2:h Eb3:h

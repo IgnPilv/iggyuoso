@@ -1,0 +1,25 @@
+id: ear-echo-seven-notes
+title: Seven notes
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: melody
+  notes: C4 E4 G4 F4 E4 D4 C4
+  plays: 3
+- type: melody
+  notes: G4 F4 E4 G4 C5 B4 C5
+  plays: 3
+- type: melody
+  notes: E4 F4 G4 A4 G4 E4 C4
+  plays: 3
+- type: melody
+  notes: A4 G4 F4 E4 F4 D4 C4
+  plays: 3
+- type: melody
+  notes: C4 D4 E4 C4 F4 E4 D4
+  plays: 3
+- type: melody
+  notes: G4 E4 C5 A4 G4 F4 E4
+  plays: 3

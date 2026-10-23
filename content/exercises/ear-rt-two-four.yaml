@@ -1,0 +1,15 @@
+id: ear-rt-two-four
+title: Which 2/4 bar?
+kind: ear
+questions: 15
+reps: 2
+days: 2
+items:
+- type: rhythm
+  pool:
+  - x:q x:q
+  - x:h
+  - x:q r:q
+  - r:q x:q
+  meter: 2/4
+  tempo: 90

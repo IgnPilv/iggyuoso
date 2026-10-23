@@ -1,0 +1,12 @@
+id: dom7-a-minor
+title: The dominant 7th in A minor
+kind: timed
+hand: together
+prompt: Four notes of the dominant 7th, then the chord, then it resolves home.
+key: Am
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q G#4:q B4:q D5:q | E5:h G#4+B4+D5:h | A4:q C5:q E5:q C5:q | A4+C5+E5:w
+left: E3:w | E3:w | A2:w | A2:w

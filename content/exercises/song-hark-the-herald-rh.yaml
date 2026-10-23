@@ -1,0 +1,14 @@
+id: song-hark-the-herald-rh
+title: 'Hark! The Herald Angels Sing: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q C5:q C5:q. B4:e | C5:q E5:q E5:q D5:q | G5:q G5:q G5:q. F5:e | E5:q D5:q E5:h | G4:q C5:q C5:q. B4:e | C5:q E5:q
+  E5:q D5:q | G5:q D5:q D5:q. B4:e | B4:q A4:q G4:h
+reps: 2
+days: 1

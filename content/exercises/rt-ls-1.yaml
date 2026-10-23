@@ -1,0 +1,9 @@
+id: rt-ls-1
+title: Quarters and halves
+kind: tap
+prompt: Hold the halves down for two clicks.
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:h | x:q x:q x:h | x:h x:h | x:w

@@ -1,0 +1,15 @@
+id: reading-ledger-lines
+title: Ledger lines around middle C
+skills:
+- reading
+steps:
+- explain: |
+    Notes just above or below the staff get short extra lines: **ledger lines**. Middle C sits on one between
+    the staves. Below the treble staff: D, C, B, A; above the bass staff: B, C, D, E.
+  staff:
+    notes: A3:q B3:q C4:q D4:q
+    clef: treble
+    labels: names
+- exercise: rd-ledger-treble-low
+- exercise: rd-ledger-bass-high
+recap: 'Ledger lines: the staff, extended.'

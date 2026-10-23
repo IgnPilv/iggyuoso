@@ -1,0 +1,15 @@
+id: ear-rt-sixteenths
+title: Which beat pattern?
+kind: ear
+questions: 15
+reps: 2
+days: 2
+items:
+- type: rhythm
+  pool:
+  - x:s x:s x:s x:s x:q x:q x:q
+  - x:e x:s x:s x:q x:q x:q
+  - x:s x:s x:e x:q x:q x:q
+  - x:e x:e x:q x:q x:q
+  meter: 4/4
+  tempo: 72

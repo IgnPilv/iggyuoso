@@ -1,0 +1,14 @@
+id: arp-a-1
+title: A major arpeggio, one octave
+kind: timed
+hand: together
+prompt: Stretch the hand over the chord; keep the wrist loose.
+key: A
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q C#5:q E5:q A5:q | E5:q C#5:q A4:h
+left: A3:q C#4:q E4:q A4:q | E4:q C#4:q A3:h
+rightFingers: 1 2 3 5 3 2 1
+leftFingers: 5 3 2 1 2 3 5

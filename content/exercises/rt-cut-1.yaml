@@ -1,0 +1,8 @@
+id: rt-cut-1
+title: Two big beats
+kind: tap
+tempo: 60
+tempoLadder: true
+meter: 2/2
+countIn: 1
+rhythm: x:h x:h | x:q x:q x:h | x:q x:q x:q x:q | x:w

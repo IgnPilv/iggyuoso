@@ -1,0 +1,9 @@
+id: rt-hemiola-hands
+title: Both feels at once
+kind: tap
+tempo: 50
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:q. x:q.
+left: x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q.

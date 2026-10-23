@@ -1,37 +1,51 @@
 id: seconds-major-minor
 title: Major and minor 2nds
-skills: [intervals, theory]
+skills:
+- intervals
+- theory
 steps:
 - explain: |
-    In Year 1 you learned tones and semitones. Musicians have proper names for them when they are
+    Earlier you learned tones and semitones. Musicians have proper names for them when they are
     steps between neighbouring letters.
-  keys: {notes: C4 D4 E4 F4, labels: names}
+  keys:
+    notes: C4 D4 E4 F4
+    labels: names
 - explain: |
     - a **major 2nd** is a tone: **2 semitones**, like C to D
     - a **minor 2nd** is a semitone: **1 semitone**, like E to F
   sound: C4:h D4:h | E4:h F4:h
-  staff: {notes: 'C4:h D4:h | E4:h F4:h', labels: names}
-  terms: [major 2nd, minor 2nd]
+  staff:
+    notes: C4:h D4:h | E4:h F4:h
+    labels: names
+  terms:
+  - major 2nd
+  - minor 2nd
 - explain: |
     Every interval has a **number** (count the letters: C–D is 2) and a **quality** (major, minor,
     and soon perfect). The quality tells you exactly how far apart the two notes are.
-  terms: [number, quality]
+  terms:
+  - number
+  - quality
   callout: |
     Number = letters. Quality = semitones.
   check:
     ask: A up to B♭ is a...
-    choices: [Minor 2nd, Major 2nd, Minor 3rd]
+    choices:
+    - Minor 2nd
+    - Major 2nd
+    - Minor 3rd
     correct: 0
     why: 'A and B are neighbouring letters (a 2nd), and A to B♭ is 1 semitone: minor.'
-    staff: {notes: 'A4:h Bb4:h'}
-- {exercise: seconds-quiz}
-- {exercise: build-seconds}
+    staff:
+      notes: A4:h Bb4:h
+- exercise: seconds-quiz
+- exercise: build-seconds
 - explain: |
     A minor 2nd sounds tight and tense, like the shark music in films. A major 2nd sounds like
     an ordinary step in a tune. Listen for that.
   sound: E2:e F2:e r:q E2:e F2:e r:q | C4:q D4:q E4:h
-- {exercise: ear-seconds}
+- exercise: ear-seconds
 - explain: |
     Reading interval quality: count the semitones in your head, or picture the keys.
-- {exercise: gen-intervals-seconds}
+- exercise: gen-intervals-seconds
 recap: A major 2nd is 2 semitones, a minor 2nd is 1. Number = letters, quality = semitones.

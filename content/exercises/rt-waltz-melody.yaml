@@ -1,0 +1,9 @@
+id: rt-waltz-melody
+title: A waltz tune over the bass
+kind: tap
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: x:h x:q | x:q x:q x:q | x:h. | x:h.
+left: x:h. | x:h. | x:h. | x:h.

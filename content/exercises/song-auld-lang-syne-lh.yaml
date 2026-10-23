@@ -1,0 +1,15 @@
+id: song-auld-lang-syne-lh
+title: 'Auld Lang Syne: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+key: F
+tempo: 80
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | F2:w | C3:w | F2:w | Bb2:w | F2:w | C3:w | Bb2:h C3:h | F2:h.
+reps: 2
+days: 1

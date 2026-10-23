@@ -1,0 +1,10 @@
+id: rt-16-over-4
+title: Sixteenths over quarters
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:s x:s x:s x:s x:q x:s x:s x:s x:s x:q | x:e x:s
+  x:s x:e x:s x:s x:e x:s x:s x:e x:s x:s | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w

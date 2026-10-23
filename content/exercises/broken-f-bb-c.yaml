@@ -1,0 +1,12 @@
+id: broken-f-bb-c
+title: Broken chords in F
+kind: timed
+hand: together
+key: F
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:h C5:h | Bb4:h D5:h | G4:h E4:h | F4:w
+left: F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | Bb2:e F3:e D3:e F3:e Bb2:e F3:e D3:e F3:e | C3:e G3:e E3:e G3:e C3:e G3:e
+  E3:e G3:e | C3+F3+A3:w

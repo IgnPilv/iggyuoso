@@ -1,0 +1,13 @@
+id: ear-maj-dom7-maj7
+title: Major, dominant 7th or major 7th?
+kind: ear
+questions: 20
+reps: 3
+days: 2
+items:
+- type: chord
+  pool:
+  - maj
+  - dom7
+  - maj7
+  root: C4

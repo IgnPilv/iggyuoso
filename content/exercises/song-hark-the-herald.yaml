@@ -1,0 +1,15 @@
+id: song-hark-the-herald
+title: Hark! The Herald Angels Sing
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q C5:q C5:q. B4:e | C5:q E5:q E5:q D5:q | G5:q G5:q G5:q. F5:e | E5:q D5:q E5:h | G4:q C5:q C5:q. B4:e | C5:q E5:q
+  E5:q D5:q | G5:q D5:q D5:q. B4:e | B4:q A4:q G4:h
+left: C3:w | C3:h G2:h | C3:w | G2:h C3:h | C3:w | C3:h G2:h | G2:w | D3:h G2:h
+reps: 3
+days: 2

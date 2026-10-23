@@ -1,0 +1,38 @@
+id: reading-lines-and-spaces
+title: Lines and spaces
+skills:
+- reading
+steps:
+- explain: |
+    **Music is written on five lines.** Notes sit **on a line** (the line goes through the middle) or **in a
+    space** (between two lines). Higher on the page means higher on the piano. That is all you need to read
+    the direction of a tune, before you know any note names.
+  staff:
+    notes: E4:w F4:w G4:w A4:w
+  terms:
+  - staff
+  - line
+  - space
+  check:
+    ask: The first note above is...
+    choices:
+    - In a space
+    - On a line
+    correct: 1
+    why: The bottom line runs through it.
+    staff: E4:w
+- explain: |
+    From a line to the next space is a **step** (the next key); from a line to the next line is a **skip** (one key
+    missed out). Reading by steps and skips is how fluent readers read: they look at the **distance**, not every name.
+  staff:
+    notes: E4:q F4:q G4:q A4:q | E4:q G4:q B4:q D5:q
+  sound: E4:q F4:q G4:q A4:q | E4:q G4:q B4:q D5:q
+  check:
+    ask: Line to the next line is a...
+    choices:
+    - Step
+    - Skip
+    correct: 1
+    why: Line to line skips over the space between.
+- exercise: reading-lines-spaces-quiz
+recap: 'Line or space, up or down, step or skip: the three questions behind all reading.'

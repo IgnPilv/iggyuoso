@@ -1,0 +1,14 @@
+id: ear-am-135
+title: 'A minor: 1, 3 or 5?'
+kind: ear
+cadence: Am
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: Am
+  pool:
+  - 1
+  - 3
+  - 5

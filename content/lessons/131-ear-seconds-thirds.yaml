@@ -1,0 +1,12 @@
+id: ear-seconds-thirds
+title: Seconds and thirds by ear
+skills:
+- ear
+steps:
+- explain: |
+    Two notes one after the other: a **second** (a step) or a **third** (a skip)? Then the four:
+    minor and major second, minor and major third.
+  sound: C4:h D4:h | C4:h E4:h
+- exercise: ear-seconds-thirds-up
+- exercise: ear-seconds-thirds-down
+recap: Seconds walk, thirds skip; minor is narrower than major.

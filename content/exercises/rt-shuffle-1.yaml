@@ -1,0 +1,8 @@
+id: rt-shuffle-1
+title: Shuffle eighths
+kind: tap
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 | x:q3 x:e3 x:q3 x:e3 x:h | x:q3 x:e3 x:q3 x:e3 x:q3 x:e3 x:q | x:w

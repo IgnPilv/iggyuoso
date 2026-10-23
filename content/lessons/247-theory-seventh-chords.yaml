@@ -1,0 +1,22 @@
+id: theory-seventh-chords
+title: Seventh chords
+skills:
+- theory
+steps:
+- explain: |
+    Any triad can take a 7th. Three common ones: **major 7th** (Cmaj7: C E G B), **dominant 7th** (C7: C E G B♭),
+    **minor 7th** (Cm7: C E♭ G B♭).
+  sound: C4+E4+G4+B4:h C4+E4+G4+Bb4:h | C4+Eb4+G4+Bb4:w
+  terms:
+  - major 7th
+  - minor 7th
+  check:
+    ask: Am7 is...
+    choices:
+    - A C♯ E G
+    - A C E G
+    - A C E G♯
+    correct: 1
+    why: Minor triad A C E + minor 7th G.
+- exercise: theory-seventh-chords-quiz
+recap: Maj7 dreams, 7 pulls, m7 relaxes.

@@ -1,0 +1,16 @@
+id: song-old-macdonald
+title: Old MacDonald Had a Farm
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q G4:q G4:q D4:q | E4:q E4:q D4:h | B4:q B4:q A4:q A4:q | G4:h. D4:q | G4:q G4:q G4:q D4:q | E4:q E4:q D4:h | B4:q
+  B4:q A4:q A4:q | G4:w
+left: G2:w | C3:h G2:h | G2:h D3:h | G2:w | G2:w | C3:h G2:h | G2:h D3:h | G2:w
+reps: 3
+days: 2

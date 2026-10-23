@@ -1,0 +1,11 @@
+id: ear-seventh-chords
+title: Four-note chords
+skills:
+- ear
+steps:
+- explain: |
+    Add a fourth note and you get a **seventh chord**. The **dominant 7th** (G7) sounds like it must
+    move on; the **major 7th** sounds dreamy.
+  sound: G3+B3+D4+F4:h C4+E4+G4:h | C4+E4+G4+B4:w
+- exercise: ear-maj-dom7-maj7
+recap: 'Sevenths add colour: restless or dreamy.'

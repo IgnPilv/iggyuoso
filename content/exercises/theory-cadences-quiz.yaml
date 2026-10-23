@@ -1,0 +1,99 @@
+id: theory-cadences-quiz
+title: Cadences quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A phrase ends V–I. That cadence is...
+  choices:
+  - Imperfect
+  - Perfect
+  - Plagal
+  - Interrupted
+  correct: 1
+  why: 'Ending V–I: the full stop.'
+- ask: A phrase ends IV–I. That cadence is...
+  choices:
+  - Perfect
+  - Plagal
+  - Imperfect
+  - Interrupted
+  correct: 1
+  why: 'IV–I: the "Amen" cadence.'
+- ask: A phrase ends I–V. That cadence is...
+  choices:
+  - Plagal
+  - Imperfect
+  - Interrupted
+  - Perfect
+  correct: 1
+  why: 'Ending on V: a comma, the music must go on.'
+- ask: A phrase ends ii–V. That cadence is...
+  choices:
+  - Imperfect
+  - Perfect
+  - Interrupted
+  - Plagal
+  correct: 0
+  why: 'Ending on V: a comma, the music must go on.'
+- ask: A phrase ends V–vi. That cadence is...
+  choices:
+  - Imperfect
+  - Perfect
+  - Plagal
+  - Interrupted
+  correct: 3
+  why: 'V then vi instead of I: a surprise.'
+- ask: A phrase ends V7–I. That cadence is...
+  choices:
+  - Plagal
+  - Interrupted
+  - Perfect
+  - Imperfect
+  correct: 2
+  why: 'Ending V–I: the full stop.'
+- ask: A phrase ends IV–V. That cadence is...
+  choices:
+  - Imperfect
+  - Plagal
+  - Interrupted
+  - Perfect
+  correct: 0
+  why: 'Ending on V: a comma, the music must go on.'
+- ask: A phrase ends V7–vi. That cadence is...
+  choices:
+  - Interrupted
+  - Imperfect
+  - Plagal
+  - Perfect
+  correct: 0
+  why: 'V then vi instead of I: a surprise.'
+- ask: Which cadence sounds most final?
+  choices:
+  - Perfect
+  - Interrupted
+  - Imperfect
+  correct: 0
+  why: V–I is the full stop.
+- ask: Which cadence is sung as "Amen" at the end of hymns?
+  choices:
+  - Interrupted
+  - Plagal
+  - Perfect
+  correct: 1
+  why: 'IV–I: A-men.'
+- ask: In C major, a perfect cadence is...
+  choices:
+  - G to C
+  - F to C
+  - C to G
+  correct: 0
+  why: V (G) to I (C).
+- ask: In G major, an interrupted cadence is...
+  choices:
+  - C to G
+  - D to Em
+  - D to G
+  correct: 1
+  why: V (D) to vi (E minor).

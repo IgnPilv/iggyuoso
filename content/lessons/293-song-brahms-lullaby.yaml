@@ -1,0 +1,23 @@
+id: song-brahms-lullaby
+title: Lullaby
+skills:
+- songs
+steps:
+- explain: |
+    **Lullaby** · Johannes Brahms, 1868
+
+    Brahms wrote this cradle song in 1868 for a friend's new baby. It is one of the most sung melodies ever.
+  staff:
+    notes: E4:e E4:e  |  G4:h E4:e E4:e
+  sound: E4:e E4:e  |  G4:h E4:e E4:e  |  G4:h E4:e G4:e  |  C5:q B4:q. A4:e
+- explain: |
+    **Before you play.** Rock gently: the left hand plays on beat 1, the chord on beats 2 and 3.
+
+    The steps: the tune, the left hand, then both together. Last, a fuller arrangement.
+  callout: |
+    Key: C major · Time: 3/4 · Tempo: 76
+- exercise: song-brahms-lullaby-rh
+- exercise: song-brahms-lullaby-lh
+- exercise: song-brahms-lullaby
+- exercise: song-brahms-lullaby-arranged
+recap: 'Lullaby: tune, left hand, together. Come back to it any time; songs are for fun.'

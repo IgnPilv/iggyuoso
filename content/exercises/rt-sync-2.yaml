@@ -1,0 +1,9 @@
+id: rt-sync-2
+title: Charleston
+kind: tap
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q. x:e r:h | x:q. x:e r:h | x:q. x:e x:q. x:e | x:w
+left: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w

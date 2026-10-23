@@ -1,0 +1,9 @@
+id: rt-68-barcarolle
+title: Boat song
+kind: tap
+tempo: 50
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: x:q. x:q x:e | x:q. x:q. | x:q x:e x:q x:e | x:q. x:q.
+left: x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:q. x:q.

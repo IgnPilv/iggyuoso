@@ -1,0 +1,11 @@
+id: rhythm-six-eight-hands
+title: 6/8 with two hands
+skills:
+- rhythm
+steps:
+- explain: |
+    A rocking left hand on the big beats, a melody above.
+- exercise: rt-68-rock
+- exercise: rt-68-barcarolle
+- exercise: gen-read-68-hands
+recap: Rocking in two.

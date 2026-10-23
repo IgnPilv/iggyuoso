@@ -1,0 +1,107 @@
+id: theory-minor-chords-quiz
+title: Chord spelling quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: Which notes make Am?
+  choices:
+  - A C E
+  - A C♯ E
+  - A C F♯
+  correct: 0
+  why: 'A C E: root, third and fifth. Minor: the third is three half steps above the root.'
+  whyKeys:
+    notes: A4 C5 E5
+    labels: names
+- ask: Which notes make Dm?
+  choices:
+  - D F A
+  - D F♯ A
+  - D F B
+  correct: 0
+  why: 'D F A: root, third and fifth. Minor: the third is three half steps above the root.'
+  whyKeys:
+    notes: D4 F4 A4
+    labels: names
+- ask: Which notes make Em?
+  choices:
+  - E G♯ B
+  - E G C♯
+  - E G B
+  correct: 2
+  why: 'E G B: root, third and fifth. Minor: the third is three half steps above the root.'
+  whyKeys:
+    notes: E4 G4 B4
+    labels: names
+- ask: Which notes make C?
+  choices:
+  - C E A
+  - C E♭ G
+  - C E G
+  correct: 2
+  why: 'C E G: root, third and fifth. Major: the third is four half steps above the root.'
+  whyKeys:
+    notes: C4 E4 G4
+    labels: names
+- ask: Which notes make F?
+  choices:
+  - F A♭ C
+  - F A D
+  - F A C
+  correct: 2
+  why: 'F A C: root, third and fifth. Major: the third is four half steps above the root.'
+  whyKeys:
+    notes: F4 A4 C5
+    labels: names
+- ask: Which notes make G?
+  choices:
+  - G B D
+  - G B♭ D
+  - G B E
+  correct: 0
+  why: 'G B D: root, third and fifth. Major: the third is four half steps above the root.'
+  whyKeys:
+    notes: G4 B4 D5
+    labels: names
+- ask: Which notes make D?
+  choices:
+  - D F♯ B
+  - D F A
+  - D F♯ A
+  correct: 2
+  why: 'D F♯ A: root, third and fifth. Major: the third is four half steps above the root.'
+  whyKeys:
+    notes: D4 F#4 A4
+    labels: names
+- ask: Which notes make Gm?
+  choices:
+  - G B♭ D
+  - G B D
+  - G B♭ E
+  correct: 0
+  why: 'G B♭ D: root, third and fifth. Minor: the third is three half steps above the root.'
+  whyKeys:
+    notes: G4 Bb4 D5
+    labels: names
+- ask: Which notes make B♭?
+  choices:
+  - B♭ D F
+  - B♭ D♭ F
+  - B♭ D G
+  correct: 0
+  why: 'B♭ D F: root, third and fifth. Major: the third is four half steps above the root.'
+  whyKeys:
+    notes: Bb4 D5 F5
+    labels: names
+- ask: Which notes make A?
+  choices:
+  - A C♯ E
+  - A C♯ F♯
+  - A C E
+  correct: 0
+  why: 'A C♯ E: root, third and fifth. Major: the third is four half steps above the root.'
+  whyKeys:
+    notes: A4 C#5 E5
+    labels: names

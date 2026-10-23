@@ -1,0 +1,15 @@
+id: technique-minor-positions
+title: Minor positions, both hands
+skills:
+- technique
+steps:
+- explain: |
+    Minor positions: whole, half, whole, whole. Four new ones, with the mirror and the triad.
+- exercise: pos-e-minor
+- exercise: pos-g-minor
+- exercise: mirror-a-minor
+- exercise: mirror-d-minor
+- exercise: triad-a-minor
+- exercise: triad-d-minor
+- exercise: triad-e-minor
+recap: 'Minor: the third finger drops a half step.'

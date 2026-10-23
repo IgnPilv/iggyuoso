@@ -47,7 +47,7 @@ questions:
   correct: 1
   why: Both lines climbed together.
   sound: C3+C4:q D3+D4:q E3+E4:q F3+F4:h
-- ask: Hands apart, then together, means...
+- ask: Practising a hard bar one hand at a time means...
   choices: [Keep the hands far apart on the keyboard, Learn each hand alone before joining them, Never play with
       both hands]
   correct: 1

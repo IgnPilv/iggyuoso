@@ -1,0 +1,22 @@
+id: ear-step-or-leap
+title: Step or leap?
+skills:
+- ear
+steps:
+- explain: |
+    Melodies move by **step** (to the next key, like walking) or by **leap** (jumping over keys).
+    Steps sound smooth and close; leaps sound like a jump.
+  sound: C4:q D4:q E4:q F4:q | C4:q G4:q C4:q A4:q
+  terms:
+  - step
+  - leap
+  check:
+    ask: C to D is a...
+    choices:
+    - Step
+    - Leap
+    correct: 0
+    why: 'D is the very next white key after C: a step.'
+- exercise: ear-motion-step-leap
+- exercise: ear-motion-all
+recap: 'Steps and leaps: the two ways a melody travels.'

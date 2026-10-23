@@ -1,0 +1,11 @@
+id: inversions-ht
+title: Inversions over the root
+kind: timed
+hand: together
+prompt: 'Left hand: one root a bar. Right hand: root position, then first inversion.'
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:h E4+G4+C5:h | F4+A4+C5:h A4+C5+F5:h | G4+B4+D5:h B4+D5+G5:h | C5+E5+G5:w
+left: C3:w | F2:w | G2:w | C3:w

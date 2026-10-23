@@ -1,0 +1,16 @@
+id: piece-etude-arpeggios
+title: Arpeggio Study
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:e E4:e G4:e C5:e E5:e C5:e G4:e E4:e | A3:e C4:e E4:e A4:e C5:e A4:e E4:e C4:e | F3:e A3:e C4:e F4:e A4:e F4:e C4:e
+  A3:e | G3:e B3:e D4:e G4:e B4:e G4:e D4:e B3:e | C4:w
+left: C3:w | A2:w | F2:w | G2:w | C2+C3:w
+pedal: x:w | x:w | x:w | x:w | x:w
+reps: 3
+days: 2

@@ -1,0 +1,15 @@
+id: rhythm-dotted-patterns
+title: Dotted rhythms
+skills:
+- rhythm
+steps:
+- explain: |
+    A dotted quarter lasts a beat and a half; the eighth after it fills the gap: "**one** - - **and**".
+    It is the long-short swing of "Auld Lang Syne" and countless folk tunes.
+  staff:
+    notes: C5:q. C5:e C5:q C5:q | C5:q. C5:e C5:h
+- exercise: rt-dotted-1
+- exercise: rt-dotted-hands
+- exercise: ear-rt-dotted
+- exercise: gen-echo-dotted
+recap: Dotted rhythms give a tune its lilt.

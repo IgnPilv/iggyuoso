@@ -1,35 +1,46 @@
 id: thirds-major-minor
 title: Major and minor 3rds
-skills: [intervals, theory]
+skills:
+- intervals
+- theory
 steps:
 - explain: |
     A 3rd skips one letter: C–E, D–F, E–G. They look alike on the staff, but they are not all the
     same size.
-  staff: {notes: 'C4:h E4:h | D4:h F4:h', labels: names}
+  staff:
+    notes: C4:h E4:h | D4:h F4:h
+    labels: names
   sound: C4:h E4:h | D4:h F4:h
 - explain: |
     - a **major 3rd** is **4 semitones** (C to E)
     - a **minor 3rd** is **3 semitones** (D to F)
-  keys: {notes: C4 E4, labels: names}
-  terms: [major 3rd, minor 3rd]
+  keys:
+    notes: C4 E4
+    labels: names
+  terms:
+  - major 3rd
+  - minor 3rd
   check:
     ask: A up to C is a...
-    choices: [Major 3rd, Minor 3rd]
+    choices:
+    - Major 3rd
+    - Minor 3rd
     correct: 1
     why: 'A, B♭, B, C: 3 semitones, so minor.'
-    staff: {notes: 'A4:h C5:h'}
+    staff:
+      notes: A4:h C5:h
 - explain: |
-    You already know this sound from Year 1: the 3rd is what makes a chord major or minor.
+    You already know this sound from earlier: the 3rd is what makes a chord major or minor.
     A major chord has a major 3rd at the bottom; a minor chord has a minor 3rd.
   sound: C4+E4+G4:h C4+Eb4+G4:h
   callout: |
     Major 3rd = bright. Minor 3rd = dark.
-- {exercise: thirds-quiz}
-- {exercise: build-thirds}
+- exercise: thirds-quiz
+- exercise: build-thirds
 - explain: |
     Now by ear, starting from different notes, and sometimes with both notes at once.
-- {exercise: ear-thirds-any-root}
+- exercise: ear-thirds-any-root
 - explain: |
     The same with 3rds.
-- {exercise: gen-intervals-thirds}
+- exercise: gen-intervals-thirds
 recap: Major 3rd = 4 semitones, minor 3rd = 3. The bottom 3rd decides major or minor.

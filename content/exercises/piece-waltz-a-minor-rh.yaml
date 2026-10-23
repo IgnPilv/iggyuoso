@@ -1,0 +1,14 @@
+id: piece-waltz-a-minor-rh
+title: 'Little Waltz in A minor: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+key: Am
+tempo: 108
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: E5:h C5:q | B4:h A4:q | G#4:h A4:q | B4:h. | C5:h D5:q | E5:h A4:q | B4:q C5:q B4:q | A4:h.
+reps: 2
+days: 1

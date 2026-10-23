@@ -1,0 +1,10 @@
+id: rt-pulse-hands
+title: Two hands, no click
+kind: tap
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q x:q x:h | x:q x:q x:h | x:q x:q x:q x:q | x:w
+left: x:h x:h | x:w | x:h x:h | x:w
+click: count-in

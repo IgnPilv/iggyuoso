@@ -1,0 +1,28 @@
+id: theory-octaves
+title: Octaves and their numbers
+skills:
+- theory
+steps:
+- explain: |
+    The seven letters repeat all the way up the keyboard. From one C to the next is an **octave**. To say
+    **which** C, we number the octaves: middle C is **C4**, the C above it **C5**, the C below **C3**. The number
+    changes at every C, so B3 is just below middle C.
+  keys:
+    notes: C3 B3 C4 D4 C5
+    labels: names
+  terms:
+  - octave
+  - register
+  check:
+    ask: The B just above middle C is...
+    choices:
+    - B3
+    - B4
+    - B5
+    correct: 1
+    why: Middle C starts octave 4, so the B above it is B4.
+- explain: |
+    Octaves sound alike: C3, C4 and C5 sound like the same note at different heights.
+  sound: C3:h C4:h | C5:h C6:h
+- exercise: theory-octaves-quiz
+recap: Middle C is C4. Numbers change at C.

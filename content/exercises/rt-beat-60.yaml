@@ -1,0 +1,9 @@
+id: rt-beat-60
+title: Tap with the click, slow
+kind: tap
+prompt: One tap on every click.
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q

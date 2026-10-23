@@ -1,0 +1,16 @@
+id: ear-degrees-12345
+title: Degrees 1 to 5
+kind: ear
+cadence: C
+questions: 20
+reps: 3
+days: 2
+items:
+- type: degree
+  key: C
+  pool:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5

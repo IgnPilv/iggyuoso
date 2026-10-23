@@ -1,0 +1,22 @@
+id: piece-fur-elise
+title: 'Für Elise: the theme'
+skills:
+- repertoire
+steps:
+- explain: |
+    **Für Elise: the theme** · Ludwig van Beethoven, 1810 (first eight bars)
+
+    Probably the most famous piano piece ever written. Nobody knows for certain who Elise was.
+  staff:
+    notes: E5:s D#5:s  |  E5:s D#5:s E5:s B4:s D5:s C5:s
+    key: Am
+  sound: E5:s D#5:s  |  E5:s D#5:s E5:s B4:s D5:s C5:s  |  A4:e r:s C4:s E4:s A4:s  |  B4:e r:s E4:s G#4:s B4:s
+- explain: |
+    **How to learn it.** The hands pass the music between them: the left hand plays three notes, the right hand answers. Count in eighths, slowly.
+  callout: |
+    Hands alone first, then together slowly. Loop the hardest bars.
+- exercise: piece-fur-elise-rh
+- exercise: piece-fur-elise-lh
+- exercise: piece-fur-elise
+- exercise: piece-fur-elise-polish
+recap: 'Für Elise: the theme: learned hands alone, then together, then performed.'

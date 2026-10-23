@@ -1,0 +1,14 @@
+id: song-clementine-lh
+title: 'Oh My Darling, Clementine: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: e e
+countIn: 1
+left: r:q | C3:h. | C3:h. | C3:h. | G2:h. | G2:h. | C3:h. | G2:h. | C3:h
+reps: 2
+days: 1

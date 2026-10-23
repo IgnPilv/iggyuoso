@@ -1,0 +1,16 @@
+id: piece-blues-in-c-polish
+title: 'Blues in C: performance'
+kind: timed
+hand: together
+prompt: Full tempo, as if someone is listening. Three clean performances on three days.
+display: staff
+tempo: 96
+meter: 4/4
+countIn: 1
+right: G4:q Bb4:q C5:h | G4:q Bb4:q C5:q Eb5:q | C5:q Bb4:q G4:h | Bb4:q G4:q C5:h | A4:q C5:q Eb5:h | Eb5:q C5:q A4:h | G4:q
+  Bb4:q C5:h | C5:q Bb4:q G4:h | B4:q D5:q F5:h | Eb5:q C5:q A4:h | G4:q Bb4:q C5:q E5:q | D5:q B4:q G4:h
+left: C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | F2:q C3:q D3:q C3:q | F2:q C3:q
+  D3:q C3:q | C3:q G3:q A3:q G3:q | C3:q G3:q A3:q G3:q | G2:q D3:q E3:q D3:q | F2:q C3:q D3:q C3:q | C3:q G3:q A3:q G3:q
+  | G2:q D3:q E3:q D3:q
+reps: 3
+days: 3

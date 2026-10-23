@@ -1,0 +1,11 @@
+id: little-jig-ht
+title: A little jig, both hands
+kind: timed
+hand: together
+tempo: 108
+tempoLadder: true
+meter: 3/8
+countIn: 1
+right: E4:e F4:e G4:e | G4:q E4:e | F4:e E4:e D4:e | E4:q. | E4:e F4:e G4:e | G4:q E4:e | D4:e E4:e D4:e | C4:q.
+left: C3:q. | C3:q. | G2:q. | C3:q. | C3:q. | C3:q. | G2:q. | C3:q.
+rightFingers: 3 4 5 5 3 4 3 2 3 3 4 5 5 3 2 3 2 1

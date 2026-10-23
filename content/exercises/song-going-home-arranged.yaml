@@ -1,0 +1,15 @@
+id: song-going-home-arranged
+title: Going Home, full arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q G4:q G4:h | E4:q D4:q C4:h | D4:q E4:q G4:q E4:q | D4:w | E4:q G4:q G4:h | E4:q D4:q C4:h | D4:q E4:q D4:q C4:q
+  | C4:w
+left: C3+E3+G3:w | C3+E3+G3:w | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:w | C3+E3+A3:w | B2+D3+G3:w | C3+E3+G3:w
+reps: 3
+days: 2

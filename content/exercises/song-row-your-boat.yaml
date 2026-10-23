@@ -1,0 +1,15 @@
+id: song-row-your-boat
+title: Row, Row, Row Your Boat
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C4:q. C4:q. | C4:q D4:e E4:q. | E4:q D4:e E4:q F4:e | G4:h. | C5:e C5:e C5:e G4:e G4:e G4:e | E4:e E4:e E4:e C4:e C4:e
+  C4:e | G4:q F4:e E4:q D4:e | C4:h.
+left: C3:h. | C3:h. | C3:q. G2:q. | C3:h. | C3:h. | C3:h. | G2:h. | C3:h.
+reps: 3
+days: 2

@@ -1,0 +1,11 @@
+id: cr-bass-your-rhythm
+title: Your own bass rhythm
+kind: tap
+prompt: 'Right hand: any notes of C position. Left hand: any low keys in this bouncing rhythm.'
+tempo: 76
+meter: 4/4
+countIn: 1
+right: x:q x:q x:q x:q | x:q x:q x:h | x:q x:q x:h | x:q x:q x:h
+left: x:q r:q x:q r:q | x:h x:h | x:q. x:e x:h | x:w
+reps: 2
+days: 1

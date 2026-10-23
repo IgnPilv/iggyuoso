@@ -1,0 +1,12 @@
+id: rhythm-compound-meters
+title: 9/8 and 12/8
+skills:
+- rhythm
+steps:
+- explain: |
+    **9/8** has three big beats of three eighths; **12/8** has four. 12/8 is the slow blues and the gospel ballad.
+- exercise: rt-98
+- exercise: rt-128
+- exercise: gen-read-98
+- exercise: gen-read-128
+recap: 'Compound meters: big beats in threes.'

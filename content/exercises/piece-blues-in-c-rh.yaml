@@ -1,0 +1,14 @@
+id: piece-blues-in-c-rh
+title: 'Blues in C: right hand'
+kind: timed
+hand: right
+prompt: The right hand alone. Shape the phrases.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q Bb4:q C5:h | G4:q Bb4:q C5:q Eb5:q | C5:q Bb4:q G4:h | Bb4:q G4:q C5:h | A4:q C5:q Eb5:h | Eb5:q C5:q A4:h | G4:q
+  Bb4:q C5:h | C5:q Bb4:q G4:h | B4:q D5:q F5:h | Eb5:q C5:q A4:h | G4:q Bb4:q C5:q E5:q | D5:q B4:q G4:h
+reps: 2
+days: 1

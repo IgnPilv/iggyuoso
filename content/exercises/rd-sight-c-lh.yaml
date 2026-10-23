@@ -1,0 +1,16 @@
+id: rd-sight-c-lh
+title: Left hand in C position
+kind: generated
+generator: sight-read
+hand: left
+clef: bass
+tempo: 66
+notes: C3-G3
+durations:
+- q
+- h
+bars: 4
+mastery:
+  accuracy: 90
+reps: 4
+days: 2

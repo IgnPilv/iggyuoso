@@ -1,0 +1,15 @@
+id: piece-eine-kleine
+title: 'Eine kleine Nachtmusik: the opening'
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+key: G
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q r:e D4:e G4:q r:e D4:e | G4:e D4:e G4:e B4:e D5:h | C5:q r:e A4:e C5:q r:e A4:e | C5:e A4:e F#4:e A4:e D4:h
+left: G2+D3:h G2+D3:h | G2+B2+D3:w | A2+C3+D3:h A2+C3+D3:h | F#2+A2+C3+D3:w
+reps: 3
+days: 2

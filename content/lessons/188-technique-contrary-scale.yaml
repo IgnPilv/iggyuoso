@@ -1,0 +1,14 @@
+id: technique-contrary-scale
+title: The C scale in the mirror
+skills:
+- technique
+steps:
+- explain: |
+    The scale is easiest in **contrary motion**: both thumbs on C, an octave apart, moving away from each other.
+    The fingering is a mirror, so the thumbs tuck under at the same moment.
+  keys:
+    notes: C3 C4
+    labels: names
+- exercise: scale-c-contrary
+- exercise: scale-c-contrary-e
+recap: In contrary motion, both thumbs move together.

@@ -1,0 +1,13 @@
+id: shift-ht
+title: Moving both hands
+kind: timed
+hand: together
+prompt: Both hands move up together in the rest.
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q D4:q E4:q F4:q | G4:h r:h | A4:q B4:q C5:q D5:q | E5:w
+left: C3:q D3:q E3:q F3:q | G3:h r:h | A3:q B3:q C4:q D4:q | E4:w
+rightFingers: 1 2 3 4 5 1 2 3 4 5
+leftFingers: 5 4 3 2 1 5 4 3 2 1

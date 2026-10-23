@@ -1,16 +1,29 @@
+# The Pieces branch. Written by tools/content/build.py; format in content/README.md.
 branch: repertoire
 title: Pieces
-summary: "Real pieces to learn and polish: studies, dances and classics."
+summary: "Real pieces to learn and polish: classics and studies, both hands."
 nodes:
-  - { id: first-pieces-alternating, stage: 1, lesson: first-pieces-alternating, title: First pieces, requires: [c-position-reading, three-four-time] }
-  - { id: pieces-hands-together, stage: 2, lesson: pieces-hands-together, title: First pieces hands together, requires: [hands-together-parallel, dynamics] }
-  - { id: lead-sheet-melody, stage: 2, lesson: lead-sheet-melody, title: A tune with chords, requires: [lh-chords] }
-  - { id: recital-three-pieces, stage: 3, lesson: recital-three-pieces, title: Three contrasting pieces, requires: [c-scale-hands-together, dotted-quarter] }
-  - { id: scale-study-in-c, stage: 4, lesson: scale-study-in-c, title: Scale study in C, requires: [two-octave-c-together] }
-  - { id: minuet-first-half, stage: 4, lesson: minuet-first-half, title: Minuet in G, first half, requires: [reading-ht-eight-bars] }
-  - { id: korobeiniki, stage: 4, lesson: korobeiniki, title: Korobeiniki, requires: [harmonic-minor, reading-ht-eight-bars] }
-  - { id: staccato-march, stage: 5, lesson: staccato-march, title: Toy-soldier march, requires: [staccato, close-position-chords] }
-  - { id: etude-in-g, stage: 6, lesson: etude-in-g, title: Running etude in G, requires: [scales-d-major-e-minor] }
-  - { id: minuet-in-g, stage: 6, lesson: minuet-in-g, title: Minuet in G, complete, requires: [y2-checkpoint-b] }
-  - { id: variations-lightly-row, stage: 6, lesson: variations-lightly-row, title: Theme and variations, requires: [y2-checkpoint-b] }
-  - { id: evening-song, stage: 6, lesson: evening-song, title: Evening song, requires: [pedal-legato] }
+  - { id: first-pieces-alternating, stage: 1, lesson: first-pieces-alternating, title: "First pieces", requires: [c-position-reading, three-four-time] }
+  - { id: pieces-hands-together, stage: 2, lesson: pieces-hands-together, title: "First pieces hands together", requires: [hands-together-parallel, dynamics] }
+  - { id: lead-sheet-melody, stage: 2, lesson: lead-sheet-melody, title: "A tune with chords", requires: [lh-chords] }
+  - { id: recital-three-pieces, stage: 3, lesson: recital-three-pieces, title: "Three contrasting pieces", requires: [c-scale-hands-together, dotted-quarter] }
+  - { id: scale-study-in-c, stage: 4, lesson: scale-study-in-c, title: "Scale study in C", requires: [two-octave-c-together] }
+  - { id: minuet-first-half, stage: 4, lesson: minuet-first-half, title: "Minuet in G, first half", requires: [reading-ht-eight-bars] }
+  - { id: korobeiniki, stage: 4, lesson: korobeiniki, title: "Korobeiniki", requires: [harmonic-minor, reading-ht-eight-bars] }
+  - { id: staccato-march, stage: 5, lesson: staccato-march, title: "Toy-soldier march", requires: [staccato, close-position-chords] }
+  - { id: etude-in-g, stage: 6, lesson: etude-in-g, title: "Running etude in G", requires: [scales-d-major-e-minor] }
+  - { id: minuet-in-g, stage: 6, lesson: minuet-in-g, title: "Minuet in G, complete", requires: [y2-checkpoint-b] }
+  - { id: variations-lightly-row, stage: 6, lesson: variations-lightly-row, title: "Theme and variations", requires: [y2-checkpoint-b] }
+  - { id: evening-song, stage: 6, lesson: evening-song, title: "Evening song", requires: [pedal-legato] }
+  - { id: piece-mirror-march, stage: 1, lesson: piece-mirror-march, title: "Mirror March", type: piece, requires: [technique-mirror-hands] }
+  - { id: piece-two-hand-hop, stage: 1, lesson: piece-two-hand-hop, title: "Two-Hand Hop", type: piece, requires: [technique-c-position-two-hands, rhythm-two-hands-taking-turns] }
+  - { id: piece-canon-theme, stage: 4, lesson: piece-canon-theme, title: "Canon in D: the theme", type: piece, requires: [y1-exit, technique-scales-d-a-one-octave] }
+  - { id: piece-eine-kleine, stage: 5, lesson: piece-eine-kleine, title: "Eine kleine Nachtmusik: the opening", type: piece, requires: [y2-checkpoint-a, staccato] }
+  - { id: piece-waltz-a-minor, stage: 5, lesson: piece-waltz-a-minor, title: "Little Waltz in A minor", type: piece, requires: [three-four-time, harmonic-minor] }
+  - { id: piece-fur-elise, stage: 6, lesson: piece-fur-elise, title: "Für Elise: the theme", type: piece, requires: [sixteenth-notes, y2-checkpoint-b] }
+  - { id: piece-gymnopedie, stage: 7, lesson: piece-gymnopedie, title: "Gymnopédie No. 1: the opening", type: piece, requires: [pedal-legato, y2-exit] }
+  - { id: piece-sonatina-c, stage: 7, lesson: piece-sonatina-c, title: "Sonatina in C", type: piece, requires: [technique-alberti, y2-exit] }
+  - { id: piece-prelude-in-c, stage: 8, lesson: piece-prelude-in-c, title: "Prelude in C: the opening", type: piece, requires: [technique-arpeggios-one-octave, pedal-legato, y2-exit] }
+  - { id: piece-nocturne-f, stage: 8, lesson: piece-nocturne-f, title: "Nocturne in F", type: piece, requires: [pedal-legato, technique-arpeggios-one-octave] }
+  - { id: piece-blues-in-c, stage: 9, lesson: piece-blues-in-c, title: "Blues in C", type: piece, requires: [technique-blues-shapes, theory-twelve-bar-blues] }
+  - { id: piece-etude-arpeggios, stage: 9, lesson: piece-etude-arpeggios, title: "Arpeggio Study", type: piece, requires: [technique-arpeggios-two-octaves] }

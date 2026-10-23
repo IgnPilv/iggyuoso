@@ -1,18 +1,19 @@
 id: y1-exit
-title: Year 1 exit exam
-skills: [checkpoint]
+title: 'Milestone 3: scales and eighths'
+skills:
+- checkpoint
 steps:
 - explain: |
-    The Year 1 exam samples every strand: theory, scales, sight-reading, ear, improvising and your
+    Milestone 3 samples every strand: theory, scales, sight-reading, ear, improvising and your
     recital pieces. It works like the graded exams music schools use. Take it on a fresh day.
-    Pass it, and Year 2 opens.
+    Pass it, and the next stage of your tree grows, with new songs.
   callout: |
     No hints in the theory paper: the answers and their reasons come at the end.
-- {exercise: y1-theory-exit}
-- {exercise: c-scale-together}
-- {exercise: g-scale-rh}
-- {exercise: sight-read-waltz}
-- {exercise: ear-year-1-exit}
-- {exercise: improvise-in-c}
-- {exercise: recital-ode-to-joy}
-recap: 'Year 1 complete: hands together, both clefs, C, G and F, major and minor, and three pieces.'
+- exercise: y1-theory-exit
+- exercise: c-scale-together
+- exercise: g-scale-rh
+- exercise: sight-read-waltz
+- exercise: ear-year-1-exit
+- exercise: improvise-in-c
+- exercise: recital-ode-to-joy
+recap: 'Stage 3 complete: hands together, both clefs, C, G and F, major and minor, and three pieces.'

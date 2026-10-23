@@ -1,0 +1,8 @@
+id: rt-98
+title: Three big beats
+kind: tap
+tempo: 56
+tempoLadder: true
+meter: 9/8
+countIn: 1
+rhythm: x:q x:e x:q x:e x:q x:e | x:q. x:q. x:q. | x:e x:e x:e x:q x:e x:q. | x:q. x:q. x:q.

@@ -1,0 +1,17 @@
+id: piece-gymnopedie
+title: 'Gymnopédie No. 1: the opening'
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+key: D
+tempo: 66
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: r:h. | r:h. | r:q F#5:q A5:q | G5:q F#5:q C#5:q | B4:q C#5:q D5:q | A4:h. | F#4:h. | F#4:h.
+left: G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h | G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h | G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h |
+  G2:q B3+D4+F#4:h | D2:q A3+C#4+F#4:h
+pedal: x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
+reps: 3
+days: 2

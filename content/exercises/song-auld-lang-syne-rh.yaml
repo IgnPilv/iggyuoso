@@ -1,0 +1,16 @@
+id: song-auld-lang-syne-rh
+title: 'Auld Lang Syne: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: F
+tempo: 80
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: C4:q | F4:q. F4:e F4:q A4:q | G4:q. F4:e G4:q A4:q | F4:q. F4:e A4:q C5:q | D5:h. D5:q | C5:q. A4:e A4:q F4:q | G4:q.
+  F4:e G4:q A4:q | F4:q. D4:e D4:q C4:q | F4:h.
+reps: 2
+days: 1

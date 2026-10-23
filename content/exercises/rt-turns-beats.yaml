@@ -1,0 +1,10 @@
+id: rt-turns-beats
+title: A beat each
+kind: tap
+prompt: 'Right, left, right, left: like walking.'
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:q r:q x:q r:q | x:q r:q x:q r:q | x:q r:q x:q r:q | x:h r:h
+left: r:q x:q r:q x:q | r:q x:q r:q x:q | r:q x:q r:q x:q | r:h x:h

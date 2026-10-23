@@ -1,0 +1,23 @@
+id: rd-sight-34
+title: Waltz time
+kind: generated
+generator: sight-read
+hand: together
+clef: grand
+tempo: 80
+meter: 3/4
+notes: C4-C5
+durations:
+- q
+- h
+- h.
+bars: 4
+mastery:
+  accuracy: 90
+keys:
+- C
+- G
+- F
+left: roots
+reps: 4
+days: 2

@@ -1,0 +1,16 @@
+id: piece-two-hand-hop
+title: Two-Hand Hop
+kind: timed
+hand: together
+prompt: Both hands. The tempo ladder starts you slow.
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:h | r:w | G4:q F4:q E4:q D4:q | C4:w
+left: r:w | G3:q E3:q C3:h | r:w | C3:w
+rightFingers: 1 3 5 5 4 3 2 1
+leftFingers: 1 3 5 5
+reps: 3
+days: 2

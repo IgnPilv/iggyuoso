@@ -1,0 +1,20 @@
+id: m9-ear-test
+title: Ear test
+kind: ear
+prompt: 'An ear test: no colours, no hints. The results list each miss with its answer.'
+cadence: C
+questions: 20
+feedback: none
+reps: 1
+days: 1
+items:
+- type: degree
+  key: C
+  pool:
+  - 1
+  - b3
+  - 3
+  - '#4'
+  - 5
+  - 6
+  - 7

@@ -1,0 +1,15 @@
+id: song-drunken-sailor
+title: What Shall We Do with the Drunken Sailor?
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 112
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:h A4:h | A4:q D4:q F4:q A4:q | G4:h G4:h | G4:q C4:q E4:q G4:q | A4:h A4:h | A4:q B4:q C5:q D5:q | C5:q A4:q G4:q
+  E4:q | D4:h D4:h
+left: D3:w | D3:w | C3:w | C3:w | D3:w | D3:w | C3:h A2:h | D3:w
+reps: 3
+days: 2

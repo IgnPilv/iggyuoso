@@ -1,0 +1,14 @@
+id: song-sailors-song-lh
+title: 'Sailor''s Song in D Minor: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone: find each chord change before it comes.'
+display: staff
+key: Dm
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D3:w | D3:h A2:h | C3:w | D3:w | D3:w | C3:w | D3:h A2:h | D3:w
+reps: 2
+days: 1

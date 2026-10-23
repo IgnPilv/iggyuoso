@@ -1,0 +1,30 @@
+id: ear-same-different
+title: Same or different?
+skills:
+- ear
+steps:
+- explain: |
+    **Your ear can learn this.** Many adults think they are "not musical". In fact, hearing
+    music is a skill, trained like reading: it starts with differences you can already hear, and the
+    differences get smaller.
+
+    First game: two notes. Were they **the same note twice**, or **two different notes**? Turn the sound on. There is no rush and no penalty for listening again: press Hear it as often as you like.
+  sound: C4:h C4:h | C4:h G4:h
+  terms:
+  - pitch
+  check:
+    ask: In the sound above, the first pair was the same note twice. The second pair was...
+    choices:
+    - Different
+    - The same
+    correct: 0
+    why: The second note of the second pair was higher (G above C).
+- explain: |
+    **Pitch** is how high or low a note sounds. Big differences are easy: we start with notes far
+    apart and bring them closer each round.
+  callout: |
+    Listen to the whole of both notes before you answer.
+- exercise: ear-sd-far
+- exercise: ear-sd-closer
+- exercise: ear-sd-close
+recap: Same or different is the root of all ear training. Every later step is a version of this question.

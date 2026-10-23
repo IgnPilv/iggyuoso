@@ -1,0 +1,92 @@
+id: theory-blues-quiz
+title: Blues quiz
+kind: quiz
+shuffle: true
+reps: 2
+days: 2
+questions:
+- ask: A twelve-bar blues uses which chords?
+  choices:
+  - I, IV and V (often as 7ths)
+  - ii, V, I
+  - I and V only
+  correct: 0
+  why: C7, F7, G7 in C.
+- ask: Bars 1–4 of a twelve-bar blues are on...
+  choices:
+  - V
+  - IV
+  - I
+  correct: 2
+  why: Four bars of I.
+- ask: Bars 5–6 move to...
+  choices:
+  - vi
+  - V
+  - IV
+  correct: 2
+  why: Two bars of IV.
+- ask: Bar 9 is usually...
+  choices:
+  - I
+  - IV
+  - V
+  correct: 2
+  why: Bar 9 is V, bar 10 IV, bar 11 I.
+- ask: The last bar (12) often has V, to...
+  choices:
+  - Turn around to the start
+  - End the song
+  - Change key
+  correct: 0
+  why: The turnaround leads back to bar 1.
+- ask: In C, the blues chords are...
+  choices:
+  - Cmaj7, Fmaj7, G7
+  - C7, F7, G7
+  - C, Dm, G
+  correct: 1
+  why: Dominant 7ths on I, IV and V.
+- ask: The blues scale on C is...
+  choices:
+  - C D E F G A B C
+  - C D E G A C
+  - C E♭ F F♯ G B♭ C
+  correct: 2
+  why: Minor pentatonic plus the "blue note" F♯ (G♭).
+- ask: The "blue note" is...
+  choices:
+  - The tonic
+  - The flattened 5th (or 3rd) bent against the major chord
+  - Any wrong note
+  correct: 1
+  why: Bluesy tension.
+- ask: Swing rhythm plays eighths...
+  choices:
+  - Long-short
+  - Even
+  - Short-long
+  correct: 0
+  why: Like a triplet with the middle tied.
+- ask: In G, bar 5 of a blues is...
+  choices:
+  - D7
+  - C7
+  - G7
+  correct: 1
+  why: IV of G is C.
+- ask: How many bars is one chorus of a twelve-bar blues?
+  choices:
+  - '12'
+  - '16'
+  - '8'
+  - '32'
+  correct: 0
+  why: Hence the name.
+- ask: Blues usually uses...
+  choices:
+  - Only major triads
+  - Only minor chords
+  - Dominant 7th chords even on I
+  correct: 2
+  why: C7 as the home chord is what sounds bluesy.
