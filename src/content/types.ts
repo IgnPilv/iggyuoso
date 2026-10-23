@@ -58,6 +58,8 @@ export interface TimedExercise extends ExerciseBase {
   countIn: number;
   /** Length of an upbeat bar in quarter beats (0 = none). Bar 1 is that long. */
   pickup: number;
+  /** Tempo ladder rungs in percent of `tempo`, ending at 100 (from `tempoLadder`). */
+  ladder?: number[];
   right?: NoteToken[];
   left?: NoteToken[];
   /** Finger numbers per hand, one per note (chords take one number for the whole chord). */

@@ -2,6 +2,7 @@ import { parse as parseYaml } from 'yaml';
 import {
   barLengths, isTieEnd, parseDuration, parsePitch, pitchToMidi, type Meter, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
 } from '../music/notes';
+import { DEFAULT_LADDER } from '../engine/practice';
 import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, parseKey, scaleNotes } from '../music/theory';
 import type {
   BuildTask, Content, EarItem, Exercise, FindTarget, Lesson, LessonStep, QuizQuestion, Unit,
@@ -216,6 +217,7 @@ export function parseExercise(raw: Raw): Exercise {
   }
   return {
     ...base, hand: kind === 'tap' ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, right, left, fingers, pickup,
+    ...(raw.tempoLadder !== undefined && raw.tempoLadder !== false ? { ladder: parseLadder(raw.tempoLadder) } : {}),
     pitchMatch: kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true } : {}),
   };
 }
@@ -396,4 +398,14 @@ function parsePickup(v: unknown, meter: Meter): number {
   const beats = typeof v === 'number' ? v : String(v).trim().split(/\s+/).reduce((a, d) => a + parseDuration(d).beats, 0);
   if (!(beats > 0 && beats < meter.quarters - 1e-6)) throw new FieldError('"pickup" should be shorter than a bar, like q or "e e"');
   return beats;
+}
+
+/** `tempoLadder: true` (60 70 80 90 100) or a list of rising percentages; 100 is added if missing. */
+function parseLadder(v: unknown): number[] {
+  if (v === true) return [...DEFAULT_LADDER];
+  const rungs = (Array.isArray(v) ? v : String(v).split(/[\s,]+/)).map(Number);
+  if (!rungs.length || rungs.some((r, i) => !(r >= 20 && r <= 100) || (i > 0 && r <= rungs[i - 1]))) {
+    throw new FieldError('"tempoLadder" should be true or rising percentages like [60, 80, 100]');
+  }
+  return rungs[rungs.length - 1] === 100 ? rungs : [...rungs, 100];
 }

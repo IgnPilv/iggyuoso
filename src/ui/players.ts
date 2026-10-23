@@ -11,6 +11,7 @@ import { treeNodes } from '../content';
 import { RECORD_TEMPO_FRACTION } from '../scoring/stars';
 import type { TimedResult } from '../scoring/timed';
 import { TimedSession } from '../engine/timedSession';
+import { climb, LADDER, LADDER_START, sliceBars, trickyBars, type LadderState } from '../engine/practice';
 import { FallingView, type Flash } from './falling';
 import { FindSession, positionKeys, SequenceSession, type UntimedResult } from '../scoring/untimed';
 import { demo } from '../demo/demo';
@@ -39,8 +40,35 @@ export function mountExercise(root: HTMLElement, ex: Exercise, cal: Calibration,
   if (ex.kind === 'ear') return earPlayer(root, ex, cal, onDone);
   if (ex.kind === 'quiz') return quizPlayer(root, ex, cal, onDone);
   if (ex.kind === 'build') return buildPlayer(root, ex, cal, onDone);
-  return timedPlayer(root, ex, cal, onDone);
+  return timedHost(root, ex, cal, onDone);
 }
+
+/** A timed exercise, or a loop of some of its bars; "Loop" and "Whole piece" swap between them. */
+function timedHost(root: HTMLElement, ex: TimedExercise, cal: Calibration, onDone: OnDone): () => void {
+  let cleanup = () => {};
+  const mount = (bars?: [number, number], percent?: number) => {
+    cleanup();
+    root.replaceChildren();
+    const loop = { setLoop: mount, whole: ex, percent };
+    cleanup = bars
+      ? timedPlayer(root, sliceBars(ex, bars[0], bars[1]), cal, () => {}, { ...loop, bars })
+      : timedPlayer(root, ex, cal, onDone, loop);
+  };
+  mount();
+  return () => cleanup();
+}
+
+interface LoopOptions {
+  /** Set when this player loops these bars of `whole` (0-based, inclusive). */
+  bars?: [number, number];
+  /** Loop these bars (or go back to the whole piece) at this tempo, in percent. */
+  setLoop: (bars?: [number, number], percent?: number) => void;
+  whole: TimedExercise;
+  /** The tempo to start on, carried between the whole piece and a loop. */
+  percent?: number;
+}
+
+const barsText = ([a, b]: [number, number]) => (a === b ? `bar ${a + 1}` : `bars ${a + 1}–${b + 1}`);
 
 export function header(ex: Exercise, fallback: string) {
   return h('div', { class: 'ex-head' },
@@ -335,8 +363,15 @@ function staffParts(ex: TimedExercise): StaffPart[] {
 
 const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 
-function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onDone: OnDone) {
+function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onDone: OnDone, loop: LoopOptions) {
   const settings = store.settings;
+  const looping = loop.bars !== undefined;
+  const progress = demo.active ? demoProgress().store : store;
+  // The tempo ladder: the tempo select starts on the current rung; takes on that rung climb it.
+  const rungs = looping ? undefined : ex.ladder;
+  const ladderKey = `ladder.${ex.id}`;
+  let ladder: LadderState = (rungs && progress.get<LadderState>(ladderKey)) || LADDER_START;
+  if (rungs) ladder = { ...ladder, rung: Math.min(ladder.rung, rungs.length - 1) };
   const expected = expectedNotes(ex);
   void loadPiano(expected.map((e) => e.midi));
   const devices = expected.map((e) => toDevice(cal, e.midi));
@@ -371,7 +406,32 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   const hud = h('div', { class: 'hud' });
   const status = h('div', { class: 'ask' }, `${ex.meter.beats}/${ex.meter.unit} at ${ex.tempo} beats per minute. Press Listen to hear it, then Play.`);
   const result = h('div');
-  const tempoSel = h('select', { 'aria-label': 'tempo' }, ...TEMPO_STEPS.map((p) => h('option', { value: p, selected: p === 100 }, `${p}%`)));
+  const startPercent = loop.percent ?? (rungs ? rungs[ladder.rung] : 100);
+  const steps = [...new Set([...TEMPO_STEPS, ...(rungs ?? [])])].sort((a, b) => a - b);
+  const tempoSel = h('select', { 'aria-label': 'tempo' }, ...steps.map((p) => h('option', { value: p, selected: p === startPercent }, `${p}%`)));
+  const ladderLine = h('p', { class: 'small ladder-line' });
+  const showLadder = () => {
+    if (!rungs) return;
+    const left = LADDER.cleanTakes - ladder.clean;
+    const top = ladder.rung === rungs.length - 1;
+    ladderLine.textContent = `Tempo ladder: ${rungs[ladder.rung]}% (step ${ladder.rung + 1} of ${rungs.length}). `
+      + (top ? 'Full tempo: keep it clean.' : `${left} more clean ${left === 1 ? 'take' : 'takes'} (${LADDER.cleanScore}+) at ${rungs[ladder.rung]}% to move up.`);
+  };
+  showLadder();
+  // Looping a few bars: pick them here, or take the ones the result card suggests.
+  const barSel = (value: number) => h('select', { 'aria-label': 'bar' }, ...Array.from({ length: loop.whole.bars }, (_, i) => h('option', { value: i, selected: i === value }, String(i + 1))));
+  const loopFrom = barSel(loop.bars?.[0] ?? 0);
+  const loopTo = barSel(loop.bars?.[1] ?? Math.min(1, loop.whole.bars - 1));
+  const loopBtn = h('button', { class: 'secondary', onclick: () => {
+    const a = Number(loopFrom.value), b = Number(loopTo.value);
+    loop.setLoop([Math.min(a, b), Math.max(a, b)], Number(tempoSel.value));
+  } }, looping ? 'Loop these' : 'Loop');
+  const loopControls = loop.whole.bars > 1
+    ? h('div', { class: 'controls loop-controls' },
+      h('span', { class: 'small' }, 'Loop bars'), loopFrom, h('span', { class: 'small' }, 'to'), loopTo, loopBtn,
+      looping ? h('button', { class: 'secondary', onclick: () => loop.setLoop(undefined, Number(tempoSel.value)) }, 'Whole piece') : '')
+    : '';
+  let again = 0; // the next loop take
   const metro = h('input', { type: 'checkbox', checked: settings.metronome });
   const guide = h('input', { type: 'checkbox', checked: settings.guide });
   const toggle = viewToggle(initialView(ex), (v) => buildView(v));
@@ -389,6 +449,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
   const start = (mode: 'listen' | 'play') => {
     run?.cancel();
+    clearTimeout(again);
     audio();
     result.replaceChildren();
     hud.replaceChildren();
@@ -488,10 +549,36 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       status.textContent = '';
       const r = session.result();
       for (const n of r.notes) staff?.mark(`${n.expected.hand}:${n.expected.index}`, n.outcome === 'hit' ? 'hit' : n.outcome);
+      hud.replaceChildren();
+      if (looping) {
+        // Loop takes are practice: nothing is saved, and the next take starts by itself.
+        status.textContent = `${r.score}. Again in a moment; press Stop to finish looping.`;
+        result.replaceChildren(timedResult(r, ex, tempo, cal, true));
+        again = window.setTimeout(() => start('play'), 2500);
+        demo.onRunEnd?.('play');
+        return;
+      }
       const handScores = Object.fromEntries(r.hands.map((hr) => [hr.hand, hr.score]));
       const reward = record(ex, r.score, r.stars, tempo, handScores);
-      hud.replaceChildren();
-      result.replaceChildren(timedResult(r, ex, tempo, cal), reward);
+      let ladderNote: HTMLElement | '' = '';
+      if (rungs && Number(tempoSel.value) === rungs[ladder.rung]) {
+        const step = climb(rungs, ladder, r.score);
+        ladder = step.state;
+        progress.put(ladderKey, ladder);
+        if (step.moved) {
+          tempoSel.value = String(rungs[ladder.rung]);
+          ladderNote = h('p', { class: 'reward' }, step.moved === 'up'
+            ? `Tempo ladder: up to ${rungs[ladder.rung]}%.`
+            : `Tempo ladder: back to ${rungs[ladder.rung]}% for now.`);
+        }
+        showLadder();
+      }
+      const tricky = trickyBars(r, ex, session.beatMs);
+      const loopTip = tricky && loop.whole.bars > 1
+        ? h('p', { class: 'small' }, 'Most mistakes were in ', h('strong', {}, barsText(tricky)), '. ',
+          h('button', { class: 'secondary', onclick: () => loop.setLoop(tricky, Number(tempoSel.value)) }, `Loop ${barsText(tricky)}`))
+        : '';
+      result.replaceChildren(timedResult(r, ex, tempo, cal), reward, ladderNote, loopTip);
       onDone(r);
       demo.onRunEnd?.('play');
     };
@@ -505,7 +592,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
   listenBtn.onclick = () => start('listen');
   playBtn.onclick = () => start('play');
-  stopBtn.onclick = () => { run?.cancel(); status.textContent = 'Stopped.'; idle(); };
+  stopBtn.onclick = () => { run?.cancel(); clearTimeout(again); status.textContent = 'Stopped.'; idle(); };
 
   root.append(
     header(ex, ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
@@ -516,17 +603,21 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       h('label', {}, guide, ' Guide notes'),
       toggle.el,
     ),
+    rungs ? ladderLine : '',
+    loopControls,
     status,
     hud,
     stage,
     result,
   );
+  if (looping) status.textContent = `Looping ${barsText(loop.bars!)}. Press Play; it goes round until you press Stop. Loop takes are not saved.`;
   buildView(toggle.get());
-  return () => { run?.cancel(); falling?.destroy(); offHeld(); };
+  return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); };
 }
 
-function timedResult(r: TimedResult, ex: TimedExercise, tempo: number, cal: Calibration) {
-  const slow = tempo < RECORD_TEMPO_FRACTION * ex.tempo;
+/** `loopTake`: a practice loop, which is never saved, so there is no note about records. */
+function timedResult(r: TimedResult, ex: TimedExercise, tempo: number, cal: Calibration, loopTake = false) {
+  const slow = !loopTake && tempo < RECORD_TEMPO_FRACTION * ex.tempo;
   const handLine = r.hands.map((hr) => {
     const timing = hr.meanOffsetMs === null ? '' : ` · ${Math.abs(hr.meanOffsetMs)} ms ${hr.meanOffsetMs < 0 ? 'early' : 'late'} on average`;
     return h('li', {}, h('strong', {}, `${HAND_LABEL[hr.hand]} ${hr.score}`), ` · ${hr.hits}/${hr.notes} notes${timing}`);
