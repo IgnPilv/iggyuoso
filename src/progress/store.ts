@@ -26,6 +26,8 @@ export interface Attempt {
   tempo: number;
   /** Per-hand scores for timed exercises. */
   hands?: Partial<Record<'right' | 'left', number>>;
+  /** Timing per hand for timed takes: average offset (negative = early) and spread, in ms. */
+  timing?: Partial<Record<'right' | 'left', { mean: number; spread: number | null }>>;
   /** Counts toward the record (played at 90% of the written tempo or faster). */
   counts: boolean;
 }

@@ -7,6 +7,7 @@ import { parse } from 'yaml';
 import { parseExercise } from '../content/load';
 import { h, type View } from './dom';
 import { mountExercise } from './players';
+import { renderProfile, sampleProgress } from './profileView';
 import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
 import { calibrateView, keyMap, testerView } from './views';
@@ -251,6 +252,15 @@ function scenes(): Scene[] {
       setView(box, 'falling');
       timers.push(window.setTimeout(() => press(box, 'Play'), 900));
       return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Profile',
+    caption: 'The profile (top right) shows the level, which rises with XP, plus the streak and a calendar of practice days. Each skill strand of the tree shows how far along its lessons are, and each hand gets its timing: early or late on average, how steady it is, and whether it is getting better. Here it shows a made-up seven weeks.',
+    run: (box, next) => {
+      box.append(renderProfile(sampleProgress()));
+      const t = window.setTimeout(next, 12000);
+      return () => clearTimeout(t);
     },
   });
   const looks = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys');
