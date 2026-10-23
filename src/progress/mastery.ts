@@ -83,18 +83,31 @@ export class Mastery {
    * needs every node it requires Mastered.
    */
   state(id: string): NodeState {
-    const node = this.nodes.get(id);
-    if (!node) return 'locked';
-    if (this.missing(node).length) {
-      return rank(this.rec(id).state) >= rank('practised') ? this.rec(id).state : 'locked';
-    }
-    return this.rec(id).state;
+    return this.stateIn(id, new Map());
   }
 
   /** Nodes this one requires that are not far enough along yet to open it. */
   missing(node: TreeNode): string[] {
+    return this.missingIn(node, new Map());
+  }
+
+  // One memo per question: requirements share ancestors, so without it the walk is exponential.
+  private stateIn(id: string, memo: Map<string, NodeState>): NodeState {
+    const known = memo.get(id);
+    if (known) return known;
+    const node = this.nodes.get(id);
+    let st: NodeState = 'locked';
+    if (node) {
+      const own = this.rec(id).state;
+      st = this.missingIn(node, memo).length && rank(own) < rank('practised') ? 'locked' : own;
+    }
+    memo.set(id, st);
+    return st;
+  }
+
+  private missingIn(node: TreeNode, memo: Map<string, NodeState>): string[] {
     const need = rank(node.type === 'checkpoint' ? 'mastered' : 'practised');
-    return node.requires.filter((r) => rank(this.state(r)) < need);
+    return node.requires.filter((r) => rank(this.stateIn(r, memo)) < need);
   }
 
   /** 1 = just practised, 0.5 = due for review. Only Solid and Mastered nodes fade. */
