@@ -13,6 +13,7 @@ import { FindSession, positionKeys, SequenceSession, type UntimedResult } from '
 import { demo } from '../demo/demo';
 import { h } from './dom';
 import { KeyboardView, rangeAround } from './keyboard';
+import { buildPlayer, earPlayer, quizPlayer } from './drills';
 import { renderStaff, type Clef, type StaffPart } from './staff';
 
 export interface PlayerResult {
@@ -20,9 +21,9 @@ export interface PlayerResult {
   stars: number;
 }
 
-type OnDone = (r: PlayerResult) => void;
+export type OnDone = (r: PlayerResult) => void;
 
-const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n);
+export const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n);
 const HAND_LABEL: Record<string, string> = {
   right: 'Right hand', left: 'Left hand', alternating: 'Hands take turns', together: 'Hands together',
 };
@@ -32,10 +33,13 @@ export function mountExercise(root: HTMLElement, ex: Exercise, cal: Calibration,
   root.classList.add('exercise', `kind-${ex.kind}`);
   if (ex.kind === 'find') return findPlayer(root, ex, cal, onDone);
   if (ex.kind === 'sequence') return sequencePlayer(root, ex, cal, onDone);
+  if (ex.kind === 'ear') return earPlayer(root, ex, cal, onDone);
+  if (ex.kind === 'quiz') return quizPlayer(root, ex, cal, onDone);
+  if (ex.kind === 'build') return buildPlayer(root, ex, cal, onDone);
   return timedPlayer(root, ex, cal, onDone);
 }
 
-function header(ex: Exercise, fallback: string) {
+export function header(ex: Exercise, fallback: string) {
   return h('div', { class: 'ex-head' },
     ex.hand ? h('span', { class: `hand-badge ${ex.hand}` }, HAND_LABEL[ex.hand]) : null,
     h('p', { class: 'prompt' }, ex.prompt ?? fallback),
@@ -50,29 +54,29 @@ function untimedResult(r: UntimedResult, retry: () => void) {
   );
 }
 
-function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>) {
+export function record(ex: Exercise, score: number, stars: number, tempo: number, hands?: Partial<Record<Hand, number>>) {
   if (demo.active) return; // the demo pianist's playing is not your progress
   const written = ex.kind === 'timed' ? ex.tempo : tempo;
   store.record(ex.id, { at: new Date().toISOString(), score, stars, tempo, hands, counts: tempo >= RECORD_TEMPO_FRACTION * written });
 }
 
 /** Lights held keys and returns the unsubscribe function. */
-function showHeld(kb: KeyboardView) {
+export function showHeld(kb: KeyboardView) {
   return midi.onNote((e) => kb.set(e.note, 'pressed', e.type === 'on'));
 }
 
 // ---------------------------------------------------------------- view toggle
 
-type ViewMode = 'classic' | 'falling';
+export type ViewMode = 'classic' | 'falling';
 const VIEW_LABEL: Record<ViewMode, string> = { classic: 'Keyboard & sheet', falling: 'Falling notes' };
 
 /** The player's last pick wins everywhere; otherwise reading exercises start classic. */
-function initialView(ex: Exercise): ViewMode {
+export function initialView(ex: Exercise): ViewMode {
   return store.settings.view ?? (ex.kind === 'timed' && ex.display !== 'staff' ? 'falling' : 'classic');
 }
 
 /** A two-way switch shown on every playing exercise. */
-function viewToggle(start: ViewMode, onChange: (v: ViewMode) => void) {
+export function viewToggle(start: ViewMode, onChange: (v: ViewMode) => void) {
   let current = start;
   const buttons = (Object.keys(VIEW_LABEL) as ViewMode[]).map((v) =>
     h('button', { class: 'seg', 'data-view': v, 'aria-pressed': String(v === start) }, VIEW_LABEL[v]));
@@ -92,7 +96,7 @@ function viewToggle(start: ViewMode, onChange: (v: ViewMode) => void) {
 }
 
 /** Redraws a canvas view every frame until stopped. */
-function animate(draw: (now: number) => void) {
+export function animate(draw: (now: number) => void) {
   let raf = 0;
   const tick = () => { draw(performance.now()); raf = requestAnimationFrame(tick); };
   raf = requestAnimationFrame(tick);
@@ -180,7 +184,7 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
 
 // ---------------------------------------------------------------- sequence
 
-function clefFor(ex: Exercise, hand?: Hand): Clef {
+export function clefFor(ex: Exercise, hand?: Hand): Clef {
   return ex.clef ?? (hand === 'left' || ex.hand === 'left' ? 'bass' : 'treble');
 }
 
@@ -475,7 +479,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   stopBtn.onclick = () => { run?.cancel(); status.textContent = 'Stopped.'; idle(); };
 
   root.append(
-    header(ex, 'Play along with the click.'),
+    header(ex, ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
     h('div', { class: 'controls top' },
       listenBtn, playBtn, stopBtn,
       h('label', {}, 'Tempo ', tempoSel),

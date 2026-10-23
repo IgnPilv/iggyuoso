@@ -145,6 +145,7 @@ export class TimedSession {
   }
 
   private samePitch(a: number, b: number) {
+    if (this.ex.pitchMatch === 'any') return true;
     return this.ex.pitchMatch === 'pitchClass' ? pitchClass(a) === pitchClass(b) : a === b;
   }
 

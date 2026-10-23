@@ -3,6 +3,8 @@ import { content } from '../content';
 import type { Exercise, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
+import { parse } from 'yaml';
+import { parseExercise } from '../content/load';
 import { h, type View } from './dom';
 import { mountExercise } from './players';
 import { computerKeys } from '../midi/computerKeys';
@@ -29,7 +31,60 @@ function pick<T extends Exercise>(pred: (e: Exercise) => e is T, ...prefs: ((e: 
   }
   return xs[0];
 }
-const isTimed = (e: Exercise): e is TimedExercise => e.kind === 'timed';
+const isTimed = (e: Exercise): e is TimedExercise => e.kind === 'timed' && !e.tap;
+
+/** A content exercise of this kind if there is one, else a built-in sample. */
+function sampleOf(kind: Exercise['kind'] | 'tap', yaml: string): Exercise {
+  const real = allExercises().find((e) => (kind === 'tap' ? e.kind === 'timed' && e.tap : e.kind === kind));
+  return real ?? parseExercise(parse(yaml));
+}
+
+const SAMPLES = {
+  ear: `
+id: demo-ear
+kind: ear
+prompt: Ear training. Listen, then answer on the keyboard or with the buttons.
+cadence: C
+questions: 4
+items:
+  - { type: degree, key: C, pool: [1, 3, 5] }
+  - { type: compare, range: [C4, C5] }
+  - { type: interval, pool: [M3, P5], answer: name }
+  - { type: melody, notes: "C4 D4 E4" }`,
+  quiz: `
+id: demo-quiz
+kind: quiz
+prompt: A theory quiz. Answer with a button, or by playing.
+questions:
+  - ask: How many beats does a half note last?
+    staff: "C4:h C4:h"
+    choices: ["1", "2", "4"]
+    correct: 1
+  - ask: Which note is this?
+    staff: "G4:w"
+    choices: [E, G, B]
+    correct: 1
+  - ask: Play the note shown.
+    staff: "E4:w"
+    play: E4`,
+  build: `
+id: demo-build
+kind: build
+prompt: Build it. Play the chord, interval or scale asked for.
+tasks:
+  - chord: C
+  - interval: P5
+    from: D4
+  - chord: Am
+  - scale: G major`,
+  tap: `
+id: demo-tap
+kind: tap
+prompt: Rhythm only. Tap the rhythm on any key.
+tempo: 84
+meter: 4/4
+rhythm: "x:q x:q x:h | x:e x:e x:q x:h"`,
+};
 
 const press = (box: HTMLElement, label: string) =>
   [...box.querySelectorAll('button')].find((b) => b.textContent === label)?.click();
@@ -44,6 +99,7 @@ function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: View2
     demo.onFind = (s) => p.playFind(s);
     demo.onSequence = (s) => p.playSequence(s);
     demo.onTimed = (s) => p.playTimed(s);
+    demo.onAsk = (a) => p.answer(a);
     demo.onRunEnd = (mode) => {
       if (mode === 'listen') window.setTimeout(() => press(box, 'Play'), 800);
     };
@@ -92,6 +148,10 @@ function scenes(): Scene[] {
       return () => { flips.forEach(clearTimeout); previewTheme(undefined); cleanup?.(); };
     },
   });
+  out.push({ title: 'Ear training', caption: 'The app plays a cadence to set the key, then a note, two notes or a phrase. The first key (or button) is the answer, and missed questions come back more often. The pianist gets one wrong.', run: exerciseScene(sampleOf('ear', SAMPLES.ear), { view: 'classic' }) });
+  out.push({ title: 'Theory quiz', caption: 'Short theory questions, with a picture or a sound. Answer with a button, or by playing the answer.', run: exerciseScene(sampleOf('quiz', SAMPLES.quiz), { view: 'classic' }) });
+  out.push({ title: 'Build it', caption: 'Play a named chord (hold it down), interval or scale, untimed. "Show me" lights the keys, but then it does not count as a first try.', run: exerciseScene(sampleOf('build', SAMPLES.build), { view: 'falling', switchAt: 6000 }) });
+  out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
   out.push({
     title: 'MIDI tester',
     caption: 'In Settings, the MIDI tester shows each key you press and the raw MIDI messages, for checking that a keyboard is connected.',
@@ -143,7 +203,7 @@ export const demoView: View = (root, arg) => {
     pianist.stop();
     cleanup?.();
     cleanup = undefined;
-    demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = undefined;
+    demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onAsk = undefined;
   };
 
   const show = (i: number, scene?: Scene) => {

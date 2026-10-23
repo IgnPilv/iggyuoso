@@ -567,3 +567,15 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .keymap kbd.down { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 .key text.hint { font-size: 10px; font-weight: 600; fill: var(--key-label); font-family: var(--font-mono); }
 .key.black text.hint { fill: var(--key-white); font-size: 8px; }
+
+/* ---------------------------------------------------------------- ear, quiz, build */
+
+.drill-head { margin-top: var(--space-3); }
+.choices { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-3) 0; }
+.choices .choice { min-width: 7rem; }
+.choices .choice.right { background: var(--ok-soft); border-color: var(--ok); color: var(--ink); opacity: 1; }
+.choices .choice.wrong { background: var(--bad-soft); border-color: var(--bad); color: var(--ink); opacity: 1; }
+.drill-feedback { min-height: 1.5em; font-weight: 600; margin: var(--space-2) 0; }
+.drill-feedback.ok { color: var(--ok); }
+.drill-feedback.bad { color: var(--bad); }
+.quiz-picture .staff { max-width: 420px; min-width: 0; }
