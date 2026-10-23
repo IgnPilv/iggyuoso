@@ -42,6 +42,8 @@ export interface Settings {
   latencyMs: number;
   metronome: boolean;
   guide: boolean;
+  /** Last view the player picked; unset = each exercise's own default. */
+  view?: 'classic' | 'falling';
 }
 
 const DEFAULT_SETTINGS: Settings = { latencyMs: 0, metronome: true, guide: false };

@@ -99,3 +99,8 @@ never copied pages). Start small, adapt as we go.
 - 2026-10-23: Demo mode (`#/demo`, linked from home and the header) so the app can be seen without
   a MIDI keyboard; the demo pianist injects notes through the same MIDI path (`midi.inject`).
   Rule: every new feature updates the demo in the same PR (see "Demo" above).
+- 2026-10-23: Every exercise (find, sequence, timed) has a toggle between "Keyboard & sheet" and
+  "Falling notes", one view at a time. Step-by-step exercises in falling notes use wait mode (the
+  next note falls to the keyboard and waits until it is played). The player's pick is remembered
+  for all exercises (`settings.view`, also in Settings); until then reading exercises start on
+  the sheet and other timed ones on falling notes. The demo flips the toggle to show both.

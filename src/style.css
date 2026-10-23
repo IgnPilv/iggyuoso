@@ -86,3 +86,7 @@ button:disabled { opacity: .45; cursor: default; }
 .demo-lesson > span { min-width: 190px; }
 button.chip { padding: 3px 10px; font-size: .85rem; background: #fff; color: var(--accent); border-radius: 999px; }
 header nav a + a { margin-left: 12px; }
+
+.view-toggle { display: inline-flex; border: 1px solid var(--accent); border-radius: 8px; overflow: hidden; }
+.view-toggle .seg { border: 0; border-radius: 0; background: #fff; color: var(--accent); padding: 6px 12px; }
+.view-toggle .seg[aria-pressed=true] { background: var(--accent); color: #fff; }

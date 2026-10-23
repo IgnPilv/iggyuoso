@@ -28,6 +28,8 @@ export interface FrameState {
   noteState: (i: number) => LiveState;
   flashes: Flash[];
   now: number;
+  /** Keys to tint when nothing else lights them (hand position, keys already found). */
+  marked?: ReadonlyMap<number, string>;
 }
 
 const COLORS: Record<Hand, { fill: string; bright: string; key: string }> = {
@@ -56,7 +58,7 @@ export class FallingView {
     low: number, high: number,
     private cal: Calibration,
     private notes: FallingNote[],
-    private opts: { lookahead: number; barQuarters: number; totalBeats: number },
+    private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c' },
   ) {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
@@ -203,15 +205,15 @@ export class FallingView {
     const sounding = new Map<number, Hand>();
     const wanted = new Map<number, Hand>();
     this.notes.forEach((n, i) => {
-      if (s.beat >= n.beat && s.beat < n.beat + n.beats) {
-        if (s.noteState(i) !== 'missed') sounding.set(n.device, n.hand);
-        wanted.set(n.device, n.hand);
-      }
+      const state = s.noteState(i);
+      if (state === 'now') sounding.set(n.device, n.hand);
+      if (state === 'now' || (s.beat >= n.beat && s.beat < n.beat + n.beats)) wanted.set(n.device, n.hand);
     });
     const wrong = new Set(s.flashes.filter((f) => f.kind !== 'hit' && f.until > s.now).map((f) => f.device));
     const fill = (m: number, k: KeyGeom) => {
       if (s.held.has(m)) return wrong.has(m) ? MISSED : wanted.has(m) ? COLORS[wanted.get(m)!].fill : '#94a3b8';
       if (sounding.has(m)) return COLORS[sounding.get(m)!].key;
+      if (s.marked?.has(m)) return s.marked.get(m)!;
       return k.black ? '#1f2128' : '#fafafa';
     };
     for (const black of [false, true]) {
@@ -224,7 +226,7 @@ export class FallingView {
         ctx.strokeStyle = '#333';
         ctx.lineWidth = 1;
         ctx.stroke();
-        if (!black && pitchClass(m) === 0) {
+        if (!black && pitchClass(m) === 0 && (this.opts.labels !== 'middle-c' || m === this.cal.middleC)) {
           const mid = m === this.cal.middleC;
           ctx.fillStyle = mid ? '#b45309' : '#555';
           ctx.font = `${mid ? 700 : 500} ${Math.min(12, k.w * 0.42)}px system-ui, sans-serif`;
