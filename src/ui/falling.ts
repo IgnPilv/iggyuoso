@@ -1,4 +1,5 @@
 import { keyName, type Calibration } from '../calibration';
+import { computerKeys } from '../midi/computerKeys';
 import type { LiveState } from '../engine/timedSession';
 import { isBlack, pitchClass, type Hand } from '../music/notes';
 import { palette, tokenColor, type Palette } from './theme';
@@ -264,6 +265,14 @@ export class FallingView {
         ctx.strokeStyle = p.keyStroke;
         ctx.lineWidth = 1;
         ctx.stroke();
+        const hint = this.opts.labels !== 'middle-c' && computerKeys.enabled ? computerKeys.letterFor(m) : undefined;
+        if (hint) {
+          // The computer-keyboard letter that plays this key, near the top of the key.
+          ctx.fillStyle = black ? p.keyWhite : p.keyLabel;
+          ctx.font = `600 ${Math.min(11, k.w * 0.55)}px ${p.fontMono}`;
+          ctx.textAlign = 'center';
+          ctx.fillText(hint, k.x + k.w / 2, laneH + 13);
+        }
         if (!black && pitchClass(m) === 0 && (this.opts.labels !== 'middle-c' || m === this.cal.middleC)) {
           const mid = m === this.cal.middleC;
           ctx.fillStyle = mid ? p.middleC : p.keyLabel;

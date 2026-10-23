@@ -1,5 +1,6 @@
 import { toDevice } from '../calibration';
 import type { TimedSession } from '../engine/timedSession';
+import { computerKeys } from '../midi/computerKeys';
 import { midi } from '../midi/input';
 import { isBlack } from '../music/notes';
 import type { FindSession, SequenceSession } from '../scoring/untimed';
@@ -25,7 +26,14 @@ export class Pianist {
     notes.forEach((n, i) => this.playNote(n, startIn + i * 12, holdMs));
   }
 
+  /** Type a computer-keyboard key (by KeyboardEvent.code), as a player would with the emulator on. */
+  typeKey(code: string, startIn: number, holdMs: number, onKey?: (code: string, down: boolean) => void) {
+    this.at(startIn, () => { computerKeys.press(code); onKey?.(code, true); });
+    this.at(startIn + holdMs, () => { computerKeys.release(code); onKey?.(code, false); });
+  }
+
   stop() {
+    computerKeys.releaseAll();
     this.timers.forEach(clearTimeout);
     this.timers = [];
     for (const n of this.held) midi.inject('off', n);

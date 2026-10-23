@@ -2,6 +2,7 @@ import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibrati
 import { content, contentErrors } from '../content';
 import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
+import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
@@ -14,13 +15,24 @@ const lessonExercises = (l: Lesson) => l.steps.flatMap((s) => ('exercise' in s ?
 
 export const go = (path: string) => { location.hash = path; };
 
+function setComputerKeys(on: boolean) {
+  store.settings = { ...store.settings, computerKeys: on };
+  computerKeys.enable(on);
+}
+
+const useComputerKeys = () =>
+  h('button', { class: 'secondary', onclick: () => setComputerKeys(true) }, 'Use the computer keyboard instead');
+
 function midiBanner(): HTMLElement | null {
-  if (demo.active) return null;
+  if (demo.active || computerKeys.enabled) return null;
   if (!MidiInput.supported()) {
-    return h('p', { class: 'banner error' }, 'This browser cannot read MIDI keyboards. Please open iggyuoso in Chrome or Edge.');
+    return h('p', { class: 'banner error' }, 'This browser cannot read MIDI keyboards. Please open iggyuoso in Chrome or Edge. ', useComputerKeys());
+  }
+  if (midi.blocked) {
+    return h('p', { class: 'banner error' }, 'MIDI access was blocked. Allow MIDI for this site in the browser settings, then reload. ', useComputerKeys());
   }
   if (!midi.ready) return h('p', { class: 'banner' }, 'Waiting for MIDI permission…');
-  if (!midi.inputNames().length) return h('p', { class: 'banner' }, 'No MIDI keyboard found. Plug it in and switch it on; it will show up here.');
+  if (!midi.inputNames().length) return h('p', { class: 'banner' }, 'No MIDI keyboard found. Plug it in and switch it on; it will show up here. ', useComputerKeys());
   return null;
 }
 
@@ -105,6 +117,14 @@ export const calibrateView: View = (root) => {
     done = false;
     detail.replaceChildren();
     msg.textContent = 'Press the lowest white key on your keyboard (the one furthest to the left).';
+    if (computerKeys.enabled && !demo.active) {
+      // The computer keyboard has no ends to press, so offer a full piano instead.
+      detail.append(h('div', { class: 'controls' },
+        h('button', { class: 'secondary', onclick: () => {
+          const r = calibrate(21, 108);
+          if (r.ok) confirm(r.calibration, r.notes);
+        } }, 'Playing on the computer keyboard? Use a standard 88-key piano')));
+    }
   };
 
   // Step 3: show middle C, explain it, and have the player press it.
@@ -163,8 +183,9 @@ export const calibrateView: View = (root) => {
   });
 
   ask();
+  const offKeys = computerKeys.onChange(() => { if (!done && low === undefined) ask(); });
   root.append(h('section', { class: 'card' }, h('h2', {}, 'Set up the keyboard'), banner, msg, detail));
-  return () => { off(); offPorts(); offTry(); };
+  return () => { off(); offPorts(); offTry(); offKeys(); };
 };
 
 // ---------------------------------------------------------------- lesson
@@ -260,6 +281,7 @@ export const settingsView: View = (root) => {
         h('button', { class: 'secondary', onclick: () => go('/midi') }, 'MIDI tester'),
       ),
     ),
+    computerKeysCard(),
     h('section', { class: 'card' },
       h('h2', {}, 'Timing'),
       h('p', { class: 'small' }, 'If the app always says you are late (or early) although you play with the click, move this slider until it stops.'),
@@ -290,6 +312,28 @@ export function themeSetting() {
       h('p', { class: 'small' }, 'Dark is easy on the eyes at the piano. "Follow the device" switches with your system.'),
       h('div', { class: 'segmented', role: 'group', 'aria-label': 'theme' }, ...buttons)));
   return { el, off: () => window.removeEventListener(THEME_CHOICE_EVENT, sync) };
+}
+
+function computerKeysCard() {
+  const box = h('input', { type: 'checkbox', checked: computerKeys.enabled });
+  box.onchange = () => setComputerKeys(box.checked);
+  return h('section', { class: 'card' },
+    h('h2', {}, 'Computer keyboard'),
+    h('p', { class: 'small' }, 'No MIDI keyboard at hand? Play on the computer keyboard instead. It is for trying things out: real piano practice needs real keys.'),
+    h('label', {}, box, ' Play with the computer keyboard'),
+    keyMap(),
+  );
+}
+
+/** Which letters play which keys; each key cap has data-code so the demo can light it. */
+export function keyMap() {
+  const black = [1, 3, 6, 8, 10, 13, 15];
+  const codes = Object.keys(KEY_SEMITONES);
+  const cap = (code: string) => h('kbd', { 'data-code': code }, letterOf(code));
+  return h('div', { class: 'keymap small' },
+    h('p', {}, 'White keys from middle C up: ', ...codes.filter((c) => !black.includes(KEY_SEMITONES[c])).map(cap)),
+    h('p', {}, 'Black keys: ', ...codes.filter((c) => black.includes(KEY_SEMITONES[c])).map(cap)),
+    h('p', {}, cap('KeyZ'), ' one octave down, ', cap('KeyX'), ' one octave up. The keys show their letter on the on-screen keyboard.'));
 }
 
 function viewPref() {

@@ -5,8 +5,9 @@ import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
 import { h, type View } from './dom';
 import { mountExercise } from './players';
+import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
-import { calibrateView, testerView } from './views';
+import { calibrateView, keyMap, testerView } from './views';
 
 // The no-keyboard showcase. Scenes are picked from the live content, so the demo always shows
 // what the app currently does. When a feature is added, add or extend a scene here.
@@ -100,6 +101,30 @@ function scenes(): Scene[] {
       p.playChord([60, 64, 67], 3000, 900);
       const t = window.setTimeout(next, 5000);
       return () => { clearTimeout(t); cleanup?.(); };
+    },
+  });
+  out.push({
+    title: 'Computer keyboard',
+    caption: 'No MIDI keyboard at hand? Switch on "Play with the computer keyboard" in Settings: A S D F G H J K L ; \' are the white keys from middle C, W E T Y U O P the black keys, Z and X shift an octave. The keys show their letters. The pianist types a tune, then moves an octave down.',
+    run: (box, next, p) => {
+      const was = { on: computerKeys.enabled, shift: computerKeys.shift };
+      computerKeys.enable(true);
+      computerKeys.setShift(0);
+      const map = keyMap();
+      const light = (code: string, down: boolean) => map.querySelector(`[data-code=${code}]`)?.classList.toggle('down', down);
+      box.append(map);
+      const cleanup = testerView(box);
+      // Hot cross buns: E D C, E D C, then the same an octave lower.
+      const tune = ['KeyD', 'KeyS', 'KeyA', '', 'KeyD', 'KeyS', 'KeyA', '', 'KeyZ', 'KeyD', 'KeyS', 'KeyA', '', 'KeyX', 'KeyT', 'KeyG', 'KeyH'];
+      tune.forEach((code, i) => { if (code) p.typeKey(code, 500 + i * 380, code === 'KeyZ' || code === 'KeyX' ? 150 : 320, light); });
+      const t = window.setTimeout(next, 500 + tune.length * 380 + 1500);
+      return () => {
+        clearTimeout(t);
+        cleanup?.();
+        computerKeys.releaseAll();
+        computerKeys.setShift(was.shift);
+        computerKeys.enable(was.on);
+      };
     },
   });
   return out;
