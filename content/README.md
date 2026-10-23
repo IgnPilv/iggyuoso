@@ -167,6 +167,37 @@ days: 2   # spread over at least two days
   days: 3
   ```
 
+- `improvise`: the player makes up the notes inside a frame, and the take is checked for its
+  musical choices (not for matching written notes). Fields: `tempo`, `meter` (default 4/4),
+  `countIn`, `click`, `bars` (the player's bars), `key` (home note and spelling, default C),
+  `hand` (`together`: notes from middle C up are the tune, below are the bass), and any of:
+  `scale` (`C major pentatonic`, `A blues`, `D dorian`, ..., or a list `C# D# F# G# A#`; its keys
+  are lit), `chords` (one per bar, `C | Am | F | G`, repeated if shorter; shown as a chart),
+  `backing: chords | roots | <note string>` (the app plays it under the player's bars),
+  `call` (a phrase the app plays first; the player's bars follow), `rhythm` (x notes to improvise
+  in, like `tap`), `example` (a model take for "Hear an example"). `rules` is a list, each worth
+  0 to 1; the score is their average, and a take is clean only when every rule holds:
+  `inScale`, `chordTones` (strong beats on the bar's chord), `startOn: C` / `endOn: tonic`,
+  `questionAnswer: 2` (bars before 2 ask and end away from home; the rest begin like the question
+  and come home), `repeat: 1` / `sequence: 1` (the next bar repeats the first, or moves its shape;
+  `{ bars: 4, at: 8 }` compares bars 1–4 with bars 9–12), `contrast: { bars: 4, at: 4 }` (the
+  middle is different), `steps: 60` (percent of moves by step), `rests: 2` (a silence of 2 beats
+  in every four bars), `variety: 4` (different notes), `range: C4-G4`, `rhythm`, `bassRoots`
+  (left hand on each chord's root at beat 1). `fill` (something in every bar) is always added.
+  The result writes the take on the staff and can keep it in the Sketchbook.
+
+  ```yaml
+  id: cmp-full-close
+  kind: improvise
+  key: C
+  tempo: 76
+  bars: 4
+  scale: C major
+  chords: C | F | G | C
+  backing: chords
+  rules: [inScale, chordTones, { endOn: C }]
+  ```
+
 `ear`, `quiz` and `build` take `pitchMatch: pitchClass` too. `ear` and `quiz` take
 `feedback: none` for checkpoints: no right / wrong after each question (and no resolution after a
 degree), and the result card lists the missed questions with their answers.

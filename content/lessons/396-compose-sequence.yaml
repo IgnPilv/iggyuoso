@@ -1,0 +1,28 @@
+id: compose-sequence
+title: 'Sequences: the same shape, higher'
+skills:
+- creativity
+steps:
+- explain: |
+    A **sequence** repeats a motif starting on a different note: the same shape, moved up or down. It is one of the oldest
+    tricks in music, and it makes a tune feel like it is going somewhere.
+  sound: C4:e D4:e E4:q | D4:e E4:e F4:q | E4:e F4:e G4:q | F4:e G4:e A4:q
+  terms:
+  - sequence
+  staff:
+    notes: C4:e D4:e E4:q r:h | D4:e E4:e F4:q r:h
+    labels: names
+- explain: |
+    Repeat or sequence? A **repeat** starts on the same note; a **sequence** starts higher or lower, keeping the rhythm
+    and the ups and downs.
+  check:
+    ask: A motif C D E is played again as D E F. What is that?
+    choices:
+    - A repeat
+    - A sequence
+    - A new motif
+    correct: 1
+    why: 'Same shape and rhythm, one step higher: a sequence.'
+- exercise: cmp-sequence-2
+- exercise: cmp-sequence-tune
+recap: 'Same shape, new place: a sequence.'

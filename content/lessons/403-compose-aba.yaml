@@ -1,0 +1,24 @@
+id: compose-aba
+title: 'A B A: away and back'
+skills:
+- creativity
+steps:
+- explain: |
+    Many pieces have three parts: **A**, then something different, **B**, then **A** again. The return feels like coming home
+    because the middle went somewhere else: a new rhythm, a new register, a new chord.
+  terms:
+  - ternary form
+  - contrast
+  - return
+  callout: |
+    A B A: statement, contrast, return.
+  check:
+    ask: Why does B need to be different from A?
+    choices:
+    - So that A coming back feels like a return
+    - So the piece is longer
+    - Because B is in a different tempo
+    correct: 0
+    why: Without contrast there is nothing to come back from.
+- exercise: cmp-aba
+recap: Statement, contrast, return.

@@ -1,0 +1,25 @@
+id: cmp-aba
+title: Your own A B A
+kind: improvise
+hand: right
+prompt: 'Bars 1–4: your A, ending on C. Bars 5–8 (over Am and Dm): something different, higher or busier. Bars 9–12: A again,
+  exactly. When a take comes out well, press **Keep in Sketchbook**: composers keep notebooks of ideas, and so can you.'
+key: C
+tempo: 80
+meter: 4/4
+countIn: 1
+bars: 12
+scale: C major
+chords: C | F | G | C | Am | Dm | G | G | C | F | G | C
+backing: chords
+rules:
+- inScale
+- repeat:
+    bars: 4
+    at: 8
+- contrast:
+    bars: 4
+    at: 4
+- endOn: C
+reps: 3
+days: 2

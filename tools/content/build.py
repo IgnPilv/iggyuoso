@@ -29,15 +29,18 @@ def N(id, branch, stage, title, requires=(), type=None, about=None):
     BASE.append(dict(id=id, branch=branch, stage=stage, title=title, requires=list(requires), type=type, lesson=id, about=about))
 exec(open(os.path.join(os.path.dirname(__file__), 'tree_base.py')).read())
 
-import patch, songs, ear, rhythm, technique, reading, theory, pieces, creativity, keys, milestones
+import patch, songs, ear, rhythm, technique, reading, theory, pieces, creativity, keys, milestones, compose
 for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones):
     if hasattr(m, 'run'): m.run(BASE)
 songs.write_songs()
+# Modules added later run after everything else, so older lessons keep their file numbers.
+for m in (compose,):
+    m.run(BASE)
 
 # Merge: generated nodes may replace base nodes of the same id.
 nodes = {n['id']: n for n in BASE}
 for n in lib.NODES: nodes[n['id']] = n
-for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones):
+for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones, compose):
     for f in getattr(m, 'TREE_EDITS', []): f(nodes)
 
 TITLES = {'technique': 'Technique', 'reading': 'Reading', 'rhythm': 'Rhythm', 'theory': 'Theory', 'ear': 'Ear',
@@ -49,7 +52,7 @@ SUMMARY = {
     'theory': 'How music is built: notes, intervals, scales, keys, chords and form, a few screens and a quiz at a time.',
     'ear': 'The ear from scratch: same or different, high or low, up or down, then notes, intervals, chords and melodies played back.',
     'repertoire': 'Real pieces to learn and polish: classics and studies, both hands.',
-    'creativity': 'Making your own music: rhythm conversations, improvising, bass lines, harmonising and moving tunes to new keys.',
+    'creativity': 'Making your own music: improvising that listens to your notes, then composing: motifs, sequences, phrases, tunes over chords, song forms, minor keys and modes, the blues, harmonising and arranging.',
     'milestones': 'The trunk of the tree. Each milestone checks a stage and opens new songs.',
     'songs': 'Tunes to play for fun, opened by the milestones.',
 }

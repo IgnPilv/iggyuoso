@@ -1,0 +1,20 @@
+id: cmp-i-vi-iv-v
+title: A tune over C, Am, F, G
+kind: improvise
+hand: right
+prompt: The app plays the chords; the chart shows them. Chord notes on beats 1 and 3, steps between, home to C at the end.
+key: C
+tempo: 80
+meter: 4/4
+countIn: 1
+bars: 8
+scale: C major
+chords: C | Am | F | G | C | Am | G | C
+backing: chords
+rules:
+- inScale
+- chordTones
+- steps: 50
+- endOn: C
+reps: 3
+days: 2

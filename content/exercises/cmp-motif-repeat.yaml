@@ -1,0 +1,18 @@
+id: cmp-motif-repeat
+title: Make a motif, then repeat it
+kind: improvise
+hand: right
+prompt: 'Bar 1: make up a motif of 3 to 5 notes on C D E F G. Bar 2: play exactly the same again.'
+key: C
+tempo: 72
+meter: 4/4
+countIn: 1
+bars: 2
+scale: C D E F G
+example: C4:e D4:e E4:q G4:h | C4:e D4:e E4:q G4:h
+rules:
+- inScale
+- repeat: 1
+- variety: 2
+reps: 3
+days: 2

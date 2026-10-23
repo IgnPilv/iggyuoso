@@ -247,7 +247,70 @@ export interface GeneratedExercise extends ExerciseBase {
   mastery: DrillGoal;
 }
 
-export type Exercise = FindExercise | SequenceExercise | TimedExercise | EarExercise | QuizExercise | BuildExercise | GeneratedExercise;
+/**
+ * One thing an improvisation is checked for (`kind: improvise`). Each gives a value from 0 to 1;
+ * the take's score is their average. See src/engine/improvise.ts.
+ */
+export type ImproviseRule =
+  /** The notes come from the exercise's `scale`. */
+  | { rule: 'inScale' }
+  /** Notes on strong beats belong to the bar's chord. */
+  | { rule: 'chordTones' }
+  /** The first (or last) note is this pitch class. */
+  | { rule: 'startOn' | 'endOn'; pc: number; name: string }
+  /** Bars before `split` ask (end away from home), the rest answer (end on home, begin like the question). */
+  | { rule: 'questionAnswer'; split: number }
+  /**
+   * Bars from `at` (default: right after) repeat the first `bars` (`repeat`), bring the same shape
+   * moved up or down (`sequence`), or sound different (`contrast`, the B of an A B A).
+   */
+  | { rule: 'repeat' | 'sequence' | 'contrast'; bars: number; at: number }
+  /** At least `percent` of the moves are steps (2 semitones or less). */
+  | { rule: 'steps'; percent: number }
+  /** Leave space: a silence of at least `beats` once in every four bars. */
+  | { rule: 'rests'; beats: number }
+  /** At least this many different notes. */
+  | { rule: 'variety'; notes: number }
+  /** The notes stay between these (written MIDI). */
+  | { rule: 'range'; low: number; high: number }
+  /** The given `rhythm` is followed. */
+  | { rule: 'rhythm' }
+  /** The left hand plays each bar's chord root on the downbeat. */
+  | { rule: 'bassRoots' }
+  /** Something is played in every bar. */
+  | { rule: 'fill' };
+
+/**
+ * Improvising or composing on the spot: the player makes the notes up, inside a frame (a scale,
+ * chords the app plays, a rhythm, a phrase to answer), and the take is checked against `rules`.
+ * Good takes can be kept in the Sketchbook.
+ */
+export interface ImproviseExercise extends ExerciseBase {
+  kind: 'improvise';
+  tempo: number;
+  meter: Meter;
+  countIn: number;
+  click?: 'on' | 'count-in' | 'off';
+  /** The player's bars (after the call, if there is one). */
+  bars: number;
+  /** Home note (pitch class) and spelling key, from `key` (default C). */
+  tonic: number;
+  /** Notes to use: a scale ("C major pentatonic", "A blues") or a list, as pitch classes. */
+  scale?: { name: string; pcs: number[] };
+  /** One chord per bar of the player's part ("C | F | G | C"); repeated if shorter. */
+  chords?: string[];
+  /** What the app plays under the player's bars (left hand). */
+  backing?: NoteToken[];
+  /** A phrase the app plays first; the player's bars follow it. */
+  call?: NoteToken[];
+  /** A rhythm to improvise in (any notes). */
+  rhythm?: NoteToken[];
+  /** A model take for Listen (right hand). */
+  example?: NoteToken[];
+  rules: ImproviseRule[];
+}
+
+export type Exercise = FindExercise | SequenceExercise | TimedExercise | EarExercise | QuizExercise | BuildExercise | GeneratedExercise | ImproviseExercise;
 
 export interface Content {
   lessons: Map<string, Lesson>;

@@ -1,0 +1,29 @@
+id: compose-shape
+title: Steps, leaps and the shape of a tune
+skills:
+- creativity
+steps:
+- explain: |
+    Tunes people remember move mostly by **step** (next-door notes), with a few **leaps** for drama. After a leap, a good tune
+    usually steps back the other way, like a ball that bounces and settles.
+  sound: C4:q E4:q G4:q C5:q | B4:q A4:q G4:h
+  terms:
+  - step
+  - leap
+  - contour
+  callout: |
+    Leap, then step back. And give the tune one high point, not three.
+- explain: |
+    The **contour** is the tune's shape in the air: an arch (up, then down) is the most common. Draw it with your hand as
+    you listen.
+  sound: C4:q D4:q E4:q G4:q | A4:q G4:q E4:q D4:q | C4:w
+  check:
+    ask: What shape is C D E G A G E D C?
+    choices:
+    - 'An arch: up, then down'
+    - A straight line up
+    - A zig-zag
+    correct: 0
+    why: It climbs to A, its high point, and comes back down.
+- exercise: cmp-arch
+recap: Mostly steps, one high point, home at the end.

@@ -1,0 +1,20 @@
+id: cmp-mixolydian
+title: A Mixolydian tune
+kind: improvise
+hand: right
+prompt: 'White keys only, home on G, over G and F chords: a rock sound. End on G. When a take comes out well, press **Keep
+  in Sketchbook**: composers keep notebooks of ideas, and so can you.'
+key: C
+tempo: 96
+meter: 4/4
+countIn: 1
+bars: 8
+scale: G mixolydian
+chords: G | F | G | F | G | F | C | G
+backing: chords
+rules:
+- inScale
+- chordTones
+- endOn: G
+reps: 3
+days: 2

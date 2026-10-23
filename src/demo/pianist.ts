@@ -3,6 +3,8 @@ import type { Recorder } from '../engine/recorder';
 import type { TimedSession } from '../engine/timedSession';
 import { computerKeys } from '../midi/computerKeys';
 import { midi } from '../midi/input';
+import type { ImproviseExercise } from '../content/types';
+import { chordNotes } from '../music/theory';
 import { isBlack } from '../music/notes';
 import type { DemoAsk } from './demo';
 import type { FindSession, SequenceSession } from '../scoring/untimed';
@@ -87,6 +89,62 @@ export class Pianist {
     notes.forEach(([m, beat, beats], i) => this.playNote(toDevice(r.cal, m), at(beat) + Math.round(Math.sin(i * 1.7) * 25), beats * r.beatMs * 0.9));
     const end = Math.max(...notes.map(([, b, d]) => b + d));
     if (done) this.at(at(end + 1), done);
+  }
+
+  /**
+   * Makes up a take for an improvising exercise (after its call, if any): a chord note on each
+   * downbeat, steps in the scale between, the motif repeated or moved when asked, a breath every
+   * fourth bar, the roots in the left hand when both hands play, and home at the end.
+   */
+  improvise(r: Recorder, ex: ImproviseExercise) {
+    const q = ex.meter.quarters;
+    const callBars = ex.call ? Math.round(ex.call.reduce((a, t) => a + t.beats, 0) / q) : 0;
+    const pcs = ex.scale?.pcs ?? [0, 2, 4, 5, 7, 9, 11];
+    const scale: number[] = [];
+    for (let m = 57; m <= 84; m++) if (pcs.includes(((m % 12) + 12) % 12)) scale.push(m);
+    const near = (m: number) => scale.reduce((a, b) => (Math.abs(b - m) < Math.abs(a - m) ? b : a));
+    const tonic = near(60 + ex.tonic);
+    const out: [number, number, number][] = [];
+    const rule = (name: string) => ex.rules.find((x) => x.rule === name) as { bars?: number; at?: number; split?: number } | undefined;
+    const motif = rule('repeat') ?? rule('sequence');
+    const motifBars = motif?.bars;
+    const motifAt = motif?.at ?? motifBars;
+    const split = rule('questionAnswer')?.split;
+    const rhythm = ex.rhythm;
+    let idx = scale.indexOf(tonic);
+    for (let bar = 0; bar < ex.bars; bar++) {
+      const start = bar * q;
+      const last = bar === ex.bars - 1;
+      if (motifBars && motifAt !== undefined && bar >= motifAt && bar < motifAt + motifBars && !last) {
+        const shift = rule('sequence') ? 2 : 0;
+        for (const [m, b, d] of out.filter(([, b]) => b >= (bar - motifAt) * q && b < (bar - motifAt + 1) * q)) out.push([near(m + shift), b + motifAt * q, d]);
+        continue;
+      }
+      const chord = ex.chords?.[bar % ex.chords.length];
+      const anchor = last ? tonic : chord ? near(chordNotes(chord, 4).find((m) => scale.includes(m)) ?? scale[idx]) : scale[idx];
+      if (split !== undefined && bar === split - 1) idx = scale.indexOf(near(tonic + 4)); // the question ends on 3, away from home
+      if (rhythm) {
+        let b = 0;
+        for (const t of rhythm.filter((t) => t.bar === bar)) {
+          if (t.pitches.length) {
+            const m = b === 0 ? anchor : scale[Math.max(0, Math.min(scale.length - 1, idx + (b % 2 ? 1 : -1)))];
+            out.push([last ? tonic : m, start + b, t.beats]);
+          }
+          b += t.beats;
+        }
+      } else if (last) {
+        out.push([tonic, start, q]);
+      } else {
+        const breath = (bar + 1) % 4 === 0;
+        const ai = scale.indexOf(anchor);
+        const steps = breath ? [0, 1] : [0, 1, 2, 1].slice(0, Math.round(q));
+        steps.forEach((st, i) => out.push([scale[Math.min(scale.length - 1, ai + st)], start + i, breath && i === 1 ? 1 : 1]));
+        idx = Math.max(0, Math.min(scale.length - 1, ai + (bar % 2 ? -1 : 1)));
+      }
+      if (ex.hand === 'together' && chord) out.push([chordNotes(chord, 3)[0] - 12 * (chordNotes(chord, 3)[0] >= 55 ? 1 : 0), start, q]);
+    }
+    const shifted = out.map(([m, b, d]) => [m, b + callBars * q, d] as [number, number, number]);
+    this.playIdea(r, shifted);
   }
 
   /** Answers an ear, quiz or build question; slips on the second one. */

@@ -1,0 +1,18 @@
+id: cmp-motif-tune
+title: Motif, motif, something new, home
+kind: improvise
+hand: right
+prompt: 'Bars 1 and 2: your motif twice. Bar 3: something new. Bar 4: come home to C.'
+key: C
+tempo: 72
+meter: 4/4
+countIn: 1
+bars: 4
+scale: C D E F G
+example: E4:e F4:e G4:h r:q | E4:e F4:e G4:h r:q | A4:q G4:q F4:q E4:q | D4:h C4:h
+rules:
+- inScale
+- repeat: 1
+- endOn: C
+reps: 3
+days: 2

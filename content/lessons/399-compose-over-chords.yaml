@@ -1,0 +1,28 @@
+id: compose-over-chords
+title: A tune over chords
+skills:
+- creativity
+steps:
+- explain: |
+    Songwriters often start with the chords and find the tune on top. The rule of thumb: on the **strong beats**, use a note
+    of the chord; between them, step through other notes of the scale (**passing notes**).
+  sound: C4+E4+G4:h E5:q D5:q | A3+C4+E4:h C5:q B4:q | F3+A3+C4:h A4:q B4:q | G3+B3+D4:h D5:h
+  terms:
+  - chord note
+  - passing note
+  - strong beat
+- explain: |
+    This progression is in thousands of songs: **I vi IV V** (in C: C, Am, F, G). Each chord shares notes with the next, so
+    the tune can move smoothly.
+  sound: C4+E4+G4:w | A3+C4+E4:w | F3+A3+C4:w | G3+B3+D4:w
+  check:
+    ask: In C, what are the chords I, vi, IV and V?
+    choices:
+    - C, Dm, F, G
+    - C, Am, F, G
+    - C, Am, G, F
+    correct: 1
+    why: 'Count up the C scale: I = C, IV = F, V = G, and vi (A) is minor.'
+- exercise: cmp-i-vi-iv-v
+- exercise: cmp-over-chords-g
+recap: 'Chords first, then the tune: chord notes on the strong beats.'

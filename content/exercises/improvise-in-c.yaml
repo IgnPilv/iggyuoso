@@ -1,9 +1,19 @@
 id: improvise-in-c
-title: "Improvise in C"
-kind: tap
+title: Improvise in C
+kind: improvise
+hand: right
 prompt: Improvise with the right hand on C D E F G, in this rhythm. Start and finish on C.
+key: C
 tempo: 80
-tempoLadder: true
 meter: 4/4
 countIn: 1
-rhythm: "x:q x:q x:q x:q | x:h x:h | x:q x:e x:e x:q x:q | x:w | x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w"
+bars: 8
+scale: C D E F G
+rhythm: x:q x:q x:q x:q | x:h x:h | x:q x:e x:e x:q x:q | x:w | x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w
+rules:
+- inScale
+- rhythm
+- startOn: C
+- endOn: C
+- steps: 60
+reps: 3

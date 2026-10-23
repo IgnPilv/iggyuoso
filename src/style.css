@@ -1041,3 +1041,16 @@ textarea { width: 100%; resize: vertical; margin-top: var(--space-3); }
 .sketch-title { font-weight: 600; }
 .sketch-name { font-size: inherit; font-weight: inherit; width: min(100%, 22em); }
 button.danger { color: var(--bad); }
+
+/* Improvising: the frame (notes, chord chart, what is listened for) and the checks on the result. */
+.improv-frame { margin-top: var(--space-3); }
+.chord-chart { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: var(--space-1); margin: var(--space-2) 0; }
+.bar-cell { padding: var(--space-2); border-radius: var(--radius-md); background: var(--surface-sunken); font-family: var(--font-display); font-weight: 600; text-align: center; transition: background 0.15s; }
+.bar-cell.call { color: var(--muted); font-family: var(--font-body); font-weight: 400; font-size: var(--text-sm); }
+.bar-cell.now { background: var(--brand-gradient); color: #fff; }
+.improv-rules { margin: var(--space-1) 0 0; padding-left: 1.2em; color: var(--ink-2); font-size: var(--text-sm); }
+.improv-checks { list-style: none; padding: 0; margin: var(--space-2) 0; display: grid; gap: var(--space-1); }
+.improv-checks li { display: flex; gap: var(--space-2); }
+.improv-checks .mark { font-weight: 700; }
+.improv-checks li.ok .mark { color: var(--ok); }
+.improv-checks li.miss .mark { color: var(--bad); }

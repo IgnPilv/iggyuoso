@@ -1,0 +1,30 @@
+id: compose-motif
+title: Your first motif
+skills:
+- creativity
+steps:
+- explain: |
+    A **motif** is a tiny musical idea, two to five notes with a rhythm you can remember. The most famous one is four notes:
+    da-da-da-**dum**, the start of Beethoven's Fifth Symphony. A whole symphony grows out of it.
+  sound: G4:e G4:e G4:e Eb4:h r:e
+  terms:
+  - motif
+  callout: |
+    A motif is short, has a clear rhythm, and comes back.
+- explain: |
+    Composers **repeat** a motif so the listener can catch it. "Ode to Joy" plays its first idea, then plays it again with a
+    new ending. Listen for the repeat.
+  sound: E4:q E4:q F4:q G4:q | G4:q F4:q E4:q D4:q | C4:q C4:q D4:q E4:q | E4:q. D4:e D4:h
+  check:
+    ask: Why repeat a motif straight away?
+    choices:
+    - So the listener remembers it
+    - Because the composer ran out of ideas
+    - To make the piece longer
+    correct: 0
+    why: Hearing an idea twice fixes it in the ear. Then, when it changes, the change can be heard.
+- exercise: cmp-motif-repeat
+- explain: |
+    Now let it grow: the motif twice, then something new, then home. Four bars is already a little tune. When a take comes out well, press **Keep in Sketchbook**: composers keep notebooks of ideas, and so can you.
+- exercise: cmp-motif-tune
+recap: 'A motif is a seed: repeat it so it is heard.'

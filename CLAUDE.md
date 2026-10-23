@@ -420,3 +420,17 @@ never copied pages). Start small, adapt as we go.
   own timing. Kept ideas are records `sketch.<id>` (title, memo, take and note strings; deleted =
   null), so they sync with an account; each opens at `#/sketchbook/<id>` with the staff, a memo,
   and "Practise it" (the idea as a timed exercise, `sketch-<id>`). Demo scene "Sketchbook".
+- 2026-10-23: Improvising that listens (audit gap 2). New exercise kind `improvise`
+  (`src/engine/improvise.ts`, `src/ui/improvise.ts`, format in `content/README.md`): the player
+  makes up the notes inside a frame (lit scale keys, a chord chart the app plays, a call to answer,
+  a rhythm) and the take is checked by rules (in the scale, chord notes on strong beats, start/end
+  note, question and answer, repeat, sequence, contrast, steps, rests, variety, range, rhythm, bass
+  roots, every bar played). Each rule is worth 0–1, the score is their average, and a take is clean
+  only when every rule holds. The take is written on the staff and can go to the Sketchbook. No
+  falling-notes view (nothing is written to fall). Every former tap improvisation (black keys,
+  question and answer, C position, A minor pentatonic, blues) is now `improvise`, same ids. A
+  composing path joins the creativity branch (`tools/content/compose.py`, runs after the other
+  generators so older lesson files keep their numbers): motif, sequence, contour, full and half
+  close, a tune over I vi IV V, the eight-bar period, both hands, minor, A B A, Dorian and
+  Mixolydian, plus a blues head in AAB form; milestones 2–9 each need one composing node. Scales
+  gain blues, dorian, mixolydian, lydian, phrygian. Demo scene "Improvising that listens".

@@ -1,0 +1,20 @@
+id: cmp-over-chords-g
+title: A tune over G, C and D
+kind: improvise
+hand: right
+prompt: 'The same idea in G major (F♯ is lit). Chord notes on the strong beats, home to G. When a take comes out well, press
+  **Keep in Sketchbook**: composers keep notebooks of ideas, and so can you.'
+key: G
+tempo: 80
+meter: 4/4
+countIn: 1
+bars: 8
+scale: G major
+chords: G | C | D | G | Em | C | D | G
+backing: chords
+rules:
+- inScale
+- chordTones
+- endOn: G
+reps: 3
+days: 2

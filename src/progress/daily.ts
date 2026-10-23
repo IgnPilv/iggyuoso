@@ -40,6 +40,7 @@ export function minutesFor(ex: Exercise): number {
   } else if (ex.kind === 'ear') secs = ex.questions * 7;
   else if (ex.kind === 'quiz') secs = ex.questions.length * 8;
   else if (ex.kind === 'build') secs = ex.tasks.length * 12;
+  else if (ex.kind === 'improvise') secs = 3 * take(ex.bars + (ex.call ? ex.bars : 0), ex.meter, ex.tempo, ex.countIn) + 30;
   else secs = 60;
   return Math.max(0.5, Math.round(secs / 30) / 2);
 }

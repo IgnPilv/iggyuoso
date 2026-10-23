@@ -1,0 +1,20 @@
+id: cmp-dorian
+title: A Dorian tune
+kind: improvise
+hand: right
+prompt: White keys only, home on D. The G chord brings out the Dorian B. End on D.
+key: C
+tempo: 84
+meter: 4/4
+countIn: 1
+bars: 8
+scale: D dorian
+chords: Dm | G | Dm | G | Dm | G | C | Dm
+backing: chords
+rules:
+- inScale
+- chordTones
+- endOn: D
+- rests: 1
+reps: 3
+days: 2

@@ -1,10 +1,20 @@
 id: cr-qa-c
 title: Question and answer in C
-kind: tap
-prompt: White keys C to G. End bar 2 on D or G, bar 4 on C.
+kind: improvise
+hand: right
+prompt: White keys C to G. End bar 2 on D, E or G (a question); start bar 3 like bar 1 and end bar 4 on C (the answer).
+key: C
 tempo: 80
 meter: 4/4
 countIn: 1
+bars: 4
+scale: C D E F G
 rhythm: x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:h x:h
+example: C4:q D4:q E4:q F4:q | G4:h D4:h | C4:q D4:q E4:q D4:q | D4:h C4:h
+rules:
+- inScale
+- rhythm
+- questionAnswer: 2
+- range: C4-G4
 reps: 3
 days: 2

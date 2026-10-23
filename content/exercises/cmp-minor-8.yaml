@@ -1,0 +1,21 @@
+id: cmp-minor-8
+title: An eight-bar minor song
+kind: improvise
+hand: right
+prompt: 'A minor-key period: the question stops on the E chord, the answer starts the same way and comes home to A. When a
+  take comes out well, press **Keep in Sketchbook**: composers keep notebooks of ideas, and so can you.'
+key: Am
+tempo: 72
+meter: 4/4
+countIn: 1
+bars: 8
+scale: A harmonic minor
+chords: Am | Dm | Am | E | Am | Dm | E | Am
+backing: chords
+rules:
+- inScale
+- chordTones
+- questionAnswer: 4
+- steps: 50
+reps: 3
+days: 2

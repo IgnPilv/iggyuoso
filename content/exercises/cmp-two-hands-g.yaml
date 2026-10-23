@@ -1,0 +1,19 @@
+id: cmp-two-hands-g
+title: Two hands in G, eight bars
+kind: improvise
+hand: together
+prompt: 'Left hand on the roots; right hand a question (bars 1–4) and its answer (bars 5–8). When a take comes out well, press
+  **Keep in Sketchbook**: composers keep notebooks of ideas, and so can you.'
+key: G
+tempo: 66
+meter: 4/4
+countIn: 1
+bars: 8
+scale: G major
+chords: G | C | G | D | G | C | D | G
+rules:
+- bassRoots
+- chordTones
+- questionAnswer: 4
+reps: 3
+days: 2

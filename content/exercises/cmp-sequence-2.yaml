@@ -1,0 +1,17 @@
+id: cmp-sequence-2
+title: A motif and its sequence
+kind: improvise
+hand: right
+prompt: 'Bar 1: a motif in C major. Bar 2: the same shape, starting one step higher.'
+key: C
+tempo: 72
+meter: 4/4
+countIn: 1
+bars: 2
+scale: C major
+example: C4:e D4:e E4:q C4:h | D4:e E4:e F4:q D4:h
+rules:
+- inScale
+- sequence: 1
+reps: 3
+days: 2

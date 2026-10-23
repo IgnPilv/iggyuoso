@@ -1,0 +1,18 @@
+id: compose-endings
+title: 'Endings: home, and half-way'
+skills:
+- creativity
+steps:
+- explain: |
+    A phrase can end two ways. Ending on **home** (the tonic, over the I chord) sounds finished, like a full stop. Ending on
+    the **V chord**, on G, B or D in C major, sounds half-way, like a comma: the listener waits for more.
+  sound: E4:q D4:q C4:h | E4:q D4:q D4:h
+  terms:
+  - full close
+  - half close
+  - cadence
+  callout: |
+    Full close: end on 1 over I. Half close: end on V, with 2, 5 or 7 on top.
+- exercise: cmp-full-close
+- exercise: cmp-half-close
+recap: 'Full close: a full stop. Half close: a comma.'
