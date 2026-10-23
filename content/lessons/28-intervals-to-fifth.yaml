@@ -10,4 +10,7 @@ steps:
       On the staff: 2nds and 4ths go line to space; 3rds and 5ths go line to line or space to space.
   - exercise: name-the-interval
   - exercise: play-the-interval
+  - explain: |
+      Read intervals at a glance: line to space is a 2nd, line to line a 3rd, and so on.
+  - exercise: gen-intervals-to-fifth
 recap: "Count the letters including both ends. Odd intervals stay on lines or on spaces."

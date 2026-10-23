@@ -12,4 +12,7 @@ steps:
   - exercise: build-natural-minor
   - exercise: a-natural-minor-rh
   - exercise: major-or-minor-scale
+  - explain: |
+      Short tunes in A, E and D minor.
+  - exercise: gen-sight-read-minor
 recap: "Natural minor = the relative major's notes from degree 6. The minor 3rd gives it its colour."

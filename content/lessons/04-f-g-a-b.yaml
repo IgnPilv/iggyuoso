@@ -12,4 +12,7 @@ steps:
       Now every white key has a name: C D E around the two black keys, F G A B around the three.
       Then it starts again at C.
   - exercise: name-any-white-key
+  - explain: |
+      All seven letters now, in random order. Aim for under two seconds each.
+  - exercise: gen-find-white-keys
 recap: F G A B sit around the three black keys. All seven letters repeat up the keyboard.

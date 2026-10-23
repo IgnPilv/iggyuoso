@@ -14,4 +14,7 @@ steps:
       **Sharp (♯)** = one semitone higher. **Flat (♭)** = one semitone lower.
       **Natural (♮)** cancels them. So the black key between F and G is both **F♯** and **G♭**.
   - exercise: sharps-and-flats
+  - explain: |
+      Black keys have two names. Find each one as fast as you can.
+  - exercise: gen-find-black-keys
 recap: "Semitone = next key. Tone = two semitones. Sharp raises, flat lowers, natural cancels."

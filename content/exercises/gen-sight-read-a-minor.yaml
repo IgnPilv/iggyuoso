@@ -1,0 +1,15 @@
+id: gen-sight-read-a-minor
+title: "Sight-read in A minor"
+kind: generated
+generator: sight-read
+prompt: "A new minor tune each time."
+hand: right
+clef: treble
+keys: [Am]
+notes: A4-E5
+durations: [q, h]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 3
+days: 2

@@ -14,4 +14,7 @@ steps:
       octave.
   - exercise: perfect-intervals-quiz
   - exercise: build-perfect-intervals
+  - explain: |
+      Mixed intervals up to the 5th, in your keys.
+  - exercise: gen-intervals-3rds-to-5ths
 recap: "Perfect 5th = 7 semitones, perfect 4th = 5. Flip one and you get the other."

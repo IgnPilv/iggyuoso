@@ -1,0 +1,12 @@
+id: gen-rhythm-three-eight
+title: "Read the rhythm in 3/8"
+kind: generated
+generator: rhythm-read
+prompt: "Tap the rhythm. Three eighths to a bar."
+durations: [e, q, q.]
+meter: 3/8
+bars: 8
+tempo: 120
+mastery: { accuracy: 90 }
+reps: 5
+days: 2

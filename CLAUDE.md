@@ -261,3 +261,9 @@ never copied pages). Start small, adapt as we go.
   again; the lesson once it was played today. A lesson never played stays locked while reviews
   are due (`lessonLock` reason `reviews`). Minutes per exercise are estimated from its kind,
   bars and tempo or number of questions. Demo scene "Today's practice".
+- 2026-10-23: Generated daily drills placed in the curriculum: 33 `kind: generated` exercises
+  (`gen-*`) added as the last steps of 30 Year 1 and Year 2 lessons. They cover finding keys, note
+  reading (treble, bass, grand, with keys), naming notes, reading intervals, rhythm reading
+  (quarters to sixteenths, rests, triplets, 3/4, 3/8) and sight-reading (one hand, 4–8 bars,
+  every key met so far). Mastery bars: 90–95% accuracy, middle answer times of 2–3.5 s for the
+  question drills, reps 3–7 on 2–4 days. Today's practice draws on them automatically.

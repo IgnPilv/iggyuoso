@@ -13,4 +13,7 @@ steps:
       The app counts in first ("1, 2, 3, 4"), then you play. Play any **C** on every click.
   - exercise: quarter-beats-rh
   - exercise: quarter-beats-lh
+  - explain: |
+      A new rhythm every time. Read it, then tap it with the click.
+  - exercise: gen-rhythm-quarters-halves
 recap: The beat stays steady. A quarter note is one beat.

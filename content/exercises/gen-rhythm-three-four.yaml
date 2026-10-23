@@ -1,0 +1,12 @@
+id: gen-rhythm-three-four
+title: "Read the rhythm in 3/4"
+kind: generated
+generator: rhythm-read
+prompt: "Tap the rhythm on any key. Three beats to a bar."
+durations: [q, h, h.]
+meter: 3/4
+bars: 4
+tempo: 80
+mastery: { accuracy: 90 }
+reps: 5
+days: 2

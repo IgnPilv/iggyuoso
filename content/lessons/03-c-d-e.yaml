@@ -16,4 +16,7 @@ steps:
   - exercise: find-all-d
   - exercise: find-all-e
   - exercise: name-c-d-e
+  - explain: |
+      Now make it automatic. The app names a key; find any one, as fast as you can.
+  - exercise: gen-find-c-d-e
 recap: C is left of the two black keys, D is in the middle, E is on the right.

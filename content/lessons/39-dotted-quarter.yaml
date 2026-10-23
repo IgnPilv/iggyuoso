@@ -11,4 +11,7 @@ steps:
       end of each line.
   - exercise: tap-dotted-quarter
   - exercise: ode-to-joy-dotted
+  - explain: |
+      Rhythms with dotted quarters mixed in.
+  - exercise: gen-rhythm-dotted
 recap: "Dotted quarter = 1½ beats, usually followed by an eighth: long-short."

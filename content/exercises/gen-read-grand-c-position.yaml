@@ -1,0 +1,11 @@
+id: gen-read-grand-c-position
+title: "Read both staves: C position"
+kind: generated
+generator: read-notes
+prompt: "Play the note shown, in the right octave."
+clef: grand
+notes: C3-G4
+questions: 30
+mastery: { accuracy: 90, medianMs: 3000 }
+reps: 5
+days: 3

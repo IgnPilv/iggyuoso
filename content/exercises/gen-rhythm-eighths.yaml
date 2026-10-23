@@ -1,0 +1,11 @@
+id: gen-rhythm-eighths
+title: "Read the rhythm: eighth notes"
+kind: generated
+generator: rhythm-read
+prompt: "Tap the rhythm. Eighths come in pairs: 1-and."
+durations: [q, e, h]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 5
+days: 3

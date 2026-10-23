@@ -1,0 +1,12 @@
+id: gen-read-key-of-g
+title: "Read in G major"
+kind: generated
+generator: read-notes
+prompt: "Play the note shown. The key signature says F#."
+clef: treble
+keys: [G]
+notes: D4-G5
+questions: 30
+mastery: { accuracy: 90, medianMs: 3000 }
+reps: 3
+days: 2

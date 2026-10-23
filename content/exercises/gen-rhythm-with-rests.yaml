@@ -1,0 +1,11 @@
+id: gen-rhythm-with-rests
+title: "Read the rhythm: with rests"
+kind: generated
+generator: rhythm-read
+prompt: "Tap the notes, stay silent on the rests."
+durations: [q, h, r:q]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 3
+days: 2

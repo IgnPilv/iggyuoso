@@ -11,4 +11,7 @@ steps:
       Now the hands **take turns**. When one hand plays, the other one rests and waits.
       Keep both hands in middle C position the whole time.
   - exercise: taking-turns-tune
+  - explain: |
+      Rhythms with rests. A rest is a beat you count but don't play.
+  - exercise: gen-rhythm-with-rests
 recap: Rests are silence that still counts. Your hands can take turns, one plays while the other rests.

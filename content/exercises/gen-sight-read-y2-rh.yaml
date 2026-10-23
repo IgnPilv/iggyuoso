@@ -1,0 +1,15 @@
+id: gen-sight-read-y2-rh
+title: "Sight-read eight bars: right hand"
+kind: generated
+generator: sight-read
+prompt: "A new eight-bar tune each time."
+hand: right
+clef: treble
+keys: [C, G, F, D]
+notes: C4-E5
+durations: [q, h, e]
+bars: 8
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 5
+days: 3

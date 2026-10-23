@@ -15,4 +15,10 @@ steps:
 
       Then play slowly and don't stop for mistakes: keep the beat going.
   - exercise: evening-bells
+  - explain: |
+      Longer tunes now: eight bars, wider range, more keys.
+  - exercise: gen-sight-read-y2-rh
+  - explain: |
+      And the left hand.
+  - exercise: gen-sight-read-y2-lh
 recap: "Look before you play: key, time, moves, patterns. Then keep going whatever happens."

@@ -8,4 +8,10 @@ steps:
       read the **shape**. Is the next note a step or a skip? Up or down?
   - exercise: read-c-position-rh
   - exercise: read-c-position-lh
+  - explain: |
+      Endless sight-reading in C position. Look for steps and skips, then play without stopping.
+  - exercise: gen-sight-read-c-rh
+  - explain: |
+      And the left hand, on the bass staff.
+  - exercise: gen-sight-read-c-lh
 recap: "Find the first note, then read steps, skips and direction."

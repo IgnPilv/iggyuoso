@@ -14,4 +14,7 @@ steps:
   - exercise: long-notes-rh
   - exercise: long-notes-lh
   - exercise: two-keys-mixed-rh
+  - explain: |
+      Fresh rhythms with whole notes in. Count every beat of the long ones.
+  - exercise: gen-rhythm-with-wholes
 recap: Quarter = 1 beat, half = 2 beats, whole = 4 beats. In 4/4 each bar has four beats.

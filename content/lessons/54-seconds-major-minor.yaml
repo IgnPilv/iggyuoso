@@ -18,4 +18,7 @@ steps:
       A minor 2nd sounds tight and tense, like the shark music in films. A major 2nd sounds like
       an ordinary step in a tune. Listen for that.
   - exercise: ear-seconds
+  - explain: |
+      Reading interval quality: count the semitones in your head, or picture the keys.
+  - exercise: gen-intervals-seconds
 recap: "A major 2nd is 2 semitones, a minor 2nd is 1. Number = letters, quality = semitones."

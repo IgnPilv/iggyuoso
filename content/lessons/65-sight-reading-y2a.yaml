@@ -10,4 +10,7 @@ steps:
   - exercise: sight-read-y2-c
   - exercise: sight-read-y2-f
   - exercise: sight-read-y2-g
+  - explain: |
+      Note-reading across three octaves, both clefs, with key signatures.
+  - exercise: gen-read-grand-wide
 recap: "Ten seconds of looking, then play straight through."

@@ -1,0 +1,15 @@
+id: gen-sight-read-y2-keys
+title: "Sight-read in every Year 2 key"
+kind: generated
+generator: sight-read
+prompt: "D, A, E minor, G minor and more."
+hand: right
+clef: treble
+keys: [C, G, D, A, F, Am, Em, Dm, Gm]
+notes: C4-E5
+durations: [q, h, e]
+bars: 8
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 7
+days: 4

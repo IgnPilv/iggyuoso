@@ -1,0 +1,11 @@
+id: gen-rhythm-with-wholes
+title: "Read the rhythm: quarters, halves and wholes"
+kind: generated
+generator: rhythm-read
+prompt: "Tap the rhythm on any key. Hold the long notes for their full value."
+durations: [q, h, w]
+bars: 4
+tempo: 72
+mastery: { accuracy: 90 }
+reps: 5
+days: 2

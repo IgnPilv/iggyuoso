@@ -11,4 +11,7 @@ steps:
       Start with two very different notes: C and F sharp. Try to remember each one's colour.
   - exercise: note-naming-two
   - exercise: note-naming-three
+  - explain: |
+      Speed naming: two octaves around middle C, both clefs.
+  - exercise: gen-name-notes-grand
 recap: "Side quest: name notes with no reference. Add one new note at a time."

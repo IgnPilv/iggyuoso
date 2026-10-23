@@ -11,4 +11,7 @@ steps:
       short-short rhythm: all three are the same length.
   - exercise: tap-triplets
   - exercise: triplets-rh
+  - explain: |
+      Fresh rhythms with triplets mixed in.
+  - exercise: gen-rhythm-triplets
 recap: "Three even notes in one beat: tri-po-let."

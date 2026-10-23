@@ -13,4 +13,7 @@ steps:
       That is a **3rd**.
   - exercise: steps-or-skips
   - exercise: play-steps-and-skips
+  - explain: |
+      Notes on both staves now, from the C below middle C to the G above.
+  - exercise: gen-read-grand-c-position
 recap: "Step = 2nd = next key, line to space. Skip = 3rd = skip a key, line to line or space to space."
