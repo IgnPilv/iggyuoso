@@ -313,7 +313,7 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
     picture.replaceChildren();
     if (q.staff) {
       const clef = q.clef ?? ex.clef ?? 'treble';
-      const st = renderStaff([{ clef, notes: q.staff.map((t, i) => ({ pitches: t.pitches, beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie, key: String(i) })) }], { barQuarters: 4 });
+      const st = renderStaff([{ clef, notes: q.staff.map((t, i) => ({ pitches: t.pitches, beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie, key: String(i) })) }], { barQuarters: 4, key: q.key ?? ex.key });
       picture.append(h('div', { class: 'staff-wrap' }, st.svg));
     }
     if (q.sound) {

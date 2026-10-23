@@ -1,4 +1,5 @@
-import { diatonicStep, type Pitch } from '../music/notes';
+import { diatonicStep, type Letter, type Pitch } from '../music/notes';
+import { keySignature } from '../music/theory';
 import type { PedalSpan } from '../music/timeline';
 import { s } from './dom';
 
@@ -36,12 +37,25 @@ const STAFF_H = 4 * GAP;
 const BOTTOM_STEP: Record<Clef, number> = { treble: 4 * 7 + 2, bass: 2 * 7 + 4 }; // E4, G2
 
 /** `startQuarter`: where in the first bar the music starts (the beats an upbeat leaves out). */
-export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[] } = {}) {
+/** Where each sharp and flat of a signature sits on the treble staff (the bass is two octaves down). */
+const SIG_SHARPS: [Letter, number][] = [['F', 5], ['C', 5], ['G', 5], ['D', 5], ['A', 4], ['E', 5], ['B', 4]];
+const SIG_FLATS: [Letter, number][] = [['B', 4], ['E', 5], ['A', 4], ['D', 5], ['G', 4], ['C', 5], ['F', 4]];
+const SIG_W = 9;
+const ACCIDENTAL = { 1: '♯', [-1]: '♭', 0: '♮' } as const;
+
+/**
+ * `key`: a key signature (G, Bb, Em...). Notes are written out in full; an accidental is drawn
+ * only where the note differs from the signature or from an earlier note on that line in the bar.
+ */
+export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; key?: string } = {}) {
   const timed = parts.some((p) => p.notes.some((n) => n.beats !== undefined));
   const length = Math.max(
     ...parts.map((p) => (timed ? p.notes.reduce((a, n) => a + (n.beats ?? 1), 0) : p.notes.length)),
   );
-  const width = LEFT + length * (timed ? BEAT_W : UNTIMED_W) + 20;
+  const sig = opts.key ? keySignature(opts.key) : undefined;
+  const sigCount = Math.abs(sig?.count ?? 0);
+  const left = LEFT + (sigCount ? sigCount * SIG_W + 6 : 0);
+  const width = left + length * (timed ? BEAT_W : UNTIMED_W) + 20;
   const staffTop = (i: number) => 40 + i * (STAFF_H + 70);
   const pedalY = staffTop(parts.length - 1) + STAFF_H + 48;
   const height = pedalY + (opts.pedal?.length ? 22 : 2);
@@ -59,12 +73,22 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
         ? s('text', { x: 14, y: bottom + 8, class: 'clef treble' }, '\u{1D11E}')
         : s('text', { x: 14, y: top + 26, class: 'clef bass' }, '\u{1D122}'),
     );
+    if (sig && sigCount) {
+      const places = (sig.count > 0 ? SIG_SHARPS : SIG_FLATS).slice(0, sigCount);
+      places.forEach(([letter, octave], i) => {
+        const step = diatonicStep({ letter, accidental: 0, octave: octave - (part.clef === 'bass' ? 2 : 0) });
+        svg.append(s('text', { x: LEFT - 6 + i * SIG_W, y: y(step) + 5, class: 'accidental signature' }, sig.count > 0 ? '♯' : '♭'));
+      });
+    }
+    // Accidentals already shown in this bar, per staff line or space.
+    let shown = new Map<number, -1 | 0 | 1>();
 
     let pos = 0;
     let barPos = opts.startQuarter ?? 0;
     let tripletPos = 0; // beats into the current triplet group
     for (const n of part.notes) {
-      const x = LEFT + (timed ? pos * BEAT_W : pos * UNTIMED_W) + 14;
+      const x = left + (timed ? pos * BEAT_W : pos * UNTIMED_W) + 14;
+      if (!timed) shown = new Map(); // reading drills: every note on its own
       const g = s('g', { class: 'note' });
       const value = n.value ?? n.beats;
       const dotted = n.dotted ?? (n.beats !== undefined && [0.375, 0.75, 1.5, 3, 6].includes(n.beats));
@@ -77,7 +101,9 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
         for (let st = bStep + 10; st <= step; st += 2) g.append(s('line', { x1: x - 10, x2: x + 10, y1: y(st), y2: y(st), class: 'ledger' }));
         const open = value !== undefined && value >= 2;
         g.append(s('ellipse', { cx: x, cy: ny, rx: 6.2, ry: 4.4, transform: `rotate(-20 ${x} ${ny})`, class: open ? 'head open' : 'head' }));
-        if (p.accidental) g.append(s('text', { x: x - 18, y: ny + 5, class: 'accidental' }, p.accidental > 0 ? '♯' : '♭'));
+        const current = shown.get(step) ?? sig?.of[p.letter] ?? 0;
+        if (p.accidental !== current) g.append(s('text', { x: x - 18, y: ny + 5, class: 'accidental' }, ACCIDENTAL[p.accidental]));
+        shown.set(step, p.accidental);
         if (dotted) g.append(s('circle', { cx: x + 11, cy: ny - (step % 2 === bStep % 2 ? HALF : 0), r: 1.6 }));
         if (n.tie && n.beats !== undefined) {
           const x2 = x + n.beats * BEAT_W;
@@ -112,7 +138,8 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
       barPos += n.beats ?? 0;
       if (timed && opts.barQuarters && Math.abs(barPos - opts.barQuarters) < 1e-6) {
         barPos = 0;
-        const bx = LEFT + pos * BEAT_W + 2;
+        shown = new Map();
+        const bx = left + pos * BEAT_W + 2;
         svg.append(s('line', { x1: bx, x2: bx, y1: top, y2: bottom, class: 'bar' }));
       }
     }
@@ -122,7 +149,7 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
   // Pedal marks under the music: "Ped." where it goes down, a line while it is held, a notch
   // where it changes and a tick where it comes up.
   if (timed && opts.pedal?.length) {
-    const px = (beat: number) => LEFT + (beat - (opts.startQuarter ?? 0)) * BEAT_W + 8;
+    const px = (beat: number) => left + (beat - (opts.startQuarter ?? 0)) * BEAT_W + 8;
     const g = s('g', { class: 'pedal' });
     for (const sp of opts.pedal) {
       const a = px(sp.beat);
