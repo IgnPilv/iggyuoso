@@ -127,6 +127,7 @@ export function parseExercise(raw: Raw): Exercise {
   if (!kind) throw new FieldError('missing "kind"');
   const base = {
     id,
+    title: str(raw, 'title', false),
     prompt: str(raw, 'prompt', false),
     hand: oneOf(raw, 'hand', HANDS),
     display: oneOf(raw, 'display', ['keys', 'staff'] as const) ?? 'keys',
@@ -161,8 +162,7 @@ export function parseExercise(raw: Raw): Exercise {
     if (raw.right !== undefined || raw.left !== undefined) throw new FieldError('a tap exercise has "rhythm", not right/left notes');
     const rhythm = str(raw, 'rhythm')!;
     if (/(^|[\s|+])(?!x:|r:)[^\s|]+:/.test(` ${rhythm}`)) throw new FieldError('"rhythm" uses x for every note, like "x:q x:q x:h | r:q x:q x:h"');
-    raw = { ...raw, right: rhythm.replace(/(^|[\s|])x:/g, '$1C4:'), hand: raw.hand ?? 'right' };
-    base.hand = oneOf(raw, 'hand', HANDS);
+    raw = { ...raw, right: rhythm.replace(/(^|[\s|])x:/g, '$1C4:') };
   }
 
   const tempo = Number(raw.tempo);
@@ -185,7 +185,7 @@ export function parseExercise(raw: Raw): Exercise {
     if (bars >= 0 && lens.length !== bars) throw new FieldError(`right and left hands have different bar counts (${bars} vs ${lens.length})`);
     bars = lens.length;
   }
-  const hand = base.hand;
+  const hand = kind === 'tap' ? 'right' : base.hand; // a tap without a hand shows no hand badge
   if ((hand === 'right' && !right) || (hand === 'left' && !left)) throw new FieldError(`hand is ${hand} but there are no ${hand} notes`);
   if ((hand === 'alternating' || hand === 'together') && !(right && left)) throw new FieldError(`hand ${hand} needs both right and left notes`);
   // `fingers` for a one-hand exercise; `rightFingers` / `leftFingers` when both hands play.
@@ -207,7 +207,7 @@ export function parseExercise(raw: Raw): Exercise {
     }
   }
   return {
-    ...base, hand: hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, right, left, fingers,
+    ...base, hand: kind === 'tap' ? base.hand : hand ?? (right && left ? 'together' : right ? 'right' : 'left'), kind: 'timed', tempo, meter, countIn, right, left, fingers,
     pitchMatch: kind === 'tap' ? 'any' : pitchMatch, bars, ...(kind === 'tap' ? { tap: true } : {}),
   };
 }
@@ -227,6 +227,7 @@ const pitches = (o: Raw, key: string, fallback?: string): Pitch[] => {
   return xs.map(parsePitch);
 };
 const strings = (o: Raw, key: string) => list(o, key).map(String);
+const feedbackOf = (raw: Raw) => oneOf(raw, 'feedback', ['normal', 'none'] as const) ?? 'normal';
 
 function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
   if (!Array.isArray(raw.items) || !raw.items.length) throw new FieldError('"items" should be a non-empty list');
@@ -285,7 +286,7 @@ function parseEar(raw: Raw, base: Base, pitchMatch: Match): Exercise {
       throw new FieldError(`item ${i + 1}: ${(e as Error).message}`);
     }
   });
-  return { ...base, kind: 'ear', cadence: cadence === 'none' ? undefined : cadence, questions, items, pitchMatch };
+  return { ...base, kind: 'ear', cadence: cadence === 'none' ? undefined : cadence, questions, items, pitchMatch, feedback: feedbackOf(raw) };
 }
 
 function parseQuiz(raw: Raw, base: Base, pitchMatch: Match): Exercise {
@@ -316,7 +317,7 @@ function parseQuiz(raw: Raw, base: Base, pitchMatch: Match): Exercise {
       throw new FieldError(`question ${i + 1}: ${(e as Error).message}`);
     }
   });
-  return { ...base, kind: 'quiz', shuffle: raw.shuffle === true, questions, pitchMatch };
+  return { ...base, kind: 'quiz', shuffle: raw.shuffle === true, questions, pitchMatch, feedback: feedbackOf(raw) };
 }
 
 const octaveWords = (n: number) => (n === 1 ? 'one octave' : `${n} octaves`);
