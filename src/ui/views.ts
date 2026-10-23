@@ -291,6 +291,8 @@ export const settingsView: View = (root) => {
       h('h2', {}, 'Defaults'),
       h('div', { class: 'controls' }, toggle('metronome', 'Click while playing'), toggle('guide', 'Guide notes while playing')),
       h('div', { class: 'controls' }, h('label', {}, 'View ', viewPref())),
+      h('p', { class: 'small' }, 'The piano you hear in the app is the Salamander Grand Piano by Alexander Holm (',
+        h('a', { href: 'https://creativecommons.org/licenses/by/3.0/', target: '_blank', rel: 'noopener' }, 'CC BY 3.0'), ').'),
     ),
     appearance.el,
   );
