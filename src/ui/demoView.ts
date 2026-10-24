@@ -6,7 +6,7 @@ import { Pianist } from '../demo/pianist';
 import { parse } from 'yaml';
 import { loadContent, parseExercise } from '../content/load';
 import { h, type View } from './dom';
-import { branchPage, growingNow, growingTree, snapshot, songsCard, songsPage, stageList } from './treeView';
+import { branchPage, growingNow, growingTree, snapshot, songPage, songsCard, songsPage, stageList } from './treeView';
 import { mountExercise, resetDemoOptions } from './players';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
@@ -543,7 +543,19 @@ function scenes(): Scene[] {
     },
   });
   const songStep = content.exercises.get('song-wim-verse2');
-  if (songStep) out.push({ title: 'A song in steps', caption: 'A song can be a whole ladder of lessons. "Where Is My Mind" (Maxence Cyrin\'s piano version of the Pixies song) opens with the riff over bass notes, then the four chords (with an ear drill on the progression), the verse rhythm tapped before it is played, the "ooh" and the break, the rolling left hand, the chorus, and last the whole song in an easy, a medium and the full arrangement, with the pedal. Here, a step from the middle: the verse over the rolling left hand.', run: exerciseScene(songStep, { view: 'falling', switchAt: 9000 }) });
+  if (songStep) {
+    const play = exerciseScene(songStep, { view: 'falling', switchAt: 9000 });
+    out.push({
+      title: 'A song in steps',
+      caption: 'A bigger song is one entry in the songbook ("Step 1 of 7") and is learned in steps, one lesson each: "Where Is My Mind" (Maxence Cyrin\'s piano version of the Pixies song) goes from the riff over bass notes to the four chords (with an ear drill on the progression), the verse rhythm tapped before it is played, the "ooh" and the break, the rolling left hand, the chorus, and last the whole song in an easy, a medium and the full arrangement, with the pedal. Later steps say which milestone they are best after. Then a step from the middle: the verse over the rolling left hand.',
+      run: (box, next, p) => {
+        box.append(songPage('song-wim', sampleTreeProgress()));
+        let stop: (() => void) | void;
+        const t = window.setTimeout(() => { box.replaceChildren(); stop = play(box, next, p); }, 6000);
+        return () => { clearTimeout(t); stop?.(); };
+      },
+    });
+  }
   out.push({
     title: 'Profile',
     caption: 'The profile (top right) shows the level, which rises with XP, plus the streak and a calendar of practice days. Each skill strand of the tree shows how far along its lessons are, and each hand gets its timing: early or late on average, how steady it is, and whether it is getting better. Here it shows a made-up seven weeks.',

@@ -408,8 +408,8 @@ def lesson(id, title, steps, recap, skills=None):
     dump(path, d)
     return id
 
-def node(id, branch, stage, title, requires=(), type=None, lesson=None, about=None):
-    NODES.append(dict(id=id, branch=branch, stage=stage, title=title, requires=list(requires), type=type, lesson=lesson or id, about=about))
+def node(id, branch, stage, title, requires=(), type=None, lesson=None, about=None, song=None):
+    NODES.append(dict(id=id, branch=branch, stage=stage, title=title, requires=list(requires), type=type, lesson=lesson or id, about=about, song=song))
     return id
 
 # ---------------------------------------------------------------- theory screens and quizzes

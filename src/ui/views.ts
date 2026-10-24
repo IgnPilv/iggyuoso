@@ -1,5 +1,5 @@
 import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibration';
-import { content, contentErrors, exerciseTitle, nodeOfLesson, stages, treeNodes } from '../content';
+import { content, contentErrors, exerciseTitle, nodeOfLesson, songOf, stages, treeNodes } from '../content';
 import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
@@ -270,17 +270,31 @@ export const lessonView: View = (root, id?: string) => {
       body.append(h('p', { class: 'banner ok' }, 'Milestone passed: new songs are open in the songbook. ', h('a', { href: '#/songs' }, 'Open the songbook')));
     }
     nav.append(...r.nav);
-    if (node) nav.append(h('button', { class: 'secondary', onclick: () => go(node.branch === 'songs' ? '/songs' : `/branch/${node.branch}`) }, node.branch === 'songs' ? 'Songbook' : `${BRANCH_LABEL[node.branch]} branch`));
+    if (node) nav.append(h('button', { class: 'secondary', onclick: () => go(songHome(node.id) ?? `/branch/${node.branch}`) }, node.branch === 'songs' ? (stepped(node.id) ? 'All steps' : 'Songbook') : `${BRANCH_LABEL[node.branch]} branch`));
   };
 
   const adviceNote = advice.ready ? h('div') : adviceBanner(advice);
   const node = nodeOfLesson(lesson.id);
-  const where = node ? h('a', { class: 'lesson-branch small', href: node.branch === 'songs' ? '#/songs' : `#/branch/${node.branch}` },
-    h('span', { class: `strand-dot strand-${node.strand}` }), node.branch === 'songs' ? 'Song' : `${BRANCH_LABEL[node.branch]} · stage ${node.stage}`) : '';
+  const songStep = node && stepped(node.id);
+  const where = node ? h('a', { class: 'lesson-branch small', href: `#${songHome(node.id) ?? `/branch/${node.branch}`}` },
+    h('span', { class: `strand-dot strand-${node.strand}` }),
+    songStep ? `Song · step ${songStep.n} of ${songStep.of}` : node.branch === 'songs' ? 'Song' : `${BRANCH_LABEL[node.branch]} · stage ${node.stage}`) : '';
   root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('div', {}, where, h('h2', {}, lesson.title)), progress), bar.el, body, nav));
   show();
   return () => cleanup?.();
 };
+
+/** A song taught in steps: this node's place in it. */
+function stepped(nodeId: string): { n: number; of: number } | undefined {
+  const g = songOf(nodeId);
+  return g && g.steps.length > 1 ? { n: g.steps.findIndex((n) => n.id === nodeId) + 1, of: g.steps.length } : undefined;
+}
+
+/** Where a song lesson belongs: its song's steps page, or the songbook; undefined for other lessons. */
+function songHome(nodeId: string): string | undefined {
+  const g = songOf(nodeId);
+  return g ? (g.steps.length > 1 ? `/song/${g.song.id}` : '/songs') : undefined;
+}
 
 /** What is recommended before this lesson. Only advice: the lesson below plays and counts as usual. */
 function adviceBanner(advice: Extract<LessonAdvice, { ready: false }>) {
