@@ -14,7 +14,7 @@ nodes:
   - { id: c-scale-hands-apart, stage: 3, lesson: c-scale-hands-apart, title: "C major scale, hands apart", type: drill, requires: [thumb-under, major-scale-pattern] }
   - { id: c-scale-hands-together, stage: 3, lesson: c-scale-hands-together, title: "C major scale, hands together", type: drill, requires: [c-scale-hands-apart, rhythm-eighth-patterns] }
   - { id: g-and-f-scales, stage: 3, lesson: g-and-f-scales, title: "G and F major scales", type: drill, requires: [c-scale-hands-apart, key-of-g, f-position-key-of-f] }
-  - { id: minor-five-finger, stage: 3, lesson: minor-five-finger, title: "A minor and D minor positions", requires: [y1-checkpoint-b] }
+  - { id: minor-five-finger, stage: 3, lesson: minor-five-finger, title: "A minor and D minor positions", requires: [y1-checkpoint-b, ear-major-minor, tonic-triad] }
   - { id: two-octave-c, stage: 4, lesson: two-octave-c, title: "C major over two octaves", requires: [y1-exit, technique-scale-in-eighths] }
   - { id: two-octave-c-together, stage: 4, lesson: two-octave-c-together, title: "Two octaves, hands together", requires: [two-octave-c] }
   - { id: two-octave-g, stage: 4, lesson: two-octave-g, title: "G major over two octaves", requires: [two-octave-c-together] }
@@ -24,11 +24,11 @@ nodes:
   - { id: first-inversion, stage: 5, lesson: first-inversion, title: "First inversion", requires: [primary-triads] }
   - { id: second-inversion, stage: 5, lesson: second-inversion, title: "Second inversion", requires: [first-inversion] }
   - { id: close-position-chords, stage: 5, lesson: close-position-chords, title: "Chords that move smoothly", requires: [second-inversion] }
-  - { id: staccato, stage: 5, lesson: staccato, title: "Staccato", requires: [y2-checkpoint-a] }
+  - { id: staccato, stage: 5, lesson: staccato, title: "Staccato", requires: [y2-checkpoint-a, theory-tempo-words] }
   - { id: pedal-simple, stage: 6, lesson: pedal-simple, title: "The sustain pedal", requires: [y2-checkpoint-b, ear-how-many] }
   - { id: pedal-legato, stage: 6, lesson: pedal-legato, title: "Legato pedal", requires: [pedal-simple] }
-  - { id: chromatic-scale, stage: 6, lesson: chromatic-scale, title: "The chromatic scale", requires: [y2-checkpoint-b] }
-  - { id: scales-d-major-e-minor, stage: 6, lesson: scales-d-major-e-minor, title: "D major and E minor", requires: [y2-checkpoint-b] }
+  - { id: chromatic-scale, stage: 6, lesson: chromatic-scale, title: "The chromatic scale", requires: [y2-checkpoint-b, theory-enharmonics] }
+  - { id: scales-d-major-e-minor, stage: 6, lesson: scales-d-major-e-minor, title: "D major and E minor", requires: [y2-checkpoint-b, theory-keys-two-and-three, natural-minor] }
   - { id: scales-a-major-g-minor, stage: 6, lesson: scales-a-major-g-minor, title: "A major and G minor", requires: [scales-d-major-e-minor] }
   - { id: technique-mirror-hands, stage: 1, lesson: technique-mirror-hands, title: "Mirror hands", type: lesson, requires: [middle-c-position, rhythm-two-hands-together] }
   - { id: technique-c-position-two-hands, stage: 1, lesson: technique-c-position-two-hands, title: "C position with two hands", type: lesson, requires: [technique-mirror-hands] }
@@ -37,18 +37,18 @@ nodes:
   - { id: technique-repeated-notes, stage: 2, lesson: technique-repeated-notes, title: "Changing fingers on one key", type: lesson, requires: [hands-together-parallel] }
   - { id: technique-contrary-scale, stage: 3, lesson: technique-contrary-scale, title: "The C scale in the mirror", type: lesson, requires: [c-scale-hands-apart, technique-mirror-hands] }
   - { id: technique-scale-in-eighths, stage: 3, lesson: technique-scale-in-eighths, title: "Scales in eighths", type: lesson, requires: [c-scale-hands-together, rhythm-eighth-patterns] }
-  - { id: technique-positions-d-a-e, stage: 3, lesson: technique-positions-d-a-e, title: "Positions in D, A and E", type: lesson, requires: [technique-positions-c-g-f, major-scale-pattern] }
+  - { id: technique-positions-d-a-e, stage: 3, lesson: technique-positions-d-a-e, title: "Positions in D, A and E", type: lesson, requires: [technique-positions-c-g-f, major-scale-pattern, sharps-flats-naturals] }
   - { id: technique-broken-chords, stage: 3, lesson: technique-broken-chords, title: "Broken chords under a melody", type: lesson, requires: [technique-triads-c-f-g, lh-chords] }
   - { id: technique-minor-positions, stage: 4, lesson: technique-minor-positions, title: "Minor positions, both hands", type: lesson, requires: [minor-five-finger, natural-minor] }
-  - { id: technique-scales-d-a-one-octave, stage: 4, lesson: technique-scales-d-a-one-octave, title: "D and A major, hands together", type: lesson, requires: [two-octave-c-together, technique-positions-d-a-e] }
+  - { id: technique-scales-d-a-one-octave, stage: 4, lesson: technique-scales-d-a-one-octave, title: "D and A major, hands together", type: lesson, requires: [two-octave-c-together, technique-positions-d-a-e, major-scale-pattern, theory-keys-two-and-three] }
   - { id: technique-minor-scales-ht, stage: 4, lesson: technique-minor-scales-ht, title: "Minor scales, hands together", type: lesson, requires: [harmonic-minor, technique-scales-d-a-one-octave] }
-  - { id: technique-cadences-first-keys, stage: 5, lesson: technique-cadences-first-keys, title: "Chord progressions in seven keys", type: lesson, requires: [primary-triads, close-position-chords] }
+  - { id: technique-cadences-first-keys, stage: 5, lesson: technique-cadences-first-keys, title: "Chord progressions in seven keys", type: lesson, requires: [primary-triads, close-position-chords, cadence-in-f] }
   - { id: technique-arpeggios-one-octave, stage: 5, lesson: technique-arpeggios-one-octave, title: "Arpeggios, one octave", type: lesson, requires: [first-inversion, technique-broken-chords] }
-  - { id: technique-alberti, stage: 5, lesson: technique-alberti, title: "Alberti bass", type: lesson, requires: [accompaniment-patterns, technique-broken-chords] }
-  - { id: technique-cadences-sharp-keys, stage: 6, lesson: technique-cadences-sharp-keys, title: "Progressions in the sharp keys", type: lesson, requires: [technique-cadences-first-keys, scales-a-major-g-minor] }
+  - { id: technique-alberti, stage: 5, lesson: technique-alberti, title: "Alberti bass", type: lesson, requires: [accompaniment-patterns, technique-broken-chords, rhythm-eighth-patterns] }
+  - { id: technique-cadences-sharp-keys, stage: 6, lesson: technique-cadences-sharp-keys, title: "Progressions in the sharp keys", type: lesson, requires: [technique-cadences-first-keys, scales-a-major-g-minor, circle-of-fifths] }
   - { id: technique-scales-e-b, stage: 6, lesson: technique-scales-e-b, title: "E and B major, B minor", type: lesson, requires: [technique-scales-d-a-one-octave, scales-a-major-g-minor] }
   - { id: technique-positions-all-keys, stage: 6, lesson: technique-positions-all-keys, title: "Positions in every key", type: lesson, requires: [technique-positions-d-a-e, technique-minor-positions, circle-of-fifths] }
-  - { id: technique-scales-flat-keys, stage: 7, lesson: technique-scales-flat-keys, title: "Scales in the flat keys", type: lesson, requires: [technique-scales-e-b, y2-exit] }
+  - { id: technique-scales-flat-keys, stage: 7, lesson: technique-scales-flat-keys, title: "Scales in the flat keys", type: lesson, requires: [technique-scales-e-b, y2-exit, theory-keys-two-and-three, circle-of-fifths] }
   - { id: technique-cadences-flat-keys, stage: 7, lesson: technique-cadences-flat-keys, title: "Progressions in the flat keys", type: lesson, requires: [technique-cadences-sharp-keys, technique-scales-flat-keys] }
   - { id: technique-mirror-all-keys, stage: 7, lesson: technique-mirror-all-keys, title: "The mirror in every key", type: lesson, requires: [technique-positions-all-keys] }
   - { id: technique-two-octave-scales-ht, stage: 8, lesson: technique-two-octave-scales-ht, title: "Two octaves in eighths", type: lesson, requires: [technique-scales-flat-keys, two-octave-f] }
@@ -56,33 +56,33 @@ nodes:
   - { id: technique-dominant-sevenths, stage: 8, lesson: technique-dominant-sevenths, title: "Dominant 7ths in every key", type: lesson, requires: [dominant-seventh-theory, technique-cadences-flat-keys] }
   - { id: technique-scales-ab-db, stage: 8, lesson: technique-scales-ab-db, title: "A♭ and D♭ major, F♯ and C♯ minor", type: lesson, requires: [technique-scales-flat-keys] }
   - { id: technique-octaves, stage: 9, lesson: technique-octaves, title: "Octaves", type: lesson, requires: [technique-two-octave-scales-ht] }
-  - { id: technique-blues-shapes, stage: 9, lesson: technique-blues-shapes, title: "Blues shapes", type: lesson, requires: [technique-dominant-sevenths, rhythm-shuffle] }
+  - { id: technique-blues-shapes, stage: 9, lesson: technique-blues-shapes, title: "Blues shapes", type: lesson, requires: [technique-dominant-sevenths, rhythm-shuffle, theory-twelve-bar-blues] }
   - { id: technique-finger-independence, stage: 3, lesson: technique-finger-independence, title: "Quiet fingers", type: lesson, requires: [technique-positions-c-g-f, legato-and-non-legato] }
   - { id: technique-lh-inversions, stage: 6, lesson: technique-lh-inversions, title: "Left-hand chords that move smoothly", type: lesson, requires: [close-position-chords, technique-cadences-first-keys] }
-  - { id: ks-c, stage: 5, lesson: ks-c, title: "Key study: C major", type: drill, requires: [technique-cadences-first-keys] }
-  - { id: ks-g, stage: 5, lesson: ks-g, title: "Key study: G major", type: drill, requires: [technique-cadences-first-keys, ks-c] }
-  - { id: ks-f, stage: 5, lesson: ks-f, title: "Key study: F major", type: drill, requires: [technique-cadences-first-keys, ks-g] }
-  - { id: ks-a-minor, stage: 5, lesson: ks-a-minor, title: "Key study: A minor", type: drill, requires: [ear-minor-degrees, ks-f] }
-  - { id: ks-d-minor, stage: 5, lesson: ks-d-minor, title: "Key study: D minor", type: drill, requires: [technique-cadences-first-keys, ks-a-minor] }
-  - { id: ks-d, stage: 6, lesson: ks-d, title: "Key study: D major", type: drill, requires: [circle-of-fifths, ks-d-minor] }
-  - { id: ks-e-minor, stage: 6, lesson: ks-e-minor, title: "Key study: E minor", type: drill, requires: [technique-minor-scales-ht, ks-d] }
-  - { id: ks-a, stage: 6, lesson: ks-a, title: "Key study: A major", type: drill, requires: [technique-cadences-sharp-keys, ks-e-minor] }
-  - { id: ks-b-flat, stage: 6, lesson: ks-b-flat, title: "Key study: B♭ major", type: drill, requires: [circle-of-fifths, ks-a] }
-  - { id: ks-e, stage: 7, lesson: ks-e, title: "Key study: E major", type: drill, requires: [technique-scales-e-b, ks-b-flat] }
-  - { id: ks-b-minor, stage: 7, lesson: ks-b-minor, title: "Key study: B minor", type: drill, requires: [technique-scales-e-b, ks-e] }
-  - { id: ks-e-flat, stage: 7, lesson: ks-e-flat, title: "Key study: E♭ major", type: drill, requires: [technique-scales-flat-keys, ks-b-minor] }
-  - { id: ks-g-minor, stage: 7, lesson: ks-g-minor, title: "Key study: G minor", type: drill, requires: [technique-scales-flat-keys, ks-e-flat] }
-  - { id: ks-b, stage: 8, lesson: ks-b, title: "Key study: B major", type: drill, requires: [technique-scales-e-b, ks-g-minor] }
-  - { id: ks-f-sharp-minor, stage: 8, lesson: ks-f-sharp-minor, title: "Key study: F♯ minor", type: drill, requires: [technique-scales-ab-db, ks-b] }
-  - { id: ks-c-minor, stage: 8, lesson: ks-c-minor, title: "Key study: C minor", type: drill, requires: [technique-cadences-flat-keys, ks-f-sharp-minor] }
-  - { id: ks-a-flat, stage: 8, lesson: ks-a-flat, title: "Key study: A♭ major", type: drill, requires: [technique-scales-ab-db, ks-c-minor] }
-  - { id: ks-d-flat, stage: 9, lesson: ks-d-flat, title: "Key study: D♭ major", type: drill, requires: [technique-scales-ab-db, ks-a-flat] }
-  - { id: ks-f-sharp, stage: 9, lesson: ks-f-sharp, title: "Key study: F♯ major", type: drill, requires: [technique-positions-all-keys, ks-d-flat] }
-  - { id: ks-f-minor, stage: 9, lesson: ks-f-minor, title: "Key study: F minor", type: drill, requires: [technique-cadences-flat-keys, ks-f-sharp] }
-  - { id: ks-c-sharp-minor, stage: 9, lesson: ks-c-sharp-minor, title: "Key study: C♯ minor", type: drill, requires: [technique-scales-ab-db, ks-f-minor] }
-  - { id: ks-b-flat-minor, stage: 9, lesson: ks-b-flat-minor, title: "Key study: B♭ minor", type: drill, requires: [technique-positions-all-keys, ks-c-sharp-minor] }
-  - { id: ks-e-flat-minor, stage: 9, lesson: ks-e-flat-minor, title: "Key study: E♭ minor", type: drill, requires: [technique-positions-all-keys, ks-b-flat-minor] }
+  - { id: ks-c, stage: 5, lesson: ks-c, title: "Key study: C major", type: drill, requires: [technique-cadences-first-keys, keys-and-signatures] }
+  - { id: ks-g, stage: 5, lesson: ks-g, title: "Key study: G major", type: drill, requires: [technique-cadences-first-keys, ks-c, keys-and-signatures] }
+  - { id: ks-f, stage: 5, lesson: ks-f, title: "Key study: F major", type: drill, requires: [technique-cadences-first-keys, ks-g, keys-and-signatures] }
+  - { id: ks-a-minor, stage: 5, lesson: ks-a-minor, title: "Key study: A minor", type: drill, requires: [ear-minor-degrees, ks-f, relative-minor] }
+  - { id: ks-d-minor, stage: 5, lesson: ks-d-minor, title: "Key study: D minor", type: drill, requires: [technique-cadences-first-keys, ks-a-minor, relative-minor] }
+  - { id: ks-d, stage: 6, lesson: ks-d, title: "Key study: D major", type: drill, requires: [circle-of-fifths, ks-d-minor, theory-keys-two-and-three] }
+  - { id: ks-e-minor, stage: 6, lesson: ks-e-minor, title: "Key study: E minor", type: drill, requires: [technique-minor-scales-ht, ks-d, theory-minor-key-signatures] }
+  - { id: ks-a, stage: 6, lesson: ks-a, title: "Key study: A major", type: drill, requires: [technique-cadences-sharp-keys, ks-e-minor, theory-keys-two-and-three] }
+  - { id: ks-b-flat, stage: 6, lesson: ks-b-flat, title: "Key study: B♭ major", type: drill, requires: [circle-of-fifths, ks-a, theory-keys-two-and-three] }
+  - { id: ks-e, stage: 7, lesson: ks-e, title: "Key study: E major", type: drill, requires: [technique-scales-e-b, ks-b-flat, theory-keys-two-and-three] }
+  - { id: ks-b-minor, stage: 7, lesson: ks-b-minor, title: "Key study: B minor", type: drill, requires: [technique-scales-e-b, ks-e, theory-minor-key-signatures] }
+  - { id: ks-e-flat, stage: 7, lesson: ks-e-flat, title: "Key study: E♭ major", type: drill, requires: [technique-scales-flat-keys, ks-b-minor, theory-keys-two-and-three] }
+  - { id: ks-g-minor, stage: 7, lesson: ks-g-minor, title: "Key study: G minor", type: drill, requires: [technique-scales-flat-keys, ks-e-flat, theory-minor-key-signatures] }
+  - { id: ks-b, stage: 8, lesson: ks-b, title: "Key study: B major", type: drill, requires: [technique-scales-e-b, ks-g-minor, theory-all-key-signatures] }
+  - { id: ks-f-sharp-minor, stage: 8, lesson: ks-f-sharp-minor, title: "Key study: F♯ minor", type: drill, requires: [technique-scales-ab-db, ks-b, theory-all-key-signatures] }
+  - { id: ks-c-minor, stage: 8, lesson: ks-c-minor, title: "Key study: C minor", type: drill, requires: [technique-cadences-flat-keys, ks-f-sharp-minor, theory-all-key-signatures] }
+  - { id: ks-a-flat, stage: 8, lesson: ks-a-flat, title: "Key study: A♭ major", type: drill, requires: [technique-scales-ab-db, ks-c-minor, theory-all-key-signatures] }
+  - { id: ks-d-flat, stage: 9, lesson: ks-d-flat, title: "Key study: D♭ major", type: drill, requires: [technique-scales-ab-db, ks-a-flat, theory-all-key-signatures] }
+  - { id: ks-f-sharp, stage: 9, lesson: ks-f-sharp, title: "Key study: F♯ major", type: drill, requires: [technique-positions-all-keys, ks-d-flat, theory-all-key-signatures] }
+  - { id: ks-f-minor, stage: 9, lesson: ks-f-minor, title: "Key study: F minor", type: drill, requires: [technique-cadences-flat-keys, ks-f-sharp, theory-all-key-signatures] }
+  - { id: ks-c-sharp-minor, stage: 9, lesson: ks-c-sharp-minor, title: "Key study: C♯ minor", type: drill, requires: [technique-scales-ab-db, ks-f-minor, theory-all-key-signatures] }
+  - { id: ks-b-flat-minor, stage: 9, lesson: ks-b-flat-minor, title: "Key study: B♭ minor", type: drill, requires: [technique-positions-all-keys, ks-c-sharp-minor, theory-all-key-signatures] }
+  - { id: ks-e-flat-minor, stage: 9, lesson: ks-e-flat-minor, title: "Key study: E♭ minor", type: drill, requires: [technique-positions-all-keys, ks-b-flat-minor, theory-all-key-signatures] }
   - { id: touch-forte-piano, stage: 2, lesson: touch-forte-piano, title: "Loud and soft at the keys", type: lesson, requires: [dynamics, technique-c-position-two-hands] }
-  - { id: touch-crescendo, stage: 3, lesson: touch-crescendo, title: "Growing and fading: crescendo and diminuendo", type: lesson, requires: [touch-forte-piano, c-scale-hands-together] }
+  - { id: touch-crescendo, stage: 3, lesson: touch-crescendo, title: "Growing and fading: crescendo and diminuendo", type: lesson, requires: [touch-forte-piano, c-scale-hands-together, theory-tempo-words] }
   - { id: touch-terraced, stage: 4, lesson: touch-terraced, title: "Echoes: terraced dynamics", type: lesson, requires: [touch-crescendo] }
   - { id: touch-shaping, stage: 5, lesson: touch-shaping, title: "Shaping a phrase", type: lesson, requires: [touch-terraced, theory-phrases-and-form] }

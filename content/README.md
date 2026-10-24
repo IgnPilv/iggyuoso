@@ -262,6 +262,11 @@ nodes:
   nodes of its own stage or earlier, and a milestone only from an earlier stage. No loops.
 - Each stage has exactly one milestone. A milestone requires a few nodes from every branch of its
   stage and the previous milestone; songs require the milestone they open after.
+- Cross-branch prerequisites follow what a lesson really uses: an ear drill needs the theory that
+  explains what it hears (chord ear training after chord theory), playing needs the rhythm and
+  reading it relies on, composing needs the harmony it writes with. They live in
+  `tools/content/links.py` (`NEEDS`), applied last; add a line there for every new lesson that uses
+  another branch.
 - `lesson`: the lesson that teaches the node. Every lesson in `content/lessons/` is placed in the
   tree exactly once.
 - Nothing is ever closed: a node whose requirements are not grown yet still opens, with advice.

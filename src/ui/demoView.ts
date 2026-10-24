@@ -511,7 +511,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Your tree',
-    caption: 'The home page is a tree that grows. Each branch (technique, reading, rhythm, theory, ear, pieces, creativity) gets a leaf for every lesson practised; a bud at its tip means something new is open there. Milestones ring the trunk and open songs. "Growing now" lists what is open, so you choose; below, the whole tree stage by stage. This is a made-up player two stages in.',
+    caption: 'The home page is a tree that grows. Each branch (technique, reading, rhythm, theory, ear, pieces, creativity) gets a leaf for every lesson practised; a bud at its tip means something new is open there. Milestones ring the trunk and open songs. "Growing now" lists what is open, so you choose; below, each stage is a woven map: a column per branch and a thread for every prerequisite, so you can see that ear chords wait for chord theory and pieces wait for their rhythms. Point at a lesson to light its threads. This is a made-up player two stages in.',
     run: (box, next) => {
       const p = sampleTreeProgress();
       const snap = snapshot(p);

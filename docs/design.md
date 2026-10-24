@@ -61,8 +61,12 @@ Fonts are bundled from npm (`@fontsource-variable/*`), so nothing loads from a f
   nodes (pale leaf = Practised, full leaf = Solid or Mastered), a glowing bud marks something open, and
   songs blossom in the crown. Branch colours: the strand tokens (`strand-stroke-*`, `strand-fill-*`).
   Below it: "Growing now" (open nodes as tiles, at most two per branch), the Songs card, and "The whole
-  tree": stages up the trunk, the current one open, each branch as a row of its next four nodes with
-  the rest behind a "n more →" link to the branch page. Badges appear only for things worth acting on
+  tree": stages up the trunk, the current one open as a **weave** (`stageWeave`): a column per branch,
+  each node one row below the deepest node it needs in that stage, and an SVG thread for every
+  requirement (cross-branch threads stronger, in the colour of the branch they come from; links into
+  the milestone dashed and faint). Pointing at a node lights it, its threads and its neighbours. On a
+  phone the weave scrolls sideways inside the card. Branch pages list each node's threads from other
+  branches under its title. Badges appear only for things worth acting on
   or celebrating (Review, Solid, Mastered, reps in progress); "not grown yet" is a quieter dashed tile,
   never a warning.
 - **Theory screen** (`src/ui/theory.ts` builds it, design styles it): large text (about 1.2–1.35 rem)

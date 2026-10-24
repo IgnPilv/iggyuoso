@@ -15,7 +15,7 @@ nodes:
   - { id: sixteenth-notes, stage: 4, lesson: sixteenth-notes, title: "Sixteenth notes", requires: [ties] }
   - { id: triplets, stage: 5, lesson: triplets, title: "Triplets", requires: [y2-checkpoint-a] }
   - { id: syncopation, stage: 6, lesson: syncopation, title: "Syncopation", requires: [y2-checkpoint-b] }
-  - { id: three-eight-time, stage: 6, lesson: three-eight-time, title: "3/8 time", requires: [syncopation] }
+  - { id: three-eight-time, stage: 6, lesson: three-eight-time, title: "3/8 time", requires: [syncopation, theory-time-signatures] }
   - { id: rhythm-tap-the-beat, stage: 1, lesson: rhythm-tap-the-beat, title: "Tap the beat", type: lesson }
   - { id: rhythm-long-and-short, stage: 1, lesson: rhythm-long-and-short, title: "Long and short", type: lesson, requires: [rhythm-tap-the-beat] }
   - { id: rhythm-two-hands-taking-turns, stage: 1, lesson: rhythm-two-hands-taking-turns, title: "Two hands taking turns", type: lesson, requires: [rhythm-long-and-short, rests-and-taking-turns] }
@@ -33,20 +33,20 @@ nodes:
   - { id: rhythm-tied-notes, stage: 4, lesson: rhythm-tied-notes, title: "Holding across the bar line", type: lesson, requires: [ties, rhythm-dotted-patterns] }
   - { id: rhythm-sixteenth-patterns, stage: 4, lesson: rhythm-sixteenth-patterns, title: "Sixteenth patterns", type: lesson, requires: [sixteenth-notes, rhythm-eighth-patterns] }
   - { id: rhythm-sixteenths-two-hands, stage: 4, lesson: rhythm-sixteenths-two-hands, title: "Sixteenths over a bass", type: lesson, requires: [rhythm-sixteenth-patterns, rhythm-eighths-two-hands] }
-  - { id: rhythm-cut-time, stage: 4, lesson: rhythm-cut-time, title: "Cut time", type: lesson, requires: [rhythm-two-four, y1-exit] }
+  - { id: rhythm-cut-time, stage: 4, lesson: rhythm-cut-time, title: "Cut time", type: lesson, requires: [rhythm-two-four, y1-exit, theory-time-signatures] }
   - { id: rhythm-triplet-patterns, stage: 5, lesson: rhythm-triplet-patterns, title: "Triplet patterns", type: lesson, requires: [triplets, rhythm-sixteenth-patterns] }
   - { id: rhythm-dotted-eighths, stage: 5, lesson: rhythm-dotted-eighths, title: "Dotted eighths", type: lesson, requires: [rhythm-sixteenth-patterns, y2-checkpoint-a] }
   - { id: rhythm-offbeat-eighths, stage: 5, lesson: rhythm-offbeat-eighths, title: "Off the beat", type: lesson, requires: [rhythm-eighths-two-hands, y2-checkpoint-a] }
   - { id: rhythm-syncopation-hands, stage: 6, lesson: rhythm-syncopation-hands, title: "Syncopation with two hands", type: lesson, requires: [syncopation, rhythm-offbeat-eighths] }
   - { id: rhythm-six-eight, stage: 6, lesson: rhythm-six-eight, title: "6/8: two big beats", type: lesson, requires: [three-eight-time, rhythm-triplet-patterns] }
   - { id: rhythm-six-eight-hands, stage: 6, lesson: rhythm-six-eight-hands, title: "6/8 with two hands", type: lesson, requires: [rhythm-six-eight] }
-  - { id: rhythm-compound-meters, stage: 7, lesson: rhythm-compound-meters, title: "9/8 and 12/8", type: lesson, requires: [rhythm-six-eight-hands, y2-exit] }
+  - { id: rhythm-compound-meters, stage: 7, lesson: rhythm-compound-meters, title: "9/8 and 12/8", type: lesson, requires: [rhythm-six-eight-hands, y2-exit, theory-compound-time] }
   - { id: rhythm-triplets-vs-eighths, stage: 7, lesson: rhythm-triplets-vs-eighths, title: "Switching between twos and threes", type: lesson, requires: [rhythm-triplet-patterns, rhythm-dotted-eighths] }
   - { id: rhythm-sixteenth-rests, stage: 7, lesson: rhythm-sixteenth-rests, title: "Sixteenths with gaps", type: lesson, requires: [rhythm-sixteenths-two-hands, rhythm-dotted-eighths] }
   - { id: rhythm-three-against-two, stage: 8, lesson: rhythm-three-against-two, title: "Three against two", type: lesson, requires: [rhythm-triplets-vs-eighths, rhythm-sixteenths-two-hands] }
   - { id: rhythm-sixteenth-syncopation, stage: 8, lesson: rhythm-sixteenth-syncopation, title: "Syncopated sixteenths", type: lesson, requires: [rhythm-sixteenth-rests, rhythm-syncopation-hands] }
   - { id: rhythm-shuffle, stage: 9, lesson: rhythm-shuffle, title: "Swing and shuffle", type: lesson, requires: [rhythm-three-against-two, rhythm-compound-meters] }
-  - { id: rhythm-hemiola, stage: 9, lesson: rhythm-hemiola, title: "Hemiola: threes against twos in the bar", type: lesson, requires: [rhythm-shuffle, rhythm-six-eight-hands] }
+  - { id: rhythm-hemiola, stage: 9, lesson: rhythm-hemiola, title: "Hemiola: threes against twos in the bar", type: lesson, requires: [rhythm-shuffle, rhythm-six-eight-hands, theory-compound-time] }
   - { id: rhythm-groove, stage: 9, lesson: rhythm-groove, title: "Groove for two hands", type: lesson, requires: [rhythm-sixteenth-syncopation, rhythm-shuffle] }
   - { id: rhythm-workout-1, stage: 1, lesson: rhythm-workout-1, title: "Rhythm workout: first values", type: lesson, requires: [rhythm-two-hands-together] }
   - { id: rhythm-workout-2, stage: 2, lesson: rhythm-workout-2, title: "Rhythm workout: rests and 3/4", type: lesson, requires: [rhythm-inner-pulse, rhythm-waltz-patterns] }
@@ -57,4 +57,4 @@ nodes:
   - { id: rhythm-workout-7, stage: 7, lesson: rhythm-workout-7, title: "Rhythm workout: 9/8 and 12/8", type: lesson, requires: [rhythm-compound-meters] }
   - { id: rhythm-workout-8, stage: 8, lesson: rhythm-workout-8, title: "Rhythm workout: everything in 4/4", type: lesson, requires: [rhythm-sixteenth-syncopation] }
   - { id: rhythm-workout-9, stage: 9, lesson: rhythm-workout-9, title: "Rhythm workout: cut time and 3/4", type: lesson, requires: [rhythm-groove] }
-  - { id: rhythm-odd-meters, stage: 9, lesson: rhythm-odd-meters, title: "Five and seven", type: lesson, requires: [rhythm-hemiola, rhythm-workout-8] }
+  - { id: rhythm-odd-meters, stage: 9, lesson: rhythm-odd-meters, title: "Five and seven", type: lesson, requires: [rhythm-hemiola, rhythm-workout-8, theory-time-signatures] }
