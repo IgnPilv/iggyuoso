@@ -367,6 +367,9 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .lesson-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; }
 .lesson-head h2 { font-size: var(--text-2xl); }
 .lesson-head .small { font-family: var(--font-mono); font-size: var(--text-xs); }
+.lesson-top { display: flex; align-items: center; gap: var(--space-3); margin-left: auto; }
+.lesson-top .top-next { max-width: 22ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lesson-top .top-next.go { background: var(--brand-gradient); color: var(--on-accent); border-color: transparent; }
 .step-bar { display: flex; gap: 4px; margin: var(--space-1) 0 var(--space-4); }
 /* Each step is a button with a tall hit area around a thin bar. */
 .step-bar .step-seg { flex: 1; min-width: 0; padding: 8px 0; margin: 0; border: 0; border-radius: 0; background: none; box-shadow: none; cursor: pointer; transition: none; }

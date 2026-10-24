@@ -24,7 +24,7 @@ export interface RecapInput {
 
 const plural = (n: number, one: string, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 
-export function lessonRecap(r: RecapInput): { body: HTMLElement[]; nav: HTMLElement[] } {
+export function lessonRecap(r: RecapInput): { body: HTMLElement[]; nav: HTMLElement[]; forward: HTMLButtonElement } {
   const recap = h('div', { class: 'explain recap' });
   recap.innerHTML = markdown(`**Recap.** ${r.lesson.recap}`);
   const reps = r.goals.map((e) => ({ e, p: r.store.reps(e) }));
@@ -69,5 +69,5 @@ export function lessonRecap(r: RecapInput): { body: HTMLElement[]; nav: HTMLElem
     nav.push(next);
     if (again) { again.classList.add('secondary'); nav.push(again); }
   }
-  return { body: [recap, status, list], nav };
+  return { body: [recap, status, list], nav, forward: next as HTMLButtonElement };
 }

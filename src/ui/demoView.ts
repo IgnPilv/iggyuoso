@@ -474,6 +474,22 @@ function scenes(): Scene[] {
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });
+  out.push({
+    title: 'Pause and keys',
+    caption: 'Space plays, pauses and resumes a timed exercise: the music holds where it is, and going on gives a bar to count back in (a take with a pause is practice and is not saved). In a lesson, the way forward also sits at the top next to the step bar, and Enter presses the main button: Next, Practise again or Next lesson.',
+    run: (box, next) => {
+      const timers: number[] = [];
+      const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+      const space = () => window.dispatchEvent(new KeyboardEvent('keydown', { code: 'Space', key: ' ', bubbles: true }));
+      const cleanup = mountExercise(box, { ...parseExercise(parse(SAMPLES.reps)), id: `demo-pause-${Date.now()}`, title: 'Five-finger walk' }, DEMO_CALIBRATION, () => {});
+      setView(box, 'falling');
+      later(900, () => press(box, 'Listen'));
+      later(5200, space);
+      later(8200, space);
+      later(17000, next);
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
   out.push({ title: 'Fresh drills', caption: 'Generated drills make new questions every run from a pool of notes, keys and intervals, so they can be played again and again without learning the answers by heart. The goal counts speed too: here 90% right, answering in 2.5 s or less (middle answer time), makes a clean take.', run: exerciseScene(parseExercise(parse(SAMPLES.readNotes)), { view: 'classic' }) });
   out.push({
     title: 'Sight-reading',

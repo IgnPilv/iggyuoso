@@ -529,3 +529,14 @@ never copied pages). Start small, adapt as we go.
   the current step keeps its mark as a line under it. Each has a tooltip and label ("Step 4: C, E
   or G? (clean take, not finished)"). The marks update right after a take. Demo scene "Clean takes
   and the path" shows the marked bar.
+- 2026-10-24: Keys and the way forward (Ignas: "spacebar pauses and resumes, next lesson should also
+  be visible at the top and enter key should do it"). Space plays a timed exercise, and while it
+  runs pauses and resumes it (also a Pause / Resume button): `TimedSession.pause` holds the clock
+  (position, live score, presses and pedal ignored), `resume` moves the whole schedule on so the
+  music picks up at the beat it stopped, after a bar of count-back clicks (or the rest of the
+  count-in when paused before the downbeat). A take with a pause is practice: shown, never saved.
+  Space is left to the computer keyboard's pedal only in exercises with a pedal line, and is
+  ignored in form fields and for real keys during the demo. In a lesson the forward button is
+  mirrored at the top next to the step bar (Next / Skip on a step, Next lesson on the recap), and
+  Enter presses the main (non-secondary) button, unless a control was reached with the keyboard
+  (a clicked or tapped button doesn't keep Enter). Demo scene "Pause and keys".

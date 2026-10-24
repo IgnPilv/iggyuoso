@@ -25,7 +25,7 @@ export function noteFor(code: string, middleC: number, shift: number): number | 
 }
 
 /** Keys typed into a form field are text, not notes. */
-function typing(t: EventTarget | null) {
+export function typing(t: EventTarget | null) {
   const el = t as HTMLElement | null;
   if (!el || !el.tagName) return false;
   if (el.isContentEditable) return true;

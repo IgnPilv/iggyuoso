@@ -81,9 +81,14 @@ export class TimedSession {
   readonly quarterTempo: number;
   readonly countBeats: number;
   readonly totalBeats: number;
-  /** First downbeat after the count-in, as scheduled. */
-  readonly t0: number;
-  readonly end: number;
+  /** First downbeat after the count-in, as scheduled (moved on by a pause). */
+  t0: number;
+  end: number;
+  /** When the first count-in click sounds (moved on by a pause). */
+  startAt: number;
+  /** Whether the run was paused at any point (such a take is practice, not a record). */
+  wasPaused = false;
+  private pausedAt?: number;
   readonly windowMs: number;
   readonly played: PlayedNote[] = [];
   readonly pedalLine: PedalSpan[];
@@ -105,6 +110,7 @@ export class TimedSession {
     this.beatMs = beatMs(this.quarterTempo);
     this.countBeats = countInBeats(ex, opts.countIn);
     this.totalBeats = totalBeats(ex);
+    this.startAt = opts.startAt;
     this.t0 = opts.startAt + this.countBeats * this.beatMs;
     this.windowMs = hitWindowMs(this.quarterTempo);
     this.end = this.t0 + this.totalBeats * this.beatMs + this.windowMs + opts.latencyMs + 200;
@@ -121,7 +127,7 @@ export class TimedSession {
     const accent = (b: number) => Math.abs(b / q - Math.round(b / q)) < 1e-6;
     const click = this.ex.click ?? 'on';
     if (click !== 'off' && this.opts.countIn !== 'none') {
-      for (let b = 0; b < this.countBeats - 1e-6; b += pulse) out.push({ time: this.opts.startAt + b * this.beatMs, accent: accent(b - this.countBeats) });
+      for (let b = 0; b < this.countBeats - 1e-6; b += pulse) out.push({ time: this.startAt + b * this.beatMs, accent: accent(b - this.countBeats) });
     }
     if (metronome && click === 'on') for (let b = 0; b < this.totalBeats - 1e-6; b += pulse) out.push({ time: this.t0 + b * this.beatMs, accent: accent(b) });
     return out;
@@ -133,12 +139,38 @@ export class TimedSession {
     }));
   }
 
-  /** Where the player is in the music at a moment on the performance clock. */
+  get paused() { return this.pausedAt !== undefined; }
+
+  /** Stop the clock: the music holds where it is and key presses are ignored until `resume`. */
+  pause(now: number) {
+    if (this.pausedAt !== undefined || now >= this.end) return;
+    this.pausedAt = now;
+    this.wasPaused = true;
+  }
+
+  /**
+   * Start the clock again `leadBeats` beats from now (time to count back in), from the beat where
+   * it stopped. Returns the performance time the music picks up again (before latency), or
+   * undefined when it was not paused.
+   */
+  resume(now: number, leadBeats: number): number | undefined {
+    if (this.pausedAt === undefined) return undefined;
+    const shift = now - this.pausedAt + leadBeats * this.beatMs;
+    const at = this.pausedAt + shift;
+    this.t0 += shift;
+    this.end += shift;
+    this.startAt += shift;
+    this.pausedAt = undefined;
+    return at;
+  }
+
+  /** Where the player is in the music at a moment on the performance clock (held while paused). */
   position(now: number): Position {
+    if (this.pausedAt !== undefined) now = Math.min(now, this.pausedAt);
     const heard = now - this.opts.latencyMs;
     const beat = (heard - this.t0) / this.beatMs;
     if (now >= this.end) return { phase: 'done', beat };
-    if (heard < this.opts.startAt) return { phase: 'waiting', beat };
+    if (heard < this.startAt) return { phase: 'waiting', beat };
     if (beat < 0) {
       if (this.opts.countIn === 'none') return { phase: 'count-in', beat };
       const { quarters, pulse } = this.ex.meter;
@@ -155,7 +187,7 @@ export class TimedSession {
   }
 
   noteOn(device: number, time: number, velocity?: number): PressJudgement | undefined {
-    if (this.opts.mode !== 'play') return undefined;
+    if (this.opts.mode !== 'play' || this.paused) return undefined;
     const n: PlayedNote = { midi: toWritten(this.cal, device), on: this.songTime(time), ...(velocity !== undefined ? { velocity } : {}) };
     this.played.push(n);
     this.open.set(n.midi, n);
@@ -185,6 +217,7 @@ export class TimedSession {
   }
 
   pedalChange(down: boolean, time: number) {
+    if (this.paused) return;
     if (this.opts.mode !== 'play') return;
     this.pedal.push({ down, at: this.songTime(time) });
   }
@@ -214,6 +247,7 @@ export class TimedSession {
 
   /** Score so far: only notes whose time has fully passed count. */
   liveScore(now: number): LiveScore {
+    if (this.pausedAt !== undefined) now = Math.min(now, this.pausedAt);
     const songMs = this.songTime(now);
     const done = this.expected.filter((e) => e.beat * this.beatMs + this.windowMs < songMs);
     const doneSet = new Set(done);
