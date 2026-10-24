@@ -11,6 +11,8 @@ export interface Backend {
   set(key: string, value: string): void;
   /** Every key saved, for sync. */
   keys?(): string[];
+  /** Forget a key (wiping progress). */
+  remove?(key: string): void;
 }
 
 export const localBackend: Backend = {
@@ -19,11 +21,12 @@ export const localBackend: Backend = {
   keys: () => {
     try { return Array.from({ length: localStorage.length }, (_, i) => localStorage.key(i)!).filter(Boolean); } catch { return []; }
   },
+  remove: (k) => { try { localStorage.removeItem(k); } catch { /* blocked */ } },
 };
 
 export function memoryBackend(): Backend {
   const m = new Map<string, string>();
-  return { get: (k) => m.get(k) ?? null, set: (k, v) => void m.set(k, v), keys: () => [...m.keys()] };
+  return { get: (k) => m.get(k) ?? null, set: (k, v) => void m.set(k, v), keys: () => [...m.keys()], remove: (k) => void m.delete(k) };
 }
 
 export interface Attempt {

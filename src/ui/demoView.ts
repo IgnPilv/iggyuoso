@@ -584,7 +584,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Guest or account',
-    caption: 'Without an account you play as a guest: progress is saved on this device only, and the profile says so. Sign in with an emailed link (no password) and the guest progress goes into the account, which carries it to every device. Here the pianist signs in and the practice from their other device arrives. (Accounts switch on once the account server is set up; the demo uses a pretend one.)',
+    caption: 'Without an account you play as a guest: progress is saved on this device only, and the profile says so. Sign in with an emailed link (no password) and the guest progress goes into the account, which carries it to every device. Here the pianist signs in and the practice from their other device arrives, then tries "Wipe progress", which asks first and then clears the takes, XP and path here and in the account (sketches, songs and settings stay). The demo uses a pretend server.',
     run: (box, next) => {
       const timers: number[] = [];
       const email = 'pianist@example.com';
@@ -606,7 +606,9 @@ function scenes(): Scene[] {
         timers.push(window.setTimeout(() => box.querySelector<HTMLFormElement>('.account-form')?.requestSubmit(), email.length * 60 + 500));
       }, 4500));
       timers.push(window.setTimeout(() => void account.completeSignIn(`#memory-sign-in=${email}`), 10500));
-      timers.push(window.setTimeout(next, 19000));
+      timers.push(window.setTimeout(() => press(box, 'Wipe progress'), 16000));
+      timers.push(window.setTimeout(() => press(box, 'Wipe everything'), 20000));
+      timers.push(window.setTimeout(next, 25000));
       return () => { timers.forEach(clearTimeout); off(); };
     },
   });

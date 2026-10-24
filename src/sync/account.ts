@@ -1,5 +1,5 @@
 import { mergeRecord } from './merge';
-import { PREFIX, type TrackedBackend } from './tracker';
+import { KEEP_ON_WIPE, PREFIX, WIPED_KEY, type TrackedBackend } from './tracker';
 import { SignedOutError, type AccountSession, type OutRow, type SyncProvider } from './types';
 
 // Who is playing on this device: a guest (progress saved on this device only) or a signed-in
@@ -126,6 +126,32 @@ export class Account {
     if (s) await this.provider?.signOut(s);
   }
 
+  /**
+   * Wipe progress: every take, star, XP, streak, practice day and path record, on this device
+   * and, when signed in, in the account (so every device wipes on its next sync). Sketches, the
+   * player's songs, calibration and settings stay. Nothing is deleted if the account can't be
+   * reached. True when wiped.
+   */
+  async wipe(): Promise<boolean> {
+    const at = new Date().toISOString();
+    this.error = '';
+    if (this.session && this.provider) {
+      try {
+        const s = await this.fresh();
+        await this.provider.wipe(s, KEEP_ON_WIPE);
+        await this.provider.push(s, [{ key: WIPED_KEY.slice(PREFIX.length), value: at, schema: this.opts.schema }]);
+      } catch (e) {
+        this.error = `Nothing was wiped: the account could not be reached (${message(e)}). Try again when online.`;
+        this.emit();
+        return false;
+      }
+    }
+    this.data.wipeLocal();
+    this.data.raw.set(WIPED_KEY, JSON.stringify(at));
+    this.emit(true);
+    return true;
+  }
+
   /** Sync soon (after a change), grouping changes close together. */
   schedule(delay = PUSH_DELAY_MS) {
     if (!this.session || !this.provider) return;
@@ -169,6 +195,16 @@ export class Account {
       const st = this.state;
       const since = st.cursor ? new Date(Date.parse(st.cursor) - OVERLAP_MS).toISOString() : undefined;
       const rows = await this.provider.pull(s, since);
+      // Progress wiped on another device since this one last synced: wipe here too before taking
+      // anything in. A device signing in for the first time keeps its guest progress.
+      const wiped = rows.find((r) => PREFIX + r.key === WIPED_KEY);
+      if (wiped && JSON.stringify(wiped.value) !== (this.data.get(WIPED_KEY) ?? 'null')) {
+        if (st.cursor && wiped.updatedAt > st.cursor) {
+          this.data.wipeLocal();
+          changed = true;
+        }
+        this.data.raw.set(WIPED_KEY, JSON.stringify(wiped.value));
+      }
       const local = this.data.changes();
       let cursor = st.cursor;
       let oldest = this.opts.schema;

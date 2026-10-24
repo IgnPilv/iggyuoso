@@ -41,6 +41,8 @@ export interface SyncProvider {
   pull(s: AccountSession, since?: string): Promise<RemoteRow[]>;
   /** Save rows (insert or replace by key). */
   push(s: AccountSession, rows: OutRow[]): Promise<void>;
+  /** Delete every row of the account except keys starting with one of `keep`. */
+  wipe(s: AccountSession, keep: string[]): Promise<void>;
   /** End the session on the server (best effort). */
   signOut(s: AccountSession): Promise<void>;
 }

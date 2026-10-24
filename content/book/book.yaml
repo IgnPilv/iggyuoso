@@ -16,3 +16,15 @@ parts:
   - title: Meter, sharps and flats, first chords
     summary: Bars and time signatures, counting, loud and soft, semitones, intervals, triads, chord names and numbers, and the first keys with sharps and flats.
     chapters: [time-signatures, counting, dynamics, semitones, intervals, triads, chord-symbols, key-of-g-and-f, why-keys]
+  - title: Scales, rhythm and expression
+    summary: Eighth notes and dotted rhythms, the major scale and its degrees, enharmonic spelling, tempo and touch words, and the road map of repeats.
+    chapters: [eighth-notes, dotted-rhythms, major-scale, enharmonics, tempo-and-expression, road-map]
+  - title: Minor keys and new signatures
+    summary: Major and minor intervals and chords, the three minor scales, keys with two and three sharps or flats, the names of the degrees, ties, sixteenths and cut time.
+    chapters: [major-and-minor-intervals, minor-keys, harmonic-and-melodic-minor, more-keys, degree-names, minor-chords, ties-and-sixteenths]
+  - title: Chords and harmony
+    summary: The chords of a key and their jobs, inversions, every interval by quality, tension and release, the perfect cadence, phrases and form, spelling scales, the progressions everyone uses, triplets, and harmonising a tune.
+    chapters: [chords-in-a-key, inversions, interval-quality, tension-and-release, the-perfect-cadence, phrases-and-form, spelling-scales, progressions, triplets, harmonising]
+  - title: The circle of keys, compound time and the pedal
+    summary: The circle of fifths, simple and compound time, minor key signatures, transposing, spelling intervals, texture, the sustain pedal, syncopation and the chromatic scale.
+    chapters: [circle-of-fifths, compound-time, minor-key-signatures, transposition, spelling-intervals, texture, the-pedal, syncopation, chromatic-scale]
