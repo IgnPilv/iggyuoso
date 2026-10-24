@@ -555,3 +555,11 @@ never copied pages). Start small, adapt as we go.
   mirrored at the top next to the step bar (Next / Skip on a step, Next lesson on the recap), and
   Enter presses the main (non-secondary) button, unless a control was reached with the keyboard
   (a clicked or tapped button doesn't keep Enter). Demo scene "Pause and keys".
+- 2026-10-24: Wipe progress (Ignas: "add a wipe progress button"). On the Profile's account card, with
+  a confirm step that says what goes and what stays. It deletes every progress record (takes, stars,
+  XP, streak, practice log, reviews, path, ladder, Book reads) on the device and, when signed in, in
+  the account: a DELETE of the account's rows except `sketch.*` and `mysong.*` (the player's own
+  work), then a `wiped` row with the time. Devices that synced before it wipe on their next sync; a
+  device signing in for the first time later keeps its guest progress. Calibration and settings
+  stay. Offline, nothing is wiped. `wiped` never syncs as an ordinary change. Demo scene "Guest or
+  account" ends with a wipe.

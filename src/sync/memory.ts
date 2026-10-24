@@ -41,6 +41,11 @@ export function memoryProvider(): MemoryServer {
       const t = table(srv, s.userId);
       for (const r of rows) t.set(r.key, { ...r, value: structuredClone(r.value), updatedAt: tick() });
     },
+    async wipe(s, keep) {
+      up(srv);
+      const t = table(srv, s.userId);
+      for (const k of [...t.keys()]) if (!keep.some((p) => k.startsWith(p))) t.delete(k);
+    },
     async signOut() {},
   };
   return srv;

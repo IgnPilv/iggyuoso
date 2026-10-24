@@ -17,6 +17,32 @@ export function ago(iso: string | undefined, now = Date.now()): string {
 export function accountCard(account: Account): HTMLElement {
   const card = h('section', { class: 'card account' });
   let email = '';
+  let confirming = false;
+  let wiping = false;
+  // "Wipe progress", with a second step that says exactly what goes and what stays.
+  const wipeBlock = (signedIn: boolean) => {
+    if (!confirming) {
+      return h('div', { class: 'account-wipe' },
+        h('button', { class: 'secondary danger', onclick: () => { confirming = true; draw(); } }, 'Wipe progress'));
+    }
+    return h('div', { class: 'account-wipe confirm', role: 'alertdialog', 'aria-label': 'Wipe progress?' },
+      h('p', {}, h('strong', {}, 'Wipe all progress? '),
+        `Every take, star, clean take, XP, streak, practice day, review and the path go, ${signedIn ? 'here and in your account, on every device you sign in on' : 'on this device'}. `,
+        'Your sketches, your songs, keyboard setup and settings stay. This cannot be undone.'),
+      h('div', { class: 'controls' },
+        h('button', {
+          class: 'danger-solid', disabled: wiping,
+          onclick: async () => {
+            wiping = true;
+            draw();
+            const ok = await account.wipe();
+            wiping = false;
+            if (ok) confirming = false;
+            draw();
+          },
+        }, wiping ? 'Wiping…' : 'Wipe everything'),
+        h('button', { class: 'secondary', disabled: wiping, onclick: () => { confirming = false; draw(); } }, 'Cancel')));
+  };
   const draw = () => {
     const who = account.identity();
     const avatar = h('span', { class: `account-avatar${who.kind === 'guest' ? ' guest' : ''}`, 'aria-hidden': 'true' },
@@ -48,7 +74,7 @@ export function accountCard(account: Account): HTMLElement {
         h('div', { class: 'account-head' }, avatar, h('div', {},
           h('h2', {}, 'Guest'),
           h('p', { class: 'small' }, 'Saved in this browser, on this device only. Another device or browser, or clearing this site\'s data, starts from zero.'))),
-        error, signIn].filter((x) => !!x) as HTMLElement[]);
+        error, signIn, wipeBlock(false)].filter((x) => !!x) as HTMLElement[]);
     } else {
       const status = account.status === 'syncing' ? 'Syncing…'
         : account.status === 'offline' ? 'Offline. Practice is saved here and syncs when you are back online.'
@@ -64,7 +90,8 @@ export function accountCard(account: Account): HTMLElement {
         h('div', { class: 'controls' },
           h('button', { class: 'secondary', disabled: account.status === 'syncing', onclick: () => void account.sync() }, 'Sync now'),
           h('button', { class: 'secondary', onclick: () => void account.signOut() }, 'Sign out')),
-        h('p', { class: 'small' }, 'Signing out keeps your progress on this device, as a guest.')].filter((x) => !!x) as HTMLElement[]);
+        h('p', { class: 'small' }, 'Signing out keeps your progress on this device, as a guest.'),
+        wipeBlock(true)].filter((x) => !!x) as HTMLElement[]);
     }
   };
   const off = account.onChange(() => (card.isConnected || !card.dataset.drawn ? draw() : off()));

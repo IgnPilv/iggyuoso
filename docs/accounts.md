@@ -24,6 +24,11 @@ offline and syncs when the network comes back.
   itself: pull rows changed on the server since the last pull, merge records changed on both
   sides, push what changed here. Sync runs on start, a few seconds after each change, when the
   tab is hidden, when the window gets focus and when the network comes back.
+- **Wipe progress** (account card on the Profile): deletes every progress record on the device
+  and, when signed in, every row of the account except sketches and my songs (`KEEP_ON_WIPE`),
+  then saves a `wiped` row with the time. A device that synced before that time wipes itself on
+  its next pull; a device signing in for the first time afterwards keeps its guest progress.
+  Nothing is deleted when the account can't be reached.
 - `src/sync/merge.ts`: merge rules. Exercise records, the practice log, timing and XP keep the
   most of both sides; everything else takes the newer version.
 - Rows carry the store `schema` version. Rows from a newer app are left alone (the profile asks

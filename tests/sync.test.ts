@@ -176,6 +176,67 @@ describe('guest and account', () => {
   });
 });
 
+describe('wiping progress', () => {
+  it('wipes a guest\'s progress but keeps sketches, songs, calibration and settings', async () => {
+    const data = tracked(memoryBackend());
+    const store = new Store(data);
+    const acct = new Account(data, null, { schema: SCHEMA_VERSION, upgradeFrom: () => {}, redirectTo: () => '' });
+    store.record('x', take('2026-10-23T10:00:00Z', 95));
+    store.put('mastery.meta', { xp: 50, xpToday: 0, streak: 1 });
+    store.put('sketch.a', { title: 'idea' });
+    store.put('mysong.b', { title: 'song' });
+    store.settings = { ...store.settings, metronome: false };
+    expect(await acct.wipe()).toBe(true);
+    expect(store.exercise('x').attempts).toBe(0);
+    expect(store.get('mastery.meta')).toBeUndefined();
+    expect(store.get('sketch.a')).toEqual({ title: 'idea' });
+    expect(store.get('mysong.b')).toEqual({ title: 'song' });
+    expect(store.settings.metronome).toBe(false);
+    expect(data.changes()).toEqual({ 'iggyuoso.sketch.a': expect.any(Number), 'iggyuoso.mysong.b': expect.any(Number) });
+  });
+
+  it('wipes the account and every signed-in device, but not a device signing in later', async () => {
+    const server = memoryProvider();
+    const a = device(server);
+    const b = device(server);
+    await a.account.completeSignIn('#memory-sign-in=me@example.com');
+    a.store.record('x', take('2026-10-23T10:00:00Z', 95));
+    a.store.put('sketch.s', { title: 'idea' });
+    await a.account.sync();
+    await b.account.completeSignIn('#memory-sign-in=me@example.com');
+    expect(b.store.exercise('x').attempts).toBe(1);
+
+    expect(await a.account.wipe()).toBe(true);
+    expect(a.store.exercise('x').attempts).toBe(0);
+    expect([...server.rows.get('user:me@example.com')!.keys()].sort()).toEqual(['sketch.s', 'wiped']);
+
+    expect(await b.account.sync()).toBe(true);
+    expect(b.store.exercise('x').attempts).toBe(0);
+    expect(b.store.get('sketch.s')).toEqual({ title: 'idea' });
+
+    // A third device brings its guest progress in after the wipe and keeps it.
+    const c = device(server);
+    c.store.record('y', take('2026-10-24T10:00:00Z', 95));
+    await c.account.completeSignIn('#memory-sign-in=me@example.com');
+    expect(c.store.exercise('y').attempts).toBe(1);
+    await a.account.sync();
+    expect(a.store.exercise('y').attempts).toBe(1); // and the others get it, without wiping again
+    expect(a.store.get('sketch.s')).toEqual({ title: 'idea' });
+  });
+
+  it('deletes nothing when the account cannot be reached', async () => {
+    const server = memoryProvider();
+    const a = device(server);
+    await a.account.completeSignIn('#memory-sign-in=me@example.com');
+    a.store.record('x', take('2026-10-23T10:00:00Z', 95));
+    await a.account.sync();
+    server.offline = true;
+    expect(await a.account.wipe()).toBe(false);
+    expect(a.account.error).toMatch(/Nothing was wiped/);
+    expect(a.store.exercise('x').attempts).toBe(1);
+  });
+});
+
 describe('Supabase provider', () => {
   const cfg = { url: 'https://abc.supabase.co', anonKey: 'anon' };
   function fake(responses: Record<string, unknown>) {
@@ -218,6 +279,13 @@ describe('Supabase provider', () => {
     expect(push.url).toBe('https://abc.supabase.co/rest/v1/progress?on_conflict=user_id,key');
     expect((push.init.headers as Record<string, string>).Prefer).toBe('resolution=merge-duplicates,return=minimal');
     expect(JSON.parse(String(push.init.body))).toEqual([{ user_id: 'u1', key: 'ex.a', value: { attempts: 2 }, schema: 1 }]);
+  });
+
+  it('wipes the account\'s rows but keeps sketches and songs', async () => {
+    const { calls, f } = fake({});
+    await supabaseProvider(cfg, f).wipe(session, ['sketch.', 'mysong.']);
+    expect(calls[0].init.method).toBe('DELETE');
+    expect(calls[0].url).toBe('https://abc.supabase.co/rest/v1/progress?user_id=eq.u1&key=not.like.sketch.*&key=not.like.mysong.*');
   });
 
   it('reports a lost session as signed out', async () => {
