@@ -5,7 +5,7 @@ hand: left
 prompt: Eight bars of the rolling left hand. Keep it soft under the octaves.
 display: staff
 key: E
-tempo: 90
+tempo: 54
 tempoLadder: true
 meter: 4/4
 countIn: 1

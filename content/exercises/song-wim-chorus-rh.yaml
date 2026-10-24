@@ -5,7 +5,7 @@ hand: right
 prompt: 'The whole chorus in the right hand, octaves included: thumb and fifth finger, hand light.'
 display: staff
 key: E
-tempo: 84
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

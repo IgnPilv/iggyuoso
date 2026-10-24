@@ -3,7 +3,7 @@ title: 'Where Is My Mind: tap the chorus'
 kind: tap
 prompt: 'The chorus rhythm on any key: long, quick-quick, long; then a string of sixteenths.'
 display: staff
-tempo: 72
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

@@ -3,7 +3,7 @@ title: 'Where Is My Mind: tap the riff'
 kind: tap
 prompt: 'The riff is steady eighths, two to every beat: "1 and 2 and". Bar 3 hides two quick pairs of sixteenths.'
 display: staff
-tempo: 100
+tempo: 60
 tempoLadder: true
 meter: 4/4
 countIn: 1

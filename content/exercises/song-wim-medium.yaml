@@ -5,7 +5,7 @@ hand: together
 prompt: The whole song with the intro's bass-and-chord left hand everywhere.
 display: staff
 key: E
-tempo: 104
+tempo: 62
 tempoLadder: true
 meter: 4/4
 countIn: 1

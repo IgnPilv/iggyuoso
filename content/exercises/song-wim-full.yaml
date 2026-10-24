@@ -5,7 +5,7 @@ hand: together
 prompt: 'Maxence Cyrin''s arrangement: the rolling left hand from the second verse on. The tempo ladder brings you up to speed.'
 display: staff
 key: E
-tempo: 120
+tempo: 72
 tempoLadder: true
 meter: 4/4
 countIn: 1

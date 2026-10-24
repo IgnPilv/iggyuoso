@@ -5,7 +5,7 @@ hand: left
 prompt: 'The verse''s left hand: bass, then two notes of the chord. Lighter than in the intro.'
 display: staff
 key: E
-tempo: 80
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

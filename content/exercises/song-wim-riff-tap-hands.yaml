@@ -3,7 +3,7 @@ title: 'Where Is My Mind: riff over the bass'
 kind: tap
 prompt: 'Right hand in eighths, left hand in halves: two left-hand taps to every eight on the right.'
 display: staff
-tempo: 100
+tempo: 60
 tempoLadder: true
 meter: 4/4
 countIn: 1

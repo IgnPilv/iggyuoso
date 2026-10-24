@@ -5,7 +5,7 @@ hand: together
 prompt: 'The intro as Maxence Cyrin plays it: the riff over a long low E, then over bass and chord.'
 display: staff
 key: E
-tempo: 100
+tempo: 60
 tempoLadder: true
 meter: 4/4
 countIn: 1

@@ -5,7 +5,7 @@ hand: left
 prompt: 'Now the real pattern: a low bass note, then the chord. Jump down, jump back, and look ahead to the next bass.'
 display: staff
 key: E
-tempo: 96
+tempo: 58
 tempoLadder: true
 meter: 4/4
 countIn: 1

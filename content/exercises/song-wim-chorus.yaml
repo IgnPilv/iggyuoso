@@ -5,7 +5,7 @@ hand: together
 prompt: 'Both hands. Two even streams: sixteenths on top, eighths below, meeting on every beat.'
 display: staff
 key: E
-tempo: 96
+tempo: 58
 tempoLadder: true
 meter: 4/4
 countIn: 1

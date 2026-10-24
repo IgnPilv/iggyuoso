@@ -5,7 +5,7 @@ hand: left
 prompt: 'Left hand alone: E, then four roots, two to a bar: E, C♯, G♯, A. Each one rings for two beats.'
 display: staff
 key: E
-tempo: 100
+tempo: 60
 tempoLadder: true
 meter: 4/4
 countIn: 1
