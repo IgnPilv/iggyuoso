@@ -540,3 +540,7 @@ never copied pages). Start small, adapt as we go.
   a short "Read it again" card once read). Reaching the end of a chapter, or leaving its lesson
   step, marks it read (`book.read`, synced; the demo never saves). Staff pictures take `meter`
   (time signature and bar lines). Written in chunks, one PR per part group. Demo scene "The Book".
+- 2026-10-24: Accounts switched on. Supabase project created by Ignas (free plan, SQL from
+  `docs/supabase.sql`). Its URL and publishable key are repository **secrets** `SUPABASE_URL` /
+  `SUPABASE_ANON_KEY` (Ignas: keep the key out of the repo's files), read by `pages.yml` at deploy
+  time; variables of the same names also work. Sign-in is by email link only.
