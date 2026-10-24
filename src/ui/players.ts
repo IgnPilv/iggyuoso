@@ -16,6 +16,7 @@ import type { TimedResult } from '../scoring/timed';
 import { COUNT_INS, TimedSession, type CountIn } from '../engine/timedSession';
 import { climb, LADDER, LADDER_START, sliceBars, trickyBars, type LadderState } from '../engine/practice';
 import { FallingView, type Flash } from './falling';
+import { fullScreen, type FullScreen } from './fullScreen';
 import { FindSession, positionKeys, SequenceSession, type UntimedResult } from '../scoring/untimed';
 import { demo } from '../demo/demo';
 import { h } from './dom';
@@ -275,13 +276,15 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
       const reward = record(ex, r.score, r.stars, 0);
       result.replaceChildren(untimedResult(r, restart), reward);
       onDone(r);
+      fs.refresh();
     }
   });
 
   update();
   root.append(header(ex, 'Find the keys.'), h('div', { class: 'controls top' }, toggle.el), ask, stage, result);
-  build(toggle.get());
-  return () => { off(); stopView(); };
+  const fs = fullScreen({ score: [ask], stage, result, onChange: (on) => build(on ? 'falling' : toggle.get()) });
+  build(fs.on ? 'falling' : toggle.get());
+  return () => { off(); stopView(); fs.destroy(); };
 }
 
 // ---------------------------------------------------------------- sheet strip
@@ -393,7 +396,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
     demo.onSequence?.(session);
     staff?.clear('hit');
     result.replaceChildren();
-    build(toggle.get());
+    build(fs.on ? 'falling' : toggle.get());
   };
 
   const off = midi.onNote((e) => {
@@ -416,12 +419,14 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
       const reward = record(ex, r.score, r.stars, 0);
       result.replaceChildren(untimedResult(r, restart), reward);
       onDone(r);
+      fs.refresh();
     }
   });
 
   root.append(header(ex, 'Play the notes in order.'), h('div', { class: 'controls top' }, toggle.el), ask, stage, result);
-  build(toggle.get());
-  return () => { off(); stopView(); };
+  const fs = fullScreen({ score: [ask], stage, result, onChange: (on) => build(on ? 'falling' : toggle.get()) });
+  build(fs.on ? 'falling' : toggle.get());
+  return () => { off(); stopView(); fs.destroy(); };
 }
 
 // ---------------------------------------------------------------- timed
@@ -556,6 +561,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
   let run: { cancel: () => void; togglePause: () => void } | undefined;
   const flashes: Flash[] = [];
+  let fs: FullScreen | undefined;
 
   // Draw a still frame (before the first run, or after switching views).
   function idle() {
@@ -671,6 +677,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       stopBtn.disabled = pauseBtn.disabled = true;
       pauseBtn.textContent = 'Pause';
       run = undefined;
+      fs?.setRunning(false);
     };
 
     // Space or the Pause button: the clock holds where it is; going on gives a bar to count back
@@ -682,6 +689,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         session.pause(now);
         stopAll();
         pauseBtn.textContent = 'Resume';
+        fs?.setRunning(false);
         return;
       }
       const started = session.position(now).beat >= 0;
@@ -693,6 +701,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       for (const c of session.clicks(metro.checked)) if (c.time >= Math.max(at, now) - 1) click(c.time, c.accent);
       if (mode === 'listen' || (guide.checked && !echo)) for (const g of session.guide()) if (g.time >= at - 1) piano(g.midi, g.time, g.durMs);
       pauseBtn.textContent = 'Pause';
+      fs?.setRunning(true);
     };
 
     const finish = () => {
@@ -754,12 +763,14 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         regenerate.has(ex) ? h('button', { class: 'secondary', onclick: () => regenerate.get(ex)!() }, ex.tap ? 'New rhythm' : 'New tune') : '');
       result.replaceChildren(timedResult(r, ex, tempo, cal), reward, ladderNote, loopTip, againRow);
       onDone(r);
+      fs?.refresh();
       demo.onRunEnd?.('play');
     };
 
     listenBtn.disabled = playBtn.disabled = true;
     toggle.disable(true);
     stopBtn.disabled = pauseBtn.disabled = false;
+    fs?.setRunning(true);
     raf = requestAnimationFrame(frame);
     run = { cancel: stop, togglePause };
   };
@@ -800,13 +811,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         h('label', {}, guide, ' Guide notes')),
       loopControls));
   drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
+  const transportMain = h('div', { class: 'transport-main' }, listenBtn, playBtn, pauseBtn, stopBtn);
+  const transport = h('div', { class: 'transport' }, transportMain, echo ? '' : toggle.el);
   root.append(
     header(ex, echo ? 'Press Play: listen to the rhythm, then tap it back after a bar of count-in.' : ex.pitchMatch === 'side' ? 'Tap the rhythm: right hand on any key from middle C up, left hand on any key below.'
       : ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
-    h('div', { class: 'transport' },
-      h('div', { class: 'transport-main' }, listenBtn, playBtn, pauseBtn, stopBtn),
-      echo ? '' : toggle.el,
-    ),
+    transport,
     drawer,
     rungs ? ladderLine : '',
     status,
@@ -815,8 +825,13 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     result,
   );
   if (looping) status.textContent = `Looping ${barsText(loop.bars!)}. Press Play; it goes round until you press Stop. Loop takes are not saved.`;
-  buildView(toggle.get());
-  return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); window.removeEventListener('keydown', onSpace); };
+  // A phone on its side: falling notes only, full screen (an echo has no falling notes).
+  if (!echo) {
+    fs = fullScreen({ score: [hud], controls: transportMain, stage, result,
+      onChange: (on) => buildView(on ? 'falling' : toggle.get()) });
+  }
+  buildView(fs?.on ? 'falling' : toggle.get());
+  return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); fs?.destroy(); window.removeEventListener('keydown', onSpace); };
 }
 
 /** `loopTake`: a practice loop, which is never saved, so there is no note about records. */

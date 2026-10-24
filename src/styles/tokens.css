@@ -55,6 +55,9 @@
   --brand-2: #ff3d8b; /* hot pink */
   --brand-3: #8b5cf6; /* violet */
   --brand-gradient: linear-gradient(115deg, var(--brand-1) 0%, var(--brand-2) 48%, var(--brand-3) 100%);
+
+  /* The demo's phone frame (same in both themes). */
+  --phone-bezel: #050407;
 }
 
 /* ---------------------------------------------------------------- dark (reference) */

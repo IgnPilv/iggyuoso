@@ -91,8 +91,14 @@ export class FallingView {
   private layout() {
     const w = this.el.clientWidth || 800;
     const ww = w / this.whites;
-    const kbH = Math.min(170, Math.max(90, ww * 4.6));
-    const laneH = Math.min(420, Math.max(260, w * 0.42));
+    let kbH = Math.min(170, Math.max(90, ww * 4.6));
+    let laneH = Math.min(420, Math.max(260, w * 0.42));
+    // Full screen (a phone on its side): fill the height, the keys taking at most a third.
+    const fill = this.el.closest('.fs-layer') ? this.el.clientHeight : 0;
+    if (fill > 0) {
+      kbH = Math.round(Math.max(56, Math.min(kbH, fill * 0.32)));
+      laneH = Math.max(80, fill - kbH);
+    }
     const dpr = window.devicePixelRatio || 1;
     this.width = w;
     this.height = laneH + kbH;

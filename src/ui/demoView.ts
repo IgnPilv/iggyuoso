@@ -9,6 +9,7 @@ import { loadContent, parseExercise } from '../content/load';
 import { h, type View } from './dom';
 import { branchPage, growingNow, growingTree, snapshot, songPage, songsCard, songsPage, stageList } from './treeView';
 import { mountExercise, resetDemoOptions } from './players';
+import { previewFullScreen } from './fullScreen';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
 import { demoProgress, goalsStage, lessonGoals, lessonExercises, nodeOfLesson } from '../progress';
@@ -370,6 +371,28 @@ function scenes(): Scene[] {
   if (oneHand) out.push({ title: 'Falling notes', caption: 'Listen first: the app plays the tune and lights each key. Then the pianist plays it, with one wrong key, one late note and one missed note. The score and the mistakes show up live. The result card shows the XP earned (clean takes, new stars and promotions only).', run: exerciseScene(oneHand, { listenFirst: true, view: 'falling' }) });
   const twoHands = pick(isTimed, (e) => !!(e.right && e.left));
   if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score. The sheet music rides along above the falling notes, with a playhead on the note being played and notes turning green or red.', run: exerciseScene(twoHands, { view: 'falling' }) });
+  if (twoHands) {
+    out.push({
+      title: 'Phone on its side',
+      caption: 'On a phone held sideways, an exercise is just the falling notes, edge to edge: no header, steps, options or sheet strip. The score sits small in the corner. A tap on the notes shows Pause and Stop, Leave full screen (✕) and Next; they hide again by themselves. Portrait, tablets and computers keep the normal page.',
+      run: (box, next, p) => {
+        const frame = h('div', { class: 'phone-frame' });
+        box.append(frame);
+        const inner = h('div');
+        frame.append(inner);
+        previewFullScreen(frame);
+        demo.onTimed = (s) => p.playTimed(s);
+        const timers: number[] = [];
+        const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+        demo.onRunEnd = () => later(6000, next);
+        const cleanup = mountExercise(inner, twoHands, DEMO_CALIBRATION, () => {});
+        later(900, () => press(frame, 'Play'));
+        // A tap on the notes shows the controls for a moment.
+        later(4500, () => frame.querySelector<HTMLElement>('.fs-layer canvas')?.click());
+        return () => { timers.forEach(clearTimeout); cleanup(); previewFullScreen(undefined); };
+      },
+    });
+  }
   const sheet = pick(isTimed, (e) => e.display === 'staff' && !(e.right && e.left));
   if (sheet) out.push({ title: 'Sheet music', caption: 'The same exercise on "Keyboard & sheet": the staff, with notes turning green or red as they are played.', run: exerciseScene(sheet, { view: 'classic' }) });
   const rhythms = parseExercise(parse(SAMPLES.rhythms));
