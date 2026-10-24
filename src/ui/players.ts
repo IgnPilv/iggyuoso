@@ -131,15 +131,18 @@ export function record(ex: Exercise, score: number, stars: number, tempo: number
   const repsLine = h('p', { class: `reps-line${reps.done ? ' done' : ''}` },
     reps.done && !wasDone ? h('strong', {}, 'Exercise done! ') : clean ? h('strong', {}, 'Clean take. ') : '',
     repsText(ex, reps),
-    !reps.done && !clean ? (a.counts ? ' A clean take needs 92 or more.' : ' Takes count at full tempo.') : '');
+    !reps.done && !clean ? (a.counts ? ' A clean take needs 92 or more.' : ' Takes count at full tempo.') : '',
+    !reps.done && clean && !reps.today ? " That's all this one can count today." : '');
   return h('div', { class: 'take-summary' }, rewardLine(p.mastery.onAttempt(ex.id, a, before), p.mastery), repsLine);
 }
 
-/** "2 of 3 clean takes · 1 of 2 days", or how it was done. */
+/** What is left, in plain words: "2 more clean takes, one of them tomorrow or later", or how it was done. */
 export function repsText(goal: RepsGoal, r: RepsProgress): string {
   if (r.done) return `Done: ${r.clean} clean ${r.clean === 1 ? 'take' : 'takes'}${goal.days > 1 ? ` on ${r.days} days` : ''}.`;
-  const takes = `${Math.min(r.clean, goal.reps)} of ${goal.reps} clean takes`;
-  return goal.days > 1 ? `${takes} · ${Math.min(r.days, goal.days)} of ${goal.days} days.` : `${takes}.`;
+  const takes = `${r.left} more clean ${r.left === 1 ? 'take' : 'takes'}`;
+  if (!r.later) return `${takes}.`;
+  if (!r.today) return r.left === 1 ? `${takes}, tomorrow or later.` : `${takes}, one a day from tomorrow.`;
+  return r.later === 1 ? `${takes}, one of them tomorrow or later.` : `${takes}, ${r.later} of them on later days.`;
 }
 
 const STATE_LABEL: Record<NodeState, string> = { locked: 'Locked', introduced: 'Introduced', practised: 'Practised', solid: 'Solid', mastered: 'Mastered' };

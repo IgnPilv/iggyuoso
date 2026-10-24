@@ -469,3 +469,17 @@ never copied pages). Start small, adapt as we go.
   'playback'`, so the ring/silent switch no longer mutes the app) and resumes the context from any
   state but running (iOS also has 'interrupted'). Every tap and key press wakes the context, and the
   first also plays a silent buffer (older iOS needs it), since samples make the context before any tap.
+- 2026-10-24: Clear progression (Ignas: "strange progression, what am I supposed to click? come back
+  next day? it throws me to an initial lesson, but I have skipped"). The 2-day rule stays (a skill
+  sticks after sleep) but never holds the path: a lesson is **played through** once every exercise
+  has one clean take (`lessonStage`: new / started / through / done, `src/progress/index.ts`).
+  The recap (`src/ui/recap.ts`) says it in words (Not finished yet / Played through / Lesson done),
+  lists each exercise with what is left ("2 more clean takes, one of them tomorrow or later";
+  `Store.reps` gives `left`, `later`, `today`), rows that can still count today play that exercise,
+  and there is one main button: "Play / Practise again: <exercise> (n more clean takes)" until the
+  lesson is played through, then "Next lesson: <title>". Next = the next open lesson of the same
+  branch not yet played through, else the growing edge; lessons whose recap was reached with no
+  take are noted as skipped (`path.skipped`, cleared by a take) and suggested last in their stage.
+  The edge balances branches by lessons played through. Today's practice puts played-through
+  lessons with takes still owed today first, and those waiting only for tomorrow last. The result
+  line says when an exercise can count nothing more today. Demo scene "Clean takes and the path".

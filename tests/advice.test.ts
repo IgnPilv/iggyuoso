@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { content, pathLessons, treeNodes } from '../src/content';
-import { dailyInput, frontier, lessonAdvice, lessonGoals, nextLesson } from '../src/progress';
+import { dailyInput, frontier, lessonAdvice, lessonGoals, lessonStage, nextLesson, noteSkipped, skippedLessons } from '../src/progress';
 import { makePlan } from '../src/progress/daily';
 import { Mastery } from '../src/progress/mastery';
 import { memoryBackend, Store } from '../src/progress/store';
@@ -48,5 +48,48 @@ describe('the tree is advice, never a lock', () => {
     const lessons = makePlan(dailyInput(p)).items.filter((i) => i.why === 'lesson');
     expect(lessons.length).toBeGreaterThanOrEqual(1);
     expect(lessons.every((i) => lessonAdvice(content.lessons.get(i.lesson)!, p).ready)).toBe(true);
+  });
+});
+
+describe('the next lesson after a recap', () => {
+  const take = (p: ReturnType<typeof fresh>, lessonId: string, times = 1) => {
+    for (const e of lessonGoals(content.lessons.get(lessonId)!)) {
+      for (let i = 0; i < times; i++) p.store.record(e.id, { at: new Date().toISOString(), score: 99, stars: 3, tempo: 999, counts: true });
+      p.mastery.onAttempt(e.id, { at: new Date().toISOString(), score: 99, stars: 3, tempo: 999, counts: true }, 0);
+    }
+  };
+
+  it('moves on once every exercise has a clean take, even when takes on later days are still owed', () => {
+    const p = fresh();
+    take(p, root.id);
+    expect(lessonStage(root, p)).toBe('through');
+    expect(nextLesson(p)?.id).not.toBe(root.id);
+    expect(nextLesson(p, root)?.id).not.toBe(root.id);
+  });
+
+  it('goes on in the same branch after a lesson, not back to an early lesson of another branch', () => {
+    const p = fresh();
+    take(p, root.id);
+    const nodes = [...treeNodes.values()];
+    // The second open lesson in some branch other than the first one the edge suggests.
+    const first = nextLesson(p)!;
+    const other = frontier(p).find((n) => n.branch !== nodeOf(first.id).branch && n.lesson)!;
+    const from = content.lessons.get(other.lesson!)!;
+    take(p, from.id);
+    const next = nextLesson(p, from)!;
+    const same = nodes.slice(nodes.indexOf(other) + 1).find((n) => n.branch === other.branch && p.mastery.state(n.id) !== 'locked');
+    if (same) expect(next.id).toBe(same.lesson);
+    expect(next.id).not.toBe(from.id);
+  });
+
+  it('suggests a skipped lesson only after the others, and forgets the skip once it is played', () => {
+    const p = fresh();
+    take(p, root.id);
+    const first = nextLesson(p)!;
+    noteSkipped(first, p);
+    expect(nextLesson(p)?.id).not.toBe(first.id);
+    take(p, first.id);
+    noteSkipped(first, p);
+    expect(skippedLessons(p).has(first.id)).toBe(false);
   });
 });

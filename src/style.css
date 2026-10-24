@@ -627,6 +627,14 @@ ol.lessons li.ahead a:hover { opacity: 1; }
 .reps-list li { display: flex; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--surface-sunken); }
 .reps-list li.done .reps-count { color: var(--ok); }
 .reps-count { color: var(--ink-2); font-family: var(--font-mono); font-size: var(--text-sm); text-align: right; }
+/* On a recap each row is the exercise: rows that can still count today play it again. */
+.recap-status p { margin: 0; }
+.recap-status p + p { margin-top: var(--space-1); color: var(--ink-2); }
+.recap-list li { padding: 0; background: none; }
+.recap-list .link-row { display: flex; width: 100%; justify-content: space-between; align-items: baseline; gap: var(--space-3); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--surface-sunken); border: 1px solid transparent; color: var(--ink); font: inherit; text-align: left; box-shadow: none; }
+.recap-list button.link-row { cursor: pointer; }
+.recap-list button.link-row:hover { border-color: var(--line-strong); filter: none; transform: none; }
+.recap-list li.later .reps-count { color: var(--muted); }
 .progress-stats { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); font-size: var(--text-lg); }
 .progress-stats strong { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
 .reward { margin: var(--space-3) 0 0; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); background: var(--accent-soft); }

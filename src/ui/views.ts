@@ -1,16 +1,16 @@
 import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibration';
 import { content, contentErrors, exerciseTitle, nodeOfLesson, stages, treeNodes } from '../content';
-import type { Exercise, Lesson } from '../content/types';
+import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
-import { lessonAdvice, lessonGoals, mastery, nextLesson, type LessonAdvice } from '../progress';
+import { lessonAdvice, lessonGoals, lessonStage, mastery, nextLesson, noteSkipped, type LessonAdvice } from '../progress';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
-import { markdown } from './markdown';
 import { explainBlock, playground } from './theory';
-import { mountExercise, repsText } from './players';
+import { mountExercise } from './players';
+import { lessonRecap } from './recap';
 import { BRANCH_LABEL, currentStage, growingNow, growingTree, snapshot, songsCard, stageList } from './treeView';
 import { todayCard } from './todayView';
 import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
@@ -254,23 +254,20 @@ export const lessonView: View = (root, id?: string) => {
   };
 
   const showRecap = (l: Lesson) => {
-    const p = h('div', { class: 'explain recap' });
-    p.innerHTML = markdown(`**Recap.** ${l.recap}`);
-    const goals = lessonGoals(l);
-    const done = store.lessonDone(goals);
-    body.append(p, h('p', { class: done ? 'banner ok' : 'banner' },
-      done ? 'Lesson done: every exercise has its clean takes. On to the next one.'
-        : `${goals.filter((e) => store.reps(e).done).length} of ${goals.length} exercises done. Each one needs clean takes (★★★, 92 or more, at full tempo); the lesson is done when all are. You can go on to the next lesson any time.`),
-      repsTable(goals));
+    noteSkipped(l);
+    const r = lessonRecap({
+      lesson: l, goals: lessonGoals(l), stage: lessonStage(l), store, next: nextLesson(undefined, l),
+      practise: (id) => { step = l.steps.findIndex((s) => 'exercise' in s && s.exercise === id); show(); },
+      openLesson: (id) => go(`/lesson/${id}`),
+      home: () => go('/'),
+    });
+    body.append(...r.body);
     const node = nodeOfLesson(l.id);
     // A milestone opens songs: point at them once it is passed.
     if (node?.type === 'checkpoint' && mastery.state(node.id) !== 'introduced' && mastery.state(node.id) !== 'locked') {
       body.append(h('p', { class: 'banner ok' }, 'Milestone passed: new songs are open in the songbook. ', h('a', { href: '#/songs' }, 'Open the songbook')));
     }
-    const after = nextLesson();
-    nav.append(after && after.id !== l.id
-      ? h('button', { onclick: () => go(`/lesson/${after.id}`) }, `Next: ${after.title}`)
-      : h('button', { onclick: () => go('/') }, 'Your tree'));
+    nav.append(...r.nav);
     if (node) nav.append(h('button', { class: 'secondary', onclick: () => go(node.branch === 'songs' ? '/songs' : `/branch/${node.branch}`) }, node.branch === 'songs' ? 'Songbook' : `${BRANCH_LABEL[node.branch]} branch`));
   };
 
@@ -282,16 +279,6 @@ export const lessonView: View = (root, id?: string) => {
   show();
   return () => cleanup?.();
 };
-
-/** Each exercise of a lesson with its clean takes so far. */
-function repsTable(goals: Exercise[]) {
-  return h('ul', { class: 'reps-list' }, ...goals.map((e) => {
-    const r = store.reps(e);
-    return h('li', { class: r.done ? 'done' : '' },
-      h('span', {}, exerciseTitle(e)),
-      h('span', { class: 'reps-count' }, repsText(e, r)));
-  }));
-}
 
 /** What is recommended before this lesson. Only advice: the lesson below plays and counts as usual. */
 function adviceBanner(advice: Extract<LessonAdvice, { ready: false }>) {

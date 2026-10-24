@@ -62,6 +62,12 @@ export interface RepsProgress {
   clean: number;
   days: number;
   done: boolean;
+  /** Clean takes still needed (counting the extra days a take must be spread over). */
+  left: number;
+  /** How many of those must wait for later days, one per day (today's take only adds one day). */
+  later: number;
+  /** Whether a clean take today still counts towards the goal. */
+  today: boolean;
 }
 
 /** Score of a clean take. */
@@ -178,11 +184,16 @@ export class Store {
   }
 
   /** Clean takes so far against the exercise's goal. */
-  reps(goal: RepsGoal): RepsProgress {
+  reps(goal: RepsGoal, now = new Date()): RepsProgress {
     const p = this.exercise(goal.id);
     const clean = p.clean ?? 0;
     const days = p.cleanDays?.length ?? 0;
-    return { clean, days, done: clean >= goal.reps && days >= goal.days };
+    const done = clean >= goal.reps && days >= goal.days;
+    const daysLeft = Math.max(0, goal.days - days);
+    const left = done ? 0 : Math.max(goal.reps - clean, daysLeft);
+    const playedToday = !!p.cleanDays?.includes(localDay(now.toISOString()));
+    const later = done ? 0 : Math.max(0, daysLeft - (playedToday ? 0 : 1));
+    return { clean, days, done, left, later, today: left > later };
   }
 
   /** A lesson is done when every exercise in it is done: enough clean takes, on enough days. */
