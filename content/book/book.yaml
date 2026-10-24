@@ -25,3 +25,6 @@ parts:
   - title: Chords and harmony
     summary: The chords of a key and their jobs, inversions, every interval by quality, tension and release, the perfect cadence, phrases and form, spelling scales, the progressions everyone uses, triplets, and harmonising a tune.
     chapters: [chords-in-a-key, inversions, interval-quality, tension-and-release, the-perfect-cadence, phrases-and-form, spelling-scales, progressions, triplets, harmonising]
+  - title: The circle of keys, compound time and the pedal
+    summary: The circle of fifths, simple and compound time, minor key signatures, transposing, spelling intervals, texture, the sustain pedal, syncopation and the chromatic scale.
+    chapters: [circle-of-fifths, compound-time, minor-key-signatures, transposition, spelling-intervals, texture, the-pedal, syncopation, chromatic-scale]
