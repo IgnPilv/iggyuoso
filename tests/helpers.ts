@@ -18,6 +18,13 @@ export function readContentFiles(dir = join(__dirname, '..', 'content')): Record
   return out;
 }
 
+/** The Book's chapters (content/book/*.md). */
+export function readBookFiles(dir = join(__dirname, '..', 'content', 'book')): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const f of readdirSync(dir)) if (f.endsWith('.md')) out[join(dir, f).replace(/\\/g, '/')] = readFileSync(join(dir, f), 'utf8');
+  return out;
+}
+
 export const realContent = () => loadContent(readContentFiles());
 
 export function timed(yaml: string): TimedExercise {

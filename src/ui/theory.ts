@@ -24,6 +24,8 @@ const nameOf = (p: Pitch) => `${p.letter}${ACC[p.accidental]}`;
 export function theoryStaff(st: TheoryStaff, pad = 0): HTMLElement {
   const note = (t: NoteToken, i: number, pitches: Pitch[], spacer: boolean): StaffNote => ({
     pitches, value: t.value ?? t.beats, dotted: t.dotted, key: String(i), spacer,
+    // With a meter the picture is drawn in time, with bar lines, ties and triplets.
+    ...(st.meter ? { beats: t.beats, tie: t.tie, triplet: t.triplet } : {}),
     label: st.labels === 'names' && pitches.length ? pitches.map(nameOf).join(' ') : undefined,
   });
   let parts: StaffPart[];
@@ -39,7 +41,7 @@ export function theoryStaff(st: TheoryStaff, pad = 0): HTMLElement {
   }
   const space = (k: string): StaffNote => ({ pitches: [], key: k, spacer: true });
   if (pad) for (const part of parts) part.notes = [...Array.from({ length: pad }, (_, i) => space(`a${i}`)), ...part.notes, ...Array.from({ length: pad }, (_, i) => space(`b${i}`))];
-  const { svg, width } = renderStaff(parts, { key: st.key });
+  const { svg, width } = renderStaff(parts, { key: st.key, ...(st.meter ? { time: [st.meter.beats, st.meter.unit] as [number, number], barQuarters: st.meter.quarters } : {}) });
   // Never blown up past a comfortable reading size.
   svg.style.maxWidth = `${Math.round(width * 1.6)}px`;
   return h('div', { class: 'theory-staff staff-wrap' }, svg);

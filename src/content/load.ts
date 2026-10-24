@@ -7,7 +7,7 @@ import { DEFAULT_LADDER } from '../engine/practice';
 import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, numerals, romanChord, scaleNotes, scalePitchClasses } from '../music/theory';
 import { GENERATORS } from './types';
 import type {
-  BuildTask, Content, EarItem, ExplainStep, Exercise, FindTarget, ImproviseExercise, ImproviseRule, Lesson, LessonStep, PlaygroundStep, QuizQuestion, TheoryCheck,
+  BuildTask, Content, EarItem, ExplainStep, Exercise, Figure, FindTarget, ImproviseExercise, ImproviseRule, Lesson, LessonStep, PlaygroundStep, QuizQuestion, TheoryCheck,
   TheoryKeys, TheoryStaff,
 } from './types';
 
@@ -119,6 +119,7 @@ function parseTheoryStaff(v: unknown): TheoryStaff {
       clef: oneOf(o, 'clef', GRAND) ?? 'treble',
       labels: oneOf(o, 'labels', ['names', 'none'] as const) ?? 'none',
       ...(o.key !== undefined ? { key: checkKey(str(o, 'key')!) } : {}),
+      ...(o.meter !== undefined ? { meter: parseMeter(str(o, 'meter')!) } : {}),
     };
   } catch (e) {
     throw new FieldError(`staff: ${(e as Error).message}`);
@@ -184,6 +185,21 @@ function parseExplain(o: Raw): ExplainStep {
   if (terms.length) step.terms = terms;
   if (o.check !== undefined) step.check = parseCheck(o.check);
   return step;
+}
+
+/** A picture in the Book: `staff`, `keys`, `sound`, `caption` and an optional `check`. */
+export function parseFigure(o: Raw): Figure {
+  const f: Figure = {};
+  if (o.staff !== undefined) f.staff = parseTheoryStaff(o.staff);
+  if (o.keys !== undefined) f.keys = parseTheoryKeys(o.keys);
+  if (o.sound !== undefined) f.sound = parseTimedNotes(str(o, 'sound')!);
+  const caption = str(o, 'caption', false);
+  if (caption) f.caption = caption;
+  if (o.check !== undefined) f.check = parseCheck(o.check);
+  if (!f.staff && !f.keys && !f.sound && !f.check) throw new FieldError('a figure needs "staff", "keys", "sound" or "check"');
+  const extra = Object.keys(o).filter((k) => !['staff', 'keys', 'sound', 'caption', 'check'].includes(k));
+  if (extra.length) throw new FieldError(`unknown figure field "${extra[0]}"`);
+  return f;
 }
 
 function parsePlayground(o: Raw): PlaygroundStep {

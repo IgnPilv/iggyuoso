@@ -11,6 +11,7 @@ import { mySongsView } from './ui/mySongsView';
 import { profileView } from './ui/profileView';
 import { todayView } from './ui/todayView';
 import { branchView, songsView } from './ui/treePages';
+import { bookView } from './ui/bookView';
 import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './ui/theme';
 import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './ui/views';
 
@@ -24,6 +25,7 @@ const routes: Record<string, View> = {
   today: todayView,
   branch: branchView,
   songs: songsView,
+  book: bookView,
   sketchbook: sketchbookView,
   mysongs: mySongsView,
   midi: testerView,
@@ -56,6 +58,7 @@ brandMark.innerHTML = '<svg viewBox="0 0 16 16"><rect x="2" y="2" width="3" heig
 
 // Nav links carry an icon; on a phone only the icons show.
 const NAV_ICONS: Record<string, string> = {
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c-2-1.6-4.6-2.2-8-2v13c3.4-.2 6 .4 8 2 2-1.6 4.6-2.2 8-2v-13c-3.4-.2-6 .4-8 2z"/><path d="M12 6.5v13"/></svg>',
   songs: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5.5l11-2V16"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>',
   sketchbook: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h11.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5z"/><path d="M8.5 3.5v17"/><path d="M12 9.5h3.5M12 13h3.5"/></svg>',
   profile: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.8 4.2-5.6 7.5-5.6s6.3 1.8 7.5 5.6"/></svg>',
@@ -67,7 +70,7 @@ const navLink = (route: string, label: string) => {
   icon.innerHTML = NAV_ICONS[route];
   return h('a', { href: `#/${route}`, title: label, 'aria-label': label }, icon, h('span', { class: 'nav-label' }, label));
 };
-const navLinks = [navLink('songs', 'Songs'), navLink('sketchbook', 'Sketchbook'), navLink('profile', 'Profile'), navLink('demo', 'Demo'), navLink('settings', 'Settings')];
+const navLinks = [navLink('book', 'Book'), navLink('songs', 'Songs'), navLink('sketchbook', 'Sketchbook'), navLink('profile', 'Profile'), navLink('demo', 'Demo'), navLink('settings', 'Settings')];
 
 computerKeys.middleC = () => (demo.active ? DEMO_CALIBRATION : store.calibration)?.middleC ?? 60;
 computerKeys.allow = () => !demo.active;
