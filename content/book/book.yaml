@@ -22,3 +22,6 @@ parts:
   - title: Minor keys and new signatures
     summary: Major and minor intervals and chords, the three minor scales, keys with two and three sharps or flats, the names of the degrees, ties, sixteenths and cut time.
     chapters: [major-and-minor-intervals, minor-keys, harmonic-and-melodic-minor, more-keys, degree-names, minor-chords, ties-and-sixteenths]
+  - title: Chords and harmony
+    summary: The chords of a key and their jobs, inversions, every interval by quality, tension and release, the perfect cadence, phrases and form, spelling scales, the progressions everyone uses, triplets, and harmonising a tune.
+    chapters: [chords-in-a-key, inversions, interval-quality, tension-and-release, the-perfect-cadence, phrases-and-form, spelling-scales, progressions, triplets, harmonising]
