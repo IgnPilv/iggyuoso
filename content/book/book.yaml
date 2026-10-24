@@ -28,3 +28,6 @@ parts:
   - title: The circle of keys, compound time and the pedal
     summary: The circle of fifths, simple and compound time, minor key signatures, transposing, spelling intervals, texture, the sustain pedal, syncopation and the chromatic scale.
     chapters: [circle-of-fifths, compound-time, minor-key-signatures, transposition, spelling-intervals, texture, the-pedal, syncopation, chromatic-scale]
+  - title: Sevenths, cadences, new keys and the eras
+    summary: The dominant 7th and the other seventh chords, the four cadences, changing key, and the four eras of keyboard music.
+    chapters: [seventh-chords, four-cadences, modulation, four-eras]
