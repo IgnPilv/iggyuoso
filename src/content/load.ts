@@ -3,6 +3,7 @@ import { parse as parseYaml } from 'yaml';
 import {
   barLengths, isTieEnd, parseDuration, parsePedal, parsePitch, pitchToMidi, type Meter, type Pitch, parseFingers, parseMeter, parsePitchClass, parsePitchList, parseTimedNotes, type NoteToken,
 } from '../music/notes';
+import { suggestFingers } from '../music/fingering';
 import { DEFAULT_LADDER } from '../engine/practice';
 import { chordNotes, chordQuality, COMPARE, degreeSemitones, interval, keySignature, parseKey, numerals, romanChord, scaleNotes, scalePitchClasses } from '../music/theory';
 import { GENERATORS } from './types';
@@ -354,6 +355,12 @@ export function parseExercise(raw: Raw): Exercise {
   for (const [h, tokens] of [['right', right], ['left', left]] as const) {
     if (fingers[h].length && tokens && fingers[h].length !== countNotes(tokens)) {
       throw new FieldError(`${fingers[h].length} ${h} fingers for ${countNotes(tokens)} ${h} notes`);
+    }
+  }
+  // Where the content gives no fingering, a suggested one (not for taps: their notes are placeholders).
+  if (kind !== 'tap') {
+    for (const [h, tokens] of [['right', right], ['left', left]] as const) {
+      if (tokens && !fingers[h].length) fingers[h] = suggestFingers(tokens, h);
     }
   }
   return {

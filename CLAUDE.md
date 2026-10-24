@@ -623,3 +623,16 @@ never copied pages). Start small, adapt as we go.
   The result card comes up over the stage. While a take runs the lesson does not scroll. Space never
   pages the lesson. `#/exercise/<id>` uses the same exercise panel. The phone-on-its-side full screen
   is unchanged. Demo scene "A lesson in panels".
+- 2026-10-24: Finger numbers on the falling notes (Ignas: "should we add which finger should play what in
+  falling piano?"). Each falling note carries its finger in a dark chip at its front edge (shown even on short
+  notes and in the phone's full-screen view; the note name sits above it when there is room). Chords get a
+  finger per note (`chordFingers`), stacked on the sheet like the notes (highest note's number on top). Where
+  a hand has no written fingering (about 700 exercises), the loader fills in a suggested one
+  (`suggestFingers`, `src/music/fingering.ts`): a line that fits under the hand (≤ 5 keys within a minor
+  sixth, no chords) stays in one five-finger position, lowest key on the right thumb or the left fifth finger;
+  anything else is a dynamic-programming search over finger spans (after Parncutt), thumb passing, reused
+  fingers, hand moves and thumbs on black keys. It agrees with 95% of the hand-written fingering in pieces and
+  studies (`tests/fingering.test.ts` guards ≥ 90%). Written fingering always wins; taps get none; sketch and
+  My songs pages show their staff without fingers. Options → Fingers (`settings.fingers`, unset = on,
+  remembered like the other options) switches them off on the notes, the sheet and the lit keys. Demo scene
+  "Fingers on the notes".

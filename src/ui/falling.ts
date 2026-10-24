@@ -226,17 +226,33 @@ export class FallingView {
         ctx.stroke();
       }
       ctx.globalAlpha = 1;
-      // Label at the leading edge: note name, and finger number if given.
-      if (h > 14 && w > 12) {
-        ctx.fillStyle = p.noteInk;
-        ctx.textAlign = 'center';
-        ctx.font = `700 ${Math.min(14, w * 0.5)}px ${p.fontDisplay}`;
-        const label = keyName(this.cal, n.device).replace(/-?\d+$/, '');
-        const ly = Math.min(laneH, bottom) - 6;
-        ctx.fillText(label, x + w / 2, ly);
-        if (n.finger && h > 32) {
-          ctx.font = `600 ${Math.min(12, w * 0.45)}px ${p.fontMono}`;
-          ctx.fillText(String(n.finger), x + w / 2, ly - 16);
+      // At the leading edge: the finger number as a dark chip (it is what the hand needs first,
+      // so it shows even on short notes), and the note name above it when there is room.
+      if (w > 9) {
+        const bottomY = Math.min(laneH, bottom);
+        let ly = bottomY - 6;
+        let room = h > 14;
+        if (n.finger) {
+          const r = Math.max(6, Math.min(10, w * 0.38));
+          const cy = bottomY - r - 3;
+          ctx.fillStyle = withAlpha(p.noteInk, 0.82);
+          ctx.beginPath();
+          ctx.arc(x + w / 2, cy, r, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = c.bright;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.font = `700 ${Math.round(r * 1.45)}px ${p.fontDisplay}`;
+          ctx.fillText(String(n.finger), x + w / 2, cy + 0.5);
+          ctx.textBaseline = 'alphabetic';
+          ly = cy - r - 5;
+          room = h > 2 * r + 24;
+        }
+        if (room && w > 12) {
+          ctx.fillStyle = p.noteInk;
+          ctx.textAlign = 'center';
+          ctx.font = `700 ${Math.min(14, w * 0.5)}px ${p.fontDisplay}`;
+          ctx.fillText(keyName(this.cal, n.device).replace(/-?\d+$/, ''), x + w / 2, ly);
         }
       }
     }

@@ -329,7 +329,7 @@ type View2 = 'classic' | 'falling';
 const setView = (box: HTMLElement, v: View2) => box.querySelector<HTMLButtonElement>(`.view-toggle [data-view=${v}]`)?.click();
 
 /** `switchAt`: flip to the other view after this many ms, to show the toggle (untimed only). */
-function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: View2; switchAt?: number } = {}): Scene['run'] {
+function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: View2; switchAt?: number; playAt?: number } = {}): Scene['run'] {
   return (box, next, p) => {
     demo.onFind = (s) => p.playFind(s);
     demo.onSequence = (s) => p.playSequence(s);
@@ -346,7 +346,7 @@ function exerciseScene(ex: Exercise, opts: { listenFirst?: boolean; view?: View2
       const other: View2 = opts.view === 'classic' ? 'falling' : 'classic';
       timers.push(window.setTimeout(() => setView(box, other), opts.switchAt));
     }
-    if (ex.kind === 'timed' || ex.kind === 'improvise') timers.push(window.setTimeout(() => press(box, opts.listenFirst && ex.kind === 'timed' ? 'Listen' : 'Play'), 900));
+    if (ex.kind === 'timed' || ex.kind === 'improvise') timers.push(window.setTimeout(() => press(box, opts.listenFirst && ex.kind === 'timed' ? 'Listen' : 'Play'), opts.playAt ?? 900));
     return () => { timers.forEach(clearTimeout); cleanup(); };
   };
 }
@@ -371,6 +371,31 @@ function scenes(): Scene[] {
   if (oneHand) out.push({ title: 'Falling notes', caption: 'Listen first: the app plays the tune and lights each key. Then the pianist plays it, with one wrong key, one late note and one missed note. The score and the mistakes show up live. The result card shows the XP earned (clean takes, new stars and promotions only).', run: exerciseScene(oneHand, { listenFirst: true, view: 'falling' }) });
   const twoHands = pick(isTimed, (e) => !!(e.right && e.left));
   if (twoHands) out.push({ title: 'Two hands', caption: 'Right hand in blue, left hand in green. Each hand gets its own score. The sheet music rides along above the falling notes, with a playhead on the note being played and notes turning green or red.', run: exerciseScene(twoHands, { view: 'falling' }) });
+  // Fingers on the falling notes: a two-hand piece with chords and no written fingering, so the
+  // numbers shown are the suggested ones. The pianist switches them off and on in Options first.
+  const fingered = allExercises().find((e) => e.id === 'cr-mary-in-d') ?? twoHands;
+  if (fingered && isTimed(fingered)) {
+    out.push({
+      title: 'Fingers on the notes',
+      caption: 'Every falling note carries the finger that plays it (1 = thumb to 5 = little finger) in a dark chip at its front edge, also on short notes, on phones held sideways and on the sheet. Chords get a finger per note. Where a lesson has no fingering written in, the app suggests one, as a teacher would pencil it in: a tune that fits under the hand stays in one five-finger position, longer lines pass the thumb under. Options → Fingers switches them off and on.',
+      run: (box, next, p) => {
+        resetDemoOptions();
+        const stop = exerciseScene(fingered, { view: 'falling', playAt: 6200 })(box, next, p);
+        const timers: number[] = [];
+        const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+        const fingers = (on: boolean) => {
+          const el = [...box.querySelectorAll<HTMLLabelElement>('.drawer label')].find((l) => l.textContent?.trim() === 'Fingers')?.querySelector('input');
+          if (el) { el.checked = on; el.dispatchEvent(new Event('change')); }
+        };
+        const drawer = (open: boolean) => { const d = box.querySelector('details.drawer') as HTMLDetailsElement | null; if (d) d.open = open; };
+        later(1500, () => drawer(true));
+        later(2800, () => fingers(false));
+        later(4300, () => fingers(true));
+        later(5400, () => drawer(false));
+        return () => { timers.forEach(clearTimeout); stop?.(); resetDemoOptions(); };
+      },
+    });
+  }
   if (twoHands) {
     out.push({
       title: 'Phone on its side',
