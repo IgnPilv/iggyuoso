@@ -95,6 +95,13 @@ export function supabaseProvider(cfg: { url: string; anonKey: string }, fetchFn:
       }
     },
 
+    async wipe(s, keep) {
+      const filters = keep.map((k) => `&key=not.like.${encodeURIComponent(`${k}*`)}`).join('');
+      await call(`/rest/v1/progress?user_id=eq.${encodeURIComponent(s.userId)}${filters}`, {
+        method: 'DELETE', headers: { ...authed(s), Prefer: 'return=minimal' },
+      });
+    },
+
     async signOut(s) {
       try { await call('/auth/v1/logout', { method: 'POST', headers: authed(s) }); } catch { /* already gone */ }
     },

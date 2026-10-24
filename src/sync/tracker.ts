@@ -7,12 +7,23 @@ export const PREFIX = 'iggyuoso.';
 /** Records that belong to this device: the keyboard, its timing and the look of the app. */
 export const LOCAL_ONLY = new Set(['schema', 'calibration', 'settings', 'account']);
 export const CHANGES_KEY = `${PREFIX}sync.changes`;
+/** When progress was last wiped (ISO), synced so every device wipes too. */
+export const WIPED_KEY = `${PREFIX}wiped`;
+/** Kept by "Wipe progress": the player's own ideas and songs, which are work, not progress. */
+export const KEEP_ON_WIPE = ['sketch.', 'mysong.'];
 
 /** Whether a full storage key is copied to the account. Unknown new records sync by default. */
 export function isSynced(fullKey: string) {
   if (!fullKey.startsWith(PREFIX)) return false;
   const k = fullKey.slice(PREFIX.length);
-  return !LOCAL_ONLY.has(k) && !k.startsWith('sync.');
+  // `wiped` reaches the server only from Account.wipe, never as a changed record.
+  return !LOCAL_ONLY.has(k) && !k.startsWith('sync.') && k !== 'wiped';
+}
+
+/** Whether a full storage key is progress that "Wipe progress" deletes. */
+export function isProgress(fullKey: string) {
+  const k = fullKey.slice(PREFIX.length);
+  return isSynced(fullKey) && !KEEP_ON_WIPE.some((p) => k.startsWith(p));
 }
 
 export interface TrackedBackend extends Backend {
@@ -28,6 +39,8 @@ export interface TrackedBackend extends Backend {
   syncedKeys(): string[];
   /** Called after every stamped write. */
   onChange(fn: () => void): () => void;
+  /** Delete every progress record on this device (not stamped: nothing to send). */
+  wipeLocal(): void;
 }
 
 export function tracked(raw: Backend, now = () => Date.now()): TrackedBackend {
@@ -60,6 +73,16 @@ export function tracked(raw: Backend, now = () => Date.now()): TrackedBackend {
       save(c);
     },
     syncedKeys: () => (raw.keys?.() ?? []).filter(isSynced),
+    wipeLocal: () => {
+      const gone = (raw.keys?.() ?? []).filter(isProgress);
+      for (const k of gone) {
+        if (raw.remove) raw.remove(k);
+        else raw.set(k, 'null');
+      }
+      const c = changes();
+      for (const k of gone) delete c[k];
+      save(c);
+    },
     onChange: (fn) => { listeners.add(fn); return () => listeners.delete(fn); },
   };
 }
