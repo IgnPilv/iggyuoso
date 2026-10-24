@@ -483,3 +483,17 @@ never copied pages). Start small, adapt as we go.
   The edge balances branches by lessons played through. Today's practice puts played-through
   lessons with takes still owed today first, and those waiting only for tomorrow last. The result
   line says when an exercise can count nothing more today. Demo scene "Clean takes and the path".
+- 2026-10-24: My songs (Ignas sent a MIDI file of a song he wants in the app; shipped songs stay
+  public domain, so his file is never committed). `#/mysongs`, linked from the Songbook page:
+  import a `.mid` from the device, read in the browser by `parseMidiFile` (`src/music/midiFile.ts`;
+  running status, note-on 0 as release, SMPTE files refused). `readSong` / `writeSong`
+  (`src/music/importSong.ts`) make one part per track and channel (drums dropped), take the first
+  tempo (counted in the meter's beat), time and key signature (changes flattened, and said so),
+  write on eighths when ≥95% of onsets fall on one, else sixteenths, and give the highest part to
+  the right hand and the lowest to the left (one part: split at middle C; extra parts left out);
+  the player can change who plays each part, before and after import. Written with `transcribe`
+  (which now takes a `hand` per note). Records `mysong.<id>` keep the parts (≤4000 notes) and the
+  song as written, not the file, and sync like sketches. A song plays as a timed piece (falling
+  notes or sheet, per-hand scoring, tempo ladder 50–100%, looping bars) as both hands
+  (`mysong-<id>`) or one (`-right` / `-left`), reps 3 on 2 days. Demo scene "My songs" imports a
+  generated Ode to Joy file (`demo.midiFile`) and plays it.

@@ -25,6 +25,8 @@ export const demo = {
   onCheck: undefined as ((c: { keys?: number[]; correct?: number; choose?: (i: number) => void }) => void) | undefined,
   /** Called when a free-play take (Sketchbook, improvising) starts recording. */
   onRecord: undefined as ((r: Recorder) => void) | undefined,
+  /** The file "Import a MIDI file" opens in the demo (it has no file picker). */
+  midiFile: undefined as { name: string; bytes: Uint8Array } | undefined,
   /** Called when a timed Listen or Play run ends. */
   onRunEnd: undefined as ((mode: 'listen' | 'play') => void) | undefined,
 };
@@ -47,4 +49,5 @@ export interface DemoAsk {
 export function stopDemo() {
   demo.active = false;
   demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onRecord = demo.onAsk = demo.onCheck = undefined;
+  demo.midiFile = undefined;
 }

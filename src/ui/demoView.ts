@@ -20,6 +20,8 @@ import { currentTheme, previewTheme } from './theme';
 import { explainBlock, playground } from './theory';
 import { calibrateView, keyMap, testerView } from './views';
 import { sketchbookView } from './sketchbookView';
+import { mySongsView } from './mySongsView';
+import { writeMidiFile } from '../music/midiFile';
 
 // The no-keyboard showcase. Scenes are picked from the live content, so the demo always shows
 // what the app currently does. When a feature is added, add or extend a scene here.
@@ -633,6 +635,27 @@ function scenes(): Scene[] {
       return () => { timers.forEach(clearTimeout); demo.onRecord = undefined; cleanup?.(); };
     },
   });
+  out.push({
+    title: 'My songs',
+    caption: 'Bring your own song as a MIDI file: Songs → My songs → Import a MIDI file. The file is read in the browser; each part goes to a hand (the highest to the right, the lowest to the left, and you can change it), and the first bars show on the staff. Then the song is a piece like any other: both hands or one, falling notes or the sheet, each hand scored, the tempo ladder and looping bars. Here the pianist imports Ode to Joy (Beethoven, public domain) and plays it.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      demo.midiFile = { name: 'Ode to Joy.mid', bytes: odeToJoyMidi() };
+      demo.onTimed = (s) => p.playTimed(s);
+      demo.onRunEnd = (mode) => { if (mode === 'play') timers.push(window.setTimeout(next, 4000)); };
+      const cleanup = mySongsView(box);
+      timers.push(window.setTimeout(() => press(box, 'Import a MIDI file'), 1200));
+      timers.push(window.setTimeout(() => press(box, 'Add to My songs'), 6000));
+      timers.push(window.setTimeout(() => {
+        press(box, 'Both hands');
+        // A new song starts at the bottom of its tempo ladder; the demo plays it at full speed.
+        const tempo = box.querySelector<HTMLSelectElement>('select[aria-label=tempo]');
+        if (tempo) { tempo.value = '100'; tempo.dispatchEvent(new Event('change')); }
+      }, 8500));
+      timers.push(window.setTimeout(() => press(box, 'Play'), 10000));
+      return () => { timers.forEach(clearTimeout); demo.midiFile = undefined; cleanup?.(); };
+    },
+  });
   const improv = (content.exercises.get('cmp-full-close') ?? allExercises().find((e) => e.kind === 'improvise'));
   if (improv) out.push({
     title: 'Improvising that listens',
@@ -675,6 +698,22 @@ function scenes(): Scene[] {
     },
   });
   return out;
+}
+
+/** Ode to Joy as a small MIDI file: the tune in one track, held bass notes in the other. */
+function odeToJoyMidi(): Uint8Array {
+  const tune = 'E4 E4 F4 G4 | G4 F4 E4 D4 | C4 C4 D4 E4 | E4:1.5 D4:0.5 D4:2 | E4 E4 F4 G4 | G4 F4 E4 D4 | C4 C4 D4 E4 | D4:1.5 C4:0.5 C4:2';
+  const STEP: Record<string, number> = { C: 0, D: 2, E: 4, F: 5, G: 7 };
+  let at = 0;
+  const right = tune.split(/\s+/).filter((t) => t !== '|').map((t) => {
+    const [name, len] = t.split(':');
+    const beats = len ? Number(len) : 1;
+    const n = { midi: 12 * (Number(name[1]) + 1) + STEP[name[0]], at, beats: beats - 0.05 };
+    at += beats;
+    return n;
+  });
+  const left = [48, 43, 48, 43, 48, 43, 48, 48].map((midi, bar) => ({ midi, at: bar * 4, beats: 3.9 }));
+  return writeMidiFile([{ name: 'Melody', notes: right }, { name: 'Bass', notes: left }], { bpm: 96 });
 }
 
 export const demoView: View = (root, arg) => {
