@@ -1,0 +1,14 @@
+id: song-wim-riff-tap-hands
+title: 'Where Is My Mind: riff over the bass'
+kind: tap
+prompt: 'Right hand in eighths, left hand in halves: two left-hand taps to every eight on the right.'
+display: staff
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e
+  x:e x:e x:e x:e
+left: x:h x:h | x:h x:h | x:h x:h | x:h x:h
+reps: 2
+days: 1

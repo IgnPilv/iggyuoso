@@ -1,0 +1,14 @@
+id: song-wim-chords-held
+title: 'Where Is My Mind: held chords'
+kind: timed
+hand: left
+prompt: 'Left hand: the four chords, two beats each. Move only the fingers that must move.'
+display: staff
+key: E
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: G#3+B3+E4:h G#3+C#4+E4:h | G#3+B#3+D#4:h A3+C#4+E4:h | G#3+B3+E4:h G#3+C#4+E4:h | G#3+B#3+D#4:h A3+C#4+E4:h
+reps: 2
+days: 1

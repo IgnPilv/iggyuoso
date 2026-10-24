@@ -1,0 +1,17 @@
+id: song-wim-verse
+title: 'Where Is My Mind: the verse'
+kind: timed
+hand: together
+prompt: Both hands. The left hand is steady quarters; the right hand floats over it, early and late.
+display: staff
+key: E
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G#4:e G#4:s E4:q E4:s D#4:e D#4:s G#3:q r:s | r:h r:q r:s D#4:s E4:e | G#4:e G#4:s E4:q E4:s D#4:e D#4:s C#4:e. D#4:e~
+  | D#4:h r:q r:e. D#4:s | E4:e E4:s D#4:q D#4:s C#4:e C#4:s D#4:q C#4:s | G#4:e F#4:s E4:q C#4:s G#4:e F#4:s E4:q r:s
+left: E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q | E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q
+  | E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q
+reps: 3
+days: 2

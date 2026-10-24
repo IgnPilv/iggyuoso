@@ -1,0 +1,40 @@
+id: song-wim-verse
+title: 'Where Is My Mind (Maxence Cyrin) 3: the verse'
+skills:
+- songs
+steps:
+- explain: |
+    **The verse tune** sits low, around middle C, where a voice sings. Its rhythm is the hard part: **short – short – long**.
+
+    Count four sixteenths in every beat: "**1** e and a". The first note takes "1 e", the second takes "and",
+    and the long one starts on "a", just *before* beat 2, and holds over it. Arriving early like that is
+    **syncopation**: it gives the tune its lazy swing.
+  staff:
+    notes: G#4:e G#4:s E4:q E4:s D#4:e D#4:s G#3:q r:s
+    key: E
+  sound: G#4:e G#4:s E4:q E4:s D#4:e D#4:s G#3:q r:s | r:h r:q r:s D#4:s E4:e
+  terms:
+  - sixteenth
+  - syncopation
+  - 1 e and a
+  callout: |
+    Eighth, sixteenth, then a long note that lands on "a" before the beat.
+- explain: |
+    Clap or tap it first, saying the counts out loud. Then hear the tune and play it back. Only then put it under
+    your fingers.
+  check:
+    ask: A note that starts on "a" (the last sixteenth of beat 1) and is held over beat 2 is...
+    choices:
+    - Syncopated
+    - On the beat
+    - A rest
+    - A triplet
+    correct: 0
+    why: 'It starts off the beat and holds across it: syncopation.'
+- exercise: song-wim-verse-tap
+- exercise: song-wim-verse-echo
+- exercise: song-wim-verse-rh
+- exercise: song-wim-verse-roots
+- exercise: song-wim-verse-lh
+- exercise: song-wim-verse
+recap: 'The verse: short, short, long, with the long note arriving just before the beat.'

@@ -539,6 +539,8 @@ function scenes(): Scene[] {
       return () => timers.forEach(clearTimeout);
     },
   });
+  const songStep = content.exercises.get('song-wim-verse2');
+  if (songStep) out.push({ title: 'A song in steps', caption: 'A song can be a whole ladder of lessons. "Where Is My Mind" (Maxence Cyrin\'s piano version of the Pixies song) opens with the riff over bass notes, then the four chords (with an ear drill on the progression), the verse rhythm tapped before it is played, the "ooh" and the break, the rolling left hand, the chorus, and last the whole song in an easy, a medium and the full arrangement, with the pedal. Here, a step from the middle: the verse over the rolling left hand.', run: exerciseScene(songStep, { view: 'falling', switchAt: 9000 }) });
   out.push({
     title: 'Profile',
     caption: 'The profile (top right) shows the level, which rises with XP, plus the streak and a calendar of practice days. Each skill strand of the tree shows how far along its lessons are, and each hand gets its timing: early or late on average, how steady it is, and whether it is getting better. Here it shows a made-up seven weeks.',

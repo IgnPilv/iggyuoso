@@ -1,0 +1,18 @@
+id: song-wim-verse2
+title: 'Where Is My Mind: second verse'
+kind: timed
+hand: together
+prompt: 'The second verse: the tune over the rolling left hand.'
+display: staff
+key: E
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G#4:e G#4:s E4:q E4:s D#4:e D#4:s G#3:q r:s | r:h r:q r:s D#4:s E4:e | G#4:e G#4:s E4:q E4:s D#4:e D#4:s C#4:e. D#4:e~
+  | D#4:h r:q r:e. D#4:s | E4:e E4:s D#4:q D#4:s C#4:e C#4:s D#4:q C#4:s | G#4:e F#4:s E4:q C#4:s G#4:e F#4:s E4:q r:s
+left: E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e
+  G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e
+  B#3:e D#3:e A2:e E3:e C#4:q
+reps: 3
+days: 2

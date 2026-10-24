@@ -1,0 +1,15 @@
+id: song-wim-verse-lh
+title: 'Where Is My Mind: verse left hand'
+kind: timed
+hand: left
+prompt: 'The verse''s left hand: bass, then two notes of the chord. Lighter than in the intro.'
+display: staff
+key: E
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q | E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q
+  | E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q
+reps: 2
+days: 1

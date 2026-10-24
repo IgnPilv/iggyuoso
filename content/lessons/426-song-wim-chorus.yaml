@@ -1,0 +1,40 @@
+id: song-wim-chorus
+title: 'Where Is My Mind (Maxence Cyrin) 6: the chorus'
+skills:
+- songs
+steps:
+- explain: |
+    **The chorus**, the line of the title. A long high **B**, a quick turn down (A, F♯) into **G♯**, and a pickup G♯.
+    Then F♯ and a run in sixteenths, down to C♯ and back up through the E major scale.
+
+    The second time the run climbs on, up to a high D♯, and the right hand answers in **octaves**: E and D♯, thumb and
+    fifth finger.
+  staff:
+    notes: B5:q. A5:s F#5:s G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s D#5:s C#5:s D#5:s E5:s F#5:s G#5:s A5:s
+    key: E
+  sound: B5:q. A5:s F#5:s G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s D#5:s C#5:s D#5:s E5:s F#5:s G#5:s A5:s | B5:q. A5:s F#5:s
+    G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s F#5:s G#5:s A5:s B5:s C#6:s D#6:e
+  terms:
+  - turn
+  - scale run
+  - octaves
+  callout: |
+    B, turn into G♯; F♯ and a sixteenth run. Octaves to finish.
+- explain: |
+    The run is the E major scale, so the fingering is the scale's: in the right hand thumb on E and B, and the
+    black keys fall under 2, 3 and 4.
+  check:
+    ask: Which notes are sharp in the run F♯ E D♯ C♯ D♯ E F♯ G♯ A?
+    choices:
+    - Only F♯
+    - F♯, D♯, C♯ and G♯
+    - F♯ and C♯
+    - All of them
+    correct: 1
+    why: 'E major''s four sharps: F♯, C♯, G♯ and D♯.'
+- exercise: song-wim-chorus-tap
+- exercise: song-wim-chorus-line
+- exercise: song-wim-chorus-rh
+- exercise: song-wim-chorus-lh
+- exercise: song-wim-chorus
+recap: 'The chorus: a long B and a turn, a sixteenth run through E major, octaves to finish.'

@@ -1,0 +1,16 @@
+id: song-wim-chorus-lh
+title: 'Where Is My Mind: chorus left hand'
+kind: timed
+hand: left
+prompt: Eight bars of the rolling left hand. Keep it soft under the octaves.
+display: staff
+key: E
+tempo: 90
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e
+  G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e
+  B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:q
+reps: 2
+days: 1

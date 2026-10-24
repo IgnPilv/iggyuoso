@@ -1,0 +1,16 @@
+id: song-wim-verse2-tap
+title: 'Where Is My Mind: verse rhythm over eighths'
+kind: tap
+prompt: 'Both rhythms at once on any keys: the verse on top, steady eighths below. Watch where the right hand lands between
+  them.'
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:e x:s x:q x:s x:e x:s x:q r:s | r:h r:q r:s x:s x:e | x:e x:s x:q x:s x:e x:s x:e. x:e | x:h r:q r:e. x:s | x:e x:s
+  x:q x:s x:e x:s x:q x:s | x:e x:s x:q x:s x:e x:s x:q r:s
+left: x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e
+  x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e
+reps: 2
+days: 1

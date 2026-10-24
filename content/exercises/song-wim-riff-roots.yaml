@@ -1,0 +1,14 @@
+id: song-wim-riff-roots
+title: 'Where Is My Mind: bass notes'
+kind: timed
+hand: left
+prompt: 'Left hand alone: E, then four roots, two to a bar: E, C♯, G♯, A. Each one rings for two beats.'
+display: staff
+key: E
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: E3:w | E3:w | E3:h C#3:h | G#2:h A2:h | E3:h C#3:h | G#2:h A2:h
+reps: 2
+days: 1

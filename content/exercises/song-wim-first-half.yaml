@@ -1,0 +1,24 @@
+id: song-wim-first-half
+title: 'Where Is My Mind: intro to break'
+kind: timed
+hand: together
+prompt: 'The first half of the song, start to break: intro, verse, "ooh", break.'
+display: staff
+key: E
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e
+  G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e
+  | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e. E4:s | G#4:e G#4:s E4:q E4:s D#4:e D#4:s G#3:q r:s | r:h r:q r:s D#4:s
+  E4:e | G#4:e G#4:s E4:q E4:s D#4:e D#4:s C#4:e. D#4:e~ | D#4:h r:q r:e. D#4:s | E4:e E4:s D#4:q D#4:s C#4:e C#4:s D#4:q
+  C#4:s | G#4:e F#4:s E4:q C#4:s G#4:e F#4:s E4:q r:s | r:e G#5:e. G#5:e. C#5:h | r:e G#5:e. G#5:e. C#5:q A5:q | r:e G#5:e.
+  G#5:e. C#5:h | r:w | C4+E4:w | r:q E4+G#4:q B5+D#6+F#6:q r:e. E4:s
+left: E2:w~ | E2:w | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q G#3+B#3+D#4:q A2:q A3+C#4+E4:q | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q
+  | G#2:q G#3+B#3+D#4:q A2:q A3+C#4:q | E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q | E2:q G#3+B3:q C#2:q
+  C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q | E2:q G#3+B3:q C#2:q C#3+E3:q | G#2:q G#3+B#3:q A2:q A3+C#4:q | E2:q G#3+B3+E4:q
+  C#2:q G#3+C#4+E4:q | G#2:q G#3+B#3+D#4:q A2:q A3+C#4+E4:q | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q G#3+B#3+D#4:q A2:q
+  A3+C#4+E4:q | A2:w | C#3:h B2:h
+reps: 3
+days: 2

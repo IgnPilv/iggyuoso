@@ -1,0 +1,24 @@
+id: song-wim
+title: Where Is My Mind (Maxence Cyrin)
+skills:
+- songs
+steps:
+- explain: |
+    **Where Is My Mind**, the whole song: intro, verse, "ooh", break, second verse with the rolling left hand, "ooh",
+    chorus and the riff again to finish. 44 bars.
+
+    Three versions, easiest first: the tune over bass notes, then over bass and chord, then Maxence Cyrin's full
+    arrangement with the rolling left hand. The last take adds the pedal, changing with every chord.
+  staff:
+    notes: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e
+    key: E
+  sound: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e | E5:e G#5:e
+    E5:e G#5:e E5:e G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e. E4:s | G#4:e G#4:s E4:q E4:s D#4:e
+    D#4:s G#3:q r:s | r:h r:q r:s D#4:s E4:e
+  callout: |
+    Key: E major · Time: 4/4 · Tempo: 120 · Form: intro, verse, ooh, break, verse, ooh, chorus, outro
+- exercise: song-wim-easy
+- exercise: song-wim-medium
+- exercise: song-wim-full
+- exercise: song-wim-performance
+recap: 'Where Is My Mind, start to end: three versions and a pedalled performance.'

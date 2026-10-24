@@ -1,0 +1,19 @@
+id: song-wim-verse-echo
+title: 'Where Is My Mind: verse by ear'
+kind: ear
+prompt: Play the verse's phrases back from hearing them. The lit keys are the ones the phrase uses.
+questions: 6
+reps: 2
+days: 1
+items:
+- type: melody
+  notes: G#4 G#4 E4 E4 D#4 D#4
+  plays: 3
+  lit: true
+- type: melody
+  notes: E4 E4 D#4 D#4 C#4 C#4 D#4
+  plays: 3
+  lit: true
+- type: melody
+  notes: G#4 F#4 E4 C#4
+  plays: 3

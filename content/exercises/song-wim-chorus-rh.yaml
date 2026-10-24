@@ -1,0 +1,16 @@
+id: song-wim-chorus-rh
+title: 'Where Is My Mind: the chorus tune'
+kind: timed
+hand: right
+prompt: 'The whole chorus in the right hand, octaves included: thumb and fifth finger, hand light.'
+display: staff
+key: E
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B5:q. A5:s F#5:s G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s D#5:s C#5:s D#5:s E5:s F#5:s G#5:s A5:s | B5:q. A5:s F#5:s
+  G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s F#5:s G#5:s A5:s B5:s C#6:s D#6:e~ | D#6:q E5+E6:q D#5+D#6:h | r:w | r:q E5+E6:q
+  D#5+D#6:h | r:w
+reps: 3
+days: 2
