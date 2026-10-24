@@ -54,14 +54,16 @@ const ACCIDENTAL = { 1: '♯', [-1]: '♭', 0: '♮' } as const;
  * `key`: a key signature (G, Bb, Em...). Notes are written out in full; an accidental is drawn
  * only where the note differs from the signature or from an earlier note on that line in the bar.
  */
-export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; dynamics?: DynamicSpan[]; key?: string } = {}) {
+/** `time`: a time signature drawn after the clef and key (pictures only). */
+export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; dynamics?: DynamicSpan[]; key?: string; time?: [number, number] } = {}) {
   const timed = parts.some((p) => p.notes.some((n) => n.beats !== undefined));
   const length = Math.max(
     ...parts.map((p) => (timed ? p.notes.reduce((a, n) => a + (n.beats ?? 1), 0) : p.notes.length)),
   );
   const sig = opts.key ? keySignature(opts.key) : undefined;
   const sigCount = Math.abs(sig?.count ?? 0);
-  const left = LEFT + (sigCount ? sigCount * SIG_W + 6 : 0);
+  const timeX = LEFT + (sigCount ? sigCount * SIG_W + 2 : -6);
+  const left = LEFT + (sigCount ? sigCount * SIG_W + 6 : 0) + (opts.time ? 22 : 0);
   const width = left + length * (timed ? BEAT_W : UNTIMED_W) + 20;
   const staffTop = (i: number) => 40 + i * (STAFF_H + 70);
   // Dynamics sit under the music (between the staves of a grand staff), the pedal below them.
@@ -91,6 +93,9 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
         const step = diatonicStep({ letter, accidental: 0, octave: octave - (part.clef === 'bass' ? 2 : 0) });
         svg.append(s('text', { x: LEFT - 6 + i * SIG_W, y: y(step) + 5, class: 'accidental signature' }, sig.count > 0 ? '♯' : '♭'));
       });
+    }
+    if (opts.time) {
+      for (const [i, n] of opts.time.entries()) svg.append(s('text', { x: timeX + 8, y: top + (i ? 37 : 17), class: 'time-sig' }, String(n)));
     }
     // Accidentals already shown in this bar, per staff line or space.
     let shown = new Map<number, -1 | 0 | 1>();

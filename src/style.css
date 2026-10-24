@@ -1096,3 +1096,51 @@ button.danger { color: var(--bad); }
 .improv-checks .mark { font-weight: 700; }
 .improv-checks li.ok .mark { color: var(--ok); }
 .improv-checks li.miss .mark { color: var(--bad); }
+
+/* The Book (src/ui/bookView.ts): long-form theory to read. A narrow column of comfortable
+   text; pictures and checks sit in figures across the column. */
+.book-hero h1 { margin-bottom: var(--space-3); }
+.book-part h2 { margin-bottom: var(--space-1); }
+.book-toc { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: 2px; }
+.book-toc a { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) auto; gap: var(--space-3); align-items: baseline; padding: var(--space-3); border-radius: var(--radius-md); color: var(--ink); text-decoration: none; }
+.book-toc a:hover { background: var(--surface-2); }
+.toc-n { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--muted); text-align: right; }
+.toc-title { font-weight: 600; display: grid; gap: 2px; }
+.toc-summary { font-weight: 400; color: var(--muted); font-size: var(--text-sm); }
+.toc-meta { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--muted); white-space: nowrap; }
+.book-toc li.read .toc-meta { color: var(--ok); }
+.book-chapter { max-width: 760px; margin-inline: auto; }
+.book-crumb { display: block; width: fit-content; margin-bottom: var(--space-3); text-decoration: none; }
+.book-chapter > h1 { margin: var(--space-2) 0 var(--space-3); }
+.book-lede { font-size: var(--text-lg); color: var(--ink-2); margin: 0 0 var(--space-5); }
+.book-text { font-size: clamp(1.02rem, 0.96rem + 0.3vw, 1.125rem); line-height: 1.72; color: var(--ink-2); max-width: 66ch; }
+.book-text p { margin: 0 0 var(--space-4); }
+.book-text strong { color: var(--ink); }
+.book-text h2 { font-size: var(--text-2xl); color: var(--ink); margin: var(--space-7) 0 var(--space-3); }
+.book-text h3 { font-size: var(--text-xl); color: var(--ink); margin: var(--space-6) 0 var(--space-3); }
+.book-text > h3:first-child { margin-top: var(--space-3); }
+.book-text h4 { font-size: var(--text-md); color: var(--ink); margin: var(--space-4) 0 var(--space-2); }
+.book-text ul, .book-text ol { margin: 0 0 var(--space-4); padding-left: 1.4em; }
+.book-text li { margin-bottom: var(--space-2); }
+.book-text .callout { margin: var(--space-4) 0 var(--space-5); }
+.book-text .table-wrap { overflow-x: auto; margin: 0 0 var(--space-5); }
+.book-text table { border-collapse: collapse; font-size: var(--text-sm); min-width: 60%; }
+.book-text th, .book-text td { text-align: left; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line); }
+.book-text th { color: var(--ink); font-weight: 600; }
+.book-figure { margin: var(--space-4) 0 var(--space-5); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--surface-sunken); border: 1px solid var(--line); display: grid; gap: var(--space-3); justify-items: center; }
+.book-figure > * { max-width: 100%; }
+.book-figure .theory-staff { width: 100%; }
+.book-figure .theory-staff svg.staff { display: block; width: 100%; height: auto; margin: 0 auto; }
+.book-figure .theory-keys { width: 100%; }
+.book-figure .theory-keys svg.keyboard { display: block; max-width: 520px; margin: 0 auto; }
+.book-figure .controls { margin: 0; justify-content: center; }
+.book-figure figcaption { font-size: var(--text-sm); color: var(--muted); text-align: center; max-width: 56ch; }
+.book-figure figcaption p { margin: 0; }
+.book-figure .check { width: 100%; justify-self: stretch; }
+.book-practise { margin: var(--space-5) 0 0; padding: var(--space-4); border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--line); }
+.book-practise ul { margin: var(--space-2) 0 0; padding-left: 1.2em; }
+.book-nav { margin-top: var(--space-5); flex-wrap: wrap; }
+.read-step { display: grid; gap: var(--space-3); }
+.read-head h3 { font-size: var(--text-2xl); margin: var(--space-1) 0 var(--space-1); }
+.read-step .book-text { margin-top: var(--space-3); }
+.staff .time-sig { fill: var(--staff-ink); font: 700 22px var(--font-display); text-anchor: middle; }

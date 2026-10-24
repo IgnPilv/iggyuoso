@@ -1,0 +1,18 @@
+# The Book: theory to read, chapter by chapter. Format in content/README.md ("The Book").
+# Chapters are content/book/<id>.md; this file gives their order and parts.
+title: The Book
+intro: |
+  Music theory the way a music school teaches it in the first two years, written for a grown-up
+  beginner. Each chapter explains one idea properly: what it is, why it matters, how it sounds,
+  how it looks on the staff and the keys, and what usually trips people up. Pictures can be
+  played, and the quick checks are there to try, not to pass.
+
+  Every lesson that goes with a chapter opens with it, so you never have to come here first. But
+  the Book is also meant to be read on its own, in order, like a textbook.
+parts:
+  - title: The keyboard, the sound and the page
+    summary: What music is made of, the names of the keys, your hands, the beat, and the first notes on the staff.
+    chapters: [sound-and-pitch, the-keyboard, hands-and-fingers, octaves, beat-and-note-values, the-staff, bass-clef, grand-staff, steps-and-skips]
+  - title: Meter, sharps and flats, first chords
+    summary: Bars and time signatures, counting, loud and soft, semitones, intervals, triads, chord names and numbers, and the first keys with sharps and flats.
+    chapters: [time-signatures, counting, dynamics, semitones, intervals, triads, chord-symbols, key-of-g-and-f, why-keys]

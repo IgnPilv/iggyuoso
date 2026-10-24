@@ -37,6 +37,40 @@ Next to its text, an `explain` step can carry pictures, a sound and a check ques
 - A step `- playground: { clef: treble, notes: C4-G5, prompt: "...", key: G }`: any key pressed in
   that range shows on the staff with its name. Next is always allowed.
 
+## The Book (`content/book/`)
+Theory to read, like a music-school textbook. `book.yaml` gives the title, an intro and the
+`parts`, each with a `title`, `summary` and its `chapters` in order (chapters are numbered through
+the whole book). Each chapter is `content/book/<id>.md`:
+
+````markdown
+---
+title: Lines, spaces and the treble clef
+stage: 1                       # the tree stage it belongs to
+lessons: [treble-staff]        # these lessons open with this chapter ("Read first")
+summary: One or two sentences for the contents page and the top of the chapter.
+---
+
+## A heading
+Markdown: paragraphs, **bold**, *italic*, [links](#/lesson/treble-staff), "- " and "1. " lists,
+"> " rule boxes and | tables |.
+
+```figure
+staff: { notes: "C4:q D4:q E4:h", clef: treble, labels: names, meter: 4/4 }
+keys: { notes: "C4 D4 E4", labels: names }
+sound: "C4:q D4:q E4:h"
+caption: Middle C, D and E.
+check: { ask: "...", choices: [A, B], correct: 0, why: "..." }
+```
+````
+
+A figure takes the theory blocks' `staff`, `keys`, `sound` and `check`, plus a `caption`; plain
+`title`, `summary`, `caption`, `ask` and `why` values may contain colons. `meter` on a staff draws
+the time signature and bar lines (also in explain steps). Checks in the Book never hold anything
+back. Write each chapter for real (no templates): what the idea is, why it matters, how it sounds,
+how it looks on the staff and the keys, history where it helps, common confusions, where it comes
+back in playing, ear and rhythm, and a short "In short". `npm test` checks the files, that listed
+lessons exist, and that each chapter has more than 500 words.
+
 ## Reps and days (any exercise)
 An exercise is **done** after `reps` clean takes (★★★, 92 or more, at a tempo that counts),
 played on at least `days` different days. Defaults: `reps: 3`, `days: 1`; `days` cannot be more

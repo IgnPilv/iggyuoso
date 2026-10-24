@@ -1,5 +1,5 @@
 import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibration';
-import { content, contentErrors, exerciseTitle, nodeOfLesson, songOf, stages, treeNodes } from '../content';
+import { book, content, contentErrors, exerciseTitle, nodeOfLesson, songOf, stages, treeNodes } from '../content';
 import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf, typing } from '../midi/computerKeys';
@@ -9,6 +9,7 @@ import { store } from '../progress/store';
 import { h, s as svgEl, type View } from './dom';
 import { KeyboardView } from './keyboard';
 import { explainBlock, playground } from './theory';
+import { readStep } from './bookView';
 import { mountExercise } from './players';
 import { lessonRecap } from './recap';
 import { stepBar } from './stepBar';
@@ -263,9 +264,15 @@ export const lessonView: View = (root, id?: string) => {
     if (step > 0) nav.append(h('button', { class: 'secondary', onclick: () => { step--; show(); } }, 'Back'));
     if (step >= lesson.steps.length) return showRecap(lesson);
     const s = lesson.steps[step];
-    const next = h('button', { onclick: () => { step++; show(); } }, 'Next');
+    let leave = () => {};
+    const next = h('button', { onclick: () => { leave(); step++; show(); } }, 'Next');
     forward = next;
-    if ('explain' in s) {
+    if ('read' in s) {
+      const block = readStep(book.chapters.get(s.read)!, cal);
+      body.append(block.el);
+      cleanup = block.destroy;
+      leave = block.leave;
+    } else if ('explain' in s) {
       // A check question holds Next until it is answered right.
       next.disabled = true;
       const block = explainBlock(s, cal, () => { next.disabled = false; syncTop(); });
@@ -275,7 +282,7 @@ export const lessonView: View = (root, id?: string) => {
       const block = playground(s, cal);
       body.append(block.el);
       cleanup = block.destroy;
-    } else {
+    } else if ('exercise' in s) {
       const ex = content.exercises.get(s.exercise)!;
       const box = h('div');
       body.append(box);
