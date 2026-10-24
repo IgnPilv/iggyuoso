@@ -1,0 +1,17 @@
+id: song-chfl-arp-tap
+title: 'Can''t Help Falling in Love: tune over eighths'
+kind: tap
+prompt: 'Both rhythms on any keys: the tune on top, six steady eighths below.'
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: x:h. | x:h. | x:h. | r:q. r:e x:e x:e | x:h. | x:h. | x:h. | r:q. r:q x:e | x:h. | x:h. | x:h. | x:q x:e x:q. | x:h.
+  | x:h. | x:h. | r:h.
+left: x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e
+  x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e
+  x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e
+  x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e
+reps: 2
+days: 1

@@ -1,0 +1,43 @@
+id: song-chfl-arpeggios
+title: 'Can''t Help Falling in Love 5: the rolling left hand'
+skills:
+- songs
+steps:
+- explain: |
+    From the second verse the left hand **rolls**: six eighths a bar, root and fifth, up to the chord's third or
+    octave and back down. It turns each long note of the tune into a gently rocking boat.
+
+    Learn the jumps first with only root and fifth on the two big beats, then fill in the roll.
+  staff:
+    notes: D2:e A2:e F#3:e A2:e D3:e A2:e | F#2:e C#3:e A3:e C#3:e F#3:e C#3:e | B2:e F#3:e D3:e F#3:e B3:e F#3:e | B2:e F#3:e
+      D3:e F#3:e B3:e F#3:e
+    clef: bass
+    key: D
+  sound: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e
+  keys:
+    notes: D2 A2 F#3
+    fingers: 5 2 1
+  terms:
+  - broken chord
+  - arpeggio
+  - tenth
+  callout: |
+    D: D A F♯ A D A. Fingers 5 2 1 2 1 2, the hand open, wrist loose.
+- explain: |
+    Over D the roll reaches up to F♯, a **tenth** above the root (an octave and a third). Over other chords it
+    reaches the octave, so the left hand stays clear of the tune's low notes.
+  check:
+    ask: D2 to F♯3 is...
+    choices:
+    - An octave
+    - A sixth
+    - A fifth
+    - A tenth (an octave and a third)
+    correct: 3
+    why: D to F♯ is a third; an octave higher it is a tenth.
+- exercise: song-chfl-fifths
+- exercise: song-chfl-arp-lh
+- exercise: song-chfl-arp-tap
+- exercise: song-chfl-verse2
+- exercise: song-chfl-bridge-arp
+recap: 'The rolling left hand: six eighths a bar, root, fifth, up and back.'

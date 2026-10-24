@@ -1,0 +1,23 @@
+id: song-chfl-chords-build
+title: 'Can''t Help Falling in Love: find the chords'
+kind: build
+prompt: Hold each chord down together.
+tasks:
+- chord: D
+  octave: 3
+- chord: F#m
+  octave: 3
+- chord: Bm
+  octave: 3
+- chord: G
+  octave: 3
+- chord: A
+  octave: 3
+- notes: A2 D3 F#3
+  ask: 'D, the way the left hand plays it: A D F♯'
+  together: true
+- notes: A2 C#3 F#3
+  ask: 'F♯ minor, the way the left hand plays it: A C♯ F♯'
+  together: true
+reps: 3
+days: 1

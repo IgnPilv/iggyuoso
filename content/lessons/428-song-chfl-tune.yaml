@@ -1,0 +1,72 @@
+id: song-chfl-tune
+title: 'Can''t Help Falling in Love 1: the tune'
+skills:
+- songs
+steps:
+- explain: |
+    **Can't Help Falling in Love** · Elvis Presley, 1961
+
+    One of the best-loved slow songs ever recorded. Its tune is much older: it is a reworking of **"Plaisir
+    d'amour"**, a French love song by Jean-Paul-Égide Martini from 1784. Seven lessons build it up: the tune, the
+    chords, the verse with both hands, the middle section, the rolling left hand, the ending and the pedal, then
+    the whole song.
+
+    The song itself is still under copyright, so it is in the songbook because you asked for it. The arrangement
+    here is our own, in **D major**, the key Elvis sings it in: two sharps, F♯ and C♯.
+  staff:
+    notes: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e
+    key: D
+  sound: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e
+- explain: |
+    **Two slow beats in a bar.** The song is in **6/8**: six eighths a bar, felt as two big beats of three,
+    "**1** 2 3 **4** 5 6". Most notes of the tune last a whole bar, so you hear a long note on every bar line, and
+    the music sways like a slow dance.
+
+    Count it in big beats: "**one** and a **two** and a". A note that fills the bar is a dotted half: two big
+    beats.
+  staff:
+    notes: D4:h. | A4:h. | D4:q. r:e E4:e F#4:e | G4:h.
+    key: D
+  terms:
+  - 6/8
+  - compound time
+  - dotted half
+  callout: |
+    6/8 = two beats of three eighths. Most of the tune: one long note a bar.
+  check:
+    ask: How many eighths fill a bar of 6/8?
+    choices:
+    - Six
+    - Three
+    - Four
+    - Eight
+    correct: 0
+    why: Six eighths, in two groups of three.
+- explain: |
+    **The shape of the tune.** It starts on the D above middle C, leaps up a fifth to A and comes back.
+    Then it climbs by step and falls again: E F♯ **G** F♯ E. The third line starts low, on the A below middle C,
+    and walks up the scale to D, then circles round to land home on D.
+
+    Two short notes before a long one are a **pickup** into the next bar: lean through them, don't stop on them.
+  keys:
+    notes: A3 B3 C#4 D4 E4 F#4 G4 A4
+    labels: names
+  terms:
+  - leap
+  - step
+  - pickup
+  check:
+    ask: The tune starts on D and then jumps to A. How far is that?
+    choices:
+    - A third
+    - An octave
+    - A fourth
+    - A fifth
+    correct: 3
+    why: 'D E F♯ G A: five letters, a fifth.'
+- exercise: song-chfl-tune-tap
+- exercise: song-chfl-tune-tap-hands
+- exercise: song-chfl-tune-echo
+- exercise: song-chfl-tune-rh
+- exercise: song-chfl-tune-roots
+recap: 'The tune: two slow beats a bar in 6/8, from D up a fifth and home again.'

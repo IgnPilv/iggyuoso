@@ -555,3 +555,17 @@ never copied pages). Start small, adapt as we go.
   mirrored at the top next to the step bar (Next / Skip on a step, Next lesson on the recap), and
   Enter presses the main (non-secondary) button, unless a control was reached with the keyboard
   (a clicked or tapped button doesn't keep Enter). Demo scene "Pause and keys".
+- 2026-10-24: "Can't Help Falling in Love" (Elvis Presley, 1961) added to Songs at Ignas's explicit request,
+  **overriding the public-domain rule for this title too** (the coordinator flagged the copyright; its tune
+  comes from Martini's "Plaisir d'amour", 1784, which is public domain). No MIDI could be downloaded from
+  the session (MIDI sites are blocked), so the melody was checked against published letter notes and chord
+  charts and written as **our own arrangement** in `tools/content/chfl.py`: **D major** (Ignas: "do it in D
+  major key", Elvis's key), 6/8, dotted quarter = 66, verse ×2, bridge, last verse and the closing line again
+  (66 bars). Verse chords I iii vi IV V (D F♯m Bm G A); bridge F♯m–C♯7 (secondary dominant) ×3, then F♯m B7
+  Em A7. Left hand three ways (roots; bass and chord; rolling eighths), kept under the tune's lowest note;
+  the script checks that no key is held by both hands at once. Seven steps under `song: song-chfl` (the tune,
+  the chords, the verse with both hands, the bridge, the rolling left hand, the ending and the pedal, the
+  whole song in three versions plus a pedalled performance), stages 6–8, each needing a milestone and
+  cross-branch nodes (6/8, compound time, D major, ii/iii/vi, accompaniment, B minor, the dominant seventh,
+  arpeggios, legato pedal, secondary dominants). No lyrics. The demo's "A song in steps" scene already
+  covers songs taught in steps, so it is unchanged.

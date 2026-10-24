@@ -1,0 +1,23 @@
+id: song-chfl-tune-echo
+title: 'Can''t Help Falling in Love: the tune by ear'
+kind: ear
+prompt: Play each phrase of the tune back after hearing it. The lit keys are the ones it uses.
+questions: 8
+reps: 2
+days: 1
+items:
+- type: melody
+  notes: D4 A4 D4
+  plays: 3
+  lit: true
+- type: melody
+  notes: E4 F#4 G4 F#4 E4
+  plays: 3
+  lit: true
+- type: melody
+  notes: A3 B3 C#4 D4
+  plays: 3
+  lit: true
+- type: melody
+  notes: E4 F#4 G4 F#4 E4 D4
+  plays: 3

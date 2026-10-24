@@ -1,0 +1,25 @@
+id: song-chfl-easy
+title: Can't Help Falling in Love, easy version
+kind: timed
+hand: together
+prompt: 'The whole tune over one bass note a bar: the map of the song under your fingers.'
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e | B3:h. | C#4:h. | D4:h. |
+  E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h. | r:h. | D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~
+  | E4:q. r:q A3:e | B3:h. | C#4:h. | D4:h. | E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h. | r:h. | C#4:e F#4:e A4:e C#5:q. |
+  B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | A4:q. A4:q. | F#4:q A4:e F#4:q. | G4:h.~ | G4:q.
+  r:q. | D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e | B3:h. | C#4:h. | D4:h.
+  | E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h. | r:q. r:q A3:e | B3:h. | C#4:h. | D4:h. | E4:q F#4:e G4:q. | F#4:h. | E4:h.
+  | D4:h.~ | D4:h.
+left: D3:h. | F#3:h. | B2:h. | B2:h. | G2:h. | D3:h. | A2:h. | A2:h. | G2:h. | A2:h. | B2:h. | G2:h. | D3:h. | A2:h. | D3:h.
+  | D3:h. | D3:h. | F#3:h. | B2:h. | B2:h. | G2:h. | D3:h. | A2:h. | A2:h. | G2:h. | A2:h. | B2:h. | G2:h. | D3:h. | A2:h.
+  | D3:h. | D3:h. | F#3:h. | C#3:h. | F#3:h. | C#3:h. | F#3:h. | C#3:h. | F#3:h. | B2:h. | E3:h. | A2:h. | D3:h. | F#3:h.
+  | B2:h. | B2:h. | G2:h. | D3:h. | A2:h. | A2:h. | G2:h. | A2:h. | B2:h. | G2:h. | D3:h. | A2:h. | D3:h. | A2:h. | G2:h.
+  | A2:h. | B2:h. | G2:h. | D3:h. | A2:h. | D3:h. | D3:h.
+reps: 2
+days: 1

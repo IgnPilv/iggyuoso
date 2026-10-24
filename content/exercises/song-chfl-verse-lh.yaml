@@ -1,0 +1,16 @@
+id: song-chfl-verse-lh
+title: 'Can''t Help Falling in Love: verse left hand'
+kind: timed
+hand: left
+prompt: Left hand alone, bass and chord through the verse. Quiet chords, a slightly firmer bass.
+display: staff
+key: D
+tempo: 58
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: D2:q. A2+D3+F#3:q. | F#2:q. A2+C#3+F#3:q. | B2:q. D3+F#3+B3:q. | B2:q. D3+F#3+B3:q. | G2:q. B2+D3+G3:q. | D2:q. A2+D3+F#3:q.
+  | A2:q. C#3+E3:q. | A2:q. C#3+E3:q. | G2:q. B2+D3+G3:q. | A2:q. C#3+E3:q. | B2:q. D3+F#3+B3:q. | G2:q. B2+D3+G3:q. | D2:q.
+  A2+D3+F#3:q. | A2:q. C#3+E3:q. | D2:q. A2+D3+F#3:q. | D2:q. A2+D3+F#3:q.
+reps: 2
+days: 1

@@ -1,0 +1,40 @@
+id: song-chfl-verse
+title: 'Can''t Help Falling in Love 3: the verse, both hands'
+skills:
+- songs
+steps:
+- explain: |
+    **Bass and chord.** The left hand plays the bass on the first big beat and the chord on the second: "**low**
+    – chord, **low** – chord", like a slow waltz with two steps. The right hand's long notes sit on top and ring
+    over both.
+
+    The tune's pickups (two eighths, or one) come at the end of a bar while the left hand holds its chord: let the
+    right hand move alone there.
+  staff:
+    notes: D2:q. A2+D3+F#3:q. | F#2:q. A2+C#3+F#3:q. | B2:q. D3+F#3+B3:q. | B2:q. D3+F#3+B3:q.
+    clef: bass
+    key: D
+  sound: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e
+  terms:
+  - bass and chord
+  - accompaniment
+- explain: |
+    **Ties.** In bars 3 and 7 the tune's note is held across the bar line and the pickup comes after it. A tie
+    joins two notes of the same pitch into one: press once, keep holding.
+  staff:
+    notes: D4:h.~ | D4:q. r:e E4:e F#4:e
+    key: D
+  check:
+    ask: Two notes of the same pitch joined by a curve across a bar line are...
+    choices:
+    - 'Slurred: play both smoothly'
+    - Repeated
+    - Accented
+    - 'Tied: play once, hold for both'
+    correct: 3
+    why: A tie adds the second note's length to the first.
+- exercise: song-chfl-verse-lh
+- exercise: song-chfl-verse-half
+- exercise: song-chfl-verse
+- exercise: song-chfl-two-verses
+recap: 'The verse with both hands: bass on beat one, chord on beat two, the tune long above.'

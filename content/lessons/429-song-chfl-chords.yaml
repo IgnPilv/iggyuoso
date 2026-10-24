@@ -1,0 +1,58 @@
+id: song-chfl-chords
+title: 'Can''t Help Falling in Love 2: the chords'
+skills:
+- songs
+steps:
+- explain: |
+    The verse uses five chords of D major, one to a bar: **D**, **F♯ minor**, **B minor**, **G** and **A**.
+
+    As numerals: **I**, **iii**, **vi**, **IV** and **V**. The first line goes I – iii – vi: each chord shares two
+    notes with the one before, so the harmony glides down in thirds while the tune leaps up and back.
+  staff:
+    notes: D4+F#4+A4:h. | C#4+F#4+A4:h. | B3+D4+F#4:h. | B3+D4+G4:h. | C#4+E4+A4:h.
+    key: D
+  sound: D3+D4+F#4+A4:h. | F#3+C#4+F#4+A4:h. | B2+B3+D4+F#4:h. | G2+B3+D4+G4:h. | A2+C#4+E4+A4:h.
+  terms:
+  - I
+  - iii
+  - vi
+  - IV
+  - V
+  callout: |
+    D – F♯m – Bm – G – A: I – iii – vi – IV – V.
+- explain: |
+    **Why minor chords in a major key?** Build a chord on every note of D major and three come out minor:
+    E minor (ii), F♯ minor (iii) and B minor (vi). B minor is D major's **relative minor**, which is why the song turns
+    tender after the leap: the harmony slips from D to its minor relative.
+  keys:
+    notes: B3 D4 F#4
+    labels: names
+  sound: D3+D4+F#4+A4:h. B2+B3+D4+F#4:h.
+  check:
+    ask: Which chord is vi in D major?
+    choices:
+    - B major
+    - B minor
+    - F♯ minor
+    - G major
+    correct: 1
+    why: The sixth note of D major is B, and the chord on it (B D F♯) is minor.
+- explain: |
+    **Each line ends on V or I.** Line one ends on Bm (with a pickup), line two lands on **A**, the dominant, and
+    waits; line three climbs over G, A and Bm; the last line is D – A – D: home, away, home. Hear how the A chord
+    asks a question and the D answers it.
+  sound: G2+B3+D4+G4:h. | A2+C#4+E4+A4:h. | B2+B3+D4+F#4:h. | G2+B3+D4+G4:h. | D3+D4+F#4+A4:h. | A2+C#4+E4+A4:h. | D3+D4+F#4+A4:h.
+  check:
+    ask: The chord on the fifth note of the key, A in D major, is called...
+    choices:
+    - The tonic (I)
+    - The dominant (V)
+    - The subdominant (IV)
+    - The relative minor (vi)
+    correct: 1
+    why: 'V is the dominant: it pulls back to I.'
+- exercise: song-chfl-chords-build
+- exercise: song-chfl-chords-ear
+- exercise: song-chfl-chords-held
+- exercise: song-chfl-chords-pattern
+recap: 'Five chords, one a bar: D, F♯m, Bm, G, A. I iii vi IV V, gliding down in thirds.'

@@ -1,0 +1,17 @@
+id: song-chfl-tune-roots
+title: 'Can''t Help Falling in Love: tune over bass notes'
+kind: timed
+hand: together
+prompt: 'Both hands, the easy way: one low note a bar under the tune, both hands on the bar line.'
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e | B3:h. | C#4:h. | D4:h. |
+  E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h. | r:h.
+left: D3:h. | F#3:h. | B2:h. | B2:h. | G2:h. | D3:h. | A2:h. | A2:h. | G2:h. | A2:h. | B2:h. | G2:h. | D3:h. | A2:h. | D3:h.
+  | D3:h.
+reps: 3
+days: 2

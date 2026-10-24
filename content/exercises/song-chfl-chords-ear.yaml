@@ -1,0 +1,25 @@
+id: song-chfl-chords-ear
+title: 'Can''t Help Falling in Love: which progression?'
+kind: ear
+prompt: 'Four chords play: is it the song''s I iii vi IV, or another famous one? Then single chords: name them.'
+questions: 12
+reps: 2
+days: 2
+items:
+- type: progression
+  key:
+  - D
+  pool:
+  - I iii vi IV
+  - I vi IV V
+  - I V vi IV
+  - I IV V I
+  choices: 4
+- type: function
+  key: D
+  pool:
+  - I
+  - iii
+  - vi
+  - IV
+  - V

@@ -1,0 +1,13 @@
+id: song-chfl-bridge-tap
+title: 'Can''t Help Falling in Love: tap the bridge'
+kind: tap
+prompt: 'Three quick eighths and a long note, then a long one: the waves. Then the longer way home.'
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+rhythm: x:e x:e x:e x:q. | x:h. | x:e x:e x:e x:q. | x:h. | x:e x:e x:e x:q. | x:h. | x:q. x:q. | x:q x:e x:q. | x:h. | r:q.
+  r:q.
+reps: 2
+days: 1

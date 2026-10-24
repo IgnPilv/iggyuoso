@@ -1,0 +1,15 @@
+id: song-chfl-chords-held
+title: 'Can''t Help Falling in Love: held chords'
+kind: timed
+hand: left
+prompt: 'Left hand: the verse''s chords, one a bar. Keep the notes that stay, move only the fingers that must.'
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: A2+D3+F#3:h. | A2+C#3+F#3:h. | D3+F#3+B3:h. | D3+F#3+B3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | C#3+E3:h. | C#3+E3:h. | B2+D3+G3:h.
+  | C#3+E3:h. | D3+F#3+B3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | C#3+E3:h. | A2+D3+F#3:h. | A2+D3+F#3:h.
+reps: 2
+days: 1

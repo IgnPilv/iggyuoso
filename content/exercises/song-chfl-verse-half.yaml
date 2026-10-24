@@ -1,0 +1,17 @@
+id: song-chfl-verse-half
+title: 'Can''t Help Falling in Love: the first half'
+kind: timed
+hand: together
+prompt: Both hands, first half of the verse. Both hands together on beat one; the right hand holds while the left plays the
+  chord.
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e
+left: D2:q. A2+D3+F#3:q. | F#2:q. A2+C#3+F#3:q. | B2:q. D3+F#3+B3:q. | B2:q. D3+F#3+B3:q. | G2:q. B2+D3+G3:q. | D2:q. A2+D3+F#3:q.
+  | A2:q. C#3+E3:q. | A2:q. C#3+E3:q.
+reps: 3
+days: 2

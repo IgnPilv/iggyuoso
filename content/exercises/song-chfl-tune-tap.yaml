@@ -1,0 +1,13 @@
+id: song-chfl-tune-tap
+title: 'Can''t Help Falling in Love: tap the tune'
+kind: tap
+prompt: 'The verse''s rhythm on any key: mostly one long tap a bar. Count "one and a two and a" and let the pickups lead on.'
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+rhythm: x:h. | x:h. | x:h. | r:q. r:e x:e x:e | x:h. | x:h. | x:h. | r:q. r:q x:e | x:h. | x:h. | x:h. | x:q x:e x:q. | x:h.
+  | x:h. | x:h. | r:h.
+reps: 2
+days: 1

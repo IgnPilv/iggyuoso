@@ -1,0 +1,20 @@
+id: song-chfl-bridge-build
+title: 'Can''t Help Falling in Love: the bridge chords'
+kind: build
+prompt: Hold each chord down together. Sevenths have four notes.
+tasks:
+- chord: F#m
+  octave: 3
+- notes: C#3 E#3 G#3 B3
+  ask: 'C♯7: C♯ E♯ G♯ B (E♯ is the white key F)'
+  together: true
+- notes: B2 D#3 F#3 A3
+  ask: 'B7: B D♯ F♯ A'
+  together: true
+- chord: Em
+  octave: 3
+- notes: A2 C#3 E3 G3
+  ask: 'A7: A C♯ E G'
+  together: true
+reps: 3
+days: 1

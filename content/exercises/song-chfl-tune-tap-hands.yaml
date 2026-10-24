@@ -1,0 +1,15 @@
+id: song-chfl-tune-tap-hands
+title: 'Can''t Help Falling in Love: tune over the beat'
+kind: tap
+prompt: Left hand taps the two big beats of every bar; right hand taps the tune.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: x:h. | x:h. | x:h. | r:q. r:e x:e x:e | x:h. | x:h. | x:h. | r:q. r:q x:e | x:h. | x:h. | x:h. | x:q x:e x:q. | x:h.
+  | x:h. | x:h. | r:h.
+left: x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q.
+  | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q.
+reps: 2
+days: 1

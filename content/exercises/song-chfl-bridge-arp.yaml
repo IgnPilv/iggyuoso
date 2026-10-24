@@ -1,0 +1,18 @@
+id: song-chfl-bridge-arp
+title: 'Can''t Help Falling in Love: bridge over the roll'
+kind: timed
+hand: together
+prompt: 'The bridge over the roll. In the waves both hands move in eighths: listen that they meet.'
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | A4:q. A4:q. |
+  F#4:q A4:e F#4:q. | G4:h.~ | G4:q. r:q.
+left: F#2:e C#3:e A3:e C#3:e F#3:e C#3:e | C#3:e G#3:e B3:e G#3:e E#3:e G#3:e | F#2:e C#3:e A3:e C#3:e F#3:e C#3:e | C#3:e
+  G#3:e B3:e G#3:e E#3:e G#3:e | F#2:e C#3:e A3:e C#3:e F#3:e C#3:e | C#3:e G#3:e B3:e G#3:e E#3:e G#3:e | F#2:e C#3:e A3:e
+  C#3:e F#3:e C#3:e | B2:e F#3:e A3:e F#3:e D#3:e F#3:e | E2:e B2:e G3:e B2:e E3:e B2:e | A2:e E3:e G3:e E3:e C#3:e E3:e
+reps: 3
+days: 2
