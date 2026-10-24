@@ -6,7 +6,7 @@ prompt: 'Right hand alone. Thumb around C♯, and let the hand walk: the tune on
   G♯.'
 display: staff
 key: E
-tempo: 80
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

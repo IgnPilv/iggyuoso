@@ -3,7 +3,7 @@ title: 'Where Is My Mind: tap the "ooh"'
 kind: tap
 prompt: Left hand on every beat, right hand in between. Don't let the right hand pull the left off the beat.
 display: staff
-tempo: 80
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

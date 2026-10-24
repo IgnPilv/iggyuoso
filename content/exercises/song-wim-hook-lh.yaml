@@ -5,7 +5,7 @@ hand: left
 prompt: 'Left hand alone: bass and chord, then the break''s long A and two bass notes.'
 display: staff
 key: E
-tempo: 88
+tempo: 52
 tempoLadder: true
 meter: 4/4
 countIn: 1

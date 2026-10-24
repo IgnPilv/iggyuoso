@@ -5,7 +5,7 @@ hand: together
 prompt: 'The first half of the song, start to break: intro, verse, "ooh", break.'
 display: staff
 key: E
-tempo: 96
+tempo: 58
 tempoLadder: true
 meter: 4/4
 countIn: 1

@@ -5,7 +5,7 @@ hand: together
 prompt: The whole tune over one bass note per chord. The map of the song under your fingers.
 display: staff
 key: E
-tempo: 96
+tempo: 58
 tempoLadder: true
 meter: 4/4
 countIn: 1

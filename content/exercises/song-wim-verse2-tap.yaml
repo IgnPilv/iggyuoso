@@ -4,7 +4,7 @@ kind: tap
 prompt: 'Both rhythms at once on any keys: the verse on top, steady eighths below. Watch where the right hand lands between
   them.'
 display: staff
-tempo: 72
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

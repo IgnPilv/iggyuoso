@@ -5,7 +5,7 @@ hand: right
 prompt: Right hand alone. Keep the wrist loose and rock between thumb and third finger, like a little seesaw.
 display: staff
 key: E
-tempo: 100
+tempo: 60
 tempoLadder: true
 meter: 4/4
 countIn: 1

@@ -499,7 +499,7 @@ never copied pages). Start small, adapt as we go.
   generated Ode to Joy file (`demo.midiFile`) and plays it.
 - 2026-10-24: "Where Is My Mind" (Pixies, 1988), Maxence Cyrin's piano version, added to Songs at Ignas's
   explicit request, **overriding the public-domain rule for this title only** (he was told it is under
-  copyright). Transcribed from his two-track MIDI (E major, 4/4, quarter = 120; fermatas left out, the
+  copyright). Transcribed from his two-track MIDI (E major, 4/4, quarter = 72 as recorded (the file says 120); fermatas left out, the
   32nd-note turn as two sixteenths, one empty bar dropped; 43 bars) in `tools/content/wim.py`. Unlike the
   one-lesson songs it is a ladder of seven song lessons, each a `songs` node needing the one before plus
   cross-branch requirements: 1 the riff (stage 4: tap, riff, bass roots, together), 2 the four chords

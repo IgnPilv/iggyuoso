@@ -5,7 +5,7 @@ hand: left
 prompt: 'Left hand: root and fifth of each chord, in quarters. Fingers 5 and 2.'
 display: staff
 key: E
-tempo: 90
+tempo: 54
 tempoLadder: true
 meter: 4/4
 countIn: 1

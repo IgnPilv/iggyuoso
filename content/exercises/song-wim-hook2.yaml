@@ -5,7 +5,7 @@ hand: together
 prompt: The "ooh" again, now over the rolling left hand.
 display: staff
 key: E
-tempo: 90
+tempo: 54
 tempoLadder: true
 meter: 4/4
 countIn: 1

@@ -5,7 +5,7 @@ hand: together
 prompt: 'The second verse: the tune over the rolling left hand.'
 display: staff
 key: E
-tempo: 84
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

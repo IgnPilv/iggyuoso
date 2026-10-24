@@ -5,7 +5,7 @@ hand: together
 prompt: 'Both hands, the easy way: one bass note per chord while the right hand sings.'
 display: staff
 key: E
-tempo: 72
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1

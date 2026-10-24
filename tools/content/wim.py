@@ -1,13 +1,13 @@
 # "Where Is My Mind" (Pixies, 1988), in Maxence Cyrin's piano version: a ladder of seven song lessons
 # from the riff to the whole piece. Not public domain: added at the owner's explicit request
-# (CLAUDE.md, 2026-10-24). Transcribed from his two-track MIDI (quarter = 120, E major, 4/4), with
+# (CLAUDE.md, 2026-10-24). Transcribed from his two-track MIDI (E major, 4/4; the file says quarter = 120, but the recording is about 72), with
 # the fermatas left out, the 32nd-note turn written as two sixteenths and one empty bar dropped.
 # Runs after the older generators so their lesson files keep their numbers.
 from lib import *
 
 TITLE = 'Where Is My Mind'
 ABOUT = 'Pixies, 1988 · piano version by Maxence Cyrin'
-KEY, METER, TEMPO = 'E', '4/4', 120
+KEY, METER, TEMPO = 'E', '4/4', 72
 
 # ---------------------------------------------------------------- the right hand, section by section
 
@@ -126,17 +126,17 @@ def run(base):
           terms=['E major', 'major third', 'riff'],
           check=check('How many sharps does E major have?', 'Four', ['Two', 'Three', 'Five'], 'F♯, C♯, G♯ and D♯: four sharps.')),
         X(tap('song-wim-riff-tap', f'{TITLE}: tap the riff', bars(*[rx('e e e e e e e e')] * 2, rx('e e e s s e s s e e'), rx('e e e e e e e e')),
-              meter=METER, tempo=100, reps=2, days=1, display='staff',
+              meter=METER, tempo=60, reps=2, days=1, display='staff',
               prompt='The riff is steady eighths, two to every beat: "1 and 2 and". Bar 3 hides two quick pairs of sixteenths.')),
         X(tap2('song-wim-riff-tap-hands', f'{TITLE}: riff over the bass', bars(*[rx('e e e e e e e e')] * 4), bars(*[rx('h h')] * 4),
-               meter=METER, tempo=100, reps=2, days=1, display='staff',
+               meter=METER, tempo=60, reps=2, days=1, display='staff',
                prompt='Right hand in eighths, left hand in halves: two left-hand taps to every eight on the right.')),
-        X(timed('song-wim-riff-rh', f'{TITLE}: the riff', right=bars(RIFF, RIFF, RIFF, RIFF2, RIFF, RIFF2), tempo=100, reps=3, days=2,
+        X(timed('song-wim-riff-rh', f'{TITLE}: the riff', right=bars(RIFF, RIFF, RIFF, RIFF2, RIFF, RIFF2), tempo=60, reps=3, days=2,
                 prompt='Right hand alone. Keep the wrist loose and rock between thumb and third finger, like a little seesaw.', **common)),
-        X(timed('song-wim-riff-roots', f'{TITLE}: bass notes', left=bars('E3:w', 'E3:w', ROOTS, ROOTS), tempo=100, reps=2, days=1,
+        X(timed('song-wim-riff-roots', f'{TITLE}: bass notes', left=bars('E3:w', 'E3:w', ROOTS, ROOTS), tempo=60, reps=2, days=1,
                 prompt='Left hand alone: E, then four roots, two to a bar: E, C♯, G♯, A. Each one rings for two beats.', **common)),
         X(timed('song-wim-riff-together', f'{TITLE}: riff and bass', right=bars(RIFF, RIFF, RIFF, RIFF2, RIFF, RIFF2),
-                left=bars('E3:w', 'E3:w', ROOTS, ROOTS), tempo=100, reps=3, days=2,
+                left=bars('E3:w', 'E3:w', ROOTS, ROOTS), tempo=60, reps=3, days=2,
                 prompt='Both hands. The left hand lands with the first eighth of each half bar; the riff never stops.', **common)),
     ], 'The riff: E and G♯ rocking in eighths, D♯ leaning back home, over four bass notes.')
 
@@ -168,12 +168,12 @@ def run(base):
             {'type': 'progression', 'key': ['E'], 'pool': ['I vi III IV', 'I vi IV V', 'I V vi IV', 'I IV V I'], 'choices': 4},
             {'type': 'function', 'key': 'E', 'pool': ['I', 'vi', 'III', 'IV']}], questions=12, reps=2, days=2,
             prompt='Four chords play: is it the song\'s I vi III IV, or another famous one? Then single chords: name them.')),
-        X(timed('song-wim-chords-held', f'{TITLE}: held chords', left=bars(*HELD, *HELD), tempo=96, reps=2, days=1,
+        X(timed('song-wim-chords-held', f'{TITLE}: held chords', left=bars(*HELD, *HELD), tempo=58, reps=2, days=1,
                 prompt='Left hand: the four chords, two beats each. Move only the fingers that must move.', **common)),
-        X(timed('song-wim-chords-pattern', f'{TITLE}: bass and chord', left=bars(*loop(BASS_CHORD, 4)), tempo=96, reps=3, days=2,
+        X(timed('song-wim-chords-pattern', f'{TITLE}: bass and chord', left=bars(*loop(BASS_CHORD, 4)), tempo=58, reps=3, days=2,
                 prompt='Now the real pattern: a low bass note, then the chord. Jump down, jump back, and look ahead to the next bass.', **common)),
         X(timed('song-wim-intro', f'{TITLE}: the intro', right=bars(RIFF, RIFF, RIFF, RIFF2, RIFF, RIFF2),
-                left=bars(*END_LH, *loop(BASS_CHORD, 4)), tempo=100, reps=3, days=2,
+                left=bars(*END_LH, *loop(BASS_CHORD, 4)), tempo=60, reps=3, days=2,
                 prompt='The intro as Maxence Cyrin plays it: the riff over a long low E, then over bass and chord.', **common)),
     ], 'Four chords, two beats each: E, C♯m, G♯ (with B♯, the key C) and A. I vi III IV.')
 
@@ -191,20 +191,20 @@ def run(base):
         S("""Clap or tap it first, saying the counts out loud. Then hear the tune and play it back. Only then put it under
         your fingers.""",
           check=check('A note that starts on "a" (the last sixteenth of beat 1) and is held over beat 2 is...', 'Syncopated', ['On the beat', 'A rest', 'A triplet'], 'It starts off the beat and holds across it: syncopation.')),
-        X(tap('song-wim-verse-tap', f'{TITLE}: tap the verse', verse_rhythm, meter=METER, tempo=72, reps=3, days=2, display='staff',
+        X(tap('song-wim-verse-tap', f'{TITLE}: tap the verse', verse_rhythm, meter=METER, tempo=50, reps=3, days=2, display='staff',
               prompt='The verse rhythm alone, on any key. Count "1 e and a" under your breath.')),
         X(ear('song-wim-verse-echo', f'{TITLE}: verse by ear', [
             {'type': 'melody', 'notes': 'G#4 G#4 E4 E4 D#4 D#4', 'plays': 3, 'lit': True},
             {'type': 'melody', 'notes': 'E4 E4 D#4 D#4 C#4 C#4 D#4', 'plays': 3, 'lit': True},
             {'type': 'melody', 'notes': 'G#4 F#4 E4 C#4', 'plays': 3}], questions=6, reps=2, days=1,
             prompt='Play the verse\'s phrases back from hearing them. The lit keys are the ones the phrase uses.')),
-        X(timed('song-wim-verse-rh', f'{TITLE}: the verse tune', right=bars(*VERSE), tempo=80, reps=3, days=2,
+        X(timed('song-wim-verse-rh', f'{TITLE}: the verse tune', right=bars(*VERSE), tempo=50, reps=3, days=2,
                 prompt='Right hand alone. Thumb around C♯, and let the hand walk: the tune only moves by small steps, plus one dip to low G♯.', **common)),
-        X(timed('song-wim-verse-roots', f'{TITLE}: verse over bass notes', right=bars(*VERSE), left=bars(ROOTS, ROOTS, ROOTS), tempo=72, reps=2, days=1,
+        X(timed('song-wim-verse-roots', f'{TITLE}: verse over bass notes', right=bars(*VERSE), left=bars(ROOTS, ROOTS, ROOTS), tempo=50, reps=2, days=1,
                 prompt='Both hands, the easy way: one bass note per chord while the right hand sings.', **common)),
-        X(timed('song-wim-verse-lh', f'{TITLE}: verse left hand', left=bars(*loop(BASS_TWO, 6)), tempo=80, reps=2, days=1,
+        X(timed('song-wim-verse-lh', f'{TITLE}: verse left hand', left=bars(*loop(BASS_TWO, 6)), tempo=50, reps=2, days=1,
                 prompt='The verse\'s left hand: bass, then two notes of the chord. Lighter than in the intro.', **common)),
-        X(timed('song-wim-verse', f'{TITLE}: the verse', right=bars(*VERSE), left=bars(*loop(BASS_TWO, 6)), tempo=88, reps=3, days=2,
+        X(timed('song-wim-verse', f'{TITLE}: the verse', right=bars(*VERSE), left=bars(*loop(BASS_TWO, 6)), tempo=52, reps=3, days=2,
                 prompt='Both hands. The left hand is steady quarters; the right hand floats over it, early and late.', **common)),
     ], 'The verse: short, short, long, with the long note arriving just before the beat.')
 
@@ -221,17 +221,17 @@ def run(base):
         back into the verse.""",
           staff=staff(bars(*BREAK), key=KEY), sound=bars(*BREAK),
           check=check('Which note turns A major into A minor?', 'C natural', ['C♯', 'G♯', 'E'], 'A major is A C♯ E; A minor is A C E. The C natural makes it minor.')),
-        X(tap2('song-wim-hook-tap', f'{TITLE}: tap the "ooh"', hook_rhythm, bars(*[rx('q q q q')] * 4), meter=METER, tempo=80, reps=2, days=1,
+        X(tap2('song-wim-hook-tap', f'{TITLE}: tap the "ooh"', hook_rhythm, bars(*[rx('q q q q')] * 4), meter=METER, tempo=50, reps=2, days=1,
                display='staff', prompt='Left hand on every beat, right hand in between. Don\'t let the right hand pull the left off the beat.')),
-        X(timed('song-wim-hook-rh', f'{TITLE}: the "ooh" and the break', right=bars(*HOOK, *BREAK), tempo=88, reps=3, days=2,
+        X(timed('song-wim-hook-rh', f'{TITLE}: the "ooh" and the break', right=bars(*HOOK, *BREAK), tempo=52, reps=3, days=2,
                 prompt='Right hand alone. Fourth finger on G♯, thumb on C♯; in the break, the high chord is fingers 1 2 4.', **common)),
-        X(timed('song-wim-hook-lh', f'{TITLE}: "ooh" left hand', left=bars(*loop(BASS_CHORD, 4), *BREAK_LH), tempo=88, reps=2, days=1,
+        X(timed('song-wim-hook-lh', f'{TITLE}: "ooh" left hand', left=bars(*loop(BASS_CHORD, 4), *BREAK_LH), tempo=52, reps=2, days=1,
                 prompt='Left hand alone: bass and chord, then the break\'s long A and two bass notes.', **common)),
         X(timed('song-wim-hook', f'{TITLE}: "ooh" and break together', right=bars(*HOOK, *BREAK), left=bars(*loop(BASS_CHORD, 4), *BREAK_LH),
-                tempo=96, reps=3, days=2, prompt='Both hands. Feel the right hand fall between the left hand\'s beats.', **common)),
+                tempo=58, reps=3, days=2, prompt='Both hands. Feel the right hand fall between the left hand\'s beats.', **common)),
         X(timed('song-wim-first-half', f'{TITLE}: intro to break', right=bars(RIFF, RIFF, RIFF, RIFF2, RIFF, RIFF2_INTO_VERSE, *VERSE, *HOOK, *BREAK),
                 left=bars(*END_LH, *loop(BASS_CHORD, 4, BASS_CHORD_INTO), *loop(BASS_TWO, 6), *loop(BASS_CHORD, 4), *BREAK_LH),
-                tempo=96, reps=3, days=2, prompt='The first half of the song, start to break: intro, verse, "ooh", break.', **common)),
+                tempo=58, reps=3, days=2, prompt='The first half of the song, start to break: intro, verse, "ooh", break.', **common)),
     ], 'The "ooh" falls between the beats; the break borrows a dark A minor, then B major leads home.')
 
     # 5 ---------------------------------------------------------------- the rolling left hand
@@ -246,16 +246,16 @@ def run(base):
         S("""Learn it in two steps: first only root and fifth in quarters, so the jumps between chords are safe. Then the
         full roll. G♯ major has B♯ on top: the white key C.""",
           check=check('E2, B2, G♯3: how far is G♯3 above E2?', 'A tenth (an octave and a third)', ['An octave', 'A fifth', 'A sixth'], 'E to G♯ is a third; an octave higher it is a tenth.')),
-        X(timed('song-wim-fifths', f'{TITLE}: roots and fifths', left=bars(*loop(FIFTHS, 4)), tempo=90, reps=2, days=1,
+        X(timed('song-wim-fifths', f'{TITLE}: roots and fifths', left=bars(*loop(FIFTHS, 4)), tempo=54, reps=2, days=1,
                 prompt='Left hand: root and fifth of each chord, in quarters. Fingers 5 and 2.', **common)),
-        X(timed('song-wim-arp-lh', f'{TITLE}: the rolling left hand', left=bars(*loop(ARP, 4)), tempo=90, reps=3, days=2,
+        X(timed('song-wim-arp-lh', f'{TITLE}: the rolling left hand', left=bars(*loop(ARP, 4)), tempo=54, reps=3, days=2,
                 prompt='The full roll: 5 2 1 2, eight eighths a bar. Even, and quieter than the tune will be.', **common)),
         X(tap2('song-wim-verse2-tap', f'{TITLE}: verse rhythm over eighths', verse_rhythm, bars(*[rx('e e e e e e e e')] * 6),
-               meter=METER, tempo=72, reps=2, days=1, display='staff',
+               meter=METER, tempo=50, reps=2, days=1, display='staff',
                prompt='Both rhythms at once on any keys: the verse on top, steady eighths below. Watch where the right hand lands between them.')),
-        X(timed('song-wim-verse2', f'{TITLE}: second verse', right=bars(*VERSE), left=bars(*loop(ARP, 6, ARP_END)), tempo=84, reps=3, days=2,
+        X(timed('song-wim-verse2', f'{TITLE}: second verse', right=bars(*VERSE), left=bars(*loop(ARP, 6, ARP_END)), tempo=50, reps=3, days=2,
                 prompt='The second verse: the tune over the rolling left hand.', **common)),
-        X(timed('song-wim-hook2', f'{TITLE}: "ooh" over the roll', right=bars(*HOOK), left=bars(*loop(ARP, 4)), tempo=90, reps=3, days=2,
+        X(timed('song-wim-hook2', f'{TITLE}: "ooh" over the roll', right=bars(*HOOK), left=bars(*loop(ARP, 4)), tempo=54, reps=3, days=2,
                 prompt='The "ooh" again, now over the rolling left hand.', **common)),
     ], 'The rolling left hand: root, fifth, tenth, fifth, fingers 5 2 1 2.')
 
@@ -273,15 +273,15 @@ def run(base):
         black keys fall under 2, 3 and 4.""",
           check=check('Which notes are sharp in the run F♯ E D♯ C♯ D♯ E F♯ G♯ A?', 'F♯, D♯, C♯ and G♯', ['Only F♯', 'F♯ and C♯', 'All of them'], 'E major\'s four sharps: F♯, C♯, G♯ and D♯.')),
         X(tap('song-wim-chorus-tap', f'{TITLE}: tap the chorus', bars(rx('q. s s q. rs s'), rx('q. rs s s s s s s s s s')) + ' | ' +
-              bars(rx('q. s s q. rs s'), rx('q. rs s s s s s s s e')), meter=METER, tempo=72, reps=2, days=1, display='staff',
+              bars(rx('q. s s q. rs s'), rx('q. rs s s s s s s s e')), meter=METER, tempo=50, reps=2, days=1, display='staff',
               prompt='The chorus rhythm on any key: long, quick-quick, long; then a string of sixteenths.')),
-        X(timed('song-wim-chorus-line', f'{TITLE}: the title line and the runs', right=bars(*chorus_line), tempo=72, reps=3, days=2,
+        X(timed('song-wim-chorus-line', f'{TITLE}: the title line and the runs', right=bars(*chorus_line), tempo=50, reps=3, days=2,
                 prompt='Right hand alone, slowly. Thumb under after D♯ on the way up; keep the sixteenths even.', **common)),
-        X(timed('song-wim-chorus-rh', f'{TITLE}: the chorus tune', right=bars(*CHORUS), tempo=84, reps=3, days=2,
+        X(timed('song-wim-chorus-rh', f'{TITLE}: the chorus tune', right=bars(*CHORUS), tempo=50, reps=3, days=2,
                 prompt='The whole chorus in the right hand, octaves included: thumb and fifth finger, hand light.', **common)),
-        X(timed('song-wim-chorus-lh', f'{TITLE}: chorus left hand', left=bars(*loop(ARP, 8, ARP_END)), tempo=90, reps=2, days=1,
+        X(timed('song-wim-chorus-lh', f'{TITLE}: chorus left hand', left=bars(*loop(ARP, 8, ARP_END)), tempo=54, reps=2, days=1,
                 prompt='Eight bars of the rolling left hand. Keep it soft under the octaves.', **common)),
-        X(timed('song-wim-chorus', f'{TITLE}: the chorus', right=bars(*CHORUS), left=bars(*loop(ARP, 8, ARP_END)), tempo=96, reps=3, days=2,
+        X(timed('song-wim-chorus', f'{TITLE}: the chorus', right=bars(*CHORUS), left=bars(*loop(ARP, 8, ARP_END)), tempo=58, reps=3, days=2,
                 prompt='Both hands. Two even streams: sixteenths on top, eighths below, meeting on every beat.', **common)),
     ], 'The chorus: a long B and a turn, a sixteenth run through E major, octaves to finish.')
 
@@ -298,9 +298,9 @@ def run(base):
         arrangement with the rolling left hand. The last take adds the pedal, changing with every chord.""",
           staff=staff(bars(RIFF, RIFF2), key=KEY), sound=bars(RIFF, RIFF2, RIFF, RIFF2_INTO_VERSE, *VERSE[:2]),
           callout=f'Key: E major · Time: 4/4 · Tempo: {TEMPO} · Form: intro, verse, ooh, break, verse, ooh, chorus, outro'),
-        X(timed('song-wim-easy', f'{TITLE}, easy version', right=easy_r, left=easy_l, tempo=96, reps=2, days=1,
+        X(timed('song-wim-easy', f'{TITLE}, easy version', right=easy_r, left=easy_l, tempo=58, reps=2, days=1,
                 prompt='The whole tune over one bass note per chord. The map of the song under your fingers.', **common)),
-        X(timed('song-wim-medium', f'{TITLE}, with bass and chord', right=mid_r, left=mid_l, tempo=104, reps=2, days=2,
+        X(timed('song-wim-medium', f'{TITLE}, with bass and chord', right=mid_r, left=mid_l, tempo=62, reps=2, days=2,
                 prompt='The whole song with the intro\'s bass-and-chord left hand everywhere.', **common)),
         X(timed('song-wim-full', f'{TITLE}, full arrangement', right=full_r, left=full_l, tempo=TEMPO, reps=3, days=2,
                 prompt='Maxence Cyrin\'s arrangement: the rolling left hand from the second verse on. The tempo ladder brings you up to speed.', **common)),

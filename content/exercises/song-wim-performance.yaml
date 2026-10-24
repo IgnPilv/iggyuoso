@@ -5,7 +5,7 @@ hand: together
 prompt: Full tempo, with the pedal changing on every chord, start to end, as if someone is listening.
 display: staff
 key: E
-tempo: 120
+tempo: 72
 meter: 4/4
 countIn: 1
 right: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e

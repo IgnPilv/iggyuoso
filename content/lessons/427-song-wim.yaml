@@ -16,7 +16,7 @@ steps:
     E5:e G#5:e E5:e G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e. E4:s | G#4:e G#4:s E4:q E4:s D#4:e
     D#4:s G#3:q r:s | r:h r:q r:s D#4:s E4:e
   callout: |
-    Key: E major · Time: 4/4 · Tempo: 120 · Form: intro, verse, ooh, break, verse, ooh, chorus, outro
+    Key: E major · Time: 4/4 · Tempo: 72 · Form: intro, verse, ooh, break, verse, ooh, chorus, outro
 - exercise: song-wim-easy
 - exercise: song-wim-medium
 - exercise: song-wim-full

@@ -5,7 +5,7 @@ hand: together
 prompt: Both hands. Feel the right hand fall between the left hand's beats.
 display: staff
 key: E
-tempo: 96
+tempo: 58
 tempoLadder: true
 meter: 4/4
 countIn: 1

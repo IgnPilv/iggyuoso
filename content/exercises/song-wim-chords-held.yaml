@@ -5,7 +5,7 @@ hand: left
 prompt: 'Left hand: the four chords, two beats each. Move only the fingers that must move.'
 display: staff
 key: E
-tempo: 96
+tempo: 58
 tempoLadder: true
 meter: 4/4
 countIn: 1

@@ -3,7 +3,7 @@ title: 'Where Is My Mind: tap the verse'
 kind: tap
 prompt: The verse rhythm alone, on any key. Count "1 e and a" under your breath.
 display: staff
-tempo: 72
+tempo: 50
 tempoLadder: true
 meter: 4/4
 countIn: 1
