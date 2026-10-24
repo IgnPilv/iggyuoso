@@ -577,3 +577,8 @@ never copied pages). Start small, adapt as we go.
   cross-branch nodes (6/8, compound time, D major, ii/iii/vi, accompaniment, B minor, the dominant seventh,
   arpeggios, legato pedal, secondary dominants). No lyrics. The demo's "A song in steps" scene already
   covers songs taught in steps, so it is unchanged.
+- 2026-10-24: Space never presses a button (Ignas: "space both starts and skips to next"). The top
+  Next button keeps focus after a click, and Space on a focused button presses it in browsers, so on
+  a step without Play, Space skipped on. `guardSpace` (`src/ui/keys.ts`, used by the lesson and
+  exercise pages) holds back Space on focused buttons, links and checkboxes (keydown and keyup);
+  Space stays Play / Pause / Resume and the computer keyboard's pedal, Enter still presses buttons.

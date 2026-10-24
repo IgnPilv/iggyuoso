@@ -13,6 +13,7 @@ import { readStep } from './bookView';
 import { mountExercise } from './players';
 import { lessonRecap } from './recap';
 import { stepBar } from './stepBar';
+import { guardSpace } from './keys';
 import { BRANCH_LABEL, currentStage, growingNow, growingTree, snapshot, songsCard, stageList } from './treeView';
 import { todayCard } from './todayView';
 import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './theme';
@@ -249,6 +250,7 @@ export const lessonView: View = (root, id?: string) => {
     main.click();
   };
   window.addEventListener('keydown', onEnter);
+  const unguard = guardSpace();
   let step = 0;
   // Tapping a step jumps there, forward or back; leaving an exercise stops it (takes are saved as played).
   const bar = stepBar(lesson, store, (eid) => content.exercises.get(eid), (i) => { if (i !== step) { step = i; show(); } });
@@ -325,7 +327,7 @@ export const lessonView: View = (root, id?: string) => {
     songStep ? `Song · step ${songStep.n} of ${songStep.of}` : node.branch === 'songs' ? 'Song' : `${BRANCH_LABEL[node.branch]} · stage ${node.stage}`) : '';
   root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('div', {}, where, h('h2', {}, lesson.title)), h('div', { class: 'lesson-top' }, progress, topNext)), bar.el, body, nav));
   show();
-  return () => { cleanup?.(); window.removeEventListener('keydown', onEnter); };
+  return () => { cleanup?.(); window.removeEventListener('keydown', onEnter); unguard(); };
 };
 
 /** A song taught in steps: this node's place in it. */
@@ -361,7 +363,9 @@ export const exerciseView: View = (root, id?: string) => {
   if (!cal) return;
   const box = h('div');
   root.append(h('section', { class: 'card' }, h('h2', {}, exerciseTitle(ex)), box));
-  return mountExercise(box, ex, cal, () => {});
+  const unguard = guardSpace();
+  const unmount = mountExercise(box, ex, cal, () => {});
+  return () => { unmount(); unguard(); };
 };
 
 // ---------------------------------------------------------------- settings

@@ -771,10 +771,11 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   pauseBtn.onclick = () => run?.togglePause();
   // Space plays, pauses and resumes (unless the computer keyboard needs it for the pedal here).
   const onSpace = (e: KeyboardEvent) => {
-    if (e.code !== 'Space' || e.ctrlKey || e.metaKey || e.altKey || e.repeat || typing(e.target) || !root.isConnected) return;
+    if (e.code !== 'Space' || e.ctrlKey || e.metaKey || e.altKey || typing(e.target) || !root.isConnected) return;
     if (computerKeys.enabled && expectedPedal(ex).length) return;
     if (demo.active && e.isTrusted) return;
     e.preventDefault();
+    if (e.repeat) return;
     // A focused button would also take the Space as a click.
     if (document.activeElement instanceof HTMLButtonElement) document.activeElement.blur();
     if (run) run.togglePause();
