@@ -460,3 +460,7 @@ never copied pages). Start small, adapt as we go.
   ear to stage 7, and puts the modes theory before composing in modes. Screen: each stage on home
   opens as a woven map (`stageWeave`, a column per branch, a thread per requirement, pointing lights
   a node's threads); branch pages show every node's threads from other branches.
+- 2026-10-24: Generated rhythms always have a rhythm to hear (Ignas: "Rhythm workout: first values, I
+  can't hear the rhythm"; a run could draw a whole note in every bar). Only the last bar may be one
+  note filling the bar, a line mixes at least two note values, and the bars before the last are
+  never all the same (`rhythm` in `src/engine/generate.ts`; also used by sight-reading).
