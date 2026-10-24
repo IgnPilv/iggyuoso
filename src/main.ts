@@ -116,10 +116,11 @@ function signInReturn() {
 }
 signInReturn();
 account.start();
-// Progress from another device: redraw pages that show progress (never a running exercise).
+// Progress from another device: redraw pages that show progress. Never a lesson: a redraw
+// would start it again from step 1 (and stop a running exercise).
 account.onChange((changed) => {
   const name = location.hash.replace(/^#\/?/, '').split('/')[0];
-  if (changed && !demo.active && ['', 'today', 'lesson', 'profile'].includes(name)) render();
+  if (changed && !demo.active && ['', 'today', 'profile'].includes(name)) render();
 });
 
 window.addEventListener('hashchange', render);
