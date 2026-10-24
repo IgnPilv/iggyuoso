@@ -16,8 +16,8 @@ steps:
   - development
   - recapitulation
 - explain: |
-    For example, the **Minuet in G**: G major, 3/4, binary form (two halves, each repeated), the first half ending in the
-    dominant (D major), Baroque, two-part counterpoint, *moderato*, graceful. Try describing a piece you play the same
+    For example, the **Minuet in G**: G major, 3/4, binary form (two halves, each repeated), the first half staying in G
+    and the second visiting the dominant (D major) before coming home, Baroque, two-part counterpoint, *moderato*, graceful. Try describing a piece you play the same
     way.
   callout: |
     Key · meter · form · modulation · cadences · texture · era · character

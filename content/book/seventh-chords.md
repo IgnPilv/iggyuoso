@@ -10,7 +10,7 @@ summary: Add one more 3rd on top of a triad and you get a seventh chord. The dom
 A triad is three notes stacked in 3rds. Stack **one more 3rd** on top and you get a four-note chord whose top note is a 7th above the root: a **seventh chord**. Built on G in C major, using only notes of the scale: G B D **F**. That chord, the seventh chord on the dominant, is the **dominant 7th**, written **V7** in Roman numerals and **G7** as a chord symbol.
 
 ```figure
-staff: { notes: "G3+B3+D4:h G3+B3+D4+F4:h | C4+E4+G4:w", labels: names }
+staff: { notes: "G3+B3+D4:h G3+B3+D4+F4:h | C4+E4+G4:w" }
 sound: "G3+B3+D4:h G3+B3+D4+F4:h C4+E4+G4:w"
 caption: G major, then G7 with the added F, then home to C. Hear how much harder G7 pulls.
 ```

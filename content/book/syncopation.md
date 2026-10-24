@@ -55,7 +55,7 @@ On the piano, syncopation is often created **between the hands**: the left hand 
 
 ```figure
 staff: { notes: "E5:e C5:q E5:e D5:q C5:q | C3+E3+G3:q G2:q C3+E3+G3:q G2:q", clef: grand }
-caption: A syncopated right-hand figure over a steady left hand. Count the left hand's beats while the right hand dances around them.
+caption: The right hand's syncopated figure (first bar) and the left hand's steady pattern (second bar). Played together, the left hand keeps the beat while the right dances around it.
 check:
   ask: "Counting '1 + 2 + 3 + 4 +', which of these starts a note on an off-beat?"
   choices: ["A note on the '+' of 2", "A note on beat 3", "A note on beat 1"]

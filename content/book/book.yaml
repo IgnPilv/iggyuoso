@@ -31,3 +31,6 @@ parts:
   - title: Sevenths, cadences, new keys and the eras
     summary: The dominant 7th and the other seventh chords, the four cadences, changing key, and the four eras of keyboard music.
     chapters: [seventh-chords, four-cadences, modulation, four-eras]
+  - title: Restless chords, decorations and every key
+    summary: Augmented and diminished intervals and triads, notes outside the chord, all fifteen key signatures, secondary dominants, three against two, and how to describe a piece like a musician.
+    chapters: [augmented-and-diminished, notes-outside-the-chord, every-key-signature, secondary-dominants, three-against-two, talking-about-a-piece]
