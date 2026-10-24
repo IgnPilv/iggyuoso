@@ -4,9 +4,35 @@
 let ctx: AudioContext | undefined;
 
 export function audio(): AudioContext {
-  ctx ??= new AudioContext({ latencyHint: 'interactive' });
-  if (ctx.state === 'suspended') void ctx.resume();
+  if (!ctx) {
+    // On iPhone and iPad, web sound follows the ring/silent switch unless the page asks to be
+    // played like media (Safari 16.4+).
+    const session = (navigator as Navigator & { audioSession?: { type: string } }).audioSession;
+    if (session) try { session.type = 'playback'; } catch { /* not supported */ }
+    ctx = new AudioContext({ latencyHint: 'interactive' });
+  }
+  // 'suspended' before a tap (autoplay rules), 'interrupted' on iOS after a call or the lock screen.
+  if (ctx.state !== 'running' && ctx.state !== 'closed') void ctx.resume().catch(() => {});
   return ctx;
+}
+
+/**
+ * Browsers only let sound start from a tap or key press. The context is often made earlier (samples
+ * load when a screen opens), so every tap and key press wakes it, and the first one also plays a
+ * silent buffer, which older iOS needs before it plays anything.
+ */
+let primed = false;
+function unlock() {
+  const c = audio();
+  if (primed) return;
+  primed = true;
+  const src = c.createBufferSource();
+  src.buffer = c.createBuffer(1, 1, c.sampleRate);
+  src.connect(c.destination);
+  src.start();
+}
+if (typeof window !== 'undefined') {
+  for (const type of ['pointerdown', 'touchend', 'keydown'] as const) window.addEventListener(type, unlock, { capture: true, passive: true });
 }
 
 /** How late sound reaches the speakers, in ms. */
