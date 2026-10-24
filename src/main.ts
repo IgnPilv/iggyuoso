@@ -10,7 +10,7 @@ import { sketchbookView } from './ui/sketchbookView';
 import { mySongsView } from './ui/mySongsView';
 import { profileView } from './ui/profileView';
 import { todayView } from './ui/todayView';
-import { branchView, songsView } from './ui/treePages';
+import { branchView, songsView, songView } from './ui/treePages';
 import { bookView } from './ui/bookView';
 import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './ui/theme';
 import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './ui/views';
@@ -26,6 +26,7 @@ const routes: Record<string, View> = {
   branch: branchView,
   songs: songsView,
   book: bookView,
+  song: songView,
   sketchbook: sketchbookView,
   mysongs: mySongsView,
   midi: testerView,

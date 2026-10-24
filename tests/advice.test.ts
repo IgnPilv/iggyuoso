@@ -41,6 +41,12 @@ describe('the tree is advice, never a lock', () => {
     expect(open.some((n) => n.id === nodeOf(root.id).id)).toBe(false);
   });
 
+  it('goes on from a song step to the song\'s next step', () => {
+    const p = fresh();
+    pass(p, 'song-wim-riff');
+    expect(nextLesson(p, content.lessons.get('song-wim-riff'))?.id).toBe('song-wim-chords');
+  });
+
   it('plans new work from the open edge, from two branches when there is time', () => {
     const p = fresh();
     expect(makePlan(dailyInput(p)).items.find((i) => i.why === 'lesson')?.lesson).toBe(root.id);
