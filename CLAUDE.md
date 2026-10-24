@@ -600,3 +600,9 @@ never copied pages). Start small, adapt as we go.
   again after 3.5 s while a take runs (always shown when idle or paused). The result shows as a
   card over the notes. ✕ lasts until the phone is turned upright again. Space and Enter work as
   before. Not used in the demo except its "Phone on its side" scene, drawn in a phone frame.
+- 2026-10-24: Lessons no longer jump back to step 1 (Ignas: "after listening if you press space or ok it
+  throws back to stage 1"). Not the keys: when signed in, every sync a few seconds after a change pulled
+  back the player's own records within the 1-minute overlap, and since Postgres `jsonb` hands objects back
+  with their keys reordered, the text differed and the sync said "progress came in", which redrew the
+  page and restarted the lesson. Sync now compares records by value (`sameValue`, key order ignored),
+  and a sync never redraws a lesson page (home, Today and Profile still redraw).

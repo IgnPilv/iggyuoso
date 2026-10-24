@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { memoryBackend, SCHEMA_VERSION, Store } from '../src/progress/store';
-import { Account } from '../src/sync/account';
+import { Account, sameValue } from '../src/sync/account';
 import { mergeDays, mergeExercise, mergeMeta, mergeRecord, mergeTiming } from '../src/sync/merge';
 import { memoryProvider, type MemoryServer } from '../src/sync/memory';
 import { supabaseProvider } from '../src/sync/supabase';
@@ -106,6 +106,31 @@ describe('guest and account', () => {
     // Back on the first device, the second device's practice arrives.
     expect(await a.account.sync()).toBe(true);
     expect(a.store.exercise('ex.2').attempts).toBe(1);
+  });
+
+  it('does not report a change when the server hands a record back with its keys reordered', async () => {
+    // Postgres jsonb sorts object keys, so a record comes back spelled differently from how it
+    // was sent. That is not progress from another device (it used to redraw a lesson to step 1).
+    const server = memoryProvider();
+    const pull = server.pull.bind(server);
+    const sortKeys = (v: unknown): unknown => Array.isArray(v) ? v.map(sortKeys)
+      : v && typeof v === 'object' ? Object.fromEntries(Object.keys(v).sort().reverse().map((k) => [k, sortKeys((v as Record<string, unknown>)[k])])) : v;
+    server.pull = async (s, since) => (await pull(s, since)).map((r) => ({ ...r, value: sortKeys(r.value) }));
+    const a = device(server);
+    await a.account.completeSignIn('#memory-sign-in=me@example.com');
+    a.store.record('x', take('2026-10-23T10:00:00Z', 95));
+    a.store.put('mastery.meta', { xp: 50, xpToday: 50, streak: 1 });
+    expect(await a.account.sync()).toBe(false); // sends the take
+    expect(await a.account.sync()).toBe(false); // gets it back (within the overlap), reordered
+    expect(a.store.exercise('x').best?.score).toBe(95);
+  });
+
+  it('compares records by value, not by key order', () => {
+    expect(sameValue({ a: 1, b: [{ c: 2, d: 3 }] }, { b: [{ d: 3, c: 2 }], a: 1 })).toBe(true);
+    expect(sameValue({ a: 1, b: undefined }, { a: 1 })).toBe(true);
+    expect(sameValue({ a: 1 }, { a: 2 })).toBe(false);
+    expect(sameValue([1, 2], [2, 1])).toBe(false);
+    expect(sameValue(null, null)).toBe(true);
   });
 
   it('merges a record practised on both devices while apart', async () => {
