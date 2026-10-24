@@ -34,3 +34,6 @@ parts:
   - title: Restless chords, decorations and every key
     summary: Augmented and diminished intervals and triads, notes outside the chord, all fifteen key signatures, secondary dominants, three against two, and how to describe a piece like a musician.
     chapters: [augmented-and-diminished, notes-outside-the-chord, every-key-signature, secondary-dominants, three-against-two, talking-about-a-piece]
+  - title: Form, the blues, melody and the modes
+    summary: Rondo, variations and sonata form, the twelve-bar blues and swing, how melodies work, the modes, and hemiola and odd meters.
+    chapters: [larger-forms, blues-and-swing, how-melodies-work, the-modes, hemiola-and-odd-meters]

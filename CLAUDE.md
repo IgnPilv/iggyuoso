@@ -540,6 +540,12 @@ never copied pages). Start small, adapt as we go.
   a short "Read it again" card once read). Reaching the end of a chapter, or leaving its lesson
   step, marks it read (`book.read`, synced; the demo never saves). Staff pictures take `meter`
   (time signature and bar lines). Written in chunks, one PR per part group. Demo scene "The Book".
+  Complete for stages 1–9: 9 parts, 65 chapters, about 73,000 words (first- and second-year
+  music-school theory: notation, rhythm and meter, intervals, scales and every key, chords to
+  sevenths, cadences, modulation, secondary dominants, non-chord tones, form up to sonata, the
+  eras, analysis, blues and swing, melody writing, modes, polyrhythm, hemiola, odd meters). Theory
+  pictures draw one line of notes, so two hands with different rhythms are shown one after the
+  other (or as two pictures), never stacked.
 - 2026-10-24: Accounts switched on. Supabase project created by Ignas (free plan, SQL from
   `docs/supabase.sql`). Its URL and publishable key are repository **secrets** `SUPABASE_URL` /
   `SUPABASE_ANON_KEY` (Ignas: keep the key out of the repo's files), read by `pages.yml` at deploy
