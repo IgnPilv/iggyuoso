@@ -1239,3 +1239,154 @@ body.fs-page > :not(.fs-layer) { display: none !important; }
   background: var(--lane-bg);
   box-shadow: var(--shadow-1);
 }
+
+/* ---------------------------------------------------------------- the lesson: panels that snap */
+
+/* A lesson fills the window: a slim bar (leave, title, Intro, Next, the step bar) over a column of
+   full-height panels that snap into place as it scrolls (src/ui/views.ts). The intro panels read
+   like a page; each exercise panel is the main screen, where the piano, the sheet or the task
+   takes every pixel left. The site header steps aside while a lesson is open. */
+.ex-top, .ex-meta { display: contents; }
+
+body.focus-page { overflow: hidden; }
+body.focus-page > #app > header { display: none; }
+body.focus-page main { max-width: none; padding: 0; }
+.lesson {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+/* Inside the demo the lesson keeps to its frame. */
+.lesson-frame { height: min(640px, 80vh); margin: var(--space-3) 0; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--bg); }
+.lesson-frame .lesson { height: 100%; }
+
+.lesson .lesson-head { flex-wrap: nowrap; align-items: center; gap: var(--space-3); padding: 10px var(--space-4) 0; }
+.lesson .lesson-name { display: flex; align-items: baseline; gap: var(--space-2); min-width: 0; margin-right: auto; }
+.lesson .lesson-name h2 { font-size: var(--text-lg); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lesson .lesson-branch { white-space: nowrap; }
+.lesson .lesson-top { flex-shrink: 0; gap: var(--space-2); }
+.focus-leave {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: var(--text-sm);
+}
+.focus-leave:hover { color: var(--ink); border-color: var(--line-strong); }
+.lesson > .step-bar { margin: 2px var(--space-4) 0; }
+.lesson > .step-bar .step-seg { padding: 5px 0; }
+
+.lesson-scroll {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-snap-type: y mandatory;
+  container-type: size;
+  scrollbar-width: thin;
+}
+.lesson-scroll:has(.exercise.taking) { overflow-y: hidden; }
+.lesson-panel {
+  position: relative;
+  scroll-snap-align: start;
+  min-height: 100%;
+  min-height: 100cqh;
+  padding: var(--space-3) var(--space-4);
+}
+/* Intro panels: a reading column, centred when it is short; the next panel peeks in under it. */
+.read-panel { display: flex; flex-direction: column; justify-content: center; max-width: var(--content-width); margin: 0 auto; padding-block: var(--space-6); }
+.read-panel > .controls { margin-top: var(--space-5); }
+/* A panel not in view shows only its step, until it is scrolled to. */
+.panel-ghost { margin: auto; text-align: center; opacity: 0.55; }
+.panel-ghost h3 { font-size: var(--text-2xl); margin-top: var(--space-1); }
+.lesson-panel.focus > .panel-ghost { color: var(--lane-text); }
+
+/* The exercise panel: exactly the window, a slim row of controls, then the stage. */
+.lesson-panel.focus { height: 100%; height: 100cqh; display: flex; flex-direction: column; overflow: hidden; }
+.lesson-panel.focus > .controls { display: none; }
+.lesson-panel.focus > .advice { display: none; }
+.focus .exercise { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; position: relative; }
+.focus .exercise > * { flex: none; }
+.focus .exercise > .exercise { flex: 1 1 0; }
+.focus .ex-top { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); margin-bottom: var(--space-2); }
+.focus .ex-top > .ex-head { margin: 0; flex: 1 1 260px; min-width: 0; }
+.focus .ex-top .prompt { font-size: var(--text-sm); }
+.focus .ex-top > .controls, .focus .ex-top > .transport { margin: 0; }
+.focus .ex-top > .transport { flex: 1 1 auto; justify-content: flex-end; }
+.focus .generated-bar { margin: 0 0 var(--space-2); }
+.focus .ex-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 2px var(--space-4); min-height: 2.2rem; }
+.focus .ex-meta > * { margin: 0; }
+.focus .ex-meta .hud { min-height: 0; margin-left: auto; }
+.focus .ex-meta .live-score { font-size: 1.8rem; }
+.focus .exercise > .ask { margin: var(--space-1) 0; min-height: 0; }
+/* A quiz with nothing to play on: the question, big, in the middle. */
+.focus .exercise.kind-quiz:not(:has(> .stage)) { justify-content: center; width: 100%; max-width: 820px; margin-inline: auto; }
+.focus .exercise.kind-quiz:not(:has(> .stage)) > .ask { font-size: var(--text-3xl); }
+
+/* Options open as a panel over the stage, not as a row that pushes it down. */
+.focus .ex-top > .drawer { position: relative; margin: 0; background: none; border: 0; }
+.focus .drawer > summary { border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface-sunken); padding-block: 8px; }
+.focus .drawer > summary .meta-chip { margin-left: var(--space-2); }
+.focus .drawer[open] > .drawer-body {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 5;
+  width: max-content;
+  max-width: min(560px, 90vw);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: linear-gradient(var(--surface), var(--surface)), var(--bg);
+  box-shadow: var(--shadow-1);
+}
+
+/* The stage: falling notes fill it (keys at most a third, src/ui/falling.ts); on the sheet view the
+   staff takes the room above the keys; a keyboard on its own is as big as it fits. */
+.focus .exercise > .stage { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; }
+.focus .stage > .falling { flex: 1 1 0; min-height: 0; margin: 0; }
+.focus .stage > .staff-strip { flex: none; }
+.focus .stage > .staff-wrap { flex: 1 1 0; min-height: 0; margin-bottom: var(--space-2); display: flex; align-items: center; overflow: auto; }
+.focus .stage > .staff-wrap[hidden] { display: none; }
+.focus .stage > .staff-wrap svg.staff { width: 100%; height: 100%; max-height: 340px; }
+.focus .stage > .keyboard { flex: none; width: 100%; height: 36%; margin: 0; max-width: none !important; }
+.focus .stage > .keyboard:only-child { flex: 1 1 0; height: auto; min-height: 0; max-height: 440px; margin-block: auto; }
+
+/* The result comes up as a card over the stage. */
+.focus .result-slot:not(:empty) {
+  position: absolute;
+  top: var(--space-2);
+  right: 0;
+  z-index: 4;
+  width: min(480px, 100%);
+  max-height: calc(100% - var(--space-4));
+  overflow: auto;
+  padding: 0 var(--space-4) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(var(--surface), var(--surface)), var(--bg);
+  box-shadow: var(--shadow-1);
+}
+.focus .result-slot .result { margin-inline: calc(-1 * var(--space-4)); border: 0; background: none; }
+
+@media (max-width: 560px) {
+  .lesson .lesson-head { padding: 8px var(--space-3) 0; }
+  .lesson > .step-bar { margin-inline: var(--space-3); }
+  .lesson-panel { padding: var(--space-2) var(--space-3); }
+  .lesson .lesson-branch, .lesson .lesson-top .small { display: none; }
+  .focus .ex-top .prompt { display: none; }
+  .focus .ex-top > .ex-head:not(:has(.hand-badge)) { display: none; }
+  /* Transport on one row; the view switch and Options share the next. */
+  .focus .ex-top > .transport { display: contents; }
+  .focus .ex-top .view-toggle { flex: 1 1 0; width: auto; }
+  .focus .drawer > summary .meta-chip { display: none; }
+  .focus .ex-meta, .focus .ex-meta .status-line { font-size: var(--text-xs); }
+}

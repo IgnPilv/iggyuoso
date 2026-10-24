@@ -21,7 +21,7 @@ import { demoAccount } from '../sync';
 import { computerKeys } from '../midi/computerKeys';
 import { currentTheme, previewTheme } from './theme';
 import { explainBlock, playground } from './theory';
-import { calibrateView, keyMap, testerView } from './views';
+import { calibrateView, keyMap, lessonView, testerView } from './views';
 import { sketchbookView } from './sketchbookView';
 import { mySongsView } from './mySongsView';
 import { writeMidiFile } from '../music/midiFile';
@@ -390,6 +390,36 @@ function scenes(): Scene[] {
         // A tap on the notes shows the controls for a moment.
         later(4500, () => frame.querySelector<HTMLElement>('.fs-layer canvas')?.click());
         return () => { timers.forEach(clearTimeout); cleanup(); previewFullScreen(undefined); };
+      },
+    });
+  }
+  // A lesson that opens on a few screens of theory and then plays: steady-beat when it is there.
+  const panelLesson = content.lessons.get('steady-beat')
+    ?? [...content.lessons.values()].find((l) => l.steps.some((x) => !('exercise' in x)) && l.steps.some((x) => 'exercise' in x && content.exercises.get(x.exercise)?.kind === 'timed'));
+  if (panelLesson) {
+    out.push({
+      title: 'A lesson in panels',
+      caption: 'A lesson is a column of full-window panels that snap into place as you scroll. The theory reads like a page; scroll on (or press Start playing) and the exercise fills the whole window: the falling notes, or the sheet and keys, as big as they fit, with the controls in one slim row and the steps and Next in the bar at the top. While a take runs the lesson stays put.',
+      run: (box, next, p) => {
+        const frame = h('div', { class: 'lesson-frame' });
+        box.append(frame);
+        const timers: number[] = [];
+        const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+        demo.onTimed = (s) => p.playTimed(s);
+        demo.onRunEnd = (mode) => { if (mode === 'play') later(4500, next); };
+        const cleanup = lessonView(frame, panelLesson.id);
+        const scroller = () => frame.querySelector<HTMLElement>('.lesson-scroll');
+        const panel = (i: number) => frame.querySelector<HTMLElement>(`.lesson-panel[data-step="${i}"]`);
+        const firstPlay = panelLesson.steps.findIndex((x) => 'exercise' in x);
+        // Scroll down through the intro, a panel at a time, then into the exercise.
+        let at = 1200;
+        for (let i = 1; i < firstPlay; i++, at += 1800) {
+          const step = i;
+          later(at, () => scroller()?.scrollTo({ top: panel(step)?.offsetTop ?? 0, behavior: 'smooth' }));
+        }
+        later(at, () => frame.querySelector<HTMLButtonElement>('.top-next')?.click());
+        later(at + 1800, () => press(frame, 'Play'));
+        return () => { timers.forEach(clearTimeout); cleanup?.(); };
       },
     });
   }

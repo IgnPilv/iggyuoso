@@ -196,7 +196,7 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
   const count = h('span', { class: 'small' });
   const feedback = h('p', { class: 'drill-feedback' });
   const choices = h('div');
-  const result = h('div');
+  const result = h('div', { class: 'result-slot' });
   const listen = h('button', { class: 'secondary' }, 'Listen again');
   const nextBtn = h('button', { class: 'secondary', hidden: true }, 'Next');
   const startBtn = h('button', {}, 'Start');
@@ -300,7 +300,7 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
 
   const controls = h('div', { class: 'controls top' }, stage.toggle.el, startBtn);
   setAsk('Press Start, listen, then answer.');
-  root.append(header(ex, 'Listen, then answer.'), controls, h('div', { class: 'drill-head' }, count), ask, choices, feedback, stage.el, result);
+  root.append(h('div', { class: 'ex-top' }, header(ex, 'Listen, then answer.'), controls), h('div', { class: 'drill-head' }, count), ask, choices, feedback, stage.el, result);
   queueMicrotask(() => { if (demo.active && demo.onAsk) startBtn.click(); });
   return () => { off(); clearTimers(); stopAll(); stage.destroy(); };
 }
@@ -336,7 +336,7 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
   const choices = h('div');
   const feedback = h('p', { class: 'drill-feedback' });
   const why = h('div', { class: 'why', hidden: true });
-  const result = h('div');
+  const result = h('div', { class: 'result-slot' });
   const nextBtn = h('button', { class: 'secondary', hidden: true }, 'Next');
   let timers: number[] = [];
   const clearTimers = () => { timers.forEach(clearTimeout); timers = []; };
@@ -455,8 +455,7 @@ export function quizPlayer(root: HTMLElement, ex: QuizExercise, cal: Calibration
   });
 
   root.append(
-    header(ex, 'Answer the questions.'),
-    stage ? h('div', { class: 'controls top' }, stage.toggle.el) : '',
+    h('div', { class: 'ex-top' }, header(ex, 'Answer the questions.'), stage ? h('div', { class: 'controls top' }, stage.toggle.el) : ''),
     h('div', { class: 'drill-head' }, count), ask, picture, choices, stage?.el ?? '', feedback, why, h('div', { class: 'controls' }, nextBtn), result,
   );
   present();
@@ -473,7 +472,7 @@ export function buildPlayer(root: HTMLElement, ex: BuildExercise, cal: Calibrati
   const ask = h('div', { class: 'ask' });
   const count = h('span', { class: 'small' });
   const feedback = h('p', { class: 'drill-feedback' });
-  const result = h('div');
+  const result = h('div', { class: 'result-slot' });
   let revealed = false;
   let timers: number[] = [];
   const clearTimers = () => { timers.forEach(clearTimeout); timers = []; };
@@ -550,8 +549,7 @@ export function buildPlayer(root: HTMLElement, ex: BuildExercise, cal: Calibrati
   };
 
   root.append(
-    header(ex, 'Play what is asked.'),
-    h('div', { class: 'controls top' }, stage.toggle.el, hear, showMe),
+    h('div', { class: 'ex-top' }, header(ex, 'Play what is asked.'), h('div', { class: 'controls top' }, stage.toggle.el, hear, showMe)),
     h('div', { class: 'drill-head' }, count), ask, feedback, stage.el, result,
   );
   present();

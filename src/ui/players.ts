@@ -214,7 +214,7 @@ const POSITION = '--key-pos';
 
 function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDone: OnDone) {
   const ask = h('div', { class: 'ask' });
-  const result = h('div');
+  const result = h('div', { class: 'result-slot' });
   const stage = h('div', { class: 'stage' });
   let session = new FindSession(ex, cal);
   queueMicrotask(() => demo.onFind?.(session));
@@ -281,7 +281,7 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
   });
 
   update();
-  root.append(header(ex, 'Find the keys.'), h('div', { class: 'controls top' }, toggle.el), ask, stage, result);
+  root.append(h('div', { class: 'ex-top' }, header(ex, 'Find the keys.'), h('div', { class: 'controls top' }, toggle.el)), ask, stage, result);
   const fs = fullScreen({ score: [ask], stage, result, onChange: (on) => build(on ? 'falling' : toggle.get()) });
   build(fs.on ? 'falling' : toggle.get());
   return () => { off(); stopView(); fs.destroy(); };
@@ -329,7 +329,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
   const [lo, hi] = keyWindow(cal, [...session.keys, ...pos]);
   const hand: Hand = ex.hand === 'left' ? 'left' : 'right';
   const ask = h('div', { class: 'ask' });
-  const result = h('div');
+  const result = h('div', { class: 'result-slot' });
   const stage = h('div', { class: 'stage' });
   const flashes: Flash[] = [];
   const posMarks = new Map(pos.map((k) => [k, POSITION]));
@@ -423,7 +423,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
     }
   });
 
-  root.append(header(ex, 'Play the notes in order.'), h('div', { class: 'controls top' }, toggle.el), ask, stage, result);
+  root.append(h('div', { class: 'ex-top' }, header(ex, 'Play the notes in order.'), h('div', { class: 'controls top' }, toggle.el)), ask, stage, result);
   const fs = fullScreen({ score: [ask], stage, result, onChange: (on) => build(on ? 'falling' : toggle.get()) });
   build(fs.on ? 'falling' : toggle.get());
   return () => { off(); stopView(); fs.destroy(); };
@@ -516,7 +516,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
   const hud = h('div', { class: 'hud' });
   const status = h('div', { class: 'status-line' }, echo ? 'Press Play to hear the rhythm.' : 'Press Listen to hear it, then Play.');
-  const result = h('div');
+  const result = h('div', { class: 'result-slot' });
   // The player's last pick wins over the ladder's step (the ladder line still says which counts).
   const startPercent = loop.percent ?? settings.tempo ?? (rungs ? rungs[ladder.rung] : 100);
   const steps = [...new Set([...TEMPO_STEPS, ...(rungs ?? []), startPercent])].sort((a, b) => a - b);
@@ -562,6 +562,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   let run: { cancel: () => void; togglePause: () => void } | undefined;
   const flashes: Flash[] = [];
   let fs: FullScreen | undefined;
+  // While a take runs the lesson does not scroll away from it (a swipe on the notes stays put).
+  const setRunning = (on: boolean) => { fs?.setRunning(on); root.classList.toggle('taking', on); };
 
   // Draw a still frame (before the first run, or after switching views).
   function idle() {
@@ -677,7 +679,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       stopBtn.disabled = pauseBtn.disabled = true;
       pauseBtn.textContent = 'Pause';
       run = undefined;
-      fs?.setRunning(false);
+      setRunning(false);
     };
 
     // Space or the Pause button: the clock holds where it is; going on gives a bar to count back
@@ -689,7 +691,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         session.pause(now);
         stopAll();
         pauseBtn.textContent = 'Resume';
-        fs?.setRunning(false);
+        setRunning(false);
         return;
       }
       const started = session.position(now).beat >= 0;
@@ -701,7 +703,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       for (const c of session.clicks(metro.checked)) if (c.time >= Math.max(at, now) - 1) click(c.time, c.accent);
       if (mode === 'listen' || (guide.checked && !echo)) for (const g of session.guide()) if (g.time >= at - 1) piano(g.midi, g.time, g.durMs);
       pauseBtn.textContent = 'Pause';
-      fs?.setRunning(true);
+      setRunning(true);
     };
 
     const finish = () => {
@@ -770,7 +772,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     listenBtn.disabled = playBtn.disabled = true;
     toggle.disable(true);
     stopBtn.disabled = pauseBtn.disabled = false;
-    fs?.setRunning(true);
+    setRunning(true);
     raf = requestAnimationFrame(frame);
     run = { cancel: stop, togglePause };
   };
@@ -814,13 +816,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   const transportMain = h('div', { class: 'transport-main' }, listenBtn, playBtn, pauseBtn, stopBtn);
   const transport = h('div', { class: 'transport' }, transportMain, echo ? '' : toggle.el);
   root.append(
-    header(ex, echo ? 'Press Play: listen to the rhythm, then tap it back after a bar of count-in.' : ex.pitchMatch === 'side' ? 'Tap the rhythm: right hand on any key from middle C up, left hand on any key below.'
-      : ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
-    transport,
-    drawer,
-    rungs ? ladderLine : '',
-    status,
-    hud,
+    h('div', { class: 'ex-top' },
+      header(ex, echo ? 'Press Play: listen to the rhythm, then tap it back after a bar of count-in.' : ex.pitchMatch === 'side' ? 'Tap the rhythm: right hand on any key from middle C up, left hand on any key below.'
+        : ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
+      transport,
+      drawer),
+    h('div', { class: 'ex-meta' }, rungs ? ladderLine : '', status, hud),
     stage,
     result,
   );

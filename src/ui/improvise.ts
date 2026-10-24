@@ -70,7 +70,7 @@ export function improvisePlayer(root: HTMLElement, ex: ImproviseExercise, cal: C
   const playBtn = recordButton('Play');
   const stopBtn = h('button', { class: 'secondary', disabled: true }, 'Stop');
   const status = h('span', { class: 'small rec-status', 'aria-live': 'polite' });
-  const result = h('div');
+  const result = h('div', { class: 'result-slot' });
   let run: ReturnType<typeof startTake> | undefined;
   let stopListen: (() => void) | undefined;
   const beatMs = 60000 / (ex.tempo * ex.meter.pulse);
