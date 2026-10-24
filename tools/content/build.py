@@ -69,6 +69,7 @@ for b in TITLES:
             if n.get('type'): parts.append(f"type: {n['type']}")
             if n['requires']: parts.append(f"requires: [{', '.join(n['requires'])}]")
             if n.get('about'): parts.append(f"about: {json.dumps(n['about'], ensure_ascii=False)}")
+            if n.get('song'): parts.append(f"song: {n['song']}")
             fh.write(f"  - {{ {', '.join(parts)} }}\n")
 
 # Every file this run wrote, except the hand-written ones it patched, is removed before the next run.

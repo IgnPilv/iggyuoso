@@ -1,4 +1,4 @@
-import { branches, content, stages, treeNodes } from '../content';
+import { branches, content, songOf, stages, stepTitle, treeNodes } from '../content';
 import type { BranchId, TreeNode, TreeStage } from '../content/tree';
 import { frontier, lessonGoals, mastery as realMastery } from '../progress';
 import type { Mastery, NodeState } from '../progress/mastery';
@@ -343,7 +343,7 @@ export function stageWeave(nodes: NodeView[], p: Progress = { store: realStore, 
 
 /** Songs that opened with the milestones passed and are not done yet. */
 export function songsCard(snap: Map<string, NodeView>): HTMLElement | '' {
-  const songs = [...snap.values()].filter((v) => v.node.branch === 'songs' && v.node.lesson);
+  const songs = songList(snap).map((x) => x.steps[0]);
   if (!songs.length) return '';
   const open = songs.filter((v) => v.open);
   const fresh = open.filter((v) => !v.done && !v.reps[0]);
@@ -403,20 +403,31 @@ export function branchPage(id: BranchId, p: Progress = { store: realStore, maste
       })))));
 }
 
-/** The songbook: songs grouped by the milestone that opens them. */
+/** Each song once, with its steps in order (a song without steps is its own single step). */
+export function songList(snap: Map<string, NodeView>): { song: NodeView; steps: NodeView[] }[] {
+  return [...snap.values()]
+    .filter((v) => v.node.branch === 'songs' && !v.node.song)
+    .map((v) => { const g = songOf(v.node.id)!; return { song: v, steps: g.steps.map((n) => snap.get(n.id)!) }; });
+}
+
+/** The milestone a song step opens after, if any. */
+const openedBy = (v: NodeView) => treeNodes.get(v.node.requires.find((r) => treeNodes.get(r)?.type === 'checkpoint') ?? '');
+
+/** The songbook: songs grouped by the milestone that opens them (a song in steps: its first step). */
 export function songsPage(p: Progress = { store: realStore, mastery: realMastery }): HTMLElement {
   const snap = snapshot(p);
-  const songs = [...snap.values()].filter((v) => v.node.branch === 'songs');
-  const groups = new Map<string, NodeView[]>();
-  for (const v of songs) {
-    const ms = v.node.requires.find((r) => treeNodes.get(r)?.type === 'checkpoint') ?? '';
-    groups.set(ms, [...(groups.get(ms) ?? []), v]);
+  const songs = songList(snap);
+  const groups = new Map<string, typeof songs>();
+  for (const x of songs) {
+    const ms = openedBy(x.steps[0])?.id ?? '';
+    groups.set(ms, [...(groups.get(ms) ?? []), x]);
   }
+  const learned = (x: (typeof songs)[number]) => x.steps.every((v) => v.done);
   return h('section', { class: 'card songs-page' },
     h('div', { class: 'unit-head' },
       h('h2', {}, 'Songbook'),
-      h('span', { class: 'unit-progress' }, `${songs.filter((v) => v.done).length} of ${songs.length} learned`)),
-    h('p', {}, 'Tunes to play for fun, nearly all old enough to be free for everyone. Each milestone you pass opens a new shelf. Each song comes in steps: the tune, the left hand, then both together.'),
+      h('span', { class: 'unit-progress' }, `${songs.filter(learned).length} of ${songs.length} learned`)),
+    h('p', {}, 'Tunes to play for fun, nearly all old enough to be free for everyone. Each milestone you pass opens a new shelf. Each song comes in steps: the tune, the left hand, then both together; a bigger song is learned in several steps, each with its own lesson.'),
     h('p', { class: 'banner' }, 'Have a song of your own? ', h('a', { href: '#/mysongs' }, 'Import its MIDI file into My songs'), ' and practise it like any piece.'),
     ...[...groups].map(([msId, list]) => {
       const ms = treeNodes.get(msId);
@@ -424,10 +435,44 @@ export function songsPage(p: Progress = { store: realStore, mastery: realMastery
       return h('div', { class: `song-shelf${passed ? '' : ' closed'}` },
         h('h3', {}, ms ? `After ${ms.title}` : 'Any time',
           h('span', { class: `state-badge${passed ? ' solid' : ''}` }, passed ? 'Open' : 'Opens with this milestone')),
-        h('ol', { class: 'song-grid' }, ...list.map((v) => h('li', { class: v.done ? 'done' : '' },
-          h('a', { href: `#/lesson/${v.node.lesson}` },
-            h('span', { class: 'song-title' }, v.node.title),
-            v.node.about ? h('span', { class: 'song-about' }, v.node.about) : '',
-            stateBadge(v, p.mastery.isDue(v.node.id)))))));
+        h('ol', { class: 'song-grid' }, ...list.map((x) => {
+          const v = x.song;
+          const many = x.steps.length > 1;
+          const at = x.steps.findIndex((st) => !st.done);
+          return h('li', { class: learned(x) ? 'done' : '' },
+            h('a', { href: many ? `#/song/${v.node.id}` : `#/lesson/${v.node.lesson}` },
+              h('span', { class: 'song-title' }, v.node.title),
+              v.node.about ? h('span', { class: 'song-about' }, v.node.about) : '',
+              many
+                ? h('span', { class: 'state-badge' }, at < 0 ? `${x.steps.length} steps learned` : `Step ${at + 1} of ${x.steps.length}`)
+                : stateBadge(v, p.mastery.isDue(v.node.id))));
+        })));
     }));
+}
+
+/** A song taught in steps: its steps in order, each a lesson, with the milestone it opens after. */
+export function songPage(id: string, p: Progress = { store: realStore, mastery: realMastery }): HTMLElement {
+  const g = songOf(id);
+  if (!g) return h('p', {}, 'Song not found. ', h('a', { href: '#/songs' }, 'Songbook'));
+  const snap = snapshot(p);
+  const steps = g.steps.map((n) => snap.get(n.id)!);
+  const at = steps.findIndex((v) => !v.done);
+  return h('section', { class: 'card songs-page song-steps' },
+    h('div', { class: 'unit-head' },
+      h('h2', {}, g.song.title),
+      h('span', { class: 'unit-progress' }, at < 0 ? 'Learned' : `Step ${at + 1} of ${steps.length}`)),
+    g.song.about ? h('p', { class: 'small' }, g.song.about) : '',
+    h('p', {}, `Learned in ${steps.length} steps, one lesson each, from the first notes to the whole song. Later steps open with later milestones; you can peek ahead any time.`),
+    h('ol', { class: 'lessons path-nodes growing-list' }, ...steps.map((v, i) => {
+      const ms = openedBy(v);
+      const ahead = ms && !grown(snap.get(ms.id)!);
+      return h('li', { class: [v.done ? 'done' : '', i === at ? 'next' : '', !v.open && !v.done ? 'bud' : ''].filter(Boolean).join(' ') },
+        h('a', { href: `#/lesson/${v.node.lesson}` },
+          h('span', { class: 'strand-dot strand-songs' }),
+          h('span', { class: 'tile-text' },
+            h('span', { class: 'tile-title' }, `Step ${i + 1}: ${stepTitle(v.node, g.song)}`),
+            ahead ? h('span', { class: 'tile-meta' }, `Best after ${ms.title}`) : ''),
+          stateBadge(v, p.mastery.isDue(v.node.id))));
+    })),
+    h('div', { class: 'controls' }, h('button', { class: 'secondary', onclick: () => { location.hash = '/songs'; } }, 'Songbook')));
 }

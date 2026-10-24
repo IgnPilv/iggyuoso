@@ -101,7 +101,8 @@ def song_lesson(n, slug, title, stage, requires, steps, recap):
     lid = f'song-wim-{slug}' if slug else 'song-wim'
     full = f'{TITLE} (Maxence Cyrin) {n}: {title}' if slug else f'{TITLE} (Maxence Cyrin)'
     lesson(lid, full, steps, recap, skills=['songs'])
-    node(lid, 'songs', stage, full, ([PREV] if PREV else []) + requires, about=ABOUT)
+    # The steps belong to the whole-song node (song-wim): the songbook lists the song once.
+    node(lid, 'songs', stage, full, list(dict.fromkeys(([PREV] if PREV else []) + requires)), about=ABOUT, song='song-wim' if slug else None)
     PREV = lid
     return lid
 
