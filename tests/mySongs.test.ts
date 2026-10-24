@@ -102,4 +102,13 @@ describe('my songs', () => {
     expect(right).toMatchObject({ id: `mysong-${song.id}-right`, hand: 'right' });
     expect(right.left).toBeUndefined();
   });
+
+  it('takes the tempo the player sets over the file’s', () => {
+    const s = new Store(memoryBackend());
+    const song = addMySong(s, { ...readSong(parseMidiFile(file()), 'Little tune'), tempo: 72 });
+    expect(songExercise(song, 'together')!.tempo).toBe(72);
+    const slower = updateMySong(s, song.id, { tempo: 60 })!;
+    expect(songExercise(slower, 'right')!.tempo).toBe(60);
+    expect(slower.right).toBe(song.right);
+  });
 });
