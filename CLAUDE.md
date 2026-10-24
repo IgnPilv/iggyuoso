@@ -588,3 +588,15 @@ never copied pages). Start small, adapt as we go.
   a step without Play, Space skipped on. `guardSpace` (`src/ui/keys.ts`, used by the lesson and
   exercise pages) holds back Space on focused buttons, links and checkboxes (keydown and keyup);
   Space stays Play / Pause / Resume and the computer keyboard's pedal, Enter still presses buttons.
+- 2026-10-24: Phone on its side = falling notes only (Ignas: "on phone it must really be just the
+  falling notes when its in landscape"). When `PHONE_LANDSCAPE` matches (landscape, short side ≤
+  500 px, touch: `hover: none` and `pointer: coarse`; media query, no user agent), timed (not echo),
+  step-by-step and find-the-key exercises switch to falling notes (without changing the saved view
+  pick) and move into a full-screen layer (`src/ui/fullScreen.ts`): 100dvh, safe-area padding
+  (`viewport-fit=cover`; pages keep side insets as before), page underneath set aside. No header,
+  step bar, options, ladder line or sheet strip; the falling view fills the height (keys at most a
+  third). The live score (or the question) stays small top left; a tap on the notes shows Listen /
+  Play or Pause / Stop, Next (mirrors the lesson's top button) and ✕ Leave full screen, hiding
+  again after 3.5 s while a take runs (always shown when idle or paused). The result shows as a
+  card over the notes. ✕ lasts until the phone is turned upright again. Space and Enter work as
+  before. Not used in the demo except its "Phone on its side" scene, drawn in a phone frame.

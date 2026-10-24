@@ -9,6 +9,9 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   min-height: 100vh;
+  /* viewport-fit=cover (for full-screen falling notes): keep pages clear of a notch, as before. */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
@@ -1149,3 +1152,90 @@ button.danger { color: var(--bad); }
 .read-head h3 { font-size: var(--text-2xl); margin: var(--space-1) 0 var(--space-1); }
 .read-step .book-text { margin-top: var(--space-3); }
 .staff .time-sig { fill: var(--staff-ink); font: 700 22px var(--font-display); text-anchor: middle; }
+
+/* ---------------------------------------------------------------- full screen (a phone on its side) */
+
+/* Falling notes only, edge to edge (src/ui/fullScreen.ts). The score or question stays in a corner;
+   a tap shows the controls, Leave full screen and Next. The stage is dark in both themes. */
+body.fs-page { overflow: hidden; }
+/* The page under it is set aside, so nothing wide in it can widen the phone's viewport. */
+body.fs-page > :not(.fs-layer) { display: none !important; }
+.fs-layer {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background: var(--lane-bg);
+  color: var(--lane-big);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.fs-layer.preview { position: absolute; height: auto; z-index: 1; }
+.fs-layer > .stage { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.fs-layer .staff-strip, .fs-layer .staff-wrap { display: none; }
+.fs-layer .falling { flex: 1 1 0; min-height: 0; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+
+.fs-score { position: absolute; top: calc(env(safe-area-inset-top) + 8px); left: calc(env(safe-area-inset-left) + 12px); pointer-events: none; max-width: 60%; }
+.fs-score .hud { min-height: 0; gap: 2px var(--space-3); }
+.fs-score .live-score { font-size: 1.6rem; min-width: 0; }
+.fs-score .live-counts, .fs-score .live-msg { font-size: var(--text-xs); color: var(--lane-text); }
+.fs-score .ask { font-size: var(--text-md); margin: 0; min-height: 0; color: var(--lane-big); }
+
+.fs-bar { opacity: 0; pointer-events: none; transition: opacity var(--dur) var(--ease-out); }
+.fs-layer.show .fs-bar { opacity: 1; pointer-events: auto; }
+.fs-bar {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 8px);
+  right: calc(env(safe-area-inset-right) + 12px);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  z-index: 2;
+}
+.fs-bar button { padding: 7px 16px; flex-shrink: 0; }
+/* While a take runs, Listen and Play are off: only Pause and Stop show. */
+.fs-bar button:disabled { display: none; }
+.fs-controls .transport-main { gap: var(--space-2); }
+.fs-exit { width: 34px; height: 34px; padding: 0 !important; border-radius: 50%; }
+
+.fs-layer .fs-result {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 58px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 66px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  overflow: auto;
+  padding-bottom: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(var(--surface), var(--surface)), var(--bg);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  box-shadow: var(--shadow-1);
+  user-select: text;
+  -webkit-user-select: text;
+}
+.fs-layer .fs-result:empty { display: none; }
+.fs-layer .fs-result .result { margin: 0; padding: var(--space-4); border: 0; border-radius: 0; background: none; }
+.fs-layer .fs-result > :not(.result) { margin-left: var(--space-4); margin-right: var(--space-4); }
+.fs-layer .fs-result .result .score { font-size: 2.4rem; }
+
+/* The demo's phone, held sideways. */
+.phone-frame {
+  position: relative;
+  width: min(100%, 780px);
+  aspect-ratio: 844 / 390;
+  margin: var(--space-3) auto;
+  border: 10px solid var(--phone-bezel);
+  border-radius: 36px;
+  overflow: hidden;
+  background: var(--lane-bg);
+  box-shadow: var(--shadow-1);
+}
