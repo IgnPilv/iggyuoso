@@ -15,6 +15,7 @@ export function stepName(lesson: Lesson, i: number, exercise: (id: string) => Ex
   if (!s) return 'Recap';
   if ('exercise' in s) { const e = exercise(s.exercise); return e ? exerciseTitle(e) : 'Exercise'; }
   if ('playground' in s) return 'Try it on the keys';
+  if ('read' in s) return 'Read first: the chapter';
   // The first line of the explanation, without its markdown.
   const line = s.explain.trim().split('\n')[0].replace(/[*_`#>[\]]/g, '').trim();
   return line.length > 48 ? `${line.slice(0, 46).trim()}…` : line || 'Theory';

@@ -529,3 +529,14 @@ never copied pages). Start small, adapt as we go.
   the current step keeps its mark as a line under it. Each has a tooltip and label ("Step 4: C, E
   or G? (clean take, not finished)"). The marks update right after a take. Demo scene "Clean takes
   and the path" shows the marked bar.
+- 2026-10-24: The Book (Ignas: "the theory is really not sufficient, it should have texts to read to
+  understand; core understanding of music is not 1 paragraph per lesson"). `#/book` (header link):
+  theory as a textbook of chapters in parts that follow the tree's stages, about 1,000 words each,
+  written for real (what, why, how it sounds and looks, history, common confusions, links to
+  playing, ear and rhythm, "In short"), with playable staff and key pictures and quick checks in the
+  text. Content in `content/book/` (`book.yaml` + one Markdown file per chapter, format in
+  `content/README.md`); loaded by `src/content/book.ts`, drawn by `src/ui/bookView.ts`. A chapter's
+  `lessons` open with it: a `read` step is put first at load time (the whole chapter the first time,
+  a short "Read it again" card once read). Reaching the end of a chapter, or leaving its lesson
+  step, marks it read (`book.read`, synced; the demo never saves). Staff pictures take `meter`
+  (time signature and bar lines). Written in chunks, one PR per part group. Demo scene "The Book".

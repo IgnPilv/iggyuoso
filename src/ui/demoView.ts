@@ -1,5 +1,6 @@
 import { audio } from '../audio/audio';
-import { content, exerciseTitle, pathLessons, treeNodes } from '../content';
+import { book, content, exerciseTitle, pathLessons, treeNodes } from '../content';
+import { bookView } from './bookView';
 import type { EarExercise, Exercise, ExplainStep, Lesson, PlaygroundStep, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
@@ -611,6 +612,36 @@ function scenes(): Scene[] {
   const checkpoint = allExercises().find((e) => (e.kind === 'ear' || e.kind === 'quiz') && e.feedback === 'none')
     ?? { ...(sampleOf('ear', SAMPLES.ear) as EarExercise), id: 'demo-checkpoint', feedback: 'none' as const };
   out.push({ title: 'Checkpoint', caption: 'Checkpoints test without hints: each answer is only noted, and the result lists the ones that were wrong, with the right answers.', run: exerciseScene(checkpoint, { view: 'classic' }) });
+  const chapter = [...book.chapters.values()].find((c) => c.blocks.some((b) => 'figure' in b && b.figure.check)) ?? [...book.chapters.values()][0];
+  if (chapter) {
+    out.push({
+      title: 'The Book',
+      caption: `Theory to read, like a music-school textbook: ${book.chapters.size} chapters in parts that follow the tree's stages, each several hundred words on one idea (what it is, why it matters, how it sounds and looks, common confusions). Pictures on the staff and the keys can be played, and quick checks sit in the text. Every lesson that goes with a chapter opens with it as a "Read first" step; here, the contents and then "${chapter.title}".`,
+      run: (box, next) => {
+        const timers: number[] = [];
+        const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+        let cleanup = bookView(box);
+        later(3500, () => {
+          cleanup?.();
+          box.replaceChildren();
+          cleanup = bookView(box, chapter.id);
+          const figures = [...box.querySelectorAll<HTMLElement>('.book-figure')];
+          figures.forEach((f, i) => later(1500 + i * 2600, () => {
+            f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const choices = [...f.querySelectorAll<HTMLButtonElement>('.check .choice')];
+            const right = chapter.blocks.filter((b) => 'figure' in b)[i];
+            const correct = 'figure' in right ? right.figure.check?.correct : undefined;
+            if (choices.length && correct !== undefined) {
+              later(900, () => choices[(correct + 1) % choices.length].click());
+              later(1900, () => choices[correct].click());
+            }
+          }));
+          later(1500 + figures.length * 2600 + 1500, () => { window.scrollTo({ top: 0, behavior: 'smooth' }); next(); });
+        });
+        return () => { timers.forEach(clearTimeout); cleanup?.(); };
+      },
+    });
+  }
   out.push({ title: 'Theory screens', caption: 'Theory comes with pictures: a staff (with note names), lit keys with fingers, a sound to hear, the rule in a box and its key terms. A quick check holds Next until it is answered right; a wrong answer explains why. Then a playground: press any key and see it on the staff.', run: theoryScene });
   out.push({ title: 'Theory quiz', caption: 'Short theory questions, with a picture or a sound. Answer with a button, or by playing the answer. After each answer the quiz says why, with a picture, and waits for Next.', run: exerciseScene(parseExercise(parse(SAMPLES.quiz)), { view: 'classic' }) });
   out.push({ title: 'Build it', caption: 'Play a named chord (hold it down), interval or scale, untimed. "Show me" lights the keys, but then it does not count as a first try.', run: exerciseScene(sampleOf('build', SAMPLES.build), { view: 'falling', switchAt: 6000 }) });

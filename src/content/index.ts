@@ -1,11 +1,17 @@
 import type { Exercise, Lesson } from './types';
 import { loadContent } from './load';
 import { loadTree, type TreeNode } from './tree';
+import { attachReadings, loadBook } from './book';
 
 const files = import.meta.glob('../../content/**/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+const bookFiles = import.meta.glob('../../content/book/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 
 export const { content, errors: contentErrors } = loadContent(files);
 if (contentErrors.length) console.warn('Content problems:\n' + contentErrors.join('\n'));
+
+export const { book, errors: bookErrors } = loadBook({ ...files, ...bookFiles }, content.lessons);
+if (bookErrors.length) console.warn('Book problems:\n' + bookErrors.join('\n'));
+attachReadings(book, content.lessons);
 
 export const { stages, branches, nodes: treeNodes, errors: treeErrors } = loadTree(files, content.lessons);
 if (treeErrors.length) console.warn('Mastery tree problems:\n' + treeErrors.join('\n'));

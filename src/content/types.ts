@@ -6,6 +6,8 @@ export interface TheoryStaff {
   notes: NoteToken[];
   clef: 'treble' | 'bass' | 'grand';
   key?: string;
+  /** A time signature with bar lines, such as 3/4. */
+  meter?: Meter;
   /** `names` writes each note's letter under it. */
   labels: 'names' | 'none';
 }
@@ -48,7 +50,21 @@ export interface PlaygroundStep {
   playground: { clef: 'treble' | 'bass' | 'grand'; range: [Pitch, Pitch]; prompt?: string; key?: string };
 }
 
-export type LessonStep = ExplainStep | { exercise: string } | PlaygroundStep;
+/** A chapter of the Book, read at the start of a lesson (added from the chapter's `lessons`). */
+export interface ReadStep {
+  read: string;
+}
+
+export type LessonStep = ExplainStep | { exercise: string } | PlaygroundStep | ReadStep;
+
+/** A picture in a Book chapter: a staff, lit keys, a sound, a caption, a check to try. */
+export interface Figure {
+  staff?: TheoryStaff;
+  keys?: TheoryKeys;
+  sound?: NoteToken[];
+  caption?: string;
+  check?: TheoryCheck;
+}
 
 export interface Lesson {
   id: string;
