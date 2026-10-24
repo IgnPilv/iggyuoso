@@ -1,0 +1,15 @@
+id: song-chfl-tune-rh
+title: 'Can''t Help Falling in Love: the tune'
+kind: timed
+hand: right
+prompt: Right hand alone. Thumb on D; for the low A, B, C♯ the thumb starts on A, and the hand walks up to D.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e | B3:h. | C#4:h. | D4:h. |
+  E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h. | r:h.
+reps: 3
+days: 2

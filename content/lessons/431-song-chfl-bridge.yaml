@@ -1,0 +1,46 @@
+id: song-chfl-bridge
+title: 'Can''t Help Falling in Love 4: the middle section'
+skills:
+- songs
+steps:
+- explain: |
+    **The middle section** (the bridge) changes colour: it moves to **F♯ minor** and keeps swinging between F♯ minor
+    and **C♯7**. A short phrase climbs C♯ F♯ A C♯ and comes to rest on B, over and over, like waves.
+
+    Then one longer phrase walks back to D major through **B7**, **E minor** and **A7**.
+  staff:
+    notes: C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h.
+    key: D
+  sound: C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h.
+  terms:
+  - bridge
+  - F♯ minor
+  - C♯7
+- explain: |
+    **Where does C♯7 come from?** C♯7 is the dominant seventh of F♯ minor: C♯ E♯ G♯ B. The **E♯** (the white key
+    F) is not in D major; it is F♯ minor's leading note, pulling up to F♯. Borrowing another key's V like this is
+    called a **secondary dominant**: for a moment, F♯ minor sounds like home.
+
+    B7 does the same for E minor (its D♯ pulls to E), and A7 brings us back to D.
+  keys:
+    notes: C#3 E#3 G#3 B3
+    labels: names
+  sound: C#3+E#3+G#3+B3:h. | F#2+A3+C#4+F#4:h. | B2+D#3+F#3+A3:h. | E3+G3+B3+E4:h. | A2+C#3+E3+G3:h. | D3+D4+F#4+A4:h.
+  callout: |
+    F♯m – C♯7 three times, then F♯m B7 Em A7 back to D. C♯7 = V7 of F♯ minor.
+  check:
+    ask: Which note in C♯7 is not in D major?
+    choices:
+    - C♯
+    - E♯
+    - G♯ only
+    - B
+    correct: 1
+    why: 'C♯7 is C♯ E♯ G♯ B: E♯ and G♯ are foreign; E♯ is the one that pulls up to F♯.'
+- exercise: song-chfl-bridge-build
+- exercise: song-chfl-bridge-tap
+- exercise: song-chfl-bridge-rh
+- exercise: song-chfl-bridge-lh
+- exercise: song-chfl-bridge
+- exercise: song-chfl-into-bridge
+recap: 'The bridge: waves of F♯ minor and C♯7, its dominant, then B7, Em and A7 lead home.'

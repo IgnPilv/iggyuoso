@@ -1,0 +1,17 @@
+id: song-chfl-bridge
+title: 'Can''t Help Falling in Love: the bridge'
+kind: timed
+hand: together
+prompt: Both hands. The waves grow a little each time, then let the last phrase settle.
+display: staff
+key: D
+tempo: 58
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | A4:q. A4:q. |
+  F#4:q A4:e F#4:q. | G4:h.~ | G4:q. r:q.
+left: F#2:q. A2+C#3+F#3:q. | C#3:q. E#3+G#3+B3:q. | F#2:q. A2+C#3+F#3:q. | C#3:q. E#3+G#3+B3:q. | F#2:q. A2+C#3+F#3:q. | C#3:q.
+  E#3+G#3+B3:q. | F#2:q. A2+C#3+F#3:q. | B2:q. D#3+F#3+A3:q. | E2:q. B2+E3+G3:q. | A2:q. C#3+E3+G3:q.
+reps: 3
+days: 2

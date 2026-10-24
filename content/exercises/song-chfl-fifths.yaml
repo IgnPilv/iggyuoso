@@ -1,0 +1,15 @@
+id: song-chfl-fifths
+title: 'Can''t Help Falling in Love: roots and fifths'
+kind: timed
+hand: left
+prompt: 'Left hand: root on beat one, fifth on beat two, through the verse. Fingers 5 and 2.'
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: D2:q. A2:q. | F#2:q. C#3:q. | B2:q. F#3:q. | B2:q. F#3:q. | G2:q. D3:q. | D2:q. A2:q. | A2:q. E3:q. | A2:q. E3:q. |
+  G2:q. D3:q. | A2:q. E3:q. | B2:q. F#3:q. | G2:q. D3:q. | D2:q. A2:q. | A2:q. E3:q. | D2:q. A2:q. | D2:q. A2:q.
+reps: 2
+days: 1

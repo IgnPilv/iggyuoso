@@ -1,0 +1,25 @@
+id: song-chfl-last-verse
+title: 'Can''t Help Falling in Love: last verse to the end'
+kind: timed
+hand: together
+prompt: The last verse and the ending, with the pedal.
+display: staff
+key: D
+tempo: 58
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e | B3:h. | C#4:h. | D4:h. |
+  E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h. | r:q. r:q A3:e | B3:h. | C#4:h. | D4:h. | E4:q F#4:e G4:q. | F#4:h. | E4:h. |
+  D4:h.~ | D4:h.
+left: D2:e A2:e F#3:e A2:e D3:e A2:e | F#2:e C#3:e A3:e C#3:e F#3:e C#3:e | B2:e F#3:e D3:e F#3:e B3:e F#3:e | B2:e F#3:e
+  D3:e F#3:e B3:e F#3:e | G2:e D3:e G3:e D3:e B2:e D3:e | D2:e A2:e F#3:e A2:e D3:e A2:e | A2:e E3:e A3:e E3:e C#3:e E3:e
+  | A2:e E3:e A3:e E3:e C#3:e E3:e | G2:e D3:e G3:e D3:e B2:e D3:e | A2:e E3:e A3:e E3:e C#3:e E3:e | B2:e F#3:e D3:e F#3:e
+  B3:e F#3:e | G2:e D3:e G3:e D3:e B2:e D3:e | D2:e A2:e F#3:e A2:e D3:e A2:e | A2:e E3:e A3:e E3:e C#3:e E3:e | D2:e A2:e
+  F#3:e A2:e D3:e A2:e | A2:e E3:e G3:e E3:e C#3:e E3:e | G2:e D3:e G3:e D3:e B2:e D3:e | A2:e E3:e A3:e E3:e C#3:e E3:e |
+  B2:e F#3:e D3:e F#3:e B3:e F#3:e | G2:e D3:e G3:e D3:e B2:e D3:e | D2:e A2:e F#3:e A2:e D3:e A2:e | A2:e E3:e A3:e E3:e
+  C#3:e E3:e | D2:e A2:e F#3:e A2:e D3:e A2:e | D2+A2+D3+F#3:h.
+pedal: x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
+  | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
+reps: 3
+days: 2

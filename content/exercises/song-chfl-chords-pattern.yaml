@@ -1,0 +1,16 @@
+id: song-chfl-chords-pattern
+title: 'Can''t Help Falling in Love: bass and chord'
+kind: timed
+hand: left
+prompt: 'The verse''s left hand: a low bass note on beat one, the chord on beat two. Look ahead to the next bass.'
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: D2:q. A2+D3+F#3:q. | F#2:q. A2+C#3+F#3:q. | B2:q. D3+F#3+B3:q. | B2:q. D3+F#3+B3:q. | G2:q. B2+D3+G3:q. | D2:q. A2+D3+F#3:q.
+  | A2:q. C#3+E3:q. | A2:q. C#3+E3:q. | G2:q. B2+D3+G3:q. | A2:q. C#3+E3:q. | B2:q. D3+F#3+B3:q. | G2:q. B2+D3+G3:q. | D2:q.
+  A2+D3+F#3:q. | A2:q. C#3+E3:q. | D2:q. A2+D3+F#3:q. | D2:q. A2+D3+F#3:q.
+reps: 3
+days: 2

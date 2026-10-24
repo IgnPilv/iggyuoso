@@ -1,0 +1,25 @@
+id: song-chfl-ending
+title: 'Can''t Help Falling in Love 6: the ending and the pedal'
+skills:
+- songs
+steps:
+- explain: |
+    **The ending.** After the last verse the closing line comes once more, from the low A pickup up to D, and the
+    last D is held for two bars over a full D chord.
+
+    **The pedal** makes the rolling left hand ring like one chord. Change it on every bar line: up just as the new bass
+    note sounds, down again straight after. Never hold it from one chord into the next.
+  staff:
+    notes: B3:h. | C#4:h. | D4:h. | E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h.~ | D4:h.
+    key: D
+  sound: B3:h. | C#4:h. | D4:h. | E4:q F#4:e G4:q. | F#4:h. | E4:h. | D4:h.~ | D4:h.
+  terms:
+  - legato pedal
+  - pedal change
+  - coda
+  callout: |
+    Pedal: change on every bar, after the new bass note.
+- exercise: song-chfl-pedal-chords
+- exercise: song-chfl-ending
+- exercise: song-chfl-last-verse
+recap: 'The ending: the closing line again and a long D. Pedal changes on every bar.'

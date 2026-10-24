@@ -1,0 +1,15 @@
+id: song-chfl-bridge-rh
+title: 'Can''t Help Falling in Love: the bridge tune'
+kind: timed
+hand: right
+prompt: Right hand alone. Thumb on C♯, then 2 on F♯, 3 on A, 5 on C♯, and 4 on B to rest.
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | C#4:e F#4:e A4:e C#5:q. | B4:h. | A4:q. A4:q. |
+  F#4:q A4:e F#4:q. | G4:h.~ | G4:q. r:q.
+reps: 3
+days: 2

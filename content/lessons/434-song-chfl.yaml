@@ -1,0 +1,22 @@
+id: song-chfl
+title: Can't Help Falling in Love
+skills:
+- songs
+steps:
+- explain: |
+    **Can't Help Falling in Love**, the whole song: verse, verse, bridge, last verse and the closing line. 66 bars of 6/8, about
+    two minutes.
+
+    Three versions, easiest first: the tune over bass notes, then over bass and chord, then the full arrangement
+    with the rolling left hand from the second verse on. The last take adds the pedal.
+  staff:
+    notes: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e
+    key: D
+  sound: D4:h. | A4:h. | D4:h.~ | D4:q. r:e E4:e F#4:e | G4:h. | F#4:h. | E4:h.~ | E4:q. r:q A3:e
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 66 (dotted quarter) · Form: verse, verse, bridge, verse, ending
+- exercise: song-chfl-easy
+- exercise: song-chfl-medium
+- exercise: song-chfl-full
+- exercise: song-chfl-performance
+recap: 'Can''t Help Falling in Love, start to end: three versions and a pedalled performance.'

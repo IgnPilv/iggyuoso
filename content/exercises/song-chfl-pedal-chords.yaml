@@ -1,0 +1,19 @@
+id: song-chfl-pedal-chords
+title: 'Can''t Help Falling in Love: pedal on the chords'
+kind: timed
+hand: left
+prompt: 'Left hand roll with the pedal, a change every bar. Listen: clear, never blurred.'
+display: staff
+key: D
+tempo: 54
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: D2:e A2:e F#3:e A2:e D3:e A2:e | F#2:e C#3:e A3:e C#3:e F#3:e C#3:e | B2:e F#3:e D3:e F#3:e B3:e F#3:e | B2:e F#3:e
+  D3:e F#3:e B3:e F#3:e | G2:e D3:e G3:e D3:e B2:e D3:e | D2:e A2:e F#3:e A2:e D3:e A2:e | A2:e E3:e A3:e E3:e C#3:e E3:e
+  | A2:e E3:e A3:e E3:e C#3:e E3:e | G2:e D3:e G3:e D3:e B2:e D3:e | A2:e E3:e A3:e E3:e C#3:e E3:e | B2:e F#3:e D3:e F#3:e
+  B3:e F#3:e | G2:e D3:e G3:e D3:e B2:e D3:e | D2:e A2:e F#3:e A2:e D3:e A2:e | A2:e E3:e A3:e E3:e C#3:e E3:e | D2:e A2:e
+  F#3:e A2:e D3:e A2:e | D2:e A2:e F#3:e A2:e D3:e A2:e
+pedal: x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
+reps: 2
+days: 1
