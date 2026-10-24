@@ -509,3 +509,7 @@ never copied pages). Start small, adapt as we go.
   left hand (root–fifth–tenth–fifth, fifths first; second verse), 6 the chorus (turn, sixteenth runs,
   octaves), 7 the whole song in three versions (bass notes, bass and chord, full arrangement with the
   tempo ladder) and a pedalled performance. No lyrics anywhere. Demo scene "A song in steps".
+- 2026-10-24: My songs tempo (Ignas: "too fast, the midi file is supposed to be 72 bpm"; his file
+  says 120, a common default). The import screen has a Tempo box filled from the file, with a
+  note that files often carry a made-up tempo, and each song page has "Song tempo" (saved on the
+  song; the tempo ladder and records count from it). Tempo changes inside a file stay flattened.

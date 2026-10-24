@@ -22,6 +22,13 @@ const TAKE_LABEL: Record<SongTake, string> = { together: 'Both hands', right: 'R
 const keyLabel = (k: string) => k.replace('b', '♭').replace('#', '♯').replace(/m$/, ' minor').replace(/^([A-G♭♯]+)$/, '$1 major');
 const info = (s: Pick<SongSettings, 'tempo' | 'meter' | 'key'> & { bars: number }) =>
   `${s.bars} ${s.bars === 1 ? 'bar' : 'bars'} · ${keyLabel(s.key)} · ${s.meter} at ${s.tempo}`;
+/** A tempo box: MIDI files often carry a tempo that is not the song's (120 is many programs' default). */
+const tempoInput = (value: number) => h('input', { type: 'number', min: 30, max: 240, step: 1, value, class: 'num', 'aria-label': 'song tempo' });
+const readTempo = (el: HTMLInputElement, fallback: number) => {
+  const v = Math.round(Number(el.value));
+  return Number.isFinite(v) && v >= 30 && v <= 240 ? v : fallback;
+};
+
 const titleOf = (file: string) => file.replace(/\.(mid|midi|kar)$/i, '').replace(/[_]+/g, ' ').trim().slice(0, 60) || 'My song';
 
 /** The first bars of a song on the staff, to check the import looks right. */
@@ -67,6 +74,8 @@ export const mySongsView: View = (root, id?: string) => {
       add.disabled = !w.bars;
     };
     grid.onchange = () => { d.grid = Number(grid.value); redraw(); };
+    const tempo = tempoInput(d.tempo);
+    tempo.onchange = () => { d.tempo = readTempo(tempo, d.tempo); tempo.value = String(d.tempo); redraw(); };
     add.onclick = () => {
       const s = addMySong(songStore(), { ...d, title: title.value.trim() || d.title }, file);
       if (demo.active) { root.replaceChildren(); cleanup = songPage(root, cal, s.id); } else location.hash = `#/mysongs/${s.id}`;
@@ -77,7 +86,8 @@ export const mySongsView: View = (root, id?: string) => {
       ...d.notes.map((n) => h('p', { class: 'small' }, n)),
       h('p', { class: 'small' }, 'Who plays which part? A part for both hands is split at middle C.'),
       partsEditor(d, (hands) => { d.hands = hands; redraw(); }),
-      h('div', { class: 'controls' }, h('label', {}, 'Write in ', grid)),
+      h('div', { class: 'controls' }, h('label', {}, 'Tempo ', tempo), h('label', {}, 'Write in ', grid)),
+      h('p', { class: 'small' }, `The file says ${d.tempo}. Many files carry a made-up tempo (120 is a common default), so set the song's real tempo here; the tempo ladder and records count from it. You can change it later too.`),
       look,
       h('div', { class: 'controls' }, h('label', {}, 'Name ', title), add),
     );
@@ -133,6 +143,16 @@ function songPage(root: HTMLElement, cal: Calibration, id: string): () => void {
   const meta = h('p', { class: 'small' });
   const title = h('input', { type: 'text', value: s.title, 'aria-label': 'name', maxlength: 60, class: 'sketch-name' });
   title.onchange = () => { s = updateMySong(songStore(), id, { title: title.value.trim() || s!.title }) ?? s; };
+  const tempo = tempoInput(s.tempo);
+  tempo.onchange = () => {
+    const v = readTempo(tempo, s!.tempo);
+    tempo.value = String(v);
+    if (v === s!.tempo) return;
+    cleanup();
+    practice.replaceChildren();
+    s = updateMySong(songStore(), id, { tempo: v }) ?? s;
+    showTakes();
+  };
   const best = (take: SongTake) => songStore().exercise(songExerciseId(id, take)).best?.stars;
   const play = (take: SongTake) => {
     const ex = songExercise(s!, take);
@@ -170,6 +190,7 @@ function songPage(root: HTMLElement, cal: Calibration, id: string): () => void {
     h('p', { class: 'small' }, h('a', { href: '#/mysongs' }, '← My songs')),
     h('h2', {}, title),
     meta,
+    h('div', { class: 'controls' }, h('label', {}, 'Song tempo ', tempo), h('span', { class: 'small' }, 'beats a minute at 100%')),
     h('p', { class: 'small' }, 'Pick what to practise. Start with one hand, slowly, and loop the hard bars.'),
     takes,
     practice,
