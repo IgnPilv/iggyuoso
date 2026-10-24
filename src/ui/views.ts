@@ -2,7 +2,7 @@ import { calibrate, keyName, shiftMiddleC, type Calibration } from '../calibrati
 import { book, content, contentErrors, exerciseTitle, nodeOfLesson, songOf, stages, treeNodes } from '../content';
 import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
-import { computerKeys, KEY_SEMITONES, letterOf } from '../midi/computerKeys';
+import { computerKeys, KEY_SEMITONES, letterOf, typing } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
 import { lessonAdvice, lessonGoals, lessonStage, mastery, nextLesson, noteSkipped, type LessonAdvice } from '../progress';
 import { store } from '../progress/store';
@@ -207,6 +207,13 @@ export const calibrateView: View = (root) => {
 
 // ---------------------------------------------------------------- lesson
 
+// The last thing pressed with a mouse or finger, to tell a clicked button from one tabbed to.
+let lastPointer: EventTarget | null = null;
+if (typeof window !== 'undefined') {
+  window.addEventListener('pointerdown', (e) => { lastPointer = e.target; }, { capture: true, passive: true });
+  window.addEventListener('keydown', (e) => { if (e.key === 'Tab') lastPointer = null; }, { capture: true, passive: true });
+}
+
 export const lessonView: View = (root, id?: string) => {
   const lesson = id ? content.lessons.get(id) : undefined;
   if (!lesson) { root.append(h('p', {}, 'Lesson not found. ', h('a', { href: '#/' }, 'Home'))); return; }
@@ -216,6 +223,32 @@ export const lessonView: View = (root, id?: string) => {
   const body = h('div');
   const nav = h('div', { class: 'controls' });
   const progress = h('span', { class: 'small' });
+  // The way forward, also at the top: it mirrors the Next (or Skip) button, and on the recap the
+  // next lesson.
+  const topNext = h('button', { class: 'chip top-next', type: 'button' });
+  let forward: HTMLButtonElement | undefined;
+  const syncTop = () => {
+    topNext.hidden = !forward;
+    if (!forward) return;
+    topNext.textContent = `${forward.textContent} ›`;
+    topNext.title = forward.classList.contains('secondary') ? forward.textContent ?? '' : `${forward.textContent} (Enter)`;
+    topNext.disabled = forward.disabled;
+    topNext.classList.toggle('go', !forward.classList.contains('secondary'));
+  };
+  topNext.onclick = () => forward?.click();
+  // Enter presses the main button (the first one that is not secondary), unless a control has focus.
+  const onEnter = (e: KeyboardEvent) => {
+    if (e.key !== 'Enter' || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.repeat || !root.isConnected) return;
+    const a = document.activeElement;
+    // A control reached with the keyboard keeps its own Enter; one just clicked or tapped does not.
+    const control = a instanceof HTMLElement && a !== document.body && a.matches('button, a, summary, input, select, textarea, [tabindex]');
+    if (typing(e.target) || (control && !(lastPointer instanceof Node && a.contains(lastPointer)))) return;
+    const main = [...nav.querySelectorAll<HTMLButtonElement>('button')].find((b) => !b.classList.contains('secondary') && !b.disabled);
+    if (!main) return;
+    e.preventDefault();
+    main.click();
+  };
+  window.addEventListener('keydown', onEnter);
   let step = 0;
   // Tapping a step jumps there, forward or back; leaving an exercise stops it (takes are saved as played).
   const bar = stepBar(lesson, store, (eid) => content.exercises.get(eid), (i) => { if (i !== step) { step = i; show(); } });
@@ -233,6 +266,7 @@ export const lessonView: View = (root, id?: string) => {
     const s = lesson.steps[step];
     let leave = () => {};
     const next = h('button', { onclick: () => { leave(); step++; show(); } }, 'Next');
+    forward = next;
     if ('read' in s) {
       const block = readStep(book.chapters.get(s.read)!, cal);
       body.append(block.el);
@@ -241,7 +275,7 @@ export const lessonView: View = (root, id?: string) => {
     } else if ('explain' in s) {
       // A check question holds Next until it is answered right.
       next.disabled = true;
-      const block = explainBlock(s, cal, () => { next.disabled = false; });
+      const block = explainBlock(s, cal, () => { next.disabled = false; syncTop(); });
       body.append(block.el);
       cleanup = block.destroy;
     } else if ('playground' in s) {
@@ -254,9 +288,10 @@ export const lessonView: View = (root, id?: string) => {
       body.append(box);
       next.textContent = 'Skip';
       next.classList.add('secondary');
-      cleanup = mountExercise(box, ex, cal, () => { next.textContent = 'Next'; next.classList.remove('secondary'); bar.paint(step); });
+      cleanup = mountExercise(box, ex, cal, () => { next.textContent = 'Next'; next.classList.remove('secondary'); bar.paint(step); syncTop(); });
     }
     nav.append(next);
+    syncTop();
     // The path note, once and quietly, under the first step.
     if (step === 0 && !advice.ready) body.after(adviceNote);
     else adviceNote.remove();
@@ -271,6 +306,8 @@ export const lessonView: View = (root, id?: string) => {
       home: () => go('/'),
     });
     body.append(...r.body);
+    forward = r.forward;
+    syncTop();
     const node = nodeOfLesson(l.id);
     // A milestone opens songs: point at them once it is passed.
     if (node?.type === 'checkpoint' && mastery.state(node.id) !== 'introduced' && mastery.state(node.id) !== 'locked') {
@@ -286,9 +323,9 @@ export const lessonView: View = (root, id?: string) => {
   const where = node ? h('a', { class: 'lesson-branch small', href: `#${songHome(node.id) ?? `/branch/${node.branch}`}` },
     h('span', { class: `strand-dot strand-${node.strand}` }),
     songStep ? `Song · step ${songStep.n} of ${songStep.of}` : node.branch === 'songs' ? 'Song' : `${BRANCH_LABEL[node.branch]} · stage ${node.stage}`) : '';
-  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('div', {}, where, h('h2', {}, lesson.title)), progress), bar.el, body, nav));
+  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('div', {}, where, h('h2', {}, lesson.title)), h('div', { class: 'lesson-top' }, progress, topNext)), bar.el, body, nav));
   show();
-  return () => cleanup?.();
+  return () => { cleanup?.(); window.removeEventListener('keydown', onEnter); };
 };
 
 /** A song taught in steps: this node's place in it. */

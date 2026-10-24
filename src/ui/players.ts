@@ -4,6 +4,7 @@ import type { Exercise, FindExercise, GeneratedExercise, SequenceExercise, Timed
 import { generate } from '../engine/generate';
 import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
+import { computerKeys, typing } from '../midi/computerKeys';
 import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
 import { expectedDynamics, expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
@@ -551,8 +552,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   const listenBtn = h('button', { class: 'secondary' }, 'Listen');
   const playBtn = h('button', {}, 'Play');
   const stopBtn = h('button', { class: 'secondary', disabled: true }, 'Stop');
+  const pauseBtn = h('button', { class: 'secondary', disabled: true, title: 'Space' }, 'Pause');
 
-  let run: { cancel: () => void } | undefined;
+  let run: { cancel: () => void; togglePause: () => void } | undefined;
   const flashes: Flash[] = [];
 
   // Draw a still frame (before the first run, or after switching views).
@@ -617,12 +619,13 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       const now = performance.now();
       const pos = session.position(now);
       const noteState = (i: number) => session.liveState(expected[i], pos.beat);
-      status.textContent = pos.phase === 'count-in' ? (pos.count ? `${echoTurn ? 'Your turn: ' : ''}Count in… ${pos.count}` : 'Get ready…')
+      status.textContent = session.paused ? 'Paused. Press Space or Resume to go on, after a bar to count back in.'
+        : pos.phase === 'count-in' ? (pos.count ? `${echoTurn ? 'Your turn: ' : ''}Count in… ${pos.count}` : 'Get ready…')
         : pos.phase === 'playing' ? (mode === 'listen' ? (echo ? 'Listen…' : 'Listen and watch the keys…') : echo ? 'Tap it back!' : 'Play!')
         : pos.phase === 'waiting' ? 'Get ready…' : '';
       falling?.draw({
-        beat: pos.beat, count: pos.phase === 'count-in' ? pos.count : undefined, held: midi.held, noteState, flashes, now, pedalDown: midi.pedalDown,
-        banner: pos.phase === 'waiting' ? 'Get ready' : undefined,
+        beat: pos.beat, count: pos.phase === 'count-in' && !session.paused ? pos.count : undefined, held: midi.held, noteState, flashes, now, pedalDown: midi.pedalDown,
+        banner: session.paused ? 'Paused' : pos.phase === 'waiting' ? 'Get ready' : undefined,
       });
       strip?.follow(Math.max(0, pos.beat));
       if (kb) {
@@ -665,8 +668,31 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       staff?.clear('current');
       listenBtn.disabled = playBtn.disabled = false;
       toggle.disable(false);
-      stopBtn.disabled = true;
+      stopBtn.disabled = pauseBtn.disabled = true;
+      pauseBtn.textContent = 'Pause';
       run = undefined;
+    };
+
+    // Space or the Pause button: the clock holds where it is; going on gives a bar to count back
+    // in (or the rest of the count-in, when paused before the music started).
+    const togglePause = () => {
+      const now = performance.now();
+      if (!session.paused) {
+        if (session.position(now).phase === 'done') return;
+        session.pause(now);
+        stopAll();
+        pauseBtn.textContent = 'Resume';
+        return;
+      }
+      const started = session.position(now).beat >= 0;
+      const lead = started ? ex.meter.quarters : 0;
+      const at = session.resume(now, lead)!;
+      if (started && (ex.click ?? 'on') !== 'off') {
+        for (let b = lead; b > 1e-6; b -= ex.meter.pulse) click(at - b * session.beatMs, Math.abs(b - lead) < 1e-6);
+      }
+      for (const c of session.clicks(metro.checked)) if (c.time >= Math.max(at, now) - 1) click(c.time, c.accent);
+      if (mode === 'listen' || (guide.checked && !echo)) for (const g of session.guide()) if (g.time >= at - 1) piano(g.midi, g.time, g.durMs);
+      pauseBtn.textContent = 'Pause';
     };
 
     const finish = () => {
@@ -684,6 +710,13 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       const r = ex.goal ? { ...raw, score: goal.score, stars: goal.stars } : raw;
       for (const n of r.notes) staff?.mark(`${n.expected.hand}:${n.expected.index}`, n.outcome === 'hit' ? 'hit' : n.outcome);
       hud.replaceChildren();
+      if (session.wasPaused && !looping) {
+        // A take with a pause is practice: shown, never saved.
+        status.textContent = `${r.score}. A take with a pause is practice and is not saved; play it through without pausing to count it.`;
+        result.replaceChildren(timedResult(r, ex, tempo, cal, true));
+        demo.onRunEnd?.('play');
+        return;
+      }
       if (looping) {
         // Loop takes are practice: nothing is saved, and the next take starts by itself.
         status.textContent = `${r.score}. Again in a moment; press Stop to finish looping.`;
@@ -726,15 +759,28 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
     listenBtn.disabled = playBtn.disabled = true;
     toggle.disable(true);
-    stopBtn.disabled = false;
+    stopBtn.disabled = pauseBtn.disabled = false;
     raf = requestAnimationFrame(frame);
-    run = { cancel: stop };
+    run = { cancel: stop, togglePause };
   };
 
   listenBtn.onclick = () => start('listen');
   playBtn.onclick = () => start(echo ? 'listen' : 'play');
   if (echo) listenBtn.hidden = true;
   stopBtn.onclick = () => { run?.cancel(); clearTimeout(again); status.textContent = 'Stopped.'; idle(); };
+  pauseBtn.onclick = () => run?.togglePause();
+  // Space plays, pauses and resumes (unless the computer keyboard needs it for the pedal here).
+  const onSpace = (e: KeyboardEvent) => {
+    if (e.code !== 'Space' || e.ctrlKey || e.metaKey || e.altKey || e.repeat || typing(e.target) || !root.isConnected) return;
+    if (computerKeys.enabled && expectedPedal(ex).length) return;
+    if (demo.active && e.isTrusted) return;
+    e.preventDefault();
+    // A focused button would also take the Space as a click.
+    if (document.activeElement instanceof HTMLButtonElement) document.activeElement.blur();
+    if (run) run.togglePause();
+    else if (!playBtn.disabled) playBtn.click();
+  };
+  window.addEventListener('keydown', onSpace);
 
   // Transport up front (Listen, Play, Stop, view); tempo, click, guide and looping in a drawer.
   const tempoChip = h('span', { class: 'meta-chip' });
@@ -757,7 +803,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     header(ex, echo ? 'Press Play: listen to the rhythm, then tap it back after a bar of count-in.' : ex.pitchMatch === 'side' ? 'Tap the rhythm: right hand on any key from middle C up, left hand on any key below.'
       : ex.tap ? 'Tap the rhythm on any key, with the click.' : 'Play along with the click.'),
     h('div', { class: 'transport' },
-      h('div', { class: 'transport-main' }, listenBtn, playBtn, stopBtn),
+      h('div', { class: 'transport-main' }, listenBtn, playBtn, pauseBtn, stopBtn),
       echo ? '' : toggle.el,
     ),
     drawer,
@@ -769,7 +815,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   );
   if (looping) status.textContent = `Looping ${barsText(loop.bars!)}. Press Play; it goes round until you press Stop. Loop takes are not saved.`;
   buildView(toggle.get());
-  return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); };
+  return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); window.removeEventListener('keydown', onSpace); };
 }
 
 /** `loopTake`: a practice loop, which is never saved, so there is no note about records. */

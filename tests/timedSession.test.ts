@@ -21,6 +21,25 @@ describe('TimedSession', () => {
     expect(x.guide().map((g) => g.time)).toEqual([5000, 6000, 7000]);
   });
 
+  it('pauses: the music holds, presses are ignored, and it picks up after a bar to count back in', () => {
+    const x = new TimedSession(ex, cal(21, 108), { tempo: 60, startAt: 1000, latencyMs: 0, mode: 'play' });
+    const c4 = 60, d4 = 62, e4 = 64; // middle C is MIDI 60 on an 88-key board
+    x.noteOn(c4, 5000);
+    x.pause(5500);
+    expect(x.paused).toBe(true);
+    expect(x.position(9000).beat).toBeCloseTo(0.5);
+    expect(x.noteOn(d4, 7000)).toBeUndefined();
+    expect(x.liveScore(9000).missed).toBe(0);
+    // Resumed at 10 s with a bar (4 beats) to count in: beat 0.5 sounds again at 14 s.
+    expect(x.resume(10000, 4)).toBe(14000);
+    expect(x.position(14000).beat).toBeCloseTo(0.5);
+    expect(x.noteOn(d4, 14500)?.kind).toBe('hit');
+    x.noteOn(e4, 15500);
+    const r = x.result();
+    expect(r.notes.every((n) => n.outcome === 'hit')).toBe(true);
+    expect(x.wasPaused).toBe(true);
+  });
+
   it('takes a short count-in ("3 4") or none, and the click: count-in / off settings', () => {
     const short = new TimedSession(ex, cal(21, 108), { tempo: 60, startAt: 1000, latencyMs: 0, mode: 'play', countIn: 'short' });
     expect(short.t0).toBe(3000);
