@@ -12,6 +12,7 @@ import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
 import { demoProgress, goalsStage, lessonGoals, lessonExercises, nodeOfLesson } from '../progress';
 import { lessonRecap } from './recap';
+import { stepBar } from './stepBar';
 import { dayOf, Mastery } from '../progress/mastery';
 import { memoryBackend, Store } from '../progress/store';
 import { demoAccount } from '../sync';
@@ -428,7 +429,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Clean takes and the path',
-    caption: 'An exercise is done after its clean takes (★★★, 92 or more, at full tempo), some on two different days. The recap says it plainly: what each exercise still needs, what can count today, and one main button. Once every exercise has a clean take the lesson is played through and Next goes on (the same branch first; skipped lessons come back last); the takes owed for tomorrow come back in Today\'s practice. Nothing is locked.',
+    caption: 'An exercise is done after its clean takes (★★★, 92 or more, at full tempo), some on two different days. The recap says it plainly: what each exercise still needs, what can count today, and one main button. Once every exercise has a clean take the lesson is played through and Next goes on (the same branch first; skipped lessons come back last); the takes owed for tomorrow come back in Today\'s practice. Nothing is locked. The bar of steps on top is marked too (green: done, pale green: a clean take so far), and any step can be tapped to jump to it.',
     run: (box, next, p) => {
       const timers: number[] = [];
       const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
@@ -456,7 +457,9 @@ function scenes(): Scene[] {
           next: { id: 'demo-next', title: 'Echo two notes', skills: [], steps: [], recap: '' },
           practise: (id) => play(id === ex.id ? ex : tap), openLesson: () => next(), home: () => next(),
         });
-        box.replaceChildren(h('section', { class: 'card' }, h('h2', {}, lesson.title), ...r.body, h('div', { class: 'controls' }, ...r.nav)));
+        const bar = stepBar(lesson, store, (id) => goals.find((e) => e.id === id), (i) => (i < goals.length ? play(goals[i]) : recap()));
+        bar.paint(goals.length);
+        box.replaceChildren(h('section', { class: 'card' }, h('h2', {}, lesson.title), bar.el, ...r.body, h('div', { class: 'controls' }, ...r.nav)));
         // The pianist presses the main button: practise again until the lesson is played through.
         const main = box.querySelector<HTMLButtonElement>('.controls button');
         later(5500, () => (takes < 3 ? main?.click() : next()));

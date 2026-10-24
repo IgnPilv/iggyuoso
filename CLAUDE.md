@@ -513,3 +513,11 @@ never copied pages). Start small, adapt as we go.
   says 120, a common default). The import screen has a Tempo box filled from the file, with a
   note that files often carry a made-up tempo, and each song page has "Song tempo" (saved on the
   song; the tempo ladder and records count from it). Tempo changes inside a file stay flattened.
+- 2026-10-24: Clickable step bar (Ignas: "make the progress bar clickable to skip also, and show
+  progress if it's done as marked"). The bar at the top of a lesson (`src/ui/stepBar.ts`) is a row
+  of buttons, one per step plus the recap: tapping (or Enter on) a segment jumps there, forward or
+  back; leaving an exercise stops it, and its takes are already saved. Segments are marked green
+  when the exercise is done, pale green after a clean take, grey once a theory screen was seen;
+  the current step keeps its mark as a line under it. Each has a tooltip and label ("Step 4: C, E
+  or G? (clean take, not finished)"). The marks update right after a take. Demo scene "Clean takes
+  and the path" shows the marked bar.
