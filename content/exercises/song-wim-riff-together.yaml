@@ -1,0 +1,17 @@
+id: song-wim-riff-together
+title: 'Where Is My Mind: riff and bass'
+kind: timed
+hand: together
+prompt: Both hands. The left hand lands with the first eighth of each half bar; the riff never stops.
+display: staff
+key: E
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e
+  G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e
+  | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e
+left: E3:w | E3:w | E3:h C#3:h | G#2:h A2:h | E3:h C#3:h | G#2:h A2:h
+reps: 3
+days: 2

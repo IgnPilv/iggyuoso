@@ -1,0 +1,58 @@
+id: song-wim-chords
+title: 'Where Is My Mind (Maxence Cyrin) 2: the four chords'
+skills:
+- songs
+steps:
+- explain: |
+    The whole song is **four chords**, two beats each, round and round: **E**, **C♯ minor**, **G♯** and **A**.
+
+    In E major they are **I**, **vi**, **III** and **IV**. Three of them belong to the key. The third one is a surprise.
+  staff:
+    notes: E4+G#4+B4:h C#4+E4+G#4:h | G#4+B#4+D#5:h A4+C#5+E5:h
+    key: E
+  sound: E3+G#3+B3+E4:h C#3+G#3+C#4+E4:h | G#2+G#3+B#3+D#4:h A2+A3+C#4+E4:h
+  terms:
+  - I
+  - vi
+  - III
+  - IV
+  callout: |
+    E – C♯m – G♯ – A: I – vi – III – IV.
+- explain: |
+    **The surprise chord.** In E major the chord on G♯ is normally *minor* (G♯ B D♯). Here it is **major**:
+    G♯ **B♯** D♯. B♯ is a third above G♯, so it is written as a kind of B, but you play it on the white key you know as
+    **C**. Same key, a different name for what it does.
+
+    That bright B♯ is what gives the song its floating, slightly strange colour.
+  keys:
+    notes: G#3 C4 D#4
+    labels: names
+  sound: G#3+B3+D#4:h G#3+B#3+D#4:h
+  check:
+    ask: Which key do you press for B♯?
+    choices:
+    - B
+    - C♯
+    - A♯
+    - C
+    correct: 3
+    why: 'B♯ is a semitone above B: that is the white key C.'
+- explain: |
+    **Hear the chords move.** In the left hand the chords sit close together: the top notes hardly move.
+    G♯ stays on top of E and C♯m; only one or two fingers step each time. Find the shapes, then keep them under your
+    fingers: 5 on the lowest note, 1 on the top.
+  check:
+    ask: What is the Roman numeral of A major in E major?
+    choices:
+    - V
+    - iv
+    - IV
+    - VI
+    correct: 2
+    why: 'A is the fourth note of E major, and the chord is major: IV.'
+- exercise: song-wim-chords-build
+- exercise: song-wim-chords-ear
+- exercise: song-wim-chords-held
+- exercise: song-wim-chords-pattern
+- exercise: song-wim-intro
+recap: 'Four chords, two beats each: E, C♯m, G♯ (with B♯, the key C) and A. I vi III IV.'

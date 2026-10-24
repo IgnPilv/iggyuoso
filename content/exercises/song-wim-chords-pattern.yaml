@@ -1,0 +1,15 @@
+id: song-wim-chords-pattern
+title: 'Where Is My Mind: bass and chord'
+kind: timed
+hand: left
+prompt: 'Now the real pattern: a low bass note, then the chord. Jump down, jump back, and look ahead to the next bass.'
+display: staff
+key: E
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q G#3+B#3+D#4:q A2:q A3+C#4+E4:q | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q
+  G#3+B#3+D#4:q A2:q A3+C#4+E4:q
+reps: 3
+days: 2

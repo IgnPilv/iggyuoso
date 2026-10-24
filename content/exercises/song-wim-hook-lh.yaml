@@ -1,0 +1,15 @@
+id: song-wim-hook-lh
+title: 'Where Is My Mind: "ooh" left hand'
+kind: timed
+hand: left
+prompt: 'Left hand alone: bass and chord, then the break''s long A and two bass notes.'
+display: staff
+key: E
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q G#3+B#3+D#4:q A2:q A3+C#4+E4:q | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q
+  G#3+B#3+D#4:q A2:q A3+C#4+E4:q | A2:w | C#3:h B2:h
+reps: 2
+days: 1

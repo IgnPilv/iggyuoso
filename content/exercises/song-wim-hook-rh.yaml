@@ -1,0 +1,15 @@
+id: song-wim-hook-rh
+title: 'Where Is My Mind: the "ooh" and the break'
+kind: timed
+hand: right
+prompt: Right hand alone. Fourth finger on G♯, thumb on C♯; in the break, the high chord is fingers 1 2 4.
+display: staff
+key: E
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:e G#5:e. G#5:e. C#5:h | r:e G#5:e. G#5:e. C#5:q A5:q | r:e G#5:e. G#5:e. C#5:h | r:w | C4+E4:w | r:q E4+G#4:q B5+D#6+F#6:q
+  r:e. E4:s
+reps: 3
+days: 2

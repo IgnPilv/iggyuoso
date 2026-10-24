@@ -1,0 +1,24 @@
+id: song-wim-chords-ear
+title: 'Where Is My Mind: which progression?'
+kind: ear
+prompt: 'Four chords play: is it the song''s I vi III IV, or another famous one? Then single chords: name them.'
+questions: 12
+reps: 2
+days: 2
+items:
+- type: progression
+  key:
+  - E
+  pool:
+  - I vi III IV
+  - I vi IV V
+  - I V vi IV
+  - I IV V I
+  choices: 4
+- type: function
+  key: E
+  pool:
+  - I
+  - vi
+  - III
+  - IV

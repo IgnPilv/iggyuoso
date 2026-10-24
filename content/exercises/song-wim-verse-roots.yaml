@@ -1,0 +1,16 @@
+id: song-wim-verse-roots
+title: 'Where Is My Mind: verse over bass notes'
+kind: timed
+hand: together
+prompt: 'Both hands, the easy way: one bass note per chord while the right hand sings.'
+display: staff
+key: E
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G#4:e G#4:s E4:q E4:s D#4:e D#4:s G#3:q r:s | r:h r:q r:s D#4:s E4:e | G#4:e G#4:s E4:q E4:s D#4:e D#4:s C#4:e. D#4:e~
+  | D#4:h r:q r:e. D#4:s | E4:e E4:s D#4:q D#4:s C#4:e C#4:s D#4:q C#4:s | G#4:e F#4:s E4:q C#4:s G#4:e F#4:s E4:q r:s
+left: E3:h C#3:h | G#2:h A2:h | E3:h C#3:h | G#2:h A2:h | E3:h C#3:h | G#2:h A2:h
+reps: 2
+days: 1

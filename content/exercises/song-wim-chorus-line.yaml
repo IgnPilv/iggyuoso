@@ -1,0 +1,15 @@
+id: song-wim-chorus-line
+title: 'Where Is My Mind: the title line and the runs'
+kind: timed
+hand: right
+prompt: Right hand alone, slowly. Thumb under after D♯ on the way up; keep the sixteenths even.
+display: staff
+key: E
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B5:q. A5:s F#5:s G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s D#5:s C#5:s D#5:s E5:s F#5:s G#5:s A5:s | B5:q. A5:s F#5:s
+  G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s F#5:s G#5:s A5:s B5:s C#6:s D#6:e
+reps: 3
+days: 2

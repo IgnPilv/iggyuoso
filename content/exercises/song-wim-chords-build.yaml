@@ -1,0 +1,21 @@
+id: song-wim-chords-build
+title: 'Where Is My Mind: find the four chords'
+kind: build
+prompt: Hold each chord down together. Remember B♯ is the white key C.
+tasks:
+- chord: E
+  octave: 3
+- chord: C#m
+  octave: 3
+- chord: G#
+  octave: 3
+- chord: A
+  octave: 3
+- notes: G#3 B3 E4
+  ask: 'E, the way the song plays it: G♯ B E'
+  together: true
+- notes: G#3 B#3 D#4
+  ask: 'G♯ major, the way the song plays it: G♯ B♯ D♯'
+  together: true
+reps: 3
+days: 1

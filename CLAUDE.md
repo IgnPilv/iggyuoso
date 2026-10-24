@@ -483,3 +483,15 @@ never copied pages). Start small, adapt as we go.
   The edge balances branches by lessons played through. Today's practice puts played-through
   lessons with takes still owed today first, and those waiting only for tomorrow last. The result
   line says when an exercise can count nothing more today. Demo scene "Clean takes and the path".
+- 2026-10-24: "Where Is My Mind" (Pixies, 1988), Maxence Cyrin's piano version, added to Songs at Ignas's
+  explicit request, **overriding the public-domain rule for this title only** (he was told it is under
+  copyright). Transcribed from his two-track MIDI (E major, 4/4, quarter = 120; fermatas left out, the
+  32nd-note turn as two sixteenths, one empty bar dropped; 43 bars) in `tools/content/wim.py`. Unlike the
+  one-lesson songs it is a ladder of seven song lessons, each a `songs` node needing the one before plus
+  cross-branch requirements: 1 the riff (stage 4: tap, riff, bass roots, together), 2 the four chords
+  E C♯m G♯ A = I vi III IV (B♯ = the key C; build, ear progression and function, held chords, bass and
+  chord, intro), 3 the verse (sixteenth syncopation tapped first, echo, roots, then bass and two-note
+  chords), 4 the "ooh" and the break (A minor borrowed, B major; first half of the song), 5 the rolling
+  left hand (root–fifth–tenth–fifth, fifths first; second verse), 6 the chorus (turn, sixteenth runs,
+  octaves), 7 the whole song in three versions (bass notes, bass and chord, full arrangement with the
+  tempo ladder) and a pedalled performance. No lyrics anywhere. Demo scene "A song in steps".

@@ -1,0 +1,14 @@
+id: song-wim-fifths
+title: 'Where Is My Mind: roots and fifths'
+kind: timed
+hand: left
+prompt: 'Left hand: root and fifth of each chord, in quarters. Fingers 5 and 2.'
+display: staff
+key: E
+tempo: 90
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: E2:q B2:q C#2:q G#2:q | G#2:q D#3:q A2:q E3:q | E2:q B2:q C#2:q G#2:q | G#2:q D#3:q A2:q E3:q
+reps: 2
+days: 1

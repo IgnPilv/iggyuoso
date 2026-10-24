@@ -1,0 +1,18 @@
+id: song-wim-intro
+title: 'Where Is My Mind: the intro'
+kind: timed
+hand: together
+prompt: 'The intro as Maxence Cyrin plays it: the riff over a long low E, then over bass and chord.'
+display: staff
+key: E
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e
+  G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e | E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e
+  | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e
+left: E2:w~ | E2:w | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q G#3+B#3+D#4:q A2:q A3+C#4+E4:q | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q
+  | G#2:q G#3+B#3+D#4:q A2:q A3+C#4+E4:q
+reps: 3
+days: 2

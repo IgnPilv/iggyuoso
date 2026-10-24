@@ -1,0 +1,13 @@
+id: song-wim-verse-tap
+title: 'Where Is My Mind: tap the verse'
+kind: tap
+prompt: The verse rhythm alone, on any key. Count "1 e and a" under your breath.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:e x:s x:q x:s x:e x:s x:q r:s | r:h r:q r:s x:s x:e | x:e x:s x:q x:s x:e x:s x:e. x:e | x:h r:q r:e. x:s | x:e
+  x:s x:q x:s x:e x:s x:q x:s | x:e x:s x:q x:s x:e x:s x:q r:s
+reps: 3
+days: 2

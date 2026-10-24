@@ -1,0 +1,16 @@
+id: song-wim-hook2
+title: 'Where Is My Mind: "ooh" over the roll'
+kind: timed
+hand: together
+prompt: The "ooh" again, now over the rolling left hand.
+display: staff
+key: E
+tempo: 90
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:e G#5:e. G#5:e. C#5:h | r:e G#5:e. G#5:e. C#5:q A5:q | r:e G#5:e. G#5:e. C#5:h | r:w
+left: E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e
+  G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e
+reps: 3
+days: 2

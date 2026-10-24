@@ -1,0 +1,40 @@
+id: song-wim-hook
+title: 'Where Is My Mind (Maxence Cyrin) 4: the "ooh" and the break'
+skills:
+- songs
+steps:
+- explain: |
+    **The "ooh".** High in the right hand, two G♯s fall *between* the beats: the first after an eighth rest, the
+    second three sixteenths later, then a long C♯ on beat 3. Count "1 **and** 2 **e** and a **3**".
+
+    The left hand keeps the bass and chord from the intro underneath.
+  staff:
+    notes: r:e G#5:e. G#5:e. C#5:h | r:e G#5:e. G#5:e. C#5:q A5:q
+    key: E
+  sound: r:e G#5:e. G#5:e. C#5:h | r:e G#5:e. G#5:e. C#5:q A5:q | r:e G#5:e. G#5:e. C#5:h
+  terms:
+  - dotted eighth
+  - off the beat
+- explain: |
+    **The break.** Two bars where the song holds its breath. First a soft **A minor** chord (C natural, borrowed from E
+    minor, so it sounds darker), then C♯m and a bright **B major** (V) up high, rolled from the bottom, which leads
+    back into the verse.
+  staff:
+    notes: C4+E4:w | r:q E4+G#4:q B5+D#6+F#6:q r:e. E4:s
+    key: E
+  sound: C4+E4:w | r:q E4+G#4:q B5+D#6+F#6:q r:e. E4:s
+  check:
+    ask: Which note turns A major into A minor?
+    choices:
+    - C♯
+    - C natural
+    - G♯
+    - E
+    correct: 1
+    why: A major is A C♯ E; A minor is A C E. The C natural makes it minor.
+- exercise: song-wim-hook-tap
+- exercise: song-wim-hook-rh
+- exercise: song-wim-hook-lh
+- exercise: song-wim-hook
+- exercise: song-wim-first-half
+recap: The "ooh" falls between the beats; the break borrows a dark A minor, then B major leads home.

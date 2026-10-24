@@ -1,0 +1,47 @@
+id: song-wim-riff
+title: 'Where Is My Mind (Maxence Cyrin) 1: the riff'
+skills:
+- songs
+steps:
+- explain: |
+    **Where Is My Mind** · Pixies, 1988 · piano version by Maxence Cyrin
+
+    A rock song by the American band Pixies, played here as Maxence Cyrin's solo piano version: a right hand that
+    rocks between two notes over a slow bass. Seven lessons build it up a piece at a time: the riff, the four chords,
+    the verse, the "ooh" and the break, the rolling left hand, the chorus, then the whole song.
+
+    It is still under copyright, so it is in the songbook because you asked for it.
+  staff:
+    notes: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e
+    key: E
+  sound: E5:e G#5:e E5:e G#5:e E5:e G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e | E5:e G#5:e
+    E5:e G#5:e E5:e G#5:e E5:e G#5:e | D#5:e G#5:e D#5:e G#5:s D#5:s E5:e E5:s D#5:s E5:e G#5:e
+- explain: |
+    **The key of E major** has four sharps: F♯, C♯, G♯ and D♯. The riff uses just three notes of it:
+    **E** and **G♯** above them (a major third apart), and **D♯**, the note just below E that leans back up to it.
+
+    Right hand: thumb on E, middle finger on G♯; the D♯ is the thumb sliding down one key, a black one.
+  keys:
+    notes: E5 G#5 D#5
+    fingers: 1 3 1
+  callout: |
+    E major: F♯ C♯ G♯ D♯. The riff: E and G♯, with D♯ leaning back to E.
+  terms:
+  - E major
+  - major third
+  - riff
+  check:
+    ask: How many sharps does E major have?
+    choices:
+    - Four
+    - Two
+    - Three
+    - Five
+    correct: 0
+    why: 'F♯, C♯, G♯ and D♯: four sharps.'
+- exercise: song-wim-riff-tap
+- exercise: song-wim-riff-tap-hands
+- exercise: song-wim-riff-rh
+- exercise: song-wim-riff-roots
+- exercise: song-wim-riff-together
+recap: 'The riff: E and G♯ rocking in eighths, D♯ leaning back home, over four bass notes.'

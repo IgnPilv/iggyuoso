@@ -416,7 +416,7 @@ export function songsPage(p: Progress = { store: realStore, mastery: realMastery
     h('div', { class: 'unit-head' },
       h('h2', {}, 'Songbook'),
       h('span', { class: 'unit-progress' }, `${songs.filter((v) => v.done).length} of ${songs.length} learned`)),
-    h('p', {}, 'Tunes to play for fun, old enough to be free for everyone. Each milestone you pass opens a new shelf. Each song comes in steps: the tune, the left hand, then both together.'),
+    h('p', {}, 'Tunes to play for fun, nearly all old enough to be free for everyone. Each milestone you pass opens a new shelf. Each song comes in steps: the tune, the left hand, then both together.'),
     ...[...groups].map(([msId, list]) => {
       const ms = treeNodes.get(msId);
       const passed = ms ? grown(snap.get(msId)!) : true;

@@ -1,0 +1,17 @@
+id: song-wim-hook
+title: 'Where Is My Mind: "ooh" and break together'
+kind: timed
+hand: together
+prompt: Both hands. Feel the right hand fall between the left hand's beats.
+display: staff
+key: E
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:e G#5:e. G#5:e. C#5:h | r:e G#5:e. G#5:e. C#5:q A5:q | r:e G#5:e. G#5:e. C#5:h | r:w | C4+E4:w | r:q E4+G#4:q B5+D#6+F#6:q
+  r:e. E4:s
+left: E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q G#3+B#3+D#4:q A2:q A3+C#4+E4:q | E2:q G#3+B3+E4:q C#2:q G#3+C#4+E4:q | G#2:q
+  G#3+B#3+D#4:q A2:q A3+C#4+E4:q | A2:w | C#3:h B2:h
+reps: 3
+days: 2

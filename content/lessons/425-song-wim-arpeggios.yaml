@@ -1,0 +1,43 @@
+id: song-wim-arpeggios
+title: 'Where Is My Mind (Maxence Cyrin) 5: the rolling left hand'
+skills:
+- songs
+steps:
+- explain: |
+    From the second verse the left hand **rolls**: root, fifth, the third an octave higher (a **tenth** above the
+    root), fifth again, in eighths. Two chords to a bar, so eight eighths a bar, without a gap.
+
+    Fingers 5 2 1 2 for every chord: the hand opens wide on the tenth, then closes back.
+  staff:
+    notes: E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e
+    clef: bass
+    key: E
+  sound: E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e
+    C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e
+  keys:
+    notes: E2 B2 G#3
+    fingers: 5 2 1
+  terms:
+  - broken chord
+  - tenth
+  - arpeggio
+  callout: |
+    Root – fifth – tenth – fifth, fingers 5 2 1 2.
+- explain: |
+    Learn it in two steps: first only root and fifth in quarters, so the jumps between chords are safe. Then the
+    full roll. G♯ major has B♯ on top: the white key C.
+  check:
+    ask: 'E2, B2, G♯3: how far is G♯3 above E2?'
+    choices:
+    - An octave
+    - A tenth (an octave and a third)
+    - A fifth
+    - A sixth
+    correct: 1
+    why: E to G♯ is a third; an octave higher it is a tenth.
+- exercise: song-wim-fifths
+- exercise: song-wim-arp-lh
+- exercise: song-wim-verse2-tap
+- exercise: song-wim-verse2
+- exercise: song-wim-hook2
+recap: 'The rolling left hand: root, fifth, tenth, fifth, fingers 5 2 1 2.'

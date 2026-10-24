@@ -1,0 +1,19 @@
+id: song-wim-chorus
+title: 'Where Is My Mind: the chorus'
+kind: timed
+hand: together
+prompt: 'Both hands. Two even streams: sixteenths on top, eighths below, meeting on every beat.'
+display: staff
+key: E
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B5:q. A5:s F#5:s G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s D#5:s C#5:s D#5:s E5:s F#5:s G#5:s A5:s | B5:q. A5:s F#5:s
+  G#5:q. r:s G#5:s | F#5:q. r:s F#5:s E5:s F#5:s G#5:s A5:s B5:s C#6:s D#6:e~ | D#6:q E5+E6:q D#5+D#6:h | r:w | r:q E5+E6:q
+  D#5+D#6:h | r:w
+left: E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e
+  G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e
+  B#3:e D#3:e A2:e E3:e C#4:e E3:e | E2:e B2:e G#3:e B2:e C#2:e G#2:e E3:e G#2:e | G#2:e D#3:e B#3:e D#3:e A2:e E3:e C#4:q
+reps: 3
+days: 2
