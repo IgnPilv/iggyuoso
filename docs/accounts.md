@@ -65,7 +65,7 @@ plenty for one player.
 6. Give them to the app, either way:
    - Paste both in a Claude thread and ask for accounts to be switched on, or
    - On GitHub: the repository → **Settings** → **Secrets and variables** → **Actions** →
-     **Variables** tab → **New repository variable**, twice: `SUPABASE_URL` = the Project URL,
+     **Secrets** tab → **New repository secret**, twice (variables work too): `SUPABASE_URL` = the Project URL,
      `SUPABASE_ANON_KEY` = the key. Then **Actions** → **Deploy to GitHub Pages** → **Run
      workflow**.
 7. Open the app → **Profile** → type your email → **Email me a sign-in link** → open the link
