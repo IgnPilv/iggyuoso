@@ -1,4 +1,4 @@
-import { content, nodeOfLesson, pathLessons, treeNodes } from '../content';
+import { content, nodeOfLesson, pathLessons, songOf, treeNodes } from '../content';
 import type { TreeNode } from '../content/tree';
 import type { Exercise, Lesson } from '../content/types';
 import type { PlanInput } from './daily';
@@ -116,6 +116,13 @@ export function nextLesson(p: Progress = { store, mastery }, from?: Lesson): Les
   const fresh = (l: Lesson | undefined): l is Lesson =>
     !!l && l.id !== from?.id && ['new', 'started'].includes(lessonStage(l, p)) && nodeOfLesson(l.id)?.branch !== 'songs';
   const node = from && nodeOfLesson(from.id);
+  // A song taught in steps goes on with its next step not played through yet.
+  const song = node && songOf(node.id);
+  if (song && song.steps.length > 1) {
+    const step = song.steps.slice(song.steps.indexOf(node!) + 1).map(lessonOf)
+      .find((l) => !!l && ['new', 'started'].includes(lessonStage(l, p)));
+    if (step) return step;
+  }
   if (node && node.branch !== 'songs') {
     const nodes = [...treeNodes.values()];
     const after = nodes.slice(nodes.indexOf(node) + 1)

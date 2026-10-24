@@ -27,6 +27,12 @@ describe('content/tree/', () => {
       expect(n.requires.some((r) => nodes.get(r)?.type === 'checkpoint'), n.id).toBe(true);
     }
   });
+  it('keeps a song taught in steps together: its steps point at the whole song, in order', () => {
+    const { nodes } = loadTree(readContentFiles(), lessons());
+    const steps = [...nodes.values()].filter((n) => n.song === 'song-wim').map((n) => n.id);
+    expect(steps).toEqual(['song-wim-riff', 'song-wim-chords', 'song-wim-verse', 'song-wim-hook', 'song-wim-arpeggios', 'song-wim-chorus']);
+    expect(nodes.get('song-wim')?.song).toBeUndefined();
+  });
 });
 
 describe('tree validation', () => {

@@ -267,6 +267,10 @@ nodes:
   reading it relies on, composing needs the harmony it writes with. They live in
   `tools/content/links.py` (`NEEDS`), applied last; add a line there for every new lesson that uses
   another branch.
+- `song` (songs only): a bigger song taught in steps. Each step is its own song node and lesson with
+  `song: <id>` naming the node that plays the whole song (which has no `song` itself); the songbook
+  lists the song once (with "Step n of m") under the milestone its first step opens after, and
+  `#/song/<id>` lists the steps in path order. Each step still has its own `requires`.
 - `lesson`: the lesson that teaches the node. Every lesson in `content/lessons/` is placed in the
   tree exactly once.
 - Nothing is ever closed: a node whose requirements are not grown yet still opens, with advice.

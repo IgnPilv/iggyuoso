@@ -33,6 +33,8 @@ export interface TreeNode {
   planned: boolean;
   /** Songs: where the tune comes from ("Folk song, France", "Beethoven, 1824"). */
   about?: string;
+  /** Songs taught in steps: the song this node is a step of (the node that plays the whole song). */
+  song?: string;
 }
 
 export interface TreeBranch {
@@ -128,6 +130,11 @@ export function loadTree(files: Record<string, string>, lessons: Map<string, Les
   for (const n of all.values()) {
     if (!stages.some((s) => s.stage === n.stage)) errors.push(`node ${n.id}: stage ${n.stage} is not in stages.yaml`);
     if (n.type === 'checkpoint' && n.branch !== 'milestones') errors.push(`node ${n.id}: checkpoints belong in milestones.yaml`);
+    if (n.song !== undefined) {
+      const whole = all.get(n.song);
+      if (n.branch !== 'songs') errors.push(`node ${n.id}: only songs can be steps of a song`);
+      else if (!whole || whole.branch !== 'songs' || whole.song !== undefined) errors.push(`node ${n.id}: song "${n.song}" should be a song node that is not itself a step`);
+    }
     for (const r of n.requires) {
       const req = all.get(r);
       if (!req) { errors.push(`node ${n.id}: requires "${r}", which is not a node`); continue; }
@@ -186,5 +193,6 @@ function parseNode(raw: Raw, branch: BranchId): TreeNode {
   return {
     id, type, branch, strand, stage, title: text(raw, 'title', 'node'), lesson, requires: list(raw.requires, '"requires"'), planned,
     ...(raw.about !== undefined ? { about: String(raw.about) } : {}),
+    ...(raw.song !== undefined ? { song: String(raw.song) } : {}),
   };
 }
