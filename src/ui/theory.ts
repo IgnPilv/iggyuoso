@@ -41,7 +41,9 @@ export function theoryStaff(st: TheoryStaff, pad = 0): HTMLElement {
   }
   const space = (k: string): StaffNote => ({ pitches: [], key: k, spacer: true });
   if (pad) for (const part of parts) part.notes = [...Array.from({ length: pad }, (_, i) => space(`a${i}`)), ...part.notes, ...Array.from({ length: pad }, (_, i) => space(`b${i}`))];
-  const { svg, width } = renderStaff(parts, { key: st.key, ...(st.meter ? { time: [st.meter.beats, st.meter.unit] as [number, number], barQuarters: st.meter.quarters } : {}) });
+  // Short notes get room: at least 26 px a note, so sixteenths do not crowd.
+  const shortest = Math.min(1, ...st.notes.map((t) => t.beats));
+  const { svg, width } = renderStaff(parts, { key: st.key, ...(st.meter ? { time: [st.meter.beats, st.meter.unit] as [number, number], barQuarters: st.meter.quarters, beatW: Math.max(46, 26 / shortest) } : {}) });
   // Never blown up past a comfortable reading size.
   svg.style.maxWidth = `${Math.round(width * 1.6)}px`;
   return h('div', { class: 'theory-staff staff-wrap' }, svg);
