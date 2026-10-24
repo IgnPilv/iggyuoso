@@ -120,6 +120,17 @@ describe('generated drills', () => {
     expect(() => gen({ generator: 'sight-read', hands: 'both' })).toThrow(/rhythm-read/);
   });
 
+  it('always gives a rhythm to hear: no whole-bar notes before the last bar, at least two values', () => {
+    for (let s = 1; s < 200; s++) {
+      for (const bars of [2, 4, 8]) {
+        const r = generate(gen({ generator: 'rhythm-echo', durations: ['q', 'h', 'w'], bars }), seeded(s)) as TimedExercise;
+        const lines = r.right!;
+        expect(lines.slice(0, -1).every((t) => t.beats < 4)).toBe(true); // only the last bar is a whole note
+        expect(new Set(lines.map((t) => t.beats)).size).toBeGreaterThan(1);
+      }
+    }
+  });
+
   it('puts rests in rhythms when durations list them, never first', () => {
     let rests = 0;
     for (let s = 1; s < 30; s++) {

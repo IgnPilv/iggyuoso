@@ -119,8 +119,24 @@ const BAR_VALUE: Record<number, string> = { 4: 'w', 3: 'h.', 2: 'h', 1.5: 'q.', 
 /**
  * Note values filling `bars` bars, as duration codes (`r:q` for a rest); eighths come in pairs on
  * the beat, and an eighth rest is followed by an eighth note. The first bar starts on a note.
+ * Only the last bar may be one long note, and a line mixes at least two values and never repeats
+ * one bar throughout, so there is always a rhythm to hear (not four whole notes in a row).
  */
 function rhythm(ex: GeneratedExercise, rng: Rng): string[][] {
+  let out = rhythmOnce(ex, rng);
+  for (let tries = 0; tries < 40 && !varied(ex, out); tries++) out = rhythmOnce(ex, rng);
+  return out;
+}
+
+function varied(ex: GeneratedExercise, bars: string[][]): boolean {
+  const notes = new Set(ex.durations.filter((d) => !d.startsWith('r:')));
+  const used = new Set(bars.flat().filter((d) => !d.startsWith('r:')));
+  if (notes.size > 1 && used.size < 2) return false;
+  const body = bars.slice(0, -1).map((b) => b.join(' '));
+  return body.length < 2 || new Set(body).size > 1;
+}
+
+function rhythmOnce(ex: GeneratedExercise, rng: Rng): string[][] {
   const { quarters } = parseMeter(ex.meter);
   const values = ex.durations
     .map((d) => ({ d: d.replace(/^r:/, ''), rest: d.startsWith('r:'), beats: parseDuration(d.replace(/^r:/, '')).beats }))
@@ -133,7 +149,9 @@ function rhythm(ex: GeneratedExercise, rng: Rng): string[][] {
     const bar: string[] = [];
     let left = quarters;
     while (left > 1e-6) {
-      const fits = values.filter((v) => v.beats <= left + 1e-6 && (v.beats !== 0.5 || left >= 1 - 1e-6) && !(v.rest && b === 0 && !bar.length));
+      let fits = values.filter((v) => v.beats <= left + 1e-6 && (v.beats !== 0.5 || left >= 1 - 1e-6) && !(v.rest && b === 0 && !bar.length));
+      // One value filling a whole bar is no rhythm; keep that for the last bar.
+      if (!last && !bar.length && fits.some((v) => v.beats < quarters - 1e-6)) fits = fits.filter((v) => v.beats < quarters - 1e-6);
       if (!fits.length) { bar.push(`r:${left === 0.5 ? 'e' : 'q'}`); left -= left === 0.5 ? 0.5 : 1; continue; }
       const v = pick(fits, rng);
       if (v.beats === 0.5) { bar.push(v.rest ? 'r:e' : 'e', 'e'); left -= 1; } else { bar.push(v.rest ? `r:${v.d}` : v.d); left -= v.beats; }
