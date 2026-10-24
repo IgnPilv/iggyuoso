@@ -1,6 +1,6 @@
 import { audio } from '../audio/audio';
 import { content, exerciseTitle, pathLessons, treeNodes } from '../content';
-import type { EarExercise, Exercise, ExplainStep, PlaygroundStep, TimedExercise } from '../content/types';
+import type { EarExercise, Exercise, ExplainStep, Lesson, PlaygroundStep, TimedExercise } from '../content/types';
 import { demo, DEMO_CALIBRATION, stopDemo } from '../demo/demo';
 import { Pianist } from '../demo/pianist';
 import { parse } from 'yaml';
@@ -10,7 +10,8 @@ import { branchPage, growingNow, growingTree, snapshot, songsCard, songsPage, st
 import { mountExercise, resetDemoOptions } from './players';
 import { renderProfile, sampleProgress } from './profileView';
 import { runToday, todayCard } from './todayView';
-import { demoProgress, lessonGoals, lessonExercises, nodeOfLesson } from '../progress';
+import { demoProgress, goalsStage, lessonGoals, lessonExercises, nodeOfLesson } from '../progress';
+import { lessonRecap } from './recap';
 import { dayOf, Mastery } from '../progress/mastery';
 import { memoryBackend, Store } from '../progress/store';
 import { demoAccount } from '../sync';
@@ -198,10 +199,11 @@ pedal: "x:h x:h | x:h x:h | x:h x:h | x:w"`,
 id: demo-reps
 kind: timed
 hand: right
-prompt: Three clean takes to finish this one.
+prompt: Three clean takes, on two different days, to finish this one.
 tempo: 100
 meter: 4/4
 reps: 3
+days: 2
 right: "C4:q D4:q E4:q F4:q | G4:q F4:q E4:h"
 fingers: "1 2 3 4 5 4 3"`,
   readNotes: `
@@ -263,20 +265,6 @@ function seedReviews(s: Store) {
 }
 
 /** A unit's lesson list as it looks on home: one done, the next recommended, the rest ahead (still open). */
-function pathDemo() {
-  const item = (title: string, cls: string, badge?: string) =>
-    h('li', { class: cls }, h('a', { href: '#/demo' }, title, badge ? h('span', { class: `state-badge ${cls}` }, badge) : ''));
-  return h('section', { class: 'card' },
-    h('p', { class: 'small' }, 'On the home page:'),
-    h('ol', { class: 'lessons' },
-      item('Steps up and down', 'done'),
-      item('Five-finger tune', 'next'),
-      item('Skips', 'ahead'),
-      item('Checkpoint: first tunes', 'ahead')),
-    h('div', { class: 'advice small' }, h('p', {}, h('strong', {}, 'Ahead of your path. '),
-      'Recommended first: Five-finger tune. You can play this now; your takes count all the same.')));
-}
-
 const THEORY = `
 id: demo-theory
 title: The treble staff
@@ -438,21 +426,46 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Clean takes and the path',
-    caption: 'One good take is not enough: an exercise is done after three clean takes (★★★, 92 or more, at full tempo), and some need them on different days. Nothing is locked: lessons further along look a little quieter on the home page and say what is recommended first (checkpoints: everything before them Mastered), but you can open and play any of them.',
+    caption: 'An exercise is done after its clean takes (★★★, 92 or more, at full tempo), some on two different days. The recap says it plainly: what each exercise still needs, what can count today, and one main button. Once every exercise has a clean take the lesson is played through and Next goes on (the same branch first; skipped lessons come back last); the takes owed for tomorrow come back in Today\'s practice. Nothing is locked.',
     run: (box, next, p) => {
       const timers: number[] = [];
+      const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
       let takes = 0;
-      // A fresh id each time, so the throwaway progress starts from zero.
-      const ex = { ...parseExercise(parse(SAMPLES.reps)), id: `demo-reps-${Date.now()}` };
+      let cleanup = () => {};
+      // Fresh ids each time, so the throwaway progress starts from zero.
+      const stamp = Date.now();
+      const ex = { ...parseExercise(parse(SAMPLES.reps)), id: `demo-reps-${stamp}`, title: 'Five-finger walk' };
+      const tap = { ...parseExercise(parse(SAMPLES.reps)), id: `demo-reps-b-${stamp}`, title: 'Walk back down', reps: 2, days: 1 };
+      const lesson: Lesson = { id: 'demo-path', title: 'Five fingers', skills: [], recap: 'Five fingers, five keys: one finger for each.', steps: [{ exercise: ex.id }, { exercise: tap.id }] };
+      const store = demoProgress().store;
+      const play = (e: Exercise) => {
+        cleanup();
+        box.replaceChildren();
+        cleanup = mountExercise(box, e, DEMO_CALIBRATION, () => {});
+        setView(box, 'falling');
+        later(900, () => press(box, 'Play'));
+      };
+      const recap = () => {
+        cleanup();
+        cleanup = () => {};
+        const goals = [ex, tap];
+        const r = lessonRecap({
+          lesson, goals, stage: goalsStage(goals, store), store,
+          next: { id: 'demo-next', title: 'Echo two notes', skills: [], steps: [], recap: '' },
+          practise: (id) => play(id === ex.id ? ex : tap), openLesson: () => next(), home: () => next(),
+        });
+        box.replaceChildren(h('section', { class: 'card' }, h('h2', {}, lesson.title), ...r.body, h('div', { class: 'controls' }, ...r.nav)));
+        // The pianist presses the main button: practise again until the lesson is played through.
+        const main = box.querySelector<HTMLButtonElement>('.controls button');
+        later(5500, () => (takes < 3 ? main?.click() : next()));
+      };
       demo.onTimed = (s) => p.playTimed(s, { slips: false });
       demo.onRunEnd = (mode) => {
         if (mode !== 'play') return;
-        if (++takes < 3) timers.push(window.setTimeout(() => press(box, 'Play'), 2600));
-        else timers.push(window.setTimeout(() => { box.append(pathDemo()); timers.push(window.setTimeout(next, 5000)); }, 1500));
+        takes++;
+        later(1800, recap);
       };
-      const cleanup = mountExercise(box, ex, DEMO_CALIBRATION, () => {});
-      setView(box, 'falling');
-      timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+      play(ex);
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });

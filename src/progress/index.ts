@@ -44,19 +44,55 @@ export const nodeDone = (n: TreeNode, p: Progress = { store, mastery }) => {
 };
 
 /**
+ * How far a lesson has got: not started, started, played through (every exercise has a clean take,
+ * so the path moves on; the takes still owed, some on later days, come back in Today's practice),
+ * or done (every exercise has all its clean takes).
+ */
+export type LessonStage = 'new' | 'started' | 'through' | 'done';
+
+export const lessonStage = (l: Lesson, p: Progress = { store, mastery }) => goalsStage(lessonGoals(l), p.store);
+
+export function goalsStage(goals: Exercise[], s: Store): LessonStage {
+  if (s.lessonDone(goals)) return 'done';
+  if (goals.length && goals.every((e) => s.reps(e).clean > 0)) return 'through';
+  return goals.some((e) => s.exercise(e.id).attempts > 0) ? 'started' : 'new';
+}
+
+const SKIPPED = 'path.skipped';
+
+/** Lessons the player went through without playing anything: suggested again only after the rest. */
+export const skippedLessons = (p: Progress = { store, mastery }) => new Set(p.store.get<string[]>(SKIPPED) ?? []);
+
+/** Note a lesson whose recap was reached with no take at all; a later take clears it. */
+export function noteSkipped(l: Lesson, p: Progress = { store, mastery }) {
+  const s = skippedLessons(p);
+  const played = lessonStage(l, p) !== 'new';
+  if (played === !s.has(l.id)) return;
+  if (played) s.delete(l.id); else s.add(l.id);
+  p.store.put(SKIPPED, [...s]);
+}
+
+const behind = (l: Lesson | undefined, p: Progress, skipped: Set<string>) =>
+  !!l && skipped.has(l.id) && lessonStage(l, p) === 'new';
+
+/**
  * The growing edge of the tree: nodes that are open (their requirements are far enough along) and
- * not done yet, best first. Earlier stages first; inside a stage, the branch that is furthest
- * behind comes first, so the tree grows evenly. Songs have their own page and are left out.
+ * not done yet, best first. Earlier stages first; inside a stage, lessons the player skipped come
+ * last and the branch that is furthest behind (fewest lessons played through) comes first, so the
+ * tree grows evenly. Songs have their own page and are left out.
  */
 export function frontier(p: Progress = { store, mastery }): TreeNode[] {
   const nodes = [...treeNodes.values()].filter((n) => n.lesson && n.branch !== 'songs');
+  const skipped = skippedLessons(p);
+  const through = (n: TreeNode) => { const l = lessonOf(n); return !!l && ['through', 'done'].includes(lessonStage(l, p)); };
+  const last = new Set(nodes.filter((n) => behind(lessonOf(n), p, skipped)).map((n) => n.id));
   const share = new Map<string, number>();
   const key = (n: TreeNode) => `${n.stage}/${n.branch}`;
   for (const n of nodes) {
     const k = key(n);
     if (share.has(k)) continue;
     const same = nodes.filter((m) => key(m) === k);
-    share.set(k, same.filter((m) => nodeDone(m, p)).length / same.length);
+    share.set(k, same.filter(through).length / same.length);
   }
   const order = [...treeNodes.keys()];
   return nodes
@@ -64,15 +100,30 @@ export function frontier(p: Progress = { store, mastery }): TreeNode[] {
     .sort((a, b) => a.stage - b.stage
       // Milestones wait until the rest of their stage is done.
       || Number(a.type === 'checkpoint') - Number(b.type === 'checkpoint')
+      || Number(last.has(a.id)) - Number(last.has(b.id))
       || share.get(key(a))! - share.get(key(b))!
       || order.indexOf(a.id) - order.indexOf(b.id));
 }
 
-/** The lesson to continue with: the first node of the frontier, else the first not done at all. */
-export function nextLesson(p: Progress = { store, mastery }): Lesson | undefined {
-  const n = frontier(p)[0];
-  if (n) return lessonOf(n);
-  return pathLessons().find((l) => !p.store.lessonDone(lessonGoals(l)) && nodeOfLesson(l.id)?.branch !== 'songs');
+/**
+ * The lesson to go on with: one not played through yet, so a lesson waiting only for takes on a
+ * later day never holds the path back. After `from` (the lesson just finished), the next open
+ * lesson of the same branch comes first; otherwise the growing edge, skipped lessons last; else the
+ * first lesson not played through at all.
+ */
+export function nextLesson(p: Progress = { store, mastery }, from?: Lesson): Lesson | undefined {
+  const skipped = skippedLessons(p);
+  const fresh = (l: Lesson | undefined): l is Lesson =>
+    !!l && l.id !== from?.id && ['new', 'started'].includes(lessonStage(l, p)) && nodeOfLesson(l.id)?.branch !== 'songs';
+  const node = from && nodeOfLesson(from.id);
+  if (node && node.branch !== 'songs') {
+    const nodes = [...treeNodes.values()];
+    const after = nodes.slice(nodes.indexOf(node) + 1)
+      .find((n) => n.branch === node.branch && p.mastery.state(n.id) !== 'locked' && fresh(lessonOf(n)) && !behind(lessonOf(n), p, skipped));
+    if (after) return lessonOf(after);
+  }
+  const open = frontier(p).map(lessonOf).filter(fresh);
+  return open.find((l) => !behind(l, p, skipped)) ?? open[0] ?? pathLessons().find(fresh);
 }
 
 /** Today's practice plan and progress, for the real progress or the demo's. */
@@ -81,7 +132,12 @@ export function dailyInput(p: Progress = { store, mastery }): PlanInput {
     content, nodes: treeNodes, store: p.store, mastery: p.mastery, lessonGoals,
     next: () => {
       const f = frontier(p).map(lessonOf).filter((l): l is Lesson => !!l);
-      return f.length ? f : [nextLesson(p)].filter((l): l is Lesson => !!l);
+      // Lessons played through with takes still owed come first, so the later-day takes get played.
+      const owed = (l: Lesson) => lessonStage(l, p) === 'through' && lessonGoals(l).some((e) => p.store.reps(e).today);
+      // Those waiting only for tomorrow go last.
+      const waiting = (l: Lesson) => lessonStage(l, p) === 'through' && !owed(l);
+      const sorted = [...f.filter(owed), ...f.filter((l) => !owed(l) && !waiting(l)), ...f.filter(waiting)];
+      return sorted.length ? sorted : [nextLesson(p)].filter((l): l is Lesson => !!l);
     },
     path: pathLessons,
   };
