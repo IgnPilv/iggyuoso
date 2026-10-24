@@ -220,9 +220,7 @@ export function stageList(snap: Map<string, NodeView>, p: Progress = { store: re
   return h('section', { class: 'card path-card' },
     h('div', { class: 'unit-head' },
       h('h2', {}, 'The whole tree'),
-      h('span', { class: 'unit-progress' }, 'Stages up the trunk; each milestone grows the next one.')),
-    h('ul', { class: 'strand-legend', 'aria-label': 'Branches' },
-      ...GROWING.map((k) => h('li', {}, h('span', { class: `strand-dot strand-${k}` }), BRANCH_LABEL[k]))),
+      h('span', { class: 'unit-progress' }, 'Stage by stage, with the threads between branches. Each milestone grows the next stage.')),
     h('ol', { class: 'path' }, ...stages.map((s) => stageStation(s, s === current, snap, p))));
 }
 
@@ -238,33 +236,109 @@ function stageStation(s: TreeStage, current: boolean, snap: Map<string, NodeView
     h('span', { class: 'station-text' },
       h('span', { class: 'station-title' }, s.title),
       h('span', { class: 'station-meta' }, `Stage ${s.stage} · ${done} of ${nodes.length} done${passed ? ' · milestone passed' : ''}`)));
-  const rows = [...GROWING, 'milestones' as BranchId].map((b) => {
-    const vs = nodes.filter((v) => v.node.branch === b);
-    if (!vs.length) return '';
-    return h('div', { class: 'stage-row' },
-      h('span', { class: 'stage-row-label' }, h('span', { class: `strand-dot strand-${b === 'milestones' ? 'all' : b}` }), h('a', { href: `#/branch/${b}` }, BRANCH_LABEL[b])),
-      h('ol', { class: 'lessons path-nodes' }, ...rowTiles(b, vs, p)));
-  });
-  return h('li', { class: `station ${state}` },
-    h('details', { open: current }, h('summary', {}, head),
-      s.summary ? h('p', { class: 'small stage-summary' }, s.summary) : '',
-      ...rows));
+  const details = h('details', { open: current }, h('summary', {}, head),
+    s.summary ? h('p', { class: 'small stage-summary' }, s.summary) : '');
+  // The weave is built when the stage is first opened (it measures itself to draw the links).
+  const fill = () => { if (details.open && !details.querySelector('.weave')) details.append(stageWeave(nodes, p)); };
+  details.addEventListener('toggle', fill);
+  fill();
+  return h('li', { class: `station ${state}` }, details);
 }
 
-/** A stage's row of one branch: the next few nodes not done yet, the rest behind a link. */
-const ROW_MAX = 4;
-function rowTiles(b: BranchId, vs: NodeView[], p: Progress): HTMLElement[] {
-  const todo = rootsFirst(vs).filter((v) => !v.done);
-  const shown = (todo.length ? [...todo.filter((v) => v.open), ...todo.filter((v) => !v.open)] : vs).slice(0, ROW_MAX);
-  const more = vs.length - shown.length;
-  const tiles = shown.map((v) => nodeTile(v, { mastery: p.mastery }));
-  if (more > 0) {
-    const doneCount = vs.length - todo.length;
-    const words = todo.length > ROW_MAX ? `${todo.length - ROW_MAX} more` : '';
-    const label = [words, doneCount ? `${doneCount} done` : ''].filter(Boolean).join(' · ');
-    tiles.push(h('li', { class: 'more' }, h('a', { href: b === 'milestones' ? '#/branch/milestones' : `#/branch/${b}` }, h('span', { class: 'tile-title' }, `${label} →`))));
+// ---------------------------------------------------------------- the weave
+
+/**
+ * One stage as a woven map: a column per branch, each node placed one row below the deepest node
+ * it needs in this stage, and a line drawn for every requirement, so links between branches show
+ * as threads crossing the columns. The milestone sits across the bottom. Pointing at a node lights
+ * what it needs and what it opens.
+ */
+export function stageWeave(nodes: NodeView[], p: Progress = { store: realStore, mastery: realMastery }): HTMLElement {
+  const byId = new Map(nodes.map((v) => [v.node.id, v]));
+  const inStage = (v: NodeView) => v.node.requires.filter((r) => byId.has(r) && byId.get(r)!.node.type !== 'checkpoint');
+  const depth = new Map<string, number>();
+  const depthOf = (v: NodeView): number => {
+    if (depth.has(v.node.id)) return depth.get(v.node.id)!;
+    depth.set(v.node.id, 0);
+    const d = Math.max(-1, ...inStage(v).map((r) => depthOf(byId.get(r)!))) + 1;
+    depth.set(v.node.id, d);
+    return d;
+  };
+  const milestone = nodes.find((v) => v.node.type === 'checkpoint');
+  const rest = nodes.filter((v) => v !== milestone);
+  rest.forEach(depthOf);
+  const cols = GROWING.filter((b) => rest.some((v) => v.node.branch === b));
+  const rows = Math.max(0, ...rest.map((v) => depth.get(v.node.id)!)) + 1;
+
+  const tiles = new Map<string, HTMLElement>();
+  const tile = (v: NodeView) => {
+    const n = v.node;
+    const cls = ['weave-node', `branch-${n.branch}`, v.done ? 'done' : '', !v.open && !v.done ? 'bud' : '', p.mastery.isDue(n.id) ? 'due' : '']
+      .filter(Boolean).join(' ');
+    const a = h('a', { href: `#/lesson/${n.lesson}`, class: cls, 'data-id': n.id, title: n.title },
+      h('span', { class: `strand-dot strand-${n.strand}` }), h('span', { class: 'weave-title' }, n.title));
+    tiles.set(n.id, a);
+    return a;
+  };
+  const grid = h('div', { class: 'weave-grid', style: `--cols: ${cols.length}; --rows: ${rows + (milestone ? 1 : 0)}` },
+    ...cols.map((b, c) => h('a', { class: 'weave-head', href: `#/branch/${b}`, style: `grid-column: ${c + 1}; grid-row: 1` },
+      h('span', { class: `strand-dot strand-${b}` }), BRANCH_LABEL[b])),
+    ...cols.flatMap((b, c) => Array.from({ length: rows }, (_, r) => {
+      const here = rootsFirst(rest.filter((v) => v.node.branch === b && depth.get(v.node.id) === r));
+      return here.length ? h('div', { class: 'weave-cell', style: `grid-column: ${c + 1}; grid-row: ${r + 2}` }, ...here.map(tile)) : '';
+    })),
+    milestone ? h('div', { class: 'weave-cell weave-milestone', style: `grid-column: 1 / -1; grid-row: ${rows + 2}` }, tile(milestone)) : '');
+  const svg = svgEl('svg', { class: 'weave-links', 'aria-hidden': 'true' });
+  const box = h('div', { class: 'weave' }, svg, grid);
+
+  // Links, drawn from the bottom of what is needed to the top of what it opens.
+  const links: { from: string; to: string; cross: boolean; path: SVGPathElement }[] = [];
+  for (const v of nodes) {
+    for (const r of v.node.requires) {
+      const req = byId.get(r);
+      if (!req) continue;
+      const cross = req.node.branch !== v.node.branch;
+      const path = svgEl('path', { class: `weave-link strand-stroke-${req.node.branch}${cross ? ' cross' : ''}${v === milestone ? ' to-milestone' : ''}` });
+      links.push({ from: r, to: v.node.id, cross, path });
+      svg.append(path);
+    }
   }
-  return tiles;
+  const draw = () => {
+    const o = box.getBoundingClientRect();
+    svg.setAttribute('width', String(box.scrollWidth));
+    svg.setAttribute('height', String(box.scrollHeight));
+    for (const l of links) {
+      const a = tiles.get(l.from)!.getBoundingClientRect();
+      const b = tiles.get(l.to)!.getBoundingClientRect();
+      const x1 = a.left + a.width / 2 - o.left;
+      const y1 = a.bottom - o.top;
+      const x2 = b.left + b.width / 2 - o.left;
+      const y2 = b.top - o.top;
+      const bend = Math.max(18, (y2 - y1) / 2);
+      l.path.setAttribute('d', `M ${x1} ${y1} C ${x1} ${y1 + bend}, ${x2} ${y2 - bend}, ${x2} ${y2}`);
+    }
+  };
+  new ResizeObserver(draw).observe(grid);
+
+  // Point at a node: light it, what it needs and what it opens.
+  const light = (id: string | null) => {
+    box.classList.toggle('lit', !!id);
+    const near = new Set<string>();
+    for (const l of links) {
+      const on = !!id && (l.from === id || l.to === id);
+      l.path.classList.toggle('on', on);
+      if (on) { near.add(l.from); near.add(l.to); }
+    }
+    tiles.forEach((t, k) => t.classList.toggle('near', near.has(k) || k === id));
+  };
+  tiles.forEach((t, id) => {
+    t.addEventListener('mouseenter', () => light(id));
+    t.addEventListener('focus', () => light(id));
+    t.addEventListener('mouseleave', () => light(null));
+    t.addEventListener('blur', () => light(null));
+  });
+  return h('div', { class: 'weave-scroll' }, box,
+    h('p', { class: 'small weave-key' }, 'Lines join what a lesson needs to what it opens; coloured threads cross between branches. Point at a lesson to see its links.'));
 }
 
 /** Songs that opened with the milestones passed and are not done yet. */
@@ -315,10 +389,16 @@ export function branchPage(id: BranchId, p: Progress = { store: realStore, maste
       h('h3', {}, `Stage ${s.stage} · ${s.title}`),
       h('ol', { class: 'lessons path-nodes vine' }, ...list.map((v) => {
         const tile = nodeTile(v, { mastery: p.mastery });
+        const text = tile.querySelector('.tile-text');
         if (!v.open && !v.done) {
-          const need = p.mastery.missing(v.node).map((r) => treeNodes.get(r)?.title ?? r);
-          tile.querySelector('.tile-text')?.append(h('span', { class: 'tile-needs' }, `Grows after: ${need.join(', ')}`));
+          // Missing nodes of other branches show on the threads line below.
+          const need = p.mastery.missing(v.node).map((r) => treeNodes.get(r)).filter((r) => r && (r.branch === id || r.branch === 'milestones'));
+          if (need.length) text?.append(h('span', { class: 'tile-needs' }, `Grows after: ${need.map((r) => r!.title).join(', ')}`));
         }
+        // What it takes from the other branches, always shown: the threads of the weave.
+        const from = v.node.requires.map((r) => treeNodes.get(r)).filter((r) => r && r.branch !== id && r.branch !== 'milestones');
+        if (from.length) text?.append(h('span', { class: 'tile-links' }, ...from.map((r) =>
+          h('span', { class: 'tile-link' }, h('span', { class: `strand-dot strand-${r!.strand}` }), r!.title))));
         return tile;
       })))));
 }

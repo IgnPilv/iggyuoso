@@ -452,3 +452,11 @@ never copied pages). Start small, adapt as we go.
   technique branch): forte and piano echoes, crescendo and diminuendo, terraced dynamics, shaping a
   phrase; milestones 3, 4 and 6 need them. Demo scene "Loud and soft" (the pianist plays the
   crescendo flat).
+- 2026-10-24: Intertwined tree (Ignas: "the tree seems very linear, not intertwined"; "you don't go
+  learning ear in chords while you don't know how they are structured... there are prerequisites").
+  Data: `tools/content/links.py` adds about 115 cross-branch requirements (181 → 295 between branches) by what each lesson uses
+  (ear ← theory, technique and key studies ← theory and rhythm, reading ← theory and rhythm, pieces
+  ← reading, rhythm, keys and harmony, creativity ← theory and ear), moves seventh-chord theory and
+  ear to stage 7, and puts the modes theory before composing in modes. Screen: each stage on home
+  opens as a woven map (`stageWeave`, a column per branch, a thread per requirement, pointing lights
+  a node's threads); branch pages show every node's threads from other branches.
