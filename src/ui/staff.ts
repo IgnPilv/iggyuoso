@@ -24,6 +24,8 @@ export interface StaffNote {
   tie?: boolean;
   /** A finger number, over the staff (or under it on a lower or bass staff). */
   finger?: number;
+  /** A chord's finger numbers, low note to high, stacked like the notes (instead of `finger`). */
+  fingers?: number[];
   /** Text under the note, such as its name. */
   label?: string;
   /** Takes its place in the line but draws nothing (no rest): the other staff of a picture has the note. */
@@ -48,6 +50,7 @@ const BOTTOM_STEP: Record<Clef, number> = { treble: 4 * 7 + 2, bass: 2 * 7 + 4 }
 const SIG_SHARPS: [Letter, number][] = [['F', 5], ['C', 5], ['G', 5], ['D', 5], ['A', 4], ['E', 5], ['B', 4]];
 const SIG_FLATS: [Letter, number][] = [['B', 4], ['E', 5], ['A', 4], ['D', 5], ['G', 4], ['C', 5], ['F', 4]];
 const SIG_W = 9;
+const FINGER_LINE = 11; // between stacked finger numbers
 const ACCIDENTAL = { 1: '♯', [-1]: '♭', 0: '♮' } as const;
 
 /**
@@ -120,9 +123,11 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
           const fy = fingersBelow
             ? Math.max(bottom + 16, Math.max(...ys) + (stem && !up ? 46 : 18))
             : Math.min(top - 8, Math.min(...ys) - (stem && up ? 40 : 12));
-          g.append(s('text', { x, y: fy, class: 'finger' }, String(n.finger)));
+          // A chord's numbers stack with the highest note's on top, growing away from the staff.
+          const stack = [...(n.fingers ?? [n.finger])].reverse();
+          stack.forEach((f, i) => g.append(s('text', { x, y: fy + (fingersBelow ? i : i - stack.length + 1) * FINGER_LINE, class: 'finger' }, String(f))));
         }
-        if (n.label) g.append(s('text', { x, y: Math.max(bottom + 18, Math.max(...ys) + 20) + (n.finger !== undefined && fingersBelow ? 16 : 0), class: 'note-label' }, n.label));
+        if (n.label) g.append(s('text', { x, y: Math.max(bottom + 18, Math.max(...ys) + 20) + (n.finger !== undefined && fingersBelow ? 16 + ((n.fingers?.length ?? 1) - 1) * FINGER_LINE : 0), class: 'note-label' }, n.label));
       }
       for (const p of n.pitches) {
         const step = diatonicStep(p);

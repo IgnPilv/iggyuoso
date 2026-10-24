@@ -94,7 +94,8 @@ days: 2   # spread over at least two days
   (keys to light as the hand position).
 - `timed`: notes with durations against a metronome; scored per hand. Fields: `tempo` (bpm),
   `meter`, `countIn` (bars), `right` / `left` note strings, optional `fingers` (one-hand
-  exercises) or `rightFingers` / `leftFingers` (both hands; one number per note or chord),
+  exercises) or `rightFingers` / `leftFingers` (both hands; one number per note or chord, a
+  chord's number being its lowest note's finger; a hand without them gets a suggested fingering),
   `pitchMatch: pitchClass` (any octave counts), `tempoLadder: true` (steps 60 70 80 90 100% of
   `tempo`) or `tempoLadder: [60, 80, 100]`: the tempo starts on the player's step, three clean
   takes (92+) on it move up a step, two failed takes in a row move down. Any timed exercise of two

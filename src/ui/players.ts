@@ -5,7 +5,8 @@ import { generate } from '../engine/generate';
 import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
 import { computerKeys, typing } from '../midi/computerKeys';
-import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
+import { chordFingers } from '../music/fingering';
+import { isTieEnd, pitchToMidi, type Hand, type NoteToken } from '../music/notes';
 import { expectedDynamics, expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
@@ -431,16 +432,19 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
 
 // ---------------------------------------------------------------- timed
 
-export function staffParts(ex: TimedExercise): StaffPart[] {
+/** The exercise as staves; `fingers: false` leaves the finger numbers off. */
+export function staffParts(ex: TimedExercise, fingers = true): StaffPart[] {
   const part = (hand: Hand, tokens: NoteToken[], clef: Clef): StaffPart => {
     let index = 0;
     return {
       clef,
       notes: tokens.map((t, ti) => {
         const own = t.pitches.length && !isTieEnd(tokens, ti);
-        const finger = own ? ex.fingers[hand][index] : undefined;
+        const finger = own && fingers ? ex.fingers[hand][index] : undefined;
+        // A chord shows a number for each note, stacked like the notes.
+        const chord = finger !== undefined && t.pitches.length > 1 ? chordFingers(t.pitches.map(pitchToMidi), hand, finger) : undefined;
         return {
-          pitches: t.pitches, beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie, finger,
+          pitches: t.pitches, beats: t.beats, value: t.value, dotted: t.dotted, triplet: t.triplet, tie: t.tie, finger, ...(chord ? { fingers: chord } : {}),
           // A tied note's second half shares the note's number; it is not marked on its own.
           key: !t.pitches.length ? `${hand}:r${ti}` : !own ? `${hand}:t${ti}` : `${hand}:${index++}`,
         };
@@ -457,7 +461,7 @@ const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 // Exercise options (tempo, click, guide notes, the Options drawer) carry over: what the player
 // picked last is where the next exercise starts. The demo keeps its own, never saved.
 let demoOptions: Partial<Settings> = {};
-type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen'>;
+type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen' | 'fingers'>;
 export const exerciseOptions = (): ExerciseOptions => (demo.active ? { ...store.settings, ...demoOptions } : store.settings);
 export function setExerciseOptions(o: Partial<ExerciseOptions>) {
   if (demo.active) demoOptions = { ...demoOptions, ...o };
@@ -489,25 +493,29 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   let strip: ReturnType<typeof staffStrip> | undefined;
   let kb: KeyboardView | undefined;
   let offHeld = () => {};
-  const buildView = (view: ViewMode) => {
+  // Finger numbers on the notes, the sheet and the lit keys (Options → Fingers; on unless switched off).
+  let fingersOn = settings.fingers !== false;
+  let view: ViewMode = 'classic';
+  const buildView = (v: ViewMode) => {
+    view = v;
     falling?.destroy();
     offHeld();
     stage.replaceChildren();
     falling = undefined; staff = undefined; kb = undefined; strip = undefined;
     if (view === 'falling' && !echo) {
       falling = new FallingView(lo, hi, cal,
-        expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })),
+        expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: fingersOn ? e.finger : undefined })),
         { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex), dynamics: expectedDynamics(ex) });
       // The sheet music rides along above the lane (not for tap exercises: their notes are placeholders).
       if (!ex.tap) {
-        staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
+        staff = renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
         strip = staffStrip(staff);
       }
       stage.append(strip?.el ?? '', falling.el);
       offHeld = () => {};
       idle();
     } else {
-      staff = renderStaff(staffParts(ex), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
+      staff = renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
       stage.append(h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg), kb.el);
@@ -547,6 +555,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   let again = 0; // the next loop take
   const metro = h('input', { type: 'checkbox', checked: settings.metronome });
   const guide = h('input', { type: 'checkbox', checked: settings.guide });
+  const fingerBox = h('input', { type: 'checkbox', checked: fingersOn });
+  fingerBox.addEventListener('change', () => {
+    fingersOn = fingerBox.checked;
+    setExerciseOptions({ fingers: fingersOn });
+    buildView(view);
+  });
   metro.addEventListener('change', () => setExerciseOptions({ metronome: metro.checked }));
   guide.addEventListener('change', () => setExerciseOptions({ guide: guide.checked }));
   tempoSel.addEventListener('change', () => setExerciseOptions({ tempo: Number(tempoSel.value) }));
@@ -644,7 +658,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       expected.forEach((e, i) => {
         if (pos.beat >= e.beat && pos.beat < e.beat + e.beats) {
           // Generated drills test reading: the keys stay dark while the player plays.
-          if (!(ex.goal && mode === 'play') && !echo) kb?.set(devices[i], 'target', true, e.finger ? String(e.finger) : '');
+          if (!(ex.goal && mode === 'play') && !echo) kb?.set(devices[i], 'target', true, e.finger && fingersOn ? String(e.finger) : '');
           staff?.mark(`${e.hand}:${e.index}`, 'current');
         }
         if (staff && mode === 'play') {
@@ -676,6 +690,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       staff?.clear('current');
       listenBtn.disabled = playBtn.disabled = false;
       toggle.disable(false);
+      fingerBox.disabled = false;
       stopBtn.disabled = pauseBtn.disabled = true;
       pauseBtn.textContent = 'Pause';
       run = undefined;
@@ -771,6 +786,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
     listenBtn.disabled = playBtn.disabled = true;
     toggle.disable(true);
+    fingerBox.disabled = true;
     stopBtn.disabled = pauseBtn.disabled = false;
     setRunning(true);
     raf = requestAnimationFrame(frame);
@@ -810,7 +826,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         h('label', {}, 'Tempo ', tempoSel),
         h('label', {}, 'Count-in ', countSel),
         h('label', {}, metro, ' Click'),
-        h('label', {}, guide, ' Guide notes')),
+        h('label', {}, guide, ' Guide notes'),
+        ex.tap ? '' : h('label', {}, fingerBox, ' Fingers')),
       loopControls));
   drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
   const transportMain = h('div', { class: 'transport-main' }, listenBtn, playBtn, pauseBtn, stopBtn);

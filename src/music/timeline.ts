@@ -1,5 +1,6 @@
 import type { TimedExercise } from '../content/types';
 import { dynamicSpans, type DynamicSpan } from '../scoring/dynamics';
+import { chordFingers } from './fingering';
 import { pitchToMidi, type Hand, type NoteToken } from './notes';
 
 // Flattens a timed exercise into the notes each hand should play, in beats from the downbeat
@@ -28,8 +29,12 @@ export function expectedNotes(ex: TimedExercise): ExpectedNote[] {
       if (held.length) {
         for (const n of held) n.beats += t.beats;
       } else if (t.pitches.length) {
-        const finger = ex.fingers[hand][index];
-        held = t.pitches.map((p) => ({ hand, index, beat, beats: t.beats, midi: pitchToMidi(p), finger }));
+        const midi = t.pitches.map(pitchToMidi);
+        // A chord's number is its lowest note's finger; the others follow the chord's shape.
+        const f = ex.fingers[hand][index];
+        const low = [...midi].sort((a, b) => a - b);
+        const shape = f !== undefined && midi.length > 1 ? chordFingers(low, hand, f) : undefined;
+        held = midi.map((m) => ({ hand, index, beat, beats: t.beats, midi: m, finger: shape ? shape[low.indexOf(m)] : f }));
         out.push(...held);
         index++;
       }

@@ -93,6 +93,8 @@ export interface Settings {
   countIn?: 'bar' | 'short' | 'none';
   /** Whether the exercise Options drawer was left open. */
   optionsOpen?: boolean;
+  /** Finger numbers on the notes (falling notes, sheet, lit keys); unset = on. */
+  fingers?: boolean;
 }
 
 /** Local calendar day (YYYY-MM-DD) of an ISO time. */
