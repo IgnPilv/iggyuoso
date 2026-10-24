@@ -93,8 +93,9 @@ export class FallingView {
     const ww = w / this.whites;
     let kbH = Math.min(170, Math.max(90, ww * 4.6));
     let laneH = Math.min(420, Math.max(260, w * 0.42));
-    // Full screen (a phone on its side): fill the height, the keys taking at most a third.
-    const fill = this.el.closest('.fs-layer') ? this.el.clientHeight : 0;
+    // Full screen (a phone on its side) or a lesson's main screen: fill the height, the keys taking
+    // at most a third.
+    const fill = this.el.closest('.fs-layer, .focus') ? this.el.clientHeight : 0;
     if (fill > 0) {
       kbH = Math.round(Math.max(56, Math.min(kbH, fill * 0.32)));
       laneH = Math.max(80, fill - kbH);

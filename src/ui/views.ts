@@ -12,7 +12,7 @@ import { explainBlock, playground } from './theory';
 import { readStep } from './bookView';
 import { mountExercise } from './players';
 import { lessonRecap } from './recap';
-import { stepBar } from './stepBar';
+import { stepBar, stepName } from './stepBar';
 import { guardSpace } from './keys';
 import { BRANCH_LABEL, currentStage, growingNow, growingTree, snapshot, songsCard, stageList } from './treeView';
 import { todayCard } from './todayView';
@@ -221,7 +221,6 @@ export const lessonView: View = (root, id?: string) => {
   const cal = needCalibration(root);
   if (!cal) return;
   const advice = lessonAdvice(lesson);
-  const body = h('div');
   const nav = h('div', { class: 'controls' });
   const progress = h('span', { class: 'small' });
   // The way forward, also at the top: it mirrors the Next (or Skip) button, and on the recap the
@@ -252,22 +251,86 @@ export const lessonView: View = (root, id?: string) => {
   window.addEventListener('keydown', onEnter);
   const unguard = guardSpace();
   let step = 0;
+
+  // The lesson is a column of full-window panels that snap into place as it scrolls: the intro
+  // (theory, the chapter) reads like a page, and each exercise is the main screen, where the piano,
+  // the sheet or the task fills the panel. Only the panel in view is built; the others show their
+  // step's name until they are scrolled to.
+  const count = lesson.steps.length + 1;
+  const isPlay = (i: number) => i < lesson.steps.length && 'exercise' in lesson.steps[i];
+  const exerciseOf = (eid: string) => content.exercises.get(eid);
+  const ghost = (i: number) => h('div', { class: 'panel-ghost', 'aria-hidden': 'true' },
+    h('span', { class: 'small' }, i < lesson.steps.length ? `Step ${i + 1} of ${lesson.steps.length}` : 'The end'),
+    h('h3', {}, stepName(lesson, i, exerciseOf)));
+  const panels = [...Array(count).keys()].map((i) =>
+    h('section', { class: isPlay(i) ? 'lesson-panel focus' : 'lesson-panel read-panel', 'data-step': i }, ghost(i)));
+  const scroller = h('div', { class: 'lesson-scroll' }, ...panels);
+  /** The first theory step of the intro before step i (or before any exercise, from the recap). */
+  const introOf = (i: number) => {
+    let j = Math.min(i, lesson.steps.length) - 1;
+    while (j >= 0 && isPlay(j)) j--;
+    if (j < 0) return undefined;
+    while (j > 0 && !isPlay(j - 1)) j--;
+    return j;
+  };
+  const introBtn = h('button', { class: 'chip secondary', type: 'button', title: 'Back to the explanation' }, '‹ Intro');
+  introBtn.onclick = () => { const j = introOf(step); if (j !== undefined) goTo(j); };
+  const leaveBtn = h('a', { class: 'focus-leave', title: 'Leave the lesson', 'aria-label': 'Leave the lesson' }, '✕');
   // Tapping a step jumps there, forward or back; leaving an exercise stops it (takes are saved as played).
-  const bar = stepBar(lesson, store, (eid) => content.exercises.get(eid), (i) => { if (i !== step) { step = i; show(); } });
+  const bar = stepBar(lesson, store, exerciseOf, (i) => goTo(i, Math.abs(i - step) === 1));
   let cleanup: (() => void) | undefined;
+  let leave = () => {};
+  let mounted: number | undefined;
+
+  /** Move to step i: build its panel, then scroll it into place. */
+  const goTo = (i: number, smooth = true) => {
+    if (i < 0 || i >= count) return;
+    if (i !== step) { step = i; show(); }
+    scroller.scrollTo({ top: panels[i].offsetTop, behavior: smooth ? 'smooth' : 'auto' });
+  };
+  // Scrolling by hand: once it settles, the panel across the upper part of the window is the step.
+  let settle = 0;
+  const panelInView = () => {
+    const line = scroller.getBoundingClientRect().top + scroller.clientHeight * 0.4;
+    const i = panels.findIndex((p) => { const r = p.getBoundingClientRect(); return r.top <= line && r.bottom > line; });
+    return i < 0 ? step : i;
+  };
+  scroller.addEventListener('scroll', () => {
+    clearTimeout(settle);
+    settle = window.setTimeout(() => {
+      const i = panelInView();
+      if (i === step) return;
+      if (i > step) leave();
+      step = i;
+      show();
+    }, 140);
+  }, { passive: true });
+  // Space plays and pauses; it never pages the lesson on (arrow keys and the wheel still scroll).
+  scroller.addEventListener('keydown', (e) => { if (e.code === 'Space' && !typing(e.target)) e.preventDefault(); });
 
   const show = () => {
     cleanup?.();
     cleanup = undefined;
+    leave = () => {};
+    // The panel left behind keeps its height, so nothing above the one in view moves.
+    if (mounted !== undefined && mounted !== step) {
+      const old = panels[mounted];
+      if (!isPlay(mounted)) old.style.minHeight = `${old.offsetHeight}px`;
+      old.replaceChildren(ghost(mounted));
+    }
+    mounted = step;
+    const body = panels[step];
+    body.style.minHeight = '';
     body.replaceChildren();
     nav.replaceChildren();
     progress.textContent = step < lesson.steps.length ? `Step ${step + 1} of ${lesson.steps.length}` : 'Recap';
     bar.paint(step);
-    if (step > 0) nav.append(h('button', { class: 'secondary', onclick: () => { step--; show(); } }, 'Back'));
-    if (step >= lesson.steps.length) return showRecap(lesson);
+    introBtn.hidden = !isPlay(step) || introOf(step) === undefined;
+    if (step > 0) nav.append(h('button', { class: 'secondary', onclick: () => goTo(step - 1) }, 'Back'));
+    if (step >= lesson.steps.length) { showRecap(lesson, body); body.append(nav); return; }
     const s = lesson.steps[step];
-    let leave = () => {};
-    const next = h('button', { onclick: () => { leave(); step++; show(); } }, 'Next');
+    // The last intro screen leads into the main screen.
+    const next = h('button', { onclick: () => { leave(); goTo(step + 1); } }, !isPlay(step) && isPlay(step + 1) ? 'Start playing' : 'Next');
     forward = next;
     if ('read' in s) {
       const block = readStep(book.chapters.get(s.read)!, cal);
@@ -293,17 +356,17 @@ export const lessonView: View = (root, id?: string) => {
       cleanup = mountExercise(box, ex, cal, () => { next.textContent = 'Next'; next.classList.remove('secondary'); bar.paint(step); syncTop(); });
     }
     nav.append(next);
+    body.append(nav);
     syncTop();
     // The path note, once and quietly, under the first step.
-    if (step === 0 && !advice.ready) body.after(adviceNote);
-    else adviceNote.remove();
+    if (step === 0 && !advice.ready) nav.before(adviceNote);
   };
 
-  const showRecap = (l: Lesson) => {
-    noteSkipped(l);
+  const showRecap = (l: Lesson, body: HTMLElement) => {
+    if (!demo.active) noteSkipped(l);
     const r = lessonRecap({
       lesson: l, goals: lessonGoals(l), stage: lessonStage(l), store, next: nextLesson(undefined, l),
-      practise: (id) => { step = l.steps.findIndex((s) => 'exercise' in s && s.exercise === id); show(); },
+      practise: (id) => goTo(l.steps.findIndex((s) => 'exercise' in s && s.exercise === id), false),
       openLesson: (id) => go(`/lesson/${id}`),
       home: () => go('/'),
     });
@@ -325,9 +388,13 @@ export const lessonView: View = (root, id?: string) => {
   const where = node ? h('a', { class: 'lesson-branch small', href: `#${songHome(node.id) ?? `/branch/${node.branch}`}` },
     h('span', { class: `strand-dot strand-${node.strand}` }),
     songStep ? `Song · step ${songStep.n} of ${songStep.of}` : node.branch === 'songs' ? 'Song' : `${BRANCH_LABEL[node.branch]} · stage ${node.stage}`) : '';
-  root.append(h('section', { class: 'card' }, h('div', { class: 'lesson-head' }, h('div', {}, where, h('h2', {}, lesson.title)), h('div', { class: 'lesson-top' }, progress, topNext)), bar.el, body, nav));
+  leaveBtn.href = `#${node ? songHome(node.id) ?? '/' : '/'}`;
+  root.append(h('div', { class: 'lesson' },
+    h('div', { class: 'lesson-head' }, leaveBtn, h('div', { class: 'lesson-name' }, where, h('h2', {}, lesson.title)), h('div', { class: 'lesson-top' }, introBtn, progress, topNext)),
+    bar.el, scroller));
+  if (!demo.active) document.body.classList.add('focus-page');
   show();
-  return () => { cleanup?.(); window.removeEventListener('keydown', onEnter); unguard(); };
+  return () => { cleanup?.(); clearTimeout(settle); window.removeEventListener('keydown', onEnter); unguard(); document.body.classList.remove('focus-page'); };
 };
 
 /** A song taught in steps: this node's place in it. */
@@ -362,10 +429,13 @@ export const exerciseView: View = (root, id?: string) => {
   const cal = needCalibration(root);
   if (!cal) return;
   const box = h('div');
-  root.append(h('section', { class: 'card' }, h('h2', {}, exerciseTitle(ex)), box));
+  root.append(h('div', { class: 'lesson' },
+    h('div', { class: 'lesson-head' }, h('a', { class: 'focus-leave', href: '#/', title: 'Home', 'aria-label': 'Home' }, '✕'), h('div', { class: 'lesson-name' }, h('h2', {}, exerciseTitle(ex)))),
+    h('div', { class: 'lesson-scroll' }, h('section', { class: 'lesson-panel focus' }, box))));
+  if (!demo.active) document.body.classList.add('focus-page');
   const unguard = guardSpace();
   const unmount = mountExercise(box, ex, cal, () => {});
-  return () => { unmount(); unguard(); };
+  return () => { unmount(); unguard(); document.body.classList.remove('focus-page'); };
 };
 
 // ---------------------------------------------------------------- settings

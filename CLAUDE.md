@@ -606,3 +606,20 @@ never copied pages). Start small, adapt as we go.
   with their keys reordered, the text differed and the sync said "progress came in", which redrew the
   page and restarted the lesson. Sync now compares records by value (`sameValue`, key order ignored),
   and a sync never redraws a lesson page (home, Today and Profile still redraw).
+- 2026-10-24: The piano is the main attraction (Ignas: "once you are looking at the piano it's in the
+  focus, as big as possible"; "like screens that lock into segments when you scroll: one is theory,
+  the other the exercise"). A lesson fills the window (`lessonView`, site header hidden): a slim bar
+  (✕ leave, title, ‹ Intro on exercise steps, step count, the top Next, the step bar) over a column of
+  full-height panels, one per step plus the recap, that snap into place as it scrolls
+  (`scroll-snap-type: y mandatory`). Only the panel in view is built; the others show their step's
+  name and keep their height. Scrolling by hand settles on the panel across the upper part of the
+  window (moving forward counts as leaving, so a chapter is marked read); Next, Back, the step bar,
+  Intro and the recap's rows scroll to their panel. Intro panels read like a page (a long chapter
+  scrolls inside its panel, then snaps on); the last one's button says "Start playing". An exercise
+  panel is exactly the window: header, transport, view switch and Options (now a pop-over) in one
+  slim row, ladder line, status and live score in the next, then the stage takes the rest (falling
+  notes fill the height, keys at most a third; on the sheet view the staff fills the space above the
+  keys; a keyboard alone is as big as it fits; a quiz with nothing to play sits big in the middle).
+  The result card comes up over the stage. While a take runs the lesson does not scroll. Space never
+  pages the lesson. `#/exercise/<id>` uses the same exercise panel. The phone-on-its-side full screen
+  is unchanged. Demo scene "A lesson in panels".
