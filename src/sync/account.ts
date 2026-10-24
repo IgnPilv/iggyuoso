@@ -219,9 +219,10 @@ export class Account {
         if (local[full] !== undefined) {
           value = mergeRecord(r.key, parse(mine), remote, local[full] > Date.parse(r.updatedAt));
         }
-        const text = JSON.stringify(value ?? null);
-        if (text !== (mine ?? 'null')) {
-          this.data.raw.set(full, text);
+        // The server hands records back with their keys in its own order (Postgres jsonb sorts
+        // them), so only a different value counts as a change, not a different spelling of it.
+        if (!sameValue(value ?? null, parse(mine))) {
+          this.data.raw.set(full, JSON.stringify(value ?? null));
           changed = true;
         }
         oldest = Math.min(oldest, r.schema);
@@ -269,4 +270,17 @@ const message = (e: unknown) => (e instanceof Error ? e.message : String(e));
 function parse(v: string | null): unknown {
   if (v === null || v === 'undefined') return null;
   try { return JSON.parse(v); } catch { return null; }
+}
+
+/** The same JSON value, whatever the order of object keys. */
+export function sameValue(a: unknown, b: unknown): boolean {
+  return canonical(a) === canonical(b);
+}
+function canonical(v: unknown): string {
+  if (Array.isArray(v)) return `[${v.map(canonical).join(',')}]`;
+  if (v && typeof v === 'object') {
+    return `{${Object.keys(v).filter((k) => (v as Record<string, unknown>)[k] !== undefined).sort()
+      .map((k) => `${JSON.stringify(k)}:${canonical((v as Record<string, unknown>)[k])}`).join(',')}}`;
+  }
+  return JSON.stringify(v ?? null);
 }
