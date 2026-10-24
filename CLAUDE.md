@@ -464,3 +464,8 @@ never copied pages). Start small, adapt as we go.
   can't hear the rhythm"; a run could draw a whole note in every bar). Only the last bar may be one
   note filling the bar, a line mixes at least two note values, and the bars before the last are
   never all the same (`rhythm` in `src/engine/generate.ts`; also used by sight-reading).
+- 2026-10-24: Sound unlock (Ignas: "ear-same-different doesn't play sound"; it plays in desktop Chrome,
+  so most likely a phone). `audio()` asks iOS to play like media (`navigator.audioSession.type =
+  'playback'`, so the ring/silent switch no longer mutes the app) and resumes the context from any
+  state but running (iOS also has 'interrupted'). Every tap and key press wakes the context, and the
+  first also plays a silent buffer (older iOS needs it), since samples make the context before any tap.
