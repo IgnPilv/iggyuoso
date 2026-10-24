@@ -286,8 +286,8 @@ def run(base):
         S("""Musicians describe a piece in a few strokes: its **key** and **meter**, its **form** (binary AB, ternary ABA, rondo,
         sonata, theme and variations), where it **modulates**, its **cadences**, its **texture**, its **era** and **character**
         (the Italian words at the top). You know all of these words now.""", terms=['analysis', 'binary', 'ternary', 'rondo', 'coda', 'development', 'recapitulation']),
-        S("""For example, the **Minuet in G**: G major, 3/4, binary form (two halves, each repeated), the first half ending in the
-        dominant (D major), Baroque, two-part counterpoint, *moderato*, graceful. Try describing a piece you play the same
+        S("""For example, the **Minuet in G**: G major, 3/4, binary form (two halves, each repeated), the first half staying in G
+        and the second visiting the dominant (D major) before coming home, Baroque, two-part counterpoint, *moderato*, graceful. Try describing a piece you play the same
         way.""", callout='Key · meter · form · modulation · cadences · texture · era · character'),
         X(quiz('musician-talk-quiz', 'Talking about music: quiz', [
             Q('A piece in two halves, each repeated (AABB), is in...', 'Binary form', ['Ternary form', 'Rondo form', 'Sonata form'], 'Bi = two parts.'),
@@ -301,7 +301,7 @@ def run(base):
             Q('"Rubato" means...', 'Stretching and giving back the time', ['Exactly in time', 'Getting louder', 'Short and detached'], 'Robbed time: Romantic music lives on it.'),
             Q('"Ritardando" (rit.) means...', 'Gradually slower', ['Gradually louder', 'Suddenly loud', 'Back to the tempo'], 'Usually near an ending.'),
             Q('"Sforzando" (sf) means...', 'A sudden strong accent', ['Very soft', 'Smoothly', 'Slowing down'], 'Forced.'),
-            Q('The Minuet in G, first half, ends in D major. That is a modulation to the...', 'Dominant', ['Subdominant', 'Relative minor', 'Tonic minor'], 'D is V of G.'),
+            Q("The Minuet in G's second half moves to D major. That is a modulation to the...", 'Dominant', ['Subdominant', 'Relative minor', 'Tonic minor'], 'D is V of G.'),
             Q('A theme played again and again with changes is...', 'Theme and variations', ['A rondo', 'A fugue', 'A minuet'], 'Like the Lightly Row variations.'),
             Q('A short Romantic piece with one mood, like a nocturne, is a...', 'Character piece', ['Sonata', 'Suite', 'Concerto'], 'Chopin, Schumann, Mendelssohn wrote many.'),
             Q('Describing a piece\'s key, form, cadences and texture is called...', 'Analysis', ['Transposition', 'Improvisation', 'Orchestration'], 'What music students do every week.'),

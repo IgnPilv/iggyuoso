@@ -92,7 +92,7 @@ questions:
   - A sudden strong accent
   correct: 3
   why: Forced.
-- ask: The Minuet in G, first half, ends in D major. That is a modulation to the...
+- ask: The Minuet in G's second half moves to D major. That is a modulation to the...
   choices:
   - Tonic minor
   - Subdominant
