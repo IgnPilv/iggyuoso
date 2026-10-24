@@ -1,4 +1,4 @@
-import { LETTERS, type Letter, type Meter } from './notes';
+import { LETTERS, type Hand, type Letter, type Meter } from './notes';
 import { keySignature } from './theory';
 
 // Turns what the player pressed (free play, a Sketchbook take, an improvisation) into note strings
@@ -12,6 +12,8 @@ export interface CapturedNote {
   /** Song ms of the release; unset while still held (or never released). */
   off?: number;
   velocity?: number;
+  /** The hand it belongs to, when known (an imported part); otherwise the split decides. */
+  hand?: Hand;
 }
 
 export interface TranscribeOptions {
@@ -141,8 +143,8 @@ export function transcribe(notes: CapturedNote[], opts: TranscribeOptions): Tran
   const lastEnd = Math.max(...moved.map((n) => Math.max(n.on, n.off ?? n.on + opts.beatMs) / opts.beatMs));
   const bars = Math.max(1, Math.ceil(Math.round(lastEnd / grid) * grid / barQ - 1e-6));
   const end = bars * barQ;
-  const right = moved.filter((n) => n.midi >= split);
-  const left = moved.filter((n) => n.midi < split);
+  const right = moved.filter((n) => (n.hand ?? (n.midi >= split ? 'right' : 'left')) === 'right');
+  const left = moved.filter((n) => (n.hand ?? (n.midi >= split ? 'right' : 'left')) === 'left');
   return {
     right: right.length ? write(events(right, opts.beatMs, grid, end, barQ), bars, barQ, key) : undefined,
     left: left.length ? write(events(left, opts.beatMs, grid, end, barQ), bars, barQ, key) : undefined,

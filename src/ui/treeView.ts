@@ -417,6 +417,7 @@ export function songsPage(p: Progress = { store: realStore, mastery: realMastery
       h('h2', {}, 'Songbook'),
       h('span', { class: 'unit-progress' }, `${songs.filter((v) => v.done).length} of ${songs.length} learned`)),
     h('p', {}, 'Tunes to play for fun, nearly all old enough to be free for everyone. Each milestone you pass opens a new shelf. Each song comes in steps: the tune, the left hand, then both together.'),
+    h('p', { class: 'banner' }, 'Have a song of your own? ', h('a', { href: '#/mysongs' }, 'Import its MIDI file into My songs'), ' and practise it like any piece.'),
     ...[...groups].map(([msId, list]) => {
       const ms = treeNodes.get(msId);
       const passed = ms ? grown(snap.get(msId)!) : true;
