@@ -7,6 +7,7 @@ import { account, isSignInReturn } from './sync';
 import { h, type View } from './ui/dom';
 import { demoView } from './ui/demoView';
 import { sketchbookView } from './ui/sketchbookView';
+import { mySongsView } from './ui/mySongsView';
 import { profileView } from './ui/profileView';
 import { todayView } from './ui/todayView';
 import { branchView, songsView } from './ui/treePages';
@@ -24,6 +25,7 @@ const routes: Record<string, View> = {
   branch: branchView,
   songs: songsView,
   sketchbook: sketchbookView,
+  mysongs: mySongsView,
   midi: testerView,
   demo: demoView,
 };
