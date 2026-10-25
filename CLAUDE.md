@@ -691,3 +691,17 @@ never copied pages). Start small, adapt as we go.
   `keepResultClear` in `src/modules/piano/ui/players.ts`), so the controls row stays clear; Options
   opened again over a result moves the card down below it. Outside the panels (the demo) the
   drawer is unchanged.
+- 2026-10-25: Hands on the keys, beta (Ignas: "lets show a visualization of hand placement not only finger
+  numbers"). Both hands are drawn over the keyboard, in falling notes (canvas, also the phone's full screen)
+  and on the keyboard under the sheet (SVG): a palm along the front edge and five fingers reaching to the keys
+  they rest on, the thumb shorter and from the side, finger numbers on the tips (left off with Options →
+  Fingers). The finger playing lights up, the one that plays next is ringed, and the hand slides to a new
+  place in the last part of the gap before the note that needs it (at most ¾ of a beat). Positions come from
+  the fingering already there (written or suggested, `src/modules/piano/music/handPlacement.ts`, tested): at
+  each onset the played fingers sit on their keys; the others rest where the hand will need them next (up
+  to 24 onsets ahead while nothing has to move and fingers stay in pitch order within a ninth), else where
+  they were, else on white keys beside their neighbours. Drawn by `src/modules/piano/ui/hands.ts` (one
+  outline around palm and fingers). Options → Hands (beta) (`settings.hands`, unset = on, remembered); step-
+  by-step exercises follow the same setting. Not shown for taps, echoes, a reading drill's keys while it is
+  played, or step-by-step reading from the sheet (the hand would give the key away). Demo scene "Hands on
+  the keys (beta)".

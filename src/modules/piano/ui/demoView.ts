@@ -401,6 +401,38 @@ function scenes(): Scene[] {
       },
     });
   }
+  // Hands on the keys (beta): a scale hands together, where both hands move as the thumbs pass under.
+  const handsEx = allExercises().find((e) => e.id === 'c-scale-together') ?? fingered;
+  if (handsEx && isTimed(handsEx)) {
+    out.push({
+      title: 'Hands on the keys (beta)',
+      caption: 'Both hands are drawn over the keys: a palm along the front and five fingers resting on the keys they will play, numbered 1 (thumb) to 5. The finger that plays next is ringed, a finger playing lights up, and the hand slides to its new place just before the note that needs it, here as the thumbs pass under in a scale. In falling notes and on the keyboard under the sheet; Options → Hands (beta) switches them off and on.',
+      run: (box, next, p) => {
+        resetDemoOptions();
+        demo.onTimed = (s) => p.playTimed(s);
+        const timers: number[] = [];
+        const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+        const hands = (on: boolean) => {
+          const el = [...box.querySelectorAll<HTMLLabelElement>('.drawer label')].find((l) => l.textContent?.trim() === 'Hands (beta)')?.querySelector('input');
+          if (el) { el.checked = on; el.dispatchEvent(new Event('change')); }
+        };
+        const drawer = (open: boolean) => { const d = box.querySelector('details.drawer') as HTMLDetailsElement | null; if (d) d.open = open; };
+        // First in falling notes; then the keyboard under the sheet, with the switch shown in Options.
+        let takes = 0;
+        const cleanup = mountExercise(box, handsEx, DEMO_CALIBRATION, () => {
+          if (++takes > 1) { later(4000, next); return; }
+          later(2500, () => setView(box, 'classic'));
+          later(3300, () => drawer(true));
+          later(4300, () => hands(false));
+          later(5500, () => hands(true));
+          later(6400, () => { drawer(false); press(box, 'Play'); });
+        });
+        setView(box, 'falling');
+        later(1500, () => press(box, 'Play'));
+        return () => { timers.forEach(clearTimeout); cleanup(); resetDemoOptions(); };
+      },
+    });
+  }
   if (twoHands) {
     out.push({
       title: 'Phone on its side',
