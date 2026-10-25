@@ -39,6 +39,7 @@ import type { Module } from '../../../core/module';
 import { MODULES } from '../../../app/modules';
 import { moduleSwitcher, navLink } from '../../../app/shell';
 import { sums, sumsPage } from '../../sums/module';
+import { roomCard, roomRecap } from './practiceRoom';
 
 // The no-keyboard showcase. Scenes are picked from the live content, so the demo always shows
 // what the app currently does. When a feature is added, add or extend a scene here.
@@ -751,6 +752,27 @@ function scenes(): Scene[] {
       return () => timers.forEach(clearTimeout);
     },
   });
+  out.push({
+    title: 'Practice room',
+    caption: 'Beside the lessons sits the practice room: three games (Note Rush, Play by ear, Duet) and five tools (Chord finder, Timing mirror, Scale gym, Jam room, Play report), all on the home page. Each belongs to a branch and says which milestone it is best after (nothing is locked). The branch page lists its own, here the rhythm branch, and a lesson they fit names them on its recap: after "Steady beat", the Timing mirror.',
+    run: (box, next) => {
+      const p = sampleTreeProgress();
+      box.append(roomCard(p.mastery));
+      const steady = treeNodes.get('steady-beat')?.lesson;
+      const timers = [
+        window.setTimeout(() => {
+          box.replaceChildren(branchPage('rhythm', p));
+          box.querySelector('.room-branch')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 7000),
+        window.setTimeout(() => {
+          box.replaceChildren(h('div', { class: 'card' }, h('h3', {}, 'End of "Steady beat"'), steady ? roomRecap(steady) : ''));
+          box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 13000),
+        window.setTimeout(next, 18000),
+      ];
+      return () => timers.forEach(clearTimeout);
+    },
+  });
   const songStep = content.exercises.get('song-wim-verse2');
   if (songStep) {
     const play = exerciseScene(songStep, { view: 'falling', switchAt: 9000 });
@@ -1120,7 +1142,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Play by ear',
-    caption: 'Find a tune you know on the keys (#/byear, from the Mini game card on home). The app plays the opening of a public-domain tune (easy, medium or hard; near middle C or on any key; name shown or a mystery) and lights its first note. Each note found is written on the staff; a wrong key says higher or lower, the second wrong key also how far from the last note (a step, a skip, a leap), the right note in the wrong octave is pointed out, and playing from the start again never counts as a guess. Hear the next notes or Show me when stuck; at the end the score, how many notes came on the first try, and the tune played back. Nothing is saved. Here the pianist finds Ode to Joy, missing once below and once above, and once an octave too high.',
+    caption: 'Find a tune you know on the keys (#/byear, from the Practice room on home). The app plays the opening of a public-domain tune (easy, medium or hard; near middle C or on any key; name shown or a mystery) and lights its first note. Each note found is written on the staff; a wrong key says higher or lower, the second wrong key also how far from the last note (a step, a skip, a leap), the right note in the wrong octave is pointed out, and playing from the start again never counts as a guess. Hear the next notes or Show me when stuck; at the end the score, how many notes came on the first try, and the tune played back. Nothing is saved. Here the pianist finds Ode to Joy, missing once below and once above, and once an octave too high.',
     run: (box, next, p) => {
       const timers: number[] = [];
       const dev = (m: number) => m + DEMO_CALIBRATION.offset;
@@ -1139,7 +1161,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Duet',
-    caption: 'Play a tune and the band plays the left hand with you (#/duet, from the Mini game card on home). Pick one of 11 public-domain tunes and a way of playing along (held chords, bass and chord, rolling eighths). Nothing starts until you play the first note; then the band keeps to your tempo, learning it as you go, and waits at every melody note until you play it, so a stop never leaves you behind. The next note is lit (it can be switched off). At the end: how evenly you kept your own beat, the tempo and whether it crept, where you held back or hurried, where the band had to wait, and tips. Nothing is saved. Here the pianist plays Ode to Joy, stops before bar 2, hits one wrong key, and hurries the last phrase.',
+    caption: 'Play a tune and the band plays the left hand with you (#/duet, from the Practice room on home). Pick one of 11 public-domain tunes and a way of playing along (held chords, bass and chord, rolling eighths). Nothing starts until you play the first note; then the band keeps to your tempo, learning it as you go, and waits at every melody note until you play it, so a stop never leaves you behind. The next note is lit (it can be switched off). At the end: how evenly you kept your own beat, the tempo and whether it crept, where you held back or hurried, where the band had to wait, and tips. Nothing is saved. Here the pianist plays Ode to Joy, stops before bar 2, hits one wrong key, and hurries the last phrase.',
     run: (box, next, p) => {
       const timers: number[] = [];
       const dev = (m: number) => m + DEMO_CALIBRATION.offset;

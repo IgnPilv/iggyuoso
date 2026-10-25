@@ -9,6 +9,7 @@ import { KeyboardView } from './keyboard';
 import { showHeld } from './players';
 import { renderStaff, type StaffNote } from './staff';
 import { needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // Note Rush (#/noterush), a one-minute note-reading game (engine/noteRush.ts). Best scores per
 // clef and level are kept as `game.noterush` (synced like other progress); the demo never saves.
@@ -216,7 +217,7 @@ export const noteRushView: View = (root) => {
   modeSel.onchange = () => { if (!demo.active) patchSettings({ noteRushMode: mode() }); onSetting(); };
 
   root.append(h('section', { class: 'card rush' },
-    h('span', { class: 'eyebrow' }, 'Mini game'),
+    roomEyebrow('noterush'),
     h('h1', {}, 'Note Rush'),
     h('p', {}, 'Notes slide along the staff to the line: play each one before it gets there (or have them jump in place, each with its own time bar). The faster you find them, the more you get in a minute. Every note in a row adds to your streak, and every five in a row adds to the points per note, but each note gets a little less time. A wrong key ends the streak.'),
     h('div', { class: 'controls' }, clefSel, levelSel, modeSel, startBtn, best),

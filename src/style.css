@@ -1645,7 +1645,6 @@ body.focus-page main { max-width: none; padding: 0; }
 .rush-card { margin: var(--space-3) 0; }
 .shake { animation: rush-shake 0.3s; }
 @keyframes rush-shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
-.home-game { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
 .rush-scroll { width: min(100%, 640px); }
 .rush-line { stroke: var(--target); stroke-width: 3; stroke-linecap: round; opacity: 0.8; }
 .rush-staff .note.rush-note.leaving { transition: opacity 0.3s; opacity: 0; }
@@ -1764,3 +1763,18 @@ body.focus-page main { max-width: none; padding: 0; }
 /* Duet (#/duet) */
 .duet .keyboard { max-height: 30vh; width: auto; max-width: 100%; }
 .duet-live { min-height: 1.4em; }
+
+/* Practice room: the games and tools (home, branch pages, recaps). Tiles look like the songbook's. */
+.room-grid { list-style: none; padding: 0; margin: var(--space-3) 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: var(--space-2); }
+.room-tile {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px var(--space-2); padding: var(--space-3);
+  border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); text-decoration: none; height: 100%;
+  transition: transform var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+}
+.room-tile:hover { transform: translateY(-2px); border-color: var(--line-strong); }
+.room-name { font-family: var(--font-display); font-weight: 600; }
+.room-kind { color: var(--muted); }
+.room-blurb, .room-meta { grid-column: 1 / -1; color: var(--ink-2); }
+.room-meta { color: var(--muted); display: flex; align-items: center; gap: var(--space-2); }
+.room-recap { margin-top: var(--space-3); }

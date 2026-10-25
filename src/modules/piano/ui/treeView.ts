@@ -2,6 +2,7 @@ import { branches, content, songOf, stages, stepTitle, treeNodes } from '../cont
 import type { BranchId, TreeNode, TreeStage } from '../content/tree';
 import { frontier, lessonGoals, mastery as realMastery } from '../progress';
 import type { Mastery, NodeState } from '../progress/mastery';
+import { roomForBranch } from './practiceRoom';
 import { store as realStore, type Store } from '../progress/store';
 import { h, s as svgEl } from '../../../core/dom';
 
@@ -400,7 +401,8 @@ export function branchPage(id: BranchId, p: Progress = { store: realStore, maste
         if (from.length) text?.append(h('span', { class: 'tile-links' }, ...from.map((r) =>
           h('span', { class: 'tile-link' }, h('span', { class: `strand-dot strand-${r!.strand}` }), r!.title))));
         return tile;
-      })))));
+      })))),
+    roomForBranch(id, p.mastery));
 }
 
 /** Each song once, with its steps in order (a song without steps is its own single step). */

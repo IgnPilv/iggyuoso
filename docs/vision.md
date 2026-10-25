@@ -34,6 +34,10 @@ gorgeous design.
 - **Songs, taught in steps.** Songs open after milestones. Bigger ones (Where Is My Mind, Can't Help
   Falling in Love, Pachelbel's Canon) are one song with a path of steps inside it. Players can also
   import their own MIDI files (My songs).
+- **A practice room beside the lessons.** Three games (Note Rush, Play by ear, Duet) and five
+  tools (Chord finder, Timing mirror, Scale gym, Jam room, Play report), each tied to a branch of the
+  tree and suggested by the lessons it fits. Several listen to free playing and say, hand by hand,
+  where it was held back or hurried.
 - **Practise the hard bars.** Every played exercise has a Scored mode (takes count) and a Practice
   mode that loops the bars picked on a slider, at any tempo, and saves nothing.
 - **See the music three ways.** Sheet music, Synthesia-style falling notes (with the sheet as a
@@ -49,10 +53,11 @@ gorgeous design.
 
 - More modules on the same site and account (ideas so far: a math tutor, a painting course). The
   "Sums" module is only a sample that shows how one fits, to be replaced by a real one.
-- Ideas tried quickly: from 2026-10-25 an hourly run builds one new idea at a time on a preview
-  branch with its own preview address (`docs/previews.md`, log in `docs/ideas.md`), and Ignas says
-  go (merge) or no-go (close).
-- Earlier wishes still open: mini games on the same timing loop, more statistics over time (timing
+- Ideas tried quickly: an idea can be built on a preview branch with its own preview address
+  (`docs/previews.md`, log in `docs/ideas.md`), and Ignas says go (merge) or no-go (close). The
+  first run (2026-10-25, eight ideas) was kept whole and became the practice room; any of it can
+  still be cut.
+- Earlier wishes still open: more statistics over time (timing
   per note), more songs (public domain by default; copyrighted titles only when Ignas asks for one
   by name, written as our own arrangement).
 

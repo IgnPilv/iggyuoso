@@ -56,6 +56,14 @@ theory screens ([content/README.md](../../content/README.md), "The Book").
    options and never saves.
 3. For a Settings page card, add it to `settingsView` (`ui/views.ts`).
 
+## Add a game or tool to the practice room
+
+Write the page (`ui/<name>View.ts`, with its rules in `engine/` and a test), add its route to
+`routes` in `module.ts`, and add one entry to `ROOM` in `ui/practiceRoom.ts`: route, name, kind,
+one-line blurb, branch, `after` (a milestone, or none) and the tree nodes whose lessons should
+suggest it. Home, the branch page and the recaps then pick it up; `tests/practiceRoom.test.ts` checks
+the route and node ids. Put `roomEyebrow('<route>')` over the page's heading and add a demo scene.
+
 ## Add a module (a new subject)
 
 Follow [docs/modules.md](../modules.md), "Adding a module": a `src/modules/<id>/module.ts` that

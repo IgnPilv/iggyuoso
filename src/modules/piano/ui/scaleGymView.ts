@@ -13,6 +13,7 @@ import { h, s, type View } from '../../../core/dom';
 import { KeyboardView } from './keyboard';
 import { animate } from './players';
 import { midiBanner, needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // The Scale gym (#/scales): pick a scale or arpeggio, a key, the hands, octaves, notes a click
 // and a tempo; play it up and down on the click and see, note by note, how evenly it went and
@@ -446,6 +447,7 @@ export function mountScaleGym(root: HTMLElement, cal: Calibration, hooks: GymHoo
   const offPorts = midi.onPorts(showBanner);
 
   root.append(banner, h('section', { class: 'card gym' },
+    roomEyebrow('scales'),
     h('h2', {}, 'Scale gym'),
     h('p', {}, 'Scales and arpeggios up and back down on the click, with the fingering on the keys. Afterwards every note shows where it landed, so you can see which hand stumbles and where: most often where the thumb passes under (marked ▲). Even first, fast later. In free tempo there is no click: play at your own speed, and the page finds your tempo and shows where you held back or hurried; it can also recognise which scale you played.'),
     h('div', { class: 'controls' }, h('label', {}, 'Play ', kindSel), h('label', {}, 'in ', rootSel), handsSel, octSel),

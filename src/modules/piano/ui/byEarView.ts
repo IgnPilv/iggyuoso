@@ -9,6 +9,7 @@ import { h, type View } from '../../../core/dom';
 import { KeyboardView } from './keyboard';
 import { theoryStaff } from './theory';
 import { midiBanner, needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // Play by ear (#/byear): the app plays the opening of a well-known tune and lights its first note;
 // the player finds the rest on the keys. Wrong keys get a hint (higher or lower, then how far from
@@ -214,6 +215,7 @@ export function mountByEar(root: HTMLElement, cal: Calibration, hooks: ByEarHook
   const offPorts = midi.onPorts(showBanner);
 
   root.append(banner, h('section', { class: 'card ear' },
+    roomEyebrow('byear'),
     h('h2', {}, 'Play by ear'),
     h('p', {}, 'Hear the start of a tune you know, then find it on the keys, one note at a time. The first note is lit. A wrong key tells you whether to go higher or lower; play from the start again whenever you like, it is never counted as a guess.'),
     h('div', { class: 'controls' }, levelSel, keySel, h('label', {}, mystery, ' Mystery tune (name hidden)')),

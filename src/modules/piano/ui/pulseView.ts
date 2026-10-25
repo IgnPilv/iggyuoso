@@ -7,6 +7,7 @@ import { store } from '../progress/store';
 import { h, s, type View } from '../../../core/dom';
 import { animate } from './players';
 import { midiBanner, needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // The Timing mirror (#/pulse): a metronome that shows, press by press, how early or late each hand
 // lands and how steady it is, with silent bars to test the inner pulse. Nothing is saved; the
@@ -213,6 +214,7 @@ export function mountPulse(root: HTMLElement, cal: Calibration, hooks: PulseHook
   const offPorts = midi.onPorts(showBanner);
 
   root.append(banner, h('section', { class: 'card pulse' },
+    roomEyebrow('pulse'),
     h('h2', {}, 'Timing mirror'),
     h('p', {}, 'A metronome that listens. Play any key on the click, with either hand or both, and see each press land early or late. A good pulse is steady first; being exactly on the click comes next. Turn on silent bars to find out whether the beat is inside you or only in the click.'),
     h('div', { class: 'controls' },

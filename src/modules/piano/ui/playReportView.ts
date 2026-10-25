@@ -8,6 +8,7 @@ import { KeyboardView } from './keyboard';
 import { animate } from './players';
 import { presetPulse } from './pulseView';
 import { midiBanner, needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // The Play report (#/report): nothing to pick and no click. The page is always listening; the
 // first key starts a take and five seconds of quiet (or Finish) ends it. Then it says what it
@@ -211,6 +212,7 @@ export function mountPlayReport(root: HTMLElement, cal: Calibration, hooks: Repo
   const offPorts = midi.onPorts(showBanner);
 
   root.append(banner, h('section', { class: 'card gym report' },
+    roomEyebrow('report'),
     h('h2', {}, 'Play report'),
     h('p', {}, 'Play anything: a piece, a song, a scale, something of your own. There is no click and nothing to set. The page listens, finds your own tempo, and then shows where you held back or hurried against it, where you sped up or slowed down, which hand lands first, the key and the chords it heard.'),
     h('div', { class: 'controls' }, finishBtn, playBtn, status),
