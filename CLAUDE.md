@@ -739,3 +739,11 @@ never copied pages). Start small, adapt as we go.
   land with them on the hit line, in words for triads (`chordWords`: C major, F♯ minor; G7, Bdim stay as
   written). Same Options → Chord names switch and the same exceptions (taps, reading tests). Practice mode
   names the chords of the bars being practised. Demo scene "Chord names" now plays in falling notes.
+- 2026-10-25: UX review fixes (Ignas: "test and review ux"). Phone header: with the computer keyboard on,
+  the pill shows only ⌨ under 560 px and links are tighter under 440 px, so Settings and the theme
+  button no longer fall off the edge. In lesson panels the Options pop-over never opens by itself
+  (the remembered open state is only for the drawer outside lessons). Computer-keyboard letters on
+  white keys sit just above the black keys' ends, so the hands (beta) no longer cover them. Steps
+  not reached yet show on the step bar (they were invisible on the dark lesson page). Home says
+  "Start: <lesson>" for a lesson never played ("Continue" once started). The demo scrolls to the
+  scene being played (the scene list is long), also from "Watch any exercise".

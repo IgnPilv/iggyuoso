@@ -47,7 +47,7 @@ export class KeyboardView {
         blackLayer.append(g);
       } else {
         const x = wi * WW;
-        g.append(s('rect', { x, y: 0, width: WW, height: WH, rx: 3 }), s('text', { x: x + WW / 2, y: WH - 6, class: 'label' }), s('text', { x: x + WW / 2, y: BH + 12, class: 'hint' }));
+        g.append(s('rect', { x, y: 0, width: WW, height: WH, rx: 3 }), s('text', { x: x + WW / 2, y: WH - 6, class: 'label' }), s('text', { x: x + WW / 2, y: BH - 4, class: 'hint' }));
         if (opts.labels === 'c' && opts.cal && pitchClass(m) === 0) {
           g.append(s('text', { x: x + WW / 2, y: WH - 18, class: 'name' }, keyName(opts.cal, m)));
         }
