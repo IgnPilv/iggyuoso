@@ -1,0 +1,25 @@
+id: song-symphony-40
+title: Symphony No. 40
+skills:
+- songs
+steps:
+- explain: |
+    **Symphony No. 40** · Wolfgang Amadeus Mozart, 1788
+
+    One of only two symphonies Mozart wrote in a minor key. The restless sighing tune (a falling half step) starts straight away, with no introduction.
+  staff:
+    notes: Eb5:e D5:e  |  D5:q Eb5:e D5:e D5:q Eb5:e D5:e
+    key: Gm
+  sound: Eb5:e D5:e  |  D5:q Eb5:e D5:e D5:q Eb5:e D5:e  |  D5:q Bb5:q r:q Bb5:e A5:e  |  G5:q G5:e F5:e Eb5:q Eb5:e D5:e
+- explain: |
+    **Before you play.** G minor: B♭ and E♭, and F♯ in bar 7. Keep the sighing pairs light.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G minor · Time: 4/4 · Tempo: 116
+- exercise: song-symphony-40-rh
+- exercise: song-symphony-40-lh
+- exercise: song-symphony-40
+- exercise: song-symphony-40-arranged
+- exercise: song-symphony-40-performance
+recap: 'Symphony No. 40: tune, left hand, together. Come back to it any time; songs are for fun.'

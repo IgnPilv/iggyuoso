@@ -1,0 +1,20 @@
+id: song-swan-lake-performance
+title: 'Swan Lake: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Bm
+tempo: 66
+meter: 4/4
+countIn: 1
+right: F#4:h B3:e C#4:e D4:e E4:e | F#4:h. D4:q | F#4:h. D4:q | F#4:h. B3:q | D4:q B3:q G3:q D4:q | B3:w | F#4:h B3:e C#4:e
+  D4:e E4:e | F#4:h. D4:q | F#4:h. D4:q | F#4:h. B3:q | D4:q B3:q G3:q D4:q | B3:w
+left: B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e | B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e | B2:e F#3:e D3:e F#3:e B2:e
+  F#3:e D3:e F#3:e | B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | B2:e F#3:e D3:e
+  F#3:e B2:e F#3:e D3:e F#3:e | B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e | B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e
+  | B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e | B2:e F#3:e D3:e F#3:e B2:e F#3:e D3:e F#3:e | G2:e D3:e B2:e D3:e G2:e D3:e
+  B2:e D3:e | B2+D3+F#3:w
+pedal: x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w
+reps: 2
+days: 2

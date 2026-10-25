@@ -1,0 +1,14 @@
+id: song-polly-wolly-lh
+title: 'Polly Wolly Doodle: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 116
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: F2:h | F2:h | F2:h | F2:h | C3:h | C3:h | F2:h | F2:h | F2:h | F2:h | C3:h | C3:h | F2:h | C3:h | F2:h
+reps: 2
+days: 1

@@ -1,0 +1,27 @@
+id: song-cadet-rousselle
+title: Cadet Rousselle
+skills:
+- songs
+steps:
+- explain: |
+    **Cadet Rousselle** · French song, 1792
+
+    Cadet Rousselle had three houses with no roofs and three coats with no sleeves. The song mocked a real bailiff of the town of Auxerre.
+  staff:
+    notes: G4:q G4:q G4:q D4:q  |  B4:q B4:q B4:q G4:q
+    key: G
+  sound: G4:q G4:q G4:q D4:q  |  B4:q B4:q B4:q G4:q  |  C5:q C5:q B4:q A4:q  |  G4:h D4:h
+- explain: |
+    **Before you play.** G major: F♯ is not in the tune, but the D chord in the left hand has one.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 108
+- exercise: song-cadet-rousselle-tap
+- exercise: song-cadet-rousselle-by-ear
+- exercise: song-cadet-rousselle-rh
+- exercise: song-cadet-rousselle-lh
+- exercise: song-cadet-rousselle
+- exercise: song-cadet-rousselle-arranged
+- exercise: song-cadet-rousselle-performance
+recap: 'Cadet Rousselle: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,26 @@
+id: song-hanschen-klein
+title: Hänschen klein
+skills:
+- songs
+steps:
+- explain: |
+    **Hänschen klein** · German children's song, 1800s
+
+    "Little Hans" sets off into the wide world and comes home a grown man. German children learn it as one of their first tunes.
+  staff:
+    notes: G4:q E4:q E4:h  |  F4:q D4:q D4:h
+  sound: G4:q E4:q E4:h  |  F4:q D4:q D4:h  |  C4:q D4:q E4:q F4:q  |  G4:q G4:q G4:h
+- explain: |
+    **Before you play.** C position for both hands; bars 9 to 12 climb a step at a time.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 104
+- exercise: song-hanschen-klein-tap
+- exercise: song-hanschen-klein-by-ear
+- exercise: song-hanschen-klein-rh
+- exercise: song-hanschen-klein-lh
+- exercise: song-hanschen-klein
+- exercise: song-hanschen-klein-arranged
+- exercise: song-hanschen-klein-performance
+recap: 'Hänschen klein: tune, left hand, together. Come back to it any time; songs are for fun.'

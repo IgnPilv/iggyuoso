@@ -1,0 +1,15 @@
+id: song-my-bonnie-lh
+title: 'My Bonnie Lies Over the Ocean: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | C3:h. | F2:h. | C3:h. | C3:h. | C3:h. | G2:h. | G2:h. | G2:h. | C3:h. | F2:h. | C3:h. | C3:h. | D3:h. | G2:h.
+  | C3:h
+reps: 2
+days: 1

@@ -27,6 +27,10 @@ describe('content/tree/', () => {
       expect(n.requires.some((r) => nodes.get(r)?.type === 'checkpoint'), n.id).toBe(true);
     }
   });
+  it('puts every song in a Songbook group', () => {
+    const { nodes } = loadTree(readContentFiles(), lessons());
+    for (const n of nodes.values()) if (n.branch === 'songs' && !n.song) expect(n.genre, n.id).toBeDefined();
+  });
   it('keeps a song taught in steps together: its steps point at the whole song, in order', () => {
     const { nodes } = loadTree(readContentFiles(), lessons());
     const steps = [...nodes.values()].filter((n) => n.song === 'song-wim').map((n) => n.id);

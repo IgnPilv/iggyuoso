@@ -1,0 +1,15 @@
+id: song-can-can
+title: Can-Can
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 112
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C5:q D5:e F5:e | E5:e D5:e G5:q | G5:q G5:e A5:e | E5:e F5:e D5:q | D5:q F5:e E5:e | D5:e C5:e C6:q | B5:e A5:e G5:e
+  F5:e | E5:e D5:e C5:q
+left: C3+E3+G3:h | C3+E3+G3:h | B2+D3+G3:h | B2+D3+G3:h | B2+D3+G3:h | C3+E3+G3:h | B2+D3+G3:h | C3+E3+G3:h
+reps: 3
+days: 2

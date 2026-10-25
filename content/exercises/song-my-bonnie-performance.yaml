@@ -1,0 +1,16 @@
+id: song-my-bonnie-performance
+title: 'My Bonnie Lies Over the Ocean: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 104
+meter: 3/4
+pickup: q
+countIn: 1
+right: G3:q | E4:q. D4:e C4:q | D4:q C4:q A3:q | G3:q E3:h | r:h G3:q | E4:q. D4:e C4:q | C4:q B3:q C4:q | D4:h. | r:h G3:q
+  | E4:q. D4:e C4:q | D4:q C4:q A3:q | G3:q E3:h | r:h G3:q | A3:q D4:q C4:q | B3:q A3:q B3:q | C4:h
+left: r:q | C2+E2+G2:h. | C2+F2+A2:h. | C2+E2+G2:h. | C2+E2+G2:h. | C2+E2+G2:h. | B1+D2+G2:h. | B1+D2+G2:h. | B1+D2+G2:h.
+  | C2+E2+G2:h. | C2+F2+A2:h. | C2+E2+G2:h. | C2+E2+G2:h. | A1+D2+F#2:h. | B1+D2+G2:h. | C2+E2+G2:h
+reps: 2
+days: 2

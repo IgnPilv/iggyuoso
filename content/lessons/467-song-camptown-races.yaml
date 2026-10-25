@@ -1,0 +1,26 @@
+id: song-camptown-races
+title: Camptown Races
+skills:
+- songs
+steps:
+- explain: |
+    **Camptown Races** · Stephen Foster, 1850
+
+    Stephen Foster wrote it in 1850 for minstrel shows. "Doo-dah! doo-dah!" in bars 3 and 4 is the bit everyone joins in.
+  staff:
+    notes: G4:e G4:e E4:e G4:e  |  A4:e G4:e E4:q
+  sound: G4:e G4:e E4:e G4:e  |  A4:e G4:e E4:q  |  E4:e D4:q.  |  E4:e D4:q.
+- explain: |
+    **Before you play.** The chorus (bar 9 on) has a dotted eighth and sixteenth: "Go-in' to run".
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 108
+- exercise: song-camptown-races-tap
+- exercise: song-camptown-races-by-ear
+- exercise: song-camptown-races-rh
+- exercise: song-camptown-races-lh
+- exercise: song-camptown-races
+- exercise: song-camptown-races-arranged
+- exercise: song-camptown-races-performance
+recap: 'Camptown Races: tune, left hand, together. Come back to it any time; songs are for fun.'

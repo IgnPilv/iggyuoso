@@ -1,0 +1,26 @@
+id: song-morning-mood
+title: Morning Mood
+skills:
+- songs
+steps:
+- explain: |
+    **Morning Mood** · Edvard Grieg, "Peer Gynt", 1875
+
+    Sunrise, in a flute and an oboe passing the tune back and forth. Grieg set it in the Moroccan desert, but most people hear a Norwegian morning.
+  staff:
+    notes: B4:e G#4:e F#4:e E4:e F#4:e G#4:e  |  B4:e G#4:e F#4:e E4:e F#4:e G#4:e
+    key: E
+  sound: B4:e G#4:e F#4:e E4:e F#4:e G#4:e  |  B4:e G#4:e F#4:e E4:e F#4:e G#4:e  |  F#4:e G#4:e B4:e G#4:e B4:e C#5:e  |  G#4:e
+    C#5:e B4:e G#4:e F#4:e E4:e
+- explain: |
+    **Before you play.** E major: four sharps (F♯ C♯ G♯ D♯). The tune rocks on E, F♯, G♯ and B, like a five-note scale.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E major · Time: 6/8 · Tempo: 46
+- exercise: song-morning-mood-rh
+- exercise: song-morning-mood-lh
+- exercise: song-morning-mood
+- exercise: song-morning-mood-arranged
+- exercise: song-morning-mood-performance
+recap: 'Morning Mood: tune, left hand, together. Come back to it any time; songs are for fun.'

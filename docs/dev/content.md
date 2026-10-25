@@ -98,4 +98,27 @@ Most lessons are **written by Python scripts** in `tools/content/`, so that fami
   **commit hand edits before running it**, and change a generated lesson in its script, not in
   the YAML (the next build would overwrite the YAML).
 
+### The song catalogue
+
+Most of the Songbook comes from `tools/content/catalogue.py` and its tune files, one per group
+(`cat_nursery.py`, `cat_folk.py`, `cat_classical.py`, ...). Each `tune(...)` call is one song: title,
+where it comes from, key, meter, tempo, the tune, one chord per bar (or several, split evenly), the
+stage it belongs to (its milestone is worked out from that), the group, and a short story. Tunes are
+written in a short form (`M` in `catalogue.py`): a duration carries on until a new one is written, a
+note without an octave goes to the nearest note of that letter (a fourth or less), and the key's
+sharps and flats are added (write `Fn` for F natural). So `G4:q B D5 | C:h` is `G4:q B4:q D5:q | C5:h`
+in G major. Watch leaps of a fifth or more: they need their octave written.
+
+From one tune the writer makes the song's lesson: the rhythm to tap (up to stage 5), a by-ear echo
+of the opening (up to stage 4), the tune, the left hand from the chords, both hands on the tempo
+ladder, a fuller left hand (or one written out with `left=`) with the pedal from stage 6, and a
+performance. It checks every bar's length, moves the left hand (or, failing that, the tune) an octave
+so that no key is played by both hands at once, and prints any tune whose notes fit their chords
+less than 60% of the time on chord changes, as a check on the transcription.
+
+**Licensing rule.** Catalogue songs are public domain: traditional, or by a composer who died more
+than 70 years ago and published before 1930. Every arrangement is our own; nothing is copied from a
+published or online arrangement or a downloaded MIDI file. Copyrighted songs are added only when
+Ignas names the title himself (group `requests`).
+
 Hand-written files (the early lessons, the Book) are left alone by the build.

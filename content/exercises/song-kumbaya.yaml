@@ -1,0 +1,15 @@
+id: song-kumbaya
+title: Kumbaya
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:h | G4:q A4:q G4:h | C4:q E4:q G4:h | G4:q F4:q E4:h | C4:q E4:q G4:h | G4:q A4:q G4:h | F4:q E4:q D4:q
+  D4:q | C4:w
+left: C3:w | F2:h C3:h | C3:w | G2:h C3:h | C3:w | F2:h C3:h | F2:h G2:h | C3:w
+reps: 3
+days: 2

@@ -1,0 +1,14 @@
+id: song-long-long-ago-lh
+title: 'Long, Long Ago: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:w | G2:w | C3:w | C3:w | F2:h C3:h | G2:w | C3:h G2:h | G2:w | C3:w | G2:w | C3:w | C3:w | F2:h C3:h | G2:w | C3:h
+  G2:h | C3:w
+reps: 2
+days: 1

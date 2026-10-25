@@ -1,0 +1,20 @@
+id: song-morning-mood-arranged
+title: Morning Mood, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+key: E
+tempo: 46
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: B4:e G#4:e F#4:e E4:e F#4:e G#4:e | B4:e G#4:e F#4:e E4:e F#4:e G#4:e | F#4:e G#4:e B4:e G#4:e B4:e C#5:e | G#4:e C#5:e
+  B4:e G#4:e F#4:e E4:e | B4:e G#4:e F#4:e E4:e F#4:e G#4:e | B4:e G#4:e F#4:e E4:e F#4:e G#4:e | F#4:e G#4:e B4:e G#4:e B4:e
+  C#5:e | G#4:e C#5:e B4:e G#4:e F#4:e E4:e | E4:h.
+left: E3:e B3:e G#3:e E3:e B3:e G#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | B2:e F#3:e D#3:e
+  E3:e B3:e G#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e |
+  B2:e F#3:e D#3:e E3:e B3:e G#3:e | E3+G#3+B3:h.
+pedal: x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:h. | x:q. x:q. | x:h.
+reps: 3
+days: 2

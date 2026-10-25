@@ -1,0 +1,24 @@
+id: song-entertainer
+title: The Entertainer
+skills:
+- songs
+steps:
+- explain: |
+    **The Entertainer** · Scott Joplin, 1902
+
+    Joplin, "the King of Ragtime", wrote it in 1902. The left hand goes "oom-pah" like a march while the right hand pushes notes ahead of the beat: that is the syncopation of ragtime.
+  staff:
+    notes: D4:s D#4:s  |  E4:s C5:e E4:s C5:e E4:s C5:s
+  sound: D4:s D#4:s  |  E4:s C5:e E4:s C5:e E4:s C5:s~  |  C5:q. C5:s D5:s  |  D#5:s E5:s C5:s D5:s E5:e B4:s D5:s
+- explain: |
+    **Before you play.** Not too fast: Joplin wrote on his rags "it is never right to play ragtime fast". The tied notes land just before the beat.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 76
+- exercise: song-entertainer-rh
+- exercise: song-entertainer-lh
+- exercise: song-entertainer
+- exercise: song-entertainer-arranged
+- exercise: song-entertainer-performance
+recap: 'The Entertainer: tune, left hand, together. Come back to it any time; songs are for fun.'

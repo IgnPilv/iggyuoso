@@ -1,0 +1,26 @@
+id: song-surprise-symphony
+title: Surprise Symphony
+skills:
+- songs
+steps:
+- explain: |
+    **Surprise Symphony** · Joseph Haydn, Symphony No. 94, 1791
+
+    Haydn's slow movement tiptoes along twice, the second time very softly, and then the whole orchestra crashes in on one chord. He wanted to wake up the London audience.
+  staff:
+    notes: C4:e C4:e E4:e E4:e  |  G4:e G4:e E4:q
+  sound: C4:e C4:e E4:e E4:e  |  G4:e G4:e E4:q  |  F4:e F4:e D4:e D4:e  |  B3:e B3:e G3:q
+- explain: |
+    **Before you play.** Short, light eighths, like walking on tiptoe. The tune is just the C and G chords spelled out.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 84
+- exercise: song-surprise-symphony-tap
+- exercise: song-surprise-symphony-by-ear
+- exercise: song-surprise-symphony-rh
+- exercise: song-surprise-symphony-lh
+- exercise: song-surprise-symphony
+- exercise: song-surprise-symphony-arranged
+- exercise: song-surprise-symphony-performance
+recap: 'Surprise Symphony: tune, left hand, together. Come back to it any time; songs are for fun.'

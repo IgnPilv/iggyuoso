@@ -1,0 +1,16 @@
+id: song-entertainer-rh
+title: 'The Entertainer: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 2/4
+pickup: s s
+countIn: 1
+right: D4:s D#4:s | E4:s C5:e E4:s C5:e E4:s C5:s~ | C5:q. C5:s D5:s | D#5:s E5:s C5:s D5:s E5:e B4:s D5:s | C5:q. D4:s D#4:s
+  | E4:s C5:e E4:s C5:e E4:s C5:s~ | C5:q r:s A4:s G4:s F#4:s | A4:s C5:s E5:e D5:s C5:s A4:s D5:s~ | D5:q. D4:s D#4:s | E4:s
+  C5:e E4:s C5:e E4:s C5:s~ | C5:q. C5:s D5:s | D#5:s E5:s C5:s D5:s E5:e B4:s D5:s | C5:q.
+reps: 2
+days: 1

@@ -1,0 +1,16 @@
+id: song-bridal-chorus
+title: Bridal Chorus
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 80
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: G4:q | C5:q. C5:e C5:h | r:q G4:q D5:q. B4:e | C5:h. G4:q | C5:q. F5:e F5:q. E5:e | D5:q. C5:e B4:q. C5:e | D5:h. G4:q
+  | C5:q. C5:e C5:h | r:q G4:q D5:q. B4:e | C5:h.
+left: r:q | C3:w | G2:w | C3:w | F2:w | G2:w | G2:w | C3:w | G2:w | C3:h.
+reps: 3
+days: 2

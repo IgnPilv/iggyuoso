@@ -1,0 +1,13 @@
+id: song-the-mulberry-bush-lh
+title: 'Here We Go Round the Mulberry Bush: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 58
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: C3:h. | C3:h. | G2:h. | G2:h. | C3:h. | C3:h. | G2:h. | C3:h.
+reps: 2
+days: 1

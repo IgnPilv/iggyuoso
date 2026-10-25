@@ -1,0 +1,17 @@
+id: song-scarborough-fair
+title: Scarborough Fair
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Dm
+tempo: 92
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: D4:h D4:q | A4:h A4:q | E4:q. F4:e E4:q | D4:h. | r:q A4:q C5:q | D5:h C5:q | A4:q B4:q G4:q | A4:h. | r:q r:q D5:q
+  | D5:h D5:q | C5:h A4:q | A4:q G4:q F4:q | E4:q C4:h | D4:h A4:q | G4:h F4:q | E4:q D4:q C4:q | D4:h.
+left: D3+F3+A3:h. | D3+F3+A3:h. | C3+E3+G3:h. | D3+F3+A3:h. | D3+F3+A3:h. | C3+F3+A3:h. | B2+D3+G3:h. | C3+E3+A3:h. | D3+F3+A3:h.
+  | D3+F3+A3:h. | C3+F3+A3:h. | D3+F3+A3:h. | C3+E3+G3:h. | D3+F3+A3:h. | C3+E3+G3:h. | C3+E3+G3:h. | D3+F3+A3:h.
+reps: 3
+days: 2

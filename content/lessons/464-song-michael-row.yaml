@@ -1,0 +1,26 @@
+id: song-michael-row
+title: Michael, Row the Boat Ashore
+skills:
+- songs
+steps:
+- explain: |
+    **Michael, Row the Boat Ashore** · Spiritual, Sea Islands of Georgia, 1860s
+
+    Freed slaves on the Sea Islands of Georgia sang it as they rowed in the 1860s. "Hallelujah" falls on bars 3 and 4, and again on 7 and 8.
+  staff:
+    notes: C4:q E4:q G4:q. E4:e  |  G4:q A4:q G4:h
+  sound: C4:q E4:q G4:q. E4:e  |  G4:q A4:q G4:h  |  E4:q G4:q A4:q. G4:e  |  G4:w
+- explain: |
+    **Before you play.** The dotted quarter and eighth (bars 1, 3, 5, 7) are "long-short": count "1 2 3-and 4".
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 92
+- exercise: song-michael-row-tap
+- exercise: song-michael-row-by-ear
+- exercise: song-michael-row-rh
+- exercise: song-michael-row-lh
+- exercise: song-michael-row
+- exercise: song-michael-row-arranged
+- exercise: song-michael-row-performance
+recap: 'Michael, Row the Boat Ashore: tune, left hand, together. Come back to it any time; songs are for fun.'

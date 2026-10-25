@@ -1,0 +1,15 @@
+id: song-jesu-joy-lh
+title: 'Jesu, Joy of Man''s Desiring: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: D3+G3+B3:h. | D3+G3+B3:h. | C3+E3+G3:q. A2+D3+F#3:q. | A2+D3+F#3:q. B2+D3+G3:q. | B2+D3+G3:h. | B2+D3+G3:h. | C3+E3+G3:q.
+  A2+D3+F#3:q. | B2+D3+G3:h.
+reps: 2
+days: 1

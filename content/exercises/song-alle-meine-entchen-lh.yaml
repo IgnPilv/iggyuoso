@@ -1,0 +1,13 @@
+id: song-alle-meine-entchen-lh
+title: 'Alle meine Entchen: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:w | F2:h C3:h | F2:h C3:h | G2:h C3:h | G2:h C3:h
+reps: 2
+days: 1

@@ -1,0 +1,15 @@
+id: song-long-long-ago-rh
+title: 'Long, Long Ago: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q C4:q D4:q E4:q | E4:h D4:h | E4:q E4:q F4:q G4:q | G4:h. r:q | A4:q G4:q F4:q E4:q | E4:h D4:h | C4:q E4:q D4:q
+  C4:q | D4:h. r:q | C4:q C4:q D4:q E4:q | E4:h D4:h | E4:q E4:q F4:q G4:q | G4:h. r:q | A4:q G4:q F4:q E4:q | E4:h D4:h |
+  C4:q E4:q D4:q D4:q | C4:h. r:q
+reps: 2
+days: 1

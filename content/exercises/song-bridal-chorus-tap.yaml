@@ -1,0 +1,13 @@
+id: song-bridal-chorus-tap
+title: 'Bridal Chorus: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 80
+meter: 4/4
+pickup: q
+countIn: 1
+rhythm: x:q | x:q. x:e x:h | r:q x:q x:q. x:e | x:h. x:q | x:q. x:e x:q. x:e | x:q. x:e x:q. x:e | x:h. x:q | x:q. x:e x:h
+  | r:q x:q x:q. x:e | x:h.
+reps: 2
+days: 1

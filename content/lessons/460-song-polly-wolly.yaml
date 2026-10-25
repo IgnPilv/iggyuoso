@@ -1,0 +1,27 @@
+id: song-polly-wolly
+title: Polly Wolly Doodle
+skills:
+- songs
+steps:
+- explain: |
+    **Polly Wolly Doodle** · Minstrel song, America, 1880
+
+    A cheerful nonsense song: "Oh, I went down south for to see my Sal, sing Polly wolly doodle all the day."
+  staff:
+    notes: C4:e C4:e C4:e C4:e  |  C4:q F4:q
+    key: F
+  sound: C4:e C4:e C4:e C4:e  |  C4:q F4:q  |  A4:e A4:e A4:e A4:e  |  A4:q F4:q
+- explain: |
+    **Before you play.** Four eighths, then a quarter: the same rhythm in almost every bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 2/4 · Tempo: 116
+- exercise: song-polly-wolly-tap
+- exercise: song-polly-wolly-by-ear
+- exercise: song-polly-wolly-rh
+- exercise: song-polly-wolly-lh
+- exercise: song-polly-wolly
+- exercise: song-polly-wolly-arranged
+- exercise: song-polly-wolly-performance
+recap: 'Polly Wolly Doodle: tune, left hand, together. Come back to it any time; songs are for fun.'

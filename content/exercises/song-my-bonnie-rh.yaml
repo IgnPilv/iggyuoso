@@ -1,0 +1,15 @@
+id: song-my-bonnie-rh
+title: 'My Bonnie Lies Over the Ocean: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: G3:q | E4:q. D4:e C4:q | D4:q C4:q A3:q | G3:q E3:h | r:h G3:q | E4:q. D4:e C4:q | C4:q B3:q C4:q | D4:h. | r:h G3:q
+  | E4:q. D4:e C4:q | D4:q C4:q A3:q | G3:q E3:h | r:h G3:q | A3:q D4:q C4:q | B3:q A3:q B3:q | C4:h
+reps: 2
+days: 1
