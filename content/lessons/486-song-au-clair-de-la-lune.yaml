@@ -1,0 +1,26 @@
+id: song-au-clair-de-la-lune
+title: Au clair de la lune
+skills:
+- songs
+steps:
+- explain: |
+    **Au clair de la lune** · French song, 1700s
+
+    "By the light of the moon": Pierrot is asked to lend his pen. The middle part dips below middle C, then the opening comes back: A B A form.
+  staff:
+    notes: C5:q C5:q C5:q D5:q  |  E5:h D5:h
+  sound: C5:q C5:q C5:q D5:q  |  E5:h D5:h  |  C5:q E5:q D5:q D5:q  |  C5:w
+- explain: |
+    **Before you play.** Bars 9 to 12 go down to G below middle C: let the thumb move to that side first.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 92
+- exercise: song-au-clair-de-la-lune-tap
+- exercise: song-au-clair-de-la-lune-by-ear
+- exercise: song-au-clair-de-la-lune-rh
+- exercise: song-au-clair-de-la-lune-lh
+- exercise: song-au-clair-de-la-lune
+- exercise: song-au-clair-de-la-lune-arranged
+- exercise: song-au-clair-de-la-lune-performance
+recap: 'Au clair de la lune: tune, left hand, together. Come back to it any time; songs are for fun.'

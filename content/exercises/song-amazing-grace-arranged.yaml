@@ -1,0 +1,18 @@
+id: song-amazing-grace-arranged
+title: Amazing Grace, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: G
+tempo: 76
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: D4:q | G4:h B4:e G4:e | B4:h A4:q | G4:h E4:q | D4:h D4:q | G4:h B4:e G4:e | B4:h A4:q | D5:h B4:q | D5:h B4:e G4:e
+  | B4:h A4:q | G4:h E4:q | D4:h D4:q | G4:h B4:e G4:e | B4:h A4:q | G4:h
+left: r:q | D3+G3+B3:h. | D3+G3+B3:h. | C3+E3+G3:h. | B2+D3+G3:h. | B2+D3+G3:h. | B2+D3+G3:q. A2+D3+F#3:q. | B2+D3+G3:h. |
+  B2+D3+G3:h. | B2+D3+G3:q. A2+D3+F#3:q. | C3+E3+G3:h. | B2+D3+G3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h
+reps: 3
+days: 2

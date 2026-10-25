@@ -1,0 +1,14 @@
+id: song-frere-jacques-performance
+title: 'Frère Jacques: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 96
+meter: 4/4
+countIn: 1
+right: C5:q D5:q E5:q C5:q | C5:q D5:q E5:q C5:q | E5:q F5:q G5:h | E5:q F5:q G5:h | G5:e A5:e G5:e F5:e E5:q C5:q | G4:e
+  A4:e G4:e F4:e E4:q C4:q | C4:q G4:q C5:h | C5:q G4:q C5:h
+left: C3+G3:w | C3+G3:w | C3+G3:w | C3+G3:w | C3+G3:w | C3+G3:w | C3+G3:h G2+D3:h | C3+G3:h G2+D3:h
+reps: 2
+days: 2

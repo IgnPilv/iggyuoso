@@ -1,0 +1,18 @@
+id: song-we-three-kings-arranged
+title: We Three Kings, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+key: Em
+tempo: 52
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: B4:q A4:e G4:q E4:e | F#4:e G4:e F#4:e E4:q. | B4:q A4:e G4:q E4:e | F#4:e G4:e F#4:e E4:q. | G4:q G4:e A4:q A4:e |
+  B4:q B4:e D5:e C5:e B4:e | A4:e B4:e A4:e G4:q F#4:e | E4:q. r:q.
+left: E3:e B3:e G3:e E3:e B3:e G3:e | B2:e F#3:e D#3:e E3:e B3:e G3:e | E3:e B3:e G3:e E3:e B3:e G3:e | B2:e F#3:e D#3:e E3:e
+  B3:e G3:e | G2:e D3:e B2:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | A2:e E3:e C3:e B2:e F#3:e D#3:e | E3+G3+B3:h.
+pedal: x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:q. x:q. | x:h. | x:q. x:q. | x:h.
+reps: 3
+days: 2

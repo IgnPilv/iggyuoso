@@ -71,7 +71,7 @@ nodes:
   - { id: song-itsy-bitsy-spider, stage: 7, lesson: song-itsy-bitsy-spider, title: "The Itsy Bitsy Spider", requires: [y2-exit], about: "Children's song, America, 1910s", genre: nursery }
   - { id: song-hickory-dickory, stage: 7, lesson: song-hickory-dickory, title: "Hickory Dickory Dock", requires: [y2-exit], about: "English rhyme, 1744", genre: nursery }
   - { id: song-sur-le-pont, stage: 3, lesson: song-sur-le-pont, title: "Sur le pont d'Avignon", requires: [y1-checkpoint-b], about: "French song, 1500s", genre: nursery }
-  - { id: song-au-claire-fontaine, stage: 3, lesson: song-au-claire-fontaine, title: "À la claire fontaine", requires: [y1-checkpoint-b], about: "French song, 1600s, sung in France and Québec", genre: nursery }
+  - { id: song-a-la-claire-fontaine, stage: 3, lesson: song-a-la-claire-fontaine, title: "À la claire fontaine", requires: [y1-checkpoint-b], about: "French song, 1600s, sung in France and Québec", genre: nursery }
   - { id: song-hanschen-klein, stage: 2, lesson: song-hanschen-klein, title: "Hänschen klein", requires: [y1-checkpoint-a], about: "German children's song, 1800s", genre: nursery }
   - { id: song-alle-meine-entchen, stage: 2, lesson: song-alle-meine-entchen, title: "Alle meine Entchen", requires: [y1-checkpoint-a], about: "German children's song, 1800s", genre: nursery }
   - { id: song-kuckuck, stage: 3, lesson: song-kuckuck, title: "Kuckuck, Kuckuck, ruft's aus dem Wald", requires: [y1-checkpoint-b], about: "German spring song, 1835 (words by Hoffmann von Fallersleben)", genre: nursery }
@@ -79,6 +79,11 @@ nodes:
   - { id: song-polly-wolly, stage: 3, lesson: song-polly-wolly, title: "Polly Wolly Doodle", requires: [y1-checkpoint-b], about: "Minstrel song, America, 1880", genre: nursery }
   - { id: song-long-long-ago, stage: 2, lesson: song-long-long-ago, title: "Long, Long Ago", requires: [y1-checkpoint-a], about: "Thomas Haynes Bayly, 1833", genre: nursery }
   - { id: song-the-mulberry-bush, stage: 7, lesson: song-the-mulberry-bush, title: "Here We Go Round the Mulberry Bush", requires: [y2-exit], about: "English singing game, 1840s", genre: nursery }
+  - { id: song-london-bridge, stage: 2, lesson: song-london-bridge, title: "London Bridge Is Falling Down", requires: [y1-checkpoint-a], about: "English singing game, 1700s", genre: nursery }
+  - { id: song-frere-jacques, stage: 2, lesson: song-frere-jacques, title: "Frère Jacques", requires: [y1-checkpoint-a], about: "French round, 1700s", genre: nursery }
+  - { id: song-au-clair-de-la-lune, stage: 2, lesson: song-au-clair-de-la-lune, title: "Au clair de la lune", requires: [y1-checkpoint-a], about: "French song, 1700s", genre: nursery }
+  - { id: song-go-tell-aunt-rhody, stage: 2, lesson: song-go-tell-aunt-rhody, title: "Go Tell Aunt Rhody", requires: [y1-checkpoint-a], about: "American folk song, on a tune by Jean-Jacques Rousseau, 1752", genre: nursery }
+  - { id: song-when-the-saints, stage: 3, lesson: song-when-the-saints, title: "When the Saints Go Marching In", requires: [y1-checkpoint-b], about: "Spiritual, America, early 1900s", genre: hymns }
   - { id: song-kumbaya, stage: 2, lesson: song-kumbaya, title: "Kumbaya", requires: [y1-checkpoint-a], about: "Spiritual, Gullah people of South Carolina and Georgia, 1920s", genre: folk }
   - { id: song-michael-row, stage: 2, lesson: song-michael-row, title: "Michael, Row the Boat Ashore", requires: [y1-checkpoint-a], about: "Spiritual, Sea Islands of Georgia, 1860s", genre: folk }
   - { id: song-scarborough-fair, stage: 5, lesson: song-scarborough-fair, title: "Scarborough Fair", requires: [y2-checkpoint-a, ks-d-minor], about: "English ballad, 1600s and older", genre: folk }
@@ -100,3 +105,17 @@ nodes:
   - { id: song-turkish-march, stage: 7, lesson: song-turkish-march, title: "Turkish March", requires: [y2-exit], about: "Wolfgang Amadeus Mozart, Sonata K. 331, 1783", genre: classical }
   - { id: song-entertainer, stage: 9, lesson: song-entertainer, title: "The Entertainer", requires: [m8-arpeggios], about: "Scott Joplin, 1902", genre: ragtime }
   - { id: song-fur-elise-song, stage: 6, lesson: song-fur-elise-song, title: "Für Elise", requires: [y2-checkpoint-b], about: "Ludwig van Beethoven, 1810", genre: classical }
+  - { id: song-moldau, stage: 7, lesson: song-moldau, title: "The Moldau", requires: [y2-exit, ks-e-minor], about: "Bedřich Smetana, \"Má vlast\", 1874", genre: classical }
+  - { id: song-sonata-k545, stage: 8, lesson: song-sonata-k545, title: "Sonata facile", requires: [m7-flat-keys], about: "Wolfgang Amadeus Mozart, Sonata in C, K. 545, 1788", genre: classical }
+  - { id: song-bach-prelude-c, stage: 6, lesson: song-bach-prelude-c, title: "Prelude in C", requires: [y2-checkpoint-b], about: "Johann Sebastian Bach, The Well-Tempered Clavier, Book 1, 1722", genre: classical }
+  - { id: song-amazing-grace, stage: 3, lesson: song-amazing-grace, title: "Amazing Grace", requires: [y1-checkpoint-b], about: "Hymn tune \"New Britain\", America, 1829; words by John Newton, 1779", genre: hymns }
+  - { id: song-old-hundredth, stage: 3, lesson: song-old-hundredth, title: "Old Hundredth", requires: [y1-checkpoint-b], about: "Hymn tune by Louis Bourgeois, Geneva, 1551", genre: hymns }
+  - { id: song-first-noel, stage: 4, lesson: song-first-noel, title: "The First Noel", requires: [y1-exit], about: "English carol, printed 1823", genre: carols }
+  - { id: song-angels-we-have-heard, stage: 3, lesson: song-angels-we-have-heard, title: "Angels We Have Heard on High", requires: [y1-checkpoint-b], about: "French carol \"Les Anges dans nos campagnes\", 1700s", genre: carols }
+  - { id: song-we-three-kings, stage: 7, lesson: song-we-three-kings, title: "We Three Kings", requires: [y2-exit, ks-e-minor], about: "John Henry Hopkins Jr., 1857", genre: carols }
+  - { id: song-ding-dong-merrily, stage: 4, lesson: song-ding-dong-merrily, title: "Ding Dong Merrily on High", requires: [y1-exit], about: "French dance tune \"Branle de l'Official\", 1589", genre: carols }
+  - { id: song-good-king-wenceslas, stage: 2, lesson: song-good-king-wenceslas, title: "Good King Wenceslas", requires: [y1-checkpoint-a], about: "Spring carol \"Tempus adest floridum\", Piae Cantiones, 1582", genre: carols }
+  - { id: song-god-save-the-king, stage: 3, lesson: song-god-save-the-king, title: "God Save the King", requires: [y1-checkpoint-b], about: "British anthem, printed 1745", genre: anthems }
+  - { id: song-star-spangled-banner, stage: 5, lesson: song-star-spangled-banner, title: "The Star-Spangled Banner", requires: [y2-checkpoint-a], about: "United States anthem, tune \"To Anacreon in Heaven\" by John Stafford Smith, 1770s", genre: anthems }
+  - { id: song-irish-washerwoman, stage: 7, lesson: song-irish-washerwoman, title: "The Irish Washerwoman", requires: [y2-exit, ks-g], about: "Irish jig, 1700s", genre: dances }
+  - { id: song-swallowtail-jig, stage: 7, lesson: song-swallowtail-jig, title: "Swallowtail Jig", requires: [y2-exit, ks-e-minor], about: "Irish jig, 1800s", genre: dances }

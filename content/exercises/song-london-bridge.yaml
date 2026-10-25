@@ -1,0 +1,15 @@
+id: song-london-bridge
+title: London Bridge Is Falling Down
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q. A4:e G4:q F4:q | E4:q F4:q G4:h | D4:q E4:q F4:h | E4:q F4:q G4:h | G4:q. A4:e G4:q F4:q | E4:q F4:q G4:h | D4:h
+  G4:h | E4:q C4:h.
+left: C3:w | C3:w | G2:w | C3:w | C3:w | C3:w | G2:w | C3:w
+reps: 3
+days: 2

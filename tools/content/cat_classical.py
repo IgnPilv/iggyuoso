@@ -89,3 +89,33 @@ tune('fur-elise-song', 'Für Elise', 'Ludwig van Beethoven, 1810', 'Am', '3/8', 
      left='r:e | r:q. | A2:s E3 A3 r:s r:e | E2:s E3 G#3 r:s r:e | A2:s E3 A3 r:s r:e | r:q. | A2:s E3 A3 r:s r:e | E2:s E3 G#3 r:s r:e | A2:s E3 A3 r:s',
      story='Beethoven\'s little piece "for Elise" was found after his death; nobody is sure who Elise was. Here is the famous opening part, with Beethoven\'s own rippling left hand in the fuller arrangement.',
      tips='The E–D♯ wobble is light and even. In the fuller arrangement the hands take turns: the left hand\'s three notes, then the right hand\'s.')
+
+tune('moldau', 'The Moldau', 'Bedřich Smetana, "Má vlast", 1874', 'Em', '6/8', 50,
+     'B3:e | E4:q F#:e G:q A:e | B:q. B:q. | C5:q. E5:q C5:e | B4:q. B:q. | A:q. C5:q A4:e | G:q. G:q. | F#:q F#:e G:q F#:e | E:q. r:q',
+     '- | Em | Em | Am | Em | Am | Em | B7 | Em', 7, G, pickup='e',
+     story='Smetana\'s river music: the Vltava (Moldau in German) flows from two springs through Bohemia to Prague. The tune is the river itself, broad and singing.',
+     tips='E minor: F♯. Two big beats in a bar; let each long note flow into the next.')
+
+tune('sonata-k545', 'Sonata facile', 'Wolfgang Amadeus Mozart, Sonata in C, K. 545, 1788', 'C', '4/4', 84,
+     'C5:h E5:q G | B4:q. C5:s D C5:h | A5:h G5:q C6 | G5:q F:e G E:h | A4:s B C5 D E F G A G F E D C B4 A G | G4:s A B C5 D E F G F E D C B4 A G F | F4:s G A B C5 D E F E D C B4 A G F E | E4:s F G A B C5 D E D C B4 A G F E D | C4:w',
+     'C | G7 C | F C | G7 C | F | C | Dm | G | C', 8, G, styles=('block', 'alberti'),
+     story='Mozart called it "a little sonata for beginners", but its scales need real evenness. The left hand is the Alberti bass: low, high, middle, high.',
+     tips='The scale bars run in sixteenths: practise them slowly on the tempo ladder, thumb passing smoothly under.')
+
+def _prelude():
+    # Bach's Prelude in C: each bar one chord, broken the same way twice (two notes in the left hand, three in the right, twice).
+    bars = [('C', 'C4', 'E4', 'G4 C5 E5'), ('Dm7', 'C4', 'D4', 'A4 D5 F5'), ('G7', 'B3', 'D4', 'G4 D5 F5'), ('C', 'C4', 'E4', 'G4 C5 E5'),
+            ('Am', 'C4', 'E4', 'A4 E5 A5'), ('D7', 'C4', 'D4', 'F#4 A4 D5'), ('G', 'B3', 'D4', 'G4 D5 G5'), ('C', 'B3', 'C4', 'E4 G4 C5'),
+            ('Am7', 'A3', 'C4', 'E4 G4 C5'), ('D7', 'D3', 'A3', 'D4 F#4 C5'), ('G', 'G3', 'B3', 'D4 G4 B4'), ('G7', 'G3', 'Bb3', 'E4 G4 C#5'),
+            ('Dm', 'F3', 'A3', 'D4 A4 D5'), ('Dm', 'F3', 'Ab3', 'D4 F4 B4'), ('C', 'E3', 'G3', 'C4 G4 C5'), ('F', 'E3', 'F3', 'A3 C4 F4'),
+            ('Dm7', 'D3', 'F3', 'A3 C4 F4'), ('G7', 'G2', 'D3', 'G3 B3 F4'), ('C', 'C3', 'E3', 'G3 C4 E4')]
+    right = ' | '.join(' '.join(f'r:e {a}:s {b}:s {c}:s {a}:s {b}:s {c}:s'.replace('r:e', 'r:e') for _ in range(2)).replace(' ', ' ')
+                       for _, _, _, t in bars for a, b, c in [t.split()])
+    left = ' | '.join(f'{lo}+{hi}:h {lo}+{hi}:h' for _, lo, hi, _ in bars)
+    return right + ' | E4+G4+C5:w', left + ' | C3+C4:w', ' | '.join(c for c, *_ in bars) + ' | C'
+
+_r, _l, _c = _prelude()
+tune('bach-prelude-c', 'Prelude in C', 'Johann Sebastian Bach, The Well-Tempered Clavier, Book 1, 1722', 'C', '4/4', 60,
+     _r, _c, 6, G, left=_l, styles=('root', 'block'), pedal=False,
+     story='The first piece of Bach\'s "Well-Tempered Clavier": no tune at all, just one chord per bar, broken the same way. The music is in how the chords move. Gounod later sang an "Ave Maria" over it.',
+     tips='In the fuller arrangement the left hand holds the two low notes and the right hand ripples the three high ones, twice a bar. Listen to which note changes from one chord to the next.')

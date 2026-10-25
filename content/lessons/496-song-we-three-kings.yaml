@@ -1,0 +1,25 @@
+id: song-we-three-kings
+title: We Three Kings
+skills:
+- songs
+steps:
+- explain: |
+    **We Three Kings** · John Henry Hopkins Jr., 1857
+
+    Written for a Christmas pageant in New York in 1857. The swaying 6/8 is the camels walking.
+  staff:
+    notes: B4:q A4:e G4:q E4:e  |  F#4:e G4:e F#4:e E4:q.
+    key: Em
+  sound: B4:q A4:e G4:q E4:e  |  F#4:e G4:e F#4:e E4:q.  |  B4:q A4:e G4:q E4:e  |  F#4:e G4:e F#4:e E4:q.
+- explain: |
+    **Before you play.** E minor: F♯. Two big beats in each bar, a long-short swing.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 52
+- exercise: song-we-three-kings-rh
+- exercise: song-we-three-kings-lh
+- exercise: song-we-three-kings
+- exercise: song-we-three-kings-arranged
+- exercise: song-we-three-kings-performance
+recap: 'We Three Kings: tune, left hand, together. Come back to it any time; songs are for fun.'

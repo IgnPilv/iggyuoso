@@ -1,0 +1,15 @@
+id: song-when-the-saints-performance
+title: 'When the Saints Go Marching In: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 104
+meter: 4/4
+countIn: 1
+right: r:q C4:q E4:q F4:q | G4:w | r:q C5:q E5:q F5:q | G5:w | r:q C6:q E6:q F6:q | G6:h E6:h | C6:h E6:h | D6:w | r:q E6:q
+  E6:q D6:q | C6:h. C6:q | E6:h G6:q G6:q | F6:w | r:q E6:q F6:q G6:q | E6:h C6:h | D6:h. D6:q | C6:w
+left: C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:w |
+  C3+E3+G3:w | C3+E3+G3:w | C3+F3+A3:w | C3+E3+G3:w | C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:w
+reps: 2
+days: 2

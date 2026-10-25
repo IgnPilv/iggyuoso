@@ -59,7 +59,7 @@ tune('sur-le-pont', 'Sur le pont d\'Avignon', 'French song, 1500s', 'C', '2/4', 
      story='Children have danced in a ring to this since the 1500s. The bridge in Avignon (Pont Saint-Bénézet) is real, and only four of its arches are still standing.',
      tips='Two beats a bar, quick and light. The eighth notes come in pairs: "pont d\'A-".')
 
-tune('au-claire-fontaine', 'À la claire fontaine', 'French song, 1600s, sung in France and Québec', 'F', '3/4', 92,
+tune('a-la-claire-fontaine', 'À la claire fontaine', 'French song, 1600s, sung in France and Québec', 'F', '3/4', 92,
      'F4:h F:q | A:h A:q | A:q G A | F:h. | F:h F:q | A:h G:q | A:q G F | A:h. | A:h A:q | G:h A:q | C5:q A4 F | G:h. | F:h F:q | A:h G:q | A:q G F | F:h.',
      'F | F | C F | F | F | F C | F C | F | F | C F | F | C | F | F C | F C | F', 3, G,
      story='"At the clear fountain": a French song that sailed to Canada in the 1600s and became almost a second anthem in Québec.',
@@ -106,3 +106,34 @@ tune('the-mulberry-bush', 'Here We Go Round the Mulberry Bush', 'English singing
      'C | C | G | G | C | C | G | C', 7, G,
      story='Children walk in a ring and act out the verses: "this is the way we wash our clothes, so early Monday morning".',
      tips='Two big beats a bar. Bar 4 leaps down to G below middle C.')
+
+# Five songs that were first met inside the early "Songbook" lessons, now each a song of its own.
+tune('london-bridge', 'London Bridge Is Falling Down', 'English singing game, 1700s', 'C', '4/4', 100,
+     'G4:q. A:e G:q F | E F G:h | D:q E F:h | E:q F G:h | G:q. A:e G:q F | E F G:h | D:h G | E:q C:h.',
+     'C | C | G | C | C | C | G | C', 2, G,
+     story='Two children make an arch with their arms, and the others walk under it until the song stops and the "bridge" falls on someone.',
+     tips='The dotted quarter and eighth in bars 1 and 5 are "long-short". C position, with G as the top note.')
+
+tune('frere-jacques', 'Frère Jacques', 'French round, 1700s', 'C', '4/4', 96,
+     'C4:q D E C | C D E C | E F G:h | E:q F G:h | G:e A G F E:q C | G:e A G F E:q C | C G3 C4:h | C:q G3 C4:h',
+     'C | C | C | C | C | C | C G | C G', 2, G,
+     story='"Brother John, are you sleeping?" A round: a second player can start at the beginning when the first reaches bar 3, and the parts fit together all the way.',
+     tips='Bars 7 and 8 drop to the G below middle C: a stretch of the thumb, or a small move of the hand.')
+
+tune('au-clair-de-la-lune', 'Au clair de la lune', 'French song, 1700s', 'C', '4/4', 92,
+     'C4:q C C D | E:h D:h | C:q E D D | C:w | C:q C C D | E:h D:h | C:q E D D | C:w | D:q D D D | A3:h A:h | D4:q C B3 A | G:w | C4:q C C D | E:h D:h | C:q E D D | C:w',
+     'C | C G | C G | C | C | C G | C G | C | G | Dm | G | G | C | C G | C G | C', 2, G,
+     story='"By the light of the moon": Pierrot is asked to lend his pen. The middle part dips below middle C, then the opening comes back: A B A form.',
+     tips='Bars 9 to 12 go down to G below middle C: let the thumb move to that side first.')
+
+tune('go-tell-aunt-rhody', 'Go Tell Aunt Rhody', 'American folk song, on a tune by Jean-Jacques Rousseau, 1752', 'C', '4/4', 96,
+     'E4:h E:q D | C:h C | D:q D F E | D:h C:h | G:h G:q F | E:h E | D:q C D E | C:w',
+     'C | C | G | G C | C | C | G | C', 2, G,
+     story='The tune comes from an opera by the philosopher Jean-Jacques Rousseau, 1752. In America it became a song about an old grey goose.',
+     tips='Five notes, C to G: one finger for each, no moving.')
+
+tune('when-the-saints', 'When the Saints Go Marching In', 'Spiritual, America, early 1900s', 'C', '4/4', 104,
+     'r:q C4 E F | G:w | r:q C E F | G:w | r:q C E F | G:h E:h | C:h E:h | D:w | r:q E E D | C:h. C:q | E:h G:q G | F:w | r:q E F G | E:h C:h | D:h. D:q | C:w',
+     'C | C | C | C | C | C | C | G | C | C | C7 | F | C | C | G | C', 3, 'hymns',
+     story='A spiritual that New Orleans jazz bands made their own, played slowly on the way to a funeral and fast on the way back.',
+     tips='Each line starts after a rest on beat 1: count "(one) two three four".')

@@ -1,0 +1,14 @@
+id: song-old-hundredth-lh
+title: 'Old Hundredth: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 80
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: G2:w | C3:h D3:h | G2:w | G2:w | C3:h D3:h | G2:w | A2:h D3:h | G2:w | G2:h A2:h | D3:h G2:h
+reps: 2
+days: 1

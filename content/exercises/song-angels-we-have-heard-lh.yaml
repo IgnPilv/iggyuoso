@@ -1,0 +1,15 @@
+id: song-angels-we-have-heard-lh
+title: 'Angels We Have Heard on High: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: F2:w | C3:h F2:h | F2:w | C3:h F2:h | F2:w | C3:h F2:h | F2:w | C3:h F2:h | F2:w | Bb2:w | D3:w | C3:w | F2:w | C3:w
+  | F2:w
+reps: 2
+days: 1

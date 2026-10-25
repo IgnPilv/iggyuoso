@@ -1,0 +1,14 @@
+id: song-when-the-saints-rh
+title: 'When the Saints Go Marching In: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:q C4:q E4:q F4:q | G4:w | r:q C5:q E5:q F5:q | G5:w | r:q C6:q E6:q F6:q | G6:h E6:h | C6:h E6:h | D6:w | r:q E6:q
+  E6:q D6:q | C6:h. C6:q | E6:h G6:q G6:q | F6:w | r:q E6:q F6:q G6:q | E6:h C6:h | D6:h. D6:q | C6:w
+reps: 2
+days: 1

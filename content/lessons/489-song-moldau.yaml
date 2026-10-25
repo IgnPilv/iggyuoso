@@ -1,0 +1,25 @@
+id: song-moldau
+title: The Moldau
+skills:
+- songs
+steps:
+- explain: |
+    **The Moldau** · Bedřich Smetana, "Má vlast", 1874
+
+    Smetana's river music: the Vltava (Moldau in German) flows from two springs through Bohemia to Prague. The tune is the river itself, broad and singing.
+  staff:
+    notes: B3:e  |  E4:q F#4:e G4:q A4:e
+    key: Em
+  sound: B3:e  |  E4:q F#4:e G4:q A4:e  |  B4:q. B4:q.  |  C5:q. E5:q C5:e
+- explain: |
+    **Before you play.** E minor: F♯. Two big beats in a bar; let each long note flow into the next.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 50
+- exercise: song-moldau-rh
+- exercise: song-moldau-lh
+- exercise: song-moldau
+- exercise: song-moldau-arranged
+- exercise: song-moldau-performance
+recap: 'The Moldau: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,24 @@
+id: song-sonata-k545
+title: Sonata facile
+skills:
+- songs
+steps:
+- explain: |
+    **Sonata facile** · Wolfgang Amadeus Mozart, Sonata in C, K. 545, 1788
+
+    Mozart called it "a little sonata for beginners", but its scales need real evenness. The left hand is the Alberti bass: low, high, middle, high.
+  staff:
+    notes: C5:h E5:q G5:q  |  B4:q. C5:s D5:s C5:h
+  sound: C5:h E5:q G5:q  |  B4:q. C5:s D5:s C5:h  |  A5:h G5:q C6:q  |  G5:q F5:e G5:e E5:h
+- explain: |
+    **Before you play.** The scale bars run in sixteenths: practise them slowly on the tempo ladder, thumb passing smoothly under.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 84
+- exercise: song-sonata-k545-rh
+- exercise: song-sonata-k545-lh
+- exercise: song-sonata-k545
+- exercise: song-sonata-k545-arranged
+- exercise: song-sonata-k545-performance
+recap: 'Sonata facile: tune, left hand, together. Come back to it any time; songs are for fun.'

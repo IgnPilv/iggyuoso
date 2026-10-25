@@ -1,0 +1,15 @@
+id: song-frere-jacques
+title: Frère Jacques
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:q D5:q E5:q C5:q | C5:q D5:q E5:q C5:q | E5:q F5:q G5:h | E5:q F5:q G5:h | G5:e A5:e G5:e F5:e E5:q C5:q | G4:e
+  A4:e G4:e F4:e E4:q C4:q | C4:q G4:q C5:h | C5:q G4:q C5:h
+left: C3:w | C3:w | C3:w | C3:w | C3:w | C3:w | C3:h G2:h | C3:h G2:h
+reps: 3
+days: 2

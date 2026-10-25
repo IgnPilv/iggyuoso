@@ -1,0 +1,11 @@
+id: song-london-bridge-tap
+title: 'London Bridge Is Falling Down: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 100
+meter: 4/4
+countIn: 1
+rhythm: x:q. x:e x:q x:q | x:q x:q x:h | x:q x:q x:h | x:q x:q x:h | x:q. x:e x:q x:q | x:q x:q x:h | x:h x:h | x:q x:h.
+reps: 2
+days: 1

@@ -1,0 +1,20 @@
+id: song-swallowtail-jig
+title: Swallowtail Jig
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Em
+tempo: 52
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:e A4:e G4:e | F#4:e D4:e D4:e A4:e D4:e D4:e | D5:e C#5:e D5:e A4:e
+  G4:e F#4:e | G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:q C5:e | D5:e C#5:e D5:e A4:e G4:e F#4:e | G4:e E4:e E4:e
+  E4:q. | G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:e A4:e G4:e | F#4:e D4:e D4:e A4:e D4:e D4:e | D5:e C#5:e D5:e
+  A4:e G4:e F#4:e | G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:q C5:e | D5:e C#5:e D5:e A4:e G4:e F#4:e | G4:e E4:e
+  E4:e E4:q.
+left: E3:h. | E3:h. | D3:h. | D3:h. | E3:h. | E3:h. | D3:h. | E3:h. | E3:h. | E3:h. | D3:h. | D3:h. | E3:h. | E3:h. | D3:h.
+  | E3:h.
+reps: 3
+days: 2
