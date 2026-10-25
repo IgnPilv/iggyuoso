@@ -20,6 +20,11 @@ const SILENT: Record<string, { play: number; rest: number } | undefined> = {
 const DEFAULTS = { tempo: 80, beats: 4, sub: 1 as 1 | 2, silent: 'off' };
 const kept = { ...DEFAULTS };
 
+/** Opens the Timing mirror at this tempo next time (the Play report hands over the tempo it found). */
+export function presetPulse(tempo: number) {
+  kept.tempo = Math.max(30, Math.min(240, Math.round(tempo)));
+}
+
 /** Dots kept on the mirror per hand, and presses on the timeline. */
 const DOTS = 12;
 /** Drawn at the size it shows (so text stays readable on a phone), 600 before it is on the page. */
@@ -215,7 +220,7 @@ export function mountPulse(root: HTMLElement, cal: Calibration, hooks: PulseHook
       h('label', {}, 'Beats in a bar ', beats), h('label', {}, 'Play on ', sub), h('label', {}, 'Silent bars ', silent)),
     h('div', { class: 'controls' }, startBtn, stopBtn, clearBtn, lights, status),
     mirror, line, readout,
-    h('p', { class: 'small' }, 'Nothing here is saved. Timing from scored exercises is on your Profile. If every press shows late, set Settings → Timing. Scales and arpeggios, note by note: ', h('a', { href: '#/scales' }, 'Scale gym'), '.'),
+    h('p', { class: 'small' }, 'Nothing here is saved. Timing from scored exercises is on your Profile. If every press shows late, set Settings → Timing. Scales and arpeggios, note by note: ', h('a', { href: '#/scales' }, 'Scale gym'), '. Anything, with no click: ', h('a', { href: '#/report' }, 'Play report'), '.'),
   ));
 
   return () => { run?.stop(); offPorts(); };

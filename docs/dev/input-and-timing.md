@@ -182,3 +182,40 @@ how far the tune moves from the last note found (`moveSize`: step 1–2 half ste
 try, 0.6, 0.3, then 0.15; shown 0. Rhythm is not judged. `ui/byEarView.ts` plays the tune with its
 rhythm on the sampled piano (keys dark until it is found), writes the notes found on the staff, and
 saves nothing; settings, the last four tunes (not repeated) and best scores last until reload.
+
+## The Play report (`#/report`)
+Play anything, with no click and nothing picked first, and get a report on it. `engine/playReport.ts`
+(tested in `tests/playReport.test.ts`) works on the notes of a take (written MIDI, on and off times,
+velocity):
+- `events` groups notes struck within 60 ms (`CHORD_MS`) into one event, timed from the first.
+- `unitOf` finds the grid step: the shortest gap that at least an eighth of the gaps (two at least)
+  sit within 20% of, then fitted by least squares to every gap that is close to a whole number of
+  steps (1 to 8). The beat is that step doubled until it is at least 430 ms (140 a minute at most).
+- `placeOnGrid` walks the events left to right and gives each gap a number of steps (`stepsOf`:
+  rounded leaning short, so a hesitation reads as held back; under 0.7 of a step it is a half or a
+  quarter step; a dotted note followed by a short one gets its half step), following the recent
+  tempo (middle step of the last six gaps, kept within −25% / +33% of the whole take's step). A gap
+  over five steps and 1.5 s is a **stop**. Then each gap is set against the beat around it (middle
+  step of up to six gaps either side): longer by more than 20% of a step (45 to 120 ms, plus a little
+  per extra step) is **held back**, shorter by as much is **hurried**. So a gentle drift is never
+  blamed on every note, while a wait or a rushed note stands out.
+- The tempo curve is the local tempo at each note; the first third against the last third says
+  sped up or slowed down (at least 4 a minute and 6%).
+- Each hand (split at middle C) gets how often it struck and its spread (root mean square of its
+  events' deviations, the worst tenth left out, since a single hesitation is listed on its own);
+  events with both hands give how far apart they land.
+- `detectKey`: Krumhansl–Kessler profiles against a pitch-class weight (time sounding up to 2 s plus
+  a little per note; the lowest note of the first and last events counts extra); the runner-up is
+  named when it is within 0.05.
+- `chordsHeard` writes the two hands as lines on the grid (a note lasts to its release or its hand's
+  next note) and names the chords with the sheet's own `chordSymbols`, with a Roman numeral in the
+  key found (`numeral`; lower case for minor and diminished).
+- Loudness from velocities (10th and 90th percentile as pp to ff, and each hand's middle level),
+  only when velocities vary; `reportTips` gives up to three tips (stops, tempo drift, a note held back
+  before more than once, hands apart, left hand louder, mostly hurried) or one word of praise.
+
+`ui/playReportView.ts` listens all the time: the first key starts a take, five seconds with no key
+down (or Finish) ends it, and the next key starts a new one. It shows the report, a tempo line and a
+note-by-note chart (held back up, hurried down, by hand; stops as dashed lines), plays the take back
+on the sampled piano, and hands its starting tempo to the Timing mirror (`presetPulse`). Nothing is
+saved.

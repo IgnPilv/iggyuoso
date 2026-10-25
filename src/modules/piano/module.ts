@@ -15,6 +15,7 @@ import { byEarView } from './ui/byEarView';
 import { mySongsView } from './ui/mySongsView';
 import { noteRushView } from './ui/noteRush';
 import { pianoProfile } from './ui/profileView';
+import { playReportView } from './ui/playReportView';
 import { pulseView } from './ui/pulseView';
 import { sketchbookView } from './ui/sketchbookView';
 import { todayView } from './ui/todayView';
@@ -71,6 +72,7 @@ export const piano: Module = {
     jam: jamView,
     scales: scaleGymView,
     byear: byEarView,
+    report: playReportView,
   },
   topLevel: true,
   nav: [

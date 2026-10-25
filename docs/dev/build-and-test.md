@@ -21,7 +21,7 @@ computer. Without a keyboard, use `#/demo` or Settings → Computer keyboard.
 `tests/*.test.ts`, run by vitest in Node (no browser). They cover the parts that decide things:
 
 - scoring: `timed`, `untimed`, `pedal`, `dynamics`, `drills`, `improvise`;
-- the session clock and practice: `timedSession`, `practice`, `pulse` (the Timing mirror), `scaleGym` (with free tempo and recognising), `animate`, `jam` (the Jam room), `byEar` (Play by ear);
+- the session clock and practice: `timedSession`, `practice`, `pulse` (the Timing mirror), `scaleGym` (with free tempo and recognising), `animate`, `jam` (the Jam room), `byEar` (Play by ear), `playReport` (the Play report);
 - music: `notes`, `noteStrings`, `theory`, `chords`, `fingering`, `handPlacement`, `chordNames`, `chordFinder`,
   `transcribe`, `octaves` (middle C = C4 everywhere), `midi` and `computerKeys` decoding,
   `calibration`, `keys`;

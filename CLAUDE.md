@@ -888,4 +888,18 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   third of the window, so two hands and two octaves stay in view. Bug: `animate` (now
   `ui/animate.ts`) kept asking for frames when its drawing stopped it, so a run that ended on its own
   kept running; it now stops for good, and changing any setting fully resets the page. Tested.
-
+- 2026-10-25: Play report (hourly idea 7; merged directly under Ignas's "for now implement all"; after his
+  Scale gym ask for modes that pick up your own tempo and say where you were late or hurried, here
+  for anything played). `#/report`, linked from the Profile's Timing card, the Timing mirror, the Scale
+  gym and the Sketchbook. No click and no settings: the page always listens, the first key starts a
+  take, 5 s with no key down (or Finish) ends it. `engine/playReport.ts` (tested) groups notes within
+  60 ms, finds the grid step (the shortest common gap, fitted to the gaps that are whole steps; the
+  beat is it doubled to at least 430 ms), follows a drifting tempo, reads short notes as half or
+  quarter steps and dotted rhythms as written, and sets each gap against the middle step of up to six
+  gaps either side: over 20% of a step (45 to 120 ms) longer = held back, shorter = hurried; a gap over
+  five steps and 1.5 s = a stop. Report: tempo and its curve (sped up / slowed down: first third
+  against last, ≥ 4 a minute and 6%), every note charted, the biggest held-back and hurried notes,
+  each hand's spread (worst tenth left out) and which hand lands first, the key (Krumhansl–Kessler,
+  runner-up when close), the chords (the sheet's `chordSymbols`) with Roman numerals, loudness when
+  velocities vary, up to three tips, Play it back, and "Timing mirror at N". Nothing is saved. Demo
+  scene "Play report".

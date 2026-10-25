@@ -450,7 +450,7 @@ export function mountScaleGym(root: HTMLElement, cal: Calibration, hooks: GymHoo
     h('div', { class: 'controls' }, modeSel, perSel, tempoLabel),
     h('div', { class: 'controls' }, listenBtn, startBtn, stopBtn, status),
     stage, chart, result,
-    h('p', { class: 'small' }, 'Nothing here is saved. One bar of count-in, then the scale goes up and back down. Check your pulse alone in the ', h('a', { href: '#/pulse' }, 'Timing mirror'), '.'),
+    h('p', { class: 'small' }, 'Nothing here is saved. One bar of count-in, then the scale goes up and back down. Check your pulse alone in the ', h('a', { href: '#/pulse' }, 'Timing mirror'), ', or play a whole piece for a ', h('a', { href: '#/report' }, 'Play report'), '.'),
   ));
 
   return () => { run?.stop(); stopListen?.(); offPorts(); };
