@@ -121,7 +121,8 @@ export const sketchbookView: View = (root, id?: string) => {
     h('div', { class: 'controls' }, recBtn, stopBtn, status),
     h('div', { class: 'stage' }, kb.el),
     take,
-  ), h('section', { class: 'card' }, list));
+  ), h('section', { class: 'card' }, list),
+  h('p', { class: 'small' }, 'Warm up your pulse first in the ', h('a', { href: '#/pulse' }, 'Timing mirror'), '.'));
 
   return () => { run?.stop(); stopPlay?.(); offHeld(); };
 };

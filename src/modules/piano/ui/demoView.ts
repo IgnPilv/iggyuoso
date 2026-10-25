@@ -25,6 +25,7 @@ import { calibrateView, keyMap, lessonView, testerView } from './views';
 import { sketchbookView } from './sketchbookView';
 import { chordFinderView } from './chordFinderView';
 import { toDevice } from '../calibration';
+import { mountPulse } from './pulseView';
 import { mySongsView } from './mySongsView';
 import { noteRushView } from './noteRush';
 import { writeMidiFile } from '../music/midiFile';
@@ -956,6 +957,38 @@ function scenes(): Scene[] {
       timers.push(window.setTimeout(() => press(box, 'G♯'), end + 5500));
       timers.push(window.setTimeout(next, end + 8500));
       return () => { timers.forEach(clearTimeout); cleanup?.(); };
+    },
+  });
+  out.push({
+    title: 'Timing mirror',
+    caption: 'A metronome that listens (#/pulse, linked from the Profile and the Sketchbook). Play any key on the click and each press lands as a dot: on the beat in the middle, early to the left, late to the right, one row per hand (right hand from middle C up, left below). A timeline shows the last presses, and each hand gets its lean (on the beat, 20 ms late) and how steady it is. Tap tempo sets the speed, presses can go on beats or half beats, and silent bars drop the click out (hollow dots) to show whether the pulse is yours or only the click\'s. Nothing is saved. Here the right hand is a little late, the left hand lands early, and in the silent bars the right hand pushes ahead.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (m: number) => m + DEMO_CALIBRATION.offset;
+      // Small made-up wobble that repeats, so the scene looks the same every time.
+      const wobble = [4, -9, 12, -3, 7, -12, 2, 9, -6, 0, 11, -8];
+      const cleanup = mountPulse(box, DEMO_CALIBRATION, {
+        onStart: (pulse) => {
+          const bars = 8;
+          for (let beat = 0; beat < bars * pulse.opts.beatsPerBar; beat++) {
+            const silent = pulse.isSilent(Math.floor(beat / pulse.opts.beatsPerBar));
+            const w = wobble[beat % wobble.length];
+            const right = pulse.t0 + beat * pulse.beatMs + (silent ? -45 - beat % 3 * 8 : 22) + w;
+            p.playNote(dev(beat % 4 === 0 ? 72 : 67), right - performance.now(), pulse.beatMs * 0.5);
+            if (beat % 2 === 0) p.playNote(dev(48), pulse.t0 + beat * pulse.beatMs - 38 + w * 2 - performance.now(), pulse.beatMs * 0.8);
+          }
+          timers.push(window.setTimeout(() => press(box, 'Stop'), pulse.t0 + bars * pulse.opts.beatsPerBar * pulse.beatMs + 300 - performance.now()));
+          timers.push(window.setTimeout(next, pulse.t0 + bars * pulse.opts.beatsPerBar * pulse.beatMs + 4500 - performance.now()));
+        },
+      });
+      const silentSel = box.querySelector<HTMLSelectElement>('select[aria-label="silent bars"]');
+      const tempoBox = box.querySelector<HTMLInputElement>('input[aria-label="tempo"]');
+      timers.push(window.setTimeout(() => {
+        if (tempoBox) { tempoBox.value = '96'; tempoBox.dispatchEvent(new Event('change')); }
+        if (silentSel) { silentSel.value = '2-2'; silentSel.dispatchEvent(new Event('change')); }
+      }, 600));
+      timers.push(window.setTimeout(() => press(box, 'Start'), 1600));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });
   out.push({

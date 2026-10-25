@@ -1659,3 +1659,26 @@ body.focus-page main { max-width: none; padding: 0; }
 .chord-picks .chip-button { min-width: 2.6em; }
 .chip-button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 .chord-suggest:empty, .chord-others:empty { display: none; }
+/* Timing mirror (#/pulse) */
+.pulse-lights { display: inline-flex; gap: var(--space-2); align-items: center; }
+.pulse-light { width: 14px; height: 14px; border-radius: 50%; background: var(--surface-sunken); border: 1px solid var(--line-strong); transition: background 60ms; }
+.pulse-light.down { width: 18px; height: 18px; }
+.pulse-light.on { background: var(--target); border-color: var(--target); }
+.pulse-light.on.silent { background: transparent; border-color: var(--target); }
+.pulse-mirror, .pulse-line { margin-top: var(--space-4); padding: var(--space-2); border-radius: var(--radius-md); background: var(--surface-sunken); }
+.pulse-svg { display: block; width: 100%; height: auto; }
+.pulse-zone { fill: var(--ok); opacity: 0.14; }
+.pulse-centre { stroke: var(--ok); stroke-width: 2; }
+.pulse-row { stroke: var(--line-strong); stroke-width: 1; }
+.pulse-axis, .pulse-label { fill: var(--muted); font-size: 12px; font-family: var(--font-body); }
+.pulse-label { font-weight: 600; }
+.pulse-dot.right { fill: var(--rh); }
+.pulse-dot.left { fill: var(--lh); }
+.pulse-dot.silent { fill: transparent; stroke-width: 2.5; }
+.pulse-dot.right.silent { stroke: var(--rh); }
+.pulse-dot.left.silent { stroke: var(--lh); }
+.pulse-trace { fill: none; stroke-width: 1.5; opacity: 0.6; }
+.pulse-trace.right { stroke: var(--rh); }
+.pulse-trace.left { stroke: var(--lh); }
+.pulse-quiet { fill: var(--muted); opacity: 0.08; }
+.pulse-readout { margin-top: var(--space-4); }

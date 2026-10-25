@@ -27,7 +27,7 @@ function setComputerKeys(on: boolean) {
 const useComputerKeys = () =>
   h('button', { class: 'secondary', onclick: () => setComputerKeys(true) }, 'Use the computer keyboard instead');
 
-function midiBanner(): HTMLElement | null {
+export function midiBanner(): HTMLElement | null {
   if (demo.active || computerKeys.enabled) return null;
   if (!MidiInput.supported()) {
     return h('p', { class: 'banner error' }, 'This browser cannot read MIDI keyboards. Please open iggyuoso in Chrome or Edge. ', useComputerKeys());
