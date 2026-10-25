@@ -8,6 +8,7 @@ import { PIANO_RECORD_WORDS, PIANO_RECORDS } from './progress/records';
 import { store } from './progress/store';
 import { bookView } from './ui/bookView';
 import { demoView } from './ui/demoView';
+import { jamView } from './ui/jamView';
 import { mySongsView } from './ui/mySongsView';
 import { pianoProfile } from './ui/profileView';
 import { sketchbookView } from './ui/sketchbookView';
@@ -59,6 +60,7 @@ export const piano: Module = {
     sketchbook: sketchbookView,
     mysongs: mySongsView,
     midi: testerView,
+    jam: jamView,
   },
   topLevel: true,
   nav: [

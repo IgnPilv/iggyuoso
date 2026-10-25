@@ -5,3 +5,7 @@ Ideas built on a preview (docs/previews.md) for Ignas to try. Verdict: **go** (m
 
 | # | Date | Idea | PR / preview | Verdict |
 |---|------|------|--------------|---------|
+| 1 | 2026-10-25 | Note Rush mini game (`#/noterush`) | PR #83 | pending |
+| 2 | 2026-10-25 | Chord finder (`#/chords`): hold any keys, see the chord named, spelled, its position, other names and keys; or type a name (no ♯ or ♭ needed) to build it | PR #85 | pending |
+| 3 | 2026-10-25 | Timing mirror (`#/pulse`): a metronome that shows each press early or late per hand, how steady each hand is, tap tempo, and silent bars to test the inner pulse | PR #86 | pending |
+| 4 | 2026-10-25 | Jam room (`#/jam`): a band (drums, bass, chords) loops a progression in any key and groove while you improvise; lit chord and scale keys, every note counted as chord / scale / key / outside, with a tip | PR (this one) | pending |

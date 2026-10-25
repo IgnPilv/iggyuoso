@@ -780,3 +780,14 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   `content/README.md` no longer lists units and describes Practice mode instead of loop boxes, the
   curriculum's engine wish list is marked done, the beta proposal is marked historical. Rule: a PR
   that changes how something works updates its `docs/dev/` page.
+- 2026-10-25: Jam room (hourly idea 4, preview; merged only on Ignas's go). `#/jam`, linked from the
+  Sketchbook: a band loops a progression while the player improvises. Chords: pop I V vi IV, 50s
+  I vi IV V, 12-bar blues, the Canon, minor i VI III VII, Dorian i7 IV7; a key (8 major or 7
+  minor); groove Ballad / Pop / Swing (synthetic kick, snare and hi-hat, `drum` in `audio.ts`;
+  bass and chords on the sampled piano); tempo. One bar of count-in clicks, then it loops until
+  Stop; changes apply from the next bar. The chart lights the bar playing, the keys light its chord
+  (bright) and the rest of the suggested scale (soft) an eighth before the change, and each note
+  played is counted as a chord note, in the scale, in the key or outside (a note in the last eighth
+  of a bar counts with the next chord), plus how often beat 1 lands on the chord, with a tip
+  (`engine/jam.ts`, tested). Nothing is saved. Demo scene "Jam room".
+

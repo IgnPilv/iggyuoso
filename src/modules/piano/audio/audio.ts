@@ -160,3 +160,58 @@ export function stopAll() {
   }
   scheduled.clear();
 }
+
+// ---------------------------------------------------------------- drums (the Jam room's band)
+
+let noise: AudioBuffer | undefined;
+function noiseBuffer(c: AudioContext) {
+  if (!noise) {
+    noise = c.createBuffer(1, c.sampleRate, c.sampleRate);
+    const d = noise.getChannelData(0);
+    for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  }
+  return noise;
+}
+
+/** A synthetic drum: kick (a falling sine), snare (noise and a body) or hi-hat (high noise). */
+export function drum(part: 'kick' | 'snare' | 'hat', perfMs: number, level = 0.5) {
+  const c = audio();
+  const t = at(perfMs);
+  const out = c.createGain();
+  out.connect(c.destination);
+  if (part === 'kick') {
+    const osc = c.createOscillator();
+    osc.frequency.setValueAtTime(140, t);
+    osc.frequency.exponentialRampToValueAtTime(45, t + 0.12);
+    out.gain.setValueAtTime(level, t);
+    out.gain.exponentialRampToValueAtTime(0.0001, t + 0.3);
+    osc.connect(out);
+    osc.start(t);
+    osc.stop(t + 0.32);
+    track(osc);
+    return;
+  }
+  const src = c.createBufferSource();
+  src.buffer = noiseBuffer(c);
+  const filter = c.createBiquadFilter();
+  filter.type = part === 'hat' ? 'highpass' : 'bandpass';
+  filter.frequency.value = part === 'hat' ? 7000 : 1800;
+  const len = part === 'hat' ? 0.05 : 0.16;
+  out.gain.setValueAtTime(level * (part === 'hat' ? 0.5 : 0.8), t);
+  out.gain.exponentialRampToValueAtTime(0.0001, t + len);
+  src.connect(filter).connect(out);
+  src.start(t, Math.random() * 0.5);
+  src.stop(t + len + 0.02);
+  track(src);
+  if (part === 'snare') {
+    const body = c.createOscillator();
+    const g = c.createGain();
+    body.frequency.value = 190;
+    g.gain.setValueAtTime(level * 0.4, t);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.1);
+    body.connect(g).connect(c.destination);
+    body.start(t);
+    body.stop(t + 0.12);
+    track(body);
+  }
+}

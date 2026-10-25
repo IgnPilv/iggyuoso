@@ -105,3 +105,16 @@ improvising) records with `Recorder` (`engine/recorder.ts`) on the same clock, a
   notes back to the whole piece so the sheet marks the right notes. Nothing is saved.
 - **The tempo ladder** (`climb`): three clean takes at the current step move up, two failed takes
   in a row move down. Saved per exercise as `ladder.<id>`.
+
+## The Jam room (`#/jam`)
+A backing band to improvise over, separate from exercises. `engine/jam.ts` (tested in
+`tests/jam.test.ts`) holds the data: the progressions (`BACKINGS`, one Roman numeral per bar, built
+with `romanChord` and named with `chordName`), what the band plays in a bar of each groove
+(`barEvents`: drums, a bass in octave 2, the chord in close position around middle C), and how a
+played note fits (`fitOf`: chord note, suggested scale, key, outside; `chordAt` gives a note in the
+last eighth of a bar to the next chord). `ui/jamView.ts` schedules one bar at a time a quarter of a
+second ahead (a 50 ms timer), so tempo, key and groove changes apply from the next bar; each
+scheduled bar keeps its start, beat length and plan, and a press is placed against them after
+taking latency off. Drums are synthesised (`drum` in `audio/audio.ts`); bass and chords use the
+sampled piano. Nothing is saved; settings last until the page reloads (the demo uses its own copy).
+
