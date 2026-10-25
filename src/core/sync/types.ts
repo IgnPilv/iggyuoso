@@ -28,6 +28,14 @@ export type OutRow = Omit<RemoteRow, 'updatedAt'>;
 export interface SyncProvider {
   /** Shown in Settings and the profile, e.g. "Supabase". */
   readonly name: string;
+  /**
+   * Where to send the browser to sign in with Google. It comes back to `redirectTo` with
+   * `?code=...` (or `?error=...`), which `exchangeCode` turns into a session. `codeChallenge` is
+   * the PKCE challenge (base64url SHA-256 of the verifier kept on the device).
+   */
+  oauthUrl(provider: 'google', redirectTo: string, codeChallenge: string): string;
+  /** Finish a Google sign-in: trade the returned code and the kept verifier for a session. */
+  exchangeCode(code: string, verifier: string): Promise<AccountSession>;
   /** Email a sign-in link that comes back to `redirectTo`. */
   sendSignInLink(email: string, redirectTo: string): Promise<void>;
   /**

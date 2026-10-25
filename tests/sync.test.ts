@@ -8,6 +8,8 @@ import { memoryProvider, type MemoryServer } from '../src/core/sync/memory';
 import { supabaseProvider } from '../src/core/sync/supabase';
 import { CHANGES_KEY, isSynced, tracked } from '../src/core/sync/tracker';
 import { SignedOutError } from '../src/core/sync/types';
+import { challengeOf } from '../src/core/sync/pkce';
+import { isOAuthReturn } from '../src/core/sync';
 
 // The piano's merge and wipe rules, as the app registers them at start.
 addRecordRules(PIANO_RECORDS);
@@ -85,6 +87,45 @@ describe('guest and account', () => {
     expect(acct.available).toBe(false);
     expect(await acct.completeSignIn('#access_token=x')).toBe(false);
     expect(await acct.sync()).toBe(false);
+  });
+
+  it('signs in with Google: keeps a PKCE verifier, sends the challenge, trades the code', async () => {
+    const server = memoryProvider();
+    const data = tracked(memoryBackend());
+    const store = new Store(data);
+    store.record('ex.1', take('2026-10-23T10:00:00Z', 95));
+    let went = '';
+    const acct = new Account(data, server, { schema: SCHEMA_VERSION, upgradeFrom: () => {}, redirectTo: () => 'https://x/', go: (u) => { went = u; } });
+    await acct.signInWithGoogle();
+    expect(went).toBe('https://x/#memory-oauth');
+    expect(acct.leaving).toBe(true);
+    const verifier = JSON.parse(data.get('iggyuoso.sync.pkce')!);
+    expect(verifier).toMatch(/^[A-Za-z0-9_-]{64}$/);
+    expect(isSynced('iggyuoso.sync.pkce')).toBe(false);
+    expect(await acct.completeOAuth('?other=1')).toBe(false);
+    expect(await acct.completeOAuth('?code=me@example.com')).toBe(true);
+    expect(acct.identity()).toEqual({ kind: 'account', email: 'me@example.com' });
+    expect(data.get('iggyuoso.sync.pkce')).toBe('null');
+    expect([...server.rows.get('user:me@example.com')!.keys()]).toEqual(['ex.ex.1']);
+  });
+
+  it('says why a Google sign-in failed and stays a guest', async () => {
+    const server = memoryProvider();
+    const a = device(server);
+    expect(await a.account.completeOAuth('?error=access_denied&error_description=User+cancelled')).toBe(true);
+    expect(a.account.error).toContain('User cancelled');
+    expect(a.account.identity()).toEqual({ kind: 'guest' });
+    // A code with no verifier kept here (started in another browser) is refused.
+    expect(await a.account.completeOAuth('?code=me@example.com')).toBe(true);
+    expect(a.account.error).toContain('another browser');
+    expect(a.account.identity()).toEqual({ kind: 'guest' });
+  });
+
+  it('knows a Google return address', () => {
+    expect(isOAuthReturn('?code=abc')).toBe(true);
+    expect(isOAuthReturn('?error=access_denied')).toBe(true);
+    expect(isOAuthReturn('')).toBe(false);
+    expect(isOAuthReturn('?x=1&codes=2')).toBe(false);
   });
 
   it('brings guest progress into the account and carries it to another device', async () => {
@@ -296,6 +337,22 @@ describe('Supabase provider', () => {
     expect(s).toMatchObject({ userId: 'u1', email: 'me@example.com', accessToken: 'tok', refreshToken: 'ref' });
     expect((calls[0].init.headers as Record<string, string>).Authorization).toBe('Bearer tok');
     await expect(p.completeSignIn('#error=access_denied&error_description=Email+link+is+invalid+or+has+expired')).rejects.toThrow('Email link is invalid or has expired');
+  });
+
+  it('builds the Google address with a PKCE challenge and trades the code', async () => {
+    const { calls, f } = fake({ '/auth/v1/token?grant_type=pkce': { access_token: 'tok', refresh_token: 'ref', expires_in: 3600, user: { id: 'u1', email: 'me@example.com' } } });
+    const p = supabaseProvider(cfg, f);
+    const url = new URL(p.oauthUrl('google', 'https://ignpilv.github.io/iggyuoso/', 'chal'));
+    expect(url.origin + url.pathname).toBe('https://abc.supabase.co/auth/v1/authorize');
+    expect(Object.fromEntries(url.searchParams)).toEqual({ provider: 'google', redirect_to: 'https://ignpilv.github.io/iggyuoso/', code_challenge: 'chal', code_challenge_method: 's256' });
+    const s = await p.exchangeCode('code1', 'verifier1');
+    expect(calls[0].url).toBe('https://abc.supabase.co/auth/v1/token?grant_type=pkce');
+    expect(JSON.parse(String(calls[0].init.body))).toEqual({ auth_code: 'code1', code_verifier: 'verifier1' });
+    expect(s).toMatchObject({ userId: 'u1', email: 'me@example.com', accessToken: 'tok', refreshToken: 'ref' });
+  });
+
+  it('makes the S256 challenge of RFC 7636', async () => {
+    expect(await challengeOf('dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk')).toBe('E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM');
   });
 
   it('pulls changed rows and upserts by key', async () => {

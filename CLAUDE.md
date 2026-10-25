@@ -957,3 +957,15 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   saved, like a paused take), since taps can't keep time like keys. Ear questions now ignore keys
   pressed before Start (they used to answer the first question unheard). Demo scene "Tap the keys
   on the screen" (the pianist taps, with a fingertip shown).
+- 2026-10-25: Sign in with Google (Ignas: "google sign in sounds better can we swap to it"; Supabase's
+  built-in email sends about two links an hour). The Profile's Guest card leads with "Continue with
+  Google"; "Use email instead" opens the old email-link form, kept as a fallback. OAuth with PKCE over
+  plain fetch (no SDK, no server of ours): `Account.signInWithGoogle` keeps a random verifier on the
+  device (`iggyuoso.sync.pkce`, never synced; `src/core/sync/pkce.ts`) and sends the browser to
+  `/auth/v1/authorize?provider=google` with its S256 challenge; Supabase returns to the app's own
+  address with `?code=` in the query (the `#/...` router is untouched), the shell cleans it to
+  `#/profile`, and `completeOAuth` trades code + verifier at `/auth/v1/token?grant_type=pkce`. Then
+  sessions, refresh, sync and sign-out are as before. `SyncProvider` gains `oauthUrl` and
+  `exchangeCode`. Preview copies stay guest only. Google Cloud and Supabase setup is Ignas's
+  (`docs/accounts.md`, "Switching on Google sign-in"). Demo scene "Guest or account" signs in with a
+  pretend Google.

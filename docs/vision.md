@@ -46,7 +46,7 @@ gorgeous design.
 - **MIDI keyboard first.** A calibration step learns any keyboard. A computer-keyboard emulator
   exists for trying the app without a piano, and `#/demo` shows every feature with a virtual
   pianist, so the app can be seen without any keyboard at all.
-- **Guest or account.** Progress lives on the device by default; a free account copies it across
+- **Guest or account.** Progress lives on the device by default; a free account (sign in with Google, or by an emailed link) copies it across
   devices, and the app keeps working offline.
 
 ## Where it is going
