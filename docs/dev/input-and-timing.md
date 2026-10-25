@@ -219,3 +219,30 @@ down (or Finish) ends it, and the next key starts a new one. It shows the report
 note-by-note chart (held back up, hurried down, by hand; stops as dashed lines), plays the take back
 on the sampled piano, and hands its starting tempo to the Timing mirror (`presetPulse`). Nothing is
 saved.
+
+## The Duet (`#/duet`)
+The player plays a tune's melody and the app plays the left hand, following them. `engine/duet.ts`
+(tested in `tests/duet.test.ts`):
+- `DUET_TUNES` are Play by ear's public-domain tunes (all in 4/4) with a chord per bar, or two
+  for half a bar each (`'C G'`). `voice` puts the root low (C2 to B2) and the triad close in C3 to
+  B3; `accompaniment` turns the chords into band notes in one of three styles: held chords, bass and
+  chord (oom-pah: bass on beats 1 and 3, chord on 2 and 4), rolling eighths (root, top, middle, top).
+- `Duet` follows the player. Nothing sounds before the first melody note; each right note becomes
+  the anchor (its beat and the time it was played), and band notes are handed out (`due(until)`) at
+  the anchor's time plus their beats at the learnt tempo, but **never at or past the next melody
+  note**: those wait until it is played, and band notes the player has run past are dropped. The
+  tempo starts at the tune's own and learns from each gap (40% of the new gap's beat), except a gap
+  over 1.5 times the tempo, which counts as the band waiting and teaches nothing. The right note an
+  octave away counts; keys more than a fifth under the tune are left alone (the player's own left
+  hand); other keys are wrong keys.
+- `duetReport` sets each gap against the player's own beat around it (middle of up to three gaps
+  either side), in beats: over 0.25 of a beat long is **held back**, over 0.2 short **hurried**, and a
+  wait of the band is its own mark. Score: each note full marks within 0.08 of a beat, nothing at 0.5,
+  a wait nothing, −3 a wrong key. Tempo: first third against last third (waits left out), sped up or
+  slowed down at 4 a minute and 6%. Up to three tips (waits, long notes cut short, holding back
+  before jumps, tempo drift, wrong keys) or a word of praise.
+
+`ui/duetView.ts` runs the band on animation frames with a 120 ms lookahead on the sampled piano,
+shows the band's keys faintly as they sound, lights the next melody note (switchable), says when the
+band is waiting, and shows the report when the tune's last beat is over. Hear it plays tune and band
+at the tune's tempo. Nothing is saved.
