@@ -3,6 +3,7 @@ import type { Recorder } from '../engine/recorder';
 import type { TimedSession } from '../engine/timedSession';
 import { computerKeys } from '../midi/computerKeys';
 import { midi } from '../midi/input';
+import { fallingViewOf } from '../ui/falling';
 import type { ImproviseExercise } from '../content/types';
 import { chordNotes } from '../music/theory';
 import { isBlack } from '../music/notes';
@@ -27,10 +28,55 @@ export class Pianist {
     this.timers.push(window.setTimeout(fn, Math.max(0, ms)));
   }
 
+  /** While set, the pianist taps the keys drawn on the screen inside this element instead of playing real ones. */
+  tapIn?: HTMLElement;
+  private tapping = new Map<number, Element>();
+
   /** Press a key `startIn` ms from now and hold it. */
   playNote(note: number, startIn: number, holdMs: number, velocity = 80) {
+    if (this.tapIn) {
+      this.at(startIn, () => this.tap(note, true));
+      this.at(startIn + holdMs, () => this.tap(note, false));
+      return;
+    }
     this.at(startIn, () => { midi.inject('on', note, velocity); this.held.add(note); });
     this.at(startIn + holdMs, () => { midi.inject('off', note); this.held.delete(note); });
+  }
+
+  /** A pointer press (or release) on the drawn key, as a mouse or finger would make it, with a fingertip shown. */
+  private tap(note: number, down: boolean) {
+    const root = this.tapIn;
+    if (!root) return;
+    let target: Element | undefined = this.tapping.get(note);
+    let point: { x: number; y: number } | undefined;
+    if (down) {
+      const svgKey = root.querySelector(`svg.keyboard.tappable g.key[data-midi="${note}"] rect`);
+      const canvas = root.querySelector<HTMLCanvasElement>('.falling canvas.tappable');
+      if (svgKey) {
+        if (svgKey.getBoundingClientRect().bottom > innerHeight) svgKey.closest('svg')!.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        const r = svgKey.getBoundingClientRect();
+        point = { x: r.left + r.width / 2, y: r.top + r.height * (isBlack(note) ? 0.6 : 0.8) };
+        target = svgKey;
+      } else if (canvas) {
+        if (canvas.getBoundingClientRect().bottom > innerHeight) canvas.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        point = fallingViewOf(canvas)?.keyPoint(note);
+        target = canvas;
+      }
+      if (!point || !target) return;
+      this.tapping.set(note, target);
+      const dot = document.createElement('div');
+      dot.className = 'demo-tap';
+      dot.style.left = `${point.x}px`;
+      dot.style.top = `${point.y}px`;
+      document.body.append(dot);
+      window.setTimeout(() => dot.remove(), 600);
+    } else {
+      this.tapping.delete(note);
+    }
+    if (!target) return;
+    const r = target.getBoundingClientRect();
+    point ??= { x: r.left + 1, y: r.top + 1 };
+    target.dispatchEvent(new PointerEvent(down ? 'pointerdown' : 'pointerup', { clientX: point.x, clientY: point.y, pointerId: 70 + (note % 20), button: 0, bubbles: true }));
   }
 
   playChord(notes: number[], startIn: number, holdMs: number) {
@@ -45,6 +91,8 @@ export class Pianist {
 
   stop() {
     computerKeys.releaseAll();
+    for (const n of [...this.tapping.keys()]) this.tap(n, false);
+    this.tapIn = undefined;
     this.timers.forEach(clearTimeout);
     this.timers = [];
     for (const n of this.held) midi.inject('off', n);

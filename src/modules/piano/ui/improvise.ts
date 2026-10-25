@@ -9,6 +9,7 @@ import { transcribe } from '../music/transcribe';
 import { saveSketch } from '../progress/sketches';
 import { h } from '../../../core/dom';
 import { KeyboardView } from './keyboard';
+import { tapCount } from './tapKeys';
 import { header, record, showHeld, starText, type OnDone } from './players';
 import { playBack, recordButton, startTake, type BackingNote } from './recordPanel';
 import { sketchStaff, sketchStore } from './sketchbookView';
@@ -44,6 +45,7 @@ export function improvisePlayer(root: HTMLElement, ex: ImproviseExercise, cal: C
   const low = ex.hand === 'together' ? 36 : 48;
   const [lo, hi] = keyWindow(cal, [toDevice(cal, low), toDevice(cal, 84)]);
   const kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
+  kb.playable();
   const offHeld = showHeld(kb);
   if (ex.scale) for (let d = lo; d <= hi; d++) if (ex.scale.pcs.includes(pitchClass(d - cal.offset))) kb.set(d, 'option', true);
 
@@ -95,6 +97,7 @@ export function improvisePlayer(root: HTMLElement, ex: ImproviseExercise, cal: C
     playBtn.disabled = true;
     listenBtn.disabled = true;
     stopBtn.disabled = false;
+    tapsAtStart = tapCount();
     run = startTake(cal, {
       tempo: ex.tempo, meter: ex.meter, click: ex.click ?? 'on', countInBars: Math.max(1, ex.countIn), maxBars: callBars + ex.bars,
       backing: [...callNotes, ...backing],
@@ -112,11 +115,13 @@ export function improvisePlayer(root: HTMLElement, ex: ImproviseExercise, cal: C
     }, (rec) => demo.onRecord?.(rec));
   };
   stopBtn.onclick = () => run?.stop();
+  let tapsAtStart = 0;
 
   function showResult(rec: Recorder) {
     const shift = callBars * quarters * rec.beatMs;
     const notes = rec.take().map((n) => ({ ...n, on: n.on - shift, off: n.off === undefined ? undefined : n.off - shift })).filter((n) => n.on >= -rec.beatMs / 2);
     const r = judgeImprovisation(ex, notes, rec.beatMs);
+    const tapped = tapCount() > tapsAtStart;
     const key = ex.key ?? 'C';
     const w = transcribe(notes, { beatMs: rec.beatMs, meter: ex.meter, key, trimStart: false });
     const draft = { right: w.right, left: w.left, tempo: ex.tempo, meter: `${ex.meter.beats}/${ex.meter.unit}`, key, title: ex.title ?? 'Improvisation', id: 'take' };
@@ -131,10 +136,11 @@ export function improvisePlayer(root: HTMLElement, ex: ImproviseExercise, cal: C
       h('div', { class: 'score' }, h('span', { class: 'stars' }, starText(r.stars)), ` ${r.score}`),
       h('ul', { class: 'improv-checks' }, ...r.checks.map((c) => h('li', { class: c.ok ? 'ok' : 'miss' }, h('span', { class: 'mark', 'aria-hidden': 'true' }, RULE_ICON(c.ok)), ' ', c.message))),
       w.bars ? sketchStaff(draft) : '',
-      record(ex, r.score, r.stars, ex.tempo),
+      // Keys tapped on the screen can't keep a rhythm like real keys: such a take is practice.
+      tapped ? h('p', { class: 'small' }, 'Keys tapped on the screen are for trying things out, so this take is practice and is not saved.') : record(ex, r.score, r.stars, ex.tempo),
       h('div', { class: 'controls' }, h('button', { onclick: () => playBtn.click() }, 'Try again'), hear, keep),
     ));
-    onDone({ score: r.score, stars: r.stars });
+    if (!tapped) onDone({ score: r.score, stars: r.stars });
   }
 
   root.append(

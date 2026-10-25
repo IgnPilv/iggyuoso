@@ -4,6 +4,7 @@ import { whiteIndex, type HandFrame } from '../music/handPlacement';
 import { isBlack, pitchClass } from '../music/notes';
 import { handShape } from './hands';
 import { s } from '../../../core/dom';
+import { bindTaps } from './tapKeys';
 
 // An on-screen keyboard for a range of device keys. States are CSS classes on each key.
 
@@ -20,6 +21,7 @@ export class KeyboardView {
   private handLayer = s('g', { class: 'hands' });
   private handSig = '';
   private static masks = 0;
+  private middleC: number;
 
   /**
    * `labels: 'c'` writes the name under every C (not for "find the C" drills, where it would give
@@ -31,6 +33,7 @@ export class KeyboardView {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
     this.low = low;
+    this.middleC = opts.middleC ?? 60;
     const whites: number[] = [];
     for (let m = low; m <= high; m++) if (!isBlack(m)) whites.push(m);
     this.el = s('svg', { viewBox: `0 0 ${whites.length * WW} ${WH + CAPTION + 2}`, class: 'keyboard', role: 'img', 'aria-label': 'keyboard' });
@@ -71,6 +74,16 @@ export class KeyboardView {
         this.showHints();
       });
     }
+  }
+
+  /** Let the keys be played with a mouse or a finger (see tapKeys.ts). Returns a function that stops it. */
+  playable(): () => void {
+    return bindTaps(this.el, (e) => {
+      // While a key is held the pointer is captured, so the key under it comes from its position.
+      const on = e.type === 'pointerdown' ? e.target as Element : document.elementFromPoint(e.clientX, e.clientY);
+      const g = on?.closest('g.key');
+      return g && this.el.contains(g) ? Number(g.getAttribute('data-midi')) : undefined;
+    }, () => this.middleC - 60);
   }
 
   /** Letters of the computer keyboard on the keys they play (empty while it is off). */

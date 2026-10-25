@@ -3,11 +3,12 @@
 *How a key press on the piano reaches the app, how the app knows which key it was, and how it
 knows when it was played. Code in `src/modules/piano/`.*
 
-## Three ways to press a key, one path
+## Four ways to press a key, one path
 
 ```
  MIDI keyboard ──(Web MIDI)──▶ midi/input.ts ──▶ midi.onNote / midi.onPedal ──▶ every screen
  computer keyboard ─(keydown)─▶ midi/computerKeys.ts ──▶ midi.inject(...)  ─┘
+ on-screen keys ─(pointer)──▶ ui/tapKeys.ts ─────────▶ midi.inject(...)  ─┘
  demo pianist ──────────────▶ demo/pianist.ts ───────▶ midi.inject(...)  ─┘
 ```
 
@@ -21,9 +22,19 @@ knows when it was played. Code in `src/modules/piano/`.*
   white keys and W E T ... into black keys, Z / X shift an octave, Space is the pedal
   (`midi/computerKeys.ts`). It reads the physical key (`KeyboardEvent.code`), so it works on any
   keyboard layout, and ignores typing in text boxes.
-- **The demo pianist** (`demo/pianist.ts`) plays exercises with a few deliberate slips.
+- **The keys drawn on the screen** can be tapped with a mouse or a finger (`ui/tapKeys.ts`). A
+  screen turns them on with `KeyboardView.playable()` or `FallingView.playable()` (on the falling
+  notes only the keys at the bottom react, not the lane). A tap sends the note in as port
+  "On-screen keys" and, since a picture makes no sound, plays the sampled piano until the finger
+  lifts (`pianoHold` in `audio/audio.ts`); sliding along the keys plays each key crossed. Turned on
+  in exercises (ear, quiz, build, find, step-by-step, timed, improvise), theory checks and the
+  playground, Note Rush and Play by ear. Answers given by tapping count like any other, but a timed
+  or improvised take that saw a tap (`tapCount()`) is practice: shown, never saved, since a mouse
+  or a finger can't keep time like a key. The style `.tappable` keeps vertical swipes scrolling.
+- **The demo pianist** (`demo/pianist.ts`) plays exercises with a few deliberate slips. With
+  `tapIn` set it taps the drawn keys instead (real pointer events, with a fingertip shown).
 
-The last two send their notes through `midi.inject`, so every screen handles all three the same
+The last three send their notes through `midi.inject`, so every screen handles all three the same
 way and nothing has a special case for "not a real piano".
 
 ## Calibration: which key is middle C
