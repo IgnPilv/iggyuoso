@@ -29,6 +29,7 @@ import { mountPulse } from './pulseView';
 import { mountScaleGym } from './scaleGymView';
 import { IDLE_MS, mountPlayReport } from './playReportView';
 import { mountByEar } from './byEarView';
+import { mountDuet } from './duetView';
 import { mountJam } from './jamView';
 import { mySongsView } from './mySongsView';
 import { noteRushView } from './noteRush';
@@ -1133,6 +1134,30 @@ function scenes(): Scene[] {
         at += i === 1 || i === 2 || i === 12 ? 1600 : 750;
       });
       timers.push(window.setTimeout(next, at + 11000));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Duet',
+    caption: 'Play a tune and the band plays the left hand with you (#/duet, from the Mini game card on home). Pick one of 11 public-domain tunes and a way of playing along (held chords, bass and chord, rolling eighths). Nothing starts until you play the first note; then the band keeps to your tempo, learning it as you go, and waits at every melody note until you play it, so a stop never leaves you behind. The next note is lit (it can be switched off). At the end: how evenly you kept your own beat, the tempo and whether it crept, where you held back or hurried, where the band had to wait, and tips. Nothing is saved. Here the pianist plays Ode to Joy, stops before bar 2, hits one wrong key, and hurries the last phrase.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (m: number) => m + DEMO_CALIBRATION.offset;
+      const cleanup = mountDuet(box, DEMO_CALIBRATION, {
+        onReady: (d) => {
+          let t = 1500;
+          d.notes.forEach((n, i) => {
+            if (i > 0) {
+              const beats = n.at - d.notes[i - 1].at;
+              t += beats * (i >= 9 ? 640 - (i - 8) * 30 : 640) + (i === 4 ? 1800 : 0);
+            }
+            // One wrong key (F for E) just before the third bar's E.
+            if (i === 11) p.playNote(dev(65), t - 260, 180, 70);
+            p.playNote(dev(n.midi), t, Math.max(200, n.beats * 560), 72);
+          });
+          timers.push(window.setTimeout(next, t + 14000));
+        },
+      });
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });

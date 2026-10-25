@@ -907,3 +907,15 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   rebuilt the key list for the scale kind before reading the key picked, which put the old key back, so a
   new key never took (in every mode, since the first version). The key picked is now read first and kept
   unless the kind has no such key here (`pickRoot`, tested).
+- 2026-10-25: Duet (hourly idea 8, the last; merged directly under Ignas's "for now implement all"). `#/duet`,
+  a third button on home's Mini game card: the player plays a public-domain tune's melody (11 of Play
+  by ear's tunes, each given a chord per bar or half bar) and the app plays the left hand on the
+  sampled piano (held chords, bass and chord, or rolling eighths) and **follows the player**: nothing
+  sounds before the first note, the band keeps to the player's tempo (learnt from each gap; a gap
+  over 1.5 beats of the tempo is the band waiting and teaches nothing) and never plays at or past the
+  next melody note until it is played; band notes run past are dropped. The right note an octave away
+  counts; keys more than a fifth under the tune are ignored. The next note is lit (switchable). The
+  report sets each gap against the player's own beat around it: held back over 0.25 of a beat,
+  hurried over 0.2, waits marked; score (full within 0.08 beat, none at 0.5, −3 a wrong key), tempo
+  start and end, up to three tips. Nothing is saved (`engine/duet.ts`, tested; `ui/duetView.ts`).
+  Demo scene "Duet".

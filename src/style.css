@@ -1760,3 +1760,7 @@ body.focus-page main { max-width: none; padding: 0; }
 .jam-fit .fit-key { background: var(--ok); }
 .jam-fit .fit-outside { background: var(--bad); }
 .jam-advice { min-height: 1.4em; }
+
+/* Duet (#/duet) */
+.duet .keyboard { max-height: 30vh; width: auto; max-width: 100%; }
+.duet-live { min-height: 1.4em; }
