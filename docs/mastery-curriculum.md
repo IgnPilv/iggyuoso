@@ -60,9 +60,9 @@ Only the first key pressed counts. Mix 3–6 categories; add one at 85–90% ove
 Perfect pitch is the "note naming" side quest and never blocks progress. Thresholds are design
 choices to tune from logged data.
 
-## Engine needs (for the technical thread)
-`kind: ear`, `kind: quiz`, `kind: build`, `kind: tap`, a sampled piano for prompts, `tempoLadder`,
-looping bars, richer note strings (sixteenths, triplets, ties, compound metre, key signature, clef
-change, pedal), the mastery store (states, freshness, review queue, XP, streak, per-note timing),
-the session planner, and the tree screen (design thread). The first four kinds plus the store
-unlock all of Year 1.
+## Engine needs (done)
+Everything this design asked of the engine has shipped: `ear`, `quiz`, `build`, `tap`, `improvise`
+and `generated` exercises, a sampled piano, the tempo ladder, practice mode on chosen bars, richer
+note strings (sixteenths, triplets, ties, compound meter, key signatures, pedal, dynamics), the
+mastery store (states, freshness, reviews, XP, streak, per-hand timing), Today's practice and the
+tree screens. How they work: `docs/dev/`.
