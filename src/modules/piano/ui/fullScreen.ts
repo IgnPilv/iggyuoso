@@ -15,8 +15,8 @@ export function previewFullScreen(host?: HTMLElement) { previewHost = host; }
 export interface FullScreenParts {
   /** Always in view, top left: the live score, or the question. */
   score?: HTMLElement[];
-  /** Listen / Play / Pause / Stop. */
-  controls?: HTMLElement;
+  /** Listen / Play / Pause / Stop (and the Scored / Practice switch). */
+  controls?: HTMLElement | HTMLElement[];
   stage: HTMLElement;
   result: HTMLElement;
   /** Full screen went on or off: the player builds falling notes when on, its own pick when off. */
@@ -71,7 +71,7 @@ export function fullScreen(p: FullScreenParts): FullScreen {
   };
   // A tap on the notes (not on a control or the result card) shows or hides the controls.
   layer.addEventListener('click', (e) => {
-    if ((e.target as HTMLElement).closest('button, a, select, input, label, .fs-result')) {
+    if ((e.target as HTMLElement).closest('button, a, select, input, label, .fs-result, .bar-range')) {
       if (running && revealed) reveal();
       return;
     }
@@ -100,7 +100,7 @@ export function fullScreen(p: FullScreenParts): FullScreen {
       move(p.stage, layer);
       layer.prepend(p.stage);
       for (const el of p.score ?? []) move(el, scoreBox);
-      if (p.controls) move(p.controls, controls);
+      for (const el of [p.controls ?? []].flat()) move(el, controls);
       move(p.result, layer);
       p.result.classList.add('fs-result');
       layer.classList.toggle('preview', !!previewHost);

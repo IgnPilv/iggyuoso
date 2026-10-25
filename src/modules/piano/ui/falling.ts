@@ -72,7 +72,8 @@ export class FallingView {
     private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c'; /** Quarters per beat line (1.5 in 6/8). */ pulse?: number;
       /** A pedal line, drawn as a strip down the right edge. */ pedal?: PedalSpan[];
       /** Loud and soft marks, written next to the bar numbers. */ dynamics?: DynamicSpan[];
-      /** Hands drawn over the keys (Options → Hands), with finger numbers on the tips unless `handNumbers` is false. */ hands?: HandPlan; handNumbers?: boolean },
+      /** Hands drawn over the keys (Options → Hands), with finger numbers on the tips unless `handNumbers` is false. */ hands?: HandPlan; handNumbers?: boolean;
+      /** Bars before the first one drawn (practising from a later bar keeps the piece's bar numbers). */ firstBar?: number },
   ) {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
@@ -162,7 +163,7 @@ export class FallingView {
         ctx.fillStyle = p.laneText;
         ctx.font = `500 10px ${p.fontMono}`;
         ctx.textAlign = 'left';
-        const n = Math.round(b / barQ) + 1;
+        const n = Math.round(b / barQ) + 1 + (this.opts.firstBar ?? 0);
         const d = this.opts.dynamics?.find((x) => x.bars[0] === n);
         const mark = d ? (d.hairpin ? (d.hairpin > 0 ? 'cresc.' : 'dim.') : LEVELS[d.level]) : '';
         ctx.fillText(`BAR ${n}`, 8, y - 5);

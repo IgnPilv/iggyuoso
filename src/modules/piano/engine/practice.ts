@@ -1,5 +1,6 @@
 import type { TimedExercise } from '../content/types';
 import { isTieEnd, type Hand, type NoteToken } from '../music/notes';
+import { expectedNotes } from '../music/timeline';
 import type { TimedResult } from '../scoring/timed';
 
 // Practice helpers for timed exercises: the tempo ladder and looping a few bars.
@@ -77,11 +78,31 @@ export function sliceBars(ex: TimedExercise, from: number, to: number): TimedExe
     right: cut('right', ex.right),
     left: cut('left', ex.left),
     fingers,
+    pedal: ex.pedal?.filter((t) => t.bar >= from && t.bar <= to).map((t) => ({ ...t, bar: t.bar - from })),
     bars: to - from + 1,
     pickup: from === 0 ? ex.pickup : 0,
     // A loop is for the notes; its marks could start or end inside a hairpin.
     dynamics: undefined,
   };
+}
+
+/**
+ * For practising bars `from`.. of `whole` while its whole sheet stays in view: where the slice
+ * starts in the whole exercise's beats, and, for each note of the slice ("right:0"), the same
+ * note's staff key in the whole exercise. A note a tie carried into the slice maps to the note
+ * it continues.
+ */
+export function sliceMap(whole: TimedExercise, from: number, slice: TimedExercise): { offset: number; keys: Map<string, string> } {
+  const offset = from * whole.meter.quarters;
+  const all = expectedNotes(whole);
+  const keys = new Map<string, string>();
+  for (const n of expectedNotes(slice)) {
+    const at = n.beat + offset;
+    const same = all.find((w) => w.hand === n.hand && w.midi === n.midi && Math.abs(w.beat - at) < 1e-6)
+      ?? all.find((w) => w.hand === n.hand && w.midi === n.midi && w.beat < at && w.beat + w.beats > at);
+    if (same) keys.set(`${n.hand}:${n.index}`, `${same.hand}:${same.index}`);
+  }
+  return { offset, keys };
 }
 
 /**

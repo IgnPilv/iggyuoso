@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { parseExercise } from '../src/modules/piano/content/load';
 import type { TimedExercise } from '../src/modules/piano/content/types';
-import { climb, LADDER_START, sliceBars, trickyBars } from '../src/modules/piano/engine/practice';
+import { climb, LADDER_START, sliceBars, sliceMap, trickyBars } from '../src/modules/piano/engine/practice';
 import { expectedNotes } from '../src/modules/piano/music/timeline';
 import type { TimedResult } from '../src/modules/piano/scoring/timed';
 
@@ -51,6 +51,22 @@ describe('looping bars', () => {
     // The tie out of the last bar is dropped.
     expect(expectedNotes(start).map((n) => [n.midi, n.beat, n.beats])).toEqual([[67, 3, 1], [72, 4, 1], [74, 5, 1], [76, 6, 2]]);
     expect(start.id).toBe('t#bars-1-2');
+  });
+
+  it('maps a slice back onto the whole sheet', () => {
+    // Whole: right:0 G4 (upbeat), 1 C5, 2 D5, 3 E5 (tied on), 4 F5, 5 G5, 6 A5.
+    const mid = sliceMap(ex, 2, sliceBars(ex, 2, 3));
+    expect(mid.offset).toBe(8);
+    // The fresh E5 from the tie is the tied note of bar 2.
+    expect([...mid.keys]).toEqual([['right:0', 'right:3'], ['right:1', 'right:4'], ['right:2', 'right:5'], ['right:3', 'right:6']]);
+    const start = sliceMap(ex, 0, sliceBars(ex, 0, 1));
+    expect(start.offset).toBe(0);
+    expect([...start.keys.values()]).toEqual(['right:0', 'right:1', 'right:2', 'right:3']);
+  });
+
+  it('cuts the pedal line with the bars', () => {
+    const ped = timed({ right: 'C4:w | D4:w | E4:w', pedal: 'x:w | r:h x:h | x:w' });
+    expect(sliceBars(ped, 1, 2).pedal).toEqual([{ down: false, beats: 2, bar: 0 }, { down: true, beats: 2, bar: 0 }, { down: true, beats: 4, bar: 1 }]);
   });
 
   it('finds the bars where mistakes cluster', () => {

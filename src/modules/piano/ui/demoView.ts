@@ -329,6 +329,31 @@ const theoryScene: Scene['run'] = (box, next, p) => {
 const press = (box: HTMLElement, label: string) =>
   [...box.querySelectorAll('button')].find((b) => b.textContent === label)?.click();
 
+/**
+ * Drags a practice handle (on the bar slider or the sheet) onto the boundary before bar `to`
+ * (0 = the start, bars = the end), in small steps like a finger.
+ */
+function dragHandle(find: () => Element | null, toX: () => number, later: (ms: number, f: () => void) => void, at: number) {
+  const fire = (el: Element, type: string, x: number, y: number) =>
+    el.dispatchEvent(new PointerEvent(type, { bubbles: true, cancelable: true, clientX: x, clientY: y, pointerId: 7, button: 0, isPrimary: true }));
+  later(at, () => {
+    const handle = find();
+    if (!handle) return;
+    const owner = handle.closest('.range-track') ?? handle;
+    const b = handle.getBoundingClientRect();
+    const x0 = b.left + b.width / 2, y = b.top + Math.min(12, b.height / 2), x1 = toX();
+    fire(handle, 'pointerdown', x0, y);
+    for (let i = 1; i <= 12; i++) later(i * 45, () => fire(owner, i === 12 ? 'pointerup' : 'pointermove', x0 + ((x1 - x0) * i) / 12, y));
+  });
+}
+
+/** Where the boundary before bar `k` is on the bar slider. */
+const sliderX = (box: HTMLElement, k: number) => () => {
+  const t = box.querySelector('.range-track')!.getBoundingClientRect();
+  const bars = box.querySelectorAll('.range-cell').length;
+  return t.left + (t.width * k) / bars;
+};
+
 /** Mount an exercise and let the pianist play it; for timed ones, Listen first if asked. */
 type View2 = 'classic' | 'falling';
 const setView = (box: HTMLElement, v: View2) => box.querySelector<HTMLButtonElement>(`.view-toggle [data-view=${v}]`)?.click();
@@ -498,21 +523,59 @@ function scenes(): Scene[] {
   out.push({ title: 'Sustain pedal', caption: 'Pedal lines sit under the staff ("Ped.", a line while it is held, a notch at each change) and down the right edge of the falling notes. The pedal is scored too: here the pianist holds it through one chord change, and the result says so. With the computer keyboard, Space is the pedal.', run: exerciseScene(parseExercise(parse(SAMPLES.pedal)), { view: 'classic' }) });
   out.push({
     title: 'Tempo ladder and loops',
-    caption: 'Exercises can climb a tempo ladder: three clean takes (92+) on a step move up, two failed takes in a row move down. After a take, the result points at the bars with the most mistakes, and "Loop" plays just those bars round and round (loop takes are not saved).',
+    caption: 'Exercises can climb a tempo ladder: three clean takes (92+) on a step move up, two failed takes in a row move down. After a take, the result points at the bars with the most mistakes, and "Practise bars…" opens Practice on just those bars, going round until Stop (practice is never saved).',
     run: (box, next, p) => {
       const timers: number[] = [];
       let loops = 0;
       demo.onTimed = (s) => p.playTimed(s);
       demo.onRunEnd = () => {
-        const loopBtn = [...box.querySelectorAll('button')].find((b) => b.textContent?.startsWith('Loop bar'));
+        const loopBtn = [...box.querySelectorAll('button')].find((b) => b.textContent?.startsWith('Practise bar'));
         if (loops === 0 && loopBtn) {
           loops++;
           timers.push(window.setTimeout(() => { loopBtn.click(); timers.push(window.setTimeout(() => press(box, 'Play'), 1200)); }, 3000));
-        } else if (loops++ >= 2) timers.push(window.setTimeout(next, 2500));
+        } else if (loops++ >= 2) timers.push(window.setTimeout(() => { press(box, 'Stop'); next(); }, 2500));
       };
       const cleanup = mountExercise(box, parseExercise(parse(SAMPLES.ladder)), DEMO_CALIBRATION, () => {});
       setView(box, 'falling');
       timers.push(window.setTimeout(() => press(box, 'Play'), 900));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  // Practice mode: the bar slider and the handles on the sheet pick the bars that go round.
+  const practicePiece = pick(isTimed, (e) => !!(e.right && e.left) && e.bars >= 8 && e.bars <= 24 && e.tempo >= 80 && !e.pedal, (e) => !!(e.right && e.left) && e.bars >= 8 && !e.pedal, (e) => e.bars >= 6) ?? parseExercise(parse(SAMPLES.ladder)) as TimedExercise;
+  out.push({
+    title: 'Practice mode',
+    caption: 'Every played exercise has two modes. Scored takes count: stars, clean takes, the tempo ladder. Practice saves nothing: drag the ends of the bar slider over the notes (or the handles on the sheet music\'s bar lines) to pick the bars, and Play goes round them until Stop, with a small score for each round. Tempo, count-in and the other options still work. Here the pianist picks two bars, loops them in falling notes, then widens the loop by a bar on the sheet.',
+    run: (box, next, p) => {
+      resetDemoOptions();
+      const timers: number[] = [];
+      const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+      const bars = practicePiece.bars;
+      const from = Math.min(2, bars - 2);
+      let rounds = 0;
+      let sheet = false;
+      demo.onTimed = (s) => p.playTimed(s, { slips: rounds === 0 });
+      demo.onRunEnd = (mode) => {
+        if (mode !== 'play') return;
+        rounds++;
+        if (!sheet && rounds === 2) {
+          sheet = true;
+          later(1200, () => { press(box, 'Stop'); setView(box, 'classic'); });
+          // Widen the loop by one bar: drag the end handle on the sheet to the next bar line.
+          later(2600, () => {
+            const grip = () => box.querySelector('.range-grip.to');
+            const target = () => box.querySelectorAll('.range-num')[from + 3];
+            dragHandle(grip, () => target()?.getBoundingClientRect().left ?? grip()!.getBoundingClientRect().right + 40, later, 0);
+          });
+          later(4200, () => press(box, 'Play'));
+        } else if (sheet && rounds >= 3) later(1500, () => { press(box, 'Stop'); next(); });
+      };
+      const cleanup = mountExercise(box, practicePiece, DEMO_CALIBRATION, () => {});
+      setView(box, 'falling');
+      later(900, () => press(box, 'Practice'));
+      dragHandle(() => box.querySelector('.range-handle.to'), sliderX(box, from + 2), later, 2000);
+      dragHandle(() => box.querySelector('.range-handle.from'), sliderX(box, from), later, 3000);
+      later(4600, () => press(box, 'Play'));
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });
