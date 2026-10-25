@@ -1,10 +1,10 @@
-// Light / dark theme. The choice (System, Light, Dark) is saved with the settings; the resolved
-// theme is the data-theme attribute on <html>, set before first paint by index.html and kept in
-// sync here. Canvas views read colours through palette(), which follows the CSS tokens.
+// Light / dark theme, shared by every module. The choice (System, Light, Dark) is saved in the
+// device's settings record; the resolved theme is the data-theme attribute on <html>, set before
+// first paint by index.html and kept in sync here. Canvas views read colours through palette(), which follows the CSS tokens.
 
-import { store, type Settings } from '../modules/piano/progress/store';
+import { patchSettings, readSettings } from './storage';
 
-export type ThemeChoice = Settings['theme'];
+export type ThemeChoice = 'system' | 'light' | 'dark';
 export type Theme = 'light' | 'dark';
 
 const media = typeof matchMedia === 'function' ? matchMedia('(prefers-color-scheme: light)') : undefined;
@@ -12,13 +12,13 @@ const listeners = new Set<(t: Theme) => void>();
 let override: Theme | undefined;
 
 export function themeChoice(): ThemeChoice {
-  const t = store.settings.theme;
+  const t = readSettings().theme;
   return t === 'light' || t === 'dark' ? t : 'system';
 }
 
 /** Save and apply the player's choice. */
 export function setThemeChoice(choice: ThemeChoice) {
-  store.settings = { ...store.settings, theme: choice };
+  patchSettings({ theme: choice });
   applyTheme(choice);
   window.dispatchEvent(new Event(THEME_CHOICE_EVENT));
 }

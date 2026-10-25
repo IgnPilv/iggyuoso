@@ -6,12 +6,12 @@ import { demoProgress, lessonExercises, lessonGoals, mastery } from '../progress
 import { dayOf, Mastery, type NodeState } from '../progress/mastery';
 import { levelOf, strandMastery, type DayLog, type TimingEntry } from '../progress/profile';
 import { memoryBackend, store, Store } from '../progress/store';
-import { account, demoAccount } from '../../../core/sync';
+import { demoAccount } from '../../../core/sync';
 import type { Account } from '../../../core/sync/account';
 import { accountCard } from '../../../core/accountView';
 import { h, type View } from '../../../core/dom';
 
-// The player profile (#/profile): level and XP, the practice calendar, totals, mastery per
+// The piano part of the player profile (#/profile): level and XP, the practice calendar, totals, mastery per
 // strand of the tree and timing per hand. It only reads progress; the demo passes throwaway
 // progress with a made-up history.
 
@@ -160,6 +160,7 @@ export function sampleProgress(now = new Date()): { store: Store; mastery: Maste
   return { store: s, mastery: m };
 }
 
-export const profileView: View = (root) => {
-  root.append(demo.active ? renderProfile(demoProgress(), new Date(), demoAccount().account) : renderProfile({ store, mastery }, new Date(), account));
+/** The piano's part of the shared Profile page (the shell puts the account card above it). */
+export const pianoProfile: View = (root) => {
+  root.append(demo.active ? renderProfile(demoProgress(), new Date(), demoAccount().account) : renderProfile({ store, mastery }, new Date()));
 };

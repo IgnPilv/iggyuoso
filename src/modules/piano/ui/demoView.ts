@@ -25,6 +25,11 @@ import { calibrateView, keyMap, lessonView, testerView } from './views';
 import { sketchbookView } from './sketchbookView';
 import { mySongsView } from './mySongsView';
 import { writeMidiFile } from '../music/midiFile';
+import { ModuleRecords } from '../../../core/storage';
+import type { Module } from '../../../core/module';
+import { MODULES } from '../../../app/modules';
+import { moduleSwitcher, navLink } from '../../../app/shell';
+import { sums, sumsPage } from '../../sums/module';
 
 // The no-keyboard showcase. Scenes are picked from the live content, so the demo always shows
 // what the app currently does. When a feature is added, add or extend a scene here.
@@ -688,6 +693,41 @@ function scenes(): Scene[] {
       timers.push(window.setTimeout(() => press(box, 'Wipe everything'), 20000));
       timers.push(window.setTimeout(next, 25000));
       return () => { timers.forEach(clearTimeout); off(); };
+    },
+  });
+  out.push({
+    title: 'One app, many modules',
+    caption: 'The piano is one module of iggyuoso. The button next to the logo switches modules: the header links, the home page and the pages change with it, while the account, profile, look and settings stay shared. The account keeps every module\'s progress side by side. Here the switcher opens and picks "Sums", a small sample module (a placeholder for, say, a math tutor), plays a round, and comes back to the piano. Nothing is saved.',
+    run: (box, next) => {
+      const timers: number[] = [];
+      const records = new ModuleRecords('sums', memoryBackend());
+      const show = (m: Module) => {
+        const bar = h('div', { class: 'demo-header' }, moduleSwitcher(m, MODULES, show), h('span', { class: 'small' }, m.tagline),
+          h('nav', {}, ...m.nav.map(navLink)));
+        const page = h('div');
+        if (m.id === sums.id) sumsPage(page, records);
+        else page.append(h('p', { class: 'small' }, 'The piano: tree, lessons, Book, Songs and Sketchbook, as in the rest of this tour.'));
+        box.replaceChildren(bar, page);
+      };
+      const click = (sel: string) => box.querySelector<HTMLElement>(sel)?.click();
+      box.classList.add('demo-modules');
+      show(MODULES[0]);
+      timers.push(window.setTimeout(() => click('.module-btn'), 1200));
+      timers.push(window.setTimeout(() => click(`.module-item[href="#/${sums.id}"]`), 3600));
+      timers.push(window.setTimeout(() => press(box, 'Start a round'), 5200));
+      // Answers the sums: right ones, except the third.
+      for (let i = 0; i < 5; i++) {
+        timers.push(window.setTimeout(() => {
+          const sum = /(\d+) \+ (\d+)/.exec(box.querySelector('.ask')?.textContent ?? '');
+          const buttons = [...box.querySelectorAll<HTMLButtonElement>('.card .controls button')];
+          const right = sum ? buttons.find((b) => Number(b.textContent) === Number(sum[1]) + Number(sum[2])) : undefined;
+          (i === 2 ? buttons.find((b) => b !== right) : right)?.click();
+        }, 6400 + i * 1100));
+      }
+      timers.push(window.setTimeout(() => click('.module-btn'), 13200));
+      timers.push(window.setTimeout(() => click(`.module-item[href="#/${MODULES[0].id}"]`), 15000));
+      timers.push(window.setTimeout(next, 17500));
+      return () => timers.forEach(clearTimeout);
     },
   });
   const looks = pick((e): e is Exercise => e.kind === 'sequence', (e) => e.kind === 'sequence' && e.display === 'keys');

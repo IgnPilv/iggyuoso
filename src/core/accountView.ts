@@ -1,7 +1,8 @@
 import type { Account } from './sync/account';
 import { h } from './dom';
+import { keptLabels } from './records';
 
-// The account card at the top of the profile: who is playing here (a guest, saved on this device
+// The account card at the top of the profile, shared by every module: who is playing here (a guest, saved on this device
 // only, or a signed-in account that syncs), signing in by an emailed link, and the sync state.
 // It redraws itself when the account changes.
 
@@ -12,6 +13,12 @@ export function ago(iso: string | undefined, now = Date.now()): string {
   if (min < 60) return `${min} min ago`;
   if (min < 24 * 60) return `${Math.round(min / 60)} h ago`;
   return new Date(iso).toLocaleDateString('en', { day: 'numeric', month: 'short' });
+}
+
+/** What a wipe keeps, in words: each module's own work, and the settings. */
+function kept() {
+  const s = [...keptLabels(), 'settings'].join(', ').replace(/, ([^,]*)$/, ' and $1');
+  return s[0].toUpperCase() + s.slice(1);
 }
 
 export function accountCard(account: Account): HTMLElement {
@@ -27,8 +34,8 @@ export function accountCard(account: Account): HTMLElement {
     }
     return h('div', { class: 'account-wipe confirm', role: 'alertdialog', 'aria-label': 'Wipe progress?' },
       h('p', {}, h('strong', {}, 'Wipe all progress? '),
-        `Every take, star, clean take, XP, streak, practice day, review and the path go, ${signedIn ? 'here and in your account, on every device you sign in on' : 'on this device'}. `,
-        'Your sketches, your songs, keyboard setup and settings stay. This cannot be undone.'),
+        `Your progress in every module (every take, star, clean take, XP, streak, practice day, review and the path) goes, ${signedIn ? 'here and in your account, on every device you sign in on' : 'on this device'}. `,
+        `${kept()} stay. This cannot be undone.`),
       h('div', { class: 'controls' },
         h('button', {
           class: 'danger-solid', disabled: wiping,

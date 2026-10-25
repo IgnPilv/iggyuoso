@@ -16,7 +16,6 @@ import { stepBar, stepName } from './stepBar';
 import { guardSpace } from './keys';
 import { BRANCH_LABEL, currentStage, growingNow, growingTree, snapshot, songsCard, stageList } from './treeView';
 import { todayCard } from './todayView';
-import { setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from '../../../core/theme';
 
 export const go = (path: string) => { location.hash = path; };
 
@@ -454,7 +453,6 @@ export const settingsView: View = (root) => {
     box.onchange = () => { store.settings = { ...store.settings, [key]: box.checked }; };
     return h('label', {}, box, ` ${label}`);
   };
-  const appearance = themeSetting();
   root.append(
     h('section', { class: 'card' },
       h('h2', {}, 'Keyboard'),
@@ -477,27 +475,8 @@ export const settingsView: View = (root) => {
       h('p', { class: 'small' }, 'The piano you hear in the app is the Salamander Grand Piano by Alexander Holm (',
         h('a', { href: 'https://creativecommons.org/licenses/by/3.0/', target: '_blank', rel: 'noopener' }, 'CC BY 3.0'), ').'),
     ),
-    appearance.el,
   );
-  return appearance.off;
 };
-
-const THEME_CHOICES: [ThemeChoice, string][] = [['system', 'Follow the device'], ['dark', 'Dark'], ['light', 'Light']];
-
-/** Appearance card: System / Dark / Light, kept in sync with the header button. */
-export function themeSetting() {
-  const buttons = THEME_CHOICES.map(([v, label]) =>
-    h('button', { class: 'seg', 'data-theme-choice': v, onclick: () => setThemeChoice(v) }, label));
-  const sync = () => buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeChoice === themeChoice())));
-  sync();
-  window.addEventListener(THEME_CHOICE_EVENT, sync);
-  const el = h('section', { class: 'card' },
-    h('h2', {}, 'Appearance'),
-    h('div', { class: 'setting-row' },
-      h('p', { class: 'small' }, 'Dark is easy on the eyes at the piano. "Follow the device" switches with your system.'),
-      h('div', { class: 'segmented', role: 'group', 'aria-label': 'theme' }, ...buttons)));
-  return { el, off: () => window.removeEventListener(THEME_CHOICE_EVENT, sync) };
-}
 
 function computerKeysCard() {
   const box = h('input', { type: 'checkbox', checked: computerKeys.enabled });

@@ -8,7 +8,7 @@ It should feel bold and new-wave while staying calm to read. Owned by the design
 1. **Never hard-code a colour, font or radius in a component.** Use a token from
    `src/styles/tokens.css`. If none fits, add one, in both themes.
 2. **Canvas and SVG read the same tokens.** CSS/SVG use `var(--token)`. Canvas code calls
-   `palette()` from `src/ui/theme.ts` (cached, refreshed on theme change), or `tokenColor('--ok')`
+   `palette()` from `src/core/theme.ts` (cached, refreshed on theme change), or `tokenColor('--ok')`
    for a token name passed around as data (for example falling notes' `marked` map).
 3. **Both themes, always.** Dark is the reference look; check light too. `#/demo` → "Dark and
    light" flips between them.
@@ -39,7 +39,7 @@ Fonts are bundled from npm (`@fontsource-variable/*`), so nothing loads from a f
 - The player picks **Follow the device / Dark / Light** with the header button or Settings →
   Appearance. It is saved in `settings.theme`.
 - `index.html` sets `<html data-theme>` before first paint, so the page never flashes the wrong theme.
-  `src/ui/theme.ts` keeps it in sync and fires `iggyuoso:theme-choice` when the choice changes.
+  `src/core/theme.ts` keeps it in sync and fires `iggyuoso:theme-choice` when the choice changes.
 - `previewTheme()` shows a theme without saving it. Only the demo uses it.
 
 ## Components
@@ -55,7 +55,7 @@ Fonts are bundled from npm (`@fontsource-variable/*`), so nothing loads from a f
   view toggle. Everything else (tempo, click, guide notes, looping) sits in an **Options drawer**
   (`details.drawer`), whose summary shows the meter and bpm. Status text is a small line
   (`.status-line`), never a headline.
-- **Growing tree** (`src/ui/treeView.ts`): the home page draws the player's tree. The whole shape is
+- **Growing tree** (`src/modules/piano/ui/treeView.ts`): the home page draws the player's tree. The whole shape is
   always there faintly (trunk, a ring per milestone, dashed branches with name and count), and colour
   grows along it: the trunk climbs with milestones passed, each branch lengthens and leafs out with its
   nodes (pale leaf = Practised, full leaf = Solid or Mastered), a glowing bud marks something open, and
@@ -69,7 +69,7 @@ Fonts are bundled from npm (`@fontsource-variable/*`), so nothing loads from a f
   branches under its title. Badges appear only for things worth acting on
   or celebrating (Review, Solid, Mastered, reps in progress); "not grown yet" is a quieter dashed tile,
   never a warning.
-- **Theory screen** (`src/ui/theory.ts` builds it, design styles it): large text (about 1.2–1.35 rem)
+- **Theory screen** (`src/modules/piano/ui/theory.ts` builds it, design styles it): large text (about 1.2–1.35 rem)
   beside a picture panel (staff, lit keys, Hear it) on wide screens, stacked on phones. The rule is a
   callout with a gradient edge, key terms are chips, and the check question is its own card with a gradient top
   edge. In the playground the note name is set big in the display font.
