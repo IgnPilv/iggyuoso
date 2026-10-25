@@ -41,14 +41,48 @@ const HAND_LABEL: Record<string, string> = {
 export function mountExercise(root: HTMLElement, ex: Exercise, cal: Calibration, onDone: OnDone): () => void {
   root.replaceChildren();
   root.classList.add('exercise', `kind-${ex.kind}`);
-  if (ex.kind === 'find') return findPlayer(root, ex, cal, onDone);
-  if (ex.kind === 'sequence') return sequencePlayer(root, ex, cal, onDone);
-  if (ex.kind === 'ear') return earPlayer(root, ex, cal, onDone);
-  if (ex.kind === 'quiz') return quizPlayer(root, ex, cal, onDone);
-  if (ex.kind === 'build') return buildPlayer(root, ex, cal, onDone);
-  if (ex.kind === 'generated') return generatedHost(root, ex, cal, onDone);
-  if (ex.kind === 'improvise') return improvisePlayer(root, ex, cal, onDone);
-  return timedHost(root, ex, cal, onDone);
+  const unmount = ex.kind === 'find' ? findPlayer(root, ex, cal, onDone)
+    : ex.kind === 'sequence' ? sequencePlayer(root, ex, cal, onDone)
+    : ex.kind === 'ear' ? earPlayer(root, ex, cal, onDone)
+    : ex.kind === 'quiz' ? quizPlayer(root, ex, cal, onDone)
+    : ex.kind === 'build' ? buildPlayer(root, ex, cal, onDone)
+    : ex.kind === 'generated' ? generatedHost(root, ex, cal, onDone)
+    : ex.kind === 'improvise' ? improvisePlayer(root, ex, cal, onDone)
+    : timedHost(root, ex, cal, onDone);
+  const unwatch = keepResultClear(root);
+  return () => { unwatch(); unmount(); };
+}
+
+/** In a lesson panel the result card comes up over the stage: it starts where the stage starts,
+ *  below the controls, and shuts the Options pop-over. Options opened again over a result moves
+ *  the card down below it, so neither ever covers the other. */
+function keepResultClear(root: HTMLElement): () => void {
+  const place = (slot: HTMLElement, shut: boolean) => {
+    const box = slot.parentElement;
+    if (!slot.childElementCount || !box || !slot.closest('.focus') || slot.classList.contains('fs-result')) return;
+    const drawers = box.querySelectorAll<HTMLDetailsElement>(':scope > .ex-top > details.drawer[open]');
+    if (shut) drawers.forEach((d) => { d.open = false; });
+    const stage = box.querySelector<HTMLElement>(':scope > .stage');
+    let top = stage?.offsetTop ?? 0;
+    const body = shut ? null : drawers[0]?.querySelector<HTMLElement>('.drawer-body');
+    if (body) top = Math.max(top, body.getBoundingClientRect().bottom - box.getBoundingClientRect().top + 8);
+    if (top) slot.style.setProperty('--result-top', `${Math.round(top)}px`);
+  };
+  const watch = new MutationObserver((records) => {
+    for (const r of records) {
+      const t = r.target as HTMLElement;
+      if (t.classList?.contains('result-slot')) place(t, true);
+    }
+  });
+  watch.observe(root, { childList: true, subtree: true });
+  const onToggle = (e: Event) => {
+    const d = e.target as HTMLElement;
+    if (!d.classList?.contains('drawer')) return;
+    const slot = d.closest('.exercise')?.querySelector<HTMLElement>(':scope > .result-slot');
+    if (slot) place(slot, false);
+  };
+  root.addEventListener('toggle', onToggle, true);
+  return () => { watch.disconnect(); root.removeEventListener('toggle', onToggle, true); };
 }
 
 /** For a run of a generated drill: makes the next run (players call it from "Try again"). */
@@ -584,8 +618,11 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     falling?.draw({ beat: -1, held: midi.held, noteState: () => 'coming', flashes: [], now: performance.now(), banner: 'Press Listen or Play' });
   }
 
+  // In a lesson panel Options is a pop-over: it shuts when a take starts, so it never covers the music.
+  let closeOptions = () => {};
   /** `echoTurn`: the tap-back half of an echo, right after the app played the rhythm. */
   const start = (mode: 'listen' | 'play', echoTurn = false) => {
+    closeOptions();
     run?.cancel();
     clearTimeout(again);
     audio();
@@ -830,6 +867,10 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         ex.tap ? '' : h('label', {}, fingerBox, ' Fingers')),
       loopControls));
   drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
+  closeOptions = () => { if (drawer.open && drawer.closest('.focus')) drawer.open = false; };
+  // A tap anywhere else shuts the pop-over too.
+  const onOutside = (e: PointerEvent) => { if (!drawer.contains(e.target as Node)) closeOptions(); };
+  document.addEventListener('pointerdown', onOutside);
   const transportMain = h('div', { class: 'transport-main' }, listenBtn, playBtn, pauseBtn, stopBtn);
   const transport = h('div', { class: 'transport' }, transportMain, echo ? '' : toggle.el);
   root.append(
@@ -849,7 +890,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       onChange: (on) => buildView(on ? 'falling' : toggle.get()) });
   }
   buildView(fs?.on ? 'falling' : toggle.get());
-  return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); fs?.destroy(); window.removeEventListener('keydown', onSpace); };
+  return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); fs?.destroy(); window.removeEventListener('keydown', onSpace); document.removeEventListener('pointerdown', onOutside); };
 }
 
 /** `loopTake`: a practice loop, which is never saved, so there is no note about records. */
