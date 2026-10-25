@@ -1,0 +1,15 @@
+id: song-scarborough-fair-lh
+title: 'Scarborough Fair: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Dm
+tempo: 92
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: D3+F3+A3:h. | D3+F3+A3:h. | C3+E3+G3:h. | D3+F3+A3:h. | D3+F3+A3:h. | C3+F3+A3:h. | B2+D3+G3:h. | C3+E3+A3:h. | D3+F3+A3:h.
+  | D3+F3+A3:h. | C3+F3+A3:h. | D3+F3+A3:h. | C3+E3+G3:h. | D3+F3+A3:h. | C3+E3+G3:h. | C3+E3+G3:h. | D3+F3+A3:h.
+reps: 2
+days: 1

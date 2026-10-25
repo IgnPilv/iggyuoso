@@ -1,5 +1,5 @@
 import { branches, content, songOf, stages, stepTitle, treeNodes } from '../content';
-import type { BranchId, TreeNode, TreeStage } from '../content/tree';
+import { GENRES, type BranchId, type Genre, type TreeNode, type TreeStage } from '../content/tree';
 import { frontier, lessonGoals, mastery as realMastery } from '../progress';
 import type { Mastery, NodeState } from '../progress/mastery';
 import { roomForBranch } from './practiceRoom';
@@ -415,23 +415,38 @@ export function songList(snap: Map<string, NodeView>): { song: NodeView; steps: 
 /** The milestone a song step opens after, if any. */
 const openedBy = (v: NodeView) => treeNodes.get(v.node.requires.find((r) => treeNodes.get(r)?.type === 'checkpoint') ?? '');
 
-/** The songbook: songs grouped by the milestone that opens them (a song in steps: its first step). */
+/** The Songbook's group and search, kept while the page is redrawn (not saved). */
+export const songFilter: { genre: Genre | ''; text: string } = { genre: '', text: '' };
+
+/** Lower case without accents, for search: "Frère" finds "frere". */
+const plain = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+/** The songbook: songs grouped by the milestone that opens them (a song in steps: its first step),
+ *  narrowed to one group (children's songs, folk, shanties, carols, classical...) and by a search. */
 export function songsPage(p: Progress = { store: realStore, mastery: realMastery }): HTMLElement {
   const snap = snapshot(p);
   const songs = songList(snap);
-  const groups = new Map<string, typeof songs>();
-  for (const x of songs) {
-    const ms = openedBy(x.steps[0])?.id ?? '';
-    groups.set(ms, [...(groups.get(ms) ?? []), x]);
-  }
   const learned = (x: (typeof songs)[number]) => x.steps.every((v) => v.done);
-  return h('section', { class: 'card songs-page' },
-    h('div', { class: 'unit-head' },
-      h('h2', {}, 'Songbook'),
-      h('span', { class: 'unit-progress' }, `${songs.filter(learned).length} of ${songs.length} learned`)),
-    h('p', {}, 'Tunes to play for fun, nearly all old enough to be free for everyone. Each milestone you pass opens a new shelf. Each song comes in steps: the tune, the left hand, then both together; a bigger song is learned in several steps, each with its own lesson.'),
-    h('p', { class: 'banner' }, 'Have a song of your own? ', h('a', { href: '#/mysongs' }, 'Import its MIDI file into My songs'), ' and practise it like any piece.'),
-    ...[...groups].map(([msId, list]) => {
+  const count = new Map<string, number>();
+  for (const x of songs) if (x.song.node.genre) count.set(x.song.node.genre, (count.get(x.song.node.genre) ?? 0) + 1);
+  const shelves = h('div', { class: 'song-shelves' });
+  const chips = h('div', { class: 'song-genres', role: 'group', 'aria-label': 'Song groups' });
+  const search = h('input', { type: 'search', class: 'song-search', placeholder: 'Find a song or composer', 'aria-label': 'Find a song', value: songFilter.text }) as HTMLInputElement;
+  const draw = () => {
+    const words = plain(songFilter.text).split(/\s+/).filter(Boolean);
+    const shown = songs.filter((x) => (!songFilter.genre || x.song.node.genre === songFilter.genre)
+      && words.every((w) => plain(`${x.song.node.title} ${x.song.node.about ?? ''}`).includes(w)));
+    const groups = new Map<string, typeof songs>();
+    for (const x of shown) {
+      const ms = openedBy(x.steps[0])?.id ?? '';
+      groups.set(ms, [...(groups.get(ms) ?? []), x]);
+    }
+    chips.replaceChildren(...([['', `All ${songs.length}`], ...Object.entries(GENRES).filter(([g]) => count.has(g)).map(([g, name]) => [g, `${name} ${count.get(g)}`])] as [Genre | '', string][])
+      .map(([g, label]) => h('button', {
+        class: 'secondary chip-button', type: 'button', 'aria-pressed': String(songFilter.genre === g),
+        onclick: () => { songFilter.genre = g; draw(); },
+      }, label)));
+    shelves.replaceChildren(...(shown.length ? [...groups].map(([msId, list]) => {
       const ms = treeNodes.get(msId);
       const passed = ms ? grown(snap.get(msId)!) : true;
       return h('div', { class: `song-shelf${passed ? '' : ' closed'}` },
@@ -449,7 +464,18 @@ export function songsPage(p: Progress = { store: realStore, mastery: realMastery
                 ? h('span', { class: 'state-badge' }, at < 0 ? `${x.steps.length} steps learned` : `Step ${at + 1} of ${x.steps.length}`)
                 : stateBadge(v, p.mastery.isDue(v.node.id))));
         })));
-    }));
+    }) : [h('p', { class: 'small' }, 'No song matches. Try another word or "All".')]));
+  };
+  search.addEventListener('input', () => { songFilter.text = search.value; draw(); });
+  draw();
+  return h('section', { class: 'card songs-page' },
+    h('div', { class: 'unit-head' },
+      h('h2', {}, 'Songbook'),
+      h('span', { class: 'unit-progress' }, `${songs.filter(learned).length} of ${songs.length} learned`)),
+    h('p', {}, 'Tunes to play for fun: folk songs, shanties, carols, hymns and classical themes, nearly all old enough to be free for everyone, each in our own arrangement. Each milestone you pass opens a new shelf. Each song comes in steps: the rhythm, the tune, the left hand, then both together and a fuller arrangement; a bigger song is learned in several steps, each with its own lesson.'),
+    h('p', { class: 'banner' }, 'Have a song of your own? ', h('a', { href: '#/mysongs' }, 'Import its MIDI file into My songs'), ' and practise it like any piece.'),
+    h('div', { class: 'song-tools' }, search, chips),
+    shelves);
 }
 
 /** A song taught in steps: its steps in order, each a lesson, with the milestone it opens after. */

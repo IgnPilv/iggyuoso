@@ -1,0 +1,14 @@
+id: song-can-can-rh
+title: 'Can-Can: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 112
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C5:q D5:e F5:e | E5:e D5:e G5:q | G5:q G5:e A5:e | E5:e F5:e D5:q | D5:q F5:e E5:e | D5:e C5:e C6:q | B5:e A5:e G5:e
+  F5:e | E5:e D5:e C5:q
+reps: 2
+days: 1

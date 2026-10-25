@@ -1,0 +1,25 @@
+id: song-star-spangled-banner
+title: The Star-Spangled Banner
+skills:
+- songs
+steps:
+- explain: |
+    **The Star-Spangled Banner** · United States anthem, tune "To Anacreon in Heaven" by John Stafford Smith, 1770s
+
+    The tune was an English club song of the 1770s. Francis Scott Key wrote the words to it in 1814; it became the American anthem in 1931.
+  staff:
+    notes: G4:e. E4:s  |  C4:q E4:q G4:q
+  sound: G4:e. E4:s  |  C4:q E4:q G4:q  |  C5:h E5:e. D5:s  |  C5:q E4:q F#4:q
+- explain: |
+    **Before you play.** Wide leaps up and down the C chord. The dotted eighth and sixteenth is a quick "snap".
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 3/4 · Tempo: 84
+- exercise: song-star-spangled-banner-tap
+- exercise: song-star-spangled-banner-rh
+- exercise: song-star-spangled-banner-lh
+- exercise: song-star-spangled-banner
+- exercise: song-star-spangled-banner-arranged
+- exercise: song-star-spangled-banner-performance
+recap: 'The Star-Spangled Banner: tune, left hand, together. Come back to it any time; songs are for fun.'

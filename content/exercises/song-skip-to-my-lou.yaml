@@ -1,0 +1,15 @@
+id: song-skip-to-my-lou
+title: Skip to My Lou
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q C4:q C4:q E4:q | G4:h G4:h | D4:q B3:q B3:q D4:q | F4:h F4:h | E4:q C4:q C4:q E4:q | G4:h G4:h | D4:q E4:q F4:q
+  E4:q | D4:h C4:h
+left: C3:w | C3:w | G2:w | G2:w | C3:w | C3:w | G2:w | G2:h C3:h
+reps: 3
+days: 2

@@ -1,0 +1,16 @@
+id: song-sur-le-pont
+title: Sur le pont d'Avignon
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C4:q C4:q | C4:e D4:e E4:q | E4:q E4:q | E4:e F4:e G4:q | F4:q E4:q | D4:e E4:e C4:q | D4:e E4:e C4:q | D4:e E4:e C4:q
+  | C4:q C4:q | C4:e D4:e E4:q | E4:q E4:q | E4:e F4:e G4:q | F4:q E4:q | D4:e E4:e C4:q | D4:q G3:q | C4:h
+left: C3:h | C3:h | C3:h | C3:h | F2:q C3:q | G2:q C3:q | G2:q C3:q | G2:q C3:q | C3:h | C3:h | C3:h | C3:h | F2:q C3:q |
+  G2:q C3:q | G2:h | C3:h
+reps: 3
+days: 2

@@ -1,0 +1,15 @@
+id: song-symphony-40-lh
+title: 'Symphony No. 40: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Gm
+tempo: 116
+tempoLadder: true
+meter: 4/4
+pickup: e e
+countIn: 1
+left: r:q | D3+G3+Bb3:w | D3+G3+Bb3:w | C3+Eb3+G3:w | A2+D3+F#3:w | A2+D3+F#3:w | A2+D3+F#3:w | A2+D3+F#3:w | Bb2+D3+G3:h.
+reps: 2
+days: 1

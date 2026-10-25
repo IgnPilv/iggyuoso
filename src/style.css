@@ -1148,6 +1148,9 @@ ol.lessons li.bud a:hover { opacity: 1; }
 .branch-stage h3 { margin: var(--space-5) 0 0; font-family: var(--font-display); font-size: var(--text-md); color: var(--ink-2); }
 ol.vine { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-left: 0; }
 ol.path-nodes.growing-list { margin-left: 0; }
+.song-tools { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+.song-search { width: min(100%, 420px); }
+.song-genres { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .song-shelf { margin-top: var(--space-5); }
 .song-shelf h3 { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin: 0; font-family: var(--font-display); font-size: var(--text-md); }
 .song-shelf h3 .state-badge { margin-left: 0; }
@@ -1166,7 +1169,7 @@ ol.path-nodes.growing-list { margin-left: 0; }
 .song-grid .state-badge { grid-row: 1; grid-column: 2; }
 
 /* Sketchbook: free play, record, keep ideas. Text fields look like the selects. */
-input[type='text'], input[type='number'], textarea {
+input[type='text'], input[type='search'], input[type='number'], textarea {
   font: inherit;
   font-size: var(--text-sm);
   color: var(--ink);

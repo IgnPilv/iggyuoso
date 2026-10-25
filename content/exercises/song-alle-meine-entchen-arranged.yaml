@@ -1,0 +1,15 @@
+id: song-alle-meine-entchen-arranged
+title: Alle meine Entchen, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (root and fifth).
+display: staff
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:e D4:e E4:e F4:e G4:q G4:q | A4:e A4:e A4:e A4:e G4:h | A4:e A4:e A4:e A4:e G4:h | F4:e F4:e F4:e F4:e E4:q E4:q
+  | D4:e D4:e D4:e D4:e C4:h
+left: C3+G3:w | F2+C3:h C3+G3:h | F2+C3:h C3+G3:h | G2+D3:h C3+G3:h | G2+D3:h C3+G3:h
+reps: 3
+days: 2

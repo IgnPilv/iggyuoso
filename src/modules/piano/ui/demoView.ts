@@ -7,7 +7,7 @@ import { Pianist } from '../demo/pianist';
 import { parse } from 'yaml';
 import { loadContent, parseExercise } from '../content/load';
 import { h, type View } from '../../../core/dom';
-import { branchPage, growingNow, growingTree, snapshot, songPage, songsCard, songsPage, stageList } from './treeView';
+import { branchPage, growingNow, growingTree, snapshot, songFilter, songPage, songsCard, songsPage, stageList } from './treeView';
 import { mountExercise, resetDemoOptions } from './players';
 import { previewFullScreen } from './fullScreen';
 import { renderProfile, sampleProgress } from './profileView';
@@ -795,6 +795,22 @@ function scenes(): Scene[] {
         window.setTimeout(next, 21000),
       ];
       return () => timers.forEach(clearTimeout);
+    },
+  });
+  out.push({
+    title: 'The Songbook',
+    caption: 'The Songbook holds hundreds of songs, all old enough to be free (folk songs, children\'s songs, shanties, carols, hymns, classical themes, ragtime), each in our own arrangement and each one entry whose steps are the rhythm, the tune, the left hand, both hands, a fuller left hand and a performance. Songs sit on shelves by the milestone they open after. The chips show one group at a time, and the search box finds a song or a composer: here the classical shelf, then "mozart".',
+    run: (box, next) => {
+      const p = sampleTreeProgress();
+      const keep = { ...songFilter };
+      const show = () => { box.replaceChildren(songsPage(p)); };
+      show();
+      const timers = [
+        window.setTimeout(() => { songFilter.genre = 'classical'; show(); }, 5000),
+        window.setTimeout(() => { songFilter.text = 'mozart'; show(); }, 10000),
+        window.setTimeout(next, 16000),
+      ];
+      return () => { timers.forEach(clearTimeout); Object.assign(songFilter, keep); };
     },
   });
   out.push({

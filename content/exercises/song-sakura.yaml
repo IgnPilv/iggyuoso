@@ -1,0 +1,18 @@
+id: song-sakura
+title: Sakura, Sakura
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Am
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q A4:q B4:h | A4:q A4:q B4:h | A4:q B4:q C5:q B4:q | A4:q B4:e A4:e F4:h | E4:q C4:q E4:q F4:q | E4:q E4:e C4:e
+  B3:h | A4:q B4:q C5:q B4:q | A4:q B4:e A4:e F4:h | E4:q C4:q E4:q F4:q | E4:q E4:e C4:e B3:h | A4:q A4:q B4:h | A4:q A4:q
+  B4:h | E4:q F4:q B4:e A4:e F4:q | E4:w
+left: A2+C3+E3:w | A2+C3+E3:w | A2+C3+E3:w | A2+D3+F3:w | A2+C3+E3:w | B2+E3+G#3:w | C3+E3+A3:w | D3+F3+A3:w | C3+E3+A3:w
+  | B2+E3+G#3:w | C3+E3+A3:w | C3+E3+A3:w | D3+F3+A3:w | B2+E3+G#3:w
+reps: 3
+days: 2

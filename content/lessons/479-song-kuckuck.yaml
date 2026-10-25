@@ -1,0 +1,27 @@
+id: song-kuckuck
+title: Kuckuck, Kuckuck, ruft's aus dem Wald
+skills:
+- songs
+steps:
+- explain: |
+    **Kuckuck, Kuckuck, ruft's aus dem Wald** · German spring song, 1835 (words by Hoffmann von Fallersleben)
+
+    The cuckoo calls from the wood: the falling third C–A in bars 1 and 2 is the cuckoo's own two notes.
+  staff:
+    notes: C5:h A4:q  |  C5:h A4:q
+    key: F
+  sound: C5:h A4:q  |  C5:h A4:q  |  G4:q F4:q G4:q  |  F4:h.
+- explain: |
+    **Before you play.** F major: B♭ comes in bar 7 and bar 11.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 3/4 · Tempo: 108
+- exercise: song-kuckuck-tap
+- exercise: song-kuckuck-by-ear
+- exercise: song-kuckuck-rh
+- exercise: song-kuckuck-lh
+- exercise: song-kuckuck
+- exercise: song-kuckuck-arranged
+- exercise: song-kuckuck-performance
+recap: 'Kuckuck, Kuckuck, ruft''s aus dem Wald: tune, left hand, together. Come back to it any time; songs are for fun.'

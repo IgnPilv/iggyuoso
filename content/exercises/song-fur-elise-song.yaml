@@ -1,0 +1,17 @@
+id: song-fur-elise-song
+title: Für Elise
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Am
+tempo: 60
+tempoLadder: true
+meter: 3/8
+pickup: s s
+countIn: 1
+right: E5:s D#5:s | E5:s D#5:s E5:s B4:s D5:s C5:s | A4:e r:s C4:s E4:s A4:s | B4:e r:s E4:s G#4:s B4:s | C5:e r:s E4:s E5:s
+  D#5:s | E5:s D#5:s E5:s B4:s D5:s C5:s | A4:e r:s C4:s E4:s A4:s | B4:e r:s E4:s C5:s B4:s | A4:q
+left: r:e | r:q. | A2+C3+E3:q. | B2+E3+G#3:q. | C3+E3+A3:q. | r:q. | C3+E3+A3:q. | B2+E3+G#3:q. | C3+E3+A3:q
+reps: 3
+days: 2

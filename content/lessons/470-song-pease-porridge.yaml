@@ -1,0 +1,26 @@
+id: song-pease-porridge
+title: Pease Porridge Hot
+skills:
+- songs
+steps:
+- explain: |
+    **Pease Porridge Hot** · English rhyme, 1760s
+
+    A clapping rhyme about pea soup ("pease porridge") that was hot, cold, and nine days old. Partners clap each other's hands on the beat.
+  staff:
+    notes: C4:q D4:q E4:h  |  C4:q D4:q E4:h
+  sound: C4:q D4:q E4:h  |  C4:q D4:q E4:h  |  E4:q F4:q G4:q G4:q  |  F4:q E4:q D4:h
+- explain: |
+    **Before you play.** All in C position: thumb on C, every finger on its own key.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 96
+- exercise: song-pease-porridge-tap
+- exercise: song-pease-porridge-by-ear
+- exercise: song-pease-porridge-rh
+- exercise: song-pease-porridge-lh
+- exercise: song-pease-porridge
+- exercise: song-pease-porridge-arranged
+- exercise: song-pease-porridge-performance
+recap: 'Pease Porridge Hot: tune, left hand, together. Come back to it any time; songs are for fun.'

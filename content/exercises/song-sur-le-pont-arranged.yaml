@@ -1,0 +1,17 @@
+id: song-sur-le-pont-arranged
+title: Sur le pont d'Avignon, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C4:q C4:q | C4:e D4:e E4:q | E4:q E4:q | E4:e F4:e G4:q | F4:q E4:q | D4:e E4:e C4:q | D4:e E4:e C4:q | D4:e E4:e C4:q
+  | C4:q C4:q | C4:e D4:e E4:q | E4:q E4:q | E4:e F4:e G4:q | F4:q E4:q | D4:e E4:e C4:q | D4:q G3:q | C4:h
+left: C2+E2+G2:h | C2+E2+G2:h | C2+E2+G2:h | C2+E2+G2:h | C2+F2+A2:q C2+E2+G2:q | B1+D2+G2:q C2+E2+G2:q | B1+D2+G2:q C2+E2+G2:q
+  | B1+D2+G2:q C2+E2+G2:q | C2+E2+G2:h | C2+E2+G2:h | C2+E2+G2:h | C2+E2+G2:h | C2+F2+A2:q C2+E2+G2:q | B1+D2+G2:q C2+E2+G2:q
+  | B1+D2+G2:h | C2+E2+G2:h
+reps: 3
+days: 2

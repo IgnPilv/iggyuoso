@@ -1,0 +1,14 @@
+id: song-sonata-k545-lh
+title: 'Sonata facile: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3+E3+G3:w | B2+D3+G3:h C3+E3+G3:h | C3+F3+A3:h C3+E3+G3:h | B2+D3+G3:h C3+E3+G3:h | C3+F3+A3:w | C3+E3+G3:w | D3+F3+A3:w
+  | D3+G3+B3:w | C3+E3+G3:w
+reps: 2
+days: 1

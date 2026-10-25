@@ -1,0 +1,16 @@
+id: song-ah-vous-dirai-rh
+title: 'Baa, Baa, Black Sheep: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q G4:q D5:q D5:q | E5:e E5:e E5:e E5:e D5:h | C5:q C5:q B4:q B4:q | A4:e A4:e A4:e A4:e G4:h | D5:q D5:e D5:e C5:q
+  C5:e C5:e | B4:q B4:e B4:e A4:h | D5:q D5:e D5:e C5:q C5:e C5:e | B4:q B4:e B4:e A4:h | G4:q G4:q D5:q D5:q | E5:e E5:e
+  E5:e E5:e D5:h | C5:q C5:q B4:q B4:q | A4:q A4:q G4:h
+reps: 2
+days: 1

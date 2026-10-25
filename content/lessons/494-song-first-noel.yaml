@@ -1,0 +1,27 @@
+id: song-first-noel
+title: The First Noel
+skills:
+- songs
+steps:
+- explain: |
+    **The First Noel** · English carol, printed 1823
+
+    A Cornish carol, first printed in 1823. The tune climbs the scale from D to D again and again, like a peal of bells.
+  staff:
+    notes: F#4:e E4:e  |  D4:q. E4:e F#4:e G4:e
+    key: D
+  sound: F#4:e E4:e  |  D4:q. E4:e F#4:e G4:e  |  A4:h B4:e C#5:e  |  D5:q C#5:q B4:q
+- explain: |
+    **Before you play.** D major: F♯ and C♯. The chorus ("No-el, No-el") starts in bar 17.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 96
+- exercise: song-first-noel-tap
+- exercise: song-first-noel-by-ear
+- exercise: song-first-noel-rh
+- exercise: song-first-noel-lh
+- exercise: song-first-noel
+- exercise: song-first-noel-arranged
+- exercise: song-first-noel-performance
+recap: 'The First Noel: tune, left hand, together. Come back to it any time; songs are for fun.'

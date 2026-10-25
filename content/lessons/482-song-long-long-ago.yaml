@@ -1,0 +1,26 @@
+id: song-long-long-ago
+title: Long, Long Ago
+skills:
+- songs
+steps:
+- explain: |
+    **Long, Long Ago** · Thomas Haynes Bayly, 1833
+
+    A parlour song of 1833 about old times remembered, sung in English, German and Japanese schools for two hundred years.
+  staff:
+    notes: C4:q C4:q D4:q E4:q  |  E4:h D4:h
+  sound: C4:q C4:q D4:q E4:q  |  E4:h D4:h  |  E4:q E4:q F4:q G4:q  |  G4:h. r:q
+- explain: |
+    **Before you play.** Long notes at the end of every second bar: hold them for their full length while the left hand changes.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-long-long-ago-tap
+- exercise: song-long-long-ago-by-ear
+- exercise: song-long-long-ago-rh
+- exercise: song-long-long-ago-lh
+- exercise: song-long-long-ago
+- exercise: song-long-long-ago-arranged
+- exercise: song-long-long-ago-performance
+recap: 'Long, Long Ago: tune, left hand, together. Come back to it any time; songs are for fun.'

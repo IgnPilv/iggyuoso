@@ -1,0 +1,18 @@
+id: song-angels-we-have-heard
+title: Angels We Have Heard on High
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q A4:q A4:q C5:q | C5:q. Bb4:e A4:h | A4:q G4:q A4:q C5:q | A4:q. G4:e F4:h | A4:q A4:q A4:q C5:q | C5:q. Bb4:e
+  A4:h | A4:q G4:q A4:q C5:q | A4:q. G4:e F4:h | C5:h D5:e C5:e Bb4:e A4:e | Bb4:h C5:e Bb4:e A4:e G4:e | A4:h Bb4:e A4:e
+  G4:e F4:e | G4:h. C4:q | F4:q G4:q A4:q Bb4:q | A4:h G4:h | F4:w
+left: F2:w | C3:h F2:h | F2:w | C3:h F2:h | F2:w | C3:h F2:h | F2:w | C3:h F2:h | F2:w | Bb2:w | D3:w | C3:w | F2:w | C3:w
+  | F2:w
+reps: 3
+days: 2

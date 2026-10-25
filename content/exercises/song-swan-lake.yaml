@@ -1,0 +1,17 @@
+id: song-swan-lake
+title: Swan Lake
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Bm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4:h B3:e C#4:e D4:e E4:e | F#4:h. D4:q | F#4:h. D4:q | F#4:h. B3:q | D4:q B3:q G3:q D4:q | B3:w | F#4:h B3:e C#4:e
+  D4:e E4:e | F#4:h. D4:q | F#4:h. D4:q | F#4:h. B3:q | D4:q B3:q G3:q D4:q | B3:w
+left: B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+G2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w
+  | B1+D2+F#2:w | B1+D2+G2:w | B1+D2+F#2:w
+reps: 3
+days: 2

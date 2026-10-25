@@ -1,0 +1,28 @@
+id: song-mountain-king
+title: In the Hall of the Mountain King
+skills:
+- songs
+steps:
+- explain: |
+    **In the Hall of the Mountain King** · Edvard Grieg, "Peer Gynt", 1875
+
+    Peer Gynt creeps into the troll king's hall. Grieg's tune starts softly and slowly and gets faster and louder until the trolls chase him out.
+  staff:
+    notes: A3:e B3:e C4:e D4:e E4:e C4:e E4:q  |  D#4:e B3:e D#4:q D4:e Bb3:e D4:q
+    key: Am
+  sound: A3:e B3:e C4:e D4:e E4:e C4:e E4:q  |  D#4:e B3:e D#4:q D4:e Bb3:e D4:q  |  A3:e B3:e C4:e D4:e E4:e C4:e E4:e A4:e  |  G4:e
+    E4:e C4:e E4:e G4:h
+- explain: |
+    **Before you play.** Tiptoe eighths. Bar 2 has D♯ then D♮ and B♭: a chromatic slide.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 4/4 · Tempo: 96
+- exercise: song-mountain-king-tap
+- exercise: song-mountain-king-by-ear
+- exercise: song-mountain-king-rh
+- exercise: song-mountain-king-lh
+- exercise: song-mountain-king
+- exercise: song-mountain-king-arranged
+- exercise: song-mountain-king-performance
+recap: 'In the Hall of the Mountain King: tune, left hand, together. Come back to it any time; songs are for fun.'

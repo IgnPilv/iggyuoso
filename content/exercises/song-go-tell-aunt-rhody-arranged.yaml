@@ -1,0 +1,14 @@
+id: song-go-tell-aunt-rhody-arranged
+title: Go Tell Aunt Rhody, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (root and fifth).
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:h E5:q D5:q | C5:h C5:h | D5:q D5:q F5:q E5:q | D5:h C5:h | G4:h G4:q F4:q | E4:h E4:h | D4:q C4:q D4:q E4:q | C4:w
+left: C3+G3:w | C3+G3:w | G2+D3:w | G2+D3:h C3+G3:h | C3+G3:w | C3+G3:w | G2+D3:w | C3+G3:w
+reps: 3
+days: 2

@@ -1,0 +1,18 @@
+id: song-turkish-march-arranged
+title: Turkish March, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (rolling arpeggios). Change the pedal with each chord.
+display: staff
+key: Am
+tempo: 96
+tempoLadder: true
+meter: 2/4
+pickup: s s s s
+countIn: 1
+right: B4:s A4:s G#4:s A4:s | C5:e r:e D5:s C5:s B4:s C5:s | E5:e r:e F5:s E5:s D#5:s E5:s | B5:s A5:s G#5:s A5:s B5:s A5:s
+  G#5:s A5:s | C6:q A5:e C6:e | B5:e A5:e G#5:e A5:e | E5:e F5:e D5:q | C5:q B4:q | A4:q
+left: r:q | A2:q E3:q | A2:q E3:q | A2:q E3:q | A2:q E3:q | E3:q B3:q | D3:q A3:q | A2:q E3:q | A2+C3+E3:q
+pedal: r:q | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:q
+reps: 3
+days: 2

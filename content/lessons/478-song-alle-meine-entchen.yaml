@@ -1,0 +1,27 @@
+id: song-alle-meine-entchen
+title: Alle meine Entchen
+skills:
+- songs
+steps:
+- explain: |
+    **Alle meine Entchen** · German children's song, 1800s
+
+    "All my ducklings swim on the lake, heads in the water, tails in the air." It climbs the first five notes of the scale and paddles back down.
+  staff:
+    notes: C4:e D4:e E4:e F4:e G4:q G4:q  |  A4:e A4:e A4:e A4:e G4:h
+  sound: C4:e D4:e E4:e F4:e G4:q G4:q  |  A4:e A4:e A4:e A4:e G4:h  |  A4:e A4:e A4:e A4:e G4:h  |  F4:e F4:e F4:e F4:e E4:q
+    E4:q
+- explain: |
+    **Before you play.** Five fingers on five keys, C to G, then A with the fifth finger stretching one key.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 100
+- exercise: song-alle-meine-entchen-tap
+- exercise: song-alle-meine-entchen-by-ear
+- exercise: song-alle-meine-entchen-rh
+- exercise: song-alle-meine-entchen-lh
+- exercise: song-alle-meine-entchen
+- exercise: song-alle-meine-entchen-arranged
+- exercise: song-alle-meine-entchen-performance
+recap: 'Alle meine Entchen: tune, left hand, together. Come back to it any time; songs are for fun.'

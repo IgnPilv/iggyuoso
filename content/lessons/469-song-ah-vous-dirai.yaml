@@ -1,0 +1,27 @@
+id: song-ah-vous-dirai
+title: Baa, Baa, Black Sheep
+skills:
+- songs
+steps:
+- explain: |
+    **Baa, Baa, Black Sheep** · English rhyme, 1731, on the French tune "Ah! vous dirai-je, maman"
+
+    Same tune as Twinkle, Twinkle, but the English rhyme splits some notes in two: "have you a-ny wool". This time in G major, with F♯ (not used here).
+  staff:
+    notes: G4:q G4:q D5:q D5:q  |  E5:e E5:e E5:e E5:e D5:h
+    key: G
+  sound: G4:q G4:q D5:q D5:q  |  E5:e E5:e E5:e E5:e D5:h  |  C5:q C5:q B4:q B4:q  |  A4:e A4:e A4:e A4:e G4:h
+- explain: |
+    **Before you play.** The right hand sits low, from G below middle C; the left hand stays an octave lower.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 96
+- exercise: song-ah-vous-dirai-tap
+- exercise: song-ah-vous-dirai-by-ear
+- exercise: song-ah-vous-dirai-rh
+- exercise: song-ah-vous-dirai-lh
+- exercise: song-ah-vous-dirai
+- exercise: song-ah-vous-dirai-arranged
+- exercise: song-ah-vous-dirai-performance
+recap: 'Baa, Baa, Black Sheep: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,17 @@
+id: song-polly-wolly-performance
+title: 'Polly Wolly Doodle: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: F
+tempo: 116
+meter: 2/4
+countIn: 1
+right: C4:e C4:e C4:e C4:e | C4:q F4:q | A4:e A4:e A4:e A4:e | A4:q F4:q | G4:e G4:e G4:e G4:e | G4:q E4:q | F4:e F4:e F4:e
+  A4:e | C5:q. r:e | A4:e A4:e A4:e A4:e | A4:q F4:q | G4:e G4:e G4:e G4:e | G4:q E4:q | F4:e F4:e F4:e F4:e | G4:e F4:e E4:e
+  G4:e | F4:h
+left: C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+E3+G3:h | C3+E3+G3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h |
+  C3+F3+A3:h | C3+E3+G3:h | C3+E3+G3:h | C3+F3+A3:h | C3+E3+G3:h | C3+F3+A3:h
+reps: 2
+days: 2

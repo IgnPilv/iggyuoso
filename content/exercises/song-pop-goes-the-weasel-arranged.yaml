@@ -1,0 +1,17 @@
+id: song-pop-goes-the-weasel-arranged
+title: Pop! Goes the Weasel, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C4:q C4:e D4:q D4:e | E4:e G4:e E4:e C4:q. | C4:q C4:e D4:q D4:e | E4:q. C4:q. | C4:q C4:e D4:q D4:e | E4:e G4:e E4:e
+  C4:q. | A4:q. D4:q F4:e | E4:q. C4:q.
+left: C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e
+  G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | F2:e C3:e A2:e G2:e D3:e B2:e | C3+E3+G3:h.
+pedal: x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h.
+reps: 3
+days: 2

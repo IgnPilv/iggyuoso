@@ -1,0 +1,27 @@
+id: song-symphony-5
+title: 'Symphony No. 5: the opening'
+skills:
+- songs
+steps:
+- explain: |
+    **Symphony No. 5: the opening** · Ludwig van Beethoven, 1808
+
+    Four notes, short-short-short-long, that everyone knows. The story that it is "fate knocking at the door" came from Beethoven's secretary, who liked to make things up.
+  staff:
+    notes: r:e G4:e G4:e G4:e  |  Eb4:h
+    key: Cm
+  sound: r:e G4:e G4:e G4:e  |  Eb4:h  |  r:e F4:e F4:e F4:e  |  D4:h
+- explain: |
+    **Before you play.** Each bar starts with an eighth-note rest: feel the beat, then play. C minor: E♭ and A♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C minor · Time: 2/4 · Tempo: 108
+- exercise: song-symphony-5-tap
+- exercise: song-symphony-5-by-ear
+- exercise: song-symphony-5-rh
+- exercise: song-symphony-5-lh
+- exercise: song-symphony-5
+- exercise: song-symphony-5-arranged
+- exercise: song-symphony-5-performance
+recap: 'Symphony No. 5: the opening: tune, left hand, together. Come back to it any time; songs are for fun.'

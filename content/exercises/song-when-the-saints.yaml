@@ -1,0 +1,15 @@
+id: song-when-the-saints
+title: When the Saints Go Marching In
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:q C4:q E4:q F4:q | G4:w | r:q C5:q E5:q F5:q | G5:w | r:q C6:q E6:q F6:q | G6:h E6:h | C6:h E6:h | D6:w | r:q E6:q
+  E6:q D6:q | C6:h. C6:q | E6:h G6:q G6:q | F6:w | r:q E6:q F6:q G6:q | E6:h C6:h | D6:h. D6:q | C6:w
+left: C3:w | C3:w | C3:w | C3:w | C3:w | C3:w | C3:w | G2:w | C3:w | C3:w | C3:w | F2:w | C3:w | C3:w | G2:w | C3:w
+reps: 3
+days: 2

@@ -1,0 +1,15 @@
+id: song-swan-lake-lh
+title: 'Swan Lake: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Bm
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+G2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w | B1+D2+F#2:w
+  | B1+D2+F#2:w | B1+D2+G2:w | B1+D2+F#2:w
+reps: 2
+days: 1

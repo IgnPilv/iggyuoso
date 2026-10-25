@@ -1,0 +1,25 @@
+id: song-fur-elise-song
+title: Für Elise
+skills:
+- songs
+steps:
+- explain: |
+    **Für Elise** · Ludwig van Beethoven, 1810
+
+    Beethoven's little piece "for Elise" was found after his death; nobody is sure who Elise was. Here is the famous opening part, with Beethoven's own rippling left hand in the fuller arrangement.
+  staff:
+    notes: E5:s D#5:s  |  E5:s D#5:s E5:s B4:s D5:s C5:s
+    key: Am
+  sound: E5:s D#5:s  |  E5:s D#5:s E5:s B4:s D5:s C5:s  |  A4:e r:s C4:s E4:s A4:s  |  B4:e r:s E4:s G#4:s B4:s
+- explain: |
+    **Before you play.** The E–D♯ wobble is light and even. In the fuller arrangement the hands take turns: the left hand's three notes, then the right hand's.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 3/8 · Tempo: 60
+- exercise: song-fur-elise-song-rh
+- exercise: song-fur-elise-song-lh
+- exercise: song-fur-elise-song
+- exercise: song-fur-elise-song-arranged
+- exercise: song-fur-elise-song-performance
+recap: 'Für Elise: tune, left hand, together. Come back to it any time; songs are for fun.'

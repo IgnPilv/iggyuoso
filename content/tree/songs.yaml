@@ -3,62 +3,119 @@ branch: songs
 title: Songs
 summary: "Tunes to play for fun, opened by the milestones."
 nodes:
-  - { id: songbook-1, stage: 2, lesson: songbook-1, title: "Three old songs", requires: [y1-checkpoint-a] }
-  - { id: songbook-2, stage: 3, lesson: songbook-2, title: "Hands together", requires: [y1-checkpoint-b] }
-  - { id: songbook-3, stage: 3, lesson: songbook-3, title: "Tunes with chords", requires: [y1-checkpoint-b] }
-  - { id: songbook-4, stage: 4, lesson: songbook-4, title: "A round for two hands", requires: [y1-exit] }
-  - { id: song-rain-rain, stage: 2, lesson: song-rain-rain, title: "Rain, Rain, Go Away", requires: [y1-checkpoint-a], about: "Children's chant, England" }
-  - { id: song-twinkle, stage: 2, lesson: song-twinkle, title: "Twinkle, Twinkle, Little Star", requires: [y1-checkpoint-a], about: "French tune \"Ah! vous dirai-je, maman\", 1761" }
-  - { id: song-westminster, stage: 2, lesson: song-westminster, title: "Westminster Chimes", requires: [y1-checkpoint-a], about: "Clock chime, Cambridge 1793, Big Ben since 1859" }
-  - { id: song-old-macdonald, stage: 2, lesson: song-old-macdonald, title: "Old MacDonald Had a Farm", requires: [y1-checkpoint-a], about: "Folk song, England and America" }
-  - { id: song-going-home, stage: 2, lesson: song-going-home, title: "Going Home", requires: [y1-checkpoint-a], about: "Dvořák, Symphony \"From the New World\", 1893" }
-  - { id: song-hot-cross-buns, stage: 2, lesson: song-hot-cross-buns, title: "Hot Cross Buns", requires: [y1-checkpoint-a], about: "Street cry, London, 1700s" }
-  - { id: song-mary-lamb, stage: 2, lesson: song-mary-lamb, title: "Mary Had a Little Lamb", requires: [y1-checkpoint-a], about: "Tune by Lowell Mason, words by Sarah Josepha Hale, 1830" }
-  - { id: song-this-old-man, stage: 2, lesson: song-this-old-man, title: "This Old Man", requires: [y1-checkpoint-a], about: "Counting song, England" }
-  - { id: song-yankee-doodle, stage: 3, lesson: song-yankee-doodle, title: "Yankee Doodle", requires: [y1-checkpoint-b], about: "Folk song, America, 1700s" }
-  - { id: song-aura-lee, stage: 3, lesson: song-aura-lee, title: "Aura Lee", requires: [y1-checkpoint-b], about: "Song by George Poulton, 1861" }
-  - { id: song-drunken-sailor, stage: 3, lesson: song-drunken-sailor, title: "What Shall We Do with the Drunken Sailor?", requires: [y1-checkpoint-b], about: "Sea shanty, England" }
-  - { id: song-oh-susanna, stage: 4, lesson: song-oh-susanna, title: "Oh! Susanna", requires: [y1-exit], about: "Stephen Foster, 1848" }
-  - { id: song-happy-birthday, stage: 4, lesson: song-happy-birthday, title: "Happy Birthday", requires: [y1-exit], about: "Mildred and Patty Hill, 1893; public domain" }
-  - { id: song-ode-to-joy-song, stage: 3, lesson: song-ode-to-joy-song, title: "Ode to Joy", requires: [y1-checkpoint-b], about: "Ludwig van Beethoven, Symphony No. 9, 1824" }
-  - { id: song-jingle-bells-song, stage: 3, lesson: song-jingle-bells-song, title: "Jingle Bells", requires: [y1-checkpoint-b], about: "James Lord Pierpont, 1857" }
-  - { id: song-auld-lang-syne, stage: 4, lesson: song-auld-lang-syne, title: "Auld Lang Syne", requires: [y1-exit], about: "Scottish song, words by Robert Burns, 1788" }
-  - { id: song-silent-night, stage: 4, lesson: song-silent-night, title: "Silent Night", requires: [y1-exit], about: "Franz Gruber, 1818" }
-  - { id: song-we-wish, stage: 4, lesson: song-we-wish, title: "We Wish You a Merry Christmas", requires: [y1-exit], about: "Folk carol, England" }
-  - { id: song-hark-the-herald, stage: 4, lesson: song-hark-the-herald, title: "Hark! The Herald Angels Sing", requires: [y1-exit], about: "Felix Mendelssohn, 1840" }
-  - { id: song-joy-to-the-world, stage: 4, lesson: song-joy-to-the-world, title: "Joy to the World", requires: [y1-exit], about: "Arranged by Lowell Mason, 1839" }
-  - { id: song-deck-the-halls, stage: 4, lesson: song-deck-the-halls, title: "Deck the Halls", requires: [y1-exit], about: "Welsh carol \"Nos Galan\"" }
-  - { id: song-brahms-lullaby, stage: 4, lesson: song-brahms-lullaby, title: "Lullaby", requires: [y1-exit], about: "Johannes Brahms, 1868" }
-  - { id: song-clementine, stage: 4, lesson: song-clementine, title: "Oh My Darling, Clementine", requires: [y1-exit], about: "Folk ballad, America, 1880s" }
-  - { id: song-greensleeves, stage: 5, lesson: song-greensleeves, title: "Greensleeves", requires: [y2-checkpoint-a], about: "English ballad, 1500s" }
-  - { id: song-sailors-song, stage: 5, lesson: song-sailors-song, title: "Sailor's Song in D Minor", requires: [y2-checkpoint-a], about: "Our own tune, in the style of a sea shanty" }
-  - { id: song-row-your-boat, stage: 7, lesson: song-row-your-boat, title: "Row, Row, Row Your Boat", requires: [y2-exit], about: "Round, England and America, 1852" }
-  - { id: song-twinkle-alberti, stage: 6, lesson: song-twinkle-alberti, title: "Twinkle with an Alberti bass", requires: [y2-checkpoint-b], about: "Arranged in the style of Mozart" }
-  - { id: song-aura-lee-pedal, stage: 7, lesson: song-aura-lee-pedal, title: "Aura Lee, with pedal", requires: [y2-exit], about: "George Poulton, 1861, arranged" }
-  - { id: song-greensleeves-pedal, stage: 8, lesson: song-greensleeves-pedal, title: "Greensleeves, with pedal", requires: [m7-flat-keys], about: "English ballad, 1500s, arranged" }
-  - { id: song-silent-night-arp, stage: 9, lesson: song-silent-night-arp, title: "Silent Night, flowing", requires: [m8-arpeggios], about: "Franz Gruber, 1818, arranged" }
+  - { id: songbook-1, stage: 2, lesson: songbook-1, title: "Three old songs", requires: [y1-checkpoint-a], genre: nursery }
+  - { id: songbook-2, stage: 3, lesson: songbook-2, title: "Hands together", requires: [y1-checkpoint-b], genre: nursery }
+  - { id: songbook-3, stage: 3, lesson: songbook-3, title: "Tunes with chords", requires: [y1-checkpoint-b], genre: folk }
+  - { id: songbook-4, stage: 4, lesson: songbook-4, title: "A round for two hands", requires: [y1-exit], genre: nursery }
+  - { id: song-rain-rain, stage: 2, lesson: song-rain-rain, title: "Rain, Rain, Go Away", requires: [y1-checkpoint-a], about: "Children's chant, England", genre: nursery }
+  - { id: song-twinkle, stage: 2, lesson: song-twinkle, title: "Twinkle, Twinkle, Little Star", requires: [y1-checkpoint-a], about: "French tune \"Ah! vous dirai-je, maman\", 1761", genre: nursery }
+  - { id: song-westminster, stage: 2, lesson: song-westminster, title: "Westminster Chimes", requires: [y1-checkpoint-a], about: "Clock chime, Cambridge 1793, Big Ben since 1859", genre: anthems }
+  - { id: song-old-macdonald, stage: 2, lesson: song-old-macdonald, title: "Old MacDonald Had a Farm", requires: [y1-checkpoint-a], about: "Folk song, England and America", genre: nursery }
+  - { id: song-going-home, stage: 2, lesson: song-going-home, title: "Going Home", requires: [y1-checkpoint-a], about: "Dvořák, Symphony \"From the New World\", 1893", genre: classical }
+  - { id: song-hot-cross-buns, stage: 2, lesson: song-hot-cross-buns, title: "Hot Cross Buns", requires: [y1-checkpoint-a], about: "Street cry, London, 1700s", genre: nursery }
+  - { id: song-mary-lamb, stage: 2, lesson: song-mary-lamb, title: "Mary Had a Little Lamb", requires: [y1-checkpoint-a], about: "Tune by Lowell Mason, words by Sarah Josepha Hale, 1830", genre: nursery }
+  - { id: song-this-old-man, stage: 2, lesson: song-this-old-man, title: "This Old Man", requires: [y1-checkpoint-a], about: "Counting song, England", genre: nursery }
+  - { id: song-yankee-doodle, stage: 3, lesson: song-yankee-doodle, title: "Yankee Doodle", requires: [y1-checkpoint-b], about: "Folk song, America, 1700s", genre: folk }
+  - { id: song-aura-lee, stage: 3, lesson: song-aura-lee, title: "Aura Lee", requires: [y1-checkpoint-b], about: "Song by George Poulton, 1861", genre: folk }
+  - { id: song-drunken-sailor, stage: 3, lesson: song-drunken-sailor, title: "What Shall We Do with the Drunken Sailor?", requires: [y1-checkpoint-b], about: "Sea shanty, England", genre: shanties }
+  - { id: song-oh-susanna, stage: 4, lesson: song-oh-susanna, title: "Oh! Susanna", requires: [y1-exit], about: "Stephen Foster, 1848", genre: folk }
+  - { id: song-happy-birthday, stage: 4, lesson: song-happy-birthday, title: "Happy Birthday", requires: [y1-exit], about: "Mildred and Patty Hill, 1893; public domain", genre: nursery }
+  - { id: song-ode-to-joy-song, stage: 3, lesson: song-ode-to-joy-song, title: "Ode to Joy", requires: [y1-checkpoint-b], about: "Ludwig van Beethoven, Symphony No. 9, 1824", genre: classical }
+  - { id: song-jingle-bells-song, stage: 3, lesson: song-jingle-bells-song, title: "Jingle Bells", requires: [y1-checkpoint-b], about: "James Lord Pierpont, 1857", genre: carols }
+  - { id: song-auld-lang-syne, stage: 4, lesson: song-auld-lang-syne, title: "Auld Lang Syne", requires: [y1-exit], about: "Scottish song, words by Robert Burns, 1788", genre: folk }
+  - { id: song-silent-night, stage: 4, lesson: song-silent-night, title: "Silent Night", requires: [y1-exit], about: "Franz Gruber, 1818", genre: carols }
+  - { id: song-we-wish, stage: 4, lesson: song-we-wish, title: "We Wish You a Merry Christmas", requires: [y1-exit], about: "Folk carol, England", genre: carols }
+  - { id: song-hark-the-herald, stage: 4, lesson: song-hark-the-herald, title: "Hark! The Herald Angels Sing", requires: [y1-exit], about: "Felix Mendelssohn, 1840", genre: carols }
+  - { id: song-joy-to-the-world, stage: 4, lesson: song-joy-to-the-world, title: "Joy to the World", requires: [y1-exit], about: "Arranged by Lowell Mason, 1839", genre: carols }
+  - { id: song-deck-the-halls, stage: 4, lesson: song-deck-the-halls, title: "Deck the Halls", requires: [y1-exit], about: "Welsh carol \"Nos Galan\"", genre: carols }
+  - { id: song-brahms-lullaby, stage: 4, lesson: song-brahms-lullaby, title: "Lullaby", requires: [y1-exit], about: "Johannes Brahms, 1868", genre: classical }
+  - { id: song-clementine, stage: 4, lesson: song-clementine, title: "Oh My Darling, Clementine", requires: [y1-exit], about: "Folk ballad, America, 1880s", genre: folk }
+  - { id: song-greensleeves, stage: 5, lesson: song-greensleeves, title: "Greensleeves", requires: [y2-checkpoint-a], about: "English ballad, 1500s", genre: folk }
+  - { id: song-sailors-song, stage: 5, lesson: song-sailors-song, title: "Sailor's Song in D Minor", requires: [y2-checkpoint-a], about: "Our own tune, in the style of a sea shanty", genre: shanties }
+  - { id: song-row-your-boat, stage: 7, lesson: song-row-your-boat, title: "Row, Row, Row Your Boat", requires: [y2-exit], about: "Round, England and America, 1852", genre: nursery }
+  - { id: song-twinkle-alberti, stage: 6, lesson: song-twinkle-alberti, title: "Twinkle with an Alberti bass", requires: [y2-checkpoint-b], about: "Arranged in the style of Mozart", genre: classical }
+  - { id: song-aura-lee-pedal, stage: 7, lesson: song-aura-lee-pedal, title: "Aura Lee, with pedal", requires: [y2-exit], about: "George Poulton, 1861, arranged", genre: folk }
+  - { id: song-greensleeves-pedal, stage: 8, lesson: song-greensleeves-pedal, title: "Greensleeves, with pedal", requires: [m7-flat-keys], about: "English ballad, 1500s, arranged", genre: folk }
+  - { id: song-silent-night-arp, stage: 9, lesson: song-silent-night-arp, title: "Silent Night, flowing", requires: [m8-arpeggios], about: "Franz Gruber, 1818, arranged", genre: carols }
   - { id: song-wim-riff, stage: 4, lesson: song-wim-riff, title: "Where Is My Mind (Maxence Cyrin) 1: the riff", requires: [y1-exit, rhythm-eighths-two-hands, technique-broken-chords], about: "Pixies, 1988 · piano version by Maxence Cyrin", song: song-wim }
   - { id: song-wim-chords, stage: 5, lesson: song-wim-chords, title: "Where Is My Mind (Maxence Cyrin) 2: the four chords", requires: [song-wim-riff, y2-checkpoint-a, theory-minor-chords, theory-enharmonics, harmony-other-chords], about: "Pixies, 1988 · piano version by Maxence Cyrin", song: song-wim }
   - { id: song-wim-verse, stage: 5, lesson: song-wim-verse, title: "Where Is My Mind (Maxence Cyrin) 3: the verse", requires: [song-wim-chords, y2-checkpoint-a, sixteenth-notes, rhythm-sixteenth-patterns], about: "Pixies, 1988 · piano version by Maxence Cyrin", song: song-wim }
   - { id: song-wim-hook, stage: 6, lesson: song-wim-hook, title: "Where Is My Mind (Maxence Cyrin) 4: the \"ooh\" and the break", requires: [song-wim-verse, y2-checkpoint-b, syncopation], about: "Pixies, 1988 · piano version by Maxence Cyrin", song: song-wim }
   - { id: song-wim-arpeggios, stage: 6, lesson: song-wim-arpeggios, title: "Where Is My Mind (Maxence Cyrin) 5: the rolling left hand", requires: [song-wim-hook, y2-checkpoint-b, technique-arpeggios-one-octave, accompaniment-patterns], about: "Pixies, 1988 · piano version by Maxence Cyrin", song: song-wim }
   - { id: song-wim-chorus, stage: 7, lesson: song-wim-chorus, title: "Where Is My Mind (Maxence Cyrin) 6: the chorus", requires: [song-wim-arpeggios, y2-exit, ks-e, rhythm-sixteenth-rests], about: "Pixies, 1988 · piano version by Maxence Cyrin", song: song-wim }
-  - { id: song-wim, stage: 7, lesson: song-wim, title: "Where Is My Mind (Maxence Cyrin)", requires: [song-wim-chorus, y2-exit, pedal-legato, ear-progressions], about: "Pixies, 1988 · piano version by Maxence Cyrin" }
+  - { id: song-wim, stage: 7, lesson: song-wim, title: "Where Is My Mind (Maxence Cyrin)", requires: [song-wim-chorus, y2-exit, pedal-legato, ear-progressions], about: "Pixies, 1988 · piano version by Maxence Cyrin", genre: requests }
   - { id: song-chfl-tune, stage: 6, lesson: song-chfl-tune, title: "Can't Help Falling in Love 1: the tune", requires: [y2-checkpoint-b, ks-d, rhythm-six-eight, theory-compound-time], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement", song: song-chfl }
   - { id: song-chfl-chords, stage: 6, lesson: song-chfl-chords, title: "Can't Help Falling in Love 2: the chords", requires: [song-chfl-tune, y2-checkpoint-b, harmony-other-chords, ear-function-six-chords, harmony-progressions], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement", song: song-chfl }
   - { id: song-chfl-verse, stage: 6, lesson: song-chfl-verse, title: "Can't Help Falling in Love 3: the verse, both hands", requires: [song-chfl-chords, y2-checkpoint-b, rhythm-six-eight-hands, accompaniment-patterns], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement", song: song-chfl }
   - { id: song-chfl-bridge, stage: 7, lesson: song-chfl-bridge, title: "Can't Help Falling in Love 4: the middle section", requires: [song-chfl-verse, y2-exit, ks-b-minor, dominant-seventh-theory], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement", song: song-chfl }
   - { id: song-chfl-arpeggios, stage: 7, lesson: song-chfl-arpeggios, title: "Can't Help Falling in Love 5: the rolling left hand", requires: [song-chfl-bridge, y2-exit, technique-arpeggios-one-octave, piece-etude-six-eight], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement", song: song-chfl }
   - { id: song-chfl-ending, stage: 7, lesson: song-chfl-ending, title: "Can't Help Falling in Love 6: the ending and the pedal", requires: [song-chfl-arpeggios, y2-exit, pedal-legato, rhythm-compound-meters], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement", song: song-chfl }
-  - { id: song-chfl, stage: 8, lesson: song-chfl, title: "Can't Help Falling in Love", requires: [song-chfl-ending, m7-flat-keys, harmony-secondary-dominants, ear-progressions], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement" }
+  - { id: song-chfl, stage: 8, lesson: song-chfl, title: "Can't Help Falling in Love", requires: [song-chfl-ending, m7-flat-keys, harmony-secondary-dominants, ear-progressions], about: "Elvis Presley, 1961 · tune from \"Plaisir d'amour\" (Martini, 1784) · our own arrangement", genre: requests }
   - { id: song-canon-easy-bass, stage: 2, lesson: song-canon-easy-bass, title: "Pachelbel's Canon, easy 1: the bass that goes round", requires: [y1-checkpoint-a, bass-staff, half-and-whole-notes], about: "Johann Pachelbel, around 1690 · easy version in C major · our own arrangement", song: song-canon-easy }
   - { id: song-canon-easy-chords, stage: 2, lesson: song-canon-easy-chords, title: "Pachelbel's Canon, easy 2: the chords", requires: [song-canon-easy-bass, y1-checkpoint-a, technique-triads-c-f-g, chord-symbols, ear-major-minor], about: "Johann Pachelbel, around 1690 · easy version in C major · our own arrangement", song: song-canon-easy }
   - { id: song-canon-easy-tune, stage: 2, lesson: song-canon-easy-tune, title: "Pachelbel's Canon, easy 3: the tune", requires: [song-canon-easy-chords, y1-checkpoint-a, technique-positions-c-g-f, steps-and-skips, reading-g-and-f-positions], about: "Johann Pachelbel, around 1690 · easy version in C major · our own arrangement", song: song-canon-easy }
   - { id: song-canon-easy-hands, stage: 2, lesson: song-canon-easy-hands, title: "Pachelbel's Canon, easy 4: both hands", requires: [song-canon-easy-tune, y1-checkpoint-a, hands-together-held, reading-two-hands-first, rhythm-two-hands-different], about: "Johann Pachelbel, around 1690 · easy version in C major · our own arrangement", song: song-canon-easy }
-  - { id: song-canon-easy, stage: 2, lesson: song-canon-easy, title: "Pachelbel's Canon, easy", requires: [song-canon-easy-hands, y1-checkpoint-a, pieces-hands-together, rhythm-inner-pulse], about: "Johann Pachelbel, around 1690 · easy version in C major · our own arrangement" }
+  - { id: song-canon-easy, stage: 2, lesson: song-canon-easy, title: "Pachelbel's Canon, easy", requires: [song-canon-easy-hands, y1-checkpoint-a, pieces-hands-together, rhythm-inner-pulse], about: "Johann Pachelbel, around 1690 · easy version in C major · our own arrangement", genre: classical }
   - { id: song-canon-ground, stage: 5, lesson: song-canon-ground, title: "Canon in D 1: the ground and its chords", requires: [y2-checkpoint-a, piece-canon-theme, theory-keys-two-and-three, harmony-other-chords], about: "Johann Pachelbel, around 1690 · our own arrangement", song: song-canon }
   - { id: song-canon-lines, stage: 5, lesson: song-canon-lines, title: "Canon in D 2: the first lines", requires: [song-canon-ground, y2-checkpoint-a, technique-scales-d-a-one-octave, harmony-progressions], about: "Johann Pachelbel, around 1690 · our own arrangement", song: song-canon }
   - { id: song-canon-eighths, stage: 5, lesson: song-canon-eighths, title: "Canon in D 3: the eighths", requires: [song-canon-lines, y2-checkpoint-a, rhythm-eighths-two-hands, accompaniment-patterns], about: "Johann Pachelbel, around 1690 · our own arrangement", song: song-canon }
   - { id: song-canon-run, stage: 6, lesson: song-canon-run, title: "Canon in D 4: the sixteenth run", requires: [song-canon-eighths, y2-checkpoint-b, sixteenth-notes, rhythm-sixteenths-two-hands, technique-scales-d-a-one-octave], about: "Johann Pachelbel, around 1690 · our own arrangement", song: song-canon }
   - { id: song-canon-singing, stage: 6, lesson: song-canon-singing, title: "Canon in D 5: the singing line", requires: [song-canon-run, y2-checkpoint-b, ks-d, musician-texture, touch-shaping], about: "Johann Pachelbel, around 1690 · our own arrangement", song: song-canon }
-  - { id: song-canon, stage: 7, lesson: song-canon, title: "Canon in D", requires: [song-canon-singing, y2-exit, pedal-legato, ear-progressions], about: "Johann Pachelbel, around 1690 · our own arrangement" }
+  - { id: song-canon, stage: 7, lesson: song-canon, title: "Canon in D", requires: [song-canon-singing, y2-exit, pedal-legato, ear-progressions], about: "Johann Pachelbel, around 1690 · our own arrangement", genre: classical }
+  - { id: song-skip-to-my-lou, stage: 2, lesson: song-skip-to-my-lou, title: "Skip to My Lou", requires: [y1-checkpoint-a], about: "Play-party song, America, 1840s", genre: nursery }
+  - { id: song-alouette, stage: 2, lesson: song-alouette, title: "Alouette", requires: [y1-checkpoint-a], about: "French-Canadian song, 1800s", genre: nursery }
+  - { id: song-ah-vous-dirai, stage: 2, lesson: song-ah-vous-dirai, title: "Baa, Baa, Black Sheep", requires: [y1-checkpoint-a], about: "English rhyme, 1731, on the French tune \"Ah! vous dirai-je, maman\"", genre: nursery }
+  - { id: song-pease-porridge, stage: 2, lesson: song-pease-porridge, title: "Pease Porridge Hot", requires: [y1-checkpoint-a], about: "English rhyme, 1760s", genre: nursery }
+  - { id: song-oh-where-has-my-dog, stage: 3, lesson: song-oh-where-has-my-dog, title: "Oh Where, Oh Where Has My Little Dog Gone?", requires: [y1-checkpoint-b], about: "Septimus Winner, 1864, on the tune \"Ach, du lieber Augustin\"", genre: nursery }
+  - { id: song-pop-goes-the-weasel, stage: 7, lesson: song-pop-goes-the-weasel, title: "Pop! Goes the Weasel", requires: [y2-exit], about: "English song and dance, 1850s", genre: nursery }
+  - { id: song-itsy-bitsy-spider, stage: 7, lesson: song-itsy-bitsy-spider, title: "The Itsy Bitsy Spider", requires: [y2-exit], about: "Children's song, America, 1910s", genre: nursery }
+  - { id: song-hickory-dickory, stage: 7, lesson: song-hickory-dickory, title: "Hickory Dickory Dock", requires: [y2-exit], about: "English rhyme, 1744", genre: nursery }
+  - { id: song-sur-le-pont, stage: 3, lesson: song-sur-le-pont, title: "Sur le pont d'Avignon", requires: [y1-checkpoint-b], about: "French song, 1500s", genre: nursery }
+  - { id: song-a-la-claire-fontaine, stage: 3, lesson: song-a-la-claire-fontaine, title: "À la claire fontaine", requires: [y1-checkpoint-b], about: "French song, 1600s, sung in France and Québec", genre: nursery }
+  - { id: song-hanschen-klein, stage: 2, lesson: song-hanschen-klein, title: "Hänschen klein", requires: [y1-checkpoint-a], about: "German children's song, 1800s", genre: nursery }
+  - { id: song-alle-meine-entchen, stage: 2, lesson: song-alle-meine-entchen, title: "Alle meine Entchen", requires: [y1-checkpoint-a], about: "German children's song, 1800s", genre: nursery }
+  - { id: song-kuckuck, stage: 3, lesson: song-kuckuck, title: "Kuckuck, Kuckuck, ruft's aus dem Wald", requires: [y1-checkpoint-b], about: "German spring song, 1835 (words by Hoffmann von Fallersleben)", genre: nursery }
+  - { id: song-cadet-rousselle, stage: 3, lesson: song-cadet-rousselle, title: "Cadet Rousselle", requires: [y1-checkpoint-b], about: "French song, 1792", genre: nursery }
+  - { id: song-polly-wolly, stage: 3, lesson: song-polly-wolly, title: "Polly Wolly Doodle", requires: [y1-checkpoint-b], about: "Minstrel song, America, 1880", genre: nursery }
+  - { id: song-long-long-ago, stage: 2, lesson: song-long-long-ago, title: "Long, Long Ago", requires: [y1-checkpoint-a], about: "Thomas Haynes Bayly, 1833", genre: nursery }
+  - { id: song-the-mulberry-bush, stage: 7, lesson: song-the-mulberry-bush, title: "Here We Go Round the Mulberry Bush", requires: [y2-exit], about: "English singing game, 1840s", genre: nursery }
+  - { id: song-london-bridge, stage: 2, lesson: song-london-bridge, title: "London Bridge Is Falling Down", requires: [y1-checkpoint-a], about: "English singing game, 1700s", genre: nursery }
+  - { id: song-frere-jacques, stage: 2, lesson: song-frere-jacques, title: "Frère Jacques", requires: [y1-checkpoint-a], about: "French round, 1700s", genre: nursery }
+  - { id: song-au-clair-de-la-lune, stage: 2, lesson: song-au-clair-de-la-lune, title: "Au clair de la lune", requires: [y1-checkpoint-a], about: "French song, 1700s", genre: nursery }
+  - { id: song-go-tell-aunt-rhody, stage: 2, lesson: song-go-tell-aunt-rhody, title: "Go Tell Aunt Rhody", requires: [y1-checkpoint-a], about: "American folk song, on a tune by Jean-Jacques Rousseau, 1752", genre: nursery }
+  - { id: song-when-the-saints, stage: 3, lesson: song-when-the-saints, title: "When the Saints Go Marching In", requires: [y1-checkpoint-b], about: "Spiritual, America, early 1900s", genre: hymns }
+  - { id: song-kumbaya, stage: 2, lesson: song-kumbaya, title: "Kumbaya", requires: [y1-checkpoint-a], about: "Spiritual, Gullah people of South Carolina and Georgia, 1920s", genre: folk }
+  - { id: song-michael-row, stage: 2, lesson: song-michael-row, title: "Michael, Row the Boat Ashore", requires: [y1-checkpoint-a], about: "Spiritual, Sea Islands of Georgia, 1860s", genre: folk }
+  - { id: song-scarborough-fair, stage: 5, lesson: song-scarborough-fair, title: "Scarborough Fair", requires: [y2-checkpoint-a, ks-d-minor], about: "English ballad, 1600s and older", genre: folk }
+  - { id: song-my-bonnie, stage: 3, lesson: song-my-bonnie, title: "My Bonnie Lies Over the Ocean", requires: [y1-checkpoint-b], about: "Scottish song, 1880s", genre: folk }
+  - { id: song-camptown-races, stage: 3, lesson: song-camptown-races, title: "Camptown Races", requires: [y1-checkpoint-b], about: "Stephen Foster, 1850", genre: folk }
+  - { id: song-swanee-river, stage: 3, lesson: song-swanee-river, title: "Old Folks at Home (Swanee River)", requires: [y1-checkpoint-b], about: "Stephen Foster, 1851", genre: folk }
+  - { id: song-sakura, stage: 4, lesson: song-sakura, title: "Sakura, Sakura", requires: [y1-exit], about: "Japanese folk song, 1800s", genre: folk }
+  - { id: song-surprise-symphony, stage: 3, lesson: song-surprise-symphony, title: "Surprise Symphony", requires: [y1-checkpoint-b], about: "Joseph Haydn, Symphony No. 94, 1791", genre: classical }
+  - { id: song-bridal-chorus, stage: 3, lesson: song-bridal-chorus, title: "Bridal Chorus", requires: [y1-checkpoint-b], about: "Richard Wagner, \"Lohengrin\", 1850", genre: classical }
+  - { id: song-symphony-5, stage: 4, lesson: song-symphony-5, title: "Symphony No. 5: the opening", requires: [y1-exit], about: "Ludwig van Beethoven, 1808", genre: classical }
+  - { id: song-can-can, stage: 4, lesson: song-can-can, title: "Can-Can", requires: [y1-exit], about: "Jacques Offenbach, \"Orpheus in the Underworld\", 1858", genre: classical }
+  - { id: song-blue-danube, stage: 5, lesson: song-blue-danube, title: "The Blue Danube", requires: [y2-checkpoint-a], about: "Johann Strauss II, 1866", genre: classical }
+  - { id: song-mountain-king, stage: 4, lesson: song-mountain-king, title: "In the Hall of the Mountain King", requires: [y1-exit], about: "Edvard Grieg, \"Peer Gynt\", 1875", genre: classical }
+  - { id: song-swan-lake, stage: 6, lesson: song-swan-lake, title: "Swan Lake", requires: [y2-checkpoint-b], about: "Pyotr Ilyich Tchaikovsky, 1876", genre: classical }
+  - { id: song-morning-mood, stage: 7, lesson: song-morning-mood, title: "Morning Mood", requires: [y2-exit, ks-e], about: "Edvard Grieg, \"Peer Gynt\", 1875", genre: classical }
+  - { id: song-symphony-40, stage: 7, lesson: song-symphony-40, title: "Symphony No. 40", requires: [y2-exit, ks-g-minor], about: "Wolfgang Amadeus Mozart, 1788", genre: classical }
+  - { id: song-jesu-joy, stage: 6, lesson: song-jesu-joy, title: "Jesu, Joy of Man's Desiring", requires: [y2-checkpoint-b, ks-g], about: "Johann Sebastian Bach, Cantata BWV 147, 1723", genre: classical }
+  - { id: song-minuet-g-minor, stage: 7, lesson: song-minuet-g-minor, title: "Minuet in G minor", requires: [y2-exit, ks-g-minor], about: "Christian Petzold, from Anna Magdalena Bach's notebook, 1725", genre: classical }
+  - { id: song-turkish-march, stage: 7, lesson: song-turkish-march, title: "Turkish March", requires: [y2-exit], about: "Wolfgang Amadeus Mozart, Sonata K. 331, 1783", genre: classical }
+  - { id: song-entertainer, stage: 9, lesson: song-entertainer, title: "The Entertainer", requires: [m8-arpeggios], about: "Scott Joplin, 1902", genre: ragtime }
+  - { id: song-fur-elise-song, stage: 6, lesson: song-fur-elise-song, title: "Für Elise", requires: [y2-checkpoint-b], about: "Ludwig van Beethoven, 1810", genre: classical }
+  - { id: song-moldau, stage: 7, lesson: song-moldau, title: "The Moldau", requires: [y2-exit, ks-e-minor], about: "Bedřich Smetana, \"Má vlast\", 1874", genre: classical }
+  - { id: song-sonata-k545, stage: 8, lesson: song-sonata-k545, title: "Sonata facile", requires: [m7-flat-keys], about: "Wolfgang Amadeus Mozart, Sonata in C, K. 545, 1788", genre: classical }
+  - { id: song-bach-prelude-c, stage: 6, lesson: song-bach-prelude-c, title: "Prelude in C", requires: [y2-checkpoint-b], about: "Johann Sebastian Bach, The Well-Tempered Clavier, Book 1, 1722", genre: classical }
+  - { id: song-amazing-grace, stage: 3, lesson: song-amazing-grace, title: "Amazing Grace", requires: [y1-checkpoint-b], about: "Hymn tune \"New Britain\", America, 1829; words by John Newton, 1779", genre: hymns }
+  - { id: song-old-hundredth, stage: 3, lesson: song-old-hundredth, title: "Old Hundredth", requires: [y1-checkpoint-b], about: "Hymn tune by Louis Bourgeois, Geneva, 1551", genre: hymns }
+  - { id: song-first-noel, stage: 4, lesson: song-first-noel, title: "The First Noel", requires: [y1-exit], about: "English carol, printed 1823", genre: carols }
+  - { id: song-angels-we-have-heard, stage: 3, lesson: song-angels-we-have-heard, title: "Angels We Have Heard on High", requires: [y1-checkpoint-b], about: "French carol \"Les Anges dans nos campagnes\", 1700s", genre: carols }
+  - { id: song-we-three-kings, stage: 7, lesson: song-we-three-kings, title: "We Three Kings", requires: [y2-exit, ks-e-minor], about: "John Henry Hopkins Jr., 1857", genre: carols }
+  - { id: song-ding-dong-merrily, stage: 4, lesson: song-ding-dong-merrily, title: "Ding Dong Merrily on High", requires: [y1-exit], about: "French dance tune \"Branle de l'Official\", 1589", genre: carols }
+  - { id: song-good-king-wenceslas, stage: 2, lesson: song-good-king-wenceslas, title: "Good King Wenceslas", requires: [y1-checkpoint-a], about: "Spring carol \"Tempus adest floridum\", Piae Cantiones, 1582", genre: carols }
+  - { id: song-god-save-the-king, stage: 3, lesson: song-god-save-the-king, title: "God Save the King", requires: [y1-checkpoint-b], about: "British anthem, printed 1745", genre: anthems }
+  - { id: song-star-spangled-banner, stage: 5, lesson: song-star-spangled-banner, title: "The Star-Spangled Banner", requires: [y2-checkpoint-a], about: "United States anthem, tune \"To Anacreon in Heaven\" by John Stafford Smith, 1770s", genre: anthems }
+  - { id: song-irish-washerwoman, stage: 7, lesson: song-irish-washerwoman, title: "The Irish Washerwoman", requires: [y2-exit, ks-g], about: "Irish jig, 1700s", genre: dances }
+  - { id: song-swallowtail-jig, stage: 7, lesson: song-swallowtail-jig, title: "Swallowtail Jig", requires: [y2-exit, ks-e-minor], about: "Irish jig, 1800s", genre: dances }

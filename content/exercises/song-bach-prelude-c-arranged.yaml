@@ -1,0 +1,27 @@
+id: song-bach-prelude-c-arranged
+title: Prelude in C, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (the left hand written out for this song).
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:e G4:s C5:s E5:s G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s | r:e A4:s D5:s F5:s A4:s D5:s F5:s r:e A4:s D5:s
+  F5:s A4:s D5:s F5:s | r:e G4:s D5:s F5:s G4:s D5:s F5:s r:e G4:s D5:s F5:s G4:s D5:s F5:s | r:e G4:s C5:s E5:s G4:s C5:s
+  E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s | r:e A4:s E5:s A5:s A4:s E5:s A5:s r:e A4:s E5:s A5:s A4:s E5:s A5:s | r:e F#4:s
+  A4:s D5:s F#4:s A4:s D5:s r:e F#4:s A4:s D5:s F#4:s A4:s D5:s | r:e G4:s D5:s G5:s G4:s D5:s G5:s r:e G4:s D5:s G5:s G4:s
+  D5:s G5:s | r:e E4:s G4:s C5:s E4:s G4:s C5:s r:e E4:s G4:s C5:s E4:s G4:s C5:s | r:e E4:s G4:s C5:s E4:s G4:s C5:s r:e
+  E4:s G4:s C5:s E4:s G4:s C5:s | r:e D4:s F#4:s C5:s D4:s F#4:s C5:s r:e D4:s F#4:s C5:s D4:s F#4:s C5:s | r:e D4:s G4:s
+  B4:s D4:s G4:s B4:s r:e D4:s G4:s B4:s D4:s G4:s B4:s | r:e E4:s G4:s C#5:s E4:s G4:s C#5:s r:e E4:s G4:s C#5:s E4:s G4:s
+  C#5:s | r:e D4:s A4:s D5:s D4:s A4:s D5:s r:e D4:s A4:s D5:s D4:s A4:s D5:s | r:e D4:s F4:s B4:s D4:s F4:s B4:s r:e D4:s
+  F4:s B4:s D4:s F4:s B4:s | r:e C4:s G4:s C5:s C4:s G4:s C5:s r:e C4:s G4:s C5:s C4:s G4:s C5:s | r:e A3:s C4:s F4:s A3:s
+  C4:s F4:s r:e A3:s C4:s F4:s A3:s C4:s F4:s | r:e A3:s C4:s F4:s A3:s C4:s F4:s r:e A3:s C4:s F4:s A3:s C4:s F4:s | r:e
+  G3:s B3:s F4:s G3:s B3:s F4:s r:e G3:s B3:s F4:s G3:s B3:s F4:s | r:e G3:s C4:s E4:s G3:s C4:s E4:s r:e G3:s C4:s E4:s G3:s
+  C4:s E4:s | E4+G4+C5:w
+left: C4+E4:h C4+E4:h | C4+D4:h C4+D4:h | B3+D4:h B3+D4:h | C4+E4:h C4+E4:h | C4+E4:h C4+E4:h | C4+D4:h C4+D4:h | B3+D4:h
+  B3+D4:h | B3+C4:h B3+C4:h | A3+C4:h A3+C4:h | D3+A3:h D3+A3:h | G3+B3:h G3+B3:h | G3+Bb3:h G3+Bb3:h | F3+A3:h F3+A3:h |
+  F3+Ab3:h F3+Ab3:h | E3+G3:h E3+G3:h | E3+F3:h E3+F3:h | D3+F3:h D3+F3:h | G2+D3:h G2+D3:h | C3+E3:h C3+E3:h | C3+C4:w
+reps: 3
+days: 2

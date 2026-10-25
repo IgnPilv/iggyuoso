@@ -1,0 +1,17 @@
+id: song-jesu-joy-rh
+title: 'Jesu, Joy of Man''s Desiring: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:e3 A4:e3 B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3 | G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3 | D5:e3
+  E5:e3 D5:e3 C5:e3 B4:e3 A4:e3 B4:e3 G4:e3 F#4:e3 | G4:e3 A4:e3 D4:e3 F#4:e3 A4:e3 C5:e3 B4:e3 A4:e3 B4:e3 | G4:e3 A4:e3
+  B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3 | G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3 | D5:e3 E5:e3 D5:e3 C5:e3
+  B4:e3 A4:e3 B4:e3 G4:e3 F#4:e3 | G4:h.
+reps: 2
+days: 1

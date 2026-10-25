@@ -1,0 +1,25 @@
+id: song-swan-lake
+title: Swan Lake
+skills:
+- songs
+steps:
+- explain: |
+    **Swan Lake** · Pyotr Ilyich Tchaikovsky, 1876
+
+    The swans' theme, played by an oboe over shimmering strings. Odette is a princess turned into a swan by day.
+  staff:
+    notes: F#4:h B3:e C#4:e D4:e E4:e  |  F#4:h. D4:q
+    key: Bm
+  sound: F#4:h B3:e C#4:e D4:e E4:e  |  F#4:h. D4:q  |  F#4:h. D4:q  |  F#4:h. B3:q
+- explain: |
+    **Before you play.** B minor: F♯ and C♯. Long notes: let them sing for their full value.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: B minor · Time: 4/4 · Tempo: 66
+- exercise: song-swan-lake-rh
+- exercise: song-swan-lake-lh
+- exercise: song-swan-lake
+- exercise: song-swan-lake-arranged
+- exercise: song-swan-lake-performance
+recap: 'Swan Lake: tune, left hand, together. Come back to it any time; songs are for fun.'

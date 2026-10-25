@@ -1,0 +1,12 @@
+id: song-surprise-symphony-tap
+title: 'Surprise Symphony: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 84
+meter: 2/4
+countIn: 1
+rhythm: x:e x:e x:e x:e | x:e x:e x:q | x:e x:e x:e x:e | x:e x:e x:q | x:e x:e x:e x:e | x:e x:e x:q | x:e x:e x:e x:e |
+  x:e x:e x:q
+reps: 2
+days: 1

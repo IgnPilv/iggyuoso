@@ -1,0 +1,16 @@
+id: song-angels-we-have-heard-rh
+title: 'Angels We Have Heard on High: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q A4:q A4:q C5:q | C5:q. Bb4:e A4:h | A4:q G4:q A4:q C5:q | A4:q. G4:e F4:h | A4:q A4:q A4:q C5:q | C5:q. Bb4:e
+  A4:h | A4:q G4:q A4:q C5:q | A4:q. G4:e F4:h | C5:h D5:e C5:e Bb4:e A4:e | Bb4:h C5:e Bb4:e A4:e G4:e | A4:h Bb4:e A4:e
+  G4:e F4:e | G4:h. C4:q | F4:q G4:q A4:q Bb4:q | A4:h G4:h | F4:w
+reps: 2
+days: 1

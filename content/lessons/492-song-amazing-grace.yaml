@@ -1,0 +1,27 @@
+id: song-amazing-grace
+title: Amazing Grace
+skills:
+- songs
+steps:
+- explain: |
+    **Amazing Grace** · Hymn tune "New Britain", America, 1829; words by John Newton, 1779
+
+    John Newton, a former slave-ship captain who became a priest, wrote the words. The tune "New Britain" came from American folk hymn books of the 1820s.
+  staff:
+    notes: D4:q  |  G4:h B4:e G4:e
+    key: G
+  sound: D4:q  |  G4:h B4:e G4:e  |  B4:h A4:q  |  G4:h E4:q
+- explain: |
+    **Before you play.** Three slow beats. The eighth notes ("maz-ing") are a little turn: keep them smooth.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 3/4 · Tempo: 76
+- exercise: song-amazing-grace-tap
+- exercise: song-amazing-grace-by-ear
+- exercise: song-amazing-grace-rh
+- exercise: song-amazing-grace-lh
+- exercise: song-amazing-grace
+- exercise: song-amazing-grace-arranged
+- exercise: song-amazing-grace-performance
+recap: 'Amazing Grace: tune, left hand, together. Come back to it any time; songs are for fun.'

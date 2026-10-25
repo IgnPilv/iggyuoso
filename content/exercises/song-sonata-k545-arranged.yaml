@@ -1,0 +1,20 @@
+id: song-sonata-k545-arranged
+title: Sonata facile, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h E5:q G5:q | B4:q. C5:s D5:s C5:h | A5:h G5:q C6:q | G5:q F5:e G5:e E5:h | A4:s B4:s C5:s D5:s E5:s F5:s G5:s A5:s
+  G5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s | G4:s A4:s B4:s C5:s D5:s E5:s F5:s G5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s F4:s
+  | F4:s G4:s A4:s B4:s C5:s D5:s E5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s F4:s E4:s | E4:s F4:s G4:s A4:s B4:s C5:s D5:s E5:s
+  D5:s C5:s B4:s A4:s G4:s F4:s E4:s D4:s | C4:w
+left: C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | B2:e G3:e D3:e G3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e G3:e E3:e
+  G3:e | B2:e G3:e D3:e G3:e C3:e G3:e E3:e G3:e | C3:e A3:e F3:e A3:e C3:e A3:e F3:e A3:e | C3:e G3:e E3:e G3:e C3:e G3:e
+  E3:e G3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:e B3:e G3:e B3:e D3:e B3:e G3:e B3:e | C3+E3+G3:w
+pedal: x:w | x:h x:h | x:h x:h | x:h x:h | x:w | x:w | x:w | x:w | x:w
+reps: 3
+days: 2

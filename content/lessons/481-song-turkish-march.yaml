@@ -1,0 +1,26 @@
+id: song-turkish-march
+title: Turkish March
+skills:
+- songs
+steps:
+- explain: |
+    **Turkish March** · Wolfgang Amadeus Mozart, Sonata K. 331, 1783
+
+    "Rondo alla Turca": Mozart imitating the Turkish military bands (with drums and cymbals) that were all the rage in Vienna.
+  staff:
+    notes: B4:s A4:s G#4:s A4:s  |  C5:e r:e D5:s C5:s B4:s C5:s
+    key: Am
+  sound: B4:s A4:s G#4:s A4:s  |  C5:e r:e D5:s C5:s B4:s C5:s  |  E5:e r:e F5:s E5:s D#5:s E5:s  |  B5:s A5:s G#5:s A5:s
+    B5:s A5:s G#5:s A5:s
+- explain: |
+    **Before you play.** The four-note turns (B A G♯ A) must be even and light: fingers close to the keys.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 2/4 · Tempo: 96
+- exercise: song-turkish-march-rh
+- exercise: song-turkish-march-lh
+- exercise: song-turkish-march
+- exercise: song-turkish-march-arranged
+- exercise: song-turkish-march-performance
+recap: 'Turkish March: tune, left hand, together. Come back to it any time; songs are for fun.'

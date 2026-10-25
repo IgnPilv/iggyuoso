@@ -1,0 +1,14 @@
+id: song-skip-to-my-lou-performance
+title: 'Skip to My Lou: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 104
+meter: 4/4
+countIn: 1
+right: E4:q C4:q C4:q E4:q | G4:h G4:h | D4:q B3:q B3:q D4:q | F4:h F4:h | E4:q C4:q C4:q E4:q | G4:h G4:h | D4:q E4:q F4:q
+  E4:q | D4:h C4:h
+left: C3+G3:w | C3+G3:w | G2+D3:w | G2+D3:w | C3+G3:w | C3+G3:w | G2+D3:w | G2+D3:h C3+G3:h
+reps: 2
+days: 2

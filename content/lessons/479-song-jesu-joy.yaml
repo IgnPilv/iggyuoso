@@ -1,0 +1,26 @@
+id: song-jesu-joy
+title: Jesu, Joy of Man's Desiring
+skills:
+- songs
+steps:
+- explain: |
+    **Jesu, Joy of Man's Desiring** · Johann Sebastian Bach, Cantata BWV 147, 1723
+
+    The flowing triplets are the orchestra's part; between them the choir sings a hymn tune. Bach wrote it for a church cantata in Leipzig.
+  staff:
+    notes: G4:e3 A4:e3 B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3  |  G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3
+    key: G
+  sound: G4:e3 A4:e3 B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3  |  G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3  |  D5:e3
+    E5:e3 D5:e3 C5:e3 B4:e3 A4:e3 B4:e3 G4:e3 F#4:e3  |  G4:e3 A4:e3 D4:e3 F#4:e3 A4:e3 C5:e3 B4:e3 A4:e3 B4:e3
+- explain: |
+    **Before you play.** Three notes to every beat, smooth and even: "trip-o-let". Do not let the first of each three bump.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 3/4 · Tempo: 56
+- exercise: song-jesu-joy-rh
+- exercise: song-jesu-joy-lh
+- exercise: song-jesu-joy
+- exercise: song-jesu-joy-arranged
+- exercise: song-jesu-joy-performance
+recap: 'Jesu, Joy of Man''s Desiring: tune, left hand, together. Come back to it any time; songs are for fun.'

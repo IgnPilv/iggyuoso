@@ -94,9 +94,9 @@ questions:
   why: Forced.
 - ask: The Minuet in G's second half moves to D major. That is a modulation to the...
   choices:
-  - Tonic minor
   - Subdominant
   - Relative minor
+  - Tonic minor
   - Dominant
   correct: 3
   why: D is V of G.

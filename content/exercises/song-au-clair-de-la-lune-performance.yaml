@@ -1,0 +1,16 @@
+id: song-au-clair-de-la-lune-performance
+title: 'Au clair de la lune: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 92
+meter: 4/4
+countIn: 1
+right: C5:q C5:q C5:q D5:q | E5:h D5:h | C5:q E5:q D5:q D5:q | C5:w | C5:q C5:q C5:q D5:q | E5:h D5:h | C5:q E5:q D5:q D5:q
+  | C5:w | D5:q D5:q D5:q D5:q | A4:h A4:h | D5:q C5:q B4:q A4:q | G4:w | C5:q C5:q C5:q D5:q | E5:h D5:h | C5:q E5:q D5:q
+  D5:q | C5:w
+left: C3+G3:w | C3+G3:h G2+D3:h | C3+G3:h G2+D3:h | C3+G3:w | C3+G3:w | C3+G3:h G2+D3:h | C3+G3:h G2+D3:h | C3+G3:w | G2+D3:w
+  | D3+A3:w | G2+D3:w | G2+D3:w | C3+G3:w | C3+G3:h G2+D3:h | C3+G3:h G2+D3:h | C3+G3:w
+reps: 2
+days: 2

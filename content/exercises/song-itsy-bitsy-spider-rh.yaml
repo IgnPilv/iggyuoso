@@ -1,0 +1,16 @@
+id: song-itsy-bitsy-spider-rh
+title: 'The Itsy Bitsy Spider: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 58
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: G3:e | C4:q C4:e C4:q D4:e | E4:q. E4:q E4:e | D4:q C4:e D4:q E4:e | C4:q. r:q E4:e | E4:q. F4:q G4:e | G4:q. r:q G4:e
+  | F4:q E4:e F4:q G4:e | E4:q. r:q C4:e | C4:q. D4:q E4:e | E4:q. r:q E4:e | D4:q C4:e D4:q E4:e | C4:q. r:q G3:e | G3:q
+  G3:e C4:q C4:e | C4:q D4:e E4:q E4:e | D4:q C4:e D4:q E4:e | C4:q. r:q
+reps: 2
+days: 1

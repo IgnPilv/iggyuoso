@@ -1,0 +1,26 @@
+id: song-bach-prelude-c
+title: Prelude in C
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:e G4:s C5:s E5:s G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s | r:e A4:s D5:s F5:s A4:s D5:s F5:s r:e A4:s D5:s
+  F5:s A4:s D5:s F5:s | r:e G4:s D5:s F5:s G4:s D5:s F5:s r:e G4:s D5:s F5:s G4:s D5:s F5:s | r:e G4:s C5:s E5:s G4:s C5:s
+  E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s | r:e A4:s E5:s A5:s A4:s E5:s A5:s r:e A4:s E5:s A5:s A4:s E5:s A5:s | r:e F#4:s
+  A4:s D5:s F#4:s A4:s D5:s r:e F#4:s A4:s D5:s F#4:s A4:s D5:s | r:e G4:s D5:s G5:s G4:s D5:s G5:s r:e G4:s D5:s G5:s G4:s
+  D5:s G5:s | r:e E4:s G4:s C5:s E4:s G4:s C5:s r:e E4:s G4:s C5:s E4:s G4:s C5:s | r:e E4:s G4:s C5:s E4:s G4:s C5:s r:e
+  E4:s G4:s C5:s E4:s G4:s C5:s | r:e D4:s F#4:s C5:s D4:s F#4:s C5:s r:e D4:s F#4:s C5:s D4:s F#4:s C5:s | r:e D4:s G4:s
+  B4:s D4:s G4:s B4:s r:e D4:s G4:s B4:s D4:s G4:s B4:s | r:e E4:s G4:s C#5:s E4:s G4:s C#5:s r:e E4:s G4:s C#5:s E4:s G4:s
+  C#5:s | r:e D4:s A4:s D5:s D4:s A4:s D5:s r:e D4:s A4:s D5:s D4:s A4:s D5:s | r:e D4:s F4:s B4:s D4:s F4:s B4:s r:e D4:s
+  F4:s B4:s D4:s F4:s B4:s | r:e C4:s G4:s C5:s C4:s G4:s C5:s r:e C4:s G4:s C5:s C4:s G4:s C5:s | r:e A3:s C4:s F4:s A3:s
+  C4:s F4:s r:e A3:s C4:s F4:s A3:s C4:s F4:s | r:e A3:s C4:s F4:s A3:s C4:s F4:s r:e A3:s C4:s F4:s A3:s C4:s F4:s | r:e
+  G3:s B3:s F4:s G3:s B3:s F4:s r:e G3:s B3:s F4:s G3:s B3:s F4:s | r:e G3:s C4:s E4:s G3:s C4:s E4:s r:e G3:s C4:s E4:s G3:s
+  C4:s E4:s | E4+G4+C5:w
+left: C3:w | D3:w | G2:w | C3:w | A2:w | D3:w | G2:w | C3:w | A2:w | D3:w | G2:w | G2:w | D3:w | D3:w | C3:w | F2:w | D3:w
+  | G2:w | C3:w | C3:w
+reps: 3
+days: 2

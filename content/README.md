@@ -312,6 +312,11 @@ nodes:
   `song: <id>` naming the node that plays the whole song (which has no `song` itself); the songbook
   lists the song once (with "Step n of m") under the milestone its first step opens after, and
   `#/song/<id>` lists the steps in path order. Each step still has its own `requires`.
+- `genre` (songs only, required on every song that is not a step): the Songbook group the song is
+  shown in, one of `nursery` (Children's songs), `folk`, `shanties`, `carols` (Carols and holidays),
+  `hymns` (Hymns and spirituals), `anthems` (Anthems and marches), `dances` (Dances and fiddle
+  tunes), `classical`, `ragtime` (Ragtime and early jazz), `requests` (By request: copyrighted songs
+  Ignas asked for by name). The Songbook has a chip per group and a search box.
 - `lesson`: the lesson that teaches the node. Every lesson in `content/lessons/` is placed in the
   tree exactly once.
 - Nothing is ever closed: a node whose requirements are not grown yet still opens, with advice.

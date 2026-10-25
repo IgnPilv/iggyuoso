@@ -1,0 +1,12 @@
+id: song-mountain-king-tap
+title: 'In the Hall of the Mountain King: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 96
+meter: 4/4
+countIn: 1
+rhythm: x:e x:e x:e x:e x:e x:e x:q | x:e x:e x:q x:e x:e x:q | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:h | x:e
+  x:e x:e x:e x:e x:e x:q | x:e x:e x:q x:e x:e x:q | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:h | x:w
+reps: 2
+days: 1

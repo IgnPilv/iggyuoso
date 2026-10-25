@@ -1,0 +1,19 @@
+id: song-symphony-40-performance
+title: 'Symphony No. 40: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Gm
+tempo: 116
+meter: 4/4
+pickup: e e
+countIn: 1
+right: Eb5:e D5:e | D5:q Eb5:e D5:e D5:q Eb5:e D5:e | D5:q Bb5:q r:q Bb5:e A5:e | G5:q G5:e F5:e Eb5:q Eb5:e D5:e | C5:q C5:q
+  r:q D5:e C5:e | C5:q D5:e C5:e C5:q D5:e C5:e | C5:q A5:q r:q A5:e G5:e | F#5:q F#5:e Eb5:e D5:q D5:e C5:e | Bb4:q Bb4:q
+  r:q
+left: r:q | G2:q D3:q G3:q D3:q | G2:q D3:q G3:q D3:q | C3:q G3:q C4:q G3:q | D3:q A3:q D4:q A3:q | D3:q A3:q D4:q A3:q |
+  D3:q A3:q D4:q A3:q | D3:q A3:q D4:q A3:q | D3+G3+Bb3:h.
+pedal: r:q | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h.
+reps: 2
+days: 2

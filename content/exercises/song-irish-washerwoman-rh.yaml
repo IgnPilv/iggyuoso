@@ -1,0 +1,19 @@
+id: song-irish-washerwoman-rh
+title: 'The Irish Washerwoman: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e e
+countIn: 1
+right: D5:e C5:e | B4:e G4:e G4:e D4:e G4:e G4:e | B4:e G4:e B4:e D5:e C5:e B4:e | C5:e A4:e A4:e E4:e A4:e A4:e | C5:e A4:e
+  C5:e E5:e D5:e C5:e | B4:e G4:e G4:e D4:e G4:e G4:e | B4:e G4:e B4:e D5:e C5:e B4:e | C5:e B4:e C5:e A4:e D5:e C5:e | B4:e
+  G4:e G4:e G4:e D5:e C5:e | B4:e G4:e G4:e D4:e G4:e G4:e | B4:e G4:e B4:e D5:e C5:e B4:e | C5:e A4:e A4:e E4:e A4:e A4:e
+  | C5:e A4:e C5:e E5:e D5:e C5:e | B4:e G4:e G4:e D4:e G4:e G4:e | B4:e G4:e B4:e D5:e C5:e B4:e | C5:e B4:e C5:e A4:e D5:e
+  C5:e | B4:e G4:e G4:e G4:e
+reps: 2
+days: 1
