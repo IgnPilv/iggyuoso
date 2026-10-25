@@ -1477,6 +1477,15 @@ body.focus-page main { max-width: none; padding: 0; }
   box-shadow: var(--shadow-1);
 }
 .focus .result-slot .result { margin-inline: calc(-1 * var(--space-4)); border: 0; background: none; }
+/* "See the marks" folds the card to its score in the corner. */
+.result-fold { display: none; }
+.seg-short { display: none; }
+.focus .result-slot > .result-fold { display: block; position: sticky; top: var(--space-2); z-index: 1; margin: var(--space-2) 0 0 auto; font-size: var(--text-xs); padding: 4px 12px; }
+.focus .result-slot.folded { width: auto; padding-bottom: var(--space-2); }
+.focus .result-slot.folded > :not(.result-fold):not(.result) { display: none; }
+.focus .result-slot.folded .result > :not(.score) { display: none; }
+.focus .result-slot.folded .result { padding-block: 0; }
+.focus .result-slot.folded .result .score { font-size: var(--text-xl, 1.5rem); margin: 0; }
 
 @media (max-width: 560px) {
   .lesson .lesson-head { padding: 8px var(--space-3) 0; }
@@ -1485,9 +1494,16 @@ body.focus-page main { max-width: none; padding: 0; }
   .lesson .lesson-branch, .lesson .lesson-top .small { display: none; }
   .focus .ex-top .prompt { display: none; }
   .focus .ex-top > .ex-head:not(:has(.hand-badge)) { display: none; }
-  /* Transport on one row; the view switch and Options share the next. */
+  /* Three slim rows: the hand and Scored / Practice; the transport; the view switch and Options. */
   .focus .ex-top > .transport { display: contents; }
-  .focus .ex-top .view-toggle { flex: 1 1 0; width: auto; }
+  .focus .ex-top > .ex-head { order: 1; flex: 1 1 auto; }
+  .focus .ex-top .mode-toggle { order: 1; flex: none; width: auto; margin-left: auto; }
+  .focus .ex-top .transport-main { order: 2; }
+  .focus .ex-top .view-toggle:not(.mode-toggle) { order: 3; flex: 1 1 0; width: auto; }
+  .focus .ex-top > .drawer { order: 3; }
+  .focus .ex-top .view-toggle .seg { font-size: var(--text-xs); padding-block: 6px; }
+  .focus .ex-top .seg-long { display: none; }
+  .focus .ex-top .seg-short { display: inline; }
   .focus .drawer > summary .meta-chip { display: none; }
   .focus .ex-meta, .focus .ex-meta .status-line { font-size: var(--text-xs); }
 }

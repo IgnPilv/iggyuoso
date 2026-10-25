@@ -70,6 +70,17 @@ function keepResultClear(root: HTMLElement): () => void {
     const body = shut ? null : drawers[0]?.querySelector<HTMLElement>('.drawer-body');
     if (body) top = Math.max(top, body.getBoundingClientRect().bottom - box.getBoundingClientRect().top + 8);
     if (top) slot.style.setProperty('--result-top', `${Math.round(top)}px`);
+    // A fresh result opens in full, with a button that folds it down to its score, so the marks
+    // on the sheet or notes underneath can be seen.
+    if (shut && !slot.querySelector(':scope > .result-fold')) {
+      slot.classList.remove('folded');
+      const fold = h('button', { class: 'secondary result-fold', type: 'button' }, 'See the marks');
+      fold.addEventListener('click', () => {
+        const folded = slot.classList.toggle('folded');
+        fold.textContent = folded ? 'Show the result' : 'See the marks';
+      });
+      slot.prepend(fold);
+    }
   };
   const watch = new MutationObserver((records) => {
     for (const r of records) {
@@ -151,7 +162,8 @@ export function record(ex: Exercise, score: number, stars: number, tempo: number
   const repsLine = h('p', { class: `reps-line${reps.done ? ' done' : ''}` },
     reps.done && !wasDone ? h('strong', {}, 'Exercise done! ') : clean ? h('strong', {}, 'Clean take. ') : '',
     repsText(ex, reps),
-    !reps.done && !clean ? (a.counts ? ' A clean take needs 92 or more.' : ' Takes count at full tempo.') : '',
+    !reps.done && !clean ? (a.counts ? ' A clean take needs 92 or more.'
+      : ` Only takes from ${Math.ceil(RECORD_TEMPO_FRACTION * written)} bpm count toward them; this one was slow practice.`) : '',
     !reps.done && clean && !reps.today ? " That's all this one can count today." : '');
   return h('div', { class: 'take-summary' }, rewardLine(p.mastery.onAttempt(ex.id, a, before), p.mastery), repsLine);
 }
@@ -188,6 +200,8 @@ export function showHeld(kb: KeyboardView) {
 
 export type ViewMode = 'classic' | 'falling';
 const VIEW_LABEL: Record<ViewMode, string> = { classic: 'Keyboard & sheet', falling: 'Falling notes' };
+/** Shorter labels for a phone held upright, where the switch shares a row. */
+const VIEW_SHORT: Record<ViewMode, string> = { classic: 'Sheet', falling: 'Falling' };
 
 /** The player's last pick wins everywhere; otherwise reading exercises start classic. */
 export function initialView(ex: Exercise): ViewMode {
@@ -200,7 +214,8 @@ export function initialView(ex: Exercise): ViewMode {
 export function viewToggle(start: ViewMode, onChange: (v: ViewMode) => void) {
   let current = start;
   const buttons = (Object.keys(VIEW_LABEL) as ViewMode[]).map((v) =>
-    h('button', { class: 'seg', 'data-view': v, 'aria-pressed': String(v === start) }, VIEW_LABEL[v]));
+    h('button', { class: 'seg', 'data-view': v, 'aria-pressed': String(v === start), 'aria-label': VIEW_LABEL[v] },
+      h('span', { class: 'seg-long' }, VIEW_LABEL[v]), h('span', { class: 'seg-short' }, VIEW_SHORT[v])));
   const el = h('div', { class: 'view-toggle', role: 'group', 'aria-label': 'view' }, ...buttons);
   const set = (v: ViewMode) => {
     current = v;
@@ -630,7 +645,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     const left = LADDER.cleanTakes - ladder.clean;
     const top = ladder.rung === rungs.length - 1;
     ladderLine.textContent = `Tempo ladder: ${rungs[ladder.rung]}% (step ${ladder.rung + 1} of ${rungs.length}). `
-      + (top ? 'Full tempo: keep it clean.' : `${left} more clean ${left === 1 ? 'take' : 'takes'} (${LADDER.cleanScore}+) at ${rungs[ladder.rung]}% to move up.`);
+      + (top ? 'Full tempo: keep it clean.' : `${left} more clean ${left === 1 ? 'take' : 'takes'} (${LADDER.cleanScore}+) at ${rungs[ladder.rung]}% to move up.`)
+      + (rungs[ladder.rung] < RECORD_TEMPO_FRACTION * 100 ? ` The lesson's clean takes count from ${RECORD_TEMPO_FRACTION * 100}%.` : '');
   };
   showLadder();
   let again = 0; // the next practice round
@@ -897,7 +913,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       if (session.wasPaused) {
         // A take with a pause is practice: shown, never saved.
         status.textContent = `${r.score}. A take with a pause is practice and is not saved; play it through without pausing to count it.`;
-        result.replaceChildren(timedResult(r, ex, tempo, cal, true));
+        result.replaceChildren(timedResult(r, ex, cal));
         demo.onRunEnd?.('play');
         return;
       }
@@ -916,6 +932,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
           ladderNote = h('p', { class: 'reward' }, step.moved === 'up'
             ? `Tempo ladder: up to ${rungs[ladder.rung]}%.`
             : `Tempo ladder: back to ${rungs[ladder.rung]}% for now.`);
+        } else if (r.score >= LADDER.cleanScore && ladder.rung < rungs.length - 1) {
+          ladderNote = h('p', { class: 'small' }, `Tempo ladder: clean take at ${rungs[ladder.rung]}% (${ladder.clean} of ${LADDER.cleanTakes} to move up).`);
         }
         showLadder();
       }
@@ -928,7 +946,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       const againRow = h('div', { class: 'controls' },
         h('button', { onclick: () => { stage.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); start(echo ? 'listen' : 'play'); } }, 'Try again'),
         regenerate.has(ex) ? h('button', { class: 'secondary', onclick: () => regenerate.get(ex)!() }, ex.tap ? 'New rhythm' : 'New tune') : '');
-      result.replaceChildren(timedResult(r, ex, tempo, cal), reward, ladderNote, loopTip, againRow);
+      result.replaceChildren(timedResult(r, ex, cal), reward, ladderNote, loopTip, againRow);
       onDone(r);
       fs?.refresh();
       demo.onRunEnd?.('play');
@@ -1023,9 +1041,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   return () => { run?.cancel(); clearTimeout(again); falling?.destroy(); offHeld(); fs?.destroy(); window.removeEventListener('keydown', onSpace); document.removeEventListener('pointerdown', onOutside); };
 }
 
-/** `loopTake`: a practice loop, which is never saved, so there is no note about records. */
-function timedResult(r: TimedResult, ex: TimedExercise, tempo: number, cal: Calibration, loopTake = false) {
-  const slow = !loopTake && tempo < RECORD_TEMPO_FRACTION * ex.tempo;
+/** The take's score, each hand and its habits. What it counted for is said by `record`. */
+function timedResult(r: TimedResult, ex: TimedExercise, cal: Calibration) {
   const handLine = r.hands.map((hr) => {
     const timing = hr.meanOffsetMs === null ? '' : ` · ${Math.abs(hr.meanOffsetMs)} ms ${hr.meanOffsetMs < 0 ? 'early' : 'late'} on average`;
     return h('li', {}, h('strong', {}, `${HAND_LABEL[hr.hand]} ${hr.score}`), ` · ${hr.hits}/${hr.notes} notes${timing}`);
@@ -1043,7 +1060,6 @@ function timedResult(r: TimedResult, ex: TimedExercise, tempo: number, cal: Cali
       r.together ? h('li', {}, `Hands together: ${r.together.meanGapMs} ms apart on shared beats`) : null),
     h('ul', { class: 'feedback' }, ...r.feedback.map((f) => h('li', { class: f.habit }, f.message))),
     wrongKeys.length ? h('p', { class: 'small' }, `Wrong keys: ${wrongKeys.join(', ')}.`) : null,
-    slow ? h('p', { class: 'small' }, `Practised at ${tempo} bpm. Records count from ${Math.ceil(RECORD_TEMPO_FRACTION * ex.tempo)} bpm.`) : null,
   );
 }
 
