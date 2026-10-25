@@ -1297,7 +1297,9 @@ body.fs-page > :not(.fs-layer) { display: none !important; }
 .fs-bar button { padding: 7px 16px; flex-shrink: 0; }
 /* While a take runs, Listen and Play are off: only Pause and Stop show. */
 .fs-bar button:disabled { display: none; }
+.fs-controls { display: flex; align-items: center; gap: var(--space-2); }
 .fs-controls .transport-main { gap: var(--space-2); }
+.fs-controls .mode-toggle .seg { padding: 5px 12px; }
 .fs-exit { width: 34px; height: 34px; padding: 0 !important; border-radius: 50%; }
 
 .fs-layer .fs-result {
@@ -1486,4 +1488,111 @@ body.focus-page main { max-width: none; padding: 0; }
   .focus .ex-top .view-toggle { flex: 1 1 0; width: auto; }
   .focus .drawer > summary .meta-chip { display: none; }
   .focus .ex-meta, .focus .ex-meta .status-line { font-size: var(--text-xs); }
+}
+
+/* ---------------------------------------------------------------- practice: the bars to loop */
+
+/* Scored / Practice sits before the transport; Practice, when on, carries the accent. */
+.mode-toggle .seg[data-mode='practice'][aria-pressed='true'] { color: var(--accent-ink); }
+.drawer-note { margin: var(--space-2) 0 0; max-width: 46ch; }
+
+/* The bar slider over the stage (src/modules/piano/ui/barRange.ts): a cell per bar, the chosen
+   bars lit, a handle at each end. */
+.bar-range { display: flex; align-items: center; gap: var(--space-3); margin: 0 0 var(--space-2); flex: none; }
+.range-label { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--accent-ink); white-space: nowrap; min-width: 9ch; }
+.range-track {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  height: 30px;
+  margin-inline: 8px;
+  border-radius: var(--radius-sm, 8px);
+  background: var(--surface-sunken);
+  border: 1px solid var(--line);
+  touch-action: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.range-cell {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 500 10px var(--font-mono);
+  color: var(--muted);
+  border-left: 1px solid var(--line);
+  overflow: hidden;
+}
+.range-cell:first-child { border-left: 0; }
+.range-cell.in { color: var(--ink); }
+.range-fill {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent-soft);
+  pointer-events: none;
+}
+.range-handle {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  width: 16px;
+  padding: 0 !important;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: var(--accent);
+  box-shadow: var(--shadow-1);
+  cursor: ew-resize;
+  touch-action: none;
+}
+.range-handle::after { content: ''; position: absolute; inset: 9px 5px; border-inline: 2px solid var(--on-accent); opacity: 0.8; }
+.range-handle:hover { transform: translateX(-50%); filter: none; }
+.range-handle:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/* The same handles on the sheet: bars outside the range fade, a handle stands on each end's bar line. */
+.staff .range-shade { fill: var(--bg); opacity: 0.68; pointer-events: none; }
+.staff .range-band { fill: var(--accent); }
+.staff .range-num { font: 500 10px var(--font-mono); fill: var(--muted); }
+.staff .range-num.in { fill: var(--accent-ink); font-weight: 700; }
+.staff .range-grip { cursor: ew-resize; touch-action: none; }
+.staff .range-grip .grip-hit { fill: transparent; }
+.staff .range-grip .grip-line { stroke: var(--accent); stroke-width: 2; }
+.staff .range-grip .grip-knob { fill: var(--accent); }
+.staff .range-grip .grip-mark { stroke: var(--on-accent); stroke-width: 1.4; }
+
+/* A small result per practice round: the last few scores. */
+.rounds { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+.rounds:empty { display: none; }
+.round-chip { font: 600 var(--text-xs) var(--font-mono); padding: 2px 7px; border-radius: var(--radius-pill); background: var(--surface-sunken); border: 1px solid var(--line); }
+.round-chip.s3, .round-chip.s2 { color: var(--ok); }
+.round-chip.s1 { color: var(--warn); }
+.round-chip.s0 { color: var(--bad); }
+
+/* A phone on its side: the slider shows with the controls, under them. */
+.fs-layer .bar-range {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 54px);
+  left: calc(env(safe-area-inset-left) + 12px);
+  right: calc(env(safe-area-inset-right) + 12px);
+  z-index: 2;
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--lane-bg) 85%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease-out);
+}
+.fs-layer.show .bar-range { opacity: 1; pointer-events: auto; }
+.fs-layer .range-label { color: var(--lane-big); }
+.fs-score .rounds { margin-top: 4px; }
+
+@media (max-width: 560px) {
+  .focus .ex-top .mode-toggle { flex: 1 1 0; }
+  .bar-range { gap: var(--space-2); }
+  .range-label { min-width: 0; font-size: var(--text-xs); }
 }

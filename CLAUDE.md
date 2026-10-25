@@ -717,3 +717,19 @@ never copied pages). Start small, adapt as we go.
   (`settings.chords`, unset = on, remembered like Fingers; shown only when the exercise has chords). Not on
   taps, nor on drills with a `goal` (reading tests), where they would give the chords away. Theory pictures
   and quiz staves have none. Demo scene "Chord names" (the easy Canon's chords over the bass).
+- 2026-10-25: Practice mode with bar sliders (Ignas: "make the bar slider on sheet music with final notes
+  slideable... in every play there is a play lesson but there is also practice... use sliders to set the
+  repeating loops"). Every timed exercise (not echoes) has a Scored / Practice switch before the transport.
+  Scored is the take as before (records, clean takes, ladder, XP). Practice saves nothing: Play goes round the
+  chosen bars until Stop, each round shown as a small result (score, stars, the main habit) and a chip in a
+  row of the last 8 scores; the sheet keeps the round's marks; tempo, count-in, click, guide, fingers, hands
+  and Pause still work. The bars are picked with a bar slider over the stage (a cell per bar, a handle at each
+  end, drag or tap, arrow keys; `src/modules/piano/ui/barRange.ts`) and with the same handles on the sheet's
+  bar lines (bars outside fade, bar numbers on top); both views and the falling notes' sheet strip show the
+  whole piece, and the falling notes play only the bars picked, numbered as in the piece. Changing the bars
+  while practice goes round applies from the next round. On a phone on its side the switch sits with the
+  controls and the slider under them. The result card's "Practise bars 2–3" opens Practice on those bars;
+  Options no longer has the "Loop bars" selects. Mode and bars are remembered per exercise until the page
+  reloads (not in the demo). `sliceMap` (`engine/practice.ts`) maps a slice's notes back onto the whole
+  sheet; `sliceBars` now cuts the pedal line too. Demo scene "Practice mode"; "Tempo ladder and loops" uses
+  the new button.
