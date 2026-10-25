@@ -27,6 +27,7 @@ import { chordFinderView } from './chordFinderView';
 import { toDevice } from '../calibration';
 import { mountPulse } from './pulseView';
 import { mountScaleGym } from './scaleGymView';
+import { mountByEar } from './byEarView';
 import { mountJam } from './jamView';
 import { mySongsView } from './mySongsView';
 import { noteRushView } from './noteRush';
@@ -1064,6 +1065,25 @@ function scenes(): Scene[] {
       timers.push(window.setTimeout(() => set('hands', 'together'), 700));
       timers.push(window.setTimeout(() => set('tempo', '72'), 1200));
       timers.push(window.setTimeout(() => press(box, 'Start'), 2000));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Play by ear',
+    caption: 'Find a tune you know on the keys (#/byear, from the Mini game card on home). The app plays the opening of a public-domain tune (easy, medium or hard; near middle C or on any key; name shown or a mystery) and lights its first note. Each note found is written on the staff; a wrong key says higher or lower, the second wrong key also how far from the last note (a step, a skip, a leap), the right note in the wrong octave is pointed out, and playing from the start again never counts as a guess. Hear the next notes or Show me when stuck; at the end the score, how many notes came on the first try, and the tune played back. Nothing is saved. Here the pianist finds Ode to Joy, missing once below and once above, and once an octave too high.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (m: number) => m + DEMO_CALIBRATION.offset;
+      const cleanup = mountByEar(box, DEMO_CALIBRATION, { tune: 'ode-to-joy' });
+      timers.push(window.setTimeout(() => press(box, 'Hear it all'), 800));
+      // E (E F G G F E D C C D E E D D): two misses before F, an octave slip on the second-last E.
+      const keys = [64, 62, 69, 65, 67, 67, 65, 64, 62, 60, 60, 62, 76, 64, 64, 62, 62];
+      let at = 10500;
+      keys.forEach((m, i) => {
+        p.playNote(dev(m), at, 380);
+        at += i === 1 || i === 2 || i === 12 ? 1600 : 750;
+      });
+      timers.push(window.setTimeout(next, at + 11000));
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });
