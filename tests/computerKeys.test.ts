@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { ComputerKeys, letterOf, noteFor, PORT } from '../src/midi/computerKeys';
-import { midi, type NoteEvent } from '../src/midi/input';
+import { ComputerKeys, letterOf, noteFor, PORT } from '../src/modules/piano/midi/computerKeys';
+import { midi, type NoteEvent } from '../src/modules/piano/midi/input';
 
 describe('computer keyboard', () => {
   it('maps the home row to white keys and the row above to black keys', () => {

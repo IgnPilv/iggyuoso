@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import type { TreeNode } from '../src/content/tree';
-import { Mastery } from '../src/progress/mastery';
-import { FIRST_TAKE_MS, levelOf, Profile, strandMastery, xpForLevel } from '../src/progress/profile';
-import { memoryBackend, Store } from '../src/progress/store';
+import type { TreeNode } from '../src/modules/piano/content/tree';
+import { Mastery } from '../src/modules/piano/progress/mastery';
+import { FIRST_TAKE_MS, levelOf, Profile, strandMastery, xpForLevel } from '../src/modules/piano/progress/profile';
+import { memoryBackend, Store } from '../src/modules/piano/progress/store';
 
 const take = (at: string, timing?: { right?: { mean: number; spread: number | null } }) =>
   ({ at, score: 95, stars: 3 as const, tempo: 60, counts: true, timing });

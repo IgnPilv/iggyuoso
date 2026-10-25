@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { parseExercise } from '../src/content/load';
-import type { GeneratedExercise, QuizExercise, TimedExercise } from '../src/content/types';
-import { QuizSession } from '../src/engine/drills';
-import { generate, poolNotes } from '../src/engine/generate';
-import { pitchToMidi } from '../src/music/notes';
-import { applyGoal } from '../src/scoring/goal';
-import { calibrate, toDevice } from '../src/calibration';
+import { parseExercise } from '../src/modules/piano/content/load';
+import type { GeneratedExercise, QuizExercise, TimedExercise } from '../src/modules/piano/content/types';
+import { QuizSession } from '../src/modules/piano/engine/drills';
+import { generate, poolNotes } from '../src/modules/piano/engine/generate';
+import { pitchToMidi } from '../src/modules/piano/music/notes';
+import { applyGoal } from '../src/modules/piano/scoring/goal';
+import { calibrate, toDevice } from '../src/modules/piano/calibration';
 
 const cal88 = (() => { const r = calibrate(21, 108); if (!r.ok) throw new Error(); return r.calibration; })();
 

@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { parseExercise } from '../src/content/load';
-import type { TimedExercise } from '../src/content/types';
-import { climb, LADDER_START, sliceBars, trickyBars } from '../src/engine/practice';
-import { expectedNotes } from '../src/music/timeline';
-import type { TimedResult } from '../src/scoring/timed';
+import { parseExercise } from '../src/modules/piano/content/load';
+import type { TimedExercise } from '../src/modules/piano/content/types';
+import { climb, LADDER_START, sliceBars, trickyBars } from '../src/modules/piano/engine/practice';
+import { expectedNotes } from '../src/modules/piano/music/timeline';
+import type { TimedResult } from '../src/modules/piano/scoring/timed';
 
 const timed = (extra: Record<string, unknown>) =>
   parseExercise({ id: 't', kind: 'timed', hand: 'right', tempo: 60, meter: '4/4', ...extra }) as TimedExercise;

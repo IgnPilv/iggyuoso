@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { barLengths, midiName, parseMeter, parsePitch, parseTimedNotes, pitchToMidi } from '../src/music/notes';
+import { barLengths, midiName, parseMeter, parsePitch, parseTimedNotes, pitchToMidi } from '../src/modules/piano/music/notes';
 
 describe('notes', () => {
   it('maps written pitches with C4 = 60', () => {

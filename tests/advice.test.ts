@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { content, pathLessons, treeNodes } from '../src/content';
-import { dailyInput, frontier, lessonAdvice, lessonGoals, lessonStage, nextLesson, noteSkipped, skippedLessons } from '../src/progress';
-import { makePlan } from '../src/progress/daily';
-import { Mastery } from '../src/progress/mastery';
-import { memoryBackend, Store } from '../src/progress/store';
+import { content, pathLessons, treeNodes } from '../src/modules/piano/content';
+import { dailyInput, frontier, lessonAdvice, lessonGoals, lessonStage, nextLesson, noteSkipped, skippedLessons } from '../src/modules/piano/progress';
+import { makePlan } from '../src/modules/piano/progress/daily';
+import { Mastery } from '../src/modules/piano/progress/mastery';
+import { memoryBackend, Store } from '../src/modules/piano/progress/store';
 
 function fresh() {
   const store = new Store(memoryBackend());

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import type { TreeNode } from '../src/content/tree';
-import { Mastery, REVIEW_DAYS, XP } from '../src/progress/mastery';
-import { memoryBackend, Store } from '../src/progress/store';
-import { stars } from '../src/scoring/stars';
+import type { TreeNode } from '../src/modules/piano/content/tree';
+import { Mastery, REVIEW_DAYS, XP } from '../src/modules/piano/progress/mastery';
+import { memoryBackend, Store } from '../src/modules/piano/progress/store';
+import { stars } from '../src/modules/piano/scoring/stars';
 
 const node = (id: string, lesson: string, requires: string[] = []): TreeNode =>
   ({ id, type: 'lesson', strand: 'technique', title: id, lesson, requires, planned: false, stage: 1, branch: 'technique' });

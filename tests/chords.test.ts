@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { groupChords } from '../src/midi/chords';
+import { groupChords } from '../src/modules/piano/midi/chords';
 
 describe('groupChords', () => {
   it('times near-simultaneous notes from the first one', () => {

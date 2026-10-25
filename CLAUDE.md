@@ -3,7 +3,8 @@
 **Read this file before doing anything. Append every decision to the Decision log at the bottom.**
 
 ## What it is
-A browser-based piano tutor (iggy + virtuoso) for an adult beginner who is "not musical", using a
+One learning website with one account and several **modules** (see "Modules" below). The first and
+main module is a browser-based piano tutor (iggy + virtuoso) for an adult beginner who is "not musical", using a
 MIDI keyboard. Not a song player; a **trainer**: short exercises that each isolate one skill, with
 both hands working together early. Each hand is scored separately and the feedback says which hand
 or which habit gave way. Slogan: *easy as C D E.*
@@ -26,6 +27,20 @@ never copied pages). Start small, adapt as we go.
 - Scoring engine is unit-tested (vitest).
 - Hosted on GitHub Pages (public repo; https is required for Web MIDI).
 - Progress stored in localStorage first; keep the store swappable for an account later.
+
+## Modules
+- The site is a shell (`src/app/`) around modules (`src/modules/<id>/`), with shared code in
+  `src/core/` (Module interface, storage, account + sync, account card, theme, Appearance). Shared
+  code never imports from a module. Architecture and **how to add a module**: `docs/modules.md`.
+- The header's module switcher (next to the logo) swaps the module's links, home and pages;
+  Profile, Demo, Settings and the theme button are shared. `#/<id>/<route>` addresses a module's
+  page; the piano keeps its old top-level addresses (`#/lesson/<id>`, `#/book`, ...).
+- One account for all modules: a module saves `iggyuoso.<id>.*` records (`ModuleRecords`) that sync
+  as they are; the piano keeps its old record names. Each module declares merge / wipe rules.
+- Piano code lives in `src/modules/piano/` (paths in the decision log before 2026-10-25 are
+  relative to it: `src/ui/x.ts` is now `src/modules/piano/ui/x.ts`, except `src/ui/theme.ts`,
+  `dom.ts`, `accountView.ts` and `src/sync/`, now in `src/core/`). `src/modules/sums/` is a tiny
+  sample module, clearly marked as such, to be replaced by a real second module.
 
 ## Hardware and input
 - Owner's keyboard: a Chinese **Steiner** digital piano, 7 full octaves plus a few keys (most likely
@@ -51,8 +66,9 @@ never copied pages). Start small, adapt as we go.
 - `#/demo` is a no-keyboard showcase: a demo pianist plays the real screens on a virtual 88-key
   keyboard (with deliberate mistakes), plus a "watch any exercise" list built from `content/`.
 - **Every user-facing feature must show up in the demo.** When you add or change a feature, add or
-  extend a scene in `src/ui/demoView.ts` (and `src/demo/pianist.ts` if the pianist needs a new
-  move) in the same PR. The demo never saves progress or calibration.
+  extend a scene in `src/modules/piano/ui/demoView.ts` (and `src/modules/piano/demo/pianist.ts` if
+  the pianist needs a new move) in the same PR. `#/demo` shows the open module's demo
+  (`Module.demo`); a new module brings its own. The demo never saves progress or calibration.
 
 ## Content
 - A **growing mastery tree**, no years: seven branches (technique, reading, rhythm, theory, ear,
@@ -636,3 +652,20 @@ never copied pages). Start small, adapt as we go.
   My songs pages show their staff without fingers. Options → Fingers (`settings.fingers`, unset = on,
   remembered like the other options) switches them off on the notes, the sheet and the lit keys. Demo scene
   "Fingers on the notes".
+- 2026-10-25: Modules (Ignas: "imagine if piano is one of iggyuoso modules... another module, for
+  example math tutor or painter... shared account, same website... when you swap modules content in
+  bar changes"). The site is now a shell (`src/app/`: header, module switcher, router, shared
+  Profile / Settings / Demo pages) around modules (`src/modules/<id>/`, each a `Module` from
+  `src/core/module.ts`: id, name, icon, tagline, routes with a home, header links, profile and
+  settings parts, demo, records rules, activate / deactivate). Shared code is in `src/core/`
+  (storage, account and sync, account card, theme, Appearance). The whole piano app moved, unchanged,
+  to `src/modules/piano/`; its addresses and saved records keep their old names (no migration, no
+  change on the account), and it starts MIDI and the computer keyboard only while it is open.
+  New modules use `#/<id>/<route>` and `iggyuoso.<id>.*` records, which sync on the same account;
+  merge rules, what a wipe keeps and upgrades come from each module (`src/core/records.ts`); the
+  schema version is app-wide. The open module is saved on the device (`iggyuoso.module`). The
+  Profile shows the account card, the open module's part and a line per other module with
+  progress; "Wipe progress" clears every module. A sample module "Sums" (five additions, best
+  round saved), marked Sample in the switcher, proves the switch and is to be replaced. Phone
+  header: icon-only links up to 860 px wide, logo mark only under 440 px. Demo scene "One app,
+  many modules". How to add a module: `docs/modules.md`.
