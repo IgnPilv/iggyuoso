@@ -26,6 +26,7 @@ import { sketchbookView } from './sketchbookView';
 import { chordFinderView } from './chordFinderView';
 import { toDevice } from '../calibration';
 import { mountPulse } from './pulseView';
+import { mountScaleGym } from './scaleGymView';
 import { mountJam } from './jamView';
 import { mySongsView } from './mySongsView';
 import { noteRushView } from './noteRush';
@@ -1036,6 +1037,33 @@ function scenes(): Scene[] {
         if (silentSel) { silentSel.value = '2-2'; silentSel.dispatchEvent(new Event('change')); }
       }, 600));
       timers.push(window.setTimeout(() => press(box, 'Start'), 1600));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Scale gym',
+    caption: 'Scales and arpeggios on the click (#/scales, linked from the Timing mirror and the Profile). Pick major, minor (natural or harmonic), chromatic or an arpeggio, a key, one hand or both, one or two octaves, notes a click and a tempo. The keys show the textbook fingering; one bar of count-in, then the scale goes up and back down. Every note lands on a chart (late above the line, early below, thumb passes marked ▲), and each hand gets its lean, how even it was, how its thumb passes and its thumb\'s loudness compare, the notes furthest off, and a tip. Nothing is saved. Here the pianist plays C major hands together: the right thumb passes under late and bumps louder.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (m: number) => m + DEMO_CALIBRATION.offset;
+      const cleanup = mountScaleGym(box, DEMO_CALIBRATION, {
+        onStart: (g) => {
+          g.notes.forEach((n, i) => {
+            const wobble = [6, -8, 3, 10, -4, 0, 7, -6][i % 8];
+            const late = n.hand === 'right' && n.pass ? 58 : n.hand === 'left' ? -12 : 0;
+            const vel = n.hand === 'right' && n.finger === 1 ? 104 : 72 + (i % 3) * 3;
+            p.playNote(dev(n.midi), g.t0 + n.step * g.stepMs + late + wobble - performance.now(), g.stepMs * 0.85, vel);
+          });
+          timers.push(window.setTimeout(next, g.endsAt + 7000 - performance.now()));
+        },
+      });
+      const set = (label: string, value: string) => {
+        const el = box.querySelector<HTMLSelectElement | HTMLInputElement>(`[aria-label="${label}"]`);
+        if (el) { el.value = value; el.dispatchEvent(new Event('change')); }
+      };
+      timers.push(window.setTimeout(() => set('hands', 'together'), 700));
+      timers.push(window.setTimeout(() => set('tempo', '72'), 1200));
+      timers.push(window.setTimeout(() => press(box, 'Start'), 2000));
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });

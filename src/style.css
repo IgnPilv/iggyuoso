@@ -1699,6 +1699,22 @@ body.focus-page main { max-width: none; padding: 0; }
 .pulse-quiet { fill: var(--muted); opacity: 0.08; }
 .pulse-readout { margin-top: var(--space-4); }
 
+/* Scale gym (#/scales) */
+.gym .key.target rect { filter: none; }
+.gym-chart { margin-top: var(--space-3); }
+.gym-top { stroke: var(--line-strong); stroke-dasharray: 3 3; }
+.gym-bar.right, .gym-pass.right { fill: var(--rh); }
+.gym-bar.left, .gym-pass.left { fill: var(--lh); }
+.gym-finger { fill: var(--muted); font-family: var(--font-mono); }
+.gym-finger.right { fill: var(--rh); }
+.gym-finger.left { fill: var(--lh); }
+.gym-miss { fill: var(--bad); font-size: 14px; font-weight: 700; }
+.gym-result:empty { display: none; }
+.gym-result { margin-top: var(--space-3); }
+.gym-score { font-size: var(--text-lg); margin: 0 0 var(--space-2); }
+.gym-score strong { font-family: var(--font-display); font-size: 32px; }
+.gym-tip { margin: var(--space-2) 0 0; padding: var(--space-2) var(--space-3); border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: var(--radius-sm); }
+
 /* ---------------------------------------------------------------- Jam room */
 
 .jam .key.target rect { filter: none; }

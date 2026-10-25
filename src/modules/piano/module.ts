@@ -10,6 +10,7 @@ import { bookView } from './ui/bookView';
 import { chordFinderView } from './ui/chordFinderView';
 import { demoView } from './ui/demoView';
 import { jamView } from './ui/jamView';
+import { scaleGymView } from './ui/scaleGymView';
 import { mySongsView } from './ui/mySongsView';
 import { noteRushView } from './ui/noteRush';
 import { pianoProfile } from './ui/profileView';
@@ -67,6 +68,7 @@ export const piano: Module = {
     chords: chordFinderView,
     pulse: pulseView,
     jam: jamView,
+    scales: scaleGymView,
   },
   topLevel: true,
   nav: [

@@ -851,3 +851,14 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   played is counted as a chord note, in the scale, in the key or outside (a note in the last eighth
   of a bar counts with the next chord), plus how often beat 1 lands on the chord, with a tip
   (`engine/jam.ts`, tested). Nothing is saved. Demo scene "Jam room".
+- 2026-10-25: Scale gym (hourly idea 5; merged directly under Ignas's "for now implement all"). `#/scales`,
+  linked from the Timing mirror and the Profile's Timing card: major, natural / harmonic minor,
+  chromatic, major / minor arpeggios, in any key (minor ones and arpeggios on white-key tonics), right,
+  left or both hands (the left hand as many octaves below as the run is long), one or two octaves,
+  1 / 2 / 4 notes a click, tempo; Listen plays it. Keys show **textbook fingering** (`gymFingers`, not
+  the suggested-fingering search, which picks odd fingerings over two octaves). One bar of count-in,
+  then up and back down; each note is matched to its place (`engine/scaleGym.ts`, tested) and drawn on
+  a chart (late above, early below, ▲ at thumb passes, × for missed). Per hand: lean, evenness, thumb
+  passes against the other notes, loudness spread and a bumping thumb (only with real velocities), the
+  notes furthest off, and at most two tips. Score: each note full within 20 ms, nothing at half a step
+  (60 to 100 ms). Nothing is saved (best per setup until reload). Demo scene "Scale gym".

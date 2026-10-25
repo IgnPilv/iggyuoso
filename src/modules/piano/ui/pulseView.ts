@@ -215,7 +215,7 @@ export function mountPulse(root: HTMLElement, cal: Calibration, hooks: PulseHook
       h('label', {}, 'Beats in a bar ', beats), h('label', {}, 'Play on ', sub), h('label', {}, 'Silent bars ', silent)),
     h('div', { class: 'controls' }, startBtn, stopBtn, clearBtn, lights, status),
     mirror, line, readout,
-    h('p', { class: 'small' }, 'Nothing here is saved. Timing from scored exercises is on your Profile. If every press shows late, set Settings → Timing.'),
+    h('p', { class: 'small' }, 'Nothing here is saved. Timing from scored exercises is on your Profile. If every press shows late, set Settings → Timing. Scales and arpeggios, note by note: ', h('a', { href: '#/scales' }, 'Scale gym'), '.'),
   ));
 
   return () => { run?.stop(); offPorts(); };
