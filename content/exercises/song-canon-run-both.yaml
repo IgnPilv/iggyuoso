@@ -1,0 +1,16 @@
+id: song-canon-run-both
+title: 'Canon in D: the run over the ground'
+kind: timed
+hand: together
+prompt: 'Both hands: four right-hand notes to each bass note.'
+display: staff
+key: D
+tempo: 52
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:s C#5:s D5:s D4:s C#4:s A4:s E4:s F#4:s D4:s D5:s C#5:s B4:s C#5:s F#5:s A5:s B5:s | G5:s F#5:s E5:s G5:s F#5:s
+  E5:s D5:s C#5:s B4:s A4:s G4:s F#4:s E4:s G4:s F#4:s E4:s
+left: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q
+reps: 3
+days: 2

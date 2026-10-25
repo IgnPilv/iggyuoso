@@ -1,0 +1,42 @@
+id: song-canon-singing
+title: 'Canon in D 5: the singing line'
+skills:
+- songs
+steps:
+- explain: |
+    **The singing line** is the part everyone hums: "**A**, F♯ G **A**, F♯ G, A A B C♯ D E F♯ G". Each beat is
+    an eighth and two sixteenths (long, short short), and then a scale races up or down a whole octave.
+
+    Four bars, each starting with the long-short-short figure. Let the long notes sing and the scales flow into the next
+    bar, getting a little louder as they climb.
+  staff:
+    notes: A5:e F#5:s G5:s A5:e F#5:s G5:s A5:s A4:s B4:s C#5:s D5:s E5:s F#5:s G5:s | F#5:e D5:s E5:s F#5:e F#4:s G4:s A4:s
+      B4:s A4:s G4:s A4:s F#4:s G4:s A4:s
+    key: D
+  sound: D2+A5:e A2+F#5:s G5:s A2+A5:e E3+F#5:s G5:s B2+A5:s A4:s F#3+B4:s C#5:s F#2+D5:s E5:s C#3+F#5:s G5:s | G2+F#5:e D3+D5:s
+    E5:s D2+F#5:e A2+F#4:s G4:s G2+A4:s B4:s D3+A4:s G4:s A2+A4:s F#4:s E3+G4:s A4:s | D2+G4:e A2+B4:s A4:s A2+G4:e E3+F#4:s
+    E4:s B2+F#4:s E4:s F#3+D4:s E4:s F#2+F#4:s G4:s C#3+A4:s B4:s | G2+G4:e D3+B4:s A4:s D2+B4:e A2+C#5:s D5:s G2+A4:s B4:s
+    D3+C#5:s D5:s A2+E5:s F#5:s E3+G5:s A5:s
+  terms:
+  - eighth and two sixteenths
+  - scale
+  - phrase
+- explain: |
+    **Long, short short.** An eighth then two sixteenths fills one beat: count it "**1** – and a": the eighth on the beat, the
+    sixteenths on "and" and "a". Tap it a few times before you play it: the two sixteenths lead into the next beat.
+  staff:
+    notes: A5:e F#5:s G5:s A5:e F#5:s G5:s A5:e F#5:s G5:s A5:e F#5:s G5:s
+    key: D
+  check:
+    ask: An eighth and two sixteenths together last...
+    choices:
+    - Two beats
+    - Half a beat
+    - Three eighths
+    - One beat (a quarter)
+    correct: 3
+    why: 'An eighth is half a beat, each sixteenth a quarter of one: ½ + ¼ + ¼ = 1.'
+- exercise: song-canon-singing-tap
+- exercise: song-canon-singing-rh
+- exercise: song-canon-singing-both
+recap: 'The singing line: long short short, then a scale up or down an octave.'

@@ -1,0 +1,22 @@
+id: song-canon-easy-build
+title: 'Pachelbel''s Canon, easy: find the chords'
+kind: build
+prompt: Hold each chord down together, right hand.
+tasks:
+- notes: C4 E4 G4
+  ask: 'C: C E G'
+  together: true
+- notes: B3 D4 G4
+  ask: 'G, close to C: B D G'
+  together: true
+- notes: C4 E4 A4
+  ask: 'A minor, close shape: C E A'
+  together: true
+- notes: B3 E4 G4
+  ask: 'E minor, close shape: B E G'
+  together: true
+- notes: C4 F4 A4
+  ask: 'F, close shape: C F A'
+  together: true
+reps: 3
+days: 1

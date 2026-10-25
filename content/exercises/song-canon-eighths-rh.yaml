@@ -1,0 +1,14 @@
+id: song-canon-eighths-rh
+title: 'Canon in D: line 3'
+kind: timed
+hand: right
+prompt: Right hand alone, even eighths. Thumb on D; the B in bar 2 is the thumb tucking under.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:e F#4:e A4:e G4:e F#4:e D4:e F#4:e E4:e | D4:e B3:e D4:e A4:e G4:e B4:e A4:e G4:e
+reps: 3
+days: 1

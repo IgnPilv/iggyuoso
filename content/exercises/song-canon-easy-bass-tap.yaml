@@ -1,0 +1,12 @@
+id: song-canon-easy-bass-tap
+title: 'Pachelbel''s Canon, easy: the bass rhythm'
+kind: tap
+prompt: Two long taps a bar, on beats one and three. Count "one two three four" out loud.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:h x:h | x:h x:h | x:h x:h | x:h x:h
+reps: 2
+days: 1

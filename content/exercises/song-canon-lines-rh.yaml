@@ -1,0 +1,14 @@
+id: song-canon-lines-rh
+title: 'Canon in D: lines 1 and 2'
+kind: timed
+hand: right
+prompt: Right hand alone. Line 1 starts with finger 5 on F♯; line 2 with 5 on D.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#5:q E5:q D5:q C#5:q | B4:q A4:q B4:q C#5:q | D5:q C#5:q B4:q A4:q | G4:q F#4:q G4:q E4:q
+reps: 3
+days: 1

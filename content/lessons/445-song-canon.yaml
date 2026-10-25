@@ -1,0 +1,23 @@
+id: song-canon
+title: Canon in D
+skills:
+- songs
+steps:
+- explain: |
+    **Canon in D**, the whole canon in our arrangement: the ground alone, then the lines in quarters, eighths and
+    sixteenths, the singing line, the first lines again and a D major chord. 19 bars, a little over a minute.
+
+    Two versions: first with the ground in quarters all the way, then with the left hand flowing in eighths from line
+    3 on. The last take adds the pedal: change it with every bass note, just after the note sounds.
+  staff:
+    notes: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q
+    clef: bass
+    key: D
+  sound: D3+F#5:q A2+E5:q B2+D5:q F#2+C#5:q | G2+B4:q D2+A4:q G2+B4:q A2+C#5:q | D3+D5:q A2+C#5:q B2+B4:q F#2+A4:q | G2+G4:q
+    D2+F#4:q G2+G4:q A2+E4:q
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 60 · Ground, lines 1–3, the run, the singing line, lines 1–2, last chord
+- exercise: song-canon-whole-quarters
+- exercise: song-canon-whole-full
+- exercise: song-canon-performance
+recap: 'Canon in D, start to end: the ground, every line, and a pedalled performance.'

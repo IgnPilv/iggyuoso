@@ -1,0 +1,19 @@
+id: song-canon-easy
+title: Pachelbel's Canon, easy
+skills:
+- songs
+steps:
+- explain: |
+    **Pachelbel's Canon, easy**, the whole piece: the bass alone once, as the cello starts the real Canon, then the three
+    lines of tune over it, and a C major chord to end. 17 bars, a little over a minute.
+
+    The bass goes round four times without a break. When the tune comes in, keep the bass just as steady.
+  staff:
+    notes: E5:h D5:h | C5:h B4:h | A4:h G4:h | A4:h B4:h
+  sound: C3+E5:h G2+D5:h | A2+C5:h E2+B4:h | F2+A4:h C3+G4:h | F2+A4:h G2+B4:h | C3+C5:h G2+B4:h | A2+A4:h E2+G4:h | F2+F4:h
+    C3+E4:h | F2+F4:h G2+D4:h
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 72 · Bass alone, line 1, line 2, line 3, last chord
+- exercise: song-canon-easy-whole
+- exercise: song-canon-easy-performance
+recap: 'Pachelbel''s Canon, easy, start to end: the ground four times, three lines of tune and a last chord.'

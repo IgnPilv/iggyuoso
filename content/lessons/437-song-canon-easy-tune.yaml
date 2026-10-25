@@ -1,0 +1,48 @@
+id: song-canon-easy-tune
+title: 'Pachelbel''s Canon, easy 3: the tune'
+skills:
+- songs
+steps:
+- explain: |
+    **The first tune falls by step**: E D C B A G, then turns back up, A B. One note for each bass note, as slow as the
+    bass.
+
+    It is a little too wide for one hand position, so the hand **moves once**: fingers 5 4 3 2 1 from the high E down
+    to A, then put the **thumb on G** (the hand slides one key down) and play A and B with fingers 2 and 3.
+  staff:
+    notes: E5:h D5:h | C5:h B4:h | A4:h G4:h | A4:h B4:h
+  keys:
+    notes: A4 B4 C5 D5 E5
+    fingers: 1 2 3 4 5
+  sound: E5:h D5:h | C5:h B4:h | A4:h G4:h | A4:h B4:h
+  terms:
+  - step
+  - hand position
+  - shift
+  callout: |
+    Line 1: E D C B A | G A B. Fingers 5 4 3 2 1 | 1 2 3.
+- explain: |
+    **The second tune** is the same shape, one step lower: C B A G, F E F D. Start with finger 4 on C, so the
+    hand sits where line 1 ended. After G (thumb) **lift the hand into C position**: F with finger 4, then E 3, F 4,
+    D 2. The half notes give you time to move.
+
+    The **third tune** is two quarter notes to each bass note, all in C position: C E G F, E C E D, C F E G, F C D G.
+  staff:
+    notes: C5:h B4:h | A4:h G4:h | F4:h E4:h | F4:h D4:h | C4:q E4:q G4:q F4:q | E4:q C4:q E4:q D4:q | C4:q F4:q E4:q G4:q
+      | F4:q C4:q D4:q G4:q
+  sound: C5:h B4:h | A4:h G4:h | F4:h E4:h | F4:h D4:h | C4:q E4:q G4:q F4:q | E4:q C4:q E4:q D4:q | C4:q F4:q E4:q G4:q |
+    F4:q C4:q D4:q G4:q
+  check:
+    ask: Line 2 starts on C. Where does it start compared to line 1 (which starts on E)?
+    choices:
+    - A step higher
+    - The same note
+    - A third lower
+    - An octave lower
+    correct: 2
+    why: 'E to C, down two letters: a third lower. The shape is the same.'
+- exercise: song-canon-easy-tune-echo
+- exercise: song-canon-easy-line1
+- exercise: song-canon-easy-line2
+- exercise: song-canon-easy-line3
+recap: 'The tune: two lines that fall by step, then a line in quarters.'

@@ -1,0 +1,23 @@
+id: song-canon-easy-hands
+title: 'Pachelbel''s Canon, easy 4: both hands'
+skills:
+- songs
+steps:
+- explain: |
+    **Hands together.** In lines 1 and 2 both hands play at the same moment: every tune note has its bass note. The
+    tune falls while the bass jumps around below it.
+
+    In line 3 the right hand plays two notes to each one of the left: "**both**, right, **both**, right". Practise each
+    line slowly, then join them.
+  staff:
+    notes: E5:h D5:h | C5:h B4:h | A4:h G4:h | A4:h B4:h | C4:q E4:q G4:q F4:q | E4:q C4:q E4:q D4:q | C4:q F4:q E4:q G4:q
+      | F4:q C4:q D4:q G4:q
+  sound: C3+E5:h G2+D5:h | A2+C5:h E2+B4:h | F2+A4:h C3+G4:h | F2+A4:h G2+B4:h | C3+C4:q E4:q G2+G4:q F4:q | A2+E4:q C4:q
+    E2+E4:q D4:q | F2+C4:q F4:q C3+E4:q G4:q | F2+F4:q C4:q G2+D4:q G4:q
+  terms:
+  - hands together
+- exercise: song-canon-easy-hands1
+- exercise: song-canon-easy-hands2
+- exercise: song-canon-easy-hands3
+- exercise: song-canon-easy-hands12
+recap: 'Both hands: one tune note to each bass note, then two.'

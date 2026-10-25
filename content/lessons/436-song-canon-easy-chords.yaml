@@ -1,0 +1,39 @@
+id: song-canon-easy-chords
+title: 'Pachelbel''s Canon, easy 2: the chords'
+skills:
+- songs
+steps:
+- explain: |
+    **Each bass note has its own chord**: C, G, A minor, E minor, F, C, F, G. As numerals in C major: **I V vi iii IV
+    I IV V**. Pop songs have borrowed this order for decades.
+
+    The right hand plays them in **close shapes**: each chord as near to the last one as it can be, so the hand
+    hardly moves. Thumb on the lowest note every time.
+  staff:
+    notes: C4+E4+G4:h B3+D4+G4:h | C4+E4+A4:h B3+E4+G4:h | C4+F4+A4:h C4+E4+G4:h | C4+F4+A4:h B3+D4+G4:h
+  sound: C3+C4+E4+G4:h G2+B3+D4+G4:h | A2+C4+E4+A4:h E2+B3+E4+G4:h | F2+C4+F4+A4:h C3+C4+E4+G4:h | F2+C4+F4+A4:h G2+B3+D4+G4:h
+  terms:
+  - chord
+  - major
+  - minor
+  - I V vi iii IV I IV V
+- explain: |
+    **Major and minor.** C, G and F are major chords: bright. A minor and E minor are minor: softer, darker. Listen
+    to how the third chord, A minor, turns the colour down for a moment.
+  keys:
+    notes: C4 E4 A4
+    fingers: 1 2 5
+  sound: C3+C4+E4+G4:h G2+B3+D4+G4:h | A2+C4+E4+A4:h E2+B3+E4+G4:h
+  check:
+    ask: Which of these chords is minor?
+    choices:
+    - A minor (A C E)
+    - C (C E G)
+    - G (G B D)
+    - F (F A C)
+    correct: 0
+    why: 'A C E: the A to C is a minor third, so the chord is minor.'
+- exercise: song-canon-easy-build
+- exercise: song-canon-easy-chords-rh
+- exercise: song-canon-easy-chords-both
+recap: 'Eight chords over the eight bass notes: C G Am Em F C F G.'

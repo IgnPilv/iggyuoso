@@ -1,0 +1,43 @@
+id: song-canon-eighths
+title: 'Canon in D 3: the eighths'
+skills:
+- songs
+steps:
+- explain: |
+    **The third line moves in eighths**: two to each bass note, climbing through the chords: D F♯ A G, F♯ D F♯ E,
+    D B D A, G B A G. The first eighth of each pair is a chord note; the second leads on.
+
+    From here the **left hand moves too**: each bass note and the fifth above it, in eighths. D A, A E, B F♯, F♯ C♯...
+    It makes the ground flow under the faster tune. The low D now starts the bar, an octave lower.
+  staff:
+    notes: D4:e F#4:e A4:e G4:e F#4:e D4:e F#4:e E4:e | D4:e B3:e D4:e A4:e G4:e B4:e A4:e G4:e
+    key: D
+  sound: D2+D4:e A2+F#4:e A2+A4:e E3+G4:e B2+F#4:e F#3+D4:e F#2+F#4:e C#3+E4:e | G2+D4:e D3+B3:e D2+D4:e A2+A4:e G2+G4:e D3+B4:e
+    A2+A4:e E3+G4:e
+  terms:
+  - eighth notes
+  - root and fifth
+- explain: |
+    **Root and fifth.** A fifth is five letter names up: D to A, A to E, B to F♯. Fingers 5 and 2 (or 5 and 1 for a
+    wide hand), the hand jumping to each new root.
+  staff:
+    notes: D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e
+    clef: bass
+    key: D
+  keys:
+    notes: D2 A2
+    fingers: 5 2
+  check:
+    ask: The fifth above F♯ is...
+    choices:
+    - C♯
+    - C
+    - B
+    - D
+    correct: 0
+    why: 'F♯ G♯ A B C♯: five letters, and in D major C is sharp.'
+- exercise: song-canon-eighths-rh
+- exercise: song-canon-eighths-lh
+- exercise: song-canon-eighths-q
+- exercise: song-canon-eighths-both
+recap: 'Eighths: the tune climbs through the chords, the bass flows root and fifth.'

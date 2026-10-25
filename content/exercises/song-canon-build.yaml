@@ -1,0 +1,17 @@
+id: song-canon-build
+title: 'Canon in D: the chords'
+kind: build
+prompt: Hold each chord of the ground down together.
+tasks:
+- chord: D
+  octave: 4
+- chord: A
+  octave: 3
+- chord: Bm
+  octave: 3
+- chord: F#m
+  octave: 3
+- chord: G
+  octave: 3
+reps: 3
+days: 1

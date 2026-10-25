@@ -1,0 +1,14 @@
+id: song-canon-easy-chords-rh
+title: 'Pachelbel''s Canon, easy: the chords'
+kind: timed
+hand: right
+prompt: Right hand alone, one chord to each half note. Keep the notes that stay; move only the fingers that must.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4+E4+G4:h B3+D4+G4:h | C4+E4+A4:h B3+E4+G4:h | C4+F4+A4:h C4+E4+G4:h | C4+F4+A4:h B3+D4+G4:h
+fingers: 1 1 1 1 1 1 1 1
+reps: 3
+days: 1

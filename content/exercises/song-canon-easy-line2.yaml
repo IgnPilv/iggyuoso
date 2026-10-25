@@ -1,0 +1,14 @@
+id: song-canon-easy-line2
+title: 'Pachelbel''s Canon, easy: line 2'
+kind: timed
+hand: right
+prompt: '4 3 2 1 from C down to G, then lift into C position: F 4, E 3, F 4, D 2.'
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h B4:h | A4:h G4:h | F4:h E4:h | F4:h D4:h
+fingers: 4 3 2 1 4 3 4 2
+reps: 3
+days: 1

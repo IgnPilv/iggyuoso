@@ -1,0 +1,18 @@
+id: song-canon-easy-whole
+title: Pachelbel's Canon, easy, the whole piece
+kind: timed
+hand: together
+prompt: Start to end. Four bars of bass alone, then the right hand comes in. The tempo ladder brings you up to speed.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:w | r:w | r:w | r:w | E5:h D5:h | C5:h B4:h | A4:h G4:h | A4:h B4:h | C5:h B4:h | A4:h G4:h | F4:h E4:h | F4:h D4:h
+  | C4:q E4:q G4:q F4:q | E4:q C4:q E4:q D4:q | C4:q F4:q E4:q G4:q | F4:q C4:q D4:q G4:q | C4+E4+G4:w
+left: C3:h G2:h | A2:h E2:h | F2:h C3:h | F2:h G2:h | C3:h G2:h | A2:h E2:h | F2:h C3:h | F2:h G2:h | C3:h G2:h | A2:h E2:h
+  | F2:h C3:h | F2:h G2:h | C3:h G2:h | A2:h E2:h | F2:h C3:h | F2:h G2:h | C3:w
+rightFingers: 5 4 3 2 1 1 2 3 4 3 2 1 4 3 4 2 1 3 5 4 3 1 3 2 1 4 3 5 4 1 2 5 1
+leftFingers: 1 3 2 5 4 1 4 3 1 3 2 5 4 1 4 3 1 3 2 5 4 1 4 3 1 3 2 5 4 1 4 3 1
+reps: 3
+days: 2

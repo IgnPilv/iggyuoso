@@ -1,0 +1,26 @@
+id: song-canon-whole-full
+title: Canon in D, full arrangement
+kind: timed
+hand: together
+prompt: 'The full arrangement: the left hand flows in eighths from line 3 on. The tempo ladder brings you up to speed.'
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: r:w | r:w | F#5:q E5:q D5:q C#5:q | B4:q A4:q B4:q C#5:q | D5:q C#5:q B4:q A4:q | G4:q F#4:q G4:q E4:q | D4:e F#4:e
+  A4:e G4:e F#4:e D4:e F#4:e E4:e | D4:e B3:e D4:e A4:e G4:e B4:e A4:e G4:e | D5:s C#5:s D5:s D4:s C#4:s A4:s E4:s F#4:s D4:s
+  D5:s C#5:s B4:s C#5:s F#5:s A5:s B5:s | G5:s F#5:s E5:s G5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G4:s F#4:s E4:s G4:s F#4:s
+  E4:s | A5:e F#5:s G5:s A5:e F#5:s G5:s A5:s A4:s B4:s C#5:s D5:s E5:s F#5:s G5:s | F#5:e D5:s E5:s F#5:e F#4:s G4:s A4:s
+  B4:s A4:s G4:s A4:s F#4:s G4:s A4:s | G4:e B4:s A4:s G4:e F#4:s E4:s F#4:s E4:s D4:s E4:s F#4:s G4:s A4:s B4:s | G4:e B4:s
+  A4:s B4:e C#5:s D5:s A4:s B4:s C#5:s D5:s E5:s F#5:s G5:s A5:s | F#5:q E5:q D5:q C#5:q | B4:q A4:q B4:q C#5:q | D5:q C#5:q
+  B4:q A4:q | G4:q F#4:q G4:q E4:q | A4+D5+F#5:w
+left: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q | D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q | D3:q A2:q B2:q F#2:q | G2:q
+  D2:q G2:q A2:q | D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e | D2:e A2:e A2:e E3:e
+  B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e | D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e
+  D2:e A2:e G2:e D3:e A2:e E3:e | D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e | D2:e
+  A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e | D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e
+  | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e | D2+A2+D3:w
+reps: 3
+days: 2

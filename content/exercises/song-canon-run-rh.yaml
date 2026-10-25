@@ -1,0 +1,15 @@
+id: song-canon-run-rh
+title: 'Canon in D: the run'
+kind: timed
+hand: right
+prompt: 'Right hand alone, slowly. The fall from G in bar 2 is the D major scale: thumb under on the way down after F♯.'
+display: staff
+key: D
+tempo: 48
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:s C#5:s D5:s D4:s C#4:s A4:s E4:s F#4:s D4:s D5:s C#5:s B4:s C#5:s F#5:s A5:s B5:s | G5:s F#5:s E5:s G5:s F#5:s
+  E5:s D5:s C#5:s B4:s A4:s G4:s F#4:s E4:s G4:s F#4:s E4:s
+reps: 3
+days: 2
