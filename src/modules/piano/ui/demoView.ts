@@ -27,6 +27,7 @@ import { chordFinderView } from './chordFinderView';
 import { toDevice } from '../calibration';
 import { mountPulse } from './pulseView';
 import { mountScaleGym } from './scaleGymView';
+import { IDLE_MS, mountPlayReport } from './playReportView';
 import { mountByEar } from './byEarView';
 import { mountJam } from './jamView';
 import { mySongsView } from './mySongsView';
@@ -1078,6 +1079,41 @@ function scenes(): Scene[] {
       timers.push(window.setTimeout(() => set('hands', 'together'), 700));
       timers.push(window.setTimeout(() => set('tempo', '72'), 1200));
       timers.push(window.setTimeout(() => press(box, 'Start'), 2000));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  out.push({
+    title: 'Play report',
+    caption: 'Play anything and hear how it went (#/report, linked from the Profile, the Timing mirror, the Scale gym and the Sketchbook). No click and nothing to pick: the page is always listening, the first key starts a take and five seconds of quiet (or Finish) ends it. Then it finds your own tempo and charts it through the take (sped up, slowed down), marks every note held back or hurried against the beat around it (a dotted rhythm is read as written, not as hurrying), notes where you stopped, says which hand lands first and how even each hand is, names the key and the chords it heard with their Roman numerals, the loudness of each hand, and gives up to three tips. Play it back to hear yourself. Nothing is saved. Here the pianist plays Ode to Joy with a left hand: waits before the second phrase, speeds up through it, lands the left hand early and plays it louder than the tune.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (m: number) => m + DEMO_CALIBRATION.offset;
+      const cleanup = mountPlayReport(box, DEMO_CALIBRATION, {
+        onReady: () => {
+          // Ode to Joy in quarter beats: two phrases, each ending dotted quarter, eighth, half.
+          const phrase = [64, 64, 65, 67, 67, 65, 64, 62, 60, 60, 62, 64];
+          const tune: [number, number][] = [
+            ...phrase.map((m): [number, number] => [m, 1]), [64, 1.5], [62, 0.5], [62, 2],
+            ...phrase.map((m): [number, number] => [m, 1]), [62, 1.5], [60, 0.5], [60, 2],
+          ];
+          const bass = [[48, 52, 55], [43, 47, 50], [48, 52, 55], [43, 47, 50], [48, 52, 55], [43, 47, 50], [48, 52, 55], [48, 52, 55]];
+          let beat = 0;
+          let t = 1200;
+          const beatMs = 600;
+          tune.forEach(([m, len], i) => {
+            const wobble = [5, -7, 3, 9, -4, 0, 6, -5][i % 8];
+            if (beat % 4 === 0) {
+              // The left hand comes in a little ahead, and louder than the tune.
+              for (const b of bass[beat / 4]) p.playNote(dev(b), t - 35 + wobble, beatMs * 3.8, 96);
+            }
+            p.playNote(dev(m), t + wobble, beatMs * len * 0.9, 72 + (i % 3) * 3);
+            beat += len;
+            // A wait before the second phrase, then hurrying through it.
+            t += (i > 14 ? beatMs - (i - 14) * 9 : beatMs) * len + (i === 14 ? 300 : 0);
+          });
+          timers.push(window.setTimeout(next, t + IDLE_MS + 13000));
+        },
+      });
       return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });

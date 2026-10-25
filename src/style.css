@@ -1699,6 +1699,14 @@ body.focus-page main { max-width: none; padding: 0; }
 .pulse-quiet { fill: var(--muted); opacity: 0.08; }
 .pulse-readout { margin-top: var(--space-4); }
 
+/* Play report (#/report) */
+.report .keyboard { max-height: 30vh; width: auto; max-width: 100%; }
+.report-chart { margin-top: var(--space-3); }
+.report-tempo { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.report-chords { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; }
+.report-numeral { color: var(--muted); }
+.gym-bar.marked { stroke: var(--ink); stroke-width: 1; }
+
 /* Scale gym (#/scales) */
 .gym .key.target rect { filter: none; }
 /* Two hands or two octaves: the whole run stays in view, so the keyboard never grows taller than a third of the window. */
