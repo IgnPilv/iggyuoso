@@ -770,3 +770,8 @@ never copied pages). Start small, adapt as we go.
   ends the streak. The result gives notes found, accuracy, middle time and the three slowest notes.
   Best score per clef and level saved as `game.noterush` (synced). Engine `engine/noteRush.ts`
   (tested), screen `ui/noteRush.ts`. Demo scene "Note Rush" (a 16 s round).
+  After Ignas's try ("make it slide via the sheet like guitar hero... the jumps are too hard to
+  see"): by default the notes slide along the staff, a gap apart, to a line at the left; a note
+  that reaches the line is missed, a gap takes the note's time, so a streak speeds the music up;
+  playing ahead is fine, and then the notes catch up until the next is a gap away (a gap per
+  0.3 s). "Notes jump in place" (the first version) stays as an option (`settings.noteRushMode`).

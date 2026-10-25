@@ -893,7 +893,7 @@ function scenes(): Scene[] {
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
   out.push({
     title: 'Note Rush',
-    caption: 'A mini game for reading notes: a note shows on the staff, play it before its time bar runs out. A minute a round (shorter here). Every note in a row builds a streak, every five in a row adds to the points per note, but each note gets less time; a wrong key ends the streak. Treble, bass or both clefs, from C position to ledger lines, with a best score for each. The result says which notes took longest. Home has a card for it.',
+    caption: 'A mini game for reading notes: notes slide along the staff to a line, and each must be played before it gets there (or, as an option, each note jumps in place with its own time bar). A minute a round (shorter here). Every note in a row builds a streak, every five in a row adds to the points per note, but each note gets less time; a wrong key ends the streak. Treble, bass or both clefs, from C position to ledger lines, with a best score for each. The result says which notes took longest. Home has a card for it.',
     run: (box, next, p) => {
       demo.onAsk = (a) => p.answer(a);
       const cleanup = noteRushView(box);

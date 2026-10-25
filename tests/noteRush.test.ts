@@ -32,7 +32,7 @@ describe('Note Rush', () => {
   });
 
   it('moves on when a note runs out, and ends after the round', () => {
-    const g = new NoteRush([60, 62], () => 0, 10_000);
+    const g = new NoteRush([60, 62], () => 0, 10_000, 'jump');
     g.start(0);
     const first = g.current;
     expect(g.tick(5999)).toBeUndefined();
@@ -57,5 +57,23 @@ describe('Note Rush', () => {
     expect(s.accuracy).toBe(75);
     expect(s.medianMs).toBe(1000);
     expect(s.slowest.map((x) => x.ms)).toEqual([...s.slowest.map((x) => x.ms)].sort((a, b) => b - a));
+  });
+
+  it('scroll: notes move to the line a gap apart, catch up after an early note, and are missed at the line', () => {
+    const g = new NoteRush([60, 62, 64], Math.random, 60_000, 'scroll');
+    g.start(0);
+    expect(g.at).toEqual([1, 2, 3, 4, 5, 6]);
+    g.tick(3000);
+    expect(g.at.slice(0, 2)).toEqual([0.5, 1.5]);
+    // Played early: nothing jumps, then the notes catch up until the next one is a gap away.
+    expect(g.press(g.current, 3000)).toBe('hit');
+    expect(g.at[0]).toBe(1.5);
+    g.tick(3150);
+    expect(g.at[0]).toBeCloseTo(1.5 - 150 / 5750 - 0.5, 5);
+    // With a streak of 1 a gap takes 5.75 s.
+    const arrives = 3150 + g.at[0] * 5750;
+    expect(g.tick(arrives - 50)).toBeUndefined();
+    expect(g.tick(arrives + 50)).toBe('timeout');
+    expect(g.streak).toBe(0);
   });
 });

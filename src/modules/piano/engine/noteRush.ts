@@ -3,12 +3,21 @@ import { isBlack, midiName } from '../music/notes';
 // Note Rush, a mini game: a note appears on the staff, play it before its time runs out. A round
 // lasts a minute. Every right key in a row builds a streak, which raises the points per note
 // (×1 to ×5) and shortens the time each note gets. The ui is src/modules/piano/ui/noteRush.ts.
+//
+// Two ways to show it: `scroll` (the default) moves the notes along the staff, a gap apart, to a
+// line at the left, like falling notes on their side: a note that reaches the line is missed, and
+// a gap takes the note's time to cross, so the music moves faster with a streak; playing ahead of
+// the line is fine. `jump` shows each note in place with its own time bar.
 
 export type RushClef = 'treble' | 'bass' | 'grand';
 export type RushLevel = 'position' | 'staff' | 'ledger';
+export type RushMode = 'scroll' | 'jump';
 
 export const ROUND_MS = 60_000;
-const QUEUE = 4; // the note to play and the three after it
+const QUEUE = 4; // the note to play and the three after it (jump)
+/** Scroll: notes on the staff stretch this many gaps past the line. */
+export const SCROLL_AHEAD = 5;
+const CATCH_UP_MS = 300;
 
 const whites = (lo: number, hi: number) => Array.from({ length: hi - lo + 1 }, (_, i) => lo + i).filter((m) => !isBlack(m));
 
@@ -49,6 +58,8 @@ export interface RushSummary {
 
 export class NoteRush {
   readonly queue: number[] = [];
+  /** Scroll: each queued note's distance from the line, in gaps (the first is the one to play). */
+  readonly at: number[] = [];
   score = 0;
   streak = 0;
   bestStreak = 0;
@@ -59,20 +70,37 @@ export class NoteRush {
   startedAt = 0;
   shownAt = 0;
   over = false;
+  private lastTick = 0;
   private times: { note: number; ms: number; hit: boolean }[] = [];
 
-  constructor(readonly pool: number[], private rand: () => number = Math.random, readonly roundMs = ROUND_MS) {
+  constructor(readonly pool: number[], private rand: () => number = Math.random, readonly roundMs = ROUND_MS, readonly mode: RushMode = 'scroll') {
     if (pool.length < 2) throw new Error('Note Rush needs at least two notes');
-    while (this.queue.length < QUEUE) this.queue.push(this.draw());
+    this.fill();
+  }
+
+  /** Keeps the queue full: four notes (jump), or notes a gap apart up to SCROLL_AHEAD (scroll). */
+  private fill() {
+    if (this.mode === 'jump') {
+      while (this.queue.length < QUEUE) this.queue.push(this.draw());
+      return;
+    }
+    while (this.at.length <= SCROLL_AHEAD || this.at[this.at.length - 1] < SCROLL_AHEAD) {
+      this.at.push(this.at.length ? this.at[this.at.length - 1] + 1 : 1);
+      this.queue.push(this.draw());
+    }
   }
 
   get current() { return this.queue[0]; }
   /** Time left for the current note, and for the round. */
-  noteLeft(now: number) { return Math.max(0, this.shownAt + limitMs(this.streak) - now); }
+  noteLeft(now: number) {
+    if (this.mode === 'scroll') return Math.max(0, Math.min(1, this.at[0]) * limitMs(this.streak) - (now - this.lastTick));
+    return Math.max(0, this.shownAt + limitMs(this.streak) - now);
+  }
+
   roundLeft(now: number) { return Math.max(0, this.startedAt + this.roundMs - now); }
 
   start(now: number) {
-    this.startedAt = this.shownAt = now;
+    this.startedAt = this.shownAt = this.lastTick = now;
   }
 
   /** Never the same note twice running. */
@@ -84,13 +112,27 @@ export class NoteRush {
 
   private advance(now: number) {
     this.queue.shift();
-    this.queue.push(this.draw());
+    this.at.shift();
+    this.fill();
     this.shownAt = now;
+  }
+
+  /**
+   * Scroll: moves the notes on to `now`, a gap per note's time. When the note to play is still more
+   * than a gap away (the one before was played early), they catch up at a gap per CATCH_UP_MS.
+   */
+  private move(now: number) {
+    if (this.mode !== 'scroll') return;
+    const dt = now - this.lastTick;
+    const moved = dt / limitMs(this.streak) + Math.min(Math.max(0, this.at[0] - 1), dt / CATCH_UP_MS);
+    for (let i = 0; i < this.at.length; i++) this.at[i] -= moved;
+    this.lastTick = now;
   }
 
   /** A key went down (written MIDI). */
   press(note: number, now: number): PressResult {
     if (this.over || this.tick(now) === 'over') return 'ignored';
+    this.move(now);
     if (note === this.current) {
       this.times.push({ note, ms: now - this.shownAt, hit: true });
       this.hits++;
@@ -109,8 +151,9 @@ export class NoteRush {
   tick(now: number): TickResult {
     if (this.over) return 'over';
     if (this.roundLeft(now) <= 0) { this.over = true; return 'over'; }
+    this.move(now);
     if (this.noteLeft(now) <= 0) {
-      this.times.push({ note: this.current, ms: limitMs(this.streak), hit: false });
+      this.times.push({ note: this.current, ms: now - this.shownAt, hit: false });
       this.timeouts++;
       this.streak = 0;
       this.advance(now);

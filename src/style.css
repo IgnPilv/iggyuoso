@@ -1630,3 +1630,9 @@ body.focus-page main { max-width: none; padding: 0; }
 .shake { animation: rush-shake 0.3s; }
 @keyframes rush-shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
 .home-game { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+.rush-scroll { width: min(100%, 640px); }
+.rush-line { stroke: var(--target); stroke-width: 3; stroke-linecap: round; opacity: 0.8; }
+.rush-staff .note.rush-note.leaving { transition: opacity 0.3s; opacity: 0; }
+.rush-note.hit .head { fill: var(--ok); stroke: var(--ok); }
+.rush-note.miss .head { fill: var(--bad); stroke: var(--bad); }
+.rush-staff .note.rush-note:not(.current):not(.leaving) { opacity: 0.75; }
