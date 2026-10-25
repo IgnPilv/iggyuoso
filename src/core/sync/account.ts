@@ -138,7 +138,7 @@ export class Account {
     if (this.session && this.provider) {
       try {
         const s = await this.fresh();
-        await this.provider.wipe(s, KEEP_ON_WIPE);
+        await this.provider.wipe(s, KEEP_ON_WIPE());
         await this.provider.push(s, [{ key: WIPED_KEY.slice(PREFIX.length), value: at, schema: this.opts.schema }]);
       } catch (e) {
         this.error = `Nothing was wiped: the account could not be reached (${message(e)}). Try again when online.`;

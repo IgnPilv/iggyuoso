@@ -1,11 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { memoryBackend, SCHEMA_VERSION, Store } from '../src/modules/piano/progress/store';
 import { Account, sameValue } from '../src/core/sync/account';
-import { mergeDays, mergeExercise, mergeMeta, mergeRecord, mergeTiming } from '../src/core/sync/merge';
+import { mergeRecord } from '../src/core/sync/merge';
+import { mergeDays, mergeExercise, mergeMeta, mergeTiming, PIANO_RECORDS } from '../src/modules/piano/progress/records';
+import { addRecordRules } from '../src/core/records';
 import { memoryProvider, type MemoryServer } from '../src/core/sync/memory';
 import { supabaseProvider } from '../src/core/sync/supabase';
 import { CHANGES_KEY, isSynced, tracked } from '../src/core/sync/tracker';
 import { SignedOutError } from '../src/core/sync/types';
+
+// The piano's merge and wipe rules, as the app registers them at start.
+addRecordRules(PIANO_RECORDS);
 
 const take = (at: string, score: number) => ({ at, score, stars: score >= 92 ? 3 : score >= 80 ? 2 : 1, tempo: 80, counts: true });
 

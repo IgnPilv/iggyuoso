@@ -1,33 +1,12 @@
 import type { Calibration } from '../calibration';
 import { STAR_THRESHOLDS } from '../scoring/stars';
-import { tracked } from '../../../core/sync/tracker';
+import { deviceData, PREFIX, SCHEMA_VERSION, type Backend, localBackend } from '../../../core/storage';
 
-// Progress lives on the device (localStorage), as a guest. Everything goes through a small
-// key-value backend; the real store's backend notes each change so a signed-in account can copy
-// it to the server and back (src/sync/).
+// Piano progress, on top of the shared device storage (src/core/storage.ts). The piano module
+// predates modules, so its records keep their old names (`iggyuoso.ex.<id>`, `iggyuoso.mastery.*`,
+// ...) with no module prefix; see `PIANO_RECORDS` in records.ts.
 
-export interface Backend {
-  get(key: string): string | null;
-  set(key: string, value: string): void;
-  /** Every key saved, for sync. */
-  keys?(): string[];
-  /** Forget a key (wiping progress). */
-  remove?(key: string): void;
-}
-
-export const localBackend: Backend = {
-  get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
-  set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* storage full or blocked */ } },
-  keys: () => {
-    try { return Array.from({ length: localStorage.length }, (_, i) => localStorage.key(i)!).filter(Boolean); } catch { return []; }
-  },
-  remove: (k) => { try { localStorage.removeItem(k); } catch { /* blocked */ } },
-};
-
-export function memoryBackend(): Backend {
-  const m = new Map<string, string>();
-  return { get: (k) => m.get(k) ?? null, set: (k, v) => void m.set(k, v), keys: () => [...m.keys()], remove: (k) => void m.delete(k) };
-}
+export { localBackend, memoryBackend, type Backend } from '../../../core/storage';
 
 export interface Attempt {
   at: string;
@@ -104,13 +83,8 @@ export function localDay(iso: string): string {
 }
 
 const DEFAULT_SETTINGS: Settings = { latencyMs: 0, metronome: true, guide: false, theme: 'system' };
-const PREFIX = 'iggyuoso.';
 
-/**
- * Version of everything saved under PREFIX. When the saved format changes, bump this and add a
- * step to MIGRATIONS that upgrades data from the version before.
- */
-export const SCHEMA_VERSION = 1;
+/** Upgrade steps of the shared schema version (src/core/storage.ts) for piano records. */
 const MIGRATIONS: Record<number, (s: Store) => void> = {
   // 0 -> 1: the first release saved the same shapes without a version number.
   1: () => {},
@@ -207,6 +181,5 @@ export class Store {
   }
 }
 
-/** This device's saved data, with changes noted for sync. */
-export const deviceData = tracked(localBackend);
+export { deviceData, SCHEMA_VERSION };
 export const store = new Store(deviceData);

@@ -1,14 +1,15 @@
-import { deviceData, memoryBackend, SCHEMA_VERSION, store } from '../../modules/piano/progress/store';
+import { deviceData, memoryBackend, SCHEMA_VERSION } from '../storage';
+import { upgradeAll } from '../records';
 import { Account } from './account';
 import { SYNC_CONFIG, syncConfigured } from './config';
 import { memoryProvider } from './memory';
 import { supabaseProvider } from './supabase';
 import { tracked } from './tracker';
 
-/** The player on this device: a guest, or signed in once the account server is set up. */
+/** The player on this device, one account for every module: a guest, or signed in once the account server is set up. */
 export const account = new Account(deviceData, syncConfigured() ? supabaseProvider(SYNC_CONFIG) : null, {
   schema: SCHEMA_VERSION,
-  upgradeFrom: (v) => store.upgradeFrom(v),
+  upgradeFrom: upgradeAll,
   // The link comes back to the app's own address; its hash carries the sign-in.
   redirectTo: () => `${location.origin}${location.pathname}`,
 });

@@ -1,29 +1,32 @@
-import type { Backend } from '../../modules/piano/progress/store';
+import type { Backend } from '../storage';
+import { keepOnWipe, localOnly } from '../records';
 
 // Notes which saved records changed since the last sync, so only those are sent. Wraps the
 // store's backend: every write to a synced key stamps it in `iggyuoso.sync.changes`.
 
 export const PREFIX = 'iggyuoso.';
-/** Records that belong to this device: the keyboard, its timing and the look of the app. */
-export const LOCAL_ONLY = new Set(['schema', 'calibration', 'settings', 'account']);
 export const CHANGES_KEY = `${PREFIX}sync.changes`;
 /** When progress was last wiped (ISO), synced so every device wipes too. */
 export const WIPED_KEY = `${PREFIX}wiped`;
-/** Kept by "Wipe progress": the player's own ideas and songs, which are work, not progress. */
-export const KEEP_ON_WIPE = ['sketch.', 'mysong.'];
+/** Kept by "Wipe progress": the player's own work in each module (src/core/records.ts). */
+export const KEEP_ON_WIPE = keepOnWipe;
 
-/** Whether a full storage key is copied to the account. Unknown new records sync by default. */
+/**
+ * Whether a full storage key is copied to the account. Unknown new records sync by default;
+ * records that belong to this device (the look of the app, the keyboard) are named by the shell
+ * and the modules (`localOnly` in src/core/records.ts).
+ */
 export function isSynced(fullKey: string) {
   if (!fullKey.startsWith(PREFIX)) return false;
   const k = fullKey.slice(PREFIX.length);
   // `wiped` reaches the server only from Account.wipe, never as a changed record.
-  return !LOCAL_ONLY.has(k) && !k.startsWith('sync.') && k !== 'wiped';
+  return !localOnly().has(k) && !k.startsWith('sync.') && k !== 'wiped';
 }
 
 /** Whether a full storage key is progress that "Wipe progress" deletes. */
 export function isProgress(fullKey: string) {
   const k = fullKey.slice(PREFIX.length);
-  return isSynced(fullKey) && !KEEP_ON_WIPE.some((p) => k.startsWith(p));
+  return isSynced(fullKey) && !keepOnWipe().some((p) => k.startsWith(p));
 }
 
 export interface TrackedBackend extends Backend {
