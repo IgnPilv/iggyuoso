@@ -487,14 +487,16 @@ function scenes(): Scene[] {
   if (panelLesson) {
     out.push({
       title: 'A lesson in panels',
-      caption: 'A lesson is a column of full-window panels that snap into place as you scroll. The theory reads like a page; scroll on (or press Start playing) and the exercise fills the whole window: the falling notes, or the sheet and keys, as big as they fit, with the controls in one slim row and the steps and Next in the bar at the top. While a take runs the lesson stays put.',
+      caption: 'A lesson is a column of full-window panels that snap into place as you scroll. The theory reads like a page; scroll on (or press Start playing) and the exercise fills the whole window: the falling notes, or the sheet and keys, as big as they fit, with the controls in one slim row and the steps and Next in the bar at the top. While a take runs the lesson stays put. The result comes up as a card over the stage; "See the marks" folds it down to its score so the marked notes underneath show.',
       run: (box, next, p) => {
         const frame = h('div', { class: 'lesson-frame' });
         box.append(frame);
         const timers: number[] = [];
         const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
         demo.onTimed = (s) => p.playTimed(s);
-        demo.onRunEnd = (mode) => { if (mode === 'play') later(4500, next); };
+        // After the take, "See the marks" folds the result to its score, then it opens again.
+        const fold = () => frame.querySelector<HTMLButtonElement>('.result-fold')?.click();
+        demo.onRunEnd = (mode) => { if (mode === 'play') { later(2500, fold); later(5000, fold); later(6500, next); } };
         const cleanup = lessonView(frame, panelLesson.id);
         const scroller = () => frame.querySelector<HTMLElement>('.lesson-scroll');
         const panel = (i: number) => frame.querySelector<HTMLElement>(`.lesson-panel[data-step="${i}"]`);

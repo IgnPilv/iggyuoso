@@ -230,7 +230,7 @@ export const lessonView: View = (root, id?: string) => {
   const nav = h('div', { class: 'controls' });
   const progress = h('span', { class: 'small' });
   // The way forward, also at the top: it mirrors the Next (or Skip) button, and on the recap the
-  // next lesson.
+  // recap's main button (play what is left, or the next lesson).
   const topNext = h('button', { class: 'chip top-next', type: 'button' });
   let forward: HTMLButtonElement | undefined;
   const syncTop = () => {
