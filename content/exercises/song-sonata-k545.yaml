@@ -1,0 +1,18 @@
+id: song-sonata-k545
+title: Sonata facile
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h E5:q G5:q | B4:q. C5:s D5:s C5:h | A5:h G5:q C6:q | G5:q F5:e G5:e E5:h | A4:s B4:s C5:s D5:s E5:s F5:s G5:s A5:s
+  G5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s | G4:s A4:s B4:s C5:s D5:s E5:s F5:s G5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s F4:s
+  | F4:s G4:s A4:s B4:s C5:s D5:s E5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s F4:s E4:s | E4:s F4:s G4:s A4:s B4:s C5:s D5:s E5:s
+  D5:s C5:s B4:s A4:s G4:s F4:s E4:s D4:s | C4:w
+left: C3+E3+G3:w | B2+D3+G3:h C3+E3+G3:h | C3+F3+A3:h C3+E3+G3:h | B2+D3+G3:h C3+E3+G3:h | C3+F3+A3:w | C3+E3+G3:w | D3+F3+A3:w
+  | D3+G3+B3:w | C3+E3+G3:w
+reps: 3
+days: 2

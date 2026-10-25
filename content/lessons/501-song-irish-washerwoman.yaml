@@ -1,0 +1,25 @@
+id: song-irish-washerwoman
+title: The Irish Washerwoman
+skills:
+- songs
+steps:
+- explain: |
+    **The Irish Washerwoman** · Irish jig, 1700s
+
+    A jig: a quick dance in 6/8, played on the fiddle and the tin whistle in Irish sessions for two hundred years.
+  staff:
+    notes: D5:e C5:e  |  B4:e G4:e G4:e D4:e G4:e G4:e
+    key: G
+  sound: D5:e C5:e  |  B4:e G4:e G4:e D4:e G4:e G4:e  |  B4:e G4:e B4:e D5:e C5:e B4:e  |  C5:e A4:e A4:e E4:e A4:e A4:e
+- explain: |
+    **Before you play.** Six eighths a bar in two groups of three, "di-dle-di di-dle-di". Light and even; the beat is on the first of each three.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 6/8 · Tempo: 56
+- exercise: song-irish-washerwoman-rh
+- exercise: song-irish-washerwoman-lh
+- exercise: song-irish-washerwoman
+- exercise: song-irish-washerwoman-arranged
+- exercise: song-irish-washerwoman-performance
+recap: 'The Irish Washerwoman: tune, left hand, together. Come back to it any time; songs are for fun.'

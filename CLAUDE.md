@@ -976,6 +976,12 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   fit their chords badly. Batch 1 adds 38 songs (76 entries in all). Ignas's "Sea Shanty 2" (RuneScape,
   copyrighted) waits for his MIDI file: its notes can't be written from memory reliably. Demo scene
   "The Songbook".
+- 2026-10-25: Songbook batch 2: carols and hymns (Amazing Grace, Old Hundredth, The First Noel, Angels We
+  Have Heard on High, We Three Kings, Ding Dong Merrily, Good King Wenceslas, When the Saints), anthems
+  (God Save the King, The Star-Spangled Banner), jigs (Irish Washerwoman, Swallowtail), Moldau, Mozart's
+  Sonata facile (Alberti bass), Bach's Prelude in C (chords written out, both hands), and the early
+  songbook-lesson tunes as songs of their own (London Bridge, Frère Jacques, Au clair de la lune, Go Tell
+  Aunt Rhody): 95 entries. `au-claire-fontaine` renamed `a-la-claire-fontaine` (no one had played it yet).
 - 2026-10-25: Sign in with Google (Ignas: "google sign in sounds better can we swap to it"; Supabase's
   built-in email sends about two links an hour). The Profile's Guest card leads with "Continue with
   Google"; "Use email instead" opens the old email-link form, kept as a fallback. OAuth with PKCE over

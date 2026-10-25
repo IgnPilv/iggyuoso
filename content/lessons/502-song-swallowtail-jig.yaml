@@ -1,0 +1,26 @@
+id: song-swallowtail-jig
+title: Swallowtail Jig
+skills:
+- songs
+steps:
+- explain: |
+    **Swallowtail Jig** · Irish jig, 1800s
+
+    A jig in E minor with the wild sound of the old Irish modes: the C♯ in bar 4 is from the Dorian mode.
+  staff:
+    notes: G4:e E4:e E4:e B4:e E4:e E4:e  |  G4:e E4:e E4:e B4:e A4:e G4:e
+    key: Em
+  sound: G4:e E4:e E4:e B4:e E4:e E4:e  |  G4:e E4:e E4:e B4:e A4:e G4:e  |  F#4:e D4:e D4:e A4:e D4:e D4:e  |  D5:e C#5:e
+    D5:e A4:e G4:e F#4:e
+- explain: |
+    **Before you play.** E minor with F♯; C♯ in bars 4 and 7. Keep the three-note groups bouncing.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 52
+- exercise: song-swallowtail-jig-rh
+- exercise: song-swallowtail-jig-lh
+- exercise: song-swallowtail-jig
+- exercise: song-swallowtail-jig-arranged
+- exercise: song-swallowtail-jig-performance
+recap: 'Swallowtail Jig: tune, left hand, together. Come back to it any time; songs are for fun.'

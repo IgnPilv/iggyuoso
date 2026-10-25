@@ -1,0 +1,14 @@
+id: song-london-bridge-performance
+title: 'London Bridge Is Falling Down: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 100
+meter: 4/4
+countIn: 1
+right: G4:q. A4:e G4:q F4:q | E4:q F4:q G4:h | D4:q E4:q F4:h | E4:q F4:q G4:h | G4:q. A4:e G4:q F4:q | E4:q F4:q G4:h | D4:h
+  G4:h | E4:q C4:h.
+left: C3+G3:w | C3+G3:w | G2+D3:w | C3+G3:w | C3+G3:w | C3+G3:w | G2+D3:w | C3+G3:w
+reps: 2
+days: 2

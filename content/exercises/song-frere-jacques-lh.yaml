@@ -1,0 +1,13 @@
+id: song-frere-jacques-lh
+title: 'Frère Jacques: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:w | C3:w | C3:w | C3:w | C3:w | C3:w | C3:h G2:h | C3:h G2:h
+reps: 2
+days: 1

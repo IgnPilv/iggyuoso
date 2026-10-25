@@ -1,0 +1,14 @@
+id: song-first-noel-tap
+title: 'The First Noel: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 96
+meter: 3/4
+pickup: e e
+countIn: 1
+rhythm: x:e x:e | x:q. x:e x:e x:e | x:h x:e x:e | x:q x:q x:q | x:h x:e x:e | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:h
+  x:e x:e | x:q. x:e x:e x:e | x:h x:e x:e | x:q x:q x:q | x:h x:e x:e | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:h x:e
+  x:e | x:q. x:e x:e x:e | x:h x:e x:e | x:h x:q | x:h. | x:q x:q x:q | x:q x:q x:q | x:q x:q x:q | x:h
+reps: 2
+days: 1

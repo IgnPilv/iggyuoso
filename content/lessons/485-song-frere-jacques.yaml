@@ -1,0 +1,26 @@
+id: song-frere-jacques
+title: Frère Jacques
+skills:
+- songs
+steps:
+- explain: |
+    **Frère Jacques** · French round, 1700s
+
+    "Brother John, are you sleeping?" A round: a second player can start at the beginning when the first reaches bar 3, and the parts fit together all the way.
+  staff:
+    notes: C5:q D5:q E5:q C5:q  |  C5:q D5:q E5:q C5:q
+  sound: C5:q D5:q E5:q C5:q  |  C5:q D5:q E5:q C5:q  |  E5:q F5:q G5:h  |  E5:q F5:q G5:h
+- explain: |
+    **Before you play.** Bars 7 and 8 drop to the G below middle C: a stretch of the thumb, or a small move of the hand.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 96
+- exercise: song-frere-jacques-tap
+- exercise: song-frere-jacques-by-ear
+- exercise: song-frere-jacques-rh
+- exercise: song-frere-jacques-lh
+- exercise: song-frere-jacques
+- exercise: song-frere-jacques-arranged
+- exercise: song-frere-jacques-performance
+recap: 'Frère Jacques: tune, left hand, together. Come back to it any time; songs are for fun.'
