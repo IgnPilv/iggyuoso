@@ -75,5 +75,8 @@ where it would give an answer away (reading tests, taps).
   Profile (`ui/profileView.ts`), Sketchbook (`ui/sketchbookView.ts`), My songs
   (`ui/mySongsView.ts`), the recap (`ui/recap.ts`), calibration, Settings and the MIDI tester
   (`ui/views.ts`).
+- **Note Rush** (`ui/noteRush.ts`, game rules in `engine/noteRush.ts`): the note-reading game. In
+  its default mode each note is cut out of a one-note `renderStaff` drawing and slid along an
+  empty staff by an SVG `transform` every frame; the other mode redraws a four-note staff.
 - **The demo** (`ui/demoView.ts`): a list of scenes, each running real screens with the virtual
   pianist ([how-to.md](how-to.md#add-a-demo-scene)).
