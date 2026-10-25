@@ -12,4 +12,7 @@ jobs:
   note:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "PR #${{ github.event.pull_request.number }} ${{ github.event.action }}"
+      - env:
+          PR: ${{ github.event.pull_request.number }}
+          ACTION: ${{ github.event.action }}
+        run: 'echo "Pull request $PR: $ACTION"'
