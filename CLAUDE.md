@@ -762,3 +762,11 @@ never copied pages). Start small, adapt as we go.
   main site's records (not the account) when first opened (`src/core/preview.ts`); a corner tag
   says "Preview" and links back. Ideas wait there, unmerged, for Ignas's go (merge) or no-go
   (close); several can be live at once. Log: `docs/ideas.md`. How-to: `docs/previews.md`.
+- 2026-10-25: Note Rush, a mini game (idea #1 of the hourly ideas): `#/noterush`, a card on home. A
+  note shows on the staff (the next three faded after it); play it before its time bar runs out.
+  One-minute rounds; white keys from the clef (treble, bass, both on a grand staff) and level (C
+  position, the whole staff, with ledger lines). A streak shortens each note's time (6 s, −0.25 s a
+  note, at least 2 s) and raises its points (×1, +1 every five in a row, at most ×5); a wrong key
+  ends the streak. The result gives notes found, accuracy, middle time and the three slowest notes.
+  Best score per clef and level saved as `game.noterush` (synced). Engine `engine/noteRush.ts`
+  (tested), screen `ui/noteRush.ts`. Demo scene "Note Rush" (a 16 s round).

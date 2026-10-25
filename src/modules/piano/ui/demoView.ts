@@ -24,6 +24,7 @@ import { explainBlock, playground } from './theory';
 import { calibrateView, keyMap, lessonView, testerView } from './views';
 import { sketchbookView } from './sketchbookView';
 import { mySongsView } from './mySongsView';
+import { noteRushView } from './noteRush';
 import { writeMidiFile } from '../music/midiFile';
 import { ModuleRecords } from '../../../core/storage';
 import type { Module } from '../../../core/module';
@@ -890,6 +891,16 @@ function scenes(): Scene[] {
   out.push({ title: 'Two-hand tapping', caption: 'Rhythm for both hands: the right hand taps any key from middle C up, the left hand any key below, and each hand is scored on its own. Here a fresh two-line rhythm to read (rhythm-read with hands: both).', run: played(parseExercise(parse(SAMPLES.tapBoth))) });
   out.push({ title: 'Rhythm echo', caption: 'Play sounds a rhythm you cannot see. After a bar of count-in it is your turn: tap it back on any key. Then the staff shows what it was, marked note by note. A new rhythm every run.', run: played(parseExercise(parse(SAMPLES.echo)), 5000) });
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
+  out.push({
+    title: 'Note Rush',
+    caption: 'A mini game for reading notes: a note shows on the staff, play it before its time bar runs out. A minute a round (shorter here). Every note in a row builds a streak, every five in a row adds to the points per note, but each note gets less time; a wrong key ends the streak. Treble, bass or both clefs, from C position to ledger lines, with a best score for each. The result says which notes took longest. Home has a card for it.',
+    run: (box, next, p) => {
+      demo.onAsk = (a) => p.answer(a);
+      const cleanup = noteRushView(box);
+      const timers = [window.setTimeout(() => press(box, 'Start'), 1200), window.setTimeout(next, 22000)];
+      return () => { timers.forEach(clearTimeout); demo.onAsk = undefined; cleanup?.(); };
+    },
+  });
   out.push({
     title: 'Sketchbook',
     caption: 'Free play, written down. Press Record, and after a bar of count-in play anything: the Sketchbook writes it on the staff (right hand on the treble, left on the bass), plays it back with your own timing, and keeps the ideas you like, with a name and a note. A kept idea can be practised like any exercise, falling notes and all. Here the pianist plays a little tune over a bass and keeps it.',
