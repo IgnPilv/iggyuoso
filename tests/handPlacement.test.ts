@@ -4,6 +4,9 @@ import { realContent } from './helpers';
 import { expectedNotes } from '../src/modules/piano/music/timeline';
 import type { TimedExercise } from '../src/modules/piano/content/types';
 
+// Loaded while the file is collected, so the content load is not counted against the test's time.
+const { content } = realContent();
+
 const line = (keys: number[], fingers: number[], hand: 'right' | 'left' = 'right'): PlacedNote[] =>
   keys.map((key, i) => ({ key, beat: i, beats: 1, hand, finger: fingers[i] }));
 
@@ -57,7 +60,6 @@ describe('hand placement', () => {
   });
 
   it('gives every timed exercise a hand position in order of pitch', () => {
-    const { content } = realContent();
     for (const ex of content.exercises.values()) {
       if (ex.kind !== 'timed' || (ex as TimedExercise).tap) continue;
       const exp = expectedNotes(ex as TimedExercise);
