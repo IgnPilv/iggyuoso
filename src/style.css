@@ -552,6 +552,29 @@ ol.lessons li.next a::before { background: var(--brand-gradient); color: var(--o
 .key.black text { fill: #fff; font-size: 9px; }
 .key text.name { font-family: var(--font-body); font-size: 9.5px; font-weight: 500; fill: var(--key-label); }
 .middle-c { fill: var(--middle-c); }
+.hands { pointer-events: none; }
+.hand .hand-body { stroke: none; }
+.hand.right .hand-body { fill: var(--rh-soft); }
+.hand.left .hand-body { fill: var(--lh-soft); }
+/* The mask keeps the outer half of a wide stroke: white stroke, then the body painted black over it. */
+.hand .hand-mask { stroke: #fff; stroke-width: 2.6; stroke-linejoin: round; fill: #000; paint-order: stroke; }
+.hand .hand-line { fill: none; stroke-width: 2.6; stroke-linejoin: round; }
+.hand.right .hand-line { stroke: var(--rh); }
+.hand.left .hand-line { stroke: var(--lh); }
+.hand .tip { fill: var(--note-ink); fill-opacity: 0.78; stroke-width: 1.5; }
+.hand.right .tip { stroke: var(--rh); }
+.hand.left .tip { stroke: var(--lh); }
+.hand.right .tip.down { fill: var(--rh-bright); fill-opacity: 1; stroke: var(--note-ink); }
+.hand.left .tip.down { fill: var(--lh-bright); fill-opacity: 1; stroke: var(--note-ink); }
+.hand .tip.next { stroke-width: 2.5; animation: tip-next 0.9s ease-in-out infinite alternate; }
+.hand.right .tip.next { stroke: var(--rh-bright); filter: drop-shadow(0 0 4px var(--rh)); }
+.hand.left .tip.next { stroke: var(--lh-bright); filter: drop-shadow(0 0 4px var(--lh)); }
+.hand .tip-n { font-family: var(--font-display); font-size: 9px; font-weight: 700; text-anchor: middle; }
+.hand.right .tip-n { fill: var(--rh-bright); }
+.hand.left .tip-n { fill: var(--lh-bright); }
+.hand .tip-n.down { fill: var(--note-ink); }
+@keyframes tip-next { from { stroke-opacity: 1; } to { stroke-opacity: 0.45; } }
+@media (prefers-reduced-motion: reduce) { .hand .tip.next { animation: none; } }
 .middle-c-caption { font-family: var(--font-display); font-size: 11px; text-anchor: middle; fill: var(--middle-c); font-weight: 700; }
 
 /* ---------------------------------------------------------------- instrument: staff (SVG) */

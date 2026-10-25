@@ -1,10 +1,12 @@
 import { keyName, type Calibration } from '../calibration';
 import { computerKeys } from '../midi/computerKeys';
 import type { LiveState } from '../engine/timedSession';
+import { whiteIndex, type HandPlan } from '../music/handPlacement';
 import { isBlack, pitchClass, type Hand } from '../music/notes';
 import type { PedalSpan } from '../music/timeline';
 import { LEVELS, type DynamicSpan } from '../scoring/dynamics';
 import { palette, tokenColor, type Palette } from '../../../core/theme';
+import { handShape, paintBody } from './hands';
 
 // Synthesia-style view: notes fall towards the keyboard and reach it on their beat. Drawn on a
 // canvas every frame from the session clock; the view owns no timing of its own.
@@ -36,6 +38,8 @@ export interface FrameState {
   marked?: ReadonlyMap<number, string>;
   /** The sustain pedal is down now (drawn at the foot of the pedal line). */
   pedalDown?: boolean;
+  /** Where the hands are drawn from, when it is not `beat` (step-by-step: just before the waiting note). */
+  handBeat?: number;
 }
 
 // All colours come from the design tokens (styles/tokens.css) through palette().
@@ -59,6 +63,7 @@ export class FallingView {
   /** Last frame drawn, so a resize (or a computer-keyboard octave shift) can redraw it while idle. */
   private last?: FrameState;
   private offKeys: () => void;
+  private scratch?: HTMLCanvasElement;
 
   constructor(
     low: number, high: number,
@@ -66,7 +71,8 @@ export class FallingView {
     private notes: FallingNote[],
     private opts: { lookahead: number; barQuarters: number; totalBeats: number; labels?: 'c' | 'middle-c'; /** Quarters per beat line (1.5 in 6/8). */ pulse?: number;
       /** A pedal line, drawn as a strip down the right edge. */ pedal?: PedalSpan[];
-      /** Loud and soft marks, written next to the bar numbers. */ dynamics?: DynamicSpan[] },
+      /** Loud and soft marks, written next to the bar numbers. */ dynamics?: DynamicSpan[];
+      /** Hands drawn over the keys (Options → Hands), with finger numbers on the tips unless `handNumbers` is false. */ hands?: HandPlan; handNumbers?: boolean },
   ) {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
@@ -361,6 +367,43 @@ export class FallingView {
     slip.addColorStop(1, 'transparent');
     ctx.fillStyle = slip;
     ctx.fillRect(0, laneH, this.width, 8);
+    if (this.opts.hands) this.drawHands(this.opts.hands.at(s.handBeat ?? s.beat), p, kbH);
+  }
+
+  private drawHands(frames: ReturnType<HandPlan['at']>, p: Palette, kbH: number) {
+    const { ctx, laneH } = this;
+    const ww = this.width / this.whites;
+    const base = whiteIndex(this.low);
+    const spot = (m: number) => ({ x: (whiteIndex(m) - base + 0.5) * ww, y: laneH + (isBlack(m) ? kbH * 0.62 * 0.6 : kbH * 0.6), black: isBlack(m) });
+    for (const fr of frames) {
+      const c = handColors(p, fr.hand);
+      const shape = handShape(fr, spot, ww, laneH + kbH, kbH * 0.17);
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(0, laneH, this.width, kbH);
+      ctx.clip();
+      paintBody(ctx, (this.scratch ??= document.createElement('canvas')), shape.outline, withAlpha(c.fill, 0.22), withAlpha(c.fill, 0.95), 1.3);
+      for (const t of shape.tips) {
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2);
+        ctx.fillStyle = t.state === 'down' ? c.bright : withAlpha(p.noteInk, 0.78);
+        ctx.fill();
+        ctx.lineWidth = t.state === 'next' ? 2.5 : 1.5;
+        ctx.strokeStyle = t.state === 'next' ? c.bright : t.state === 'down' ? p.noteInk : c.fill;
+        if (t.state === 'next') { ctx.shadowColor = c.fill; ctx.shadowBlur = 10; }
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+        if (this.opts.handNumbers !== false && t.r >= 5) {
+          ctx.fillStyle = t.state === 'down' ? p.noteInk : c.bright;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.font = `700 ${Math.round(t.r * 1.2)}px ${p.fontDisplay}`;
+          ctx.fillText(String(t.finger), t.x, t.y + 0.5);
+          ctx.textBaseline = 'alphabetic';
+        }
+      }
+      ctx.restore();
+    }
   }
 }
 

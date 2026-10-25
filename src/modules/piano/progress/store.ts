@@ -74,6 +74,8 @@ export interface Settings {
   optionsOpen?: boolean;
   /** Finger numbers on the notes (falling notes, sheet, lit keys); unset = on. */
   fingers?: boolean;
+  /** Hands drawn over the keys, showing where each finger rests (beta); unset = on. */
+  hands?: boolean;
 }
 
 /** Local calendar day (YYYY-MM-DD) of an ISO time. */

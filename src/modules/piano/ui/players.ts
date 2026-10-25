@@ -6,6 +6,7 @@ import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
 import { computerKeys, typing } from '../midi/computerKeys';
 import { chordFingers } from '../music/fingering';
+import { HandPlan } from '../music/handPlacement';
 import { isTieEnd, pitchToMidi, type Hand, type NoteToken } from '../music/notes';
 import { expectedDynamics, expectedNotes, expectedPedal, pickupOffset, totalBeats } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
@@ -368,6 +369,11 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
   const stage = h('div', { class: 'stage' });
   const flashes: Flash[] = [];
   const posMarks = new Map(pos.map((k) => [k, POSITION]));
+  // Hands over the keys (Options → Hands in timed exercises; the same setting here).
+  const plan = exerciseOptions().hands !== false
+    ? new HandPlan(session.keys.map((key, i) => ({ key, beat: i, beats: 0.9, hand, finger: ex.fingers[i] })))
+    : undefined;
+  const hands = plan?.hands.length ? plan : undefined;
 
   let kb: KeyboardView | undefined;
   let staff: ReturnType<typeof renderStaff> | undefined;
@@ -389,7 +395,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
     } else {
       // Wait mode: the next note falls to the keyboard and waits there until it is played.
       const notes = session.keys.map((device, i) => ({ device, beat: i, beats: 0.9, hand, finger: ex.fingers[i] }));
-      const fv = new FallingView(lo, hi, cal, notes, { lookahead: 4, barQuarters: 1000, totalBeats: 0 });
+      const fv = new FallingView(lo, hi, cal, notes, { lookahead: 4, barQuarters: 1000, totalBeats: 0, hands });
       // Reading exercises keep the music in view: a staff strip above the lane.
       staff = ex.display === 'staff' ? sequenceStaff(ex) : undefined;
       const strip = staff ? staffStrip(staff) : undefined;
@@ -401,7 +407,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
         if (Math.abs(session.current - shown) < 0.01) shown = session.current;
         strip?.follow(shown);
         fv.draw({
-          beat: shown, held: midi.held, flashes, now, marked: posMarks,
+          beat: shown, handBeat: shown - 0.02, held: midi.held, flashes, now, marked: posMarks,
           noteState: (i) => (i < session.current ? 'hit' : i === session.current ? 'now' : 'coming'),
         });
       });
@@ -415,6 +421,8 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
     kb?.clear('target');
     kb?.clearLabels();
     staff?.clear('current');
+    // Reading from the sheet: the hands would give the key away.
+    kb?.showHands(staff || session.done ? undefined : hands?.at(session.current - 0.02));
     if (session.done) { ask.textContent = 'Done!'; return; }
     const i = session.current;
     const f = ex.fingers[i];
@@ -495,7 +503,7 @@ const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 // Exercise options (tempo, click, guide notes, the Options drawer) carry over: what the player
 // picked last is where the next exercise starts. The demo keeps its own, never saved.
 let demoOptions: Partial<Settings> = {};
-type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen' | 'fingers'>;
+type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen' | 'fingers' | 'hands'>;
 export const exerciseOptions = (): ExerciseOptions => (demo.active ? { ...store.settings, ...demoOptions } : store.settings);
 export function setExerciseOptions(o: Partial<ExerciseOptions>) {
   if (demo.active) demoOptions = { ...demoOptions, ...o };
@@ -529,6 +537,14 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   let offHeld = () => {};
   // Finger numbers on the notes, the sheet and the lit keys (Options → Fingers; on unless switched off).
   let fingersOn = settings.fingers !== false;
+  // Hands over the keys (Options → Hands, beta; on unless switched off). Not for taps or echoes,
+  // whose notes are placeholders.
+  let handsOn = settings.hands !== false;
+  const plan = ex.tap || echo ? undefined : new HandPlan(expected.map((e, i) => ({ key: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })));
+  const hasHands = !!plan?.hands.length;
+  /** Drill tests of reading keep the keys dark while playing, so the hands stay off then too. */
+  let handsHidden = false;
+  const showHands = (beat: number) => kb?.showHands(handsOn && hasHands && !handsHidden ? plan!.at(beat) : undefined, fingersOn);
   let view: ViewMode = 'classic';
   const buildView = (v: ViewMode) => {
     view = v;
@@ -539,7 +555,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     if (view === 'falling' && !echo) {
       falling = new FallingView(lo, hi, cal,
         expected.map((e, i) => ({ device: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: fingersOn ? e.finger : undefined })),
-        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex), dynamics: expectedDynamics(ex) });
+        { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(ex), pulse: ex.meter.pulse, pedal: expectedPedal(ex), dynamics: expectedDynamics(ex),
+          hands: handsOn && hasHands ? plan : undefined, handNumbers: fingersOn });
       // The sheet music rides along above the lane (not for tap exercises: their notes are placeholders).
       if (!ex.tap) {
         staff = renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
@@ -553,6 +570,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
       stage.append(h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg), kb.el);
+      showHands(-1);
     }
   };
 
@@ -593,6 +611,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   fingerBox.addEventListener('change', () => {
     fingersOn = fingerBox.checked;
     setExerciseOptions({ fingers: fingersOn });
+    buildView(view);
+  });
+  const handBox = h('input', { type: 'checkbox', checked: handsOn });
+  handBox.addEventListener('change', () => {
+    handsOn = handBox.checked;
+    setExerciseOptions({ hands: handsOn });
     buildView(view);
   });
   metro.addEventListener('change', () => setExerciseOptions({ metronome: metro.checked }));
@@ -690,6 +714,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       if (kb) {
         kb.clear('target');
         kb.clearLabels();
+        showHands(pos.beat);
       }
       staff?.clear('current');
       expected.forEach((e, i) => {
@@ -727,7 +752,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       staff?.clear('current');
       listenBtn.disabled = playBtn.disabled = false;
       toggle.disable(false);
-      fingerBox.disabled = false;
+      fingerBox.disabled = handBox.disabled = false;
+      handsHidden = false;
       stopBtn.disabled = pauseBtn.disabled = true;
       pauseBtn.textContent = 'Pause';
       run = undefined;
@@ -823,7 +849,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
     listenBtn.disabled = playBtn.disabled = true;
     toggle.disable(true);
-    fingerBox.disabled = true;
+    fingerBox.disabled = handBox.disabled = true;
+    handsHidden = !!ex.goal && mode === 'play';
     stopBtn.disabled = pauseBtn.disabled = false;
     setRunning(true);
     raf = requestAnimationFrame(frame);
@@ -864,7 +891,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         h('label', {}, 'Count-in ', countSel),
         h('label', {}, metro, ' Click'),
         h('label', {}, guide, ' Guide notes'),
-        ex.tap ? '' : h('label', {}, fingerBox, ' Fingers')),
+        ex.tap ? '' : h('label', {}, fingerBox, ' Fingers'),
+        hasHands ? h('label', {}, handBox, ' Hands (beta)') : ''),
       loopControls));
   drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
   closeOptions = () => { if (drawer.open && drawer.closest('.focus')) drawer.open = false; };

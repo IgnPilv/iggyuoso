@@ -1,6 +1,8 @@
 import { keyName, type Calibration } from '../calibration';
 import { computerKeys } from '../midi/computerKeys';
+import { whiteIndex, type HandFrame } from '../music/handPlacement';
 import { isBlack, pitchClass } from '../music/notes';
+import { handShape } from './hands';
 import { s } from '../../../core/dom';
 
 // An on-screen keyboard for a range of device keys. States are CSS classes on each key.
@@ -14,6 +16,10 @@ const BH = 68;
 export class KeyboardView {
   readonly el: SVGSVGElement;
   private keys = new Map<number, SVGGElement>();
+  private low: number;
+  private handLayer = s('g', { class: 'hands' });
+  private handSig = '';
+  private static masks = 0;
 
   /**
    * `labels: 'c'` writes the name under every C (not for "find the C" drills, where it would give
@@ -24,6 +30,7 @@ export class KeyboardView {
     // Start and end on white keys so the drawing is never cut through a black key.
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
+    this.low = low;
     const whites: number[] = [];
     for (let m = low; m <= high; m++) if (!isBlack(m)) whites.push(m);
     this.el = s('svg', { viewBox: `0 0 ${whites.length * WW} ${WH + CAPTION + 2}`, class: 'keyboard', role: 'img', 'aria-label': 'keyboard' });
@@ -53,7 +60,10 @@ export class KeyboardView {
       }
       this.keys.set(m, g);
     }
-    this.el.append(whiteLayer, blackLayer);
+    // The hands' palms run off the front edge of the keys.
+    const clip = `hands-clip-${++KeyboardView.masks}`;
+    this.handLayer.setAttribute('clip-path', `url(#${clip})`);
+    this.el.append(whiteLayer, blackLayer, s('defs', {}, s('clipPath', { id: clip }, s('rect', { x: 0, y: 0, width: whites.length * WW, height: WH }))), this.handLayer);
     if (opts.labels === 'c') {
       this.showHints();
       const off = computerKeys.onChange(() => {
@@ -67,6 +77,32 @@ export class KeyboardView {
   private showHints() {
     for (const [m, g] of this.keys) {
       g.querySelector('text.hint')!.textContent = computerKeys.enabled ? computerKeys.letterFor(m) ?? '' : '';
+    }
+  }
+
+  /** The hands over the keys (none: hide them). Fingertips rest on white keys low down, on black keys near their ends. */
+  showHands(frames: HandFrame[] | undefined, numbers = true) {
+    const sig = frames ? JSON.stringify(frames) + numbers : '';
+    if (sig === this.handSig) return;
+    this.handSig = sig;
+    this.handLayer.replaceChildren();
+    if (!frames) return;
+    const base = whiteIndex(this.low);
+    const spot = (m: number) => ({ x: (whiteIndex(m) - base + 0.5) * WW, y: isBlack(m) ? BH * 0.6 : WH * 0.6, black: isBlack(m) });
+    for (const fr of frames) {
+      const shape = handShape(fr, spot, WW, WH, WH * 0.17);
+      // One outline around palm and fingers together: the stroke is masked to outside the body.
+      const id = `hand-${fr.hand}-${++KeyboardView.masks}`;
+      const mask = s('mask', { id, maskUnits: 'userSpaceOnUse' },
+        s('path', { d: shape.outline, class: 'hand-mask' }));
+      const g = s('g', { class: `hand ${fr.hand}` }, s('defs', {}, mask),
+        s('path', { d: shape.outline, class: 'hand-body' }),
+        s('path', { d: shape.outline, class: 'hand-line', mask: `url(#${id})` }));
+      for (const t of shape.tips) {
+        g.append(s('circle', { cx: t.x, cy: t.y, r: t.r, class: `tip ${t.state}` }));
+        if (numbers) g.append(s('text', { x: t.x, y: t.y + t.r * 0.45, class: `tip-n ${t.state}` }, String(t.finger)));
+      }
+      this.handLayer.append(g);
     }
   }
 
