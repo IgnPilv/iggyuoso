@@ -169,3 +169,16 @@ and the boxes show what was heard.
 function stops it from inside; before, a run that ended on its own kept drawing ("Coming down") and
 broke the next run.
 
+## Play by ear (`#/byear`)
+Find a known tune on the keys. `engine/byEar.ts` (tested in `tests/byEar.test.ts`) holds 20
+public-domain openings (`EAR_TUNES`, easy / medium / hard; written in C major or A minor as note
+strings, bar lines only for reading) and moves them to another key letter by letter (`movePitch`,
+`EAR_KEYS`: C, D, F, G, A, B♭, kept near middle C), so they stay spelled right. `EarHunt` gives the
+first note and takes presses (written MIDI): the next note is right; the tune again from its start,
+or the last note found, is a replay and never a guess; the right note in another octave is only
+pointed out; anything else is a wrong try, answered with higher or lower and, from the second try,
+how far the tune moves from the last note found (`moveSize`: step 1–2 half steps, skip 3–4, leap 5+).
+"Show me" finds the note for no credit. Score: each note after the first counts 1 on the first
+try, 0.6, 0.3, then 0.15; shown 0. Rhythm is not judged. `ui/byEarView.ts` plays the tune with its
+rhythm on the sampled piano (keys dark until it is found), writes the notes found on the staff, and
+saves nothing; settings, the last four tunes (not repeated) and best scores last until reload.

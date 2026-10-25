@@ -862,6 +862,17 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   passes against the other notes, loudness spread and a bumping thumb (only with real velocities), the
   notes furthest off, and at most two tips. Score: each note full within 20 ms, nothing at half a step
   (60 to 100 ms). Nothing is saved (best per setup until reload). Demo scene "Scale gym".
+- 2026-10-25: Play by ear (hourly idea 6; merged directly under Ignas's "for now implement all"). `#/byear`,
+  a second button on home's Mini game card: the app plays the opening of a public-domain tune (20: nursery
+  and folk songs, carols, Ode to Joy, Brahms's Lullaby, Greensleeves, Korobeiniki, Für Elise; easy, medium,
+  hard), lights its first note, and the player finds the rest one note at a time. A wrong key says higher or
+  lower than it; from the second, also how far the tune moves from the last note found (a step, a skip, a
+  leap); the right note in another octave is pointed out, not counted; playing from the start (or the last
+  note found) again is never a guess. Hear it all, Hear the next notes, Show me (no credit). Notes found are
+  written on the staff; at the end the score (1 / 0.6 / 0.3 / 0.15 by try, 0 shown), first-try count, where
+  the tune comes from and a playback. Near middle C or on any key (C D F G A B♭, spelled letter by letter);
+  mystery mode hides the name. Rhythm is not judged. Nothing is saved (`engine/byEar.ts`, tested;
+  `ui/byEarView.ts`). Demo scene "Play by ear".
 - 2026-10-25: Scale gym, round 2 (Ignas: "only set tempo mode is not good enough... a mode where it picks
   up your wanted tempo and just records and says how good you were... where you were late and where you
   hurried"; "it could recognize the scale you're doing"; "two hands scales (zoomed out)"; and a bug:
