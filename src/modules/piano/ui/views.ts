@@ -27,7 +27,7 @@ function setComputerKeys(on: boolean) {
 const useComputerKeys = () =>
   h('button', { class: 'secondary', onclick: () => setComputerKeys(true) }, 'Use the computer keyboard instead');
 
-function midiBanner(): HTMLElement | null {
+export function midiBanner(): HTMLElement | null {
   if (demo.active || computerKeys.enabled) return null;
   if (!MidiInput.supported()) {
     return h('p', { class: 'banner error' }, 'This browser cannot read MIDI keyboards. Please open iggyuoso in Chrome or Edge. ', useComputerKeys());
@@ -73,6 +73,7 @@ export const homeView: View = (root) => {
       h('span', { class: 'small' }, 'The demo needs no keyboard.')),
   ));
   if (store.calibration) root.append(todayCard());
+  if (store.calibration) root.append(gameCard());
   root.append(progressCard());
   const snap = snapshot();
   root.append(h('section', { class: 'card tree-card' },
@@ -89,6 +90,12 @@ export const homeView: View = (root) => {
   }
   return off;
 };
+
+/** A way into the mini games. */
+export const gameCard = () => h('section', { class: 'card home-game' },
+  h('div', {}, h('span', { class: 'eyebrow' }, 'Mini game'), h('h2', {}, 'Note Rush'),
+    h('p', { class: 'small' }, 'How many notes can you read and play in a minute?')),
+  h('button', { class: 'secondary', onclick: () => go('/noterush') }, 'Play Note Rush'));
 
 /** XP, streak and what is due for review. Hidden until there is something to show. */
 function progressCard(): HTMLElement | '' {

@@ -106,6 +106,16 @@ improvising) records with `Recorder` (`engine/recorder.ts`) on the same clock, a
 - **The tempo ladder** (`climb`): three clean takes at the current step move up, two failed takes
   in a row move down. Saved per exercise as `ladder.<id>`.
 
+## The Timing mirror (`#/pulse`)
+A metronome page that measures every press, separate from exercises. `engine/pulse.ts` (`Pulse`,
+tested in `tests/pulse.test.ts`) schedules the clicks (one bar of count-in, then a click a beat,
+none in silent bars: `silent: { play, rest }` bars), and matches each press to the nearest beat or
+half beat after taking latency off, as an offset in ms (minus = early). Hands are split at middle
+C (written MIDI 60); notes of one hand within 60 ms are one chord. `pulseStats` gives each hand's
+mean and spread, `silentDrift` compares silent bars with clicked ones (needs 3 of each),
+`tapTempo` turns taps into a tempo. `ui/pulseView.ts` draws the dots and the timeline as SVG and
+saves nothing; its settings last until the page reloads (the demo uses its own copy).
+
 ## The Jam room (`#/jam`)
 A backing band to improvise over, separate from exercises. `engine/jam.ts` (tested in
 `tests/jam.test.ts`) holds the data: the progressions (`BACKINGS`, one Roman numeral per bar, built
@@ -117,4 +127,3 @@ second ahead (a 50 ms timer), so tempo, key and groove changes apply from the ne
 scheduled bar keeps its start, beat length and plan, and a press is placed against them after
 taking latency off. Drums are synthesised (`drum` in `audio/audio.ts`); bass and chords use the
 sampled piano. Nothing is saved; settings last until the page reloads (the demo uses its own copy).
-
