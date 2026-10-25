@@ -3,7 +3,7 @@ import { h } from './dom';
 import { keptLabels } from './records';
 
 // The account card at the top of the profile, shared by every module: who is playing here (a guest, saved on this device
-// only, or a signed-in account that syncs), signing in by an emailed link, and the sync state.
+// only, or a signed-in account that syncs), signing in with Google (or by an emailed link), and the sync state.
 // It redraws itself when the account changes.
 
 export function ago(iso: string | undefined, now = Date.now()): string {
@@ -24,6 +24,7 @@ function kept() {
 export function accountCard(account: Account): HTMLElement {
   const card = h('section', { class: 'card account' });
   let email = '';
+  let useEmail = false;
   let confirming = false;
   let wiping = false;
   // "Wipe progress", with a second step that says exactly what goes and what stays.
@@ -66,16 +67,21 @@ export function accountCard(account: Account): HTMLElement {
       } else {
         const input = h('input', { type: 'email', name: 'email', autocomplete: 'email', placeholder: 'you@example.com', 'aria-label': 'Email', required: true, value: email });
         input.oninput = () => { email = input.value; };
-        const form = h('form', { class: 'account-form' }, input, h('button', { type: 'submit' }, 'Email me a sign-in link'));
+        const form = h('form', { class: 'account-form' }, input, h('button', { type: 'submit', class: 'secondary' }, 'Email me a sign-in link'));
         form.onsubmit = (e) => {
           e.preventDefault();
           if (!input.checkValidity()) return input.reportValidity();
           (form.querySelector('button') as HTMLButtonElement).disabled = true;
           void account.sendLink(input.value);
         };
-        signIn = h('div', {},
-          h('p', { class: 'small' }, 'Sign in to keep your progress on every device. No password: we email you a link.'),
-          form);
+        const google = h('button', { class: 'account-google', disabled: account.leaving, onclick: () => void account.signInWithGoogle() },
+          account.leaving ? 'Opening Google…' : 'Continue with Google');
+        signIn = h('div', { class: 'account-signin' },
+          h('p', { class: 'small' }, 'Sign in to keep your progress on every device. Your progress here comes with you into the account.'),
+          google,
+          useEmail
+            ? h('div', {}, h('p', { class: 'small' }, 'No password: we email you a link to open on this device.'), form)
+            : h('button', { class: 'secondary account-use-email', onclick: () => { useEmail = true; draw(); } }, 'Use email instead'));
       }
       card.replaceChildren(...[
         h('div', { class: 'account-head' }, avatar, h('div', {},

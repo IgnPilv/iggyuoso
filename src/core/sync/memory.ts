@@ -1,7 +1,7 @@
 import type { AccountSession, OutRow, RemoteRow, SyncProvider } from './types';
 
 // A pretend account server kept in memory, for tests and the demo. A sign-in link "arrives" at
-// once: completeSignIn takes `#memory-sign-in=<email>`.
+// once: completeSignIn takes `#memory-sign-in=<email>`. "Google" hands back the email as the code.
 
 export interface MemoryServer extends SyncProvider {
   rows: Map<string, Map<string, RemoteRow>>;
@@ -24,6 +24,11 @@ export function memoryProvider(): MemoryServer {
     rows: new Map(),
     sent: [],
     offline: false,
+    oauthUrl(_provider, redirectTo) { return `${redirectTo}#memory-oauth`; },
+    async exchangeCode(code) {
+      up(srv);
+      return { userId: `user:${code}`, email: code, accessToken: 'memory', refreshToken: 'memory', expiresAt: Date.now() + 3_600_000 };
+    },
     async sendSignInLink(email) { up(srv); srv.sent.push(email); },
     async completeSignIn(hash) {
       const email = new URLSearchParams(hash.replace(/^#/, '')).get('memory-sign-in');

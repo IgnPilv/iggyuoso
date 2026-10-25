@@ -70,6 +70,16 @@ reaches other devices.
 
 ## Accounts and sync, in short
 
+- Signing in: **Continue with Google** first, an emailed link as "Use email instead". Google uses
+  OAuth with PKCE and no server of ours: `Account.signInWithGoogle` keeps a random verifier on the
+  device (`iggyuoso.sync.pkce`, never synced; `pkce.ts`) and sends the browser to Supabase's
+  `/auth/v1/authorize?provider=google` with its SHA-256 challenge. Supabase passes it to Google
+  and back to the app's address with `?code=...` in the query (the hash router's `#/...` is left
+  alone). The shell (`src/app/shell.ts`) sees the code, cleans the address to `#/profile`, and
+  `Account.completeOAuth` trades code + verifier at `/auth/v1/token?grant_type=pkce` for a session.
+  From then on it is the same session as an email link: refreshed when it runs out, synced the
+  same way, signed out the same way.
+
 - Every write to a synced record is stamped as changed (`src/core/sync/tracker.ts`).
 - `Account` (`src/core/sync/account.ts`) syncs on start, a few seconds after a change, when the
   tab is hidden or focused and when the network returns: pull what changed on the server, merge

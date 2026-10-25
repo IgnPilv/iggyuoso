@@ -1,7 +1,8 @@
 import { SignedOutError, type AccountSession, type OutRow, type RemoteRow, type SyncProvider } from './types';
 
 // Supabase as the account server, spoken to over its plain HTTP API (no SDK, so nothing is
-// added to the bundle). Sign-in is by an emailed link; progress rows live in one table,
+// added to the bundle). Sign-in is with Google (OAuth with PKCE: the browser goes to Supabase,
+// which sends it on to Google and back here with a one-time code) or by an emailed link; progress rows live in one table,
 // `progress`, kept per account by row-level security (docs/accounts.md, docs/supabase.sql).
 
 const PAGE = 1000;
@@ -34,6 +35,19 @@ export function supabaseProvider(cfg: { url: string; anonKey: string }, fetchFn:
 
   return {
     name: 'Supabase',
+
+    oauthUrl(provider, redirectTo, codeChallenge) {
+      const q = new URLSearchParams({ provider, redirect_to: redirectTo, code_challenge: codeChallenge, code_challenge_method: 's256' });
+      return `${cfg.url}/auth/v1/authorize?${q}`;
+    },
+
+    async exchangeCode(code, verifier) {
+      const res = await call('/auth/v1/token?grant_type=pkce', {
+        method: 'POST', headers: base, body: JSON.stringify({ auth_code: code, code_verifier: verifier }),
+      });
+      const t = await res.json();
+      return session(t, t.user);
+    },
 
     async sendSignInLink(email, redirectTo) {
       await call(`/auth/v1/otp?redirect_to=${encodeURIComponent(redirectTo)}`, {

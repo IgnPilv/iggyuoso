@@ -1,4 +1,5 @@
 import { mergeRecord } from './merge';
+import { challengeOf, makeVerifier } from './pkce';
 import { KEEP_ON_WIPE, PREFIX, WIPED_KEY, type TrackedBackend } from './tracker';
 import { SignedOutError, type AccountSession, type OutRow, type SyncProvider } from './types';
 
@@ -15,6 +16,8 @@ export type SyncStatus = 'guest' | 'syncing' | 'synced' | 'offline' | 'error';
 
 const SESSION_KEY = `${PREFIX}account`;
 const STATE_KEY = `${PREFIX}sync.state`;
+/** The PKCE verifier of a Google sign-in on its way (device only, like every `sync.*` record). */
+const PKCE_KEY = `${PREFIX}sync.pkce`;
 /** Pull a little before the last cursor, so a change saved at the same moment is not missed. */
 const OVERLAP_MS = 60_000;
 /** Wait this long after a change before sending it, so a run of takes goes as one sync. */
@@ -31,8 +34,10 @@ export interface AccountOptions {
   schema: number;
   /** Upgrade records saved by an older app (Store.upgradeFrom). */
   upgradeFrom: (v: number) => void;
-  /** The address a sign-in link comes back to. */
+  /** The address a sign-in link (and Google) comes back to. */
   redirectTo: () => string;
+  /** Leave for the sign-in page (default: the browser goes there). */
+  go?: (url: string) => void;
 }
 
 export class Account {
@@ -43,6 +48,8 @@ export class Account {
   newerData = false;
   /** Email a sign-in link was just sent to. */
   linkSentTo = '';
+  /** On the way to Google (the page is about to change). */
+  leaving = false;
   private listeners = new Set<(changed: boolean) => void>();
   private running?: Promise<boolean>;
   private again = false;
@@ -76,6 +83,56 @@ export class Account {
   onChange(fn: (changed: boolean) => void) { this.listeners.add(fn); return () => this.listeners.delete(fn); }
   private emit(changed = false) { this.listeners.forEach((fn) => fn(changed)); }
 
+  /**
+   * Sign in with Google: keep a PKCE verifier on the device and send the browser to the account
+   * server, which passes it on to Google and back here with a code (`completeOAuth`).
+   */
+  async signInWithGoogle() {
+    if (!this.provider) return;
+    this.error = '';
+    const verifier = makeVerifier();
+    let url: string;
+    try {
+      url = this.provider.oauthUrl('google', this.opts.redirectTo(), await challengeOf(verifier));
+    } catch (e) {
+      this.error = `Could not start signing in: ${message(e)}`;
+      this.emit();
+      return;
+    }
+    this.data.raw.set(PKCE_KEY, JSON.stringify(verifier));
+    this.leaving = true;
+    this.emit();
+    (this.opts.go ?? ((u) => location.assign(u)))(url);
+  }
+
+  /**
+   * Finish a Google sign-in from the return address's query (`?code=...` or `?error=...`). True
+   * when it was a sign-in return (worked or not).
+   */
+  async completeOAuth(search: string): Promise<boolean> {
+    if (!this.provider) return false;
+    const q = new URLSearchParams(search.replace(/^\?/, ''));
+    const code = q.get('code');
+    const err = q.get('error_description') ?? q.get('error');
+    if (!code && !err) return false;
+    let verifier: string | null = null;
+    try { verifier = JSON.parse(this.data.raw.get(PKCE_KEY) ?? 'null'); } catch { /* none */ }
+    this.data.raw.set(PKCE_KEY, 'null');
+    this.leaving = false;
+    let s: AccountSession;
+    try {
+      if (err) throw new Error(err.replace(/\+/g, ' '));
+      if (!verifier) throw new Error('it was started in another browser or tab');
+      s = await this.provider.exchangeCode(code!, verifier);
+    } catch (e) {
+      this.error = `Sign-in did not work: ${message(e)}. Try again.`;
+      this.emit();
+      return true;
+    }
+    await this.begin(s);
+    return true;
+  }
+
   async sendLink(email: string) {
     if (!this.provider) return;
     this.error = '';
@@ -103,13 +160,18 @@ export class Account {
       return true;
     }
     if (!s) return false;
+    await this.begin(s);
+    return true;
+  }
+
+  /** A new session on this device: the guest's progress goes into the account, then a sync. */
+  private async begin(s: AccountSession) {
     this.session = s;
     this.state = {};
     this.linkSentTo = '';
     this.error = '';
     this.data.touch(this.data.syncedKeys());
     await this.sync();
-    return true;
   }
 
   /** Sign out. Progress stays on this device, which carries on as a guest. */

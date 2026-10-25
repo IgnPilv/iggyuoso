@@ -7,7 +7,8 @@ side by side. iggyuoso works in two ways:
 - **Guest** (the default). Progress is saved in the browser, on this device only. Nothing leaves
   the device. Another device or browser, or clearing the site's data, starts from zero.
 - **Signed in.** The same progress, copied to an account server and back, so it follows the
-  player to every device. Sign-in is by an emailed link (no password). Signing in keeps the
+  player to every device. Sign-in is with Google ("Continue with Google"), or by an emailed link
+  ("Use email instead"); no password either way. Signing in keeps the
   guest's progress and adds it to the account; signing out keeps everything on the device as a
   guest again.
 
@@ -24,6 +25,13 @@ offline and syncs when the network comes back.
 - Synced: every `iggyuoso.*` record except the device's own (`schema`, `settings`, `account`,
   `module` from the shell; `calibration` from the piano: the keyboard, latency, look and open
   module) and `sync.*`. New records of any module sync without any change here.
+- **Signing in with Google** (OAuth with PKCE, no server of ours, no SDK): the device keeps a
+  random verifier (`iggyuoso.sync.pkce`, `src/core/sync/pkce.ts`) and sends the browser to
+  `<Supabase>/auth/v1/authorize?provider=google` with its SHA-256 challenge. Supabase sends it on
+  to Google and back to the app with `?code=...` in the query; the shell cleans the address to
+  `#/profile` and the code and verifier are traded at `/auth/v1/token?grant_type=pkce` for a
+  session. The email link comes back with the session in the hash instead. Both come back to the
+  app's own address, which must be in Supabase's Redirect URLs. Preview copies stay guest only.
 - `src/core/sync/account.ts`: who is playing (guest or account), sign-in, sign-out and the sync
   itself: pull rows changed on the server since the last pull, merge records changed on both
   sides, push what changed here. Sync runs on start, a few seconds after each change, when the
@@ -54,8 +62,8 @@ Why Supabase: free plan, works straight from a static GitHub Pages site (plain H
 server of our own, no SDK in the bundle), email-link sign-in built in, and the data is one
 ordinary Postgres table with row-level security. Things to know: free projects that see no use
 for a week can be paused (the app keeps working on the device; press "Restore" in the Supabase
-dashboard), and the built-in email sender sends only a few sign-in emails an hour, which is
-plenty for one player.
+dashboard), and the built-in email sender sends only about two sign-in emails an hour, which is
+why Google is the main way in (it sends no email, so it has no such limit).
 
 ## Switching accounts on (for Ignas, about 10 minutes)
 
@@ -83,3 +91,46 @@ plenty for one player.
      workflow**.
 7. Open the app → **Profile** → type your email → **Email me a sign-in link** → open the link
    from the email on that device. Do the same on every other device.
+
+## Switching on Google sign-in (for Ignas, about 15 minutes)
+
+Until this is done, "Continue with Google" ends on a Supabase page saying the provider is not
+enabled; email links keep working.
+
+**A. Google Cloud Console** (https://console.cloud.google.com, signed in with your Google account)
+
+1. Top bar, the project picker → **New project**. Name `iggyuoso`, **Create**, then pick it in the
+   project picker.
+2. Left menu (☰) → **APIs & Services** → **OAuth consent screen** (newer consoles call it
+   **Google Auth Platform** → **Branding**). Press **Get started** (or **Configure**):
+   - App name `iggyuoso`, User support email = your Gmail. **Next**.
+   - Audience: **External**. **Next**.
+   - Contact information: your Gmail. **Next**, tick the policy box, **Create**.
+3. **Data access** (older consoles: **Scopes** on the same screen) → **Add or remove scopes** →
+   tick `.../auth/userinfo.email`, `.../auth/userinfo.profile` and `openid` → **Update** →
+   **Save**. These need no review by Google.
+4. **Audience** → **Publishing status** → **Publish app** → **Confirm**. (While it says
+   "Testing", only Google accounts you add under **Test users** can sign in.)
+5. **Clients** (older consoles: **Credentials** → **Create credentials** → **OAuth client ID**) →
+   **Create client**:
+   - Application type **Web application**, name `iggyuoso web`.
+   - **Authorized JavaScript origins** → **Add URI**: `https://ignpilv.github.io`
+   - **Authorized redirect URIs** → **Add URI**:
+     `https://iczywvdbdejlgdskqjtw.supabase.co/auth/v1/callback`
+   - **Create**. Copy the **Client ID** and the **Client secret** from the box that opens (the
+     secret is shown in full only now; you can make a new one later).
+
+**B. Supabase dashboard** (https://supabase.com/dashboard, project `iggyuoso`)
+
+6. Left menu **Authentication** → **Sign In / Providers** (older: **Providers**) → **Google** →
+   switch **Enable Sign in with Google** on, paste the **Client ID** and **Client Secret**
+   (Secret) from step 5, leave the rest, **Save**. The Callback URL it shows should be the one
+   you pasted in step 5.
+7. **Authentication** → **URL Configuration**: check **Site URL** is
+   `https://ignpilv.github.io/iggyuoso/` and **Redirect URLs** has
+   `https://ignpilv.github.io/iggyuoso/**` (both were set for email links; add them if not).
+   **Save**.
+
+**C. Try it**: open https://ignpilv.github.io/iggyuoso/#/profile → **Continue with Google** →
+pick your account → you land back on the Profile, signed in, with your progress synced. The
+Client secret stays in Supabase only: never paste it in a thread or the repository.

@@ -1,4 +1,4 @@
-import { account, isSignInReturn } from '../core/sync';
+import { account, isOAuthReturn, isSignInReturn } from '../core/sync';
 import { accountCard } from '../core/accountView';
 import { themeSetting } from '../core/appearance';
 import { h, type View } from '../core/dom';
@@ -181,8 +181,15 @@ export function startShell(app: HTMLElement) {
     window.scrollTo(0, 0);
   }
 
-  // A sign-in link comes back with the sign-in in the hash: finish it on the profile page.
+  // Google sign-in comes back with `?code=` in the query, a sign-in link with the session in the
+  // hash: finish either on the profile page, with the address cleaned up.
   function signInReturn() {
+    if (isOAuthReturn(location.search)) {
+      const search = location.search;
+      history.replaceState(null, '', `${location.pathname}#/profile`);
+      void account.completeOAuth(search);
+      return;
+    }
     if (!isSignInReturn(location.hash)) return;
     const hash = location.hash;
     history.replaceState(null, '', '#/profile');

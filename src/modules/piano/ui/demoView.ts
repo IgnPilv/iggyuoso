@@ -859,11 +859,14 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Guest or account',
-    caption: 'Without an account you play as a guest: progress is saved on this device only, and the profile says so. Sign in with an emailed link (no password) and the guest progress goes into the account, which carries it to every device. Here the pianist signs in and the practice from their other device arrives, then tries "Wipe progress", which asks first and then clears the takes, XP and path here and in the account (sketches, songs and settings stay). The demo uses a pretend server.',
+    caption: 'Without an account you play as a guest: progress is saved on this device only, and the profile says so. "Continue with Google" signs in (no password; "Use email instead" sends a sign-in link), and the guest progress goes into the account, which carries it to every device. Here the pianist signs in with Google and the practice from their other device arrives, then tries "Wipe progress", which asks first and then clears the takes, XP and path here and in the account (sketches, songs and settings stay). The demo uses a pretend server and a pretend Google.',
     run: (box, next) => {
       const timers: number[] = [];
       const email = 'pianist@example.com';
-      const { server, account, data } = demoAccount();
+      // Pretend Google: a moment away, then back with a code (the real one leaves the page).
+      const { server, account, data } = demoAccount(() => {
+        timers.push(window.setTimeout(() => void account.completeOAuth(`?code=${email}`), 2500));
+      });
       // The "other device": seven weeks of made-up practice already in the account.
       const other = sampleProgress().store;
       const keys = ['profile.days', 'profile.timing', 'mastery.meta', ...[...treeNodes.keys()].map((id) => `mastery.${id}`)];
@@ -874,13 +877,8 @@ function scenes(): Scene[] {
       const draw = () => box.replaceChildren(renderProfile(progress, new Date(), account));
       draw();
       const off = account.onChange((changed) => { if (changed) draw(); });
-      timers.push(window.setTimeout(() => {
-        const input = box.querySelector<HTMLInputElement>('.account-form input');
-        if (!input) return;
-        [...email].forEach((_, i) => timers.push(window.setTimeout(() => { input.value = email.slice(0, i + 1); input.dispatchEvent(new Event('input')); }, i * 60)));
-        timers.push(window.setTimeout(() => box.querySelector<HTMLFormElement>('.account-form')?.requestSubmit(), email.length * 60 + 500));
-      }, 4500));
-      timers.push(window.setTimeout(() => void account.completeSignIn(`#memory-sign-in=${email}`), 10500));
+      timers.push(window.setTimeout(() => press(box, 'Use email instead'), 3500));
+      timers.push(window.setTimeout(() => press(box, 'Continue with Google'), 7000));
       timers.push(window.setTimeout(() => press(box, 'Wipe progress'), 16000));
       timers.push(window.setTimeout(() => press(box, 'Wipe everything'), 20000));
       timers.push(window.setTimeout(next, 25000));
