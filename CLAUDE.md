@@ -873,3 +873,19 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   the tune comes from and a playback. Near middle C or on any key (C D F G A B♭, spelled letter by letter);
   mystery mode hides the name. Rhythm is not judged. Nothing is saved (`engine/byEar.ts`, tested;
   `ui/byEarView.ts`). Demo scene "Play by ear".
+- 2026-10-25: Scale gym, round 2 (Ignas: "only set tempo mode is not good enough... a mode where it picks
+  up your wanted tempo and just records and says how good you were... where you were late and where you
+  hurried"; "it could recognize the scale you're doing"; "two hands scales (zoomed out)"; and a bug:
+  "selecting other scales bugs out and you can't restart, it says coming down"). Modes: With the click
+  (as before), **Free tempo, any scale (recognised)** and Free tempo, the scale picked. Free tempo has no
+  count-in or click: the first right note starts, 3 s of silence (or Stop) ends; the tempo is the
+  middle gap between notes, each note's gap is measured against the beat around it (up to four gaps
+  either side), so held-back and hurried notes stand out without blaming a gentle drift; it also says
+  the tempo going up and coming down and, with both hands, which hand lands first. `recognise` names
+  the scale from the notes (kind, key, one hand or both, one or two octaves; closest line by edit
+  distance, at most 35% different), puts it on the keys and in the boxes, and measures it.
+  "Practise at N with the click" carries the found tempo over. The keyboard never grows taller than a
+  third of the window, so two hands and two octaves stay in view. Bug: `animate` (now
+  `ui/animate.ts`) kept asking for frames when its drawing stopped it, so a run that ended on its own
+  kept running; it now stops for good, and changing any setting fully resets the page. Tested.
+

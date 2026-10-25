@@ -1043,7 +1043,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Scale gym',
-    caption: 'Scales and arpeggios on the click (#/scales, linked from the Timing mirror and the Profile). Pick major, minor (natural or harmonic), chromatic or an arpeggio, a key, one hand or both, one or two octaves, notes a click and a tempo. The keys show the textbook fingering; one bar of count-in, then the scale goes up and back down. Every note lands on a chart (late above the line, early below, thumb passes marked ▲), and each hand gets its lean, how even it was, how its thumb passes and its thumb\'s loudness compare, the notes furthest off, and a tip. Nothing is saved. Here the pianist plays C major hands together: the right thumb passes under late and bumps louder.',
+    caption: 'Scales and arpeggios (#/scales, linked from the Timing mirror and the Profile). Pick major, minor (natural or harmonic), chromatic or an arpeggio, a key, one hand or both, one or two octaves and a tempo; the keys show the textbook fingering. With the click: one bar of count-in, then up and back down, every note charted early or late with thumb passes marked ▲. Free tempo has no click: play at your own speed, and the page works out your tempo and shows where you held back or hurried, whether you sped up on the way down, and how far apart the hands land; it can also recognise which scale you played. Nothing is saved. Here the pianist plays C major hands together on the click (the right thumb passes under late and bumps louder), then D major alone in free tempo, held back at the thumb and hurrying on the way down.',
     run: (box, next, p) => {
       const timers: number[] = [];
       const dev = (m: number) => m + DEMO_CALIBRATION.offset;
@@ -1055,7 +1055,20 @@ function scenes(): Scene[] {
             const vel = n.hand === 'right' && n.finger === 1 ? 104 : 72 + (i % 3) * 3;
             p.playNote(dev(n.midi), g.t0 + n.step * g.stepMs + late + wobble - performance.now(), g.stepMs * 0.85, vel);
           });
-          timers.push(window.setTimeout(next, g.endsAt + 7000 - performance.now()));
+          // Then free tempo, any scale: D major, right hand, at the pianist's own speed.
+          timers.push(window.setTimeout(() => { set('mode', 'auto'); }, g.endsAt + 5000 - performance.now()));
+          timers.push(window.setTimeout(() => press(box, 'Start'), g.endsAt + 6000 - performance.now()));
+        },
+        onAutoStart: () => {
+          const line = [62, 64, 66, 67, 69, 71, 73, 74, 73, 71, 69, 67, 66, 64, 62];
+          let t = 900;
+          line.forEach((m, i) => {
+            // About 100 a minute at two notes a beat, held back before the thumb (G going up),
+            // and hurrying on the way down.
+            t += i === 0 ? 0 : i === 3 ? 400 : i > 8 ? 255 - (i % 2) * 15 : 300 + [6, -8, 4, 0, -5][i % 5];
+            p.playNote(dev(m), t, 260, 70 + (i % 3) * 4);
+          });
+          timers.push(window.setTimeout(next, t + 3000 + 8000));
         },
       });
       const set = (label: string, value: string) => {
