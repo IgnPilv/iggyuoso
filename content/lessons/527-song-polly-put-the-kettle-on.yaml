@@ -1,0 +1,26 @@
+id: song-polly-put-the-kettle-on
+title: Polly Put the Kettle On
+skills:
+- songs
+steps:
+- explain: |
+    **Polly Put the Kettle On** · English nursery rhyme, 1790s
+
+    Polly puts the kettle on and Sukey takes it off again: a teatime rhyme from the 1790s.
+  staff:
+    notes: F#5:e G5:e  |  A5:q. B5:e A5:q G5:q
+    key: D
+  sound: F#5:e G5:e  |  A5:q. B5:e A5:q G5:q  |  F#5:q D5:q D5:q E5:e F#5:e  |  G5:q B4:q B4:q E5:e D5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-polly-put-the-kettle-on-tap
+- exercise: song-polly-put-the-kettle-on-rh
+- exercise: song-polly-put-the-kettle-on-lh
+- exercise: song-polly-put-the-kettle-on
+- exercise: song-polly-put-the-kettle-on-arranged
+- exercise: song-polly-put-the-kettle-on-performance
+recap: 'Polly Put the Kettle On: tune, left hand, together. Come back to it any time; songs are for fun.'

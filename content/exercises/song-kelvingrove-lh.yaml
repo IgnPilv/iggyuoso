@@ -1,0 +1,17 @@
+id: song-kelvingrove-lh
+title: 'Kelvingrove: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | G2:h. | D3:h. | G2:h. | G2:h. | C3:h. | A2:h. | D3:h. | D3:h. | G2:h. | D3:h. | G2:h. | G2:h. | C3:h. | C3:h.
+  | G2:h. | G2:h. | A2:h. | A2:h. | D3:h. | D3:h. | G2:h. | A2:h. | D3:h. | D3:h. | G2:h. | D3:h. | E3:h. | E3:h. | C3:h.
+  | C3:h. | G2:h. | G2:h
+reps: 2
+days: 1

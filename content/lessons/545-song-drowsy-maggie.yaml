@@ -1,0 +1,26 @@
+id: song-drowsy-maggie
+title: Drowsy Maggie
+skills:
+- songs
+steps:
+- explain: |
+    **Drowsy Maggie** · Irish reel, 1800s
+
+    One of the first reels Irish musicians learn: two parts, each played twice, round and round.
+  staff:
+    notes: G4:e F#4:e  |  E4:q B4:e E4:e D5:e E4:e B4:e E4:e
+    key: Em
+  sound: G4:e F#4:e  |  E4:q B4:e E4:e D5:e E4:e B4:e E4:e  |  E4:q B4:e E4:e A4:e F#4:e D4:e F#4:e  |  E4:q B4:e E4:e D5:e
+    E4:e B4:e E4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 4/4 · Tempo: 88
+- exercise: song-drowsy-maggie-rh
+- exercise: song-drowsy-maggie-lh
+- exercise: song-drowsy-maggie
+- exercise: song-drowsy-maggie-arranged
+- exercise: song-drowsy-maggie-performance
+recap: 'Drowsy Maggie: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,26 @@
+id: song-blaydon-races
+title: Blaydon Races
+skills:
+- songs
+steps:
+- explain: |
+    **Blaydon Races** · Geordie Ridley, 1862
+
+    A music-hall song about a trip to the horse races at Blaydon, near Newcastle. Today it is Newcastle's football song.
+  staff:
+    notes: A4:e  |  D5:q D5:e D5:q D5:e
+    key: D
+  sound: A4:e  |  D5:q D5:e D5:q D5:e  |  D5:q D5:e D5:q D5:e  |  E5:q E5:e E5:q E5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-blaydon-races-tap
+- exercise: song-blaydon-races-rh
+- exercise: song-blaydon-races-lh
+- exercise: song-blaydon-races
+- exercise: song-blaydon-races-arranged
+- exercise: song-blaydon-races-performance
+recap: 'Blaydon Races: tune, left hand, together. Come back to it any time; songs are for fun.'

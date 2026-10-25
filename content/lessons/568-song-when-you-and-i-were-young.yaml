@@ -1,0 +1,25 @@
+id: song-when-you-and-i-were-young
+title: When You and I Were Young, Maggie
+skills:
+- songs
+steps:
+- explain: |
+    **When You and I Were Young, Maggie** · James Austin Butterfield, 1866
+
+    A Victorian song of old love, remembering the days by the mill.
+  staff:
+    notes: D5:e  |  D5:q B4:e A4:e
+    key: G
+  sound: D5:e  |  D5:q B4:e A4:e  |  G4:q A4:e G4:e  |  G4:h
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 2/4 · Tempo: 88
+- exercise: song-when-you-and-i-were-young-rh
+- exercise: song-when-you-and-i-were-young-lh
+- exercise: song-when-you-and-i-were-young
+- exercise: song-when-you-and-i-were-young-arranged
+- exercise: song-when-you-and-i-were-young-performance
+recap: 'When You and I Were Young, Maggie: tune, left hand, together. Come back to it any time; songs are for fun.'

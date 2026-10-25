@@ -1,0 +1,20 @@
+id: song-fairy-dance-rh
+title: 'The Fairy Dance: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:e E5:e | F#5:q F#5:e D5:e F#5:q F#5:e D5:e | F#5:q F#5:e D5:e C#5:e E5:e C#5:e A4:e | F#5:q F#5:e D5:e G5:e F#5:e
+  E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e | A5:q A5:e F#5:e B5:q B5:e A5:e | G5:e F#5:e G5:e E5:e A5:q A5:e
+  G5:e | F#5:q F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e | F#5:e E#5:e F#5:e D5:e F#5:e
+  E5:e F#5:e D5:e | F#5:e E#5:e F#5:e D5:e C#5:e E5:e C#5:e A4:e | F#5:e E#5:e F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e
+  B4:e C#5:e D5:e E5:e F#5:e G5:e | A5:e G#5:e A5:e F#5:e B5:e A#5:e B5:e A5:e | G5:e F#5:e G5:e E5:e A5:e G#5:e A5:e G5:e
+  | F#5:q F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e
+reps: 2
+days: 1

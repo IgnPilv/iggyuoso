@@ -1,0 +1,25 @@
+id: song-tipperary-performance
+title: 'It''s a Long Way to Tipperary: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 88
+meter: 4/4
+pickup: h
+countIn: 1
+right: F#4:q G4:q | A4:h A4:h~ | A4:q A4:q B4:q C#5:q | D5:h F#5:h~ | F#5:h F#5:q E5:q | D5:h B4:h~ | B4:h D5:h | A4:w~ |
+  A4:q G4:q F#4:q G4:q | A4:h A4:h~ | A4:q A4:q B4:q C#5:q | D5:h F#5:h~ | F#5:h C#5:q D5:q | E5:h B4:h | C#5:h D5:h | E5:w~
+  | E5:h F#4:q G4:q | A4:h A4:h~ | A4:q A4:q B4:q C#5:q | D5:h F#5:h~ | F#5:h. F#5:q | G5:h B4:h | D5:h E5:h | F#5:w~ | F#5:h
+  D5:q E5:q | F#5:h F#5:h | F#5:q D5:q E5:q D5:q | B4:w | A4:h D5:q E5:q | F#5:h D5:h~ | D5:h E5:h | D5:w~ | D5:h
+left: r:h | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q
+  | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | D3:q F#3+A3:q A3:q F#3+A3:q | A2:q C#3+E3+A3:q E3:q
+  C#3+E3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q
+  F#3+A3:q | E3:q G#3:q B3:q G#3:q | E3:q G#3:q B3:q G#3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q
+  | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q
+  | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | F#2:q C#3+F#3+A#3:q C#3:q C#3+F#3+A#3:q | A2:q C#3+E3+A3:q
+  E3:q C#3+E3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | D3:q F#3+A3:q
+  A3:q F#3+A3:q | E3:q G#3:q B3:q G#3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3+F#3+A3:h
+reps: 2
+days: 2

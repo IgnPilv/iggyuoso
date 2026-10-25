@@ -1,0 +1,16 @@
+id: song-waters-of-tyne-lh
+title: 'The Waters of Tyne: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | D3+F#3+A3:h. | C#3+E3+A3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h. | A2+C#3+E3:h. | B2+D3+G3:h. | A2+C#3+E3:h.
+  | A2+D3+F#3:h. | A2+D3+F#3:h. | A2+D3+F#3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | A2+C#3+E3:h. | B2+D3+G3:h. | A2+D3+F#3:h
+reps: 2
+days: 1

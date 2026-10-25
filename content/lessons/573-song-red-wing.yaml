@@ -1,0 +1,25 @@
+id: song-red-wing
+title: Red Wing
+skills:
+- songs
+steps:
+- explain: |
+    **Red Wing** · Kerry Mills, 1907
+
+    Kerry Mills built the chorus of this song on Schumann's "The Happy Farmer".
+  staff:
+    notes: F5:e E5:e  |  D5:h Bb4:h
+    key: F
+  sound: F5:e E5:e  |  D5:h Bb4:h  |  D5:q F5:q E5:q D5:q  |  C5:h A4:h
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. F major: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 4/4 · Tempo: 88
+- exercise: song-red-wing-rh
+- exercise: song-red-wing-lh
+- exercise: song-red-wing
+- exercise: song-red-wing-arranged
+- exercise: song-red-wing-performance
+recap: 'Red Wing: tune, left hand, together. Come back to it any time; songs are for fun.'

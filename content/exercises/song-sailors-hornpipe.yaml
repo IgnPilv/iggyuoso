@@ -1,0 +1,22 @@
+id: song-sailors-hornpipe
+title: Sailor's Hornpipe
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: G5:e F#5:e | G5:q G4:q G4:q D5:e C5:e | B4:e D5:e G5:q G5:e B5:e A5:e G5:e | A5:q A4:q A4:q A4:e G4:e | F#4:e A4:e
+  D5:q D5:q E5:e F#5:e | G5:e F#5:e E5:e D5:e E5:e D5:e C5:e B4:e | C5:e B4:e A4:e G4:e G4:e F#4:e E4:e D4:e | E4:e G4:e F#4:e
+  A4:e G4:e B4:e A4:e C5:e | B4:q G4:q G4:q D5:e C5:e | B4:e D5:e G5:e D5:e B4:e D5:e G5:e D5:e | E5:q C5:q C5:q E5:e D5:e
+  | C#5:e E5:e A5:e E5:e C5:e E5:e A5:e E5:e | F#5:q D5:q D5:q B4:q | C5:q E5:q E5:e D5:e C5:e B4:e | C5:e B4:e A4:e G4:e
+  G4:e F#4:e E4:e D4:e | E4:e G4:e F#4:e A4:e G4:e B4:e A4:e C5:e | B4:q G4:q G4:q
+left: r:q | D3+G3+B3:w | D3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:w | D3+G3+B3:h C3+E3+G3:h | C3+E3+A3:h D3+F#3+A3:h | C3+E3+G3:w
+  | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:w | C#3+E3+A3:w | D3+F#3+A3:w | C3+E3+G3:w | C3+E3+A3:h D3+F#3+A3:h | C3+E3+G3:w |
+  B2+D3+G3:h.
+reps: 3
+days: 2

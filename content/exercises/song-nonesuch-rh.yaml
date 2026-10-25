@@ -1,0 +1,17 @@
+id: song-nonesuch-rh
+title: 'Nonesuch: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: A5:q | A5:q F5:q G5:q A5:q | F5:q E5:e F5:e D5:q A5:q | A5:q F5:q G5:q A5:q | F5:h F5:q A5:q | A5:q F5:q G5:q A5:q
+  | F5:q E5:e F5:e D5:q A5:q | A5:q F5:q G5:q A5:q | F5:h D5:q E5:q | E5:q C5:q D5:q E5:q | F5:q E5:e F5:e D5:q E5:q | E5:q
+  C5:q D5:q E5:q | F5:h D5:q E5:q | E5:q C5:q D5:q E5:q | F5:q E5:e F5:e D5:q E5:q | E5:q C5:q D5:q E5:q | F5:h D5:q
+reps: 2
+days: 1

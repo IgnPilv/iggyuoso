@@ -1,0 +1,26 @@
+id: song-bonnie-dundee-arranged
+title: Bonnie Dundee, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords).
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: A4:e Bb4:e | C5:q. D5:e C5:q | C5:q. D5:e C5:q | F5:q E5:q D5:q | C5:h Bb4:q | A4:e C5:q. F4:q | A4:e C5:q. F4:q |
+  G4:q. A4:e G4:q | G4:q A4:q Bb4:q | C5:q. D5:e C5:q | C5:q. D5:e C5:q | F5:q E5:q D5:q | C5:h Bb4:q | A4:e C5:q. F4:q |
+  G4:e C5:q. C4:q | F4:q. G4:e F4:q | F4:h C4:q | F4:q. F4:e F4:q | F4:q Bb4:q A4:q | G4:q C4:q C4:q | C4:h C4:q | G4:q. G4:e
+  G4:q | G4:q A4:q Bb4:q | Bb4:q A4:q A4:q | A4:h F4:e G4:e | A4:q. G4:e A4:q | Bb4:q. A4:e Bb4:q | C5:q. Bb4:e C5:q | D5:q
+  C5:q Bb4:q | A4:e C5:q. F4:q | G4:e C5:q. C4:q | F4:q. G4:e F4:q | F4:h
+left: r:q | F2:e C3:e A2:e C3:e F2:q | F2:e C3:e A2:e C3:e F2:q | Bb2:e F3:e D3:e F3:e Bb2:q | F2:q F2:q C3:q | F2:e C3:e
+  A2:e C3:e F2:q | F2:e C3:e A2:e C3:e F2:q | G2:e D3:e Bb2:e D3:e G2:q | C3:e G3:e E3:e G3:e C3:q | F2:e C3:e A2:e C3:e F2:q
+  | F2:e C3:e A2:e C3:e F2:q | Bb2:e F3:e D3:e F3:e Bb2:q | F2:q F2:q C3:q | F2:e C3:e A2:e C3:e F2:q | C3:e G3:e E3:e G3:e
+  C3:q | F2:q F2:q Bb2:q | F2:e C3:e A2:e C3:e F2:q | F2:e C3:e A2:e C3:e F2:q | F2:e C3:e A2:e C3:e F2:q | C3:e G3:e E3:e
+  G3:e C3:q | C3:e G3:e E3:e G3:e C3:q | C3:e G3:e E3:e G3:e C3:q | C3:e G3:e E3:e G3:e C3:q | F2:e C3:e A2:e C3:e F2:q |
+  F2:e C3:e A2:e C3:e F2:q | F2:e C3:e A2:e C3:e F2:q | C3:e G3:e E3:e G3:e C3:q | F2:e C3:e A2:e C3:e F2:q | Bb2:e F3:e D3:e
+  F3:e Bb2:q | F2:e C3:e A2:e C3:e F2:q | C3:e G3:e E3:e G3:e C3:q | F2:q F2:q Bb2:q | C3+F3+A3:h
+reps: 3
+days: 2

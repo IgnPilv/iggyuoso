@@ -1,0 +1,26 @@
+id: song-coming-round-the-mountain
+title: She'll Be Coming Round the Mountain
+skills:
+- songs
+steps:
+- explain: |
+    **She'll Be Coming Round the Mountain** · American folk song, 1890s
+
+    A cheerful song from the old spiritual "When the Chariot Comes", sung with a new verse each time.
+  staff:
+    notes: A4:q B4:q  |  D5:q D5:q D5:q D5:q
+    key: D
+  sound: A4:q B4:q  |  D5:q D5:q D5:q D5:q  |  B4:q A4:q F#4:q A4:q  |  D5:w
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-coming-round-the-mountain-by-ear
+- exercise: song-coming-round-the-mountain-rh
+- exercise: song-coming-round-the-mountain-lh
+- exercise: song-coming-round-the-mountain
+- exercise: song-coming-round-the-mountain-arranged
+- exercise: song-coming-round-the-mountain-performance
+recap: 'She''ll Be Coming Round the Mountain: tune, left hand, together. Come back to it any time; songs are for fun.'

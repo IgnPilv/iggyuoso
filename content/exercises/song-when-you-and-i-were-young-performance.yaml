@@ -1,0 +1,25 @@
+id: song-when-you-and-i-were-young-performance
+title: 'When You and I Were Young, Maggie: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 2/4
+pickup: e
+countIn: 1
+right: D5:e | D5:q B4:e A4:e | G4:q A4:e G4:e | G4:h | E4:e G4:q E4:e | D4:q G4:e A4:e | B4:q D5:e B4:e | A4:h~ | A4:q. D5:e
+  | D5:q B4:e A4:e | G4:q A4:e G4:e | G4:h | E4:e G4:q E4:e | D4:q G4:e B4:e | D5:q A4:e B4:e | G4:h~ | G4:q. E5:e | E5:q
+  C5:e E5:e | E5:q C5:e E5:e | D5:h | B4:e D5:q B4:e | A4:q D5:q | D5:e C#5:e F#5:e E5:e | D5:h~ | D5:q. D5:e | D5:q B4:e
+  A4:e | G4:q A4:e G4:e | G4:h | E4:e G4:q E4:e | D4:e D4:e G4:e B4:e | D5:q A4:e B4:e | G4:h~ | G4:q.
+left: r:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e |
+  E3:e B3:e G3:e B3:e | A2:e E3:e C3:e E3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | C3:e G3:e
+  E3:e G3:e | C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e
+  | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | A2:e E3:e
+  C#3:e E3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e
+  | C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | D3+G3+B3:q.
+pedal: r:e | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h
+  | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q.
+reps: 2
+days: 2

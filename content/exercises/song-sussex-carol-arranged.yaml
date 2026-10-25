@@ -1,0 +1,21 @@
+id: song-sussex-carol-arranged
+title: The Sussex Carol, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords).
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: D5:e | D5:q B4:e C5:q D5:e | B4:e A4:e G4:e A4:q F#4:e | G4:q G4:e A4:e B4:e C5:e | B4:q A4:e G4:q D5:e | D5:q B4:e
+  C5:q D5:e | B4:e A4:e G4:e A4:q F#4:e | G4:q G4:e A4:e B4:e C5:e | B4:q A4:e G4:q. | A4:q. A4:q G4:e | A4:e B4:e C5:e D5:e
+  C5:e B4:e | A4:h. | D5:q. E5:q. | D5:q. C5:q B4:e | A4:e G4:e A4:e G4:q.~ | G4:q r:q.
+left: r:e | G2:e D3:e B2:e C3:e G3:e E3:e | G2:e D3:e B2:e D3:e A3:e F#3:e | G2:e D3:e B2:e C3:e G3:e E3:e | D3:e A3:e F#3:e
+  G2:e D3:e B2:e | G2:e D3:e B2:e C3:e G3:e E3:e | G2:e D3:e B2:e D3:e A3:e F#3:e | G2:e D3:e B2:e C3:e G3:e E3:e | D3:e A3:e
+  F#3:e G2:e D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e | D3:e A3:e F#3:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e
+  | G2:e D3:e B2:e C3:e G3:e E3:e | D3:e A3:e F#3:e A2:e E3:e C3:e | D3:e A3:e F#3:e G2:e D3:e B2:e | D3+G3+B3:h~ D3+G3+B3:e
+reps: 3
+days: 2

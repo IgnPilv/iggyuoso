@@ -1,0 +1,18 @@
+id: song-tipperary-lh
+title: 'It''s a Long Way to Tipperary: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: h
+countIn: 1
+left: r:h | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | D3+F#3+A3:w | C#3+E3+A3:w |
+  D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | B2+E3+G#3:w | B2+E3+G#3:w | C#3+E3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w
+  | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | C#3+F#3+A#3:w | C#3+E3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w
+  | D3+G3+B3:w | D3+F#3+A3:w | B2+E3+G#3:w | C#3+E3+A3:w | D3+F#3+A3:w | D3+F#3+A3:h
+reps: 2
+days: 1

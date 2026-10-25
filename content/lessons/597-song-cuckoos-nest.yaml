@@ -1,0 +1,26 @@
+id: song-cuckoos-nest
+title: The Cuckoo's Nest
+skills:
+- songs
+steps:
+- explain: |
+    **The Cuckoo's Nest** · English hornpipe, 1700s
+
+    A hornpipe known in England, Ireland and America.
+  staff:
+    notes: D4:q D4:e E4:e D4:e C4:e A3:e C4:e  |  D4:e C4:e D4:e E4:e F4:q F4:e A4:e
+    key: Dm
+  sound: D4:q D4:e E4:e D4:e C4:e A3:e C4:e  |  D4:e C4:e D4:e E4:e F4:q F4:e A4:e  |  C5:q C5:e D5:e A4:q G4:e F4:e  |  E4:e
+    C4:e C4:e C4:e C4:q F4:e E4:e
+- explain: |
+    **Before you play.** D minor: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 4/4 · Tempo: 88
+- exercise: song-cuckoos-nest-rh
+- exercise: song-cuckoos-nest-lh
+- exercise: song-cuckoos-nest
+- exercise: song-cuckoos-nest-arranged
+- exercise: song-cuckoos-nest-performance
+recap: 'The Cuckoo''s Nest: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,23 @@
+id: song-fairy-dance
+title: The Fairy Dance
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:e E5:e | F#5:q F#5:e D5:e F#5:q F#5:e D5:e | F#5:q F#5:e D5:e C#5:e E5:e C#5:e A4:e | F#5:q F#5:e D5:e G5:e F#5:e
+  E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e | A5:q A5:e F#5:e B5:q B5:e A5:e | G5:e F#5:e G5:e E5:e A5:q A5:e
+  G5:e | F#5:q F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e | F#5:e E#5:e F#5:e D5:e F#5:e
+  E5:e F#5:e D5:e | F#5:e E#5:e F#5:e D5:e C#5:e E5:e C#5:e A4:e | F#5:e E#5:e F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e
+  B4:e C#5:e D5:e E5:e F#5:e G5:e | A5:e G#5:e A5:e F#5:e B5:e A#5:e B5:e A5:e | G5:e F#5:e G5:e E5:e A5:e G#5:e A5:e G5:e
+  | F#5:q F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e
+left: r:q | D3+F#3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:h D3+G3+B3:h | C#3+E3+A3:h D3+F#3+A3:h | D3+F#3+A3:h D#3+F#3+B3:h
+  | E3+G3+B3:h C#3+E3+A3:h | D3+F#3+A3:h D3+G3+B3:h | C#3+E3+A3:h D3+F#3+A3:h | D3+F#3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:h
+  D3+G3+B3:h | C#3+E3+A3:h D3+F#3+A3:h | D3+F#3+A3:h D#3+F#3+B3:h | E3+G3+B3:h C#3+E3+A3:h | D3+F#3+A3:h D3+G3+B3:h | D3+F#3+A3:h.
+reps: 3
+days: 2

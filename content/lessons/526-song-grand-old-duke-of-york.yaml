@@ -1,0 +1,26 @@
+id: song-grand-old-duke-of-york
+title: The Grand Old Duke of York
+skills:
+- songs
+steps:
+- explain: |
+    **The Grand Old Duke of York** · English nursery rhyme, 1700s
+
+    He had ten thousand men, marched them up the hill and down again. A rhyme for marching on the spot.
+  staff:
+    notes: F#5:e E5:e  |  D5:q A4:q F#4:q A4:q
+    key: D
+  sound: F#5:e E5:e  |  D5:q A4:q F#4:q A4:q  |  D5:q. D5:e D5:q D5:q  |  C#5:q E5:q E5:q E5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-grand-old-duke-of-york-tap
+- exercise: song-grand-old-duke-of-york-rh
+- exercise: song-grand-old-duke-of-york-lh
+- exercise: song-grand-old-duke-of-york
+- exercise: song-grand-old-duke-of-york-arranged
+- exercise: song-grand-old-duke-of-york-performance
+recap: 'The Grand Old Duke of York: tune, left hand, together. Come back to it any time; songs are for fun.'

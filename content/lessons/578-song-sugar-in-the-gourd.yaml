@@ -1,0 +1,26 @@
+id: song-sugar-in-the-gourd
+title: Sugar in the Gourd
+skills:
+- songs
+steps:
+- explain: |
+    **Sugar in the Gourd** · American fiddle tune, 1800s
+
+    An old-time fiddle tune from the American South.
+  staff:
+    notes: C#5:e B4:e A4:e G#4:e E4:q C#4:q  |  E4:e F#4:e A4:q B4:h
+    key: A
+  sound: C#5:e B4:e A4:e G#4:e E4:q C#4:q  |  E4:e F#4:e A4:q B4:h  |  C#5:e B4:e A4:e G#4:e E4:q C#4:q  |  E4:e F#4:e A4:q
+    A4:h
+- explain: |
+    **Before you play.** A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-sugar-in-the-gourd-rh
+- exercise: song-sugar-in-the-gourd-lh
+- exercise: song-sugar-in-the-gourd
+- exercise: song-sugar-in-the-gourd-arranged
+- exercise: song-sugar-in-the-gourd-performance
+recap: 'Sugar in the Gourd: tune, left hand, together. Come back to it any time; songs are for fun.'

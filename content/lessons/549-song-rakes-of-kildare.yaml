@@ -1,0 +1,25 @@
+id: song-rakes-of-kildare
+title: The Rakes of Kildare
+skills:
+- songs
+steps:
+- explain: |
+    **The Rakes of Kildare** · Irish jig, 1700s
+
+    A lively jig in a minor key, played at sessions all over Ireland.
+  staff:
+    notes: E4:e  |  E4:e A4:e A4:e A4:e G4:e A4:e
+    key: Am
+  sound: E4:e  |  E4:e A4:e A4:e A4:e G4:e A4:e  |  B4:e C5:e D5:e E5:q F#5:e  |  G5:e F#5:e G5:e E5:e G5:e E5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 6/8 · Tempo: 56
+- exercise: song-rakes-of-kildare-rh
+- exercise: song-rakes-of-kildare-lh
+- exercise: song-rakes-of-kildare
+- exercise: song-rakes-of-kildare-arranged
+- exercise: song-rakes-of-kildare-performance
+recap: 'The Rakes of Kildare: tune, left hand, together. Come back to it any time; songs are for fun.'

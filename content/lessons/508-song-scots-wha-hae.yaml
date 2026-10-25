@@ -1,0 +1,26 @@
+id: song-scots-wha-hae
+title: Scots Wha Hae
+skills:
+- songs
+steps:
+- explain: |
+    **Scots Wha Hae** · Old Scottish air "Hey Tuttie Tatie"; words by Robert Burns, 1793
+
+    Burns set his words, Robert the Bruce's speech before the battle of Bannockburn, to an air said to have been played at the battle itself.
+  staff:
+    notes: C4:q  |  C4:h C4:q
+    key: F
+  sound: C4:q  |  C4:h C4:q  |  C4:h D4:q  |  C4:h D4:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. F major: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 3/4 · Tempo: 96
+- exercise: song-scots-wha-hae-by-ear
+- exercise: song-scots-wha-hae-rh
+- exercise: song-scots-wha-hae-lh
+- exercise: song-scots-wha-hae
+- exercise: song-scots-wha-hae-arranged
+- exercise: song-scots-wha-hae-performance
+recap: 'Scots Wha Hae: tune, left hand, together. Come back to it any time; songs are for fun.'

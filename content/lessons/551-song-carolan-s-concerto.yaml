@@ -1,0 +1,25 @@
+id: song-carolan-s-concerto
+title: O'Carolan's Concerto
+skills:
+- songs
+steps:
+- explain: |
+    **O'Carolan's Concerto** · Turlough O'Carolan, about 1720
+
+    O'Carolan, it is said, wrote this after hearing the Italian violinist Geminiani, to show he could write in the Italian style.
+  staff:
+    notes: A4:e3 B4:e3 C#5:e3  |  D5:q D5:e D5:e D5:q C#5:e B4:e
+    key: D
+  sound: A4:e3 B4:e3 C#5:e3  |  D5:q D5:e D5:e D5:q C#5:e B4:e  |  A4:e B4:e G4:e A4:e F#4:q A4:q  |  E4:q A4:q D4:q A4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-carolan-s-concerto-rh
+- exercise: song-carolan-s-concerto-lh
+- exercise: song-carolan-s-concerto
+- exercise: song-carolan-s-concerto-arranged
+- exercise: song-carolan-s-concerto-performance
+recap: 'O''Carolan''s Concerto: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,24 @@
+id: song-cock-of-the-north-performance
+title: 'Cock o'' the North: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: A
+tempo: 56
+meter: 6/8
+pickup: e
+countIn: 1
+right: E5:s D5:s | C#5:e D5:e C#5:e C#5:e B4:e A4:e | A4:e C#5:e E5:e F#5:q E5:e | C#5:e D5:e C#5:e C#5:e B4:e A4:e | B4:e
+  C#5:e B4:e B4:e E5:e D5:e | C#5:e D5:e C#5:e C#5:e B4:e A4:e | A4:e C#5:e E5:e F#5:q E5:e | C#5:q C#5:e B4:e C#5:e B4:e
+  | A4:q. A4:q E5:s3 F#5:s3 G#5:s3 | A5:q E5:e F#5:q E5:e | A5:q E5:e F#5:q E5:e | C#5:e D5:e C#5:e C#5:e B4:e A4:e | B4:e
+  C#5:e D5:e E5:e F#5:e G#5:e | A5:q E5:e F#5:q E5:e | A5:q E5:e F#5:q E5:e | C#5:q C#5:e B4:e C#5:e B4:e | A4:q. A4:q
+left: r:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | A2:e E3:e C#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | B2:e F#3:e
+  D#3:e E3:e B3:e G#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | A2:e E3:e C#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e E3:e B3:e G#3:e
+  | A2:e E3:e C#3:e A2:e E3:e C#3:e | A2:e E3:e C#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e
+  A2:e E3:e C#3:e | B2:e F#3:e D3:e E3:e B3:e G#3:e | A2:e E3:e C#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e D3:e A3:e F#3:e |
+  A2:e E3:e C#3:e E3:e B3:e G#3:e | A2+C#3+E3:h~ A2+C#3+E3:e
+pedal: r:e | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:q. x:q. | x:h. | x:q. x:q. | x:q. x:q. | x:h. | x:q.
+  x:q. | x:q. x:q. | x:q. x:q. | x:q. x:q. | x:h x:e
+reps: 2
+days: 2

@@ -1,0 +1,26 @@
+id: song-fishers-hornpipe
+title: Fisher's Hornpipe
+skills:
+- songs
+steps:
+- explain: |
+    **Fisher's Hornpipe** · English hornpipe, 1780s
+
+    Named after James Fishar, a dancer in London in the 1770s.
+  staff:
+    notes: A4:e3 B4:e3 C#5:e3  |  D5:e A4:e F#4:e A4:e G4:e B4:e A4:e G4:e
+    key: D
+  sound: A4:e3 B4:e3 C#5:e3  |  D5:e A4:e F#4:e A4:e G4:e B4:e A4:e G4:e  |  F#4:e A4:e F#4:e A4:e G4:e B4:e A4:e G4:e  |  F#4:e
+    D4:e F#4:e D4:e G4:e E4:e G4:e E4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-fishers-hornpipe-rh
+- exercise: song-fishers-hornpipe-lh
+- exercise: song-fishers-hornpipe
+- exercise: song-fishers-hornpipe-arranged
+- exercise: song-fishers-hornpipe-performance
+recap: 'Fisher''s Hornpipe: tune, left hand, together. Come back to it any time; songs are for fun.'

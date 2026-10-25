@@ -1,0 +1,25 @@
+id: song-off-she-goes
+title: Off She Goes
+skills:
+- songs
+steps:
+- explain: |
+    **Off She Goes** · Irish jig, about 1800
+
+    A jig played in Ireland, Scotland and England alike, and a country dance too.
+  staff:
+    notes: A4:e  |  F#4:q A4:e G4:q B4:e
+    key: D
+  sound: A4:e  |  F#4:q A4:e G4:q B4:e  |  A4:e B4:e C#5:e D5:q.  |  F#4:q A4:e G4:q B4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-off-she-goes-rh
+- exercise: song-off-she-goes-lh
+- exercise: song-off-she-goes
+- exercise: song-off-she-goes-arranged
+- exercise: song-off-she-goes-performance
+recap: 'Off She Goes: tune, left hand, together. Come back to it any time; songs are for fun.'

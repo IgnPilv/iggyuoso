@@ -1,0 +1,19 @@
+id: song-nonesuch-arranged
+title: Nonesuch, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: A5:q | A5:q F5:q G5:q A5:q | F5:q E5:e F5:e D5:q A5:q | A5:q F5:q G5:q A5:q | F5:h F5:q A5:q | A5:q F5:q G5:q A5:q
+  | F5:q E5:e F5:e D5:q A5:q | A5:q F5:q G5:q A5:q | F5:h D5:q E5:q | E5:q C5:q D5:q E5:q | F5:q E5:e F5:e D5:q E5:q | E5:q
+  C5:q D5:q E5:q | F5:h D5:q E5:q | E5:q C5:q D5:q E5:q | F5:q E5:e F5:e D5:q E5:q | E5:q C5:q D5:q E5:q | F5:h D5:q
+left: r:q | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w | C3+F3+A3:w | D3+F3+A3:w | C3+F3+A3:w | D3+F3+A3:w | C3+E3+G3:w
+  | D3+F3+A3:w | C3+E3+A3:w | D3+F3+A3:w | C3+E3+G3:w | D3+F3+A3:w | C3+E3+A3:w | D3+F3+A3:h.
+reps: 3
+days: 2

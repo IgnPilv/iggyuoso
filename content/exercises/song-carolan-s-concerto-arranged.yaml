@@ -1,0 +1,40 @@
+id: song-carolan-s-concerto-arranged
+title: O'Carolan's Concerto, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: A4:e3 B4:e3 C#5:e3 | D5:q D5:e D5:e D5:q C#5:e B4:e | A4:e B4:e G4:e A4:e F#4:q A4:q | E4:q A4:q D4:q A4:q | B4:e C#5:e
+  D5:e E5:e D5:e C#5:e B4:e A4:e | D5:q A5:q F#5:e G5:e A5:e F#5:e | E5:e F#5:e G5:e E5:e F#5:e G5:e A5:e F#5:e | G5:e A5:e
+  B5:e G5:e F#5:e D5:e F#5:e A5:e | G5:e F#5:e E5:e D5:e D5:e C#5:e B4:e A4:e | B4:e D5:e B4:e D5:e G5:e B4:e G5:e B4:e |
+  A4:e D5:e A4:e D5:e F#5:e A4:e F#5:e A4:e | G4:e B4:e G4:e B4:e E5:e F#5:e E5:e D5:e | C#5:q B4:e C#5:e A4:q G4:q | F#4:e
+  G4:e A4:e F#4:e E4:e F#4:e G4:e E4:e | F#4:e G4:e A4:e F#4:e G4:e A4:e B4:e G4:e | A4:q D5:q F#5:e E5:e D5:e C#5:e | D5:h.
+  A4:e3 B4:e3 C#5:e3 | D5:q B5:q A5:e G5:e F#5:e E5:e | D5:q A5:q C#5:q A5:q | B4:q G5:e B4:e A4:e B4:e C#5:e D5:e | E5:e
+  C#5:e B4:e A4:e D5:q D5:e F#5:e | E5:e D5:e C#5:e B4:e C#5:e A5:e A5:e A5:e | B4:e G5:e G5:e G5:e A4:e F#5:e F#5:e F#5:e
+  | E5:e D5:e C#5:e B4:e C#5:e A5:e A5:e A5:e | B4:e G5:e G5:e G5:e B5:e G5:e B5:e G5:e | A5:e F#5:e A5:e F#5:e E5:e D5:e
+  C#5:e B4:e | C#5:e A4:e B4:e G4:e A4:e F#4:e G4:e E4:e | D4:e A4:e F#4:e A4:e D4:e A4:e F#4:e A4:e | G4:e E4:e B4:e E4:e
+  G4:e E4:e B4:e E4:e | F#4:e A4:e D5:e C#5:e B4:e A4:e G4:e F#4:e | E4:e F#4:e G4:e A4:e B4:e C#5:e D5:e E5:e | A4:q D5:q
+  F#5:e E5:e D5:e C#5:e | D5:h.
+left: r:q | D3:e A3:e F#3:e A3:e D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | C#3:e A3:e E3:e A3:e D3:e
+  A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e C#3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | C#3:e A3:e E3:e
+  A3:e D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e D3:e A3:e F#3:e A3:e | E3:e B3:e G3:e B3:e C#3:e A3:e E3:e A3:e | B2:e G3:e
+  D3:e G3:e B2:e G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e A2:e F#3:e D3:e F#3:e | B2:e G3:e D3:e G3:e B2:e G#3:e E3:e G#3:e
+  | C#3:e A3:e E3:e A3:e C#3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e C#3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e D3:e B3:e
+  G3:e B3:e | D3:e A3:e F#3:e A3:e C#3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e
+  D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e C#3:e A3:e E3:e A3:e | B2:e G3:e D3:e G3:e A2:e G3:e C#3:e G3:e | A2:e G3:e
+  C#3:e G3:e A2:e F#3:e D3:e F#3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | B2:e G3:e D3:e G3:e A2:e F#3:e D3:e F#3:e
+  | A2:e F#3:e D3:e F#3:e A2:e G3:e C#3:e G3:e | B2:e G3:e D3:e G3:e B2:e G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e B2:e G3:e
+  E3:e G3:e | B2:e G3:e E3:e G3:e B2:e G3:e E3:e G3:e | A2:e F#3:e D3:e F#3:e A2:e F#3:e D3:e F#3:e | B2:e G3:e E3:e G3:e
+  C#3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | E3:e B3:e G3:e B3:e C#3:e A3:e E3:e A3:e | D3:e A3:e
+  F#3:e A3:e C#3:e A3:e E3:e A3:e | D3+F#3+A3:h.
+pedal: r:q | x:h x:h | x:w | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:h x:h | x:w | x:w | x:h x:h | x:w | x:h x:h |
+  x:h x:h | x:h x:h | x:w | x:w | x:h x:h | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:w | x:h x:h | x:w | x:w | x:h
+  x:h | x:w | x:h x:h | x:h x:h | x:h.
+reps: 3
+days: 2

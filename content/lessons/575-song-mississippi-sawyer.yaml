@@ -1,0 +1,26 @@
+id: song-mississippi-sawyer
+title: Mississippi Sawyer
+skills:
+- songs
+steps:
+- explain: |
+    **Mississippi Sawyer** · American fiddle tune, 1830s
+
+    A sawyer is a tree that has fallen into a river; boatmen feared them on the Mississippi.
+  staff:
+    notes: F#5:e G5:e  |  A5:q A5:e F#5:e A5:q A5:e F#5:e
+    key: D
+  sound: F#5:e G5:e  |  A5:q A5:e F#5:e A5:q A5:e F#5:e  |  A5:q A5:e F#5:e A5:e B5:e A5:e F#5:e  |  G5:q G5:e E5:e G5:q G5:e
+    E5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-mississippi-sawyer-rh
+- exercise: song-mississippi-sawyer-lh
+- exercise: song-mississippi-sawyer
+- exercise: song-mississippi-sawyer-arranged
+- exercise: song-mississippi-sawyer-performance
+recap: 'Mississippi Sawyer: tune, left hand, together. Come back to it any time; songs are for fun.'

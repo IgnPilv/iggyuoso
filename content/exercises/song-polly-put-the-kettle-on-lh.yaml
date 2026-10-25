@@ -1,0 +1,18 @@
+id: song-polly-put-the-kettle-on-lh
+title: 'Polly Put the Kettle On: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | D2+F#2+A2:h C#2+E2+A2:h | D2+F#2+A2:w | D2+G2+B2:w | C#2+E2+A2:w | D2+F#2+A2:h C#2+E2+A2:h | D2+F#2+A2:w | D2+G2+B2:h
+  C2+E2+G2:h | A1+D2+F#2:w | A1+D2+F#2:h A1+C#2+G2:h | A1+D2+F#2:w | B1+D2+G2:w | B1+E2+G2:h C#2+E2+A2:h | D2+F#2+A2:h C#2+E2+A2:h
+  | D2+F#2+A2:h D2+G2+B2:h | D2+F#2+A2:h C#2+E2+A2:h | D2+F#2+A2:h C#2+E2+A2:h | D2+F#2+A2:h C#2+E2+A2:h | D2+F#2+A2:w | D2+G2+B2:w
+  | C#2+E2+A2:w | D2+F#2+A2:h C#2+E2+A2:h | D2+F#2+A2:h D2+G2+B2:h | D2+F#2+A2:h C2+E2+G2:h | A1+D2+F#2:h.
+reps: 2
+days: 1

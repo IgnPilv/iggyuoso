@@ -1,0 +1,27 @@
+id: song-nonesuch
+title: Nonesuch
+skills:
+- songs
+steps:
+- explain: |
+    **Nonesuch** · English country dance, Playford, 1651
+
+    From John Playford's "The English Dancing Master" of 1651, the first great book of English country dances.
+  staff:
+    notes: A5:q  |  A5:q F5:q G5:q A5:q
+    key: Dm
+  sound: A5:q  |  A5:q F5:q G5:q A5:q  |  F5:q E5:e F5:e D5:q A5:q  |  A5:q F5:q G5:q A5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D minor: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 4/4 · Tempo: 88
+- exercise: song-nonesuch-tap
+- exercise: song-nonesuch-by-ear
+- exercise: song-nonesuch-rh
+- exercise: song-nonesuch-lh
+- exercise: song-nonesuch
+- exercise: song-nonesuch-arranged
+- exercise: song-nonesuch-performance
+recap: 'Nonesuch: tune, left hand, together. Come back to it any time; songs are for fun.'

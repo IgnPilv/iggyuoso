@@ -1,0 +1,26 @@
+id: song-harvest-home
+title: Harvest Home
+skills:
+- songs
+steps:
+- explain: |
+    **Harvest Home** · Irish hornpipe, 1800s
+
+    A hornpipe for the end of the harvest, played with a long-short swing.
+  staff:
+    notes: A4:e F#4:e  |  D4:e A4:e F#4:e A4:e D4:e A4:e F#4:e A4:e
+    key: D
+  sound: A4:e F#4:e  |  D4:e A4:e F#4:e A4:e D4:e A4:e F#4:e A4:e  |  D5:e E5:e F#5:e E5:e D5:e C#5:e B4:e A4:e  |  E5:e A4:e
+    F#5:e A4:e G5:e A4:e F#5:e A4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-harvest-home-rh
+- exercise: song-harvest-home-lh
+- exercise: song-harvest-home
+- exercise: song-harvest-home-arranged
+- exercise: song-harvest-home-performance
+recap: 'Harvest Home: tune, left hand, together. Come back to it any time; songs are for fun.'

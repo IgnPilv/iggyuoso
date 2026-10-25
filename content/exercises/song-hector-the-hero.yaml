@@ -1,0 +1,31 @@
+id: song-hector-the-hero
+title: Hector the Hero
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Bb
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: h
+countIn: 1
+right: Bb4:q C5:q | D5:q. C5:e Bb4:q | G5:h F5:e D5:e | F5:h~ F5:e G5:e | F5:h Bb4:e C5:e | D5:h C5:e Bb4:e | G5:h F5:e D5:e
+  | C5:h~ C5:e D5:e | C5:h D5:e F5:e | D5:q. C5:e Bb4:q | G5:h F5:e D5:e | F5:h Bb4:q | Bb5:h G5:q | F5:h Bb4:e D5:e | C5:h
+  Bb4:q | Bb4:h.~ | Bb4:q Bb4:q C5:q | D5:q. C5:e Bb4:q | G5:h F5:e D5:e | F5:h~ F5:e G5:e | F5:h Bb4:e C5:e | D5:h C5:e Bb4:e
+  | G5:h F5:e D5:e | C5:h~ C5:e D5:e | C5:h D5:e F5:e | D5:q. C5:e Bb4:q | G5:h F5:e D5:e | F5:h Bb4:q | Bb5:h G5:q | F5:h
+  Bb4:e D5:e | C5:h Bb4:q | Bb4:h.~ | Bb4:q D5:q F5:q | G5:h Eb5:e G5:e | Bb5:h A5:e G5:e | F5:h~ F5:e G5:e | F5:h D5:e F5:e
+  | G5:h F5:e D5:e | F5:h Bb4:e D5:e | C5:h~ C5:e D5:e | C5:h D5:e F5:e | G5:h Eb5:e G5:e | Bb5:h A5:e G5:e | F5:h Eb5:e D5:e
+  | Bb5:h Eb5:q | D5:h Bb4:e D5:e | C5:h Bb4:q | Bb4:h.~ | Bb4:q D5:q F5:q | G5:h Eb5:e G5:e | Bb5:h A5:e G5:e | F5:h~ F5:e
+  G5:e | F5:h D5:e F5:e | G5:h F5:e D5:e | F5:h Bb4:e D5:e | C5:h~ C5:e D5:e | C5:h D5:e F5:e | D5:h C5:e Bb4:e | G5:h F5:e
+  D5:e | F5:h Bb4:q | Bb5:h G5:q | F5:h Bb4:e D5:e | C5:h Bb4:q | Bb4:h.~ | Bb4:q
+left: r:h | Bb2+D3+F3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | Bb2+D3+F3:h. | Bb2+D3+G3:h. | Bb2+Eb3+G3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h. | D3+G3+Bb3:h. | D3+G3+Bb3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h.
+  | Eb3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h. | D3+G3+Bb3:h. | D3+G3+Bb3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | Bb2+Eb3+G3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | A2+C3+F3:h. | Bb2+D3+F3:h. | Bb2+D3+F3:h.
+  | Bb2+Eb3+G3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | Bb2+D3+F3:h. | Bb2+D3+G3:h. | Bb2+D3+G3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:q
+reps: 3
+days: 2

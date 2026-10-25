@@ -1,0 +1,27 @@
+id: song-rufty-tufty
+title: Rufty Tufty
+skills:
+- songs
+steps:
+- explain: |
+    **Rufty Tufty** · English country dance, Playford, 1651
+
+    Another dance from Playford's book of 1651, with a slow part and a quick part.
+  staff:
+    notes: A4:q  |  D5:h D5:q E5:q
+    key: D
+  sound: A4:q  |  D5:h D5:q E5:q  |  F#5:h E5:q F#5:q  |  G5:q G5:q F#5:q E5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-rufty-tufty-tap
+- exercise: song-rufty-tufty-by-ear
+- exercise: song-rufty-tufty-rh
+- exercise: song-rufty-tufty-lh
+- exercise: song-rufty-tufty
+- exercise: song-rufty-tufty-arranged
+- exercise: song-rufty-tufty-performance
+recap: 'Rufty Tufty: tune, left hand, together. Come back to it any time; songs are for fun.'

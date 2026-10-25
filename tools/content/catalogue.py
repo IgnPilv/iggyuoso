@@ -88,13 +88,13 @@ STAGE_STYLES = {2: ('root', 'fifth'), 3: ('root', 'block'), 4: ('block', 'oompah
                 6: ('block', 'broken'), 7: ('block', 'arp'), 8: ('block', 'arp'), 9: ('block', 'alberti')}
 
 def tune(id, title, about, key, meter, tempo, melody, chords, stage, genre, story, tips='', pickup=None,
-         styles=None, left=None, pedal=None, requires=()):
+         styles=None, left=None, pedal=None, requires=(), raw=False):
     """A song for the catalogue. `melody` in the short form; `chords` one bar per melody bar ('-' for an upbeat).
-    `left` replaces the fuller left hand with one written out (short form, as the melody). `pedal`: True for a
+    `raw`: the melody is a full note string already (imported tunes). `left` replaces the fuller left hand with one written out (short form, as the melody). `pedal`: True for a
     pedal change on every chord in the fuller arrangement (default from stage 6 on with a flowing left hand)."""
     CATALOGUE.append(dict(id=id, title=title, about=about, key=key, meter=meter, tempo=tempo, melody=melody, chords=chords,
                           stage=stage, genre=genre, story=story, tips=tips, pickup=pickup, styles=styles, left=left, pedal=pedal,
-                          requires=list(requires)))
+                          requires=list(requires), raw=raw))
 
 def spans(s):
     out, t = [], 0.0
@@ -141,6 +141,19 @@ def clear_of(mel, left, where):
 
 LOW_FIT = []
 
+def left_hands(s, mel, styles, pkv, sid):
+    meter = s['meter']
+    lh1 = accompany(s['chords'], meter, styles[0], pickup=pkv)
+    lh2 = M(s['left'], s['key']) if s['left'] else (accompany(s['chords'], meter, styles[1], pickup=pkv) if len(styles) > 1 else None)
+    try:
+        lh1, lh2 = (clear_of(mel, l, sid) if l else l for l in (lh1, lh2))
+    except AssertionError:
+        # A tune that dips low goes up an octave rather than push the left hand into the deep bass.
+        mel = shift_octave(mel, 1)
+        assert max(midi(p) for p in pitches_in(mel)) <= midi('C6'), f'{sid}: tune too wide for both hands'
+        lh1, lh2 = (clear_of(mel, l, sid) if l else l for l in (lh1, lh2))
+    return mel, lh1, lh2
+
 def write_catalogue():
     seen = set()
     for s in CATALOGUE:
@@ -148,21 +161,20 @@ def write_catalogue():
         assert sid not in seen, sid
         seen.add(sid)
         key, meter, tempo, pk, stage = s['key'], s['meter'], s['tempo'], s['pickup'], s['stage']
-        mel = M(s['melody'], key)
+        mel = s['melody'] if s['raw'] else M(s['melody'], key)
         pkv = sum(dur_value(x) for x in pk.split()) if pk else 0
         check_bars(mel, meter, pkv, sid)
         compound = meter in ('6/8', '9/8', '12/8')
         styles = s['styles'] or (('root', 'broken') if compound else STAGE_STYLES[stage])
         if meter == '3/4' and styles[1] == 'oompah': styles = (styles[0], 'waltz')
-        lh1 = accompany(s['chords'], meter, styles[0], pickup=pkv)
-        lh2 = M(s['left'], key) if s['left'] else (accompany(s['chords'], meter, styles[1], pickup=pkv) if len(styles) > 1 else None)
-        try:
-            lh1, lh2 = (clear_of(mel, l, sid) if l else l for l in (lh1, lh2))
-        except AssertionError:
-            # A tune that dips low goes up an octave rather than push the left hand into the deep bass.
-            mel = shift_octave(mel, 1)
-            assert max(midi(p) for p in pitches_in(mel)) <= midi('C6'), f'{sid}: tune too wide for both hands'
-            lh1, lh2 = (clear_of(mel, l, sid) if l else l for l in (lh1, lh2))
+        # An imported tune that is too wide for its left hands gets plainer ones.
+        tries = [styles] + ([('root', 'block'), ('root',)] if s['raw'] else [])
+        for k, styles in enumerate(tries):
+            try:
+                mel, lh1, lh2 = left_hands(s, mel, styles, pkv, sid)
+                break
+            except AssertionError:
+                if k == len(tries) - 1: raise
         fit = chord_fit(mel, s['chords'], meter, pkv)
         if fit < 0.6: LOW_FIT.append((sid, round(fit, 2)))
         flowing = styles[-1] in ('broken', 'arp', 'alberti') or s['left']
@@ -243,7 +255,7 @@ def add_genres(nodes):
 
 TREE_EDITS = [add_genres]
 
-import cat_nursery, cat_folk, cat_shanties, cat_classical, cat_carols, cat_dances  # noqa: E402  (the tunes)
+import cat_nursery, cat_folk, cat_shanties, cat_classical, cat_carols, cat_dances, cat_trad  # noqa: E402  (the tunes)
 
 def run(base):
     write_catalogue()

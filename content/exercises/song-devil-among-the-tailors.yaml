@@ -1,0 +1,23 @@
+id: song-devil-among-the-tailors
+title: The Devil Among the Tailors
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: A
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: E5:e G#5:e | A5:q E5:e G#5:e A5:q E5:e G#5:e | A5:q E5:e A5:e F#5:e E5:e D5:e C#5:e | D5:e F#5:e B4:e F#5:e D5:e F#5:e
+  B4:e F#5:e | D5:e F#5:e B5:e A5:e G#5:e E5:e F#5:e G#5:e | A5:q E5:e G#5:e A5:q E5:e G#5:e | A5:q E5:e A5:e F#5:e E5:e D5:e
+  C#5:e | D5:e E5:e F#5:e D5:e E5:e C#5:e B4:e A4:e | E4:q G#4:q A4:q E5:e D5:e | C#5:e E5:e A4:e E5:e C#5:e E5:e A4:e E5:e
+  | C#5:e E5:e A5:e G#5:e F#5:e E5:e D5:e C#5:e | D5:e F#5:e B4:e F#5:e D5:e F#5:e B4:e F#5:e | D5:e F#5:e B5:e A5:e G#5:e
+  F#5:e E5:e D5:e | C#5:e E5:e A4:e E5:e C#5:e E5:e A4:e E5:e | C#5:e E5:e A5:e G#5:e F#5:e E5:e D5:e C#5:e | D5:e E5:e F#5:e
+  D5:e E5:e C#5:e B4:e A4:e | E4:q G#4:q A4:q
+left: r:q | A2+C#3+E3:w | A2+C#3+E3:w | B2+D3+F#3:w | B2+D3+F#3:h B2+E3+G#3:h | C#3+E3+A3:w | C#3+E3+A3:w | D3+F#3+A3:h C#3+E3+A3:h
+  | B2+E3+G#3:h C#3+E3+A3:h | C#3+E3+A3:w | C#3+E3+A3:w | D3+F#3+B3:w | D3+F#3+B3:h E3+G#3+B3:h | C#3+E3+A3:w | C#3+E3+A3:w
+  | D3+F#3+A3:h C#3+E3+A3:h | C#3+E3+A3:h.
+reps: 3
+days: 2

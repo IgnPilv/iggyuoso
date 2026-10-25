@@ -1,0 +1,25 @@
+id: song-barren-rocks-of-aden
+title: The Barren Rocks of Aden
+skills:
+- songs
+steps:
+- explain: |
+    **The Barren Rocks of Aden** · Scottish pipe march, James Mauchline, 1840s
+
+    Written by a piper of the 78th Highlanders while his regiment was posted to Aden, a dry, rocky port in Yemen.
+  staff:
+    notes: D5:e E5:e  |  F#5:q. G5:e F#5:q E5:q
+    key: D
+  sound: D5:e E5:e  |  F#5:q. G5:e F#5:q E5:q  |  D5:q F#5:q A4:q D5:q  |  C#5:q E5:q A4:q D5:e E5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-barren-rocks-of-aden-rh
+- exercise: song-barren-rocks-of-aden-lh
+- exercise: song-barren-rocks-of-aden
+- exercise: song-barren-rocks-of-aden-arranged
+- exercise: song-barren-rocks-of-aden-performance
+recap: 'The Barren Rocks of Aden: tune, left hand, together. Come back to it any time; songs are for fun.'

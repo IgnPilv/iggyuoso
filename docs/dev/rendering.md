@@ -18,7 +18,9 @@ signature, note heads, stems, flags, rests, ties, triplet 3s, accidentals by bar
 finger numbers, the pedal line, dynamics marks and chord names. It returns handles to **mark**
 notes while playing (current, hit, missed, wrong) and to follow a playhead. In falling notes the
 same staff shows as a strip above the lane that scrolls with the music (`staffStrip` in
-`ui/players.ts`).
+`ui/players.ts`). In the sheet view a long piece (wider than 2000 of the staff's units, about 11 bars
+of 4/4) is not shrunk to fit the window: it keeps its natural size in a box that scrolls sideways and
+follows the music while it plays (`longSheet` in `ui/players.ts`).
 
 ### Falling notes (`ui/falling.ts`)
 

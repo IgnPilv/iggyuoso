@@ -1,0 +1,16 @@
+id: song-gloucestershire-wassail-lh
+title: 'Wassail Song: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: Dm
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+left: r:e | D3:h. | D3:h. | D3:h. | A2:h. | D3:h. | D3:h. | D3:h. | A2:h. | F2:h. | Bb2:h. | D3:h. | D3:h. | D3:h. | D3:h.
+  | D3:h~ D3:e
+reps: 2
+days: 1

@@ -1,0 +1,25 @@
+id: song-cripple-creek
+title: Cripple Creek
+skills:
+- songs
+steps:
+- explain: |
+    **Cripple Creek** · Appalachian fiddle tune, 1800s
+
+    Often the very first tune a banjo player learns.
+  staff:
+    notes: A5:q A5:q E5:e G#5:e F#5:e E5:e  |  D5:q F#5:q E5:h
+    key: A
+  sound: A5:q A5:q E5:e G#5:e F#5:e E5:e  |  D5:q F#5:q E5:h  |  A5:q A5:q E5:e F#5:e E5:e D5:e  |  C#5:e A4:e B4:q A4:h
+- explain: |
+    **Before you play.** A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-cripple-creek-rh
+- exercise: song-cripple-creek-lh
+- exercise: song-cripple-creek
+- exercise: song-cripple-creek-arranged
+- exercise: song-cripple-creek-performance
+recap: 'Cripple Creek: tune, left hand, together. Come back to it any time; songs are for fun.'

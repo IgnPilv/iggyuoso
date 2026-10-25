@@ -1,0 +1,27 @@
+id: song-john-brown-s-body
+title: John Brown's Body
+skills:
+- songs
+steps:
+- explain: |
+    **John Brown's Body** · American camp-meeting tune, 1850s
+
+    The tune of the "Battle Hymn of the Republic". Soldiers sang it marching in the American Civil War.
+  staff:
+    notes: F#4:s G4:s  |  A4:q A4:e A4:q G4:e
+    key: D
+  sound: F#4:s G4:s  |  A4:q A4:e A4:q G4:e  |  F#4:q A4:e D5:q E5:e  |  F#5:q F#5:e F#5:q E5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-john-brown-s-body-tap
+- exercise: song-john-brown-s-body-by-ear
+- exercise: song-john-brown-s-body-rh
+- exercise: song-john-brown-s-body-lh
+- exercise: song-john-brown-s-body
+- exercise: song-john-brown-s-body-arranged
+- exercise: song-john-brown-s-body-performance
+recap: 'John Brown''s Body: tune, left hand, together. Come back to it any time; songs are for fun.'

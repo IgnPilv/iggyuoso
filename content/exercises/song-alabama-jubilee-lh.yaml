@@ -1,0 +1,18 @@
+id: song-alabama-jubilee-lh
+title: 'Alabama Jubilee: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: h.
+countIn: 1
+left: r:h. | E3+G#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | C#3+E3+A3:w | C#3+E3+A3:w | C#3+E3+A3:w | C#3+E3+A3:w
+  | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | E3+G#3+B3:w
+  | E3+G#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | C3+E3+A3:w | C3+E3+A3:w | C3+E3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D#3+F#3+B3:w
+  | E3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:q
+reps: 2
+days: 1

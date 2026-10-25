@@ -1,0 +1,27 @@
+id: song-golden-slippers
+title: Oh, Dem Golden Slippers
+skills:
+- songs
+steps:
+- explain: |
+    **Oh, Dem Golden Slippers** · James Bland, 1879
+
+    A song by James Bland, one of the first successful Black American songwriters.
+  staff:
+    notes: D5:e E5:e  |  F#5:q F#5:q F#5:e E5:e D5:e E5:e
+    key: D
+  sound: D5:e E5:e  |  F#5:q F#5:q F#5:e E5:e D5:e E5:e  |  F#5:q F#5:q F#5:q D5:e E5:e  |  F#5:q F#5:q F#5:e E5:e D5:e E5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-golden-slippers-tap
+- exercise: song-golden-slippers-by-ear
+- exercise: song-golden-slippers-rh
+- exercise: song-golden-slippers-lh
+- exercise: song-golden-slippers
+- exercise: song-golden-slippers-arranged
+- exercise: song-golden-slippers-performance
+recap: 'Oh, Dem Golden Slippers: tune, left hand, together. Come back to it any time; songs are for fun.'

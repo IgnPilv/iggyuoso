@@ -1,0 +1,19 @@
+id: song-simple-gifts-rh
+title: 'Simple Gifts: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q G4:e G4:e B4:e A4:e B4:e C5:e | D5:q D5:e D5:e B4:q B4:e B4:e | A4:q A4:q A4:q A4:e B4:e | C5:e B4:e A4:e
+  G4:e F#4:q D4:e D4:e | G4:q G4:e G4:e B4:e A4:e B4:e C5:e | D5:q D5:e D5:e B4:q B4:e B4:e | A4:q A4:q B4:q B4:e A4:e | G4:q
+  G4:q G4:h | D5:h B4:q. A4:e | B4:e C5:e B4:e A4:e G4:h | B4:q B4:e C5:e D5:q C5:e B4:e | A4:q A4:q A4:q D4:e D4:e | G4:q
+  G4:q G4:q. A4:e | B4:e A4:e B4:e C5:e D5:q C5:e B4:e | A4:q A4:q B4:q B4:e A4:e | G4:q G4:q G4:q B4:e B4:e | A4:q A4:q B4:q
+  B4:e A4:e | G4:q G4:q G4:q
+reps: 2
+days: 1

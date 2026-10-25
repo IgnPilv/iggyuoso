@@ -1,0 +1,15 @@
+id: song-rory-o-more-lh
+title: 'Rory O''More: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: A
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: A2:h. | A2:q. D3:q. | A2:h. | E3:h. | A2:h. | A2:q. D3:q. | E3:h. | A2:h. | F#2:h. | B2:q. F#2:q. | F#2:h. | E3:h. |
+  F#2:h. | B2:q. F#2:q. | F#2:h. | E3:h.
+reps: 2
+days: 1

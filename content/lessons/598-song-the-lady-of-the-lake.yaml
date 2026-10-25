@@ -1,0 +1,26 @@
+id: song-the-lady-of-the-lake
+title: The Lady of the Lake
+skills:
+- songs
+steps:
+- explain: |
+    **The Lady of the Lake** · Contra dance tune, 1800s
+
+    A dance tune named after Walter Scott's poem of 1810.
+  staff:
+    notes: B3:e A3:e  |  G3:e B3:e D4:e G4:e B4:e A4:e G4:e B4:e
+    key: G
+  sound: B3:e A3:e  |  G3:e B3:e D4:e G4:e B4:e A4:e G4:e B4:e  |  D5:e B4:e G4:e A4:e B4:e A4:e G4:e B4:e  |  C5:e D5:e C5:e
+    B4:e A4:e G4:e F#4:e G4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-the-lady-of-the-lake-rh
+- exercise: song-the-lady-of-the-lake-lh
+- exercise: song-the-lady-of-the-lake
+- exercise: song-the-lady-of-the-lake-arranged
+- exercise: song-the-lady-of-the-lake-performance
+recap: 'The Lady of the Lake: tune, left hand, together. Come back to it any time; songs are for fun.'

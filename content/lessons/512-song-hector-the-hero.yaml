@@ -1,0 +1,25 @@
+id: song-hector-the-hero
+title: Hector the Hero
+skills:
+- songs
+steps:
+- explain: |
+    **Hector the Hero** · Scottish lament, James Scott Skinner, 1903
+
+    The great Scottish fiddler James Scott Skinner wrote this slow air for his friend, General Hector MacDonald.
+  staff:
+    notes: Bb4:q C5:q  |  D5:q. C5:e Bb4:q
+    key: Bb
+  sound: Bb4:q C5:q  |  D5:q. C5:e Bb4:q  |  G5:h F5:e D5:e  |  F5:h~ F5:e G5:e
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. B♭ major: remember B♭, E♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: B♭ major · Time: 3/4 · Tempo: 96
+- exercise: song-hector-the-hero-rh
+- exercise: song-hector-the-hero-lh
+- exercise: song-hector-the-hero
+- exercise: song-hector-the-hero-arranged
+- exercise: song-hector-the-hero-performance
+recap: 'Hector the Hero: tune, left hand, together. Come back to it any time; songs are for fun.'

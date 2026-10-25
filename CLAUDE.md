@@ -1009,3 +1009,14 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   `exchangeCode`. Preview copies stay guest only. Google Cloud and Supabase setup is Ignas's
   (`docs/accounts.md`, "Switching on Google sign-in"). Demo scene "Guest or account" signs in with a
   pretend Google.
+- 2026-10-25: Songbook batch 3: 106 traditional and old tunes (201 songs in all), imported rather than
+  recalled: `tools/content/import_abc.py` (run by hand, needs music21) reads the free Nottingham Music
+  Database of traditional tunes in ABC with chord names, keeps the melody once through and the chords,
+  and writes `cat_trad.py`; the tunes taken and their words are listed in `trad_list.py` (traditional or
+  long out of copyright only; the collection also holds modern tunes). Left hands are ours (plainer
+  ones when the fuller ones would cross the tune); stages 3–9 by a difficulty rank, with children's
+  songs, carols and hymns kept early. Scottish, Northumbrian, English, Irish, Welsh, American and
+  European tunes: pipe marches, airs, music-hall songs, fiddle tunes, jigs, reels, hornpipes, carols,
+  and Rossini's William Tell finale, Weber's Huntsmen's Chorus and Handel's Water Music jig. Long
+  pieces on the sheet view now keep a readable size and scroll sideways with the music (`longSheet`)
+  instead of shrinking to fit. Demo scene "A long song on the sheet".

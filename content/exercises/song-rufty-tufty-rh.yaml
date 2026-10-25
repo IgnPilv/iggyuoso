@@ -1,0 +1,17 @@
+id: song-rufty-tufty-rh
+title: 'Rufty Tufty: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: A4:q | D5:h D5:q E5:q | F#5:h E5:q F#5:q | G5:q G5:q F#5:q E5:q | D5:h. E5:e F#5:e | G5:q F#5:q E5:q D5:q | D5:q C5:q
+  B4:q B4:e C5:e | D5:q D5:q C5:q B4:q | A4:h G4:h | B4:q. C5:e D5:q D5:q | E5:q C5:q D5:h | B4:q. C5:e D5:q D5:q | E5:q C5:q
+  D5:q B4:e C5:e | D5:q D5:q C5:q B4:q | A4:h G4:h
+reps: 2
+days: 1

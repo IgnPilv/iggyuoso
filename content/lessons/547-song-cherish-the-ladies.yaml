@@ -1,0 +1,26 @@
+id: song-cherish-the-ladies
+title: Cherish the Ladies
+skills:
+- songs
+steps:
+- explain: |
+    **Cherish the Ladies** · Irish jig, 1800s
+
+    A popular Irish jig whose name an all-woman Irish band later took for itself.
+  staff:
+    notes: B4:s C#5:s  |  D5:e F#4:e F#4:e A4:e G4:e F#4:e
+    key: D
+  sound: B4:s C#5:s  |  D5:e F#4:e F#4:e A4:e G4:e F#4:e  |  D4:e F#4:e A4:e A4:e F#4:e A4:e  |  B4:e E4:e E4:e G4:e E4:e
+    E4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-cherish-the-ladies-rh
+- exercise: song-cherish-the-ladies-lh
+- exercise: song-cherish-the-ladies
+- exercise: song-cherish-the-ladies-arranged
+- exercise: song-cherish-the-ladies-performance
+recap: 'Cherish the Ladies: tune, left hand, together. Come back to it any time; songs are for fun.'

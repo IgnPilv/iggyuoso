@@ -1,0 +1,26 @@
+id: song-good-old-summertime
+title: In the Good Old Summertime
+skills:
+- songs
+steps:
+- explain: |
+    **In the Good Old Summertime** · George Evans, 1902
+
+    A waltz song from New York's vaudeville stages.
+  staff:
+    notes: D5:q E5:q  |  D5:h B4:h
+    key: G
+  sound: D5:q E5:q  |  D5:h B4:h  |  D5:q G5:h.  |  B5:w
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-good-old-summertime-by-ear
+- exercise: song-good-old-summertime-rh
+- exercise: song-good-old-summertime-lh
+- exercise: song-good-old-summertime
+- exercise: song-good-old-summertime-arranged
+- exercise: song-good-old-summertime-performance
+recap: 'In the Good Old Summertime: tune, left hand, together. Come back to it any time; songs are for fun.'

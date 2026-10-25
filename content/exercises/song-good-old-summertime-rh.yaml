@@ -1,0 +1,18 @@
+id: song-good-old-summertime-rh
+title: 'In the Good Old Summertime: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: h
+countIn: 1
+right: D5:q E5:q | D5:h B4:h | D5:q G5:h. | B5:w~ | B5:h A5:q G5:q | G5:h. A5:q | G5:h E5:h | D5:w~ | D5:q E5:q D5:q C5:q
+  | B4:h D5:h | G5:h A5:h | B5:h A5:q G5:q~ | G5:h. G5:q | E5:h A5:h | A5:q B5:h. | A5:w | A5:h D5:q C5:q | B4:h D5:h | G5:h
+  A5:h | B5:h A5:q G5:q~ | G5:h. G5:q | G5:h. A5:q | G5:h E5:h | D5:w~ | D5:q E5:q D5:q C5:q | B4:h D5:h | G5:h A5:h | B5:h
+  A5:q G5:q~ | G5:h D5:q D#5:q | E5:h G5:h | G5:h A5:h | G5:w | G5:h
+reps: 2
+days: 1

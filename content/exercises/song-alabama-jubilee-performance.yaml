@@ -1,0 +1,27 @@
+id: song-alabama-jubilee-performance
+title: 'Alabama Jubilee: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 4/4
+pickup: h.
+countIn: 1
+right: D5:q C#5:q D5:q | E5:q D5:q B4:q E5:q~ | E5:q D5:h B4:q | E5:q D5:q B4:q E5:q~ | E5:w | E5:q C#5:q A4:q E5:q~ | E5:q
+  C#5:h A4:q | E5:q C#5:q A4:q E5:q~ | E5:q D#5:q E5:q Fb5:q | F#5:q E#5:q F#5:q E5:q~ | E5:q D5:h E5:q | F#5:q E#5:q F#5:q
+  E5:q~ | E5:q D5:q E5:q F#5:q | G5:h E5:q G5:q | E5:q D5:q B4:q D5:q | G5:w~ | G5:q D5:q C#5:q D5:q | E5:q D5:q B4:q E5:q~
+  | E5:q D5:h B4:q | E5:q D5:q B4:q E5:q~ | E5:w | A4:q G#4:q A4:q B4:q | C5:q B4:q C5:q D5:q | E5:h E5:h | E5:q F#5:q G5:q
+  A5:q | B5:w | A5:w | G5:h E5:h | D5:h C5:q D5:q | E5:q G5:q E5:q G5:q | F#5:h D5:h | G5:w | G5:q
+left: r:h. | E3:q G#3+B3:q B3:q G#3+B3:q | E3:q G#3+B3:q B3:q G#3+B3:q | E3:q G#3+B3:q B3:q G#3+B3:q | E3:q G#3+B3:q B3:q
+  G#3+B3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | A2:q
+  C#3+E3+A3:q E3:q C#3+E3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q |
+  D3:q F#3+A3:q A3:q F#3+A3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q
+  | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | E3:q G#3+B3:q B3:q G#3+B3:q | E3:q G#3+B3:q B3:q G#3+B3:q | E3:q G#3+B3:q B3:q G#3+B3:q
+  | E3:q G#3+B3:q B3:q G#3+B3:q | A2:q C3+E3+A3:q E3:q C3+E3+A3:q | A2:q C3+E3+A3:q E3:q C3+E3+A3:q | A2:q C3+E3+A3:q E3:q
+  C3+E3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | B2:q D#3+F#3+B3:q F#3:q D#3+F#3+B3:q | E3:q
+  G3+B3:q D3:q F#3+A3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q
+  | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | D3+G3+B3:q
+reps: 2
+days: 2

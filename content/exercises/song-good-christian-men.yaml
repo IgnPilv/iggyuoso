@@ -1,0 +1,19 @@
+id: song-good-christian-men
+title: Good Christian Men, Rejoice
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: F4:e | F4:q F4:e A4:q Bb4:e | C5:q D5:e C5:q C5:e | F4:q F4:e A4:q Bb4:e | C5:q D5:e C5:q. | C5:q D5:e C5:q Bb4:e |
+  A4:q G4:e F4:q. | F4:q. F4:q. | G4:q G4:e A4:q G4:e | F4:q G4:e A4:q. | C5:q D5:e C5:q Bb4:e | A4:q G4:e F4:q F4:e | G4:q
+  G4:e A4:q G4:e | F4:q G4:e A4:q. | D4:q D4:e E4:q E4:e | F4:q. C5:q. | A4:q A4:e G4:q G4:e | F4:h~ F4:e
+left: r:e | F2:h. | F2:q. C3:q. | F2:h. | F2:q. C3:q. | F2:h. | F2:q. D3:q. | F2:h. | Bb2:q. C3:q. | Bb2:q. F2:q. | F2:h.
+  | F2:q. D3:q. | Bb2:q. C3:q. | Bb2:q. F2:q. | D3:q. A2:q. | D3:q. C3:q. | F2:q. C3:q. | F2:h~ F2:e
+reps: 3
+days: 2

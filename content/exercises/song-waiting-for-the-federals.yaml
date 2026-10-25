@@ -1,0 +1,20 @@
+id: song-waiting-for-the-federals
+title: Waiting for the Federals
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4:h B4:q A4:e B4:e | D5:q B4:q B4:e A4:e G4:q | B4:h D5:q. B4:e | A4:e B4:e A4:e G4:e E4:q G4:q | B4:h B4:q A4:e B4:e
+  | D5:q B4:q B4:e A4:e G4:q | A4:e B4:e A4:e G4:e E4:q D4:e3 E4:e3 F#4:e3 | G4:w | G5:h G5:e A5:e G5:e E5:e | D5:q B4:q B4:e
+  A4:e G4:q | G5:h G5:e F#5:e G5:e A5:e | B5:e E5:q F#5:e E5:q F#5:q | G5:e A5:e B5:e A5:e G5:q E5:q | D5:q. A4:e B4:e A4:e
+  G4:q | A4:e B4:e A4:e G4:e E4:q D4:e3 E4:e3 F#4:e3 | G4:w
+left: D3+G3+B3:w | D3+G3+B3:w | E3+G3+B3:w | C3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:w | D3+G3+B3:w | C3+E3+G3:h A2+D3+F#3:h | B2+D3+G3:w
+  | B2+D3+G3:w | B2+D3+G3:w | B2+E3+G3:w | C3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:h E3+G3+B3:h | D3+F#3+A3:h D3+G3+B3:h | C3+E3+G3:h
+  A2+D3+F#3:h | B2+D3+G3:w
+reps: 3
+days: 2

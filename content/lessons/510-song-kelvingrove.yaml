@@ -1,0 +1,26 @@
+id: song-kelvingrove
+title: Kelvingrove
+skills:
+- songs
+steps:
+- explain: |
+    **Kelvingrove** · Scottish song, Glasgow, 1820s
+
+    "Let us haste to Kelvingrove": a song about the park by the river Kelvin in Glasgow.
+  staff:
+    notes: G4:e A4:e  |  B4:h D5:q
+    key: G
+  sound: G4:e A4:e  |  B4:h D5:q  |  A4:h B4:q  |  G4:h F#4:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 3/4 · Tempo: 96
+- exercise: song-kelvingrove-by-ear
+- exercise: song-kelvingrove-rh
+- exercise: song-kelvingrove-lh
+- exercise: song-kelvingrove
+- exercise: song-kelvingrove-arranged
+- exercise: song-kelvingrove-performance
+recap: 'Kelvingrove: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,19 @@
+id: song-arkansas-traveler-lh
+title: 'Arkansas Traveler: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: A
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | A2+C#3+E3:h A2+D3+F#3:h | B2+E3+G#3:h C#3+E3+A3:h | B2+E3+G#3:h C#3+E3+A3:h | D3+F#3+B3:h E3+G#3+B3:h | C#3+E3+A3:h
+  D3+F#3+A3:h | B2+E3+G#3:h C#3+E3+A3:h | C#3+E3+A3:h D3+F#3+A3:h | B2+E3+G#3:h C#3+E3+A3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h
+  B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h
+  D3+F#3+A3:h | B2+E3+G#3:h C#3+E3+A3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h
+  B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h B2+E3+G#3:h | C#3+E3+A3:h D3+F#3+A3:h | C#3+E3+A3:h.
+reps: 2
+days: 1

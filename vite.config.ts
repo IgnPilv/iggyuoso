@@ -43,5 +43,7 @@ export default defineConfig({
   plugins: [seo()],
   test: {
     include: ['tests/**/*.test.ts'],
+    // The content tests load every lesson and song, which takes a few seconds on a busy machine.
+    testTimeout: 20000,
   },
 });

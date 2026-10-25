@@ -1,0 +1,17 @@
+id: song-scots-wha-hae-lh
+title: 'Scots Wha Hae: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | F2:h. | C3:h. | F2:h. | F2:h. | Bb2:h. | Bb2:h. | Bb2:h. | Bb2:h. | F2:h. | A2:h. | D3:h. | A2:h. | D3:h. | Bb2:h.
+  | F2:h. | C3:h. | F2:h. | F2:h. | F2:h. | F2:h. | C3:h. | G2:h. | C3:h. | C3:h. | F2:h. | A2:h. | D3:q D3:q A2:q | D3:h.
+  | Bb2:h. | Bb2:h. | F2:h. | F2:h
+reps: 2
+days: 1

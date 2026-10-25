@@ -1,0 +1,26 @@
+id: song-red-haired-boy
+title: The Red-Haired Boy
+skills:
+- songs
+steps:
+- explain: |
+    **The Red-Haired Boy** · Irish and American fiddle tune, 1800s
+
+    Called "The Little Beggarman" in Ireland. Bluegrass players love it.
+  staff:
+    notes: A4:e F#4:e  |  E4:q A4:q A4:e B4:e C#5:e D5:e
+    key: A
+  sound: A4:e F#4:e  |  E4:q A4:q A4:e B4:e C#5:e D5:e  |  E5:e F#5:e E5:e C#5:e D5:q C#5:e D5:e  |  E5:e D5:e C#5:e B4:e
+    A4:e B4:e C#5:e A4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-red-haired-boy-rh
+- exercise: song-red-haired-boy-lh
+- exercise: song-red-haired-boy
+- exercise: song-red-haired-boy-arranged
+- exercise: song-red-haired-boy-performance
+recap: 'The Red-Haired Boy: tune, left hand, together. Come back to it any time; songs are for fun.'

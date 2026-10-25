@@ -1,0 +1,25 @@
+id: song-leaving-of-liverpool
+title: The Leaving of Liverpool
+skills:
+- songs
+steps:
+- explain: |
+    **The Leaving of Liverpool** · Sea shanty, 1880s
+
+    A sailor says farewell to his love before sailing from Liverpool to California. Sung at the capstan.
+  staff:
+    notes: D4:e E4:e  |  F#4:q. A4:e
+    key: D
+  sound: D4:e E4:e  |  F#4:q. A4:e  |  G4:e F#4:e E4:e D4:e  |  D5:q. B4:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 88
+- exercise: song-leaving-of-liverpool-rh
+- exercise: song-leaving-of-liverpool-lh
+- exercise: song-leaving-of-liverpool
+- exercise: song-leaving-of-liverpool-arranged
+- exercise: song-leaving-of-liverpool-performance
+recap: 'The Leaving of Liverpool: tune, left hand, together. Come back to it any time; songs are for fun.'

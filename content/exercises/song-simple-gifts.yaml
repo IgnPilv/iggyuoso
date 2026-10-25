@@ -1,0 +1,23 @@
+id: song-simple-gifts
+title: Simple Gifts
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q G4:e G4:e B4:e A4:e B4:e C5:e | D5:q D5:e D5:e B4:q B4:e B4:e | A4:q A4:q A4:q A4:e B4:e | C5:e B4:e A4:e
+  G4:e F#4:q D4:e D4:e | G4:q G4:e G4:e B4:e A4:e B4:e C5:e | D5:q D5:e D5:e B4:q B4:e B4:e | A4:q A4:q B4:q B4:e A4:e | G4:q
+  G4:q G4:h | D5:h B4:q. A4:e | B4:e C5:e B4:e A4:e G4:h | B4:q B4:e C5:e D5:q C5:e B4:e | A4:q A4:q A4:q D4:e D4:e | G4:q
+  G4:q G4:q. A4:e | B4:e A4:e B4:e C5:e D5:q C5:e B4:e | A4:q A4:q B4:q B4:e A4:e | G4:q G4:q G4:q B4:e B4:e | A4:q A4:q B4:q
+  B4:e A4:e | G4:q G4:q G4:q
+left: r:q | D3+G3+B3:h E3+G3+B3:h | D3+F#3+B3:h E3+G3+B3:h | C3+E3+A3:w | C3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:h E3+G3+B3:h |
+  D3+F#3+B3:h E3+G3+B3:h | C3+E3+A3:h D3+F#3+A3:h | C3+E3+G3:h B2+D3+G3:h | B2+D3+G3:h B2+E3+G3:h | B2+D3+G3:h B2+E3+G3:h
+  | B2+D3+G3:w | C3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:h C3+E3+G3:h | B2+D3+G3:q A2+D3+F#3:q B2+D3+G3:q B2+D3+G3:q | C3+E3+A3:h
+  D3+F#3+A3:h | D3+G3+B3:q C3+E3+G3:q B2+D3+G3:q B2+D3+G3:q | C3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:h.
+reps: 3
+days: 2

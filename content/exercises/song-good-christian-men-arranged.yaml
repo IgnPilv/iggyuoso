@@ -1,0 +1,22 @@
+id: song-good-christian-men-arranged
+title: Good Christian Men, Rejoice, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords).
+display: staff
+key: F
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: F4:e | F4:q F4:e A4:q Bb4:e | C5:q D5:e C5:q C5:e | F4:q F4:e A4:q Bb4:e | C5:q D5:e C5:q. | C5:q D5:e C5:q Bb4:e |
+  A4:q G4:e F4:q. | F4:q. F4:q. | G4:q G4:e A4:q G4:e | F4:q G4:e A4:q. | C5:q D5:e C5:q Bb4:e | A4:q G4:e F4:q F4:e | G4:q
+  G4:e A4:q G4:e | F4:q G4:e A4:q. | D4:q D4:e E4:q E4:e | F4:q. C5:q. | A4:q A4:e G4:q G4:e | F4:h~ F4:e
+left: r:e | F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e A2:e C3:e G3:e E3:e | F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e A2:e
+  C3:e G3:e E3:e | F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e A2:e D3:e A3:e F3:e | F2:e C3:e A2:e F2:e C3:e A2:e | Bb2:e F3:e
+  D3:e C3:e G3:e E3:e | Bb2:e F3:e D3:e F2:e C3:e A2:e | F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e A2:e D3:e A3:e F3:e | Bb2:e
+  F3:e D3:e C3:e G3:e E3:e | Bb2:e F3:e D3:e F2:e C3:e A2:e | D3:e A3:e F3:e A2:e E3:e C#3:e | D3:e A3:e F3:e C3:e G3:e E3:e
+  | F2:e C3:e A2:e C3:e G3:e E3:e | C3+F3+A3:h~ C3+F3+A3:e
+reps: 3
+days: 2

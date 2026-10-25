@@ -1,0 +1,26 @@
+id: song-meeting-of-the-waters
+title: The Meeting of the Waters
+skills:
+- songs
+steps:
+- explain: |
+    **The Meeting of the Waters** · Irish air; words by Thomas Moore, 1807
+
+    Moore wrote it about the place in County Wicklow where two rivers meet.
+  staff:
+    notes: A4:e B4:e  |  D5:h D5:q F#5:q
+    key: D
+  sound: A4:e B4:e  |  D5:h D5:q F#5:q  |  A4:h D5:q C#5:q  |  B4:q D5:q B4:q G4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-meeting-of-the-waters-tap
+- exercise: song-meeting-of-the-waters-rh
+- exercise: song-meeting-of-the-waters-lh
+- exercise: song-meeting-of-the-waters
+- exercise: song-meeting-of-the-waters-arranged
+- exercise: song-meeting-of-the-waters-performance
+recap: 'The Meeting of the Waters: tune, left hand, together. Come back to it any time; songs are for fun.'

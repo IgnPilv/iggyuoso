@@ -1,0 +1,27 @@
+id: song-staines-morris
+title: Staines Morris
+skills:
+- songs
+steps:
+- explain: |
+    **Staines Morris** · English morris tune, 1600s
+
+    Morris dancers dance it with bells on their legs and handkerchiefs in their hands.
+  staff:
+    notes: A4:q D5:q B4:q C#5:q  |  D5:q C5:e Bb4:e A4:q. Bb4:e
+    key: Dm
+  sound: A4:q D5:q B4:q C#5:q  |  D5:q C5:e Bb4:e A4:q. Bb4:e  |  C5:e D5:e C5:e Bb4:e A4:q G4:e F4:e  |  E4:e D4:e E4:e F4:e
+    D4:h
+- explain: |
+    **Before you play.** D minor: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 4/4 · Tempo: 88
+- exercise: song-staines-morris-tap
+- exercise: song-staines-morris-rh
+- exercise: song-staines-morris-lh
+- exercise: song-staines-morris
+- exercise: song-staines-morris-arranged
+- exercise: song-staines-morris-performance
+recap: 'Staines Morris: tune, left hand, together. Come back to it any time; songs are for fun.'

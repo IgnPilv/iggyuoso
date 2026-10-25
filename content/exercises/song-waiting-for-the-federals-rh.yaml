@@ -1,0 +1,17 @@
+id: song-waiting-for-the-federals-rh
+title: 'Waiting for the Federals: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: B4:h B4:q A4:e B4:e | D5:q B4:q B4:e A4:e G4:q | B4:h D5:q. B4:e | A4:e B4:e A4:e G4:e E4:q G4:q | B4:h B4:q A4:e B4:e
+  | D5:q B4:q B4:e A4:e G4:q | A4:e B4:e A4:e G4:e E4:q D4:e3 E4:e3 F#4:e3 | G4:w | G5:h G5:e A5:e G5:e E5:e | D5:q B4:q B4:e
+  A4:e G4:q | G5:h G5:e F#5:e G5:e A5:e | B5:e E5:q F#5:e E5:q F#5:q | G5:e A5:e B5:e A5:e G5:q E5:q | D5:q. A4:e B4:e A4:e
+  G4:q | A4:e B4:e A4:e G4:e E4:q D4:e3 E4:e3 F#4:e3 | G4:w
+reps: 2
+days: 1

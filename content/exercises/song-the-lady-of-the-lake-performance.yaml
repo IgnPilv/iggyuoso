@@ -1,0 +1,26 @@
+id: song-the-lady-of-the-lake-performance
+title: 'The Lady of the Lake: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: B3:e A3:e | G3:e B3:e D4:e G4:e B4:e A4:e G4:e B4:e | D5:e B4:e G4:e A4:e B4:e A4:e G4:e B4:e | C5:e D5:e C5:e B4:e
+  A4:e G4:e F#4:e G4:e | A4:e G4:e F#4:e E4:e D4:e C4:e B3:e A3:e | G3:e B3:e D4:e G4:e B4:e A4:e G4:e B4:e | D5:e B4:e G4:e
+  A4:e B4:e A4:e G4:e B4:e | C5:e D5:e C5:e B4:e A4:e G4:e F#4:e E4:e | D4:e F#4:e A4:e F#4:e G4:q B4:e C5:e | D5:e C5:e B4:e
+  D5:e G5:q G5:e B4:e | C5:e B4:e A4:q A5:q. G5:e | F#5:q F#5:e G5:e F#5:e E5:e D5:e F#5:e | E5:e D5:e C#5:e E5:e D5:q B4:e
+  C5:e | D5:e C5:e B4:e D5:e G5:q G5:e B4:e | C5:e B4:e A4:q A5:q. G5:e | F#5:e E5:e D5:e B4:e C5:e A4:e F#4:e D4:e | G4:q
+  B4:q G4:q
+left: r:q | D2:e B2:e G2:e B2:e D2:e B2:e G2:e B2:e | D2:e B2:e G2:e B2:e D2:e B2:e G2:e B2:e | C2:e G2:e E2:e G2:e C2:e G2:e
+  E2:e G2:e | A1:e F#2:e D2:e F#2:e A1:e F#2:e D2:e F#2:e | B1:e G2:e D2:e G2:e B1:e G2:e D2:e G2:e | B1:e G2:e D2:e G2:e
+  B1:e G2:e D2:e G2:e | C2:e G2:e E2:e G2:e C2:e G2:e E2:e G2:e | A1:e F#2:e D2:e F#2:e B1:e G2:e D2:e G2:e | B1:e G2:e D2:e
+  G2:e B1:e G2:e D2:e G2:e | C2:e G2:e E2:e G2:e C#2:e A2:e E2:e A2:e | D2:e A2:e F#2:e A2:e D2:e A2:e F#2:e A2:e | C#2:e
+  A2:e E2:e A2:e D2:e A2:e F#2:e A2:e | D2:e B2:e G2:e B2:e D2:e B2:e G2:e B2:e | C2:e G2:e E2:e G2:e C#2:e A2:e E2:e A2:e
+  | D2:e A2:e F#2:e A2:e D2:e A2:e F#2:e A2:e | D2+G2+B2:h.
+pedal: r:q | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h.
+reps: 2
+days: 2

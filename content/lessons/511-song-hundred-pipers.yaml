@@ -1,0 +1,25 @@
+id: song-hundred-pipers
+title: Wi' a Hundred Pipers
+skills:
+- songs
+steps:
+- explain: |
+    **Wi' a Hundred Pipers** · Scottish song, Lady Nairne, 1840s
+
+    Lady Nairne wrote it about Bonnie Prince Charlie's army crossing the river Esk in 1745, to the sound of a hundred pipers.
+  staff:
+    notes: A4:s B4:s  |  C#5:q E4:e E4:e F#4:e E4:e
+    key: A
+  sound: A4:s B4:s  |  C#5:q E4:e E4:e F#4:e E4:e  |  F#4:q A4:e A4:q F#5:e  |  E5:q C#5:e C#5:e B4:e A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-hundred-pipers-rh
+- exercise: song-hundred-pipers-lh
+- exercise: song-hundred-pipers
+- exercise: song-hundred-pipers-arranged
+- exercise: song-hundred-pipers-performance
+recap: 'Wi'' a Hundred Pipers: tune, left hand, together. Come back to it any time; songs are for fun.'

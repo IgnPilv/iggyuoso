@@ -1,0 +1,19 @@
+id: song-sussex-carol
+title: The Sussex Carol
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: D5:e | D5:q B4:e C5:q D5:e | B4:e A4:e G4:e A4:q F#4:e | G4:q G4:e A4:e B4:e C5:e | B4:q A4:e G4:q D5:e | D5:q B4:e
+  C5:q D5:e | B4:e A4:e G4:e A4:q F#4:e | G4:q G4:e A4:e B4:e C5:e | B4:q A4:e G4:q. | A4:q. A4:q G4:e | A4:e B4:e C5:e D5:e
+  C5:e B4:e | A4:h. | D5:q. E5:q. | D5:q. C5:q B4:e | A4:e G4:e A4:e G4:q.~ | G4:q r:q.
+left: r:e | G2:q. C3:q. | G2:q. D3:q. | G2:q. C3:q. | D3:q. G2:q. | G2:q. C3:q. | G2:q. D3:q. | G2:q. C3:q. | D3:q. G2:q.
+  | A2:h. | D3:q. G2:q. | D3:h. | G2:q. C3:q. | D3:q. A2:q. | D3:q. G2:q. | G2:h~ G2:e
+reps: 3
+days: 2

@@ -1,0 +1,17 @@
+id: song-old-joe-clark-rh
+title: 'Old Joe Clark: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: A
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: E5:q | E5:q F#5:q G5:q F#5:q | E5:q D5:q C#5:q A4:q | E5:q F#5:q G5:q F#5:q | E5:w | E5:q F#5:q G5:q F#5:q | E5:q D5:q
+  C#5:h | A4:e B4:e C#5:e A4:e B4:q G4:q | A4:h. E4:q | A4:q A4:e B4:e C#5:q A4:q | E5:q D5:q C#5:h | A4:q A4:e B4:e C#5:q
+  A4:q | B4:h E4:h | A4:q A4:e B4:e C#5:q A4:q | E5:q D5:q C#5:h | A4:e B4:e C#5:e A4:e B4:q G4:q | A4:h.
+reps: 2
+days: 1
