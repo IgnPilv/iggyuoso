@@ -11,6 +11,7 @@ import { store } from '../progress/store';
 import { h, type View } from '../../../core/dom';
 import { KeyboardView } from './keyboard';
 import { needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // The Jam room (#/jam): pick a progression, a key, a groove and a tempo, and a small band (drums,
 // bass, chords) loops it while the player makes things up on top. The keys light the chord
@@ -217,6 +218,7 @@ export function mountJam(box: HTMLElement, cal: Calibration, hooks: JamHooks = {
   showTally();
 
   box.append(h('section', { class: 'card jam' },
+    roomEyebrow('jam'),
     h('h2', {}, 'Jam room'),
     h('p', {}, 'A band plays the chords; you make up the tune. Bright keys are the chord playing now, soft keys the rest of the scale that fits. Any of them sounds right, so start with one finger and a simple rhythm, and land on a bright key when the chord changes.'),
     h('div', { class: 'controls' },

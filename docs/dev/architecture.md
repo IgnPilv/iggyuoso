@@ -76,9 +76,17 @@ src/modules/piano/
                    profile, sketches, my songs                                         → progress.md
   audio/           metronome clicks, sampled piano (public/piano/)
   ui/              every screen: players, sheet, falling notes, keyboard, hands,
-                   lesson panels, tree, Book, demo                                     → rendering.md
+                   lesson panels, tree, Book, demo, the practice room's games and tools → rendering.md
   demo/            demo mode and the virtual pianist
 ```
+
+The **practice room** is the piano's eight games and tools beside the lessons: Note Rush
+(`#/noterush`), Play by ear (`#/byear`), Duet (`#/duet`), Chord finder (`#/chords`), Timing mirror
+(`#/pulse`), Scale gym (`#/scales`), Jam room (`#/jam`) and Play report (`#/report`). One list,
+`ROOM` in `ui/practiceRoom.ts`, gives each its name, kind (game or tool), one-line description,
+branch, the milestone it is best after (advice only), and the tree nodes whose lessons suggest it.
+Home shows them all (the "Practice room" card), each branch page shows its own, and a lesson's recap
+names the ones that fit it. Each page's heading carries the same "Practice room · Game / Tool" line.
 
 The rule that keeps this manageable: **the parts that decide things have no screen code**. A
 session (`engine/`) and a scorer (`scoring/`) take key presses with times and return judgements and

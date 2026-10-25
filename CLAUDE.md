@@ -919,3 +919,16 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   hurried over 0.2, waits marked; score (full within 0.08 beat, none at 0.5, −3 a wrong key), tempo
   start and end, up to three tips. Nothing is saved (`engine/duet.ts`, tested; `ui/duetView.ts`).
   Demo scene "Duet".
+- 2026-10-25: The eight hourly ideas are kept (Ignas: "sure add all", after the run's wrap-up; any can
+  still be cut later) and become the **practice room**, part of the app rather than loose pages. One
+  list (`ROOM`, `src/modules/piano/ui/practiceRoom.ts`, tested): three games (Note Rush, Play by ear,
+  Duet) and five tools (Chord finder, Timing mirror, Scale gym, Jam room, Play report), each with a
+  one-line description, a branch (reading, ear, pieces, theory, rhythm, rhythm, technique, creativity)
+  and the milestone it is best after (none for Note Rush, Play by ear and Timing mirror; 1 for Duet,
+  Chord finder and Play report; 2 for Scale gym and Jam room; advice only, nothing locks). Home's
+  "Mini game" card is replaced by a "Practice room" card with all eight (after Songs); each branch
+  page ends with its own ("In the practice room"); a lesson whose tree node is listed for a tool
+  says "Also try, in the practice room: ..." on its recap (at most two). Every page's heading
+  carries "Practice room · Game" or "· Tool". Their addresses are unchanged. Demo scene "Practice
+  room". How to add one: `docs/dev/how-to.md`.
+

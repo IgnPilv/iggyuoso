@@ -5,6 +5,7 @@ import type { Store } from '../progress/store';
 import { h } from '../../../core/dom';
 import { markdown } from './markdown';
 import { repsText } from './players';
+import { roomRecap } from './practiceRoom';
 
 // The end of a lesson: where it stands in plain words, each exercise with what it still needs, and
 // one obvious next thing to press. Used by the lesson screen and by the demo (with its own store).
@@ -70,5 +71,6 @@ export function lessonRecap(r: RecapInput): { body: HTMLElement[]; nav: HTMLElem
     if (again) { again.classList.add('secondary'); nav.push(again); }
   }
   // The top button mirrors the main one, so both say the same thing.
-  return { body: [recap, status, list], nav, forward: nav[0] as HTMLButtonElement };
+  const room = roomRecap(r.lesson.id);
+  return { body: room ? [recap, status, list, room] : [recap, status, list], nav, forward: nav[0] as HTMLButtonElement };
 }

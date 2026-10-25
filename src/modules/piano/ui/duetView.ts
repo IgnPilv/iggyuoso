@@ -10,6 +10,7 @@ import { animate } from './animate';
 import { KeyboardView } from './keyboard';
 import { theoryStaff } from './theory';
 import { midiBanner, needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // Duet (#/duet): the player plays a tune's melody, the app plays the left hand under it and follows
 // them: it starts when they start, keeps to their tempo and waits at each melody note until it is
@@ -171,6 +172,7 @@ export function mountDuet(root: HTMLElement, cal: Calibration, hooks: DuetHooks 
   const offPorts = midi.onPorts(showBanner);
 
   root.append(banner, h('section', { class: 'card ear duet' },
+    roomEyebrow('duet'),
     h('h2', {}, 'Duet'),
     h('p', {}, 'You play the tune, the app plays the left hand, and it follows you: it starts when you start, keeps to your tempo, and waits at every note until you play it. Then it shows where you held back or hurried against your own beat.'),
     h('div', { class: 'controls' }, tuneSel, styleSel, h('label', {}, light, ' Light the next note')),

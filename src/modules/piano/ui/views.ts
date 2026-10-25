@@ -4,6 +4,7 @@ import type { Lesson } from '../content/types';
 import { midi, MidiInput } from '../midi/input';
 import { computerKeys, KEY_SEMITONES, letterOf, typing } from '../midi/computerKeys';
 import { demo, DEMO_CALIBRATION } from '../demo/demo';
+import { roomCard } from './practiceRoom';
 import { lessonAdvice, lessonGoals, lessonStage, mastery, nextLesson, noteSkipped, type LessonAdvice } from '../progress';
 import { store } from '../progress/store';
 import { h, s as svgEl, type View } from '../../../core/dom';
@@ -73,7 +74,6 @@ export const homeView: View = (root) => {
       h('span', { class: 'small' }, 'The demo needs no keyboard.')),
   ));
   if (store.calibration) root.append(todayCard());
-  if (store.calibration) root.append(gameCard());
   root.append(progressCard());
   const snap = snapshot();
   root.append(h('section', { class: 'card tree-card' },
@@ -84,21 +84,13 @@ export const homeView: View = (root) => {
     h('p', { class: 'small tree-caption' }, 'Each branch grows a leaf for every lesson you practise, and a bud shows where something new is open. Milestones add rings to the trunk and open new songs. Tap a branch to see all of it.')));
   root.append(growingNow(snap));
   root.append(songsCard(snap));
+  root.append(roomCard(mastery));
   root.append(stageList(snap));
   if (contentErrors.length) {
     root.append(h('details', { class: 'card small' }, h('summary', {}, `${contentErrors.length} content problems`), h('pre', {}, contentErrors.join('\n'))));
   }
   return off;
 };
-
-/** A way into the mini games. */
-export const gameCard = () => h('section', { class: 'card home-game' },
-  h('div', {}, h('span', { class: 'eyebrow' }, 'Mini game'), h('h2', {}, 'Note Rush'),
-    h('p', { class: 'small' }, 'How many notes can you read and play in a minute? Hear a tune you know and find it on the keys, or play it as a duet with a band that follows you.')),
-  h('div', { class: 'controls' },
-    h('button', { class: 'secondary', onclick: () => go('/noterush') }, 'Play Note Rush'),
-    h('button', { class: 'secondary', onclick: () => go('/byear') }, 'Play by ear'),
-    h('button', { class: 'secondary', onclick: () => go('/duet') }, 'Play a duet')));
 
 /** XP, streak and what is due for review. Hidden until there is something to show. */
 function progressCard(): HTMLElement | '' {

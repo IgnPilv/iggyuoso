@@ -8,6 +8,7 @@ import { KeyboardView } from './keyboard';
 import { showHeld } from './players';
 import { theoryStaff } from './theory';
 import { needCalibration } from './views';
+import { roomEyebrow } from './practiceRoom';
 
 // The Chord finder (#/chords): hold down any keys and the app says what they make (C major,
 // first inversion, C E G from the root), writes it on the grand staff and offers the chord's other
@@ -157,7 +158,7 @@ export const chordFinderView: View = (root) => {
   draw();
 
   root.append(h('section', { class: 'card chord-finder' },
-    h('span', { class: 'eyebrow' }, 'Tool'),
+    roomEyebrow('chords'),
     h('h1', {}, 'Chord finder'),
     h('p', { class: 'small' }, 'Hold down any keys and see what chord they make, in any position. No keyboard at hand? Tap keys on the picture: a tapped key stays down until you tap it again. Or build one: type its name (no ♯ or ♭ needed: c#m7, bb maj7, f sharp minor) or pick a root and a kind.'),
     h('div', { class: 'chord-build' }, typed, suggestions, rootPicks, kindPicks),

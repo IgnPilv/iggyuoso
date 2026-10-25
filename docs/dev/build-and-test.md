@@ -26,7 +26,7 @@ computer. Without a keyboard, use `#/demo` or Settings → Computer keyboard.
   `transcribe`, `octaves` (middle C = C4 everywhere), `midi` and `computerKeys` decoding,
   `calibration`, `keys`;
 - progress: `store`, `mastery`, `profile`, `daily`, `advice`, `sketches`, `mySongs`, `sync`;
-- the site: `modules` (ids, routes);
+- the site: `modules` (ids, routes), `practiceRoom` (every game and tool has a page, real nodes);
 - generated drills: `generate`;
 - **content**: `content`, `tree`, `book` load the real `content/` folder and fail on
   any problem, so a broken lesson can never be deployed.
