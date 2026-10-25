@@ -123,7 +123,7 @@ export function renderProfile(p: { store: Store; mastery: Mastery }, now = new D
         h('p', { class: 'small' }, s.spread === null ? '' : `Steadiness: notes land within ±${s.spread} ms. `, trend,
           ` From the last ${Math.min(s.takes, 10)} timed ${s.takes === 1 ? 'take' : 'takes'}.`));
     })) : h('p', { class: 'small' }, 'Play a timed exercise to see how each hand keeps time.'),
-    h('p', { class: 'small' }, 'Check it any time in the ', h('a', { href: '#/pulse' }, 'Timing mirror'), ': a metronome that shows each press early or late.'));
+    h('p', { class: 'small' }, 'Check it any time in the ', h('a', { href: '#/pulse' }, 'Timing mirror'), ': a metronome that shows each press early or late. For scales and arpeggios, note by note: the ', h('a', { href: '#/scales' }, 'Scale gym'), '.'));
 
   return h('div', { class: 'profile' }, acct ? accountCard(acct) : null, levelCard, calendarCard, skillsCard, timingCard);
 }

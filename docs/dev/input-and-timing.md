@@ -127,3 +127,20 @@ second ahead (a 50 ms timer), so tempo, key and groove changes apply from the ne
 scheduled bar keeps its start, beat length and plan, and a press is placed against them after
 taking latency off. Drums are synthesised (`drum` in `audio/audio.ts`); bass and chords use the
 sampled piano. Nothing is saved; settings last until the page reloads (the demo uses its own copy).
+
+## The Scale gym (`#/scales`)
+Scales and arpeggios up and back down on the click, measured note by note. `engine/scaleGym.ts`
+(tested in `tests/scaleGym.test.ts`): `gymPlan` builds the run (major, natural and harmonic minor,
+chromatic, major and minor arpeggios; one or two octaves; right hand from the tonic in octave 4, the
+left hand as many octaves lower as the run is long, so the hands never share a key) with textbook
+fingering from `gymFingers` (scales: the place of the fourth finger per key decides the 1 2 3 /
+1 2 3 4 groups; chromatic: 3 on black keys; arpeggios 1 2 3 5 / 5 3 2 1, or 1 2 3 1 2 3 5 / 5 4 2 1
+4 2 1 for two octaves; minor keys and arpeggios on white-key tonics only). `isPass` marks the thumb
+passing under or a finger crossing over it, in the direction of travel. `ScaleGym` schedules one bar
+of count-in and clicks up to the last note, and matches each press to the nearest unplayed note on
+that key within 1.5 steps (200 to 700 ms), keeping its offset and velocity; other keys are wrong.
+`gymReport` scores the run (each note full marks within 20 ms, nothing at half a step, 60 to 100 ms;
+a wrong key costs half a note) and gives each hand its lean, spread, thumb passes against the other
+notes, loudness spread and thumb loudness (only when velocities vary), the notes furthest off, and
+at most two tips. `ui/scaleGymView.ts` lights the keys with their fingers, draws the per-note chart
+as SVG and saves nothing; settings and the best score of each setup last until the page reloads.
