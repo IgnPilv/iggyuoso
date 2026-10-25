@@ -684,3 +684,10 @@ never copied pages). Start small, adapt as we go.
   round saved), marked Sample in the switcher, proves the switch and is to be replaced. Phone
   header: icon-only links up to 860 px wide, logo mark only under 440 px. Demo scene "One app,
   many modules". How to add a module: `docs/modules.md`.
+- 2026-10-25: Options never covers the result (Ignas: "overlap", a screenshot of the Options pop-over
+  over the take's result card). In a lesson panel the Options pop-over shuts when a take starts
+  (Listen or Play), when a result comes up, and on a tap outside it (closing it this way saves it
+  closed, like a click). The result card starts where the stage starts (`--result-top`, set by
+  `keepResultClear` in `src/modules/piano/ui/players.ts`), so the controls row stays clear; Options
+  opened again over a result moves the card down below it. Outside the panels (the demo) the
+  drawer is unchanged.
