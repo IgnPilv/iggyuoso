@@ -1,0 +1,47 @@
+id: song-canon-easy-bass
+title: 'Pachelbel''s Canon, easy 1: the bass that goes round'
+skills:
+- songs
+steps:
+- explain: |
+    **Pachelbel's Canon** · Johann Pachelbel, around 1690
+
+    One of the most played pieces of music in the world: at weddings, in films, and under hundreds of pop songs. It
+    was written more than 300 years ago for three violins and a bass, and it is built in a very simple way: **eight
+    bass notes** that go round and round, while tunes float above them.
+
+    This is the easy version, moved to **C major** so every key is white. Five lessons build it: the bass, the
+    chords, the tune, both hands, then the whole piece. Later on there is the real Canon in D, with all its fast
+    notes.
+  staff:
+    notes: C3:h G2:h | A2:h E2:h | F2:h C3:h | F2:h G2:h
+    clef: bass
+  sound: C3:h G2:h | A2:h E2:h | F2:h C3:h | F2:h G2:h | C3+E5:h G2+D5:h | A2+C5:h E2+B4:h | F2+A4:h C3+G4:h | F2+A4:h G2+B4:h
+- explain: |
+    **A bass that repeats** is called a **ground bass** (or just a ground). Here it is: C G A E F C F G, two notes
+    a bar, four bars, then round again.
+
+    Left hand, fifth finger on the low E, thumb on C. The hand stays still: the fingers do the work. Every note is a
+    **half note**: two beats each, "one two, three four".
+  keys:
+    notes: E2 F2 G2 A2 C3
+    fingers: 5 4 3 2 1
+  terms:
+  - ground bass
+  - half note
+  callout: |
+    The ground: C G A E F C F G. Fingers 1 3 2 5 4 1 4 3.
+  check:
+    ask: How many beats does a half note last in 4/4?
+    choices:
+    - One
+    - Three
+    - Four
+    - Two
+    correct: 3
+    why: 'A half note is half of a whole note: two beats.'
+- exercise: song-canon-easy-bass-tap
+- exercise: song-canon-easy-bass-echo
+- exercise: song-canon-easy-bass-lh
+- exercise: song-canon-easy-bass-round
+recap: 'The ground: eight bass notes, C G A E F C F G, round and round.'

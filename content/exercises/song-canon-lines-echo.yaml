@@ -1,0 +1,24 @@
+id: song-canon-lines-echo
+title: 'Canon in D: the lines by ear'
+kind: ear
+prompt: Play each half-line back after hearing it.
+questions: 8
+reps: 2
+days: 1
+items:
+- type: melody
+  notes: F#5 E5 D5 C#5
+  plays: 3
+  lit: true
+- type: melody
+  notes: B4 A4 B4 C#5
+  plays: 3
+  lit: true
+- type: melody
+  notes: D5 C#5 B4 A4
+  plays: 3
+  lit: true
+- type: melody
+  notes: G4 F#4 G4 E4
+  plays: 3
+  lit: true

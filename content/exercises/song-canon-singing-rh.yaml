@@ -1,0 +1,16 @@
+id: song-canon-singing-rh
+title: 'Canon in D: the singing line'
+kind: timed
+hand: right
+prompt: 'Right hand alone. The scales use the D major fingering: thumb under after C♯ going up, finger 3 over going down.'
+display: staff
+key: D
+tempo: 48
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A5:e F#5:s G5:s A5:e F#5:s G5:s A5:s A4:s B4:s C#5:s D5:s E5:s F#5:s G5:s | F#5:e D5:s E5:s F#5:e F#4:s G4:s A4:s B4:s
+  A4:s G4:s A4:s F#4:s G4:s A4:s | G4:e B4:s A4:s G4:e F#4:s E4:s F#4:s E4:s D4:s E4:s F#4:s G4:s A4:s B4:s | G4:e B4:s A4:s
+  B4:e C#5:s D5:s A4:s B4:s C#5:s D5:s E5:s F#5:s G5:s A5:s
+reps: 3
+days: 2

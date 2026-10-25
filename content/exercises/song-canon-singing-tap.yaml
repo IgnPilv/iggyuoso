@@ -1,0 +1,13 @@
+id: song-canon-singing-tap
+title: 'Canon in D: the singing rhythm'
+kind: tap
+prompt: 'The rhythm on any key: long short short, long short short, then eight even sixteenths.'
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+rhythm: x:e x:s x:s x:e x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:s x:s x:e x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s
+  | x:e x:s x:s x:e x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:s x:s x:e x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s
+reps: 2
+days: 1

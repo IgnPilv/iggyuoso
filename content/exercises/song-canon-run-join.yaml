@@ -1,0 +1,18 @@
+id: song-canon-run-join
+title: 'Canon in D: eighths into the run'
+kind: timed
+hand: together
+prompt: Line 3 into the run, the left hand flowing in eighths. The speed doubles but the beat stays.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:e F#4:e A4:e G4:e F#4:e D4:e F#4:e E4:e | D4:e B3:e D4:e A4:e G4:e B4:e A4:e G4:e | D5:s C#5:s D5:s D4:s C#4:s A4:s
+  E4:s F#4:s D4:s D5:s C#5:s B4:s C#5:s F#5:s A5:s B5:s | G5:s F#5:s E5:s G5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G4:s F#4:s
+  E4:s G4:s F#4:s E4:s
+left: D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e | D2:e A2:e A2:e E3:e B2:e F#3:e
+  F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e
+reps: 3
+days: 2

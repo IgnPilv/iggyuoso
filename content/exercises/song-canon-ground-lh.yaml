@@ -1,0 +1,14 @@
+id: song-canon-ground-lh
+title: 'Canon in D: the ground'
+kind: timed
+hand: left
+prompt: Left hand, twice round. Even quarters, each note joined to the next; the low D in bar 2 is a jump of a fourth down.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q | D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q
+reps: 3
+days: 2

@@ -1,0 +1,16 @@
+id: song-canon-easy-bass-echo
+title: 'Pachelbel''s Canon, easy: the bass by ear'
+kind: ear
+prompt: Play each half of the bass back after hearing it. The lit keys are the ones it uses.
+questions: 6
+reps: 2
+days: 1
+items:
+- type: melody
+  notes: C3 G2 A2 E2
+  plays: 3
+  lit: true
+- type: melody
+  notes: F2 C3 F2 G2
+  plays: 3
+  lit: true

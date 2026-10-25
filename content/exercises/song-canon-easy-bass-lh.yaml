@@ -1,0 +1,14 @@
+id: song-canon-easy-bass-lh
+title: 'Pachelbel''s Canon, easy: the bass'
+kind: timed
+hand: left
+prompt: Left hand alone, fingers 1 3 2 5 4 1 4 3. Let every note ring its full two beats.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:h G2:h | A2:h E2:h | F2:h C3:h | F2:h G2:h
+fingers: 1 3 2 5 4 1 4 3
+reps: 3
+days: 2

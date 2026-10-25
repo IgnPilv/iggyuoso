@@ -636,3 +636,18 @@ never copied pages). Start small, adapt as we go.
   My songs pages show their staff without fingers. Options → Fingers (`settings.fingers`, unset = on,
   remembered like the other options) switches them off on the notes, the sheet and the lit keys. Demo scene
   "Fingers on the notes".
+- 2026-10-25: Pachelbel's Canon (public domain) as two songs taught in steps (Ignas: "add canon in d same as where is
+  my mind and cant help, a simple version for stage 2 progress and one for later"), our own arrangements in
+  `tools/content/canon.py`. **Pachelbel's Canon, easy** (`song-canon-easy`, stage 2, after milestone 1): moved to
+  **C major** so every key is white, 4/4 at 72; the ground C G A E F C F G in half notes (left hand in one stretched
+  position), close-shape chords, three lines of tune (two falling by step in half notes with one written hand shift each,
+  one in quarters in C position), all fingering written; five steps (the bass, the chords, the tune, both hands, the
+  whole piece of 17 bars). **Canon in D** (`song-canon`, stages 5–7, needs the stage 4 piece "Canon in D: the theme"):
+  D major, 4/4 at 60; the ground in quarters, then root and fifth in eighths; the lines in quarters, the eighth line,
+  the sixteenth run and the singing line (eighth and two sixteenths, then scales), the first lines again and a D chord
+  (19 bars); six steps (the ground and its chords with the I V vi iii progression by ear, the first lines and the canon
+  idea, the eighths, the run, the singing line, the whole canon in two versions plus a performance with a pedal change
+  on every bass note). Every step needs the milestone before its stage plus cross-branch nodes. The script checks that
+  tune notes starting with a bass note belong to its chord (the singing line's passing notes excepted) and that no key
+  is held by both hands. Play buttons in theory screens play both hands (`together`). The demo's "A song in steps"
+  scene already covers stepped songs, so it is unchanged.

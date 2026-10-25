@@ -1,0 +1,15 @@
+id: song-canon-eighths-lh
+title: 'Canon in D: the flowing ground'
+kind: timed
+hand: left
+prompt: 'Left hand: root and fifth in eighths, twice round. Light on the fifths.'
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e | D2:e A2:e A2:e E3:e B2:e F#3:e
+  F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e A2:e E3:e
+reps: 3
+days: 2

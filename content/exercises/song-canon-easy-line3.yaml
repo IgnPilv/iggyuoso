@@ -1,0 +1,14 @@
+id: song-canon-easy-line3
+title: 'Pachelbel''s Canon, easy: line 3'
+kind: timed
+hand: right
+prompt: Quarter notes, all in C position, thumb on C. Two notes to every bass note.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:q F4:q | E4:q C4:q E4:q D4:q | C4:q F4:q E4:q G4:q | F4:q C4:q D4:q G4:q
+fingers: 1 3 5 4 3 1 3 2 1 4 3 5 4 1 2 5
+reps: 3
+days: 2

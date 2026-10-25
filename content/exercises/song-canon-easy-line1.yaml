@@ -1,0 +1,14 @@
+id: song-canon-easy-line1
+title: 'Pachelbel''s Canon, easy: line 1'
+kind: timed
+hand: right
+prompt: 'Right hand: 5 4 3 2 1 from E to A, then slide the thumb onto G and play A and B with 2 and 3.'
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E5:h D5:h | C5:h B4:h | A4:h G4:h | A4:h B4:h
+fingers: 5 4 3 2 1 1 2 3
+reps: 3
+days: 1

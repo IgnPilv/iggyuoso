@@ -1,0 +1,15 @@
+id: song-canon-lines-1
+title: 'Canon in D: line 1 over the ground'
+kind: timed
+hand: together
+prompt: Both hands, note against note. Listen for each tune note sitting on its chord.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#5:q E5:q D5:q C#5:q | B4:q A4:q B4:q C#5:q
+left: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q
+reps: 3
+days: 1

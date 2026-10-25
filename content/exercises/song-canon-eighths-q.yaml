@@ -1,0 +1,15 @@
+id: song-canon-eighths-q
+title: 'Canon in D: line 3 over the ground'
+kind: timed
+hand: together
+prompt: Two right-hand notes to every bass note.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:e F#4:e A4:e G4:e F#4:e D4:e F#4:e E4:e | D4:e B3:e D4:e A4:e G4:e B4:e A4:e G4:e
+left: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q
+reps: 3
+days: 1

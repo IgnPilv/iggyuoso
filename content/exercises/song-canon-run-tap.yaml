@@ -1,0 +1,14 @@
+id: song-canon-run-tap
+title: 'Canon in D: sixteenths over the bass'
+kind: tap
+prompt: Right hand taps four to each beat, left hand one. Keep the four even.
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s
+  x:s x:s x:s
+left: x:q x:q x:q x:q | x:q x:q x:q x:q
+reps: 2
+days: 1

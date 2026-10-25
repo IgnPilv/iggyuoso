@@ -29,18 +29,18 @@ def N(id, branch, stage, title, requires=(), type=None, about=None):
     BASE.append(dict(id=id, branch=branch, stage=stage, title=title, requires=list(requires), type=type, lesson=id, about=about))
 exec(open(os.path.join(os.path.dirname(__file__), 'tree_base.py')).read())
 
-import patch, songs, ear, rhythm, technique, reading, theory, pieces, creativity, keys, milestones, compose, harmony, expression, wim, chfl, links
+import patch, songs, ear, rhythm, technique, reading, theory, pieces, creativity, keys, milestones, compose, harmony, expression, wim, chfl, canon, links
 for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones):
     if hasattr(m, 'run'): m.run(BASE)
 songs.write_songs()
 # Modules added later run after everything else, so older lessons keep their file numbers.
-for m in (compose, harmony, expression, wim, chfl):
+for m in (compose, harmony, expression, wim, chfl, canon):
     m.run(BASE)
 
 # Merge: generated nodes may replace base nodes of the same id.
 nodes = {n['id']: n for n in BASE}
 for n in lib.NODES: nodes[n['id']] = n
-for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones, compose, harmony, expression, wim, chfl, links):
+for m in (patch, ear, rhythm, technique, reading, theory, pieces, creativity, keys, songs, milestones, compose, harmony, expression, wim, chfl, canon, links):
     for f in getattr(m, 'TREE_EDITS', []): f(nodes)
 
 TITLES = {'technique': 'Technique', 'reading': 'Reading', 'rhythm': 'Rhythm', 'theory': 'Theory', 'ear': 'Ear',

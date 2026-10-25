@@ -1,0 +1,17 @@
+id: song-canon-eighths-both
+title: 'Canon in D: eighths in both hands'
+kind: timed
+hand: together
+prompt: Line 2 over the quarter ground, then line 3 with the left hand flowing in eighths.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:q C#5:q B4:q A4:q | G4:q F#4:q G4:q E4:q | D4:e F#4:e A4:e G4:e F#4:e D4:e F#4:e E4:e | D4:e B3:e D4:e A4:e G4:e
+  B4:e A4:e G4:e
+left: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q | D2:e A2:e A2:e E3:e B2:e F#3:e F#2:e C#3:e | G2:e D3:e D2:e A2:e G2:e D3:e
+  A2:e E3:e
+reps: 3
+days: 2

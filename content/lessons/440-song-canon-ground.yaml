@@ -1,0 +1,49 @@
+id: song-canon-ground
+title: 'Canon in D 1: the ground and its chords'
+skills:
+- songs
+steps:
+- explain: |
+    **Canon in D** · Johann Pachelbel, around 1690
+
+    Written for three violins and a bass (**basso continuo**: cello and harpsichord). The bass plays the same eight
+    notes 28 times; the violins play a **canon** above it, the second violin playing exactly what the first played two
+    bars earlier, the third two bars after that. The violins' tune changes every two bars: first long notes, then
+    quarters, eighths, sixteenths, and back.
+
+    On the piano we play the bass and the top line, in **D major**: two sharps, F♯ and C♯. Six lessons build it: the
+    ground, the first lines, the eighths, the sixteenth run, the singing line, then the whole canon.
+  staff:
+    notes: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q
+    clef: bass
+    key: D
+  sound: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q | D3+F#5:q A2+E5:q B2+D5:q F#2+C#5:q | G2+B4:q D2+A4:q G2+B4:q A2+C#5:q
+- explain: |
+    **The ground**: D A B F♯ G D G A, one quarter note each, two bars. Above every bass note sits a chord: D, A,
+    B minor, F♯ minor, G, D, G, A. In numerals **I V vi iii IV I IV V**. The bass falls a fourth, rises a step, and again:
+    down four, up two, a pattern you will hear under countless later songs.
+  staff:
+    notes: D3:q A2:q B2:q F#2:q | G2:q D2:q G2:q A2:q
+    clef: bass
+    key: D
+  sound: D3+F#3+A3+D4:q A2+E3+A3+C#4:q B2+F#3+B3+D4:q F#2+F#3+A3+C#4:q | G2+G3+B3+D4:q D2+F#3+A3+D4:q G2+G3+B3+D4:q A2+E3+A3+C#4:q
+  terms:
+  - ground bass
+  - canon
+  - basso continuo
+  - I V vi iii IV I IV V
+  callout: |
+    D A Bm F♯m G D G A: I V vi iii IV I IV V.
+  check:
+    ask: The chord on the third note of D major (F♯ A C♯) is...
+    choices:
+    - III, F♯ major
+    - vi, B minor
+    - V, A major
+    - iii, F♯ minor
+    correct: 3
+    why: 'F♯ to A is a minor third: a minor chord on the third degree, iii.'
+- exercise: song-canon-progression
+- exercise: song-canon-build
+- exercise: song-canon-ground-lh
+recap: 'The ground: D A B F♯ G D G A, I V vi iii IV I IV V, round and round.'

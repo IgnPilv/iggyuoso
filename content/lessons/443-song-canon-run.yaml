@@ -1,0 +1,28 @@
+id: song-canon-run
+title: 'Canon in D 4: the sixteenth run'
+skills:
+- songs
+steps:
+- explain: |
+    **The run**: sixteen sixteenths a bar, four to each bass note. It starts with a turn round D (D C♯ D), drops an
+    octave and springs back up, then climbs to the top B; in the second bar it pours down the scale from G to E.
+
+    Practise it in groups of four, one group to a bass note: stop on the first note of each group, then join two
+    groups, then all four.
+  staff:
+    notes: D5:s C#5:s D5:s D4:s C#4:s A4:s E4:s F#4:s D4:s D5:s C#5:s B4:s C#5:s F#5:s A5:s B5:s | G5:s F#5:s E5:s G5:s F#5:s
+      E5:s D5:s C#5:s B4:s A4:s G4:s F#4:s E4:s G4:s F#4:s E4:s
+    key: D
+  sound: D2+D5:s C#5:s A2+D5:s D4:s A2+C#4:s A4:s E3+E4:s F#4:s B2+D4:s D5:s F#3+C#5:s B4:s F#2+C#5:s F#5:s C#3+A5:s B5:s
+    | G2+G5:s F#5:s D3+E5:s G5:s D2+F#5:s E5:s A2+D5:s C#5:s G2+B4:s A4:s D3+G4:s F#4:s A2+E4:s G4:s E3+F#4:s E4:s
+  terms:
+  - sixteenth notes
+  - groups of four
+  - scale run
+  callout: |
+    Four sixteenths to each bass note: "1 e and a, 2 e and a".
+- exercise: song-canon-run-tap
+- exercise: song-canon-run-rh
+- exercise: song-canon-run-both
+- exercise: song-canon-run-join
+recap: 'The run: four sixteenths to each bass note, a turn, a leap, a scale.'
