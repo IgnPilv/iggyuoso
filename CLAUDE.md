@@ -780,7 +780,20 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   `content/README.md` no longer lists units and describes Practice mode instead of loop boxes, the
   curriculum's engine wish list is marked done, the beta proposal is marked historical. Rule: a PR
   that changes how something works updates its `docs/dev/` page.
-- 2026-10-25: Hourly idea 2, **Chord finder** (preview, waiting for Ignas's go / no-go). `#/chords`, linked
+- 2026-10-25: Note Rush, a mini game (idea #1 of the hourly ideas): `#/noterush`, a card on home. A
+  note shows on the staff (the next three faded after it); play it before its time bar runs out.
+  One-minute rounds; white keys from the clef (treble, bass, both on a grand staff) and level (C
+  position, the whole staff, with ledger lines). A streak shortens each note's time (6 s, −0.25 s a
+  note, at least 2 s) and raises its points (×1, +1 every five in a row, at most ×5); a wrong key
+  ends the streak. The result gives notes found, accuracy, middle time and the three slowest notes.
+  Best score per clef and level saved as `game.noterush` (synced). Engine `engine/noteRush.ts`
+  (tested), screen `ui/noteRush.ts`. Demo scene "Note Rush" (a 16 s round).
+  After Ignas's try ("make it slide via the sheet like guitar hero... the jumps are too hard to
+  see"): by default the notes slide along the staff, a gap apart, to a line at the left; a note
+  that reaches the line is missed, a gap takes the note's time, so a streak speeds the music up;
+  playing ahead is fine, and then the notes catch up until the next is a gap away (a gap per
+  0.3 s). "Notes jump in place" (the first version) stays as an option (`settings.noteRushMode`).
+- 2026-10-25: Hourly idea 2, **Chord finder** (Ignas: go, "for now implement all"). `#/chords`, linked
   from the Book and the Sketchbook: hold down any keys (or tap them on the picture, where a tapped key
   stays down until tapped again) and the page says what they make: the chord in words and as a symbol
   (triads, sus, sixths, sevenths, half-diminished, diminished seventh; the bass decides between two

@@ -1615,6 +1615,27 @@ body.focus-page main { max-width: none; padding: 0; }
   opacity: 0.9;
 }
 
+/* Note Rush (src/modules/piano/ui/noteRush.ts) */
+.rush-hud { justify-content: space-between; }
+.rush-streak { font-family: var(--font-mono); color: var(--brand-2); min-height: 1.4em; }
+.rush-time { font-family: var(--font-mono); }
+.rush-clock { font-size: 1.4rem; font-weight: 600; color: var(--ink); }
+.rush-bar { height: 6px; border-radius: 3px; background: var(--surface-sunken); overflow: hidden; margin: var(--space-2) 0; }
+.rush-fill { height: 100%; width: 0; background: var(--brand-gradient); }
+.rush-staff-wrap { display: flex; justify-content: center; }
+.rush-staff { width: min(100%, 420px); height: auto; }
+.rush-staff .note:not(.current) { opacity: 0.4; }
+.rush-keys { display: flex; justify-content: center; margin-top: var(--space-3); }
+.rush-card { margin: var(--space-3) 0; }
+.shake { animation: rush-shake 0.3s; }
+@keyframes rush-shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.home-game { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+.rush-scroll { width: min(100%, 640px); }
+.rush-line { stroke: var(--target); stroke-width: 3; stroke-linecap: round; opacity: 0.8; }
+.rush-staff .note.rush-note.leaving { transition: opacity 0.3s; opacity: 0; }
+.rush-note.hit .head { fill: var(--ok); stroke: var(--ok); }
+.rush-note.miss .head { fill: var(--bad); stroke: var(--bad); }
+.rush-staff .note.rush-note:not(.current):not(.leaving) { opacity: 0.75; }
 /* Chord finder (#/chords) */
 .chord-finder { display: grid; gap: var(--space-3); }
 .chord-big { margin: 0; font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; letter-spacing: -0.03em; color: var(--ink); min-height: 1.3em; }
