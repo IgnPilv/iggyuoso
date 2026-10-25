@@ -10,6 +10,7 @@ import { bookView } from './ui/bookView';
 import { demoView } from './ui/demoView';
 import { mySongsView } from './ui/mySongsView';
 import { pianoProfile } from './ui/profileView';
+import { pulseView } from './ui/pulseView';
 import { sketchbookView } from './ui/sketchbookView';
 import { todayView } from './ui/todayView';
 import { branchView, songsView, songView } from './ui/treePages';
@@ -59,6 +60,7 @@ export const piano: Module = {
     sketchbook: sketchbookView,
     mysongs: mySongsView,
     midi: testerView,
+    pulse: pulseView,
   },
   topLevel: true,
   nav: [

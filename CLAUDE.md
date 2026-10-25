@@ -780,3 +780,12 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   `content/README.md` no longer lists units and describes Practice mode instead of loop boxes, the
   curriculum's engine wish list is marked done, the beta proposal is marked historical. Rule: a PR
   that changes how something works updates its `docs/dev/` page.
+- 2026-10-25: Timing mirror (hourly idea 3, preview; merged only on Ignas's go). `#/pulse`, linked
+  from the Profile's Timing card and the Sketchbook: a metronome that listens. Tempo (±4, tap
+  tempo), beats in a bar (2, 3, 4, 6), presses on beats or beats and halves, silent bars (2 on 2
+  off, 3 on 1 off, 1 on 1 off). Each press is matched to the nearest beat after latency
+  (`engine/pulse.ts`, tested), hands split at middle C, a hand's chord counted once. Shown as dots
+  around "on the beat" (one row per hand, last 12, hollow in silent bars, ±150 ms or half a step),
+  a timeline of the last 40 presses, and per hand its lean and steadiness (from clicked bars, last
+  24) plus whether it rushed or dragged in the silent bars. Nothing is saved. Demo scene "Timing
+  mirror".
