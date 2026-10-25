@@ -1,6 +1,7 @@
 import { calibrate, type Calibration } from '../calibration';
 import type { Recorder } from '../engine/recorder';
 import type { TimedSession } from '../engine/timedSession';
+import type { WaitSession } from '../engine/waitSession';
 import type { FindSession, SequenceSession } from '../scoring/untimed';
 
 // Demo mode: the app runs on a virtual 88-key keyboard played by the demo pianist, so it can be
@@ -19,6 +20,8 @@ export const demo = {
   onTimed: undefined as ((s: TimedSession) => void) | undefined,
   onFind: undefined as ((s: FindSession) => void) | undefined,
   onSequence: undefined as ((s: SequenceSession) => void) | undefined,
+  /** Called when a practice round with Wait for me starts. */
+  onWait: undefined as ((s: WaitSession) => void) | undefined,
   /** Called by ear, quiz and build when a question is ready to answer. */
   onAsk: undefined as ((a: DemoAsk) => void) | undefined,
   /** Called when a check question in theory text is ready. */
@@ -48,6 +51,6 @@ export interface DemoAsk {
 
 export function stopDemo() {
   demo.active = false;
-  demo.onTimed = demo.onFind = demo.onSequence = demo.onRunEnd = demo.onRecord = demo.onAsk = demo.onCheck = undefined;
+  demo.onTimed = demo.onFind = demo.onSequence = demo.onWait = demo.onRunEnd = demo.onRecord = demo.onAsk = demo.onCheck = undefined;
   demo.midiFile = undefined;
 }

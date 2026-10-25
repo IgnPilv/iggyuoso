@@ -104,8 +104,9 @@ days: 2   # spread over at least two days
   `tempo`) or `tempoLadder: [60, 80, 100]`: the tempo starts on the player's step, three clean
   takes (92+) on it move up a step, two failed takes in a row move down. Every timed exercise (not echoes)
   also has Practice mode: the player picks bars on a slider (or on the sheet's bar lines) and they
-  go round until Stop; the result card suggests the bars with the most mistakes. Practice rounds
-  are not saved.
+  go round until Stop; the result card suggests the bars with the most mistakes. With Options →
+  Wait for me (not on taps) the music stops at each note or chord until its keys are pressed.
+  Practice rounds are not saved.
   `pedal: "x:h x:h | x:h x:h"`: the sustain pedal, in the bars of the notes. `x:<duration>` =
   pedal down for that long, pressed again at its start; `r:<duration>` = pedal up. Two `x` in a row
   is a change (legato pedal: lift as the new chord sounds, press just after). Scored per stretch:
