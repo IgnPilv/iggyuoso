@@ -10,7 +10,7 @@ import { chordSymbols, chordWords } from '../music/chordNames';
 import { chordFingers } from '../music/fingering';
 import { HandPlan } from '../music/handPlacement';
 import { isTieEnd, pitchToMidi, type Hand, type NoteToken } from '../music/notes';
-import { expectedDynamics, expectedNotes, expectedPedal, pickupOffset, totalBeats, type ExpectedNote } from '../music/timeline';
+import { beatMs, expectedDynamics, expectedNotes, expectedPedal, pickupOffset, totalBeats, type ExpectedNote } from '../music/timeline';
 import { demoProgress, mastery } from '../progress';
 import type { AttemptOutcome, Mastery, NodeState } from '../progress/mastery';
 import { CLEAN_SCORE, store, type Attempt, type RepsGoal, type RepsProgress, type Settings } from '../progress/store';
@@ -18,6 +18,7 @@ import { treeNodes } from '../content';
 import { RECORD_TEMPO_FRACTION } from '../scoring/stars';
 import type { TimedResult } from '../scoring/timed';
 import { COUNT_INS, TimedSession, type CountIn } from '../engine/timedSession';
+import { WaitSession, waitSummary } from '../engine/waitSession';
 import { climb, LADDER, LADDER_START, sliceBars, sliceMap, trickyBars, type LadderState } from '../engine/practice';
 import { rangeSlider, sheetRange, spanText, type BarSpan } from './barRange';
 import { FallingView, type Flash } from './falling';
@@ -504,7 +505,7 @@ const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 // Exercise options (tempo, click, guide notes, the Options drawer) carry over: what the player
 // picked last is where the next exercise starts. The demo keeps its own, never saved.
 let demoOptions: Partial<Settings> = {};
-type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen' | 'fingers' | 'hands' | 'chords'>;
+type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen' | 'fingers' | 'hands' | 'chords' | 'wait'>;
 export const exerciseOptions = (): ExerciseOptions => (demo.active ? { ...store.settings, ...demoOptions } : store.settings);
 export function setExerciseOptions(o: Partial<ExerciseOptions>) {
   if (demo.active) demoOptions = { ...demoOptions, ...o };
@@ -577,6 +578,11 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   // placeholders, nor in reading tests, where they would give the left hand's chords away.
   let chordsOn = settings.chords !== false;
   const chordable = !ex.tap && !ex.goal;
+  // Wait for me (Options, a Practice choice): the music stops at each note or chord until its keys
+  // are pressed. Not for taps, where the rhythm is the point.
+  const canWait = canPractise && !ex.tap;
+  let waitOn = canWait && settings.wait === true;
+  const waits = () => practising && waitOn;
   const hasHands = !!wholePlan?.hands.length;
   /** Drill tests of reading keep the keys dark while playing, so the hands stay off then too. */
   let handsHidden = false;
@@ -636,7 +642,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   const rounds = h('span', { class: 'rounds', 'aria-label': 'practice rounds' });
   const result = h('div', { class: 'result-slot' });
   const intro = () => (practising
-    ? `${ranged ? `Practice on ${spanText(span).toLowerCase()} of ${ex.bars}: drag the ends to pick the bars, then press Play.` : 'Practice: press Play.'} It goes round until Stop; nothing is saved.`
+    ? `${waits() ? 'Wait for me: the music stops at each note or chord until you play its keys. ' : ''}${ranged ? `Practice on ${spanText(span).toLowerCase()} of ${ex.bars}: drag the ends to pick the bars, then press Play.` : 'Practice: press Play.'} It goes round until Stop; nothing is saved.`
     : echo ? 'Press Play to hear the rhythm.' : 'Press Listen to hear it, then Play.');
   // The player's last pick wins over the ladder's step (the ladder line still says which counts).
   const startPercent = settings.tempo ?? (rungs ? rungs[ladder.rung] : 100);
@@ -675,6 +681,14 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     setExerciseOptions({ chords: chordsOn });
     buildView(view);
   });
+  const waitBox = h('input', { type: 'checkbox', checked: waitOn });
+  waitBox.addEventListener('change', () => {
+    waitOn = waitBox.checked;
+    setExerciseOptions({ wait: waitOn });
+    // Waiting is a way to practise: switching it on goes to Practice.
+    if (waitOn && !practising) setPractice(true);
+    else if (practising) { run?.cancel(); endLoop(); status.textContent = intro(); }
+  });
   metro.addEventListener('change', () => setExerciseOptions({ metronome: metro.checked }));
   guide.addEventListener('change', () => setExerciseOptions({ guide: guide.checked }));
   tempoSel.addEventListener('change', () => setExerciseOptions({ tempo: Number(tempoSel.value) }));
@@ -685,7 +699,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   // Scored takes count (records, clean takes, the ladder); Practice loops bars and saves nothing.
   const modeBtns = (['scored', 'practice'] as const).map((m) => h('button', {
     class: 'seg', 'data-mode': m, 'aria-pressed': String((m === 'practice') === practising),
-    title: m === 'scored' ? 'Takes count: score, stars, clean takes' : 'Loop the bars you pick; nothing is saved',
+    title: m === 'scored' ? 'Takes count: score, stars, clean takes' : 'Loop the bars you pick (Options → Wait for me stops at each note); nothing is saved',
   }, m === 'scored' ? 'Scored' : 'Practice'));
   const modeEl = h('div', { class: 'view-toggle mode-toggle', role: 'group', 'aria-label': 'mode' }, ...modeBtns);
   modeBtns.forEach((b) => b.addEventListener('click', () => setPractice(b.dataset.mode === 'practice')));
@@ -740,6 +754,17 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
   // In a lesson panel Options is a pop-over: it shuts when a take starts, so it never covers the music.
   let closeOptions = () => {};
+  /** The controls while a take runs (`on`) or after it. */
+  const lockControls = (on: boolean) => {
+    listenBtn.disabled = playBtn.disabled = on;
+    toggle.disable(on);
+    modeBtns.forEach((b) => { b.disabled = on; });
+    fingerBox.disabled = handBox.disabled = chordBox.disabled = waitBox.disabled = on;
+    stopBtn.disabled = on ? false : !looping;
+    pauseBtn.disabled = !on;
+    pauseBtn.textContent = 'Pause';
+    setRunning(on);
+  };
   /** `echoTurn`: the tap-back half of an echo, right after the app played the rhythm. */
   const start = (mode: 'listen' | 'play', echoTurn = false) => {
     closeOptions();
@@ -747,6 +772,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     clearTimeout(again);
     if (stale) { stale = false; target = makeTarget(); buildView(view); }
     looping = practising && mode === 'play';
+    if (mode === 'play' && waits()) { startWait(); return; }
     const t = target;
     const expected = t.expected;
     audio();
@@ -852,16 +878,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       kb?.clear('target');
       kb?.clearLabels();
       staff?.clear('current');
-      listenBtn.disabled = playBtn.disabled = false;
-      toggle.disable(false);
-      modeBtns.forEach((b) => { b.disabled = false; });
-      fingerBox.disabled = handBox.disabled = chordBox.disabled = false;
       handsHidden = false;
-      stopBtn.disabled = !looping;
-      pauseBtn.disabled = true;
-      pauseBtn.textContent = 'Pause';
       run = undefined;
-      setRunning(false);
+      lockControls(false);
     };
 
     // Space or the Pause button: the clock holds where it is; going on gives a bar to count back
@@ -959,16 +978,132 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       demo.onRunEnd?.('play');
     };
 
-    listenBtn.disabled = playBtn.disabled = true;
-    toggle.disable(true);
-    modeBtns.forEach((b) => { b.disabled = true; });
-    fingerBox.disabled = handBox.disabled = chordBox.disabled = true;
     handsHidden = !!ex.goal && mode === 'play';
-    stopBtn.disabled = pauseBtn.disabled = false;
-    setRunning(true);
+    lockControls(true);
     raf = requestAnimationFrame(frame);
     run = { cancel: stop, togglePause };
   };
+
+  /** A practice round with Wait for me: the music stops at each note or chord until its keys are pressed. */
+  function startWait() {
+    const t = target;
+    const expected = t.expected;
+    audio();
+    result.replaceChildren();
+    hud.replaceChildren();
+    flashes.length = 0;
+    staff?.clear('hit'); staff?.clear('miss'); staff?.clear('wrong');
+    const tempo = Math.round((ex.tempo * Number(tempoSel.value)) / 100);
+    // The first notes are seen falling for one beat of the meter, then the music waits for them.
+    const ws = new WaitSession(expected, t.devices, beatMs(tempo * ex.meter.pulse), performance.now() + 300, ex.meter.pulse);
+    demo.onWait?.(ws);
+    const names = (idx: number[]) => idx.map((i) => keyName(cal, t.devices[i])).join(' ');
+    let lastMessage = '';
+    const offNotes = midi.onNote((e) => {
+      if (e.type !== 'on') return;
+      const now = performance.now();
+      const j = ws.press(e.note, now);
+      const until = now + 700;
+      if (j.kind === 'wrong') {
+        flashes.push({ device: e.note, kind: 'wrong', text: '✗', until });
+        kb?.flash(e.note, 'wrong');
+        lastMessage = `Not ${keyName(cal, e.note)}`;
+      } else if (j.kind === 'hit') {
+        flashes.push({ device: e.note, kind: 'hit', text: '✓', until });
+        staff?.mark(t.key(expected[j.note]), 'hit');
+        lastMessage = '';
+      }
+    });
+    const countsEl = h('span', { class: 'live-counts' });
+    const msgEl = h('span', { class: 'live-msg' });
+    hud.append(countsEl, msgEl);
+    const roundText = `Round ${round + 1} · `;
+
+    let shown = ws.beat(performance.now());
+    let raf = 0;
+    let endAt = 0;
+    let lastHud = 0;
+    const frame = () => {
+      const now = performance.now();
+      const b = ws.beat(now);
+      // A step played ahead of the music makes it jump on: glide there instead.
+      shown = b - shown > 0.3 ? shown + (b - shown) * 0.25 : b;
+      const { pressed, remaining } = ws.stepKeys();
+      const stepBeat = ws.steps[ws.current]?.beat ?? Infinity;
+      // The hands sit just before the note being waited for.
+      const handBeat = Math.min(shown, stepBeat - 0.02);
+      falling?.draw({
+        beat: shown, handBeat, held: midi.held, noteState: (i) => ws.noteState(i), flashes, now,
+        done: new Set(pressed.map((i) => t.devices[i])), banner: ws.paused ? 'Paused' : undefined,
+      });
+      strip?.follow(Math.max(0, shown) + t.offset);
+      if (kb) {
+        kb.clear('target');
+        kb.clear('hit');
+        kb.clearLabels();
+        showHands(handBeat);
+        // Keys still to play are lit (with their finger), keys already pressed in this step turn green.
+        // Reading drills keep the keys dark, as in their scored takes.
+        if (!ex.goal) {
+          for (const i of remaining) kb.set(t.devices[i], 'target', true, expected[i].finger && fingersOn ? String(expected[i].finger) : '');
+          for (const i of pressed) kb.set(t.devices[i], 'hit');
+        }
+      }
+      staff?.clear('current');
+      for (const i of remaining) staff?.mark(t.key(expected[i]), 'current');
+      status.textContent = ws.paused ? 'Paused. Press Space or Resume to go on.'
+        : ws.done ? `${roundText}All played!`
+        : `${roundText}${ws.waiting(now) ? 'Waiting for' : 'Next'}: ${names(remaining)}${pressed.length ? `  ·  ✓ ${names(pressed)}` : ''}`;
+      if (now - lastHud > 100) {
+        lastHud = now;
+        const played = expected.filter((_, i) => ws.noteState(i) === 'hit').length;
+        const wrong = ws.result(now).wrong;
+        countsEl.textContent = `✓ ${played} of ${expected.length}${wrong ? `   ✗ ${wrong} wrong` : ''}`;
+        msgEl.textContent = lastMessage;
+      }
+      if (ws.done) {
+        endAt ||= now + 900;
+        if (now >= endAt) { finish(); return; }
+      }
+      raf = requestAnimationFrame(frame);
+    };
+
+    const stop = () => {
+      cancelAnimationFrame(raf);
+      offNotes();
+      kb?.clear('target');
+      kb?.clear('hit');
+      kb?.clearLabels();
+      staff?.clear('current');
+      handsHidden = false;
+      run = undefined;
+      lockControls(false);
+    };
+    const togglePause = () => {
+      const now = performance.now();
+      if (ws.done) return;
+      if (ws.paused) { ws.resume(now); pauseBtn.textContent = 'Pause'; setRunning(true); }
+      else { ws.pause(now); pauseBtn.textContent = 'Resume'; setRunning(false); }
+    };
+    const finish = () => {
+      stop();
+      const r = ws.result(performance.now());
+      hud.replaceChildren();
+      round++;
+      // The chip shows how many steps went without a wrong key.
+      const clean = r.steps ? Math.round((100 * r.cleanSteps) / r.steps) : 100;
+      rounds.append(h('span', { class: `round-chip ${clean >= 92 ? 's3' : clean >= 80 ? 's2' : clean >= 65 ? 's1' : 's0'}`, title: `Round ${round}: ${waitSummary(r)}` }, `${clean}%`));
+      while (rounds.childElementCount > 8) rounds.firstElementChild!.remove();
+      status.textContent = `Round ${round}: ${waitSummary(r)}. Again in a moment; Stop to finish.`;
+      again = window.setTimeout(() => start('play'), 2500);
+      demo.onRunEnd?.('play');
+    };
+
+    handsHidden = !!ex.goal;
+    lockControls(true);
+    raf = requestAnimationFrame(frame);
+    run = { cancel: stop, togglePause };
+  }
 
   listenBtn.onclick = () => start('listen');
   playBtn.onclick = () => start(echo ? 'listen' : 'play');
@@ -1014,7 +1149,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         h('label', {}, guide, ' Guide notes'),
         ex.tap ? '' : h('label', {}, fingerBox, ' Fingers'),
         hasHands ? h('label', {}, handBox, ' Hands (beta)') : '',
-        chordable && hasChords(ex) ? h('label', {}, chordBox, ' Chord names') : ''),
+        chordable && hasChords(ex) ? h('label', {}, chordBox, ' Chord names') : '',
+        canWait ? h('label', { title: 'Practice: the music stops at each note or chord until you play its keys' }, waitBox, ' Wait for me') : ''),
       canPractise ? h('p', { class: 'small drawer-note' }, ranged ? 'To loop some bars, switch to Practice and drag the ends of the bar slider (or the handles on the sheet).' : 'Practice plays it round and round, and saves nothing.') : ''));
   let quiet = false;
   drawer.addEventListener('toggle', () => { if (quiet) quiet = false; else setExerciseOptions({ optionsOpen: drawer.open }); });

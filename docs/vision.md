@@ -39,7 +39,8 @@ gorgeous design.
   tree and suggested by the lessons it fits. Several listen to free playing and say, hand by hand,
   where it was held back or hurried.
 - **Practise the hard bars.** Every played exercise has a Scored mode (takes count) and a Practice
-  mode that loops the bars picked on a slider, at any tempo, and saves nothing.
+  mode that loops the bars picked on a slider, at any tempo, and saves nothing; Wait for me makes
+  the music stop at each note or chord until it is played.
 - **See the music three ways.** Sheet music, Synthesia-style falling notes (with the sheet as a
   strip above), finger numbers, both hands drawn on the keys (beta), and chord names over the
   music.

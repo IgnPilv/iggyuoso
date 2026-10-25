@@ -57,7 +57,7 @@ where it would give an answer away (reading tests, taps).
 
 - **Players** (`ui/players.ts`): `mountExercise` picks a player by kind. The timed player holds the
   transport (Listen, Play, Pause, Stop), the Scored / Practice switch, the Options pop-over (tempo,
-  count-in, click, guide notes, fingers, hands, chord names), the live score and the result card.
+  count-in, click, guide notes, fingers, hands, chord names, Wait for me), the live score and the result card.
   Question kinds are in `ui/drills.ts`, improvising in `ui/improvise.ts`, the bar slider for
   practice in `ui/barRange.ts`.
 - **Lesson panels** (`lessonView` in `ui/views.ts`): a lesson fills the window as a column of

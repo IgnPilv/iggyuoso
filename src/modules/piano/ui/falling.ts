@@ -41,6 +41,8 @@ export interface FrameState {
   pedalDown?: boolean;
   /** Where the hands are drawn from, when it is not `beat` (step-by-step: just before the waiting note). */
   handBeat?: number;
+  /** Keys already played in the chord being waited for (Wait for me): lit green until it is complete. */
+  done?: ReadonlySet<number>;
 }
 
 // All colours come from the design tokens (styles/tokens.css) through palette().
@@ -390,6 +392,7 @@ export class FallingView {
     const wrong = new Set(s.flashes.filter((f) => f.kind !== 'hit' && f.until > s.now).map((f) => f.device));
     /** Fill and whether the key glows. */
     const fill = (m: number, k: KeyGeom): [string, boolean] => {
+      if (s.done?.has(m)) return [tokenColor('--ok'), true];
       if (s.held.has(m)) return wrong.has(m) ? [p.bad, true] : wanted.has(m) ? [handColors(p, wanted.get(m)!).fill, true] : [p.keyPressed, false];
       if (sounding.has(m)) return [handColors(p, sounding.get(m)!).key, true];
       if (s.marked?.has(m)) return [tokenColor(s.marked.get(m)!), false];
@@ -408,6 +411,22 @@ export class FallingView {
         ctx.strokeStyle = p.keyStroke;
         ctx.lineWidth = 1;
         ctx.stroke();
+        if (s.done?.has(m)) {
+          // A key of the chord being waited for that is already played: a tick in a dark chip, at the
+          // top of the key (the hands cover the rest), under the computer-keyboard letter if there is one.
+          const r = Math.max(5, Math.min(9, k.w * 0.36));
+          const cy = laneH + r + 4 + (computerKeys.enabled ? 14 : 0);
+          ctx.fillStyle = withAlpha(p.noteInk, 0.85);
+          ctx.beginPath();
+          ctx.arc(k.x + k.w / 2, cy, r, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = color;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.font = `700 ${Math.round(r * 1.4)}px ${p.fontDisplay}`;
+          ctx.fillText('✓', k.x + k.w / 2, cy + 0.5);
+          ctx.textBaseline = 'alphabetic';
+        }
         const hint = this.opts.labels !== 'middle-c' && computerKeys.enabled ? computerKeys.letterFor(m) : undefined;
         if (hint) {
           // The computer-keyboard letter that plays this key, near the top of the key.

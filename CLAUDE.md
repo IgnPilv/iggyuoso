@@ -982,6 +982,21 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   Sonata facile (Alberti bass), Bach's Prelude in C (chords written out, both hands), and the early
   songbook-lesson tunes as songs of their own (London Bridge, Frère Jacques, Au clair de la lune, Go Tell
   Aunt Rhody): 95 entries. `au-claire-fontaine` renamed `a-la-claire-fontaine` (no one had played it yet).
+- 2026-10-25: Wait for me (Ignas: "a mode in practice that just stops and waits and doesn't move until
+  the correct keys are pressed; it indicates which were pressed and which are remaining"). A checkbox
+  in Options, "Wait for me", in every timed exercise and song step but taps and echoes; it is a way
+  to practise, so ticking it switches to Practice, and it only changes Practice (Scored takes are as
+  before). Remembered like the other options (`settings.wait`, unset = off). A round runs on
+  `WaitSession` (`engine/waitSession.ts`, tested): notes starting on the same beat are one step; the
+  music moves at the tempo but stands still at each step until all its keys are pressed (any order,
+  one at a time is fine; playing ahead makes it jump on). The keys still to play are lit (orange on
+  the sheet), the ones pressed turn green (dimmed notes and a ✓ on the key in falling notes), wrong
+  keys flash red, and the status line names them ("Waiting for: G3 C5 · ✓ C3 E3"). No click,
+  count-in, guide notes, timing, pedal or dynamics; reading drills keep their keys dark. Works on
+  the bars picked with the slider, in both views and the phone's full screen, with MIDI, the computer
+  keyboard and tapped keys. Each round ends with notes, wrong keys, how often the music waited and
+  the time; the round chip is the share of steps with no wrong key. Nothing is saved. Duet's
+  follower was not reused (it follows tempo; this only gates on keys). Demo scene "Wait for me".
 - 2026-10-25: Sign in with Google (Ignas: "google sign in sounds better can we swap to it"; Supabase's
   built-in email sends about two links an hour). The Profile's Guest card leads with "Continue with
   Google"; "Use email instead" opens the old email-link form, kept as a fallback. OAuth with PKCE over

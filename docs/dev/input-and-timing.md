@@ -114,6 +114,19 @@ improvising) records with `Recorder` (`engine/recorder.ts`) on the same clock, a
 - **Practice mode** cuts the chosen bars out of the exercise as an exercise of their own
   (`sliceBars` in `engine/practice.ts`) and plays it round until Stop. `sliceMap` maps the slice's
   notes back to the whole piece so the sheet marks the right notes. Nothing is saved.
+- **Wait for me** (Options, practice only, not on taps; `settings.wait`, remembered like the other
+  options) runs a practice round on `WaitSession` (`engine/waitSession.ts`, tested in
+  `tests/waitSession.test.ts`) instead of `TimedSession`. Notes that start on the same beat (both
+  hands) are one step. The clock runs at the tempo but is capped at the step being waited for, so
+  the music stands still there until every key of the step has been pressed (in any order, one at a
+  time is fine; a key counts once pressed). A step played before the clock gets there makes the
+  clock jump on to it (the screen glides there). Wrong keys only flash and are counted; nothing is
+  timed, no click, no count-in, no guide notes, no pedal or dynamics. The screen shows the step's
+  keys still to play (lit, or orange on the sheet) and the ones already pressed (green on the
+  sheet and the drawn keyboard; dimmed notes and a ✓ on the key in falling notes), and the status
+  line names them ("Waiting for: G3 C5 · ✓ C3 E3"). A round ends with `waitSummary` (notes, wrong
+  keys, how often the music waited, time); the round chip shows the share of steps with no wrong
+  key. Pause holds the clock. The demo pianist's `playWait` plays along.
 - **The tempo ladder** (`climb`): three clean takes at the current step move up, two failed takes
   in a row move down. Saved per exercise as `ladder.<id>`.
 

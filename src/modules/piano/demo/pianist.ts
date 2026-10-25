@@ -1,6 +1,7 @@
 import { toDevice } from '../calibration';
 import type { Recorder } from '../engine/recorder';
 import type { TimedSession } from '../engine/timedSession';
+import type { WaitSession } from '../engine/waitSession';
 import { computerKeys } from '../midi/computerKeys';
 import { midi } from '../midi/input';
 import { fallingViewOf } from '../ui/falling';
@@ -243,6 +244,37 @@ export class Pianist {
       this.playNote(key, t, 200);
       t += gapMs;
     });
+  }
+
+  /**
+   * Plays a Wait for me round as the music reaches each note: mostly in time, but one wrong key,
+   * a long think (the music waits) and, where there is one, a chord found one key at a time.
+   */
+  playWait(s: WaitSession) {
+    const n = s.steps.length;
+    // The biggest chord after the first step is found one key at a time.
+    const most = Math.max(2, ...s.steps.slice(1).map((st) => st.notes.length));
+    const slowChord = s.steps.findIndex((st, k) => k >= 1 && st.notes.length === most);
+    const wrongStep = n >= 6 ? (slowChord === 3 ? 4 : 3) : -1;
+    const thinkStep = n >= 8 ? (slowChord === 6 ? 7 : 6) : -1;
+    let planned = -1;
+    const tick = () => {
+      if (s.done) return;
+      const k = s.current;
+      const step = s.steps[k];
+      const due = (step.beat - s.beat(performance.now())) * s.beatMs;
+      if (planned !== k && due < 40 && !s.paused) {
+        planned = k;
+        const keys = step.notes.map((i) => s.devices[i]);
+        const hold = Math.max(150, Math.min(...step.notes.map((i) => s.notes[i].beats)) * s.beatMs * 0.9);
+        if (k === slowChord) keys.forEach((key, j) => this.playNote(key, 500 + j * 700, hold + (keys.length - j) * 700));
+        else if (k === wrongStep) { this.playNote(nextWhite(keys[0]), 250, 200); this.playChord(keys, 1000, hold); }
+        else if (k === thinkStep) this.playChord(keys, 1600, hold);
+        else this.playChord(keys, 0, hold);
+      }
+      this.at(40, tick);
+    };
+    tick();
   }
 
   /** Plays the notes in order, stumbling once on the second note. */
