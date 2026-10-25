@@ -37,10 +37,11 @@ export const navLink = (item: NavItem) =>
   h('a', { href: `#/${item.href}`, title: item.label, 'aria-label': item.label }, iconEl(item.icon), h('span', { class: 'nav-label' }, item.label));
 
 /**
- * The module switcher: the open module's icon and name, opening a list of every module. Also
- * used by the demo with `onPick`, so picking there switches nothing.
+ * The module switcher: the open module's icon and name, opening a list of every module. Sample
+ * modules stay out of the header's list (they still open by address, and the demo shows them).
+ * Also used by the demo with `onPick`, so picking there switches nothing.
  */
-export function moduleSwitcher(current: Module, modules: Module[] = MODULES, onPick?: (m: Module) => void): HTMLElement {
+export function moduleSwitcher(current: Module, modules: Module[] = MODULES.filter((m) => !m.sample || m === current), onPick?: (m: Module) => void): HTMLElement {
   const btn = h('button', { class: 'module-btn', 'aria-haspopup': 'true', 'aria-expanded': 'false', title: `${current.name}: switch module` },
     iconEl(current.icon, 'module-icon'), h('span', { class: 'module-name' }, current.name), iconEl(CHEVRON, 'module-chevron'));
   const menu = h('div', { class: 'module-menu', role: 'menu', hidden: true },

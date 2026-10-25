@@ -11,7 +11,7 @@ steps:
     The numbers are the **same on both hands**: thumbs are always 1.
     Because the hands are mirror pictures, the left hand counts the other way on the keyboard:
     little finger 5 on the left, thumb 1 on the right.
-  keys: {notes: C3 D3 E3 F3 G3, labels: fingers, fingers: 5 4 3 2 1}
+  keys: {notes: F3 G3 A3 B3 C4, labels: fingers, fingers: 5 4 3 2 1}
   check:
     ask: Which finger is number 4?
     choices: [The middle finger, The ring finger, The little finger]
@@ -27,7 +27,9 @@ steps:
     Press the finger the app asks for. The other fingers stay on their keys.
 - {exercise: finger-drill-rh}
 - explain: |
-    Now the **left** hand. This time your **little finger (5)** is on the left and your thumb on the right.
+    Now the **left** hand, with its **thumb on middle C** and the other fingers on the white keys below it.
+    This time your **little finger (5)** is on the left and your thumb on the right.
+  keys: {notes: F3 G3 A3 B3 C4, labels: fingers, fingers: 5 4 3 2 1}
   check:
     ask: In the left hand, which finger plays the lowest key of the five?
     choices: ['1', '3', '5']

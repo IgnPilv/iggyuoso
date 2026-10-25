@@ -826,3 +826,18 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   a timeline of the last 40 presses, and per hand its lean and steadiness (from clicked bars, last
   24) plus whether it rushed or dragged in the silent bars. Nothing is saved. Demo scene "Timing
   mirror".
+- 2026-10-25: UX review, second round (Ignas: "yeah implement all so its better"). One tempo message: the
+  result card no longer says "Takes count at full tempo" and "Records count from N bpm" next to the
+  ladder; the clean-takes line says "Only takes from N bpm count toward them; this one was slow
+  practice", a clean take on a ladder step says so ("clean take at 60%, 2 of 3 to move up"), and the
+  ladder line adds "The lesson's clean takes count from 90%" while below it. The recap says "at 90% of
+  the full tempo or faster". In lesson panels the result card has "See the marks", which folds it
+  to its score in the corner so the marked sheet or notes show ("Show the result" opens it again;
+  each new result opens in full). The lesson's top button on the recap mirrors the recap's main
+  button (Play / Practise again until played through, then Next lesson). Phone upright: the
+  exercise controls are three slim rows (hand and Scored / Practice; the transport; Sheet /
+  Falling and Options), with short view labels. Among equally open lessons the path suggests the
+  one whose Book chapter comes first, so a new player starts at chapter 1 ("High and low") rather
+  than chapter 3. Finger numbers: the left hand is pictured where the drill puts it (thumb on
+  middle C). Sample modules (Sums) stay out of the header's switcher; they still open by address
+  and in the demo. Demo scene "A lesson in panels" folds and opens the result.

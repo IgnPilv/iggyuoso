@@ -43,7 +43,7 @@ export function lessonRecap(r: RecapInput): { body: HTMLElement[]; nav: HTMLElem
         today.length ? `Play ${withClean ? 'the others' : 'each'} until ${withClean ? 'each gets' : 'it gets'} one; you can also move on any time.` : 'You can move on any time.'}`, false];
   const status = h('div', { class: `banner recap-status${ok ? ' ok' : ''}` },
     h('p', {}, h('strong', {}, `${head} `), text),
-    h('p', { class: 'small' }, 'A clean take is ★★★ (92 or more) at full tempo. Some exercises want takes on different days, because a skill sticks after a night\'s sleep.'));
+    h('p', { class: 'small' }, 'A clean take is ★★★ (92 or more) at 90% of the full tempo or faster. Some exercises want takes on different days, because a skill sticks after a night\'s sleep.'));
 
   const list = h('ul', { class: 'reps-list recap-list' }, ...reps.map(({ e, p }) => {
     const row = [h('span', {}, p.done ? '✓ ' : '', exerciseTitle(e)), h('span', { class: 'reps-count' }, repsText(e, p))];
@@ -69,5 +69,6 @@ export function lessonRecap(r: RecapInput): { body: HTMLElement[]; nav: HTMLElem
     nav.push(next);
     if (again) { again.classList.add('secondary'); nav.push(again); }
   }
-  return { body: [recap, status, list], nav, forward: next as HTMLButtonElement };
+  // The top button mirrors the main one, so both say the same thing.
+  return { body: [recap, status, list], nav, forward: nav[0] as HTMLButtonElement };
 }

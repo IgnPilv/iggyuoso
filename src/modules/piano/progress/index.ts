@@ -1,4 +1,4 @@
-import { content, nodeOfLesson, pathLessons, songOf, treeNodes } from '../content';
+import { book, content, nodeOfLesson, pathLessons, songOf, treeNodes } from '../content';
 import type { TreeNode } from '../content/tree';
 import type { Exercise, Lesson } from '../content/types';
 import type { PlanInput } from './daily';
@@ -95,6 +95,9 @@ export function frontier(p: Progress = { store, mastery }): TreeNode[] {
     share.set(k, same.filter(through).length / same.length);
   }
   const order = [...treeNodes.keys()];
+  // Among equals, lessons that open with an earlier Book chapter come first, so a new player
+  // reads the Book from chapter 1.
+  const chapter = (n: TreeNode) => Math.min(...(book.byLesson.get(n.lesson!) ?? []).map((c) => c.n), Infinity);
   return nodes
     .filter((n) => !nodeDone(n, p) && p.mastery.state(n.id) !== 'locked')
     .sort((a, b) => a.stage - b.stage
@@ -102,6 +105,7 @@ export function frontier(p: Progress = { store, mastery }): TreeNode[] {
       || Number(a.type === 'checkpoint') - Number(b.type === 'checkpoint')
       || Number(last.has(a.id)) - Number(last.has(b.id))
       || share.get(key(a))! - share.get(key(b))!
+      || (chapter(a) === chapter(b) ? 0 : chapter(a) < chapter(b) ? -1 : 1)
       || order.indexOf(a.id) - order.indexOf(b.id));
 }
 
