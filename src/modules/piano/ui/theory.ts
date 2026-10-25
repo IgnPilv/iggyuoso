@@ -147,6 +147,7 @@ export function checkQuestion(c: TheoryCheck, cal: Calibration, onSolved: () => 
     const same = (a: number, b: number) => (c.pitchMatch === 'pitchClass' ? pitchClass(a) === pitchClass(b) : a === b);
     const [lo, hi] = keyWindow(cal, want);
     const kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
+    kb.playable();
     const offHeld = showHeld(kb);
     let at = 0;
     const offNote = midi.onNote((e) => {
@@ -191,6 +192,7 @@ export function playground(step: PlaygroundStep, cal: Calibration): TheoryBlock 
   const pg = step.playground;
   const [lo, hi] = keyWindow(cal, pg.range.map((p) => toDevice(cal, pitchToMidi(p))), 0);
   const kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
+  kb.playable();
   const offHeld = showHeld(kb);
   const staffBox = h('div');
   const name = h('p', { class: 'playground-name' }, 'Press any key.');

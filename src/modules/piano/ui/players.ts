@@ -5,6 +5,7 @@ import { generate } from '../engine/generate';
 import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
 import { computerKeys, typing } from '../midi/computerKeys';
+import { tapCount } from './tapKeys';
 import { chordSymbols, chordWords } from '../music/chordNames';
 import { chordFingers } from '../music/fingering';
 import { HandPlan } from '../music/handPlacement';
@@ -259,12 +260,14 @@ function findPlayer(root: HTMLElement, ex: FindExercise, cal: Calibration, onDon
     if (v === 'classic') {
       // No note names here: they would give the answer away.
       kb = new KeyboardView(cal.low, cal.high, { middleC: cal.middleC });
+      kb.playable();
       for (const k of found.keys()) kb.set(k, 'hit');
       const offHeld = showHeld(kb);
       stage.append(kb.el);
       stopView = offHeld;
     } else {
       const fv = new FallingView(cal.low, cal.high, cal, [], { lookahead: 4, barQuarters: 4, totalBeats: 0, labels: 'middle-c' });
+      fv.playable();
       stage.append(fv.el);
       const stop = animate((now) => fv.draw({
         beat: -100, held: midi.held, noteState: () => 'coming', flashes, now, marked: found, banner: ask.textContent ?? '',
@@ -379,6 +382,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
     staff = undefined;
     if (v === 'classic') {
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
+      kb.playable();
       pos.forEach((k) => kb!.set(k, 'pos'));
       staff = ex.display === 'staff' ? sequenceStaff(ex) : undefined;
       for (let i = 0; i < session.current; i++) staff?.mark(String(i), 'hit');
@@ -389,6 +393,7 @@ function sequencePlayer(root: HTMLElement, ex: SequenceExercise, cal: Calibratio
       // Wait mode: the next note falls to the keyboard and waits there until it is played.
       const notes = session.keys.map((device, i) => ({ device, beat: i, beats: 0.9, hand, finger: ex.fingers[i] }));
       const fv = new FallingView(lo, hi, cal, notes, { lookahead: 4, barQuarters: 1000, totalBeats: 0, hands });
+      fv.playable();
       // Reading exercises keep the music in view: a staff strip above the lane.
       staff = ex.display === 'staff' ? sequenceStaff(ex) : undefined;
       const strip = staff ? staffStrip(staff) : undefined;
@@ -611,12 +616,14 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         staff = sheet();
         strip = staffStrip(staff);
       }
+      falling.playable();
       stage.append(practising && slider ? slider.el : '', strip?.el ?? '', falling.el);
       offHeld = () => {};
       idle();
     } else {
       staff = sheet();
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
+      kb.playable();
       offHeld = showHeld(kb);
       stage.append(practising && slider ? slider.el : '', h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg), kb.el);
       showHands(-1);
@@ -756,6 +763,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     if (mode === 'listen' || (guide.checked && !echo)) for (const g of session.guide()) piano(g.midi, g.time, g.durMs);
     session.pedalStart(midi.pedalDown);
     if (mode === 'play') demo.onTimed?.(session);
+    const tapsAtStart = tapCount();
 
     let lastMessage = '';
     const offPedal = midi.onPedal((e) => session.pedalChange(e.down, e.time));
@@ -906,9 +914,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         demo.onRunEnd?.('play');
         return;
       }
-      if (session.wasPaused) {
-        // A take with a pause is practice: shown, never saved.
-        status.textContent = `${r.score}. A take with a pause is practice and is not saved; play it through without pausing to count it.`;
+      const tapped = tapCount() > tapsAtStart;
+      if (session.wasPaused || tapped) {
+        // A take with a pause, or with keys tapped on the screen, is practice: shown, never saved.
+        status.textContent = tapped
+          ? `${r.score}. Keys tapped on the screen are for trying things out, so this take is practice and is not saved; play it on the piano (or the computer keyboard) to count it.`
+          : `${r.score}. A take with a pause is practice and is not saved; play it through without pausing to count it.`;
         result.replaceChildren(timedResult(r, ex, cal));
         demo.onRunEnd?.('play');
         return;

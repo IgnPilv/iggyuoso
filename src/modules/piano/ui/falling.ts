@@ -7,6 +7,7 @@ import type { PedalSpan } from '../music/timeline';
 import { LEVELS, type DynamicSpan } from '../scoring/dynamics';
 import { palette, tokenColor, type Palette } from '../../../core/theme';
 import { handShape, paintBody } from './hands';
+import { bindTaps } from './tapKeys';
 
 // Synthesia-style view: notes fall towards the keyboard and reach it on their beat. Drawn on a
 // canvas every frame from the session clock; the view owns no timing of its own.
@@ -45,6 +46,10 @@ export interface FrameState {
 // All colours come from the design tokens (styles/tokens.css) through palette().
 const handColors = (p: Palette, hand: Hand) =>
   hand === 'right' ? { fill: p.rh, bright: p.rhBright, key: p.rhKey } : { fill: p.lh, bright: p.lhBright, key: p.lhKey };
+
+/** Canvas -> its view, so the demo can find where a key is drawn. */
+const VIEWS = new WeakMap<HTMLCanvasElement, FallingView>();
+export const fallingViewOf = (c: HTMLCanvasElement) => VIEWS.get(c);
 
 interface KeyGeom { x: number; w: number; black: boolean }
 
@@ -94,6 +99,40 @@ export class FallingView {
   destroy() {
     this.resize.disconnect();
     this.offKeys();
+    this.offTaps();
+  }
+
+  private offTaps = () => {};
+
+  /** Let the drawn keys be played with a mouse or a finger (see tapKeys.ts); the lane above them stays as it was. */
+  playable() {
+    this.offTaps();
+    VIEWS.set(this.canvas, this);
+    this.offTaps = bindTaps(this.canvas, (e) => this.keyAt(e.clientX, e.clientY), () => this.cal.offset);
+  }
+
+  /** Where on the screen a key can be tapped (its lower part), or undefined when it isn't drawn. */
+  keyPoint(m: number): { x: number; y: number } | undefined {
+    const k = this.keys.get(m);
+    if (!k) return undefined;
+    const r = this.canvas.getBoundingClientRect();
+    const kbH = this.height - this.laneH;
+    return { x: r.left + k.x + k.w / 2, y: r.top + this.laneH + kbH * (k.black ? 0.4 : 0.8) };
+  }
+
+  /** The key under a point on the screen, black keys first (they lie on top). */
+  keyAt(clientX: number, clientY: number): number | undefined {
+    const r = this.canvas.getBoundingClientRect();
+    const x = clientX - r.left;
+    const y = clientY - r.top;
+    const kbH = this.height - this.laneH;
+    if (y < this.laneH || y > this.height || x < 0 || x > this.width) return undefined;
+    let white: number | undefined;
+    for (const [m, k] of this.keys) {
+      if (x < k.x || x >= k.x + k.w) continue;
+      if (k.black) { if (y <= this.laneH + kbH * 0.62) return m; } else white = m;
+    }
+    return white;
   }
 
   private layout() {

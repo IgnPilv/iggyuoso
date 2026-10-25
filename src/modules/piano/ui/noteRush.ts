@@ -129,6 +129,7 @@ export const noteRushView: View = (root) => {
     const pool = rushPool(clefSel.value as RushClef, levelSel.value as RushLevel).map((m) => toDevice(cal, m));
     const [lo, hi] = keyWindow(cal, pool);
     kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal });
+    kb.playable();
     offHeld = showHeld(kb);
     kbBox.replaceChildren(kb.el);
   };

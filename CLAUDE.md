@@ -931,4 +931,14 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   says "Also try, in the practice room: ..." on its recap (at most two). Every page's heading
   carries "Practice room · Game" or "· Tool". Their addresses are unchanged. Demo scene "Practice
   room". How to add one: `docs/dev/how-to.md`.
-
+- 2026-10-25: Tap the keys on the screen (Ignas, on an ear question with a drawn keyboard: "on such
+  exercises allow to click the piano"). The keyboard picture and the falling notes' keys can be
+  played with a mouse or a finger (`ui/tapKeys.ts`, `KeyboardView.playable()` /
+  `FallingView.playable()`): a tap goes in through `midi.inject` (port "On-screen keys"), so it is an
+  answer wherever a key is, and sounds the sampled piano until the finger lifts; sliding along the
+  keys plays each one. On in every exercise kind, theory checks and the playground, Note Rush and
+  Play by ear (not the timing tools, nor the Chord finder, which has its own tap-to-hold). Untimed
+  answers by tap count as usual; a timed or improvised take with a tap is **practice** (shown, never
+  saved, like a paused take), since taps can't keep time like keys. Ear questions now ignore keys
+  pressed before Start (they used to answer the first question unheard). Demo scene "Tap the keys
+  on the screen" (the pianist taps, with a fingertip shown).

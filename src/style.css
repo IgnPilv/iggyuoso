@@ -1778,3 +1778,11 @@ body.focus-page main { max-width: none; padding: 0; }
 .room-blurb, .room-meta { grid-column: 1 / -1; color: var(--ink-2); }
 .room-meta { color: var(--muted); display: flex; align-items: center; gap: var(--space-2); }
 .room-recap { margin-top: var(--space-3); }
+
+/* Keys that can be played with a mouse or a finger (ui/tapKeys.ts). Swiping up or down still scrolls. */
+.tappable { touch-action: pan-y; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+.falling canvas.tappable { cursor: pointer; }
+/* The demo pianist's fingertip on a tapped key. */
+.demo-tap { position: fixed; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%; pointer-events: none; z-index: 100;
+  background: color-mix(in srgb, var(--brand-3) 45%, transparent); border: 2px solid var(--ink); animation: demo-tap 600ms ease-out forwards; }
+@keyframes demo-tap { from { transform: scale(0.6); opacity: 1; } to { transform: scale(1.4); opacity: 0; } }
