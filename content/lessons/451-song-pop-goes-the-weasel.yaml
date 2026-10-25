@@ -1,0 +1,24 @@
+id: song-pop-goes-the-weasel
+title: Pop! Goes the Weasel
+skills:
+- songs
+steps:
+- explain: |
+    **Pop! Goes the Weasel** · English song and dance, 1850s
+
+    Danced in London music halls in the 1850s. "Pop" was slang for pawning something, but nobody knows quite what the weasel was.
+  staff:
+    notes: C4:q C4:e D4:q D4:e  |  E4:e G4:e E4:e C4:q.
+  sound: C4:q C4:e D4:q D4:e  |  E4:e G4:e E4:e C4:q.  |  C4:q C4:e D4:q D4:e  |  E4:q. C4:q.
+- explain: |
+    **Before you play.** Two big beats a bar. The "Pop!" in bar 7 jumps up to A: the hand moves during the dotted quarter before it.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 6/8 · Tempo: 56
+- exercise: song-pop-goes-the-weasel-rh
+- exercise: song-pop-goes-the-weasel-lh
+- exercise: song-pop-goes-the-weasel
+- exercise: song-pop-goes-the-weasel-arranged
+- exercise: song-pop-goes-the-weasel-performance
+recap: 'Pop! Goes the Weasel: tune, left hand, together. Come back to it any time; songs are for fun.'

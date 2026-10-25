@@ -1,0 +1,14 @@
+id: song-morning-mood-lh
+title: 'Morning Mood: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: E
+tempo: 46
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: E3:h. | E3:h. | E3:h. | B2:q. E3:q. | E3:h. | E3:h. | E3:h. | B2:q. E3:q. | E3:h.
+reps: 2
+days: 1

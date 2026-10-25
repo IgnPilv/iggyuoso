@@ -1,0 +1,25 @@
+id: song-minuet-g-minor
+title: Minuet in G minor
+skills:
+- songs
+steps:
+- explain: |
+    **Minuet in G minor** · Christian Petzold, from Anna Magdalena Bach's notebook, 1725
+
+    The partner of the famous Minuet in G major, from the notebook Bach kept for his wife Anna Magdalena. For a long time both were thought to be by Bach himself.
+  staff:
+    notes: D5:q G4:e A4:e Bb4:e C5:e  |  D5:q G4:q G4:q
+    key: Gm
+  sound: D5:q G4:e A4:e Bb4:e C5:e  |  D5:q G4:q G4:q  |  Eb5:q C5:e D5:e Eb5:e F5:e  |  G5:q G4:q G4:q
+- explain: |
+    **Before you play.** G minor: B♭ and E♭ in the key, F♯ as the leading note.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G minor · Time: 3/4 · Tempo: 100
+- exercise: song-minuet-g-minor-rh
+- exercise: song-minuet-g-minor-lh
+- exercise: song-minuet-g-minor
+- exercise: song-minuet-g-minor-arranged
+- exercise: song-minuet-g-minor-performance
+recap: 'Minuet in G minor: tune, left hand, together. Come back to it any time; songs are for fun.'

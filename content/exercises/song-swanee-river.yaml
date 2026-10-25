@@ -1,0 +1,15 @@
+id: song-swanee-river
+title: Old Folks at Home (Swanee River)
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q. D4:e C4:e E4:e D4:e C4:e | C5:h A4:q C5:q | G4:h E4:q C4:q | D4:h. r:q | E4:q. D4:e C4:e E4:e D4:e C4:e | C5:h
+  A4:q C5:q | G4:q E4:q C4:q D4:q | C4:h. r:q
+left: C3:w | F2:w | C3:w | G2:w | C3:w | F2:w | C3:h G2:h | C3:w
+reps: 3
+days: 2

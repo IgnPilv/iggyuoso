@@ -1,0 +1,26 @@
+id: song-bridal-chorus
+title: Bridal Chorus
+skills:
+- songs
+steps:
+- explain: |
+    **Bridal Chorus** · Richard Wagner, "Lohengrin", 1850
+
+    "Here comes the bride": sung in Wagner's opera as the couple go to their room, and played at weddings ever since.
+  staff:
+    notes: G4:q  |  C5:q. C5:e C5:h
+  sound: G4:q  |  C5:q. C5:e C5:h  |  r:q G4:q D5:q. B4:e  |  C5:h. G4:q
+- explain: |
+    **Before you play.** Long-short (dotted quarter, eighth) in almost every bar: keep it stately, not jumpy.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 80
+- exercise: song-bridal-chorus-tap
+- exercise: song-bridal-chorus-by-ear
+- exercise: song-bridal-chorus-rh
+- exercise: song-bridal-chorus-lh
+- exercise: song-bridal-chorus
+- exercise: song-bridal-chorus-arranged
+- exercise: song-bridal-chorus-performance
+recap: 'Bridal Chorus: tune, left hand, together. Come back to it any time; songs are for fun.'

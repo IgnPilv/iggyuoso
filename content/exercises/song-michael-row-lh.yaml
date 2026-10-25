@@ -1,0 +1,13 @@
+id: song-michael-row-lh
+title: 'Michael, Row the Boat Ashore: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C3:w | F2:h C3:h | C3:h F2:h | C3:w | C3:w | G2:w | C3:h G2:h | C3:w
+reps: 2
+days: 1

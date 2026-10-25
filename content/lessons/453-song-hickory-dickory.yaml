@@ -1,0 +1,24 @@
+id: song-hickory-dickory
+title: Hickory Dickory Dock
+skills:
+- songs
+steps:
+- explain: |
+    **Hickory Dickory Dock** · English rhyme, 1744
+
+    One of the oldest English nursery rhymes: the mouse runs up the clock, the clock strikes one, the mouse runs down.
+  staff:
+    notes: E4:e F4:e  |  G4:q. A4:q G4:e
+  sound: E4:e F4:e  |  G4:q. A4:q G4:e  |  F4:q E4:e D4:q.  |  E4:q F4:e G4:q.
+- explain: |
+    **Before you play.** The left hand holds still while the tune climbs; bars 5 and 6 change chord halfway.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 6/8 · Tempo: 60
+- exercise: song-hickory-dickory-rh
+- exercise: song-hickory-dickory-lh
+- exercise: song-hickory-dickory
+- exercise: song-hickory-dickory-arranged
+- exercise: song-hickory-dickory-performance
+recap: 'Hickory Dickory Dock: tune, left hand, together. Come back to it any time; songs are for fun.'

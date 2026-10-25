@@ -1,0 +1,14 @@
+id: song-pop-goes-the-weasel-rh
+title: 'Pop! Goes the Weasel: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C4:q C4:e D4:q D4:e | E4:e G4:e E4:e C4:q. | C4:q C4:e D4:q D4:e | E4:q. C4:q. | C4:q C4:e D4:q D4:e | E4:e G4:e E4:e
+  C4:q. | A4:q. D4:q F4:e | E4:q. C4:q.
+reps: 2
+days: 1

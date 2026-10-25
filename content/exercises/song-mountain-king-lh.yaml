@@ -1,0 +1,14 @@
+id: song-mountain-king-lh
+title: 'In the Hall of the Mountain King: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Am
+tempo: 96
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: A1+C2+E2:w | B1+E2+G#2:w | C2+E2+A2:w | C2+E2+G2:w | C2+E2+A2:w | B1+E2+G#2:w | C2+E2+A2:w | C2+E2+G2:w | C2+E2+A2:w
+reps: 2
+days: 1

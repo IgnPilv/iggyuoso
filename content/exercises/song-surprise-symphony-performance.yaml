@@ -1,0 +1,14 @@
+id: song-surprise-symphony-performance
+title: 'Surprise Symphony: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 84
+meter: 2/4
+countIn: 1
+right: C4:e C4:e E4:e E4:e | G4:e G4:e E4:q | F4:e F4:e D4:e D4:e | B3:e B3:e G3:q | C4:e C4:e E4:e E4:e | G4:e G4:e E4:q
+  | F4:e F4:e D4:e D4:e | B3:e B3:e G3:q
+left: C2+E2+G2:h | C2+E2+G2:h | B1+D2+G2:h | B1+D2+G2:h | C2+E2+G2:h | C2+E2+G2:h | B1+D2+G2:h | B1+D2+G2:h
+reps: 2
+days: 2

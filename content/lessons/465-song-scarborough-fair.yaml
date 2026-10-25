@@ -1,0 +1,26 @@
+id: song-scarborough-fair
+title: Scarborough Fair
+skills:
+- songs
+steps:
+- explain: |
+    **Scarborough Fair** · English ballad, 1600s and older
+
+    An old riddle song: a lover sets impossible tasks, like a shirt sewn without a needle. It is in the Dorian mode, D minor with a B natural (bar 7), which gives it its misty sound.
+  staff:
+    notes: D4:h D4:q  |  A4:h A4:q
+    key: Dm
+  sound: D4:h D4:q  |  A4:h A4:q  |  E4:q. F4:e E4:q  |  D4:h.
+- explain: |
+    **Before you play.** D minor with one flat, but this tune has B natural in bar 7: the Dorian sixth.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 3/4 · Tempo: 92
+- exercise: song-scarborough-fair-tap
+- exercise: song-scarborough-fair-rh
+- exercise: song-scarborough-fair-lh
+- exercise: song-scarborough-fair
+- exercise: song-scarborough-fair-arranged
+- exercise: song-scarborough-fair-performance
+recap: 'Scarborough Fair: tune, left hand, together. Come back to it any time; songs are for fun.'

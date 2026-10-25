@@ -1,0 +1,15 @@
+id: song-kuckuck-rh
+title: 'Kuckuck, Kuckuck, ruft''s aus dem Wald: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: F
+tempo: 108
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: C5:h A4:q | C5:h A4:q | G4:q F4:q G4:q | F4:h. | G4:h G4:q | A4:h A4:q | Bb4:q A4:q Bb4:q | C5:h. | C5:h A4:q | C5:h
+  A4:q | Bb4:q A4:q G4:q | F4:h.
+reps: 2
+days: 1

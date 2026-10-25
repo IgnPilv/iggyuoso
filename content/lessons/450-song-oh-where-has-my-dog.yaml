@@ -1,0 +1,27 @@
+id: song-oh-where-has-my-dog
+title: Oh Where, Oh Where Has My Little Dog Gone?
+skills:
+- songs
+steps:
+- explain: |
+    **Oh Where, Oh Where Has My Little Dog Gone?** · Septimus Winner, 1864, on the tune "Ach, du lieber Augustin"
+
+    The Viennese tune "Ach, du lieber Augustin" is about a bagpiper said to have survived the plague of 1679. In English it became a song about a lost dog.
+  staff:
+    notes: F4:q. G4:e F4:q  |  E4:q D4:q C4:q
+    key: F
+  sound: F4:q. G4:e F4:q  |  E4:q D4:q C4:q  |  D4:q G4:q G4:q  |  E4:q C4:q C4:q
+- explain: |
+    **Before you play.** F major: remember B♭ (it does not come up in the tune, but the left hand uses it in C7).
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 3/4 · Tempo: 120
+- exercise: song-oh-where-has-my-dog-tap
+- exercise: song-oh-where-has-my-dog-by-ear
+- exercise: song-oh-where-has-my-dog-rh
+- exercise: song-oh-where-has-my-dog-lh
+- exercise: song-oh-where-has-my-dog
+- exercise: song-oh-where-has-my-dog-arranged
+- exercise: song-oh-where-has-my-dog-performance
+recap: 'Oh Where, Oh Where Has My Little Dog Gone?: tune, left hand, together. Come back to it any time; songs are for fun.'

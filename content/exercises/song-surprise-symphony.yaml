@@ -1,0 +1,15 @@
+id: song-surprise-symphony
+title: Surprise Symphony
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C4:e C4:e E4:e E4:e | G4:e G4:e E4:q | F4:e F4:e D4:e D4:e | B3:e B3:e G3:q | C4:e C4:e E4:e E4:e | G4:e G4:e E4:q
+  | F4:e F4:e D4:e D4:e | B3:e B3:e G3:q
+left: C3:h | C3:h | G2:h | G2:h | C3:h | C3:h | G2:h | G2:h
+reps: 3
+days: 2

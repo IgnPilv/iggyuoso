@@ -1,0 +1,14 @@
+id: song-alle-meine-entchen-performance
+title: 'Alle meine Entchen: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 100
+meter: 4/4
+countIn: 1
+right: C4:e D4:e E4:e F4:e G4:q G4:q | A4:e A4:e A4:e A4:e G4:h | A4:e A4:e A4:e A4:e G4:h | F4:e F4:e F4:e F4:e E4:q E4:q
+  | D4:e D4:e D4:e D4:e C4:h
+left: C3+G3:w | F2+C3:h C3+G3:h | F2+C3:h C3+G3:h | G2+D3:h C3+G3:h | G2+D3:h C3+G3:h
+reps: 2
+days: 2

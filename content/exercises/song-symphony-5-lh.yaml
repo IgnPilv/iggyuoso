@@ -1,0 +1,14 @@
+id: song-symphony-5-lh
+title: 'Symphony No. 5: the opening: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Cm
+tempo: 108
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: C3+Eb3+G3:h | C3+Eb3+G3:h | B2+D3+G3:h | B2+D3+G3:h | C3+Eb3+G3:h | C3+Eb3+Ab3:h | C3+Eb3+G3:h | C3+Eb3+G3:h
+reps: 2
+days: 1

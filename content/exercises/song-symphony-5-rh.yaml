@@ -1,0 +1,15 @@
+id: song-symphony-5-rh
+title: 'Symphony No. 5: the opening: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Cm
+tempo: 108
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: r:e G4:e G4:e G4:e | Eb4:h | r:e F4:e F4:e F4:e | D4:h | r:e G4:e G4:e G4:e | Eb4:e Ab4:e Ab4:e Ab4:e | G4:e Eb5:e
+  Eb5:e Eb5:e | C5:h
+reps: 2
+days: 1

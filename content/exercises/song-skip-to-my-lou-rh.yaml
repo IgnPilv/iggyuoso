@@ -1,0 +1,14 @@
+id: song-skip-to-my-lou-rh
+title: 'Skip to My Lou: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:q C4:q C4:q E4:q | G4:h G4:h | D4:q B3:q B3:q D4:q | F4:h F4:h | E4:q C4:q C4:q E4:q | G4:h G4:h | D4:q E4:q F4:q
+  E4:q | D4:h C4:h
+reps: 2
+days: 1

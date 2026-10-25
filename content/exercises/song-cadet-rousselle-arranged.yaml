@@ -1,0 +1,17 @@
+id: song-cadet-rousselle-arranged
+title: Cadet Rousselle, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: G
+tempo: 108
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: G4:q G4:q G4:q D4:q | B4:q B4:q B4:q G4:q | C5:q C5:q B4:q A4:q | G4:h D4:h | G4:q G4:q G4:q D4:q | B4:q B4:q B4:q
+  G4:q | C5:q A4:q B4:q A4:q | G4:h G4:h
+left: D3+G3+B3:w | D3+G3+B3:w | C3+E3+G3:h B2+D3+G3:h | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:h A2+D3+F#3:h
+  | B2+D3+G3:w
+reps: 3
+days: 2

@@ -1,0 +1,14 @@
+id: song-entertainer-lh
+title: 'The Entertainer: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 76
+tempoLadder: true
+meter: 2/4
+pickup: s s
+countIn: 1
+left: r:e | C3:h | C3:h | C3:q G2:q | C3:h | C3:h | C3:q D3:q | G2:h | G2:h | C3:h | C3:h | C3:q G2:q | C3:q.
+reps: 2
+days: 1

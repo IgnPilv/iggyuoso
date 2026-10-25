@@ -1,0 +1,19 @@
+id: song-sakura-performance
+title: 'Sakura, Sakura: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Am
+tempo: 66
+meter: 4/4
+countIn: 1
+right: A4:q A4:q B4:h | A4:q A4:q B4:h | A4:q B4:q C5:q B4:q | A4:q B4:e A4:e F4:h | E4:q C4:q E4:q F4:q | E4:q E4:e C4:e
+  B3:h | A4:q B4:q C5:q B4:q | A4:q B4:e A4:e F4:h | E4:q C4:q E4:q F4:q | E4:q E4:e C4:e B3:h | A4:q A4:q B4:h | A4:q A4:q
+  B4:h | E4:q F4:q B4:e A4:e F4:q | E4:w
+left: A1:q C2+E2:q E2:q C2+E2:q | A1:q C2+E2:q E2:q C2+E2:q | A1:q C2+E2:q E2:q C2+E2:q | D2:q F2:q A2:q F2:q | A1:q C2+E2:q
+  E2:q C2+E2:q | E2:q G#2:q B2:q G#2:q | A1:q C2+E2+A2:q E2:q C2+E2+A2:q | D2:q F2+A2:q A2:q F2+A2:q | A1:q C2+E2+A2:q E2:q
+  C2+E2+A2:q | E2:q G#2:q B2:q G#2:q | A1:q C2+E2+A2:q E2:q C2+E2+A2:q | A1:q C2+E2+A2:q E2:q C2+E2+A2:q | D2:q F2+A2:q A2:q
+  F2+A2:q | B1+E2+G#2:w
+reps: 2
+days: 2

@@ -1,0 +1,11 @@
+id: song-symphony-5-tap
+title: 'Symphony No. 5: the opening: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 108
+meter: 2/4
+countIn: 1
+rhythm: r:e x:e x:e x:e | x:h | r:e x:e x:e x:e | x:h | r:e x:e x:e x:e | x:e x:e x:e x:e | x:e x:e x:e x:e | x:h
+reps: 2
+days: 1

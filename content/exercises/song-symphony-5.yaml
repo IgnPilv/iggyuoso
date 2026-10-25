@@ -1,0 +1,16 @@
+id: song-symphony-5
+title: 'Symphony No. 5: the opening'
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Cm
+tempo: 108
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: r:e G4:e G4:e G4:e | Eb4:h | r:e F4:e F4:e F4:e | D4:h | r:e G4:e G4:e G4:e | Eb4:e Ab4:e Ab4:e Ab4:e | G4:e Eb5:e
+  Eb5:e Eb5:e | C5:h
+left: C3+Eb3+G3:h | C3+Eb3+G3:h | B2+D3+G3:h | B2+D3+G3:h | C3+Eb3+G3:h | C3+Eb3+Ab3:h | C3+Eb3+G3:h | C3+Eb3+G3:h
+reps: 3
+days: 2

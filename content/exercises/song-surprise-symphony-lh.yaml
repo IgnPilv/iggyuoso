@@ -1,0 +1,13 @@
+id: song-surprise-symphony-lh
+title: 'Surprise Symphony: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: C3:h | C3:h | G2:h | G2:h | C3:h | C3:h | G2:h | G2:h
+reps: 2
+days: 1

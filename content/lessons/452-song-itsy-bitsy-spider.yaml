@@ -1,0 +1,24 @@
+id: song-itsy-bitsy-spider
+title: The Itsy Bitsy Spider
+skills:
+- songs
+steps:
+- explain: |
+    **The Itsy Bitsy Spider** · Children's song, America, 1910s
+
+    A finger-play song: little hands climb like the spider, wiggle down as the rain, and open wide for the sun.
+  staff:
+    notes: G3:e  |  C4:q C4:e C4:q D4:e
+  sound: G3:e  |  C4:q C4:e C4:q D4:e  |  E4:q. E4:q E4:e  |  D4:q C4:e D4:q E4:e
+- explain: |
+    **Before you play.** Count "1 2 3 4 5 6", with the beats on 1 and 4. Each line ends with a long note and a rest: lift and breathe.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 6/8 · Tempo: 58
+- exercise: song-itsy-bitsy-spider-rh
+- exercise: song-itsy-bitsy-spider-lh
+- exercise: song-itsy-bitsy-spider
+- exercise: song-itsy-bitsy-spider-arranged
+- exercise: song-itsy-bitsy-spider-performance
+recap: 'The Itsy Bitsy Spider: tune, left hand, together. Come back to it any time; songs are for fun.'

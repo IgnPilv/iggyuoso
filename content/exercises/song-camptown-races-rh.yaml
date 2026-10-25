@@ -1,0 +1,15 @@
+id: song-camptown-races-rh
+title: 'Camptown Races: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 108
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: G4:e G4:e E4:e G4:e | A4:e G4:e E4:q | E4:e D4:q. | E4:e D4:q. | G4:e G4:e E4:e G4:e | A4:e G4:e E4:q | D4:e D4:e E4:e
+  D4:e | C4:h | C4:e. C4:s E4:e G4:e | C5:h | A4:e. A4:s C5:e A4:e | G4:h | G4:e G4:e E4:e E4:e | G4:e G4:e E4:q | D4:e D4:e
+  E4:e D4:e | C4:h
+reps: 2
+days: 1

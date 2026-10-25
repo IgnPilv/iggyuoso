@@ -1,0 +1,19 @@
+id: song-jesu-joy
+title: Jesu, Joy of Man's Desiring
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:e3 A4:e3 B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3 | G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3 | D5:e3
+  E5:e3 D5:e3 C5:e3 B4:e3 A4:e3 B4:e3 G4:e3 F#4:e3 | G4:e3 A4:e3 D4:e3 F#4:e3 A4:e3 C5:e3 B4:e3 A4:e3 B4:e3 | G4:e3 A4:e3
+  B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3 | G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3 | D5:e3 E5:e3 D5:e3 C5:e3
+  B4:e3 A4:e3 B4:e3 G4:e3 F#4:e3 | G4:h.
+left: D3+G3+B3:h. | D3+G3+B3:h. | C3+E3+G3:q. A2+D3+F#3:q. | A2+D3+F#3:q. B2+D3+G3:q. | B2+D3+G3:h. | B2+D3+G3:h. | C3+E3+G3:q.
+  A2+D3+F#3:q. | B2+D3+G3:h.
+reps: 3
+days: 2

@@ -1,0 +1,14 @@
+id: song-kuckuck-lh
+title: 'Kuckuck, Kuckuck, ruft''s aus dem Wald: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 108
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: F2:h. | F2:h. | C3:q. F2:q. | F2:h. | C3:h. | F2:h. | C3:q. F2:q. | F2:h. | F2:h. | F2:h. | C3:h. | F2:h.
+reps: 2
+days: 1

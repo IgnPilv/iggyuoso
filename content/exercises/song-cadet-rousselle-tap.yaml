@@ -1,0 +1,12 @@
+id: song-cadet-rousselle-tap
+title: 'Cadet Rousselle: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 108
+meter: 4/4
+countIn: 1
+rhythm: x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q | x:q x:q x:q x:q | x:q x:q x:q x:q
+  | x:h x:h
+reps: 2
+days: 1
