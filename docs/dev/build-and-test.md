@@ -51,7 +51,8 @@ Pull requests labelled `preview` are also built into the same deployment, each a
 
 The build uses a relative base (`vite.config.ts`) and hash addresses, so the same files work on
 GitHub Pages under `/iggyuoso/` and locally. Fonts are bundled from npm; piano samples are in
-`public/piano/`.
+`public/piano/`. The build also fills the site's address into `index.html` and writes
+`robots.txt` and `sitemap.xml` (`SITE_URL` in `vite.config.ts`; see [seo.md](seo.md)).
 
 ## How changes are made
 

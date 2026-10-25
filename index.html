@@ -4,8 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#08070d" />
-    <title>iggyuoso</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff6a3d'/><stop offset='.5' stop-color='%23ff3d8b'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><rect x='14' y='14' width='9' height='36' rx='4.5' fill='white'/><rect x='27.5' y='14' width='9' height='24' rx='4.5' fill='white'/><rect x='41' y='14' width='9' height='36' rx='4.5' fill='white'/></svg>" />
+    <title>iggyuoso: learn piano in your browser with a MIDI keyboard</title>
+    <!-- Search and share tags (docs/dev/seo.md). __SITE_URL__ is filled in by vite.config.ts. -->
+    <meta name="description" content="Free piano lessons in your browser for adult beginners with a MIDI keyboard. Short exercises score each hand, with falling notes, sheet music, ear training and theory." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="__SITE_URL__" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="iggyuoso" />
+    <meta property="og:title" content="iggyuoso: learn piano in your browser. Easy as C D E." />
+    <meta property="og:description" content="A free piano trainer for your MIDI keyboard: short exercises with each hand scored, falling notes and sheet music, ear training, theory and songs." />
+    <meta property="og:url" content="__SITE_URL__" />
+    <meta property="og:image" content="__SITE_URL__og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="iggyuoso: learn piano in your browser. Easy as C D E. A keyboard with falling notes for the left and right hand." />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="iggyuoso: learn piano in your browser. Easy as C D E." />
+    <meta name="twitter:description" content="A free piano trainer for your MIDI keyboard: short exercises with each hand scored, falling notes and sheet music, ear training, theory and songs." />
+    <meta name="twitter:image" content="__SITE_URL__og-image.png" />
+    <meta name="twitter:image:alt" content="iggyuoso: learn piano in your browser. Easy as C D E." />
+    <meta name="application-name" content="iggyuoso" />
+    <meta name="apple-mobile-web-app-title" content="iggyuoso" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "__SITE_URL__#website",
+            "name": "iggyuoso",
+            "url": "__SITE_URL__",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "__SITE_URL__#app",
+            "name": "iggyuoso",
+            "alternateName": "iggyuoso piano trainer",
+            "url": "__SITE_URL__",
+            "image": "__SITE_URL__og-image.png",
+            "description": "A free, browser-based piano trainer for adult beginners with a MIDI keyboard. Short exercises train one skill at a time, score each hand separately and say which hand or habit slipped. Falling notes and sheet music, music theory, ear training, rhythm, improvising and songs, on a growing mastery tree.",
+            "applicationCategory": "EducationalApplication",
+            "applicationSubCategory": "Piano lessons",
+            "operatingSystem": "Any (web browser)",
+            "browserRequirements": "Requires JavaScript. A MIDI keyboard needs Web MIDI (Chrome, Edge, Opera or Firefox); a computer-keyboard mode works anywhere.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "audience": { "@type": "EducationalAudience", "educationalRole": "student", "audienceType": "Adult beginners" },
+            "educationalLevel": "Beginner to intermediate",
+            "teaches": ["Playing the piano", "Reading sheet music", "Rhythm", "Music theory", "Ear training", "Improvising and composing"],
+            "featureList": [
+              "Plays with any USB or Bluetooth MIDI keyboard through Web MIDI",
+              "Each hand scored separately, with timing and habit feedback",
+              "Falling notes and sheet music views",
+              "Music theory textbook with 65 chapters",
+              "Ear training from zero",
+              "Songs taught in steps and MIDI file import",
+              "Practice room with games and tools"
+            ],
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "isPartOf": { "@id": "__SITE_URL__#website" }
+          }
+        ]
+      }
+    </script>
     <script>
       // Resolve the theme before first paint so there is no flash (logic mirrors src/core/theme.ts).
       (function () {
@@ -18,6 +84,46 @@
   </head>
   <body>
     <div id="app"></div>
+    <!-- About iggyuoso: plain HTML, so search engines and link previews can read what the site is
+         without running the app. Shown under the home page only (src/app/shell.ts). -->
+    <section id="about" class="site-about" aria-labelledby="about-title">
+      <h2 id="about-title">Learn piano in your browser with a MIDI keyboard</h2>
+      <p>
+        iggyuoso is a free piano trainer for adult beginners, including people who think they are
+        "not musical". Plug a MIDI keyboard into your computer, open the site in your browser and
+        start playing: there is nothing to install and no account is needed.
+      </p>
+      <p>
+        It is a trainer, not a song player. Short exercises each train one skill, both hands work
+        together early, and each hand is scored on its own. The feedback says which hand or which
+        habit gave way: early or late notes, rushing, uneven playing, wrong notes, short holds, the
+        sustain pedal and loud and soft playing.
+      </p>
+      <h3>What you learn</h3>
+      <ul>
+        <li><strong>Playing:</strong> technique, scales, chords and pieces, from the first key to an intermediate level.</li>
+        <li><strong>Reading music:</strong> notes on the treble and bass staff, sight-reading drills and key signatures.</li>
+        <li><strong>Rhythm:</strong> tapping, counting, upbeats, syncopation, compound time and swing.</li>
+        <li><strong>Music theory:</strong> a 65-chapter textbook read alongside the lessons, in the order of music-school piano books.</li>
+        <li><strong>Ear training:</strong> from "same or different?" up to intervals, chords and cadences, answered on the keys.</li>
+        <li><strong>Making music:</strong> improvising that is judged by musical rules, composing, and a sketchbook for your own ideas.</li>
+      </ul>
+      <h3>How it works</h3>
+      <ul>
+        <li>Falling notes or sheet music, with finger numbers, chord names and both hands drawn on the keys.</li>
+        <li>A growing mastery tree with seven branches (technique, reading, rhythm, theory, ear, pieces, creativity) instead of a fixed course.</li>
+        <li>Today's practice plans about 20 minutes a day, with reviews of skills that are fading.</li>
+        <li>Songs taught in steps, your own MIDI files, and a practice room with games and tools.</li>
+        <li>Works with any MIDI keyboard; a short calibration finds its range and middle C. A computer-keyboard mode lets you try it without a piano.</li>
+        <li>Progress stays on your device, or a free account keeps it in step across devices.</li>
+      </ul>
+      <p>
+        MIDI keyboards work in Chrome, Edge, Opera and Firefox on a computer, and in Chrome on Android.
+        <a href="#/demo">Watch the demo</a> to see every feature played on a virtual keyboard.
+        Easy as C D E.
+      </p>
+    </section>
+    <noscript><p class="site-about">iggyuoso is an app that runs in your browser and needs JavaScript switched on.</p></noscript>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

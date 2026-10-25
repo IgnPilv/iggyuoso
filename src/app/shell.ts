@@ -7,6 +7,7 @@ import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type Theme
 import { PREVIEW } from '../core/preview';
 import { MODULES, openModule, saveOpenModule } from './modules';
 import { resolveRoute, type ShellRoute } from './router';
+import { pageTitle } from './title';
 
 // The shell every module shares: the header (brand, module switcher, the open module's links,
 // then Profile, Demo, Settings and the theme button), the router, and the shared pages.
@@ -150,6 +151,7 @@ export function startShell(app: HTMLElement) {
 
   let cleanup: (() => void) | void;
   let page: { module: Module; route: string } | undefined;
+  let renders = 0;
   function render() {
     signInReturn();
     cleanup?.();
@@ -165,6 +167,17 @@ export function startShell(app: HTMLElement) {
     const best = links.filter((a) => path === hrefOf(a) || path.startsWith(`${hrefOf(a)}/`)).sort((a, b) => hrefOf(b).length - hrefOf(a).length)[0];
     for (const a of links) a.classList.toggle('current', a === best);
     cleanup = r.kind === 'shell' ? SHARED[r.route](r.module)(main, r.arg) : r.module.routes[r.route](main, r.arg);
+    // The plain-HTML "About iggyuoso" section in index.html shows under the main module's home only.
+    const home = r.kind === 'module' && r.route === '';
+    const about = document.getElementById('about');
+    if (about) about.hidden = !(home && r.module === MODULES[0]);
+    // The tab's title: the page's first heading (again a frame later, for pages that fill in late).
+    const title = () => {
+      document.title = pageTitle({ heading: main.querySelector('h1, h2')?.textContent, moduleName: r.module.name, home, mainModule: r.module === MODULES[0] });
+    };
+    title();
+    const n = ++renders;
+    requestAnimationFrame(() => { if (n === renders) title(); });
     window.scrollTo(0, 0);
   }
 

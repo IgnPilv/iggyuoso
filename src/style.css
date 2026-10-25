@@ -1779,6 +1779,27 @@ body.focus-page main { max-width: none; padding: 0; }
 .room-meta { color: var(--muted); display: flex; align-items: center; gap: var(--space-2); }
 .room-recap { margin-top: var(--space-3); }
 
+/* ---------------------------------------------------------------- about (index.html) */
+
+/* The plain-HTML "About iggyuoso" section under the home page, there for search engines and link
+   previews as much as for people (docs/dev/seo.md). Quiet, so it never competes with the app. */
+.site-about {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-8);
+  border-top: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+.site-about[hidden] { display: none; }
+.site-about h2 { color: var(--ink); }
+.site-about h3 { color: var(--ink); font-size: var(--text-md); margin-top: var(--space-5); }
+.site-about p, .site-about ul { max-width: 72ch; margin: 0 0 var(--space-3); }
+.site-about ul { padding-left: var(--space-5); }
+.site-about li { margin-bottom: var(--space-1); }
+.site-about strong { color: var(--ink); font-weight: 600; }
+.site-about a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
 /* Keys that can be played with a mouse or a finger (ui/tapKeys.ts). Swiping up or down still scrolls. */
 .tappable { touch-action: pan-y; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
 .falling canvas.tappable { cursor: pointer; }
