@@ -103,6 +103,7 @@ export function mountByEar(root: HTMLElement, cal: Calibration, hooks: ByEarHook
     const keys = hunt.notes.map((n) => dev(n.midi));
     const [low, high] = keyWindow(cal, keys, 3);
     kb = new KeyboardView(low, high, { middleC: cal.middleC, cal, labels: 'c' });
+    kb.playable();
     stage.replaceChildren(kb.el);
     result.replaceChildren();
     for (const b of [hearNext, showBtn]) b.disabled = false;

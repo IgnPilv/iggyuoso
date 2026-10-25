@@ -61,6 +61,7 @@ class AnswerStage {
     if (v === 'classic') {
       const kb = new KeyboardView(this.lo, this.hi, { middleC: this.cal.middleC, cal: this.cal, labels: this.labels });
       this.kb = kb;
+      kb.playable();
       const off = showHeld(kb);
       this.el.append(kb.el);
       this.stop = off;
@@ -72,6 +73,7 @@ class AnswerStage {
         fv?.destroy();
         const notes: FallingNote[] = this.shown.map((device) => ({ device, beat: 0, beats: 0.9, hand: 'right' }));
         fv = new FallingView(this.lo, this.hi, this.cal, notes, { lookahead: 4, barQuarters: 1000, totalBeats: 0, labels: this.labels === 'none' ? 'middle-c' : undefined });
+        fv.playable();
         this.el.replaceChildren(fv.el);
         notesKey = this.shown.join(',');
       };
@@ -289,10 +291,12 @@ export function earPlayer(root: HTMLElement, ex: EarExercise, cal: Calibration, 
     playSounds(q.prompt);
   };
   nextBtn.onclick = () => { clearTimers(); next(); };
-  startBtn.onclick = () => { startBtn.remove(); controls.append(listen, nextBtn); present(); };
+  // Keys pressed (or tapped) before Start are just trying the keys, not an answer.
+  let started = false;
+  startBtn.onclick = () => { started = true; startBtn.remove(); controls.append(listen, nextBtn); present(); };
 
   const off = midi.onNote((e) => {
-    if (e.type !== 'on' || session.done || !session.current.keys || session.answered) return;
+    if (e.type !== 'on' || !started || session.done || !session.current.keys || session.answered) return;
     const outcome = session.press(e.note);
     stage.flash(e.note, outcome);
     answered(outcome);

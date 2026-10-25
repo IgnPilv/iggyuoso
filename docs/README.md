@@ -19,7 +19,9 @@ plain words, then names the files.
    panels and the other screens.
 6. [Progress](dev/progress.md): what is saved, mastery states, Today's practice, sync.
 7. [Building and testing](dev/build-and-test.md): commands, tests, CI and deploying to GitHub Pages.
-8. [How to](dev/how-to.md): add a lesson, a song, a Book chapter, an exercise kind, an option, a
+8. [Being found](dev/seo.md): search engines and link previews (title, share card, structured
+   data, sitemap) and the one line to change for a custom domain.
+9. [How to](dev/how-to.md): add a lesson, a song, a Book chapter, an exercise kind, an option, a
    module or a demo scene.
 
 ## Reference

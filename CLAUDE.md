@@ -936,6 +936,32 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   says "Also try, in the practice room: ..." on its recap (at most two). Every page's heading
   carries "Practice room · Game" or "· Tool". Their addresses are unchanged. Demo scene "Practice
   room". How to add one: `docs/dev/how-to.md`.
+- 2026-10-25: Search engines and link previews (Ignas: "handle SEO, this is a web browser based learning
+  tool for midi keyboard"). The app is one page with `#` addresses, so everything is in `index.html`:
+  title "iggyuoso: learn piano in your browser with a MIDI keyboard", a meta description, canonical
+  link, Open Graph and Twitter card tags with a drawn share picture (`public/og-image.png`, 1200 × 630,
+  from `tools/seo/card.html` by `tools/seo/images.mjs`), SVG favicon, PNG icons and a web manifest,
+  and JSON-LD (`WebSite` + `WebApplication`, free, educational; no `Course`, whose rich result needs
+  a provider and offers we don't have). A plain-HTML "About iggyuoso" section (what it is, what you
+  learn, how it works, which browsers do MIDI) sits after `#app`, shown under the piano's home only
+  (hidden on other pages by the shell), quiet styling with existing tokens. The site's address is
+  one constant, `SITE_URL` in `vite.config.ts` (now the Pages URL; change it for a custom domain):
+  the build fills it into `index.html` and writes `robots.txt` and `sitemap.xml` (home page only).
+  Preview builds are `noindex` with no canonical, robots or sitemap. The tab title follows the
+  page: the page's first heading + " · iggyuoso" (`src/app/title.ts`, tested). Lighthouse SEO 100.
+  Not in the demo: nothing for a player to see beyond the About text on home. Ignas's own steps
+  (Search Console, custom domain): `docs/dev/seo.md`.
+- 2026-10-25: Tap the keys on the screen (Ignas, on an ear question with a drawn keyboard: "on such
+  exercises allow to click the piano"). The keyboard picture and the falling notes' keys can be
+  played with a mouse or a finger (`ui/tapKeys.ts`, `KeyboardView.playable()` /
+  `FallingView.playable()`): a tap goes in through `midi.inject` (port "On-screen keys"), so it is an
+  answer wherever a key is, and sounds the sampled piano until the finger lifts; sliding along the
+  keys plays each one. On in every exercise kind, theory checks and the playground, Note Rush and
+  Play by ear (not the timing tools, nor the Chord finder, which has its own tap-to-hold). Untimed
+  answers by tap count as usual; a timed or improvised take with a tap is **practice** (shown, never
+  saved, like a paused take), since taps can't keep time like keys. Ear questions now ignore keys
+  pressed before Start (they used to answer the first question unheard). Demo scene "Tap the keys
+  on the screen" (the pianist taps, with a fingertip shown).
 - 2026-10-25: Songbook ×10, batch 1 (Ignas: "for songs increase the amount tenfold, simplypiano has a great
   collection... whatever is legal"). Rule written under "Content": public domain only, our own
   arrangements. Song nodes carry `genre` (Children's songs, Folk songs, Sea shanties, Carols and

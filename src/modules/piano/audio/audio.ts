@@ -154,6 +154,41 @@ export function piano(writtenMidi: number, perfMs: number, durMs: number, volume
   track(src);
 }
 
+/**
+ * A piano note that sounds from now until the returned release is called (at most `maxMs`), for
+ * keys tapped on the screen, which have no sound of their own.
+ */
+export function pianoHold(writtenMidi: number, volume = 0.6, maxMs = 4000): () => void {
+  const s = nearestSample(writtenMidi);
+  const buf = buffers.get(s);
+  if (!buf) {
+    void loadSample(s);
+    tone(writtenMidi, performance.now(), 600, volume * 0.45);
+    return () => {};
+  }
+  const c = audio();
+  const t = c.currentTime;
+  const src = c.createBufferSource();
+  src.buffer = buf;
+  src.playbackRate.value = 2 ** ((writtenMidi - s) / 12);
+  const gain = c.createGain();
+  gain.gain.setValueAtTime(volume, t);
+  src.connect(gain).connect(c.destination);
+  src.start(t);
+  src.stop(t + maxMs / 1000 + 0.4);
+  track(src);
+  let released = false;
+  return () => {
+    if (released) return;
+    released = true;
+    const now = c.currentTime;
+    gain.gain.cancelScheduledValues(now);
+    gain.gain.setValueAtTime(volume, now);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35); // the damper
+    try { src.stop(now + 0.4); } catch { /* already stopped */ }
+  };
+}
+
 export function stopAll() {
   for (const n of scheduled) {
     try { n.stop(); } catch { /* already stopped */ }
