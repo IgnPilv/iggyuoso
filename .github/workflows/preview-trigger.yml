@@ -1,0 +1,18 @@
+name: Preview trigger
+
+# Wakes "Deploy to GitHub Pages" (pages.yml) when a pull request that may carry the `preview` label
+# changes, so its preview is built, updated or removed (docs/previews.md). Runs nothing itself:
+# the deploy runs from main (workflow_run), where the Pages environment allows it.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled, closed]
+
+jobs:
+  note:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          PR: ${{ github.event.pull_request.number }}
+          ACTION: ${{ github.event.action }}
+        run: 'echo "Pull request $PR: $ACTION"'
