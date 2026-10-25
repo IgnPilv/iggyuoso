@@ -84,7 +84,8 @@ function tocView(root: HTMLElement) {
     intro,
     h('div', { class: 'controls' },
       next ? goBtn(done ? `Continue: ${next.title}` : `Start reading: ${next.title}`, `/book/${next.id}`) : '',
-      h('span', { class: 'small' }, `${done} of ${all.length} read`))));
+      h('span', { class: 'small' }, `${done} of ${all.length} read`),
+      h('a', { href: '#/chords', class: 'small' }, 'Chord finder: hold any keys, see the chord'))));
   for (const p of book.parts) {
     root.append(h('section', { class: 'card book-part' },
       h('span', { class: 'eyebrow' }, `Part ${p.n}`),

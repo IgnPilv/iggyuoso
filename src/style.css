@@ -1636,3 +1636,26 @@ body.focus-page main { max-width: none; padding: 0; }
 .rush-note.hit .head { fill: var(--ok); stroke: var(--ok); }
 .rush-note.miss .head { fill: var(--bad); stroke: var(--bad); }
 .rush-staff .note.rush-note:not(.current):not(.leaving) { opacity: 0.75; }
+/* Chord finder (#/chords) */
+.chord-finder { display: grid; gap: var(--space-3); }
+.chord-big { margin: 0; font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; letter-spacing: -0.03em; color: var(--ink); min-height: 1.3em; }
+.chord-symbol { margin-left: var(--space-3); font-size: var(--text-lg); color: var(--accent); font-weight: 600; }
+.chord-symbol:empty { display: none; }
+.chord-about { margin: 0; color: var(--ink-2); max-width: 60ch; }
+.chord-panel { display: grid; gap: var(--space-3); align-items: start; }
+@media (min-width: 760px) { .chord-panel { grid-template-columns: 1fr minmax(260px, 360px); } }
+.chord-panel > div:first-child { display: grid; gap: var(--space-2); }
+.chord-staff .theory-staff { width: 100%; box-sizing: border-box; padding: var(--space-3); border-radius: var(--radius-lg); background: var(--surface-sunken); border: 1px solid var(--line); }
+.chord-tones { margin: 0; padding-left: 1.2em; color: var(--ink-2); display: grid; gap: var(--space-1); }
+.chord-tones:empty { display: none; }
+.chord-tries, .chord-recent { display: grid; gap: var(--space-2); }
+.chord-try-row, .chord-recent { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.chord-try-row > .small, .chord-recent > .small { flex-basis: 100%; }
+.chip-button { padding: 0.35em 0.8em; font-size: var(--text-sm); }
+.keyboard.tappable .key { cursor: pointer; }
+.chord-build { display: grid; gap: var(--space-2); }
+.chord-input { width: min(100%, 420px); font-size: var(--text-lg); }
+.chord-picks { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.chord-picks .chip-button { min-width: 2.6em; }
+.chip-button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.chord-suggest:empty, .chord-others:empty { display: none; }
