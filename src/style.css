@@ -1701,6 +1701,9 @@ body.focus-page main { max-width: none; padding: 0; }
 
 /* Scale gym (#/scales) */
 .gym .key.target rect { filter: none; }
+/* Two hands or two octaves: the whole run stays in view, so the keyboard never grows taller than a third of the window. */
+.gym .keyboard { max-height: 34vh; width: auto; max-width: 100%; }
+.gym-heard, .gym-tempo { margin: 0 0 var(--space-2); }
 .gym-chart { margin-top: var(--space-3); }
 .gym-top { stroke: var(--line-strong); stroke-dasharray: 3 3; }
 .gym-bar.right, .gym-pass.right { fill: var(--rh); }

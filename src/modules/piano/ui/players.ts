@@ -232,12 +232,8 @@ export function viewToggle(start: ViewMode, onChange: (v: ViewMode) => void) {
 }
 
 /** Redraws a canvas view every frame until stopped. */
-export function animate(draw: (now: number) => void) {
-  let raf = 0;
-  const tick = () => { draw(performance.now()); raf = requestAnimationFrame(tick); };
-  raf = requestAnimationFrame(tick);
-  return () => cancelAnimationFrame(raf);
-}
+import { animate } from './animate';
+export { animate };
 
 // Key tints in falling notes, as design tokens (styles/tokens.css).
 const FOUND = '--ok';

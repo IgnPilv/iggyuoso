@@ -143,12 +143,28 @@ export interface GymNote {
   midi: number;
   finger: number;
   pass: boolean;
-  /** Ms from where it belongs (positive = late); missing until played. */
+  /**
+   * Ms from where it belongs (positive = late); missing until played. In free tempo: how much
+   * longer (late, a hesitation) or shorter (hurried) the gap before it was than the player's own
+   * beat at that point.
+   */
   offsetMs?: number;
   velocity?: number;
+  /** When it was played (performance ms; free tempo only). */
+  time?: number;
 }
 
-export class ScaleGym {
+const notesOf = (plan: GymStep[]): GymNote[] => plan.flatMap((s) => (Object.entries(s.keys) as [Hand, NonNullable<GymStep['keys'][Hand]>][])
+  .map(([hand, k]) => ({ step: s.step, hand, midi: k.midi, finger: k.finger, pass: k.pass })));
+
+/** What the report needs from a run of either mode. */
+export interface GymRun {
+  notes: GymNote[];
+  stepMs: number;
+  wrong: number;
+}
+
+export class ScaleGym implements GymRun {
   readonly beatMs: number;
   readonly stepMs: number;
   readonly beatsPerBar: number;
@@ -163,8 +179,7 @@ export class ScaleGym {
     this.stepMs = this.beatMs / opts.perBeat;
     this.beatsPerBar = opts.beatsPerBar ?? 4;
     this.t0 = opts.startAt + this.beatsPerBar * this.beatMs;
-    this.notes = plan.flatMap((s) => (Object.entries(s.keys) as [Hand, NonNullable<GymStep['keys'][Hand]>][])
-      .map(([hand, k]) => ({ step: s.step, hand, midi: k.midi, finger: k.finger, pass: k.pass })));
+    this.notes = notesOf(plan);
   }
 
   /** Song ms when the run's last note is due. */
@@ -219,6 +234,141 @@ export class ScaleGym {
   }
 }
 
+// ---------------------------------------------------------------- free tempo
+
+/** Notes skipped over at most, when a press matches a note further on. */
+const LOOKAHEAD = 2;
+/** IOIs either side that set the local beat a note is measured against. */
+const LOCAL = 4;
+
+const median = (xs: number[]) => {
+  const a = [...xs].sort((x, y) => x - y);
+  const m = a.length >> 1;
+  return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2;
+};
+
+/**
+ * Free tempo: no click. The first right note starts the run, each hand works through its notes
+ * in order (a key up to two notes ahead counts, the ones skipped are missed), and the tempo is
+ * worked out from the notes afterwards (`freeTempo`).
+ */
+export class FreeGym implements GymRun {
+  readonly notes: GymNote[];
+  wrong = 0;
+  started?: number;
+  lastAt?: number;
+  /** Set by `freeTempo`: the player's own step (ms between notes). */
+  stepMs = 0;
+  private next: Partial<Record<Hand, number>> = {};
+  private byHand = new Map<Hand, GymNote[]>();
+
+  constructor(readonly plan: GymStep[]) {
+    this.notes = notesOf(plan);
+    for (const n of this.notes) {
+      if (!this.byHand.has(n.hand)) { this.byHand.set(n.hand, []); this.next[n.hand] = 0; }
+      this.byHand.get(n.hand)!.push(n);
+    }
+  }
+
+  /** Every hand has reached its last note. */
+  get done() { return [...this.byHand].every(([hand, ns]) => this.next[hand]! >= ns.length); }
+
+  /** The furthest step any hand has played (−1 before the start). */
+  get reached() { return Math.max(-1, ...[...this.byHand].map(([hand]) => this.next[hand]! - 1)); }
+
+  /** The notes each hand plays next (to light them). */
+  upcoming(): GymNote[] {
+    return [...this.byHand].flatMap(([hand, ns]) => (ns[this.next[hand]!] ? [ns[this.next[hand]!]] : []));
+  }
+
+  press(writtenMidi: number, time: number, velocity = 80): GymNote | undefined {
+    for (const [hand, ns] of this.byHand) {
+      const at = this.next[hand]!;
+      // Before the start only a hand's first note counts.
+      const reach = this.started === undefined ? 0 : LOOKAHEAD;
+      for (let k = 0; k <= reach && at + k < ns.length; k++) {
+        const n = ns[at + k];
+        if (n.midi !== writtenMidi) continue;
+        n.time = time;
+        n.velocity = velocity;
+        n.offsetMs = 0;
+        this.next[hand] = at + k + 1;
+        this.started ??= time;
+        this.lastAt = time;
+        return n;
+      }
+    }
+    if (this.started !== undefined && !this.done) this.wrong++;
+    return undefined;
+  }
+}
+
+export interface FreeTempo {
+  /** The player's step in ms, and the same as beats a minute at `perBeat` notes a beat. */
+  stepMs: number;
+  bpm: number;
+  /** Beats a minute going up and coming down, when both have enough notes. */
+  upBpm?: number;
+  downBpm?: number;
+  /** Hands together: mean ms the right hand lands after the left (minus = ahead), on notes both played. */
+  gapMs?: number;
+}
+
+/**
+ * Works out the player's tempo (the middle gap between notes, a skipped note counting as two
+ * gaps) and measures each note's gap against the beat around it (the middle of up to four gaps
+ * either side), so a slow start or a gentle speeding up is not blamed on every note, while a
+ * hesitation or a rushed note stands out. Fills in `offsetMs` and `stepMs` on the run.
+ */
+export function freeTempo(g: FreeGym, perBeat: number): FreeTempo | undefined {
+  const gaps: { hand: Hand; step: number; ms: number; up: boolean }[] = [];
+  const top = (g.plan.length - 1) / 2;
+  for (const hand of ['right', 'left'] as Hand[]) {
+    const played = g.notes.filter((n) => n.hand === hand && n.time !== undefined);
+    for (let i = 1; i < played.length; i++) {
+      const steps = played[i].step - played[i - 1].step;
+      gaps.push({ hand, step: played[i].step, ms: (played[i].time! - played[i - 1].time!) / steps, up: played[i].step <= top });
+    }
+  }
+  if (gaps.length < 3) return undefined;
+  const stepMs = median(gaps.map((x) => x.ms));
+  g.stepMs = stepMs;
+  const bpm = (ms: number) => Math.round(60000 / (ms * perBeat));
+  for (const hand of ['right', 'left'] as Hand[]) {
+    const mine = gaps.filter((x) => x.hand === hand);
+    mine.forEach((x, i) => {
+      const around = [...mine.slice(Math.max(0, i - LOCAL), i), ...mine.slice(i + 1, i + 1 + LOCAL)].map((y) => y.ms);
+      const local = around.length >= 2 ? median(around) : stepMs;
+      const n = g.notes.find((m) => m.hand === hand && m.step === x.step)!;
+      n.offsetMs = Math.round(x.ms - local);
+    });
+  }
+  const out: FreeTempo = { stepMs: Math.round(stepMs), bpm: bpm(stepMs) };
+  const up = gaps.filter((x) => x.up), down = gaps.filter((x) => !x.up);
+  if (up.length >= 3 && down.length >= 3) { out.upBpm = bpm(median(up.map((x) => x.ms))); out.downBpm = bpm(median(down.map((x) => x.ms))); }
+  const pairs = g.plan.map((st) => {
+    const r = g.notes.find((n) => n.hand === 'right' && n.step === st.step)?.time;
+    const l = g.notes.find((n) => n.hand === 'left' && n.step === st.step)?.time;
+    return r !== undefined && l !== undefined ? r - l : undefined;
+  }).filter((x): x is number => x !== undefined);
+  if (pairs.length >= 3) out.gapMs = Math.round(mean(pairs));
+  return out;
+}
+
+/** Tips that only free tempo has: speeding up or slowing down, and one hand ahead of the other. */
+export function freeTips(t: FreeTempo): string[] {
+  const tips: string[] = [];
+  if (t.upBpm && t.downBpm && Math.abs(t.downBpm - t.upBpm) >= Math.max(4, t.upBpm * 0.06)) {
+    tips.push(t.downBpm > t.upBpm
+      ? `You sped up on the way down (${t.upBpm} going up, ${t.downBpm} coming down). Coming down is easier, so hold it back.`
+      : `You slowed down on the way down (${t.upBpm} going up, ${t.downBpm} coming down). Know the fingering down as well as up.`);
+  }
+  if (t.gapMs !== undefined && Math.abs(t.gapMs) >= 25) {
+    tips.push(`The ${t.gapMs > 0 ? 'left' : 'right'} hand lands ${Math.abs(t.gapMs)} ms ahead of the ${t.gapMs > 0 ? 'right' : 'left'}. Listen for one sound, not two.`);
+  }
+  return tips;
+}
+
 // ---------------------------------------------------------------- the report
 
 /** Full marks within this many ms. */
@@ -262,7 +412,7 @@ const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
 const sd = (xs: number[]) => { const m = mean(xs); return Math.sqrt(mean(xs.map((x) => (x - m) ** 2))); };
 
 /** Score and per-hand findings for the notes up to `upToStep` (all of them when the run is over). */
-export function gymReport(g: ScaleGym, upToStep = Infinity): GymReport {
+export function gymReport(g: GymRun, upToStep = Infinity, free?: FreeTempo): GymReport {
   const due = g.notes.filter((n) => n.step <= upToStep);
   const hands: HandReport[] = [];
   for (const hand of ['right', 'left'] as Hand[]) {
@@ -291,31 +441,132 @@ export function gymReport(g: ScaleGym, upToStep = Infinity): GymReport {
   }
   const marks = due.reduce((a, n) => a + noteMark(n, g.stepMs), 0);
   const score = due.length ? Math.max(0, Math.round((100 * (marks - 0.5 * g.wrong)) / due.length)) : 0;
-  return { score, hands, wrong: g.wrong, tips: gymTips(hands, g.wrong) };
+  return { score, hands, wrong: g.wrong, tips: gymTips(hands, g.wrong, free) };
 }
 
 const HAND_WORD: Record<Hand, string> = { right: 'right hand', left: 'left hand' };
 
 /** The habits worth naming, most important first (at most two). */
-export function gymTips(hands: HandReport[], wrong: number): string[] {
+export function gymTips(hands: HandReport[], wrong: number, free?: FreeTempo): string[] {
   const tips: string[] = [];
+  const late = free ? 'hesitates' : 'is';
   const missed = hands.reduce((a, r) => a + r.missed, 0);
   if (missed + wrong >= 3) tips.push('Several notes went missing or wrong: take the tempo down until every note is there, then build it back up.');
   for (const r of hands) {
     if (r.passLean !== undefined && r.otherLean !== undefined && r.passLean - r.otherLean >= 20) {
-      tips.push(`The ${HAND_WORD[r.hand]} is ${r.passLean - r.otherLean} ms late where the thumb passes under or a finger crosses over. Practise just the turn slowly (3 1 3, or 4 1 4), moving the thumb under early, while the finger before it is still playing.`);
+      tips.push(`The ${HAND_WORD[r.hand]} ${late} ${r.passLean - r.otherLean} ms ${free ? 'longer' : 'late'} where the thumb passes under or a finger crosses over. Practise just the turn slowly (3 1 3, or 4 1 4), moving the thumb under early, while the finger before it is still playing.`);
     }
   }
   for (const r of hands) {
     if (r.thumbLouder !== undefined && r.thumbLouder >= 8) tips.push(`The ${HAND_WORD[r.hand]}'s thumb bumps: its notes are ${r.thumbLouder} louder than the others. Let the thumb play lightly, from the side.`);
   }
-  if (hands.length === 2 && hands.every((r) => r.played >= 4) && Math.abs(hands[0].lean - hands[1].lean) >= 30) {
+  if (free) tips.push(...freeTips(free));
+  else if (hands.length === 2 && hands.every((r) => r.played >= 4) && Math.abs(hands[0].lean - hands[1].lean) >= 30) {
     const [a, b] = hands[0].lean > hands[1].lean ? hands : [hands[1], hands[0]];
     tips.push(`The ${HAND_WORD[a.hand]} trails the ${HAND_WORD[b.hand]} by ${a.lean - b.lean} ms. Listen for one sound, not two.`);
   }
   for (const r of hands) {
-    if (r.played >= 4 && r.spread >= 45) tips.push(`The ${HAND_WORD[r.hand]} is uneven (notes wander ±${r.spread} ms). Try it with two notes a click at a slower tempo, and think in groups.`);
+    if (r.played >= 4 && r.spread >= 45) tips.push(`The ${HAND_WORD[r.hand]} is uneven (notes wander ±${r.spread} ms). ${free ? 'Try it with the click at this tempo or a little slower' : 'Try it with two notes a click at a slower tempo'}, and think in groups.`);
   }
-  if (!tips.length && hands.some((r) => r.played)) tips.push('Even and on the click. Try a faster tempo, two octaves or more notes a click.');
+  if (!tips.length && hands.some((r) => r.played)) tips.push(free ? 'Even all the way. Try it a little faster, or with the click at this tempo.' : 'Even and on the click. Try a faster tempo, two octaves or more notes a click.');
   return tips.slice(0, 2);
+}
+
+// ---------------------------------------------------------------- recognising the scale
+
+/** A key pressed during a free run, kept so the run can be measured once the scale is known. */
+export interface Played { midi: number; time: number; velocity: number }
+
+/** Two keys this close together are played by the two hands at once. */
+const TOGETHER_MS = 60;
+
+/**
+ * One hand or both: if most presses come in pairs (two keys within 60 ms), it is both hands and
+ * the lower key of each pair is the left hand's. Otherwise one hand, the left one when the notes
+ * sit mostly below middle C.
+ */
+export function splitHands(presses: Played[]): { hands: GymHands; right: Played[]; left: Played[] } {
+  const paired = new Set<number>();
+  for (let i = 1; i < presses.length; i++) {
+    if (!paired.has(i - 1) && presses[i].time - presses[i - 1].time < TOGETHER_MS && presses[i].midi !== presses[i - 1].midi) {
+      paired.add(i - 1);
+      paired.add(i);
+    }
+  }
+  if (presses.length >= 6 && paired.size >= presses.length * 0.6) {
+    const right: Played[] = [], left: Played[] = [];
+    for (let i = 0; i < presses.length; i++) {
+      if (paired.has(i) && paired.has(i + 1) && presses[i + 1].time - presses[i].time < TOGETHER_MS) {
+        const [lo, hi] = presses[i].midi < presses[i + 1].midi ? [presses[i], presses[i + 1]] : [presses[i + 1], presses[i]];
+        left.push(lo);
+        right.push(hi);
+        i++;
+      }
+    }
+    return { hands: 'together', right, left };
+  }
+  const low = median(presses.map((p) => p.midi)) < 60;
+  return low ? { hands: 'left', right: [], left: presses } : { hands: 'right', right: presses, left: [] };
+}
+
+/** Fewest notes added, left out or changed to turn one line into the other. */
+export function lineDistance(a: number[], b: number[]) {
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[b.length];
+}
+
+const ROOT_OF_PC = new Map(GYM_ROOTS.map((r) => [parsePitchClass(r), r]));
+/** A run is recognised only when at most this share of its notes differ from the scale's. */
+const MAX_MISFIT = 0.35;
+
+/** Moves one hand's notes in a plan by `semis`. */
+const shiftHand = (plan: GymStep[], hand: Hand, semis: number): GymStep[] => plan.map((st) => {
+  const k = st.keys[hand];
+  return k ? { ...st, keys: { ...st.keys, [hand]: { ...k, midi: k.midi + semis } } } : st;
+});
+
+/**
+ * Which scale or arpeggio a free run was: the one, starting on the first or lowest note, whose
+ * line up and back down needs the fewest changes to become what was played (at most a third of
+ * its notes), one or two octaves by the span played. The plan is moved to the octaves the hands
+ * actually played in. Any of the 12 keys is tried, also for minor scales.
+ */
+export function recognise(presses: Played[]): { setup: GymSetup; plan: GymStep[]; misfit: number } | undefined {
+  if (presses.length < 5) return undefined;
+  const split = splitHands(presses);
+  const main = (split.hands === 'left' ? split.left : split.right).map((p) => p.midi);
+  if (main.length < 5) return undefined;
+  const lo = Math.min(...main), hi = Math.max(...main);
+  const octaves: 1 | 2 = hi - lo >= 18 ? 2 : 1;
+  let best: { root: string; kind: GymKind; tonic: number; misfit: number } | undefined;
+  for (const kind of GYM_KINDS.map((k) => k.id)) {
+    for (const tonic of new Set([main[0], lo])) {
+      const root = ROOT_OF_PC.get(((tonic % 12) + 12) % 12)!;
+      const line = gymLine(root, kind, octaves, Math.floor(tonic / 12) - 1);
+      const misfit = lineDistance(main, line) / line.length;
+      if (!best || misfit < best.misfit - 1e-9) best = { root, kind, tonic, misfit };
+    }
+  }
+  if (!best || best.misfit > MAX_MISFIT) return undefined;
+  const setup: GymSetup = { root: best.root, kind: best.kind, octaves, hands: split.hands };
+  let plan = gymPlan(setup);
+  const mainHand: Hand = split.hands === 'left' ? 'left' : 'right';
+  plan = shiftHand(plan, mainHand, best.tonic - plan[0].keys[mainHand]!.midi);
+  if (split.hands === 'together' && split.left.length) {
+    const first = split.left[0].midi, planned = plan[0].keys.left!.midi;
+    plan = shiftHand(plan, 'left', Math.round((first - planned) / 12) * 12);
+  }
+  return { setup, plan, misfit: Math.round(best.misfit * 100) / 100 };
+}
+
+/** Feeds a recorded free run into a FreeGym on `plan`. */
+export function replay(plan: GymStep[], presses: Played[]): FreeGym {
+  const g = new FreeGym(plan);
+  for (const p of presses) g.press(p.midi, p.time, p.velocity);
+  return g;
 }

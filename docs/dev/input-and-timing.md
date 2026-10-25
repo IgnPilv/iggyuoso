@@ -144,3 +144,28 @@ a wrong key costs half a note) and gives each hand its lean, spread, thumb passe
 notes, loudness spread and thumb loudness (only when velocities vary), the notes furthest off, and
 at most two tips. `ui/scaleGymView.ts` lights the keys with their fingers, draws the per-note chart
 as SVG and saves nothing; settings and the best score of each setup last until the page reloads.
+
+**Free tempo** (no click). `FreeGym` lets each hand work through its notes in order: the first note
+of a hand starts the run, a key up to two notes ahead counts (the notes skipped are missed), any
+other key is wrong, and the page ends the run 3 s after the last note (or on Stop). `freeTempo`
+then finds the player's step (the middle gap between notes, a skipped note counting as two gaps;
+shown as beats a minute at the chosen notes a beat) and measures each note's gap against the
+middle of up to four gaps either side, so a slow start or a gentle drift is not blamed on every
+note while a hesitation (held back, plotted up) or a rushed note (hurried, plotted down) stands out.
+It also gives the tempo going up and coming down and, hands together, how far apart the hands land.
+`gymReport` takes these offsets like the clicked ones; `freeTips` adds "sped up / slowed down on the
+way down" and "one hand ahead". The result offers "Practise at N with the click".
+
+**Any scale, recognised.** In the mode "Free tempo, any scale" the page records every key and, when the
+run ends, `recognise` works out what it was: `splitHands` calls it both hands when most keys come in
+pairs within 60 ms (the lower key is the left hand's), else the left hand when the notes sit mostly
+below middle C; then every kind of `GYM_KINDS`, starting on the first or lowest note, one or two
+octaves by the span played, is compared with what was played by `lineDistance` (notes added, left
+out or changed), and the closest wins if at most 35% of its notes differ. The plan is moved to the
+octaves the hands played in, the run is fed again into a `FreeGym` (`replay`) and measured as above,
+and the boxes show what was heard.
+
+`ui/animate.ts` (`animate`, used by the players and these pages) stops for good even when the drawing
+function stops it from inside; before, a run that ended on its own kept drawing ("Coming down") and
+broke the next run.
+
