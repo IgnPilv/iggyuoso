@@ -1,12 +1,20 @@
 name: Deploy to GitHub Pages
 
+# One Pages deployment holds main at the root and a preview of every open pull request labelled
+# `preview` at preview/pr-<number>/ (docs/previews.md). Each run rebuilds all of them, so it also
+# runs when such a pull request changes (via "Preview trigger", since only runs from main may
+# deploy).
 on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: [Preview trigger]
+    types: [completed]
 
 permissions:
   contents: read
+  pull-requests: read
   pages: write
   id-token: write
 
@@ -19,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -31,6 +41,10 @@ jobs:
           # set: the app then runs as a guest only.
           VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL || vars.SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY || vars.SUPABASE_ANON_KEY }}
+      - name: Build previews
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash tools/previews.sh
       - uses: actions/configure-pages@v5
         with:
           enablement: true
