@@ -793,6 +793,39 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   that reaches the line is missed, a gap takes the note's time, so a streak speeds the music up;
   playing ahead is fine, and then the notes catch up until the next is a gap away (a gap per
   0.3 s). "Notes jump in place" (the first version) stays as an option (`settings.noteRushMode`).
+- 2026-10-25: Hourly idea 2, **Chord finder** (Ignas: go, "for now implement all"). `#/chords`, linked
+  from the Book and the Sketchbook: hold down any keys (or tap them on the picture, where a tapped key
+  stays down until tapped again) and the page says what they make: the chord in words and as a symbol
+  (triads, sus, sixths, sevenths, half-diminished, diminished seventh; the bass decides between two
+  readings), what kind of chord it is, its notes spelled from the root (C E G B♭, F♯ A♯ C♯; G♭ aug
+  rather than a double sharp), its position (root position, first, second, third inversion) and what each
+  key is to the root, on the grand staff. Two notes are named as an interval, one as a note. Buttons
+  play the chord in each position and the chords one change away (minor / major, 7, maj7, sus4, m7,
+  dim); the last 8 chords found are chips to play again. Nothing is saved. `music/chordFinder.ts`
+  (tested), `ui/chordFinderView.ts`. Demo scene "Chord finder".
+- 2026-10-25: Chord finder, round 2 (Ignas: "give me also ability to write the chord name and it finds it,
+  like a constructor, i dont want to type # or flat symbol"; "A-flat major and G-sharp major sound the
+  same... how to address multiple chords under one?"). A constructor at the top: type a name and the
+  chord is built on the keys from middle C up (`parseChordName`: any case and spacing, # / s / is /
+  sharp (also half typed) and b / flat / es for the accidental, kinds by symbol or in words: m, min,
+  minor, -, maj7, M7, dom7, dominant seventh, half diminished, ø, o, +, sus...), with suggestions as
+  it is typed (`suggestChords`; Enter or a suggestion plays it), or pick one of 12 roots and 12 kinds.
+  Keys that go by several names show one main name (the spelling usual in keys: A♭ rather than G♯,
+  F♯ for minor-type chords; the bass decides between readings such as C6 / Am7) and the others as
+  buttons under "The same keys also go by" (`allReadings`: other spellings without double sharps or
+  flats, then other roots, so each note of a diminished seventh); a tap respells the name, staff and
+  notes. "Found in" lists the major and (harmonic) minor keys whose scale holds the chord as spelled,
+  with its Roman numeral there, home chord first (`keysOf`: A♭ = A♭ major (I), D♭ major (V)...; G♯ = C♯
+  major (V), C♯ minor (V)). The demo scene also types "f sharp minor" and "ab" and switches to G♯.
+- 2026-10-25: Timing mirror (hourly idea 3; Ignas: go). `#/pulse`, linked
+  from the Profile's Timing card and the Sketchbook: a metronome that listens. Tempo (±4, tap
+  tempo), beats in a bar (2, 3, 4, 6), presses on beats or beats and halves, silent bars (2 on 2
+  off, 3 on 1 off, 1 on 1 off). Each press is matched to the nearest beat after latency
+  (`engine/pulse.ts`, tested), hands split at middle C, a hand's chord counted once. Shown as dots
+  around "on the beat" (one row per hand, last 12, hollow in silent bars, ±150 ms or half a step),
+  a timeline of the last 40 presses, and per hand its lean and steadiness (from clicked bars, last
+  24) plus whether it rushed or dragged in the silent bars. Nothing is saved. Demo scene "Timing
+  mirror".
 - 2026-10-25: UX review, second round (Ignas: "yeah implement all so its better"). One tempo message: the
   result card no longer says "Takes count at full tempo" and "Records count from N bpm" next to the
   ladder; the clean-takes line says "Only takes from N bpm count toward them; this one was slow
