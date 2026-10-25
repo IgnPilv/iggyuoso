@@ -1,0 +1,27 @@
+id: song-bach-prelude-c
+title: Prelude in C
+skills:
+- songs
+steps:
+- explain: |
+    **Prelude in C** · Johann Sebastian Bach, The Well-Tempered Clavier, Book 1, 1722
+
+    The first piece of Bach's "Well-Tempered Clavier": no tune at all, just one chord per bar, broken the same way. The music is in how the chords move. Gounod later sang an "Ave Maria" over it.
+  staff:
+    notes: r:e G4:s C5:s E5:s G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s  |  r:e A4:s D5:s F5:s A4:s D5:s F5:s r:e A4:s
+      D5:s F5:s A4:s D5:s F5:s
+  sound: r:e G4:s C5:s E5:s G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s  |  r:e A4:s D5:s F5:s A4:s D5:s F5:s r:e A4:s
+    D5:s F5:s A4:s D5:s F5:s  |  r:e G4:s D5:s F5:s G4:s D5:s F5:s r:e G4:s D5:s F5:s G4:s D5:s F5:s  |  r:e G4:s C5:s E5:s
+    G4:s C5:s E5:s r:e G4:s C5:s E5:s G4:s C5:s E5:s
+- explain: |
+    **Before you play.** In the fuller arrangement the left hand holds the two low notes and the right hand ripples the three high ones, twice a bar. Listen to which note changes from one chord to the next.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 60
+- exercise: song-bach-prelude-c-rh
+- exercise: song-bach-prelude-c-lh
+- exercise: song-bach-prelude-c
+- exercise: song-bach-prelude-c-arranged
+- exercise: song-bach-prelude-c-performance
+recap: 'Prelude in C: tune, left hand, together. Come back to it any time; songs are for fun.'

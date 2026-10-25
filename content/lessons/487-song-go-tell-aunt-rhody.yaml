@@ -1,0 +1,26 @@
+id: song-go-tell-aunt-rhody
+title: Go Tell Aunt Rhody
+skills:
+- songs
+steps:
+- explain: |
+    **Go Tell Aunt Rhody** · American folk song, on a tune by Jean-Jacques Rousseau, 1752
+
+    The tune comes from an opera by the philosopher Jean-Jacques Rousseau, 1752. In America it became a song about an old grey goose.
+  staff:
+    notes: E5:h E5:q D5:q  |  C5:h C5:h
+  sound: E5:h E5:q D5:q  |  C5:h C5:h  |  D5:q D5:q F5:q E5:q  |  D5:h C5:h
+- explain: |
+    **Before you play.** Five notes, C to G: one finger for each, no moving.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 96
+- exercise: song-go-tell-aunt-rhody-tap
+- exercise: song-go-tell-aunt-rhody-by-ear
+- exercise: song-go-tell-aunt-rhody-rh
+- exercise: song-go-tell-aunt-rhody-lh
+- exercise: song-go-tell-aunt-rhody
+- exercise: song-go-tell-aunt-rhody-arranged
+- exercise: song-go-tell-aunt-rhody-performance
+recap: 'Go Tell Aunt Rhody: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,12 @@
+id: song-old-hundredth-tap
+title: 'Old Hundredth: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 80
+meter: 4/4
+countIn: 1
+rhythm: x:h x:q x:q | x:q x:q x:q x:q | x:h r:q x:q | x:q x:q x:q x:q | x:q x:q x:h | r:q x:q x:q x:q | x:q x:q x:q x:q |
+  x:h r:q x:q | x:q x:q x:q x:q | x:q x:q x:h
+reps: 2
+days: 1

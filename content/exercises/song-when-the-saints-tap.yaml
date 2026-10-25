@@ -1,0 +1,12 @@
+id: song-when-the-saints-tap
+title: 'When the Saints Go Marching In: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 104
+meter: 4/4
+countIn: 1
+rhythm: r:q x:q x:q x:q | x:w | r:q x:q x:q x:q | x:w | r:q x:q x:q x:q | x:h x:h | x:h x:h | x:w | r:q x:q x:q x:q | x:h.
+  x:q | x:h x:q x:q | x:w | r:q x:q x:q x:q | x:h x:h | x:h. x:q | x:w
+reps: 2
+days: 1

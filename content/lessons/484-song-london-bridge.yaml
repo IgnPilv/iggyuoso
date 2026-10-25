@@ -1,0 +1,26 @@
+id: song-london-bridge
+title: London Bridge Is Falling Down
+skills:
+- songs
+steps:
+- explain: |
+    **London Bridge Is Falling Down** · English singing game, 1700s
+
+    Two children make an arch with their arms, and the others walk under it until the song stops and the "bridge" falls on someone.
+  staff:
+    notes: G4:q. A4:e G4:q F4:q  |  E4:q F4:q G4:h
+  sound: G4:q. A4:e G4:q F4:q  |  E4:q F4:q G4:h  |  D4:q E4:q F4:h  |  E4:q F4:q G4:h
+- explain: |
+    **Before you play.** The dotted quarter and eighth in bars 1 and 5 are "long-short". C position, with G as the top note.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 100
+- exercise: song-london-bridge-tap
+- exercise: song-london-bridge-by-ear
+- exercise: song-london-bridge-rh
+- exercise: song-london-bridge-lh
+- exercise: song-london-bridge
+- exercise: song-london-bridge-arranged
+- exercise: song-london-bridge-performance
+recap: 'London Bridge Is Falling Down: tune, left hand, together. Come back to it any time; songs are for fun.'

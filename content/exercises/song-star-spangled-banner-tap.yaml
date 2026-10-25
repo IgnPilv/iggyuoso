@@ -1,0 +1,13 @@
+id: song-star-spangled-banner-tap
+title: 'The Star-Spangled Banner: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 84
+meter: 3/4
+pickup: e. s
+countIn: 1
+rhythm: x:e. x:s | x:q x:q x:q | x:h x:e. x:s | x:q x:q x:q | x:h x:e x:e | x:q. x:e x:q | x:h x:e x:e | x:q x:q x:q | x:q
+  x:q x:e. x:s | x:q x:q x:q | x:h x:e. x:s | x:q x:q x:q | x:h x:e x:e | x:q. x:e x:q | x:h x:e x:e | x:q x:q x:q | x:q x:q
+reps: 2
+days: 1

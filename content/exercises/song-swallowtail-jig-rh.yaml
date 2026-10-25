@@ -1,0 +1,18 @@
+id: song-swallowtail-jig-rh
+title: 'Swallowtail Jig: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Em
+tempo: 52
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:e A4:e G4:e | F#4:e D4:e D4:e A4:e D4:e D4:e | D5:e C#5:e D5:e A4:e
+  G4:e F#4:e | G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:q C5:e | D5:e C#5:e D5:e A4:e G4:e F#4:e | G4:e E4:e E4:e
+  E4:q. | G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:e A4:e G4:e | F#4:e D4:e D4:e A4:e D4:e D4:e | D5:e C#5:e D5:e
+  A4:e G4:e F#4:e | G4:e E4:e E4:e B4:e E4:e E4:e | G4:e E4:e E4:e B4:q C5:e | D5:e C#5:e D5:e A4:e G4:e F#4:e | G4:e E4:e
+  E4:e E4:q.
+reps: 2
+days: 1

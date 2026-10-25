@@ -1,0 +1,15 @@
+id: song-au-clair-de-la-lune-rh
+title: 'Au clair de la lune: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:q C5:q C5:q D5:q | E5:h D5:h | C5:q E5:q D5:q D5:q | C5:w | C5:q C5:q C5:q D5:q | E5:h D5:h | C5:q E5:q D5:q D5:q
+  | C5:w | D5:q D5:q D5:q D5:q | A4:h A4:h | D5:q C5:q B4:q A4:q | G4:w | C5:q C5:q C5:q D5:q | E5:h D5:h | C5:q E5:q D5:q
+  D5:q | C5:w
+reps: 2
+days: 1

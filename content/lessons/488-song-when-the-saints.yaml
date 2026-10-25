@@ -1,0 +1,26 @@
+id: song-when-the-saints
+title: When the Saints Go Marching In
+skills:
+- songs
+steps:
+- explain: |
+    **When the Saints Go Marching In** · Spiritual, America, early 1900s
+
+    A spiritual that New Orleans jazz bands made their own, played slowly on the way to a funeral and fast on the way back.
+  staff:
+    notes: r:q C4:q E4:q F4:q  |  G4:w
+  sound: r:q C4:q E4:q F4:q  |  G4:w  |  r:q C5:q E5:q F5:q  |  G5:w
+- explain: |
+    **Before you play.** Each line starts after a rest on beat 1: count "(one) two three four".
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 104
+- exercise: song-when-the-saints-tap
+- exercise: song-when-the-saints-by-ear
+- exercise: song-when-the-saints-rh
+- exercise: song-when-the-saints-lh
+- exercise: song-when-the-saints
+- exercise: song-when-the-saints-arranged
+- exercise: song-when-the-saints-performance
+recap: 'When the Saints Go Marching In: tune, left hand, together. Come back to it any time; songs are for fun.'

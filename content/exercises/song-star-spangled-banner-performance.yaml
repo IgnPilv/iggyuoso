@@ -1,0 +1,19 @@
+id: song-star-spangled-banner-performance
+title: 'The Star-Spangled Banner: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 84
+meter: 3/4
+pickup: e. s
+countIn: 1
+right: G4:e. E4:s | C4:q E4:q G4:q | C5:h E5:e. D5:s | C5:q E4:q F#4:q | G4:h G4:e G4:e | E5:q. D5:e C5:q | B4:h A4:e B4:e
+  | C5:q C5:q G4:q | E4:q C4:q G4:e. E4:s | C4:q E4:q G4:q | C5:h E5:e. D5:s | C5:q E4:q F#4:q | G4:h G4:e G4:e | E5:q. D5:e
+  C5:q | B4:h A4:e B4:e | C5:q C5:q G4:q | E4:q C4:q
+left: r:q | C3:e G3:e E3:e G3:e C3:q | C3:e G3:e E3:e G3:e C3:q | C3:q. D3:q. | G2:e D3:e B2:e D3:e G2:q | C3:e G3:e E3:e
+  G3:e C3:q | G2:e D3:e B2:e D3:e G2:q | C3:e G3:e E3:e G3:e C3:q | C3:e G3:e E3:e G3:e C3:q | C3:e G3:e E3:e G3:e C3:q |
+  C3:e G3:e E3:e G3:e C3:q | C3:q. D3:q. | G2:e D3:e B2:e D3:e G2:q | C3:e G3:e E3:e G3:e C3:q | G2:e D3:e B2:e D3:e G2:q
+  | C3:e G3:e E3:e G3:e C3:q | C3+E3+G3:h
+reps: 2
+days: 2

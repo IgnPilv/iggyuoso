@@ -1,0 +1,27 @@
+id: song-angels-we-have-heard
+title: Angels We Have Heard on High
+skills:
+- songs
+steps:
+- explain: |
+    **Angels We Have Heard on High** · French carol "Les Anges dans nos campagnes", 1700s
+
+    The long "Glo-o-o-o-ria" in the chorus falls in a chain of little runs, each one step lower: a sequence.
+  staff:
+    notes: A4:q A4:q A4:q C5:q  |  C5:q. Bb4:e A4:h
+    key: F
+  sound: A4:q A4:q A4:q C5:q  |  C5:q. Bb4:e A4:h  |  A4:q G4:q A4:q C5:q  |  A4:q. G4:e F4:h
+- explain: |
+    **Before you play.** F major: B♭. The chorus runs are eighths: let them ring out evenly.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 4/4 · Tempo: 96
+- exercise: song-angels-we-have-heard-tap
+- exercise: song-angels-we-have-heard-by-ear
+- exercise: song-angels-we-have-heard-rh
+- exercise: song-angels-we-have-heard-lh
+- exercise: song-angels-we-have-heard
+- exercise: song-angels-we-have-heard-arranged
+- exercise: song-angels-we-have-heard-performance
+recap: 'Angels We Have Heard on High: tune, left hand, together. Come back to it any time; songs are for fun.'

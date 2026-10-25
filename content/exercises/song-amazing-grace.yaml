@@ -1,0 +1,18 @@
+id: song-amazing-grace
+title: Amazing Grace
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 76
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: D4:q | G4:h B4:e G4:e | B4:h A4:q | G4:h E4:q | D4:h D4:q | G4:h B4:e G4:e | B4:h A4:q | D5:h B4:q | D5:h B4:e G4:e
+  | B4:h A4:q | G4:h E4:q | D4:h D4:q | G4:h B4:e G4:e | B4:h A4:q | G4:h
+left: r:q | G2:h. | G2:h. | C3:h. | G2:h. | G2:h. | G2:q. D3:q. | G2:h. | G2:h. | G2:q. D3:q. | C3:h. | G2:h. | G2:h. | D3:h.
+  | G2:h
+reps: 3
+days: 2
