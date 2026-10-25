@@ -105,6 +105,14 @@ items:
   - { type: count, pool: [1, 2, 3] }
   - { type: loudness, notes: "C4 E4 G4" }
   - { type: melody, notes: "C4 D4 E4", lit: true, plays: 2 }`,
+  tapAnswer: `
+id: demo-tap-answer
+kind: ear
+title: Tap your answer
+prompt: Listen, then tap the key you heard on the screen.
+questions: 4
+items:
+  - { type: note, pool: [C4, D4, E4], lit: true, reference: C4 }`,
   earRhythm: `
 id: demo-ear-rhythm
 kind: ear
@@ -873,6 +881,14 @@ function scenes(): Scene[] {
     },
   });
   out.push({ title: 'First ear steps', caption: 'Ear training for someone who hears no pitch yet: same or different, which way a tune goes (arrows), a step or a leap, how many notes sound at once, louder or softer the second time. Note questions can light the keys to choose from and play a named note first; a melody can light the keys it uses.', run: exerciseScene(parseExercise(parse(SAMPLES.earSteps)), { view: 'classic' }) });
+  out.push({
+    title: 'Tap the keys on the screen',
+    caption: 'No piano at hand? The keys drawn on the screen can be played with a mouse or a finger: a tap sounds the key and counts as the answer, in questions, quizzes, theory checks and "find the key" drills, on the keyboard and on the falling notes alike (slide along the keys to play each one). Timed playing can be tried by tapping too, but such a take is practice and is not saved. Here the pianist answers by tapping, then the view flips to falling notes.',
+    run: (box, next, p) => {
+      p.tapIn = box;
+      return exerciseScene(parseExercise(parse(SAMPLES.tapAnswer)), { view: 'classic', switchAt: 9000 })(box, next, p);
+    },
+  });
   out.push({ title: 'Hearing rhythms', caption: 'A bar of clicks, then a rhythm played on one note. The answers are rhythm pictures: pick the one you heard.', run: exerciseScene(parseExercise(parse(SAMPLES.earRhythm)), { view: 'classic' }) });
   out.push({ title: 'Hearing harmony', caption: 'A cadence sets the key, then one chord: is it I, IV, V or vi? After the answer it goes home, so its pull can be heard. Progression questions play four chords and ask which famous progression it was (I V vi IV, ii V I...). Lessons also teach ii, iii and vi, modulation, secondary dominants, modes, texture and the eras of music, so the player can talk about a piece like a music student.', run: exerciseScene(parseExercise(parse(SAMPLES.harmony)), { view: 'classic' }) });
   out.push({ title: 'Ear training', caption: 'The app plays a cadence to set the key, then a note, two notes or a phrase. The first key (or button) is the answer, and missed questions come back more often. The pianist gets one wrong.', run: exerciseScene(sampleOf('ear', SAMPLES.ear), { view: 'classic' }) });
