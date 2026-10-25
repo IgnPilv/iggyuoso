@@ -149,7 +149,10 @@ describe('ear session', () => {
 
   it('asks missed items more often, and never the same one twice running', () => {
     const e = ex<EarExercise>(`{id: e, kind: ear, questions: 50, items: [{ type: interval, pool: [M2, M3, P5], answer: name }]}`);
-    const s = new EarSession(e, cal88);
+    // A seeded random, so the count of M3s does not depend on luck (it sat near the bound).
+    let seed = 7;
+    const rng = () => { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; };
+    const s = new EarSession(e, cal88, rng);
     const asked: string[] = [];
     for (let i = 0; i < 50; i++) {
       const q = s.current;
