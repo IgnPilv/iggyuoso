@@ -4,10 +4,14 @@ All lessons and exercises are YAML data. The app reads them; no code lives here.
 
 ```
 content/
-  units/NN-<unit-id>.yaml      # id, title, summary, ordered list of lesson ids
-  lessons/NN-<lesson-id>.yaml  # id, title, unit, skills, steps, recap
+  lessons/NN-<lesson-id>.yaml  # id, title, skills, steps, recap
   exercises/<exercise-id>.yaml # one exercise; file name = id
+  tree/<branch>.yaml           # the mastery tree: where each lesson sits and what it needs
+  book/                        # the Book: book.yaml + one Markdown file per chapter
 ```
+
+There are no units any more: the order comes from the mastery tree (see "Mastery tree" below).
+How the app reads these files: `docs/dev/content.md`.
 
 ## Lesson
 `steps` is an ordered list; each step is either `explain:` (short Markdown text, written for a
@@ -98,9 +102,10 @@ days: 2   # spread over at least two days
   chord's number being its lowest note's finger; a hand without them gets a suggested fingering),
   `pitchMatch: pitchClass` (any octave counts), `tempoLadder: true` (steps 60 70 80 90 100% of
   `tempo`) or `tempoLadder: [60, 80, 100]`: the tempo starts on the player's step, three clean
-  takes (92+) on it move up a step, two failed takes in a row move down. Any timed exercise of two
-  bars or more can loop a few bars (the player picks them, or the result card suggests the bars
-  with the most mistakes); loop takes are practice and are not saved.
+  takes (92+) on it move up a step, two failed takes in a row move down. Every timed exercise (not echoes)
+  also has Practice mode: the player picks bars on a slider (or on the sheet's bar lines) and they
+  go round until Stop; the result card suggests the bars with the most mistakes. Practice rounds
+  are not saved.
   `pedal: "x:h x:h | x:h x:h"`: the sustain pedal, in the bars of the notes. `x:<duration>` =
   pedal down for that long, pressed again at its start; `r:<duration>` = pedal up. Two `x` in a row
   is a change (legato pedal: lift as the new chord sounds, press just after). Scored per stretch:
