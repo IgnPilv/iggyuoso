@@ -2,7 +2,7 @@ import { audio, click, loadPiano, outputLatencyMs, piano } from '../audio/audio'
 import { keyWindow, toDevice, toWritten, type Calibration } from '../calibration';
 import { demo } from '../demo/demo';
 import {
-  FreeGym, freeTempo, GYM_KINDS, gymPlan, gymReport, recognise, replay, rootsFor, ScaleGym, type FreeTempo, type Played, type GymHands, type GymKind, type GymReport,
+  FreeGym, freeTempo, GYM_KINDS, gymPlan, gymReport, pickRoot, recognise, replay, rootsFor, ScaleGym, type FreeTempo, type Played, type GymHands, type GymKind, type GymReport,
   type GymSetup, type HandReport,
 } from '../engine/scaleGym';
 import { midi } from '../midi/input';
@@ -71,7 +71,7 @@ export function mountScaleGym(root: HTMLElement, cal: Calibration, hooks: GymHoo
 
   const fillRoots = () => {
     const roots = rootsFor(opts.kind);
-    if (!roots.includes(opts.root)) opts.root = roots[0];
+    opts.root = pickRoot(opts.kind, opts.root);
     rootSel.replaceChildren(...roots.map((r) => h('option', { value: r, selected: r === opts.root }, rootLabel(r))));
   };
   fillRoots();
@@ -127,8 +127,10 @@ export function mountScaleGym(root: HTMLElement, cal: Calibration, hooks: GymHoo
 
   const readSettings = () => {
     opts.kind = kindSel.value as GymKind;
+    // Read the key picked before the key box is rebuilt for the kind (rebuilding it first put the
+    // old key back, so a new key never took).
+    opts.root = rootSel.value || opts.root;
     fillRoots();
-    opts.root = rootSel.value;
     opts.hands = handsSel.value as GymHands;
     opts.octaves = Number(octSel.value) === 2 ? 2 : 1;
     opts.perBeat = Number(perSel.value) as 1 | 2 | 4;

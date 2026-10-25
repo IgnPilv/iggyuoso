@@ -903,3 +903,7 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   runner-up when close), the chords (the sheet's `chordSymbols`) with Roman numerals, loudness when
   velocities vary, up to three tips, Play it back, and "Timing mirror at N". Nothing is saved. Demo
   scene "Play report".
+- 2026-10-25: Scale gym key box fixed (Ignas: "the key selection dropdown doesn't work"). Reading the boxes
+  rebuilt the key list for the scale kind before reading the key picked, which put the old key back, so a
+  new key never took (in every mode, since the first version). The key picked is now read first and kept
+  unless the kind has no such key here (`pickRoot`, tested).
