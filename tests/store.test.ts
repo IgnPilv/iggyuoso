@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { parseExercise } from '../src/content/load';
-import { memoryBackend, SCHEMA_VERSION, Store } from '../src/progress/store';
+import { parseExercise } from '../src/modules/piano/content/load';
+import { memoryBackend, SCHEMA_VERSION, Store } from '../src/modules/piano/progress/store';
 
 describe('progress store', () => {
   it('keeps the best counting attempt only', () => {

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { parseExercise } from '../src/content/load';
-import type { ImproviseExercise } from '../src/content/types';
-import { judgeImprovisation } from '../src/engine/improvise';
-import type { CapturedNote } from '../src/music/transcribe';
+import { parseExercise } from '../src/modules/piano/content/load';
+import type { ImproviseExercise } from '../src/modules/piano/content/types';
+import { judgeImprovisation } from '../src/modules/piano/engine/improvise';
+import type { CapturedNote } from '../src/modules/piano/music/transcribe';
 
 const Q = 500;
 const imp = (extra: Record<string, unknown>) => parseExercise({ id: 'i', kind: 'improvise', tempo: 120, bars: 4, ...extra }) as ImproviseExercise;

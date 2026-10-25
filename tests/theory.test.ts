@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { loadContent, parseExercise } from '../src/content/load';
-import type { ExplainStep, PlaygroundStep, QuizExercise } from '../src/content/types';
-import { pitchToMidi } from '../src/music/notes';
+import { loadContent, parseExercise } from '../src/modules/piano/content/load';
+import type { ExplainStep, PlaygroundStep, QuizExercise } from '../src/modules/piano/content/types';
+import { pitchToMidi } from '../src/modules/piano/music/notes';
 
 const lesson = (steps: string) => loadContent({ 'content/lessons/t.yaml': `id: t\ntitle: T\nunit: u\nsteps:\n${steps}` });
 
@@ -58,7 +58,7 @@ describe('theory blocks', () => {
   });
 });
 
-import { romanChord as rc, voiceProgression as vp, parseKey as pk } from '../src/music/theory';
+import { romanChord as rc, voiceProgression as vp, parseKey as pk } from '../src/modules/piano/music/theory';
 
 describe('roman numerals', () => {
   it('builds chords on the degrees of a key', () => {

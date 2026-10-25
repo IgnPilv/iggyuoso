@@ -1,19 +1,19 @@
-import './style.css';
-import { midi, MidiInput } from './midi/input';
-import { computerKeys } from './midi/computerKeys';
-import { demo, DEMO_CALIBRATION } from './demo/demo';
-import { store } from './progress/store';
-import { account, isSignInReturn } from './sync';
-import { h, type View } from './ui/dom';
-import { demoView } from './ui/demoView';
-import { sketchbookView } from './ui/sketchbookView';
-import { mySongsView } from './ui/mySongsView';
-import { profileView } from './ui/profileView';
-import { todayView } from './ui/todayView';
-import { branchView, songsView, songView } from './ui/treePages';
-import { bookView } from './ui/bookView';
-import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './ui/theme';
-import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './ui/views';
+import './modules/piano/style.css';
+import { midi, MidiInput } from './modules/piano/midi/input';
+import { computerKeys } from './modules/piano/midi/computerKeys';
+import { demo, DEMO_CALIBRATION } from './modules/piano/demo/demo';
+import { store } from './modules/piano/progress/store';
+import { account, isSignInReturn } from './core/sync';
+import { h, type View } from './core/dom';
+import { demoView } from './modules/piano/ui/demoView';
+import { sketchbookView } from './modules/piano/ui/sketchbookView';
+import { mySongsView } from './modules/piano/ui/mySongsView';
+import { profileView } from './modules/piano/ui/profileView';
+import { todayView } from './modules/piano/ui/todayView';
+import { branchView, songsView, songView } from './modules/piano/ui/treePages';
+import { bookView } from './modules/piano/ui/bookView';
+import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from './core/theme';
+import { calibrateView, exerciseView, homeView, lessonView, settingsView, testerView } from './modules/piano/ui/views';
 
 const routes: Record<string, View> = {
   '': homeView,

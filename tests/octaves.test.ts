@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { calibrate, keyName, keyWindow, toDevice, type Calibration } from '../src/calibration';
-import type { Exercise } from '../src/content/types';
-import { noteFor } from '../src/midi/computerKeys';
-import { diatonicStep, isTieEnd, midiName, parsePitch, pitchToMidi } from '../src/music/notes';
-import { chordNotes, scaleNotes } from '../src/music/theory';
+import { calibrate, keyName, keyWindow, toDevice, type Calibration } from '../src/modules/piano/calibration';
+import type { Exercise } from '../src/modules/piano/content/types';
+import { noteFor } from '../src/modules/piano/midi/computerKeys';
+import { diatonicStep, isTieEnd, midiName, parsePitch, pitchToMidi } from '../src/modules/piano/music/notes';
+import { chordNotes, scaleNotes } from '../src/modules/piano/music/theory';
 import { realContent } from './helpers';
 
 // One octave convention everywhere: middle C = C4 = written MIDI 60. Content, labels, the staff,

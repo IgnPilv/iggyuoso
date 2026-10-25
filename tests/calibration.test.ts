@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { calibrate, keyName, shiftMiddleC, toDevice } from '../src/calibration';
+import { calibrate, keyName, shiftMiddleC, toDevice } from '../src/modules/piano/calibration';
 
 const ok = (lo: number, hi: number) => {
   const r = calibrate(lo, hi);

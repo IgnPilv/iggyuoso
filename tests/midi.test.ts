@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { decodeNote, sanitizeTimestamp } from '../src/midi/input';
+import { decodeNote, sanitizeTimestamp } from '../src/modules/piano/midi/input';
 
 describe('MIDI decoding', () => {
   it('reads note-on and note-off on any channel', () => {

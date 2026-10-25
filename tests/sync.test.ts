@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { memoryBackend, SCHEMA_VERSION, Store } from '../src/progress/store';
-import { Account, sameValue } from '../src/sync/account';
-import { mergeDays, mergeExercise, mergeMeta, mergeRecord, mergeTiming } from '../src/sync/merge';
-import { memoryProvider, type MemoryServer } from '../src/sync/memory';
-import { supabaseProvider } from '../src/sync/supabase';
-import { CHANGES_KEY, isSynced, tracked } from '../src/sync/tracker';
-import { SignedOutError } from '../src/sync/types';
+import { memoryBackend, SCHEMA_VERSION, Store } from '../src/modules/piano/progress/store';
+import { Account, sameValue } from '../src/core/sync/account';
+import { mergeDays, mergeExercise, mergeMeta, mergeRecord, mergeTiming } from '../src/core/sync/merge';
+import { memoryProvider, type MemoryServer } from '../src/core/sync/memory';
+import { supabaseProvider } from '../src/core/sync/supabase';
+import { CHANGES_KEY, isSynced, tracked } from '../src/core/sync/tracker';
+import { SignedOutError } from '../src/core/sync/types';
 
 const take = (at: string, score: number) => ({ at, score, stars: score >= 92 ? 3 : score >= 80 ? 2 : 1, tempo: 80, counts: true });
 

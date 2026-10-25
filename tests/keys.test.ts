@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { parseExercise } from '../src/content/load';
-import { keySignature } from '../src/music/theory';
+import { parseExercise } from '../src/modules/piano/content/load';
+import { keySignature } from '../src/modules/piano/music/theory';
 
 describe('key signatures', () => {
   it('counts sharps and flats for major and minor keys', () => {

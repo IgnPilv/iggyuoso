@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { loadContent } from '../src/content/load';
-import type { TimedExercise } from '../src/content/types';
-import { chordFingers, suggestFingers } from '../src/music/fingering';
-import { parseTimedNotes } from '../src/music/notes';
-import { expectedNotes } from '../src/music/timeline';
+import { loadContent } from '../src/modules/piano/content/load';
+import type { TimedExercise } from '../src/modules/piano/content/types';
+import { chordFingers, suggestFingers } from '../src/modules/piano/music/fingering';
+import { parseTimedNotes } from '../src/modules/piano/music/notes';
+import { expectedNotes } from '../src/modules/piano/music/timeline';
 import { realContent } from './helpers';
 
 const line = (notes: string, hand: 'right' | 'left' = 'right') => suggestFingers(parseTimedNotes(notes), hand);

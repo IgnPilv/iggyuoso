@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { attachReadings, loadBook, parseChapterText } from '../src/content/book';
-import { loadContent } from '../src/content/load';
+import { attachReadings, loadBook, parseChapterText } from '../src/modules/piano/content/book';
+import { loadContent } from '../src/modules/piano/content/load';
 import { readBookFiles, readContentFiles } from './helpers';
 
 describe('the Book', () => {

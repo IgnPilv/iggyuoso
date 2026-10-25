@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { deleteSketch, getSketch, saveSketch, sketches, sketchExercise, updateSketch } from '../src/progress/sketches';
-import { memoryBackend, Store } from '../src/progress/store';
-import { isSynced } from '../src/sync/tracker';
+import { deleteSketch, getSketch, saveSketch, sketches, sketchExercise, updateSketch } from '../src/modules/piano/progress/sketches';
+import { memoryBackend, Store } from '../src/modules/piano/progress/store';
+import { isSynced } from '../src/core/sync/tracker';
 
 const idea = { title: 'Climb', tempo: 80, meter: '4/4', key: 'G', grid: 0.5, notes: [{ midi: 67, on: 0, off: 700 }], right: 'G4:q F#4:q G4:h', bars: 1 };
 

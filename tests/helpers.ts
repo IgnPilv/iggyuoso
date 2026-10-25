@@ -1,8 +1,8 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadContent } from '../src/content/load';
-import type { TimedExercise } from '../src/content/types';
-import { parseExercise } from '../src/content/load';
+import { loadContent } from '../src/modules/piano/content/load';
+import type { TimedExercise } from '../src/modules/piano/content/types';
+import { parseExercise } from '../src/modules/piano/content/load';
 import { parse } from 'yaml';
 
 export function readContentFiles(dir = join(__dirname, '..', 'content')): Record<string, string> {

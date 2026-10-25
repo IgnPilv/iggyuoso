@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { loadTree } from '../src/content/tree';
-import type { Lesson } from '../src/content/types';
-import { itemDone, makePlan, minutesFor, todayPlan, type PlanInput } from '../src/progress/daily';
-import { Mastery } from '../src/progress/mastery';
-import { memoryBackend, Store } from '../src/progress/store';
-import { parseExercise } from '../src/content/load';
+import { loadTree } from '../src/modules/piano/content/tree';
+import type { Lesson } from '../src/modules/piano/content/types';
+import { itemDone, makePlan, minutesFor, todayPlan, type PlanInput } from '../src/modules/piano/progress/daily';
+import { Mastery } from '../src/modules/piano/progress/mastery';
+import { memoryBackend, Store } from '../src/modules/piano/progress/store';
+import { parseExercise } from '../src/modules/piano/content/load';
 import { readContentFiles, realContent } from './helpers';
 
 const files = readContentFiles();
