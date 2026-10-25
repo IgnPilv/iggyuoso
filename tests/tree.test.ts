@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { loadTree } from '../src/content/tree';
+import { loadTree } from '../src/modules/piano/content/tree';
 import { readContentFiles, realContent } from './helpers';
 
 const lessons = () => realContent().content.lessons;

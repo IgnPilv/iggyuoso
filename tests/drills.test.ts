@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { parse } from 'yaml';
-import { calibrate } from '../src/calibration';
-import { parseExercise } from '../src/content/load';
-import type { BuildExercise, EarExercise, QuizExercise } from '../src/content/types';
-import { BuildSession, EarSession, QuizSession } from '../src/engine/drills';
-import { cadence, chordNotes, parseKey, resolution, scaleNotes } from '../src/music/theory';
-import { scoreTimed } from '../src/scoring/timed';
-import { expectedNotes } from '../src/music/timeline';
+import { calibrate } from '../src/modules/piano/calibration';
+import { parseExercise } from '../src/modules/piano/content/load';
+import type { BuildExercise, EarExercise, QuizExercise } from '../src/modules/piano/content/types';
+import { BuildSession, EarSession, QuizSession } from '../src/modules/piano/engine/drills';
+import { cadence, chordNotes, parseKey, resolution, scaleNotes } from '../src/modules/piano/music/theory';
+import { scoreTimed } from '../src/modules/piano/scoring/timed';
+import { expectedNotes } from '../src/modules/piano/music/timeline';
 
 const ex = <T>(yaml: string) => parseExercise(parse(yaml)) as T;
 const cal88 = (() => { const r = calibrate(21, 108); if (!r.ok) throw new Error(); return r.calibration; })();

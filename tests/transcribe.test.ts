@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { parseExercise } from '../src/content/load';
-import { parseMeter, parseTimedNotes } from '../src/music/notes';
-import { spell, splitLength, transcribe, type CapturedNote } from '../src/music/transcribe';
+import { parseExercise } from '../src/modules/piano/content/load';
+import { parseMeter, parseTimedNotes } from '../src/modules/piano/music/notes';
+import { spell, splitLength, transcribe, type CapturedNote } from '../src/modules/piano/music/transcribe';
 
 const Q = 500; // 120 bpm
 const meter = parseMeter('4/4');

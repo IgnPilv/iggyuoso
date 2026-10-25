@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { loadContent } from '../src/content/load';
+import { loadContent } from '../src/modules/piano/content/load';
 import { realContent } from './helpers';
 
 describe('content/', () => {

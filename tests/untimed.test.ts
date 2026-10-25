@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { parse } from 'yaml';
-import { calibrate, type Calibration } from '../src/calibration';
-import { parseExercise } from '../src/content/load';
-import type { FindExercise, SequenceExercise } from '../src/content/types';
-import { FindSession, SequenceSession } from '../src/scoring/untimed';
+import { calibrate, type Calibration } from '../src/modules/piano/calibration';
+import { parseExercise } from '../src/modules/piano/content/load';
+import type { FindExercise, SequenceExercise } from '../src/modules/piano/content/types';
+import { FindSession, SequenceSession } from '../src/modules/piano/scoring/untimed';
 
 const cal = (lo: number, hi: number): Calibration => {
   const r = calibrate(lo, hi);

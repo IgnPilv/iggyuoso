@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { expectedNotes } from '../src/music/timeline';
-import { hitWindowMs, scoreTimed, timingPoints, type PlayedNote } from '../src/scoring/timed';
+import { expectedNotes } from '../src/modules/piano/music/timeline';
+import { hitWindowMs, scoreTimed, timingPoints, type PlayedNote } from '../src/modules/piano/scoring/timed';
 import { timed } from './helpers';
 
 // At 60 bpm one beat is 1000 ms, which keeps the numbers readable.

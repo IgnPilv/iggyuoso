@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { defaultHands, readSong, writeSong } from '../src/music/importSong';
-import { keyName, MidiFileError, parseMidiFile, writeMidiFile } from '../src/music/midiFile';
-import { addMySong, deleteMySong, getMySong, mySongs, songExercise, songTakes, updateMySong } from '../src/progress/mySongs';
-import { memoryBackend, Store } from '../src/progress/store';
-import { isSynced } from '../src/sync/tracker';
+import { defaultHands, readSong, writeSong } from '../src/modules/piano/music/importSong';
+import { keyName, MidiFileError, parseMidiFile, writeMidiFile } from '../src/modules/piano/music/midiFile';
+import { addMySong, deleteMySong, getMySong, mySongs, songExercise, songTakes, updateMySong } from '../src/modules/piano/progress/mySongs';
+import { memoryBackend, Store } from '../src/modules/piano/progress/store';
+import { isSynced } from '../src/core/sync/tracker';
 
 // A tiny two-track file: a tune (C D E F | G held) over a bass (C3 whole, G2 whole).
 const tune = [60, 62, 64, 65].map((midi, i) => ({ midi, at: i, beats: 0.9 })).concat([{ midi: 67, at: 4, beats: 3.9 }]);

@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { calibrate } from '../src/calibration';
-import { parseExercise } from '../src/content/load';
-import type { TimedExercise } from '../src/content/types';
-import { TimedSession } from '../src/engine/timedSession';
-import { sliceBars } from '../src/engine/practice';
-import { expectedDynamics } from '../src/music/timeline';
-import { dynamicSpans, dynamicsMessages, scoreDynamics } from '../src/scoring/dynamics';
-import type { PlayedNote } from '../src/scoring/timed';
+import { calibrate } from '../src/modules/piano/calibration';
+import { parseExercise } from '../src/modules/piano/content/load';
+import type { TimedExercise } from '../src/modules/piano/content/types';
+import { TimedSession } from '../src/modules/piano/engine/timedSession';
+import { sliceBars } from '../src/modules/piano/engine/practice';
+import { expectedDynamics } from '../src/modules/piano/music/timeline';
+import { dynamicSpans, dynamicsMessages, scoreDynamics } from '../src/modules/piano/scoring/dynamics';
+import type { PlayedNote } from '../src/modules/piano/scoring/timed';
 
 const timed = (dynamics: string, right = 'C4:q D4:q E4:q F4:q | G4:q F4:q E4:q D4:q | C4:q D4:q E4:q F4:q | G4:w') =>
   parseExercise({ id: 'd', kind: 'timed', hand: 'right', tempo: 60, meter: '4/4', right, dynamics }) as TimedExercise;

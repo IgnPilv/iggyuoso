@@ -1,6 +1,8 @@
 # Accounts and sync
 
-iggyuoso works in two ways:
+One account serves every module of the site (the piano tutor, and any module added later; see
+`docs/modules.md`). Each module keeps its records under its own name, so the account holds them
+side by side. iggyuoso works in two ways:
 
 - **Guest** (the default). Progress is saved in the browser, on this device only. Nothing leaves
   the device. Another device or browser, or clearing the site's data, starts from zero.
@@ -14,29 +16,35 @@ offline and syncs when the network comes back.
 
 ## How it is built
 
-- `src/progress/store.ts`: the store reads and writes a key-value backend. The real one
-  (`deviceData`) is localStorage wrapped by `src/sync/tracker.ts`, which stamps every change to
-  a synced record in `iggyuoso.sync.changes`.
-- Synced: every `iggyuoso.*` record except `schema`, `calibration`, `settings` (they belong to
-  the device: its keyboard, latency and look), `account` and `sync.*`. New records sync without
-  any change here.
-- `src/sync/account.ts`: who is playing (guest or account), sign-in, sign-out and the sync
+- `src/core/storage.ts`: the key-value backend every module saves through. The real one
+  (`deviceData`) is localStorage wrapped by `src/core/sync/tracker.ts`, which stamps every change to
+  a synced record in `iggyuoso.sync.changes`. A module saves `iggyuoso.<module id>.*` records
+  (`ModuleRecords`); the piano predates modules and keeps its old names (`ex.*`, `mastery.*`, ...;
+  `src/modules/piano/progress/store.ts` and `records.ts`).
+- Synced: every `iggyuoso.*` record except the device's own (`schema`, `settings`, `account`,
+  `module` from the shell; `calibration` from the piano: the keyboard, latency, look and open
+  module) and `sync.*`. New records of any module sync without any change here.
+- `src/core/sync/account.ts`: who is playing (guest or account), sign-in, sign-out and the sync
   itself: pull rows changed on the server since the last pull, merge records changed on both
   sides, push what changed here. Sync runs on start, a few seconds after each change, when the
   tab is hidden, when the window gets focus and when the network comes back.
 - **Wipe progress** (account card on the Profile): deletes every progress record on the device
-  and, when signed in, every row of the account except sketches and my songs (`KEEP_ON_WIPE`),
+  and, when signed in, every row of the account, in every module, except each module's own work (the piano's sketches
+  and my songs; `keepOnWipe` in `src/core/records.ts`, declared by each module),
   then saves a `wiped` row with the time. A device that synced before that time wipes itself on
   its next pull; a device signing in for the first time afterwards keeps its guest progress.
   Nothing is deleted when the account can't be reached.
-- `src/sync/merge.ts`: merge rules. Exercise records, the practice log, timing and XP keep the
-  most of both sides; everything else takes the newer version.
-- Rows carry the store `schema` version. Rows from a newer app are left alone (the profile asks
-  for a reload); rows from an older app are written and upgraded by `Store.upgradeFrom`.
-- `src/sync/types.ts`: `SyncProvider`, the only thing a backend has to implement.
-  `src/sync/supabase.ts` is the real one, `src/sync/memory.ts` a pretend one for tests and the
+- `src/core/sync/merge.ts`: merges a record changed on both sides with the rules modules declare
+  (`Module.records.merge`). The piano's (`src/modules/piano/progress/records.ts`): exercise records,
+  the practice log, timing and XP keep the most of both sides; everything else takes the newer
+  version.
+- Rows carry the app-wide `schema` version (`src/core/storage.ts`). Rows from a newer app are left
+  alone (the profile asks for a reload); rows from an older app are written and upgraded by each
+  module's `records.upgrade` (the piano's is `Store.upgradeFrom`).
+- `src/core/sync/types.ts`: `SyncProvider`, the only thing a backend has to implement.
+  `src/core/sync/supabase.ts` is the real one, `src/core/sync/memory.ts` a pretend one for tests and the
   demo.
-- `src/sync/config.ts`: the server address and key, read at build time from `VITE_SUPABASE_URL`
+- `src/core/sync/config.ts`: the server address and key, read at build time from `VITE_SUPABASE_URL`
   and `VITE_SUPABASE_ANON_KEY`. Without them the app is guest only and the profile says accounts
   are coming.
 

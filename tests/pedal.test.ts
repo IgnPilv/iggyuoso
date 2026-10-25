@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { calibrate } from '../src/calibration';
-import { parseExercise } from '../src/content/load';
-import type { TimedExercise } from '../src/content/types';
-import { TimedSession } from '../src/engine/timedSession';
-import { decodePedal } from '../src/midi/input';
-import { expectedPedal } from '../src/music/timeline';
-import { scorePedal, type PedalPress } from '../src/scoring/pedal';
+import { calibrate } from '../src/modules/piano/calibration';
+import { parseExercise } from '../src/modules/piano/content/load';
+import type { TimedExercise } from '../src/modules/piano/content/types';
+import { TimedSession } from '../src/modules/piano/engine/timedSession';
+import { decodePedal } from '../src/modules/piano/midi/input';
+import { expectedPedal } from '../src/modules/piano/music/timeline';
+import { scorePedal, type PedalPress } from '../src/modules/piano/scoring/pedal';
 
 const timed = (extra: Record<string, unknown>) =>
   parseExercise({ id: 'p', kind: 'timed', hand: 'left', tempo: 60, meter: '4/4', left: 'C3:h G2:h | F2:h C3:h', ...extra }) as TimedExercise;

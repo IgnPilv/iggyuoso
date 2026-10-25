@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { calibrate, type Calibration } from '../src/calibration';
-import { TimedSession } from '../src/engine/timedSession';
+import { calibrate, type Calibration } from '../src/modules/piano/calibration';
+import { TimedSession } from '../src/modules/piano/engine/timedSession';
 import { timed } from './helpers';
 
 const cal = (lo: number, hi: number): Calibration => {

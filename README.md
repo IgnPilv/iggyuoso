@@ -1,7 +1,8 @@
 # iggyuoso
 
-A browser piano tutor for adult beginners with a MIDI keyboard: short exercises that each train
-one skill, scored per hand. See `CLAUDE.md` for the full brief.
+A learning site whose first module is a browser piano tutor for adult beginners with a MIDI
+keyboard: short exercises that each train one skill, scored per hand. More modules (a math tutor,
+a painting course) can join it on the same account (`docs/modules.md`). See `CLAUDE.md` for the full brief.
 
 Live: https://ignpilv.github.io/iggyuoso/ (Chrome or Edge; Web MIDI needs https).
 No keyboard? Open https://ignpilv.github.io/iggyuoso/#/demo to watch the app play itself, or switch
@@ -23,20 +24,20 @@ Pull requests run the same tests (`ci.yml`), including a check that every file i
 
 ## Layout
 
+iggyuoso is one site with one account and several learning modules; the piano tutor is the first.
+How modules work and how to add one: `docs/modules.md`.
+
 ```
-content/            lessons and exercises (YAML, format in content/README.md)
-src/music/          note strings, pitches, timeline of expected notes
-src/content/        YAML loader + validation
-src/calibration.ts  lowest white key + highest key -> range and middle C
-src/midi/           Web MIDI input, chord grouping (60 ms), computer-keyboard emulator
-src/engine/         TimedSession: clock, count-in, latency, capture, live judgement and score
-src/scoring/        timed scoring (per hand, habits, feedback), find/sequence sessions, stars
-src/progress/       localStorage store behind a swappable backend
-src/audio/          metronome click and guide notes
-src/demo/           demo mode: virtual keyboard and the demo pianist
-src/styles/         design tokens (light/dark); rules in docs/design.md
-src/ui/             views: demo tour, home, lesson, players, falling notes (canvas), sheet, calibration, settings, MIDI tester
-tests/              vitest
+content/                     the piano's lessons, tree and Book (YAML/Markdown, format in content/README.md)
+src/main.ts                  starts the shell
+src/app/                     shell: header with module switcher, router, shared pages, module list
+src/core/                    shared by every module: Module interface, storage, account + sync,
+                             account card, theme and Appearance, dom helper
+src/modules/piano/           the piano tutor
+  music/  content/  calibration.ts  midi/  engine/  scoring/  progress/  audio/  demo/  ui/
+src/modules/sums/            a tiny SAMPLE module that shows how a second module fits
+src/styles/                  design tokens (light/dark), shared; rules in docs/design.md
+tests/                       vitest
 ```
 
 ## How a timed exercise is scored
