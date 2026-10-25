@@ -1020,3 +1020,8 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   and Rossini's William Tell finale, Weber's Huntsmen's Chorus and Handel's Water Music jig. Long
   pieces on the sheet view now keep a readable size and scroll sideways with the music (`longSheet`)
   instead of shrinking to fit. Demo scene "A long song on the sheet".
+- 2026-10-25: Faster start. Lessons and exercises are read from YAML at build time (`?data` imports,
+  `yamlData` plugin in `vite.config.ts`) and reach the app as JSON; reading ~3,500 YAML files in the
+  browser took over a second at every start (2.0 → 1.25 s to the Songbook on a test machine). The
+  tree and the Book stay text. Tests still load the YAML text. Nothing a player sees changes, so no
+  demo scene.

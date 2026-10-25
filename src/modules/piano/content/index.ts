@@ -3,10 +3,12 @@ import { loadContent } from './load';
 import { loadTree, type TreeNode } from './tree';
 import { attachReadings, loadBook } from './book';
 
-const files = import.meta.glob('../../../../content/**/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+// Lessons and exercises arrive already read (see `yamlData` in vite.config.ts); the tree and the Book as text.
+const data = import.meta.glob(['../../../../content/lessons/*.yaml', '../../../../content/exercises/*.yaml'], { query: '?data', import: 'default', eager: true }) as Record<string, object>;
+const files = import.meta.glob(['../../../../content/tree/*.yaml', '../../../../content/book/*.yaml'], { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 const bookFiles = import.meta.glob('../../../../content/book/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 
-export const { content, errors: contentErrors } = loadContent(files);
+export const { content, errors: contentErrors } = loadContent(data);
 if (contentErrors.length) console.warn('Content problems:\n' + contentErrors.join('\n'));
 
 export const { book, errors: bookErrors } = loadBook({ ...files, ...bookFiles }, content.lessons);

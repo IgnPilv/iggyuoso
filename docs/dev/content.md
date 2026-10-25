@@ -59,7 +59,10 @@ Middle C is always written `C4`; calibration moves it to the player's real key. 
 ## How the app reads the files
 
 `src/modules/piano/content/index.ts` bundles every YAML and Markdown file into the site at build time (Vite's
-`import.meta.glob`), then:
+`import.meta.glob`). Lessons and exercises are imported with `?data`: a small Vite plugin (`yamlData` in
+`vite.config.ts`) reads the YAML while building and hands the app a JSON object, because reading
+thousands of YAML files in the browser took over a second at every start. The tree and the Book come
+as text. Then:
 
 1. `loadContent` (`src/modules/piano/content/load.ts`) turns each lesson and exercise into typed data
    (`src/modules/piano/content/types.ts`). It checks everything it can: bars that do not add up, hands with different bar counts,
