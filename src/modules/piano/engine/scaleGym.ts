@@ -21,6 +21,8 @@ export const GYM_ROOTS = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Db', 'Ab', 'Eb', 
 /** Minor scales and arpeggios start on white keys here (their textbook fingering follows one rule). */
 const WHITE_ROOTS = ['C', 'G', 'D', 'A', 'E', 'B', 'F'];
 export const rootsFor = (kind: GymKind) => (kind === 'major' || kind === 'chromatic' ? GYM_ROOTS : WHITE_ROOTS);
+/** The key to use after the boxes change: the one picked, unless this kind of scale has no such key here. */
+export const pickRoot = (kind: GymKind, picked: string) => (rootsFor(kind).includes(picked) ? picked : rootsFor(kind)[0]);
 export type GymHands = Hand | 'together';
 
 export interface GymSetup {

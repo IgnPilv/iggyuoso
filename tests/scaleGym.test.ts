@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   FreeGym, freeTempo, freeTips, gymFingers, gymLine, gymPlan, gymReport, gymTips, isPass, lineDistance, recognise, replay, rootsFor, ScaleGym,
-  splitHands, type Played,
+  splitHands, pickRoot, type Played,
 } from '../src/modules/piano/engine/scaleGym';
 
 const fingers = (root: string, kind: Parameters<typeof gymFingers>[1], hand: 'right' | 'left', octaves = 1) => {
@@ -233,5 +233,13 @@ describe('recognising the scale', () => {
     expect(lineDistance([1, 2, 3], [1, 2, 3])).toBe(0);
     expect(lineDistance([1, 3], [1, 2, 3])).toBe(1);
     expect(lineDistance([1, 9, 3], [1, 2, 3])).toBe(1);
+  });
+});
+
+describe('picking the key', () => {
+  it('keeps the key picked, unless the kind has no such key', () => {
+    expect(pickRoot('major', 'Eb')).toBe('Eb');
+    expect(pickRoot('harmonic minor', 'D')).toBe('D');
+    expect(pickRoot('harmonic minor', 'Eb')).toBe('C');
   });
 });
