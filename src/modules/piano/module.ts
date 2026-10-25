@@ -7,8 +7,10 @@ import { mastery } from './progress';
 import { PIANO_RECORD_WORDS, PIANO_RECORDS } from './progress/records';
 import { store } from './progress/store';
 import { bookView } from './ui/bookView';
+import { chordFinderView } from './ui/chordFinderView';
 import { demoView } from './ui/demoView';
 import { mySongsView } from './ui/mySongsView';
+import { noteRushView } from './ui/noteRush';
 import { pianoProfile } from './ui/profileView';
 import { pulseView } from './ui/pulseView';
 import { sketchbookView } from './ui/sketchbookView';
@@ -60,6 +62,8 @@ export const piano: Module = {
     sketchbook: sketchbookView,
     mysongs: mySongsView,
     midi: testerView,
+    noterush: noteRushView,
+    chords: chordFinderView,
     pulse: pulseView,
   },
   topLevel: true,

@@ -22,7 +22,7 @@ computer. Without a keyboard, use `#/demo` or Settings → Computer keyboard.
 
 - scoring: `timed`, `untimed`, `pedal`, `dynamics`, `drills`, `improvise`;
 - the session clock and practice: `timedSession`, `practice`, `pulse` (the Timing mirror);
-- music: `notes`, `noteStrings`, `theory`, `chords`, `fingering`, `handPlacement`, `chordNames`,
+- music: `notes`, `noteStrings`, `theory`, `chords`, `fingering`, `handPlacement`, `chordNames`, `chordFinder`,
   `transcribe`, `octaves` (middle C = C4 everywhere), `midi` and `computerKeys` decoding,
   `calibration`, `keys`;
 - progress: `store`, `mastery`, `profile`, `daily`, `advice`, `sketches`, `mySongs`, `sync`;

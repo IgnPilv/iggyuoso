@@ -23,8 +23,11 @@ import { currentTheme, previewTheme } from '../../../core/theme';
 import { explainBlock, playground } from './theory';
 import { calibrateView, keyMap, lessonView, testerView } from './views';
 import { sketchbookView } from './sketchbookView';
+import { chordFinderView } from './chordFinderView';
+import { toDevice } from '../calibration';
 import { mountPulse } from './pulseView';
 import { mySongsView } from './mySongsView';
+import { noteRushView } from './noteRush';
 import { writeMidiFile } from '../music/midiFile';
 import { ModuleRecords } from '../../../core/storage';
 import type { Module } from '../../../core/module';
@@ -892,6 +895,16 @@ function scenes(): Scene[] {
   out.push({ title: 'Rhythm echo', caption: 'Play sounds a rhythm you cannot see. After a bar of count-in it is your turn: tap it back on any key. Then the staff shows what it was, marked note by note. A new rhythm every run.', run: played(parseExercise(parse(SAMPLES.echo)), 5000) });
   out.push({ title: 'Rhythm tapping', caption: 'Rhythm only: any key counts, and the score is all about timing.', run: exerciseScene(sampleOf('tap', SAMPLES.tap), { view: 'falling' }) });
   out.push({
+    title: 'Note Rush',
+    caption: 'A mini game for reading notes: notes slide along the staff to a line, and each must be played before it gets there (or, as an option, each note jumps in place with its own time bar). A minute a round (shorter here). Every note in a row builds a streak, every five in a row adds to the points per note, but each note gets less time; a wrong key ends the streak. Treble, bass or both clefs, from C position to ledger lines, with a best score for each. The result says which notes took longest. Home has a card for it.',
+    run: (box, next, p) => {
+      demo.onAsk = (a) => p.answer(a);
+      const cleanup = noteRushView(box);
+      const timers = [window.setTimeout(() => press(box, 'Start'), 1200), window.setTimeout(next, 22000)];
+      return () => { timers.forEach(clearTimeout); demo.onAsk = undefined; cleanup?.(); };
+    },
+  });
+  out.push({
     title: 'Sketchbook',
     caption: 'Free play, written down. Press Record, and after a bar of count-in play anything: the Sketchbook writes it on the staff (right hand on the treble, left on the bass), plays it back with your own timing, and keeps the ideas you like, with a name and a note. A kept idea can be practised like any exercise, falling notes and all. Here the pianist plays a little tune over a bass and keeps it.',
     run: (box, next, p) => {
@@ -916,6 +929,34 @@ function scenes(): Scene[] {
       const cleanup = sketchbookView(box);
       timers.push(window.setTimeout(() => press(box, 'Record'), 1200));
       return () => { timers.forEach(clearTimeout); demo.onRecord = undefined; cleanup?.(); };
+    },
+  });
+  out.push({
+    title: 'Chord finder',
+    caption: 'Hold down any keys and the Chord finder (#/chords, linked from the Book and the Sketchbook) says what they make: the chord in words, its notes spelled from the root (C E G B♭, never A♯), which position it is in and what each key is to the root, written on the grand staff. Two notes are named as an interval. Buttons play the same chord in its other positions and the chords one change away (minor, seventh, sus). Without a keyboard, keys can be tapped on the picture. Keys that go by more than one name (A♭ or G♯, C6 or Am7) show the main name with the others as buttons, and the keys the chord belongs to with its Roman numeral there (C major (I), G major (IV)...). It also works the other way round: type a chord name without any ♯ or ♭ sign (c#m7, bb maj7, f sharp minor) or pick a root and a kind, and the chord is built on the keys. Here the pianist plays C major in all three positions, A minor, G7 and Csus4 and taps C7, then types "f sharp minor" and "ab", and switches A♭ to its other name, G♯.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (keys: number[]) => keys.map((k) => toDevice(DEMO_CALIBRATION, k));
+      const chords = [[60, 64, 67], [64, 67, 72], [55, 60, 64], [57, 60, 64], [55, 59, 62, 65], [60, 65, 67]];
+      chords.forEach((c, i) => p.playChord(dev(c), 800 + i * 2300, 1900));
+      p.playChord(dev([60, 64, 67]), 800 + chords.length * 2300, 4200);
+      const cleanup = chordFinderView(box);
+      timers.push(window.setTimeout(() => press(box, 'C7'), 800 + chords.length * 2300 + 1500));
+      timers.push(window.setTimeout(() => press(box, 'Let go of tapped keys'), 800 + chords.length * 2300 + 5200));
+      // Then the other way round: type a name (no sharp sign needed) and see it built.
+      const type = (text: string) => {
+        const input = box.querySelector<HTMLInputElement>('.chord-input');
+        if (!input) return;
+        input.value = text;
+        input.dispatchEvent(new Event('input'));
+        input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+      };
+      const end = 800 + chords.length * 2300 + 6000;
+      timers.push(window.setTimeout(() => type('f sharp minor'), end));
+      timers.push(window.setTimeout(() => type('ab'), end + 3000));
+      timers.push(window.setTimeout(() => press(box, 'G♯'), end + 5500));
+      timers.push(window.setTimeout(next, end + 8500));
+      return () => { timers.forEach(clearTimeout); cleanup?.(); };
     },
   });
   out.push({
