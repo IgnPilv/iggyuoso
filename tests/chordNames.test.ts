@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chordName, chordSymbols } from '../src/modules/piano/music/chordNames';
+import { chordName, chordSymbols, chordWords } from '../src/modules/piano/music/chordNames';
 import { parsePitchList, parseTimedNotes } from '../src/modules/piano/music/notes';
 
 const name = (notes: string) => chordName(parsePitchList(notes));
@@ -60,5 +60,11 @@ describe('chordSymbols', () => {
 
   it('names nothing in a single line of melody', () => {
     expect(chordSymbols([line('C4:q E4:q G4:q C5:q')])).toEqual([]);
+  });
+});
+
+describe('chordWords', () => {
+  it('says triads in words and leaves the rest as written', () => {
+    expect(['C', 'F♯m', 'B♭', 'G7', 'Bdim'].map(chordWords)).toEqual(['C major', 'F♯ minor', 'B♭ major', 'G7', 'Bdim']);
   });
 });

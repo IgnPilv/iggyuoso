@@ -73,7 +73,8 @@ export class FallingView {
       /** A pedal line, drawn as a strip down the right edge. */ pedal?: PedalSpan[];
       /** Loud and soft marks, written next to the bar numbers. */ dynamics?: DynamicSpan[];
       /** Hands drawn over the keys (Options → Hands), with finger numbers on the tips unless `handNumbers` is false. */ hands?: HandPlan; handNumbers?: boolean;
-      /** Bars before the first one drawn (practising from a later bar keeps the piece's bar numbers). */ firstBar?: number },
+      /** Bars before the first one drawn (practising from a later bar keeps the piece's bar numbers). */ firstBar?: number;
+      /** Chord names (Options → Chord names), each beside the notes that strike it at `beat`. */ chords?: { beat: number; name: string }[] },
   ) {
     while (isBlack(low)) low--;
     while (isBlack(high)) high++;
@@ -262,6 +263,34 @@ export class FallingView {
           ctx.fillText(keyName(this.cal, n.device).replace(/-?\d+$/, ''), x + w / 2, ly);
         }
       }
+    }
+
+    // Chord names in a pill beside their chord's leading edge (left of it, or right where the
+    // lane's edge leaves no room), falling with it down to the hit line.
+    for (const c of this.opts.chords ?? []) {
+      const y = yOf(c.beat);
+      if (y < 16 || y > laneH) continue;
+      const xs = this.notes.filter((n) => Math.abs(n.beat - c.beat) < 1e-6).flatMap((n) => {
+        const k = this.keys.get(n.device);
+        return k ? [k.x, k.x + k.w] : [];
+      });
+      if (!xs.length) continue;
+      ctx.font = `700 13px ${p.fontDisplay}`;
+      const tw = ctx.measureText(c.name).width + 16;
+      const left = Math.min(...xs) - 6 - tw;
+      const x = left >= 4 ? left : Math.min(width - tw - 4, Math.max(...xs) + 6);
+      const cy = y - 13;
+      ctx.fillStyle = withAlpha(p.noteInk, 0.88);
+      roundRect(ctx, x, cy - 11, tw, 22, 11);
+      ctx.fill();
+      ctx.strokeStyle = tokenColor('--accent');
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      ctx.fillStyle = p.laneBig;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(c.name, x + tw / 2, cy + 0.5);
+      ctx.textBaseline = 'alphabetic';
     }
 
     // Notes fade in from the dark at the top of the lane.
