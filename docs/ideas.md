@@ -6,4 +6,4 @@ Ideas built on a preview (docs/previews.md) for Ignas to try. Verdict: **go** (m
 | # | Date | Idea | PR / preview | Verdict |
 |---|------|------|--------------|---------|
 | 1 | 2026-10-25 | Note Rush mini game (`#/noterush`) | PR #83 | pending |
-| 2 | 2026-10-25 | Chord finder (`#/chords`): hold any keys, see the chord named, spelled, its position, and try its inversions and neighbours | PR #85 | pending |
+| 2 | 2026-10-25 | Chord finder (`#/chords`): hold any keys, see the chord named, spelled, its position, other names and keys; or type a name (no ♯ or ♭ needed) to build it | PR #85 | pending |

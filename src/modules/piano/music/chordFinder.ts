@@ -88,8 +88,8 @@ export type Found =
     }
   | { kind: 'unknown'; pitches: Pitch[] };
 
-/** What these keys (written MIDI numbers) make. */
-export function findChord(keys: number[]): Found {
+/** What these keys (written MIDI numbers) make; `prefer` spells the root on that letter when it can. */
+export function findChord(keys: number[], prefer?: Letter): Found {
   const held = [...new Set(keys)].sort((a, b) => a - b);
   if (!held.length) return { kind: 'none' };
   const pcs = [...new Set(held.map(pc))];
@@ -100,18 +100,18 @@ export function findChord(keys: number[]): Found {
   for (const root of [bass, ...pcs.filter((r) => r !== bass)]) {
     const above = pcs.map((p) => pc(p - root)).sort((a, b) => a - b).join();
     const shape = SHAPES.find((s) => s.steps.map((t) => t.semis).join() === above);
-    const found = shape && chordOf(held, root, shape);
+    const found = shape && chordOf(held, root, shape, prefer);
     if (found && found.kind === 'chord') return found;
   }
   return { kind: 'unknown', pitches: held.map((m) => plainPitch(m)) };
 }
 
-function chordOf(held: number[], root: number, shape: Shape): Found {
+function chordOf(held: number[], root: number, shape: Shape, prefer?: Letter): Found {
   const tables = MINORISH.has(shape.id) ? [ROOT_SHARP, ROOT_FLAT] : [ROOT_FLAT, ROOT_SHARP];
   const black = { 1: ['C', 'D'], 3: ['D', 'E'], 6: ['F', 'G'], 8: ['G', 'A'], 10: ['A', 'B'] } as Record<number, Letter[]>;
   // Spell every note on the letter its step needs; if that takes a double accidental, try the
   // root's other name (F♯ aug would need C𝄪, so it is G♭ aug).
-  for (const rootLetter of new Set([...tables.map((t) => t[root][0]), ...(black[root] ?? [])])) {
+  for (const rootLetter of new Set([...(prefer && onLetter(root, prefer) ? [prefer] : []), ...tables.map((t) => t[root][0]), ...(black[root] ?? [])])) {
     const tones: ChordTone[] = [];
     let ok = true;
     for (const m of held) {
@@ -190,4 +190,154 @@ export function neighbours(found: Extract<Found, { kind: 'chord' }>): { label: s
   if (found.shape === 'major') { add('7', `${name}7`); add('maj7', `${name}maj7`); add('sus4', `${name}sus4`); }
   if (found.shape === 'minor') { add('m7', `${name}m7`); add('dim', `${name}dim`); }
   return out;
+}
+
+// ---------------------------------------------------------------- the constructor
+
+/** The chord kinds to pick from, in the order a player meets them. */
+export const QUALITIES: { id: string; label: string }[] = [
+  { id: 'major', label: 'Major' }, { id: 'minor', label: 'Minor' }, { id: '7', label: '7' },
+  { id: 'maj7', label: 'maj7' }, { id: 'm7', label: 'm7' }, { id: 'dim', label: 'dim' },
+  { id: 'aug', label: 'aug' }, { id: 'sus2', label: 'sus2' }, { id: 'sus4', label: 'sus4' },
+  { id: '6', label: '6' }, { id: 'm7b5', label: 'm7♭5' }, { id: 'dim7', label: 'dim7' },
+];
+
+/** The twelve roots to pick from, spelled as they are usually met. */
+export const ROOTS: { letter: Letter; accidental: -1 | 0 | 1 }[] = ROOT_FLAT.map(([letter, accidental]) => ({ letter, accidental }));
+
+// Ways of writing each kind, after the root, with spaces, dashes and "chord" taken out.
+const ALIASES: Record<string, string[]> = {
+  major: ['', 'maj', 'major', 'ma', 'dur'],
+  minor: ['m', 'min', 'minor', 'mi', '-', 'moll'],
+  dim: ['dim', 'diminished', 'o', '°'],
+  aug: ['aug', 'augmented', '+'],
+  sus4: ['sus4', 'sus', 'suspended4', 'suspended'],
+  sus2: ['sus2', 'suspended2'],
+  '7': ['7', 'dom7', 'dominant7', 'dominant', 'dom'],
+  maj7: ['maj7', 'major7', 'ma7', 'δ', 'δ7', '∆', '∆7'],
+  m7: ['m7', 'min7', 'minor7', 'mi7', '-7'],
+  m7b5: ['m7b5', 'min7b5', 'minor7b5', 'halfdiminished', 'halfdim', 'ø', 'ø7', 'm7flat5', 'm7-5'],
+  dim7: ['dim7', 'diminished7', 'o7', '°7'],
+  '6': ['6', 'maj6', 'major6', 'add6'],
+};
+
+export interface ChordSpec { letter: Letter; accidental: -1 | 0 | 1; quality: string }
+
+/** The root and the rest of what was typed, made plain: lower case, words for sharp and flat read. */
+function splitTyped(text: string): { letter: Letter; accidental: -1 | 0 | 1; rest: string; upperM: boolean } | undefined {
+  const t = text.trim().replace(/♯/g, '#').replace(/♭/g, 'b');
+  const m = /^([a-gA-G])\s*(#|sh(?:a(?:rp?)?)?|is|s(?!u)|b|flat|es)?(.*)$/i.exec(t);
+  if (!m) return undefined;
+  const acc = (m[2] ?? '').toLowerCase();
+  const accidental = !acc ? 0 : acc === '#' || acc.startsWith('s') || acc === 'is' ? 1 : -1;
+  const raw = m[3].replace(/chord/gi, '').replace(/[\s_]+/g, '');
+  // A capital M on its own (CM, CM7) means major, as on lead sheets.
+  const upperM = /^M(?!in|aj|i)/.test(raw);
+  const rest = raw.toLowerCase()
+    .replace(/seventh/g, '7').replace(/sixth/g, '6').replace(/second/g, '2').replace(/fourth/g, '4').replace(/fifth/g, '5')
+    .replace(/flat/g, 'b').replace(/[–—]/g, '-');
+  return { letter: m[1].toUpperCase() as Letter, accidental, rest, upperM };
+}
+
+/**
+ * Reads a typed chord name, forgiving about case, spaces and how sharps and flats are written:
+ * "c#m7", "Bb maj7", "f sharp minor", "ebsus4", "G dominant seventh", "A half diminished".
+ * Undefined when it is not (yet) a chord name.
+ */
+export function parseChordName(text: string): ChordSpec | undefined {
+  const s = splitTyped(text);
+  if (!s) return undefined;
+  if (s.upperM) {
+    const after = s.rest.slice(1);
+    if (after === '') return { ...s, quality: 'major' };
+    if (after === '7') return { ...s, quality: 'maj7' };
+  }
+  const quality = Object.keys(ALIASES).find((q) => ALIASES[q].includes(s.rest));
+  return quality ? { letter: s.letter, accidental: s.accidental, quality } : undefined;
+}
+
+/** Chords that what was typed could become, best first (the exact one, then those it starts). */
+export function suggestChords(text: string, max = 6): ChordSpec[] {
+  const s = splitTyped(text);
+  if (!s) return [];
+  const exact = parseChordName(text);
+  const out: ChordSpec[] = exact ? [exact] : [];
+  for (const q of QUALITIES) {
+    if (out.length >= max) break;
+    if (out.some((o) => o.quality === q.id)) continue;
+    if (ALIASES[q.id].some((a) => a.startsWith(s.rest))) out.push({ letter: s.letter, accidental: s.accidental, quality: q.id });
+  }
+  return out;
+}
+
+/** How a spec is written as a symbol: C♯m7, B♭maj7. */
+export function specName(spec: ChordSpec): string {
+  const shape = SHAPES.find((x) => x.id === spec.quality)!;
+  return pitchName({ letter: spec.letter, accidental: spec.accidental, octave: 4 }) + shape.suffix;
+}
+
+/** The chord's keys in root position, with the root from middle C up (C4 to B4). */
+export function specKeys(spec: ChordSpec): number[] {
+  const root = 60 + pc(NATURAL[LETTERS.indexOf(spec.letter)] + spec.accidental);
+  return SHAPES.find((x) => x.id === spec.quality)!.steps.map((t) => root + t.semis);
+}
+
+// ---------------------------------------------------------------- other names
+
+export type ChordFound = Extract<Found, { kind: 'chord' }>;
+
+/**
+ * Every name these keys can go by: the main one first (as `findChord` reads it), then the same
+ * chord spelled another way (A♭ or G♯), then other readings of the same keys (C6 or Am7; each
+ * note of a diminished seventh as its root).
+ */
+export function allReadings(keys: number[]): ChordFound[] {
+  const main = findChord(keys);
+  if (main.kind !== 'chord') return [];
+  const held = [...new Set(keys)].sort((a, b) => a - b);
+  const pcs = [...new Set(held.map(pc))];
+  const out: ChordFound[] = [main];
+  const add = (f: Found | undefined) => { if (f?.kind === 'chord' && !out.some((o) => o.name === f.name)) out.push(f); };
+  const rootPc = pc(pitchMidi(main.root));
+  for (const root of [rootPc, ...pcs.filter((r) => r !== rootPc)]) {
+    const above = pcs.map((p) => pc(p - root)).sort((a, b) => a - b).join();
+    const shape = SHAPES.find((s) => s.steps.map((t) => t.semis).join() === above);
+    if (!shape) continue;
+    for (const letter of LETTERS) {
+      if (!onLetter(root, letter)) continue;
+      const f = chordOf(held, root, shape, letter);
+      if (f.kind === 'chord' && f.root.letter === letter) add(f);
+    }
+  }
+  return out;
+}
+
+const MAJOR_KEYS: [Letter, -1 | 0 | 1][] = [['C', 0], ['G', 0], ['D', 0], ['A', 0], ['E', 0], ['B', 0], ['F', 1], ['C', 1], ['F', 0], ['B', -1], ['E', -1], ['A', -1], ['D', -1], ['G', -1], ['C', -1]];
+const MINOR_KEYS: [Letter, -1 | 0 | 1][] = [['A', 0], ['E', 0], ['B', 0], ['F', 1], ['C', 1], ['G', 1], ['D', 1], ['A', 1], ['D', 0], ['G', 0], ['C', 0], ['F', 0], ['B', -1], ['E', -1], ['A', -1]];
+const NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
+const LOWER = new Set(['minor', 'm7', 'dim', 'm7b5', 'dim7']);
+const MARK: Record<string, string> = { dim: '°', aug: '+', '7': '7', '7no5': '7', maj7: 'maj7', m7: '7', m7b5: 'ø7', dim7: '°7', '6': '6', sus4: 'sus4', sus2: 'sus2' };
+
+/**
+ * The keys whose scale holds this chord as it is spelled, with its Roman numeral there: major keys,
+ * then minor keys (harmonic minor, so V and V7 are major there, as they are played); where it is I first.
+ */
+export function keysOf(f: ChordFound): string[] {
+  const out: { name: string; deg: number }[] = [];
+  const check = (tonics: [Letter, -1 | 0 | 1][], steps: number[], kind: string) => {
+    for (const [letter, acc] of tonics) {
+      const t = NATURAL[LETTERS.indexOf(letter)] + acc;
+      const scale = steps.map((st, i) => onLetter(t + st + 60, LETTERS[(LETTERS.indexOf(letter) + i) % 7]));
+      const names = scale.map((p) => (p ? pitchName(p) : ''));
+      if (!f.spelling.every((n) => names.includes(n))) continue;
+      const deg = names.indexOf(f.spelling[0]);
+      const numeral = LOWER.has(f.shape) ? NUMERALS[deg].toLowerCase() : NUMERALS[deg];
+      out.push({ deg, name: `${pitchName({ letter, accidental: acc, octave: 4 })} ${kind} (${numeral}${MARK[f.shape] ?? ''})` });
+    }
+  };
+  check(MAJOR_KEYS, [0, 2, 4, 5, 7, 9, 11], 'major');
+  check(MINOR_KEYS, [0, 2, 3, 5, 7, 8, 11], 'minor');
+  // Home chord first, then the dominant, the subdominant and the rest.
+  const order = [0, 4, 3, 5, 1, 2, 6];
+  return out.sort((a, b) => order.indexOf(a.deg) - order.indexOf(b.deg)).map((o) => o.name);
 }

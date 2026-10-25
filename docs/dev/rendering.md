@@ -75,7 +75,9 @@ where it would give an answer away (reading tests, taps).
   Profile (`ui/profileView.ts`), Sketchbook (`ui/sketchbookView.ts`), My songs
   (`ui/mySongsView.ts`), the Chord finder (`ui/chordFinderView.ts` over `music/chordFinder.ts`:
   names whatever keys are held, spells them from the root, gives the position and offers the other
-  positions and nearby chords; keys can be tapped on the picture; nothing saved), the recap (`ui/recap.ts`), calibration, Settings and the MIDI tester
+  positions and nearby chords, other names for the same keys (`allReadings`) and the keys each belongs to
+  (`keysOf`); keys can be tapped on the picture; and the other way round, a typed chord name
+  (`parseChordName`, `suggestChords`) or picked root and kind is built on the keys; nothing saved), the recap (`ui/recap.ts`), calibration, Settings and the MIDI tester
   (`ui/views.ts`).
 - **The demo** (`ui/demoView.ts`): a list of scenes, each running real screens with the virtual
   pianist ([how-to.md](how-to.md#add-a-demo-scene)).

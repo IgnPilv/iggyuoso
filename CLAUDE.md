@@ -790,3 +790,17 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   play the chord in each position and the chords one change away (minor / major, 7, maj7, sus4, m7,
   dim); the last 8 chords found are chips to play again. Nothing is saved. `music/chordFinder.ts`
   (tested), `ui/chordFinderView.ts`. Demo scene "Chord finder".
+- 2026-10-25: Chord finder, round 2 (Ignas: "give me also ability to write the chord name and it finds it,
+  like a constructor, i dont want to type # or flat symbol"; "A-flat major and G-sharp major sound the
+  same... how to address multiple chords under one?"). A constructor at the top: type a name and the
+  chord is built on the keys from middle C up (`parseChordName`: any case and spacing, # / s / is /
+  sharp (also half typed) and b / flat / es for the accidental, kinds by symbol or in words: m, min,
+  minor, -, maj7, M7, dom7, dominant seventh, half diminished, ø, o, +, sus...), with suggestions as
+  it is typed (`suggestChords`; Enter or a suggestion plays it), or pick one of 12 roots and 12 kinds.
+  Keys that go by several names show one main name (the spelling usual in keys: A♭ rather than G♯,
+  F♯ for minor-type chords; the bass decides between readings such as C6 / Am7) and the others as
+  buttons under "The same keys also go by" (`allReadings`: other spellings without double sharps or
+  flats, then other roots, so each note of a diminished seventh); a tap respells the name, staff and
+  notes. "Found in" lists the major and (harmonic) minor keys whose scale holds the chord as spelled,
+  with its Roman numeral there, home chord first (`keysOf`: A♭ = A♭ major (I), D♭ major (V)...; G♯ = C♯
+  major (V), C♯ minor (V)). The demo scene also types "f sharp minor" and "ab" and switches to G♯.

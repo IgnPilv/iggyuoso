@@ -921,7 +921,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Chord finder',
-    caption: 'Hold down any keys and the Chord finder (#/chords, linked from the Book and the Sketchbook) says what they make: the chord in words, its notes spelled from the root (C E G B♭, never A♯), which position it is in and what each key is to the root, written on the grand staff. Two notes are named as an interval. Buttons play the same chord in its other positions and the chords one change away (minor, seventh, sus). Without a keyboard, keys can be tapped on the picture. Here the pianist plays C major in all three positions, A minor, G7 and Csus4, then taps C7.',
+    caption: 'Hold down any keys and the Chord finder (#/chords, linked from the Book and the Sketchbook) says what they make: the chord in words, its notes spelled from the root (C E G B♭, never A♯), which position it is in and what each key is to the root, written on the grand staff. Two notes are named as an interval. Buttons play the same chord in its other positions and the chords one change away (minor, seventh, sus). Without a keyboard, keys can be tapped on the picture. Keys that go by more than one name (A♭ or G♯, C6 or Am7) show the main name with the others as buttons, and the keys the chord belongs to with its Roman numeral there (C major (I), G major (IV)...). It also works the other way round: type a chord name without any ♯ or ♭ sign (c#m7, bb maj7, f sharp minor) or pick a root and a kind, and the chord is built on the keys. Here the pianist plays C major in all three positions, A minor, G7 and Csus4 and taps C7, then types "f sharp minor" and "ab", and switches A♭ to its other name, G♯.',
     run: (box, next, p) => {
       const timers: number[] = [];
       const dev = (keys: number[]) => keys.map((k) => toDevice(DEMO_CALIBRATION, k));
@@ -931,7 +931,19 @@ function scenes(): Scene[] {
       const cleanup = chordFinderView(box);
       timers.push(window.setTimeout(() => press(box, 'C7'), 800 + chords.length * 2300 + 1500));
       timers.push(window.setTimeout(() => press(box, 'Let go of tapped keys'), 800 + chords.length * 2300 + 5200));
-      timers.push(window.setTimeout(next, 800 + chords.length * 2300 + 6500));
+      // Then the other way round: type a name (no sharp sign needed) and see it built.
+      const type = (text: string) => {
+        const input = box.querySelector<HTMLInputElement>('.chord-input');
+        if (!input) return;
+        input.value = text;
+        input.dispatchEvent(new Event('input'));
+        input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+      };
+      const end = 800 + chords.length * 2300 + 6000;
+      timers.push(window.setTimeout(() => type('f sharp minor'), end));
+      timers.push(window.setTimeout(() => type('ab'), end + 3000));
+      timers.push(window.setTimeout(() => press(box, 'G♯'), end + 5500));
+      timers.push(window.setTimeout(next, end + 8500));
       return () => { timers.forEach(clearTimeout); cleanup?.(); };
     },
   });
