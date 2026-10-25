@@ -94,8 +94,10 @@ export const homeView: View = (root) => {
 /** A way into the mini games. */
 export const gameCard = () => h('section', { class: 'card home-game' },
   h('div', {}, h('span', { class: 'eyebrow' }, 'Mini game'), h('h2', {}, 'Note Rush'),
-    h('p', { class: 'small' }, 'How many notes can you read and play in a minute?')),
-  h('button', { class: 'secondary', onclick: () => go('/noterush') }, 'Play Note Rush'));
+    h('p', { class: 'small' }, 'How many notes can you read and play in a minute? Or hear a tune you know and find it on the keys.')),
+  h('div', { class: 'controls' },
+    h('button', { class: 'secondary', onclick: () => go('/noterush') }, 'Play Note Rush'),
+    h('button', { class: 'secondary', onclick: () => go('/byear') }, 'Play by ear')));
 
 /** XP, streak and what is due for review. Hidden until there is something to show. */
 function progressCard(): HTMLElement | '' {

@@ -1715,6 +1715,20 @@ body.focus-page main { max-width: none; padding: 0; }
 .gym-score strong { font-family: var(--font-display); font-size: 32px; }
 .gym-tip { margin: var(--space-2) 0 0; padding: var(--space-2) var(--space-3); border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: var(--radius-sm); }
 
+/* Play by ear (#/byear) */
+.ear .key.target rect { filter: none; }
+.ear-title { margin: var(--space-3) 0 var(--space-2); }
+.ear-dots { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--space-3); }
+.ear-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--line-strong); }
+.ear-dot.now { border-color: var(--accent); }
+.ear-dot.found { background: var(--ok); border-color: var(--ok); }
+.ear-dot.later { background: var(--warn); border-color: var(--warn); }
+.ear-dot.shown { background: var(--muted); border-color: var(--muted); }
+.ear-say { min-height: 1.5em; font-weight: 600; }
+.ear-staff { margin-top: var(--space-3); overflow-x: auto; }
+.ear-result:empty { display: none; }
+.ear-result { margin-top: var(--space-3); }
+
 /* ---------------------------------------------------------------- Jam room */
 
 .jam .key.target rect { filter: none; }
