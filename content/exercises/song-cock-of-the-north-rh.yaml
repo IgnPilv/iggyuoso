@@ -1,0 +1,18 @@
+id: song-cock-of-the-north-rh
+title: 'Cock o'' the North: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: A
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: E5:s D5:s | C#5:e D5:e C#5:e C#5:e B4:e A4:e | A4:e C#5:e E5:e F#5:q E5:e | C#5:e D5:e C#5:e C#5:e B4:e A4:e | B4:e
+  C#5:e B4:e B4:e E5:e D5:e | C#5:e D5:e C#5:e C#5:e B4:e A4:e | A4:e C#5:e E5:e F#5:q E5:e | C#5:q C#5:e B4:e C#5:e B4:e
+  | A4:q. A4:q E5:s3 F#5:s3 G#5:s3 | A5:q E5:e F#5:q E5:e | A5:q E5:e F#5:q E5:e | C#5:e D5:e C#5:e C#5:e B4:e A4:e | B4:e
+  C#5:e D5:e E5:e F#5:e G#5:e | A5:q E5:e F#5:q E5:e | A5:q E5:e F#5:q E5:e | C#5:q C#5:e B4:e C#5:e B4:e | A4:q. A4:q
+reps: 2
+days: 1

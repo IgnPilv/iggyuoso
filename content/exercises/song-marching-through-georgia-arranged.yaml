@@ -1,0 +1,25 @@
+id: song-marching-through-georgia-arranged
+title: Marching Through Georgia, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: E5:e. D5:s C5:e D5:e | E5:e G4:e G4:e G4:e | A4:e C5:e C5:e D5:e | C5:h | E4:e. F4:s G4:e G4:e | A4:e G4:e A4:e C5:e
+  | D5:e. C#5:s D5:e E5:e | D5:h | C5:e C5:e D5:e E5:e | F5:e A4:e A4:e A4:e | G4:e C5:e C5:e D5:e | E5:h | D5:q D5:e. D5:s
+  | D5:q E5:e D5:e | C5:h | C5:q. E5:e | G5:q. E5:e | G5:q. E5:e | C5:e D5:e C5:e A4:e | C5:q. E5:e | G5:q. E5:e | G5:q. E5:e
+  | D5:e. D5:s D5:e E5:e | D5:h | C5:e C5:e D5:e E5:e | F5:e A4:e A4:e A4:e | G4:e C5:e C5:e D5:e | E5:h | D5:q D5:e. D5:s
+  | D5:e E5:q D5:e | C5:h | C5:h
+left: C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | F2:q F2:q | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | A2:e E3:e C3:e E3:e
+  | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e | F2:e C3:e A2:e C3:e | C3:q G2:q | C3:e G3:e E3:e G3:e
+  | D3:e A3:e F3:e A3:e | D3:q G2:q | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e
+  | F2:e C3:e A2:e C3:e | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e | D3:e A3:e F3:e A3:e | G2:e D3:e
+  B2:e D3:e | C3:e G3:e E3:e G3:e | F2:e C3:e A2:e C3:e | C3:q G2:q | C3:e G3:e E3:e G3:e | D3:e A3:e F3:e A3:e | D3:q G2:q
+  | C3:e G3:e E3:e G3:e | C3+E3+G3:h
+pedal: x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h
+  | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:h | x:q x:q | x:h | x:h
+reps: 3
+days: 2

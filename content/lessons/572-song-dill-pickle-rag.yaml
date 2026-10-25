@@ -1,0 +1,26 @@
+id: song-dill-pickle-rag
+title: Dill Pickles
+skills:
+- songs
+steps:
+- explain: |
+    **Dill Pickles** · Charles L. Johnson, 1906
+
+    One of the best-selling rags of its time: its tune hops across the beat in groups of three.
+  staff:
+    notes: B4:q C5:q C#5:q  |  D5:e E5:e G5:e D5:e E5:e G5:e D5:e E5:e
+    key: G
+  sound: B4:q C5:q C#5:q  |  D5:e E5:e G5:e D5:e E5:e G5:e D5:e E5:e  |  G5:e D5:e E5:e G5:q E5:e D5:q  |  G4:e A4:e B4:e
+    G4:e A4:e B4:e G4:e A4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-dill-pickle-rag-rh
+- exercise: song-dill-pickle-rag-lh
+- exercise: song-dill-pickle-rag
+- exercise: song-dill-pickle-rag-arranged
+- exercise: song-dill-pickle-rag-performance
+recap: 'Dill Pickles: tune, left hand, together. Come back to it any time; songs are for fun.'

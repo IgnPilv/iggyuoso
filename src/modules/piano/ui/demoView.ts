@@ -813,6 +813,13 @@ function scenes(): Scene[] {
       return () => { timers.forEach(clearTimeout); Object.assign(songFilter, keep); };
     },
   });
+  // A long song keeps its size on the sheet and scrolls along with the music.
+  const longSong = content.exercises.get('song-scotland-the-brave-rh');
+  if (longSong) out.push({
+    title: 'A long song on the sheet',
+    caption: 'Many songs run to thirty bars or more. On the sheet a long piece is not shrunk to fit the window: it keeps a readable size and slides along with the music as it plays. Here, the tune of "Scotland the Brave", a pipe march from the traditional tunes in the Songbook.',
+    run: exerciseScene(longSong, { view: 'classic' }),
+  });
   out.push({
     title: 'Practice room',
     caption: 'Beside the lessons sits the practice room: three games (Note Rush, Play by ear, Duet) and five tools (Chord finder, Timing mirror, Scale gym, Jam room, Play report), all on the home page. Each belongs to a branch and says which milestone it is best after (nothing is locked). The branch page lists its own, here the rhythm branch, and a lesson they fit names them on its recap: after "Steady beat", the Timing mirror.',

@@ -1,0 +1,34 @@
+id: song-oh-dear-what-can-rh
+title: 'Oh Dear, What Can the Matter Be?: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: q
+countIn: 1
+right: B4:e C5:e | D5:q. D5:q. | D5:e B4:e G5:e D5:e B4:e G4:e | C5:q. C5:q. | C5:e A4:e B4:e C5:e B4:e A4:e | D5:q. D5:q.
+  | D5:e B4:e G5:e D5:e B4:e G4:e | E4:e A4:e C5:e B4:e C5:e A4:e | G4:h B4:e C5:e | D5:e B4:e C5:e D5:e B4:e C5:e | D5:e
+  B4:e G5:e D5:e B4:e G4:e | C5:e A4:e B4:e C5:e A4:e B4:e | C5:e A4:e B4:e C5:e B4:e A4:e | D5:e B4:e C5:e D5:e B4:e C5:e
+  | D5:e B4:e G5:e D5:e B4:e G4:e | E4:e A4:e C5:e B4:e C5:e A4:e | G4:h B4:e C5:e | D5:e B4:s C5:s D5:s B4:s G5:e B4:s C5:s
+  D5:s B4:s | D5:e B4:s C5:s D5:s B4:s E5:s D5:s C5:s B4:s A4:s G4:s | C5:e A4:s B4:s C5:s A4:s A5:e A4:s B4:s C5:s A4:s |
+  C5:e A4:s B4:s C5:s A4:s A5:s G5:s F#5:s E5:s D5:s C#5:s | D5:e B4:s C5:s D5:s B4:s G5:e B4:s C5:s D5:s B4:s | D5:e B4:s
+  C5:s D5:s B4:s E5:s D5:s C5:s B4:s A4:s G4:s | E4:e A4:e C5:e B4:e C5:e A4:e | G4:h B4:e C5:e | D5:s C5:s B4:s C5:s D5:s
+  B4:s D5:s C5:s B4:s C5:s D5:s B4:s | D5:e B4:e G5:e D5:e B4:e G4:e | C5:s B4:s A4:s B4:s C5:s A4:s C5:s B4:s A4:s B4:s C5:s
+  A4:s | C5:e A4:e A5:e G5:e F#5:e E5:e | D5:s C5:s B4:s C5:s D5:s B4:s D5:s C5:s B4:s C5:s D5:s B4:s | D5:e B4:e G5:e D5:e
+  B4:e G4:e | E4:e A4:e C5:e B4:e C5:e A4:e | G4:h B4:e C5:e | D5:e B4:e G4:e D4:e G4:e B4:e | D5:s G4:s B4:s D5:s G5:s D5:s
+  B5:s A5:s G5:s F#5:s E5:s D5:s | E5:e C5:e A4:e E4:e F#4:e G4:e | F#4:s D4:s F#4:s A4:s D5:s A4:s A5:s G5:s F#5:s E5:s D5:s
+  C#5:s | D5:e B4:e G4:e D4:e G4:e B4:e | D5:s G4:s B4:s D5:s G5:s D5:s B5:s A5:s G5:s F#5:s E5:s D5:s | E4:e A4:e C5:e B4:e
+  C5:e A4:e | G4:h B4:e C5:e | D5:q B5:e B4:q G5:e | G4:e B4:e D5:e D4:e G4:e B4:e | A4:q A5:e A4:q E5:e | D4:e F#4:e A4:e
+  C5:e B4:e C5:e | D5:q B5:e B4:q G5:e | G4:e B4:e D5:e D4:e G4:e B4:e | E4:e A4:e C5:e B4:e C5:e A4:e | G4:h B4:e C5:e |
+  E5:s D5:s C5:s B4:s A4:s G4:s E5:s D5:s C5:s B4:s A4:s G4:s | B4:s G4:s B4:s D5:s G5:s D5:s B5:s A5:s G5:s F#5:s E5:s D5:s
+  | F#5:s E5:s D5:s C5:s B4:s A4:s F#5:s E5:s D5:s C5:s B4:s A4:s | F#4:s D4:s F#4:s A4:s D5:s A4:s A5:s G5:s F#5:s E5:s D5:s
+  C#5:s | E5:s D5:s C5:s B4:s A4:s G4:s E5:s D5:s C5:s B4:s A4:s G4:s | B4:s G4:s B4:s D5:s G5:s D5:s B5:s A5:s G5:s F#5:s
+  E5:s D5:s | E4:e A4:e C5:e B4:e C5:e A4:e | G4:h B4:e C5:e | D5:e. B4:s D5:s B4:s E5:e. B4:s E5:s B4:s | D5:e. B4:s D5:s
+  C5:s B4:e A4:e G4:e | C5:e. A4:s C5:s A4:s A5:e. B5:s A5:s G5:s | F#5:e. G5:s F#5:s E5:s D5:e. E5:s D5:s C#5:s | D5:e. B4:s
+  D5:s B4:s E5:e. B4:s E5:s B4:s | D5:e. B4:s D5:s C5:s B4:e A4:e G4:e | E4:e A4:e C5:e B4:e C5:e A4:e | G4:h
+reps: 2
+days: 1

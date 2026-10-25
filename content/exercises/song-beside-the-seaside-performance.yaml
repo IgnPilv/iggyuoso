@@ -1,0 +1,26 @@
+id: song-beside-the-seaside-performance
+title: 'I Do Like to Be Beside the Seaside: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 56
+meter: 6/8
+pickup: q.
+countIn: 1
+right: G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q C5:e | G5:q. G5:q. | G5:q. G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q
+  C5:e | A5:q. A5:q. | A5:q. A5:q A#5:e | B5:q. A5:q F5:e | E5:q D5:e C#5:q D5:e | A5:q. G5:q. | F5:q. E5:q D#5:e | E5:q.
+  D5:q. | E5:q. D5:e C#5:e D5:e | E5:q. D5:q. | B4:q. G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q C5:e | G5:q. G5:q. | G5:q.
+  G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q C5:e | A5:q. A5:q. | A5:q. A5:q A#5:e | B5:q A#5:e B5:q A5:e | B5:q. A5:q
+  F5:e | A5:q G5:e A5:q G5:e | A5:q G5:e F5:q E5:e | D5:q. A5:q. | A5:q E5:e D5:q E5:e | C5:q. C5:q. | C5:q.
+left: r:q. | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e
+  G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | F2:e C3:e A2:e F2:e C3:e A2:e | F2:e C3:e
+  A2:e F2:e C3:e A2:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e
+  G3:e E3:e C3:e G3:e E3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e
+  B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e
+  D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | F2:e C3:e A2:e
+  F2:e C3:e A2:e | F2:e C3:e A2:e F2:e C3:e A2:e | F#2:e C#3:e A#2:e F#2:e C#3:e A#2:e | B2:e F#3:e D#3:e B2:e F#3:e D#3:e
+  | E3:e B3:e G3:e E3:e B3:e G3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e
+  D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3+E3+G3:q.
+reps: 2
+days: 2

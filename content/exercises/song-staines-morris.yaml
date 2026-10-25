@@ -1,0 +1,18 @@
+id: song-staines-morris
+title: Staines Morris
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q D5:q B4:q C#5:q | D5:q C5:e Bb4:e A4:q. Bb4:e | C5:e D5:e C5:e Bb4:e A4:q G4:e F4:e | E4:e D4:e E4:e F4:e D4:h
+  | F4:e G4:e A4:e Bb4:e A4:q G4:e F4:e | E4:e D4:e E4:e F4:e D4:h | F4:q F4:q C4:q C4:q | D4:e E4:e F4:e G4:e A4:q. Bb4:e
+  | C5:e D5:e C5:e Bb4:e A4:q G4:e F4:e | E4:e D4:e E4:e F4:e D4:h
+left: D3+F3+A3:h C#3+E3+A3:h | D3+G3+Bb3:h D3+F3+A3:h | D3+F3+A3:h D3+G3+Bb3:h | C#3+E3+A3:h D3+F3+A3:h | C3+F3+A3:w | C3+E3+G3:h
+  D3+F3+A3:h | C3+F3+A3:w | D3+F3+Bb3:h C3+F3+A3:h | D3+F3+A3:h D3+G3+Bb3:h | C#3+E3+A3:h D3+F3+A3:h
+reps: 3
+days: 2

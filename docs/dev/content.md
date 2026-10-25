@@ -116,6 +116,23 @@ performance. It checks every bar's length, moves the left hand (or, failing that
 so that no key is played by both hands at once, and prints any tune whose notes fit their chords
 less than 60% of the time on chord changes, as a check on the transcription.
 
+**Imported traditional tunes.** `cat_trad.py` is written by `tools/content/import_abc.py`, not by hand.
+It reads tunes in ABC (a plain-text format for folk tunes) from the Nottingham Music Database, a free
+collection of about a thousand traditional dance tunes and songs with chord names, and takes only the
+tunes listed in `trad_list.py` (which also holds the title, source line and story each one shows). From
+each it keeps the melody, played once through (repeats and first endings left out), and the chord names;
+the left hands are made by the catalogue like any other song (plainer ones if the fuller ones would
+cross the tune). The importer ranks the tunes by how hard they are to play (notes per beat, fast notes,
+range, leaps, sharps or flats, length) and spreads them over stages 3–9, keeping children's songs,
+carols and hymns early. It needs the music21 library and the ABC files, so it is run by hand:
+
+    pip install music21 pyyaml
+    python3 tools/content/import_abc.py <folder with the database's .abc files>
+
+then `rebuild.sh` as usual. The files are at github.com/jukedeck/nottingham-dataset (`ABC_cleaned`).
+The collection also has modern tunes by living composers: only add a tune to `trad_list.py` when it is
+traditional or its composer died more than 70 years ago (and it was published before 1930).
+
 **Licensing rule.** Catalogue songs are public domain: traditional, or by a composer who died more
 than 70 years ago and published before 1930. Every arrangement is our own; nothing is copied from a
 published or online arrangement or a downloaded MIDI file. Copyrighted songs are added only when

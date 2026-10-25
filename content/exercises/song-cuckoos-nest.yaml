@@ -1,0 +1,19 @@
+id: song-cuckoos-nest
+title: The Cuckoo's Nest
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q D4:e E4:e D4:e C4:e A3:e C4:e | D4:e C4:e D4:e E4:e F4:q F4:e A4:e | C5:q C5:e D5:e A4:q G4:e F4:e | E4:e C4:e
+  C4:e C4:e C4:q F4:e E4:e | D4:q D4:e E4:e D4:e C4:e A3:e C4:e | D4:e C4:e D4:e E4:e F4:q F4:e G4:e | A4:e Bb4:e C5:e A4:e
+  G4:e F4:e E4:e F4:e | E4:q D4:q D4:q r:q
+left: D2+F2+A2:w | D2+F2+A2:q D2+F2+A2:q D2+F2+A2:q C2+E2+Bb2:q | C2+F2+A2:w | C2+E2+G2:q C2+E2+G2:q C2+E2+G2:q C#2+E2+A2:q
+  | D2+F2+A2:w | D2+F2+A2:q D2+F2+A2:q D2+F2+A2:q C2+E2+Bb2:q | C2+F2+A2:h C#2+E2+A2:h | D2+F2+A2:q D2+G2+Bb2:q D2+F2+A2:q
+  D2+F2+A2:q
+reps: 3
+days: 2

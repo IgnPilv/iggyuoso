@@ -1,0 +1,26 @@
+id: song-mason-s-apron
+title: The Mason's Apron
+skills:
+- songs
+steps:
+- explain: |
+    **The Mason's Apron** · Scottish and Irish reel, 1700s
+
+    A showpiece reel that fiddlers play faster and with more variations each time round.
+  staff:
+    notes: E5:e D5:e  |  C#5:q A4:q A4:e B4:e A4:e F#4:e
+    key: A
+  sound: E5:e D5:e  |  C#5:q A4:q A4:e B4:e A4:e F#4:e  |  E4:e F#4:e A4:e B4:e C#5:q B4:e C#5:e  |  D5:q B4:q B4:e C#5:e
+    B4:e A4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-mason-s-apron-rh
+- exercise: song-mason-s-apron-lh
+- exercise: song-mason-s-apron
+- exercise: song-mason-s-apron-arranged
+- exercise: song-mason-s-apron-performance
+recap: 'The Mason''s Apron: tune, left hand, together. Come back to it any time; songs are for fun.'

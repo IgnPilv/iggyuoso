@@ -1,0 +1,32 @@
+id: song-meeting-of-the-waters-arranged
+title: The Meeting of the Waters, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords).
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: A4:e B4:e | D5:h D5:q F#5:q | A4:h D5:q C#5:q | B4:q D5:q B4:q G4:q | A4:h D5:q E5:q | F#5:q A5:q A4:q A5:q | G5:q
+  F#5:q E5:q D5:q | F#5:w | E5:h A4:q B4:q | D5:h D5:q F#5:q | A4:h D5:q C#5:q | B4:q D5:q B4:q G4:q | A4:h D5:q E5:q | F#5:q
+  A5:q G5:q F#5:q | G5:q A4:q C#5:q E5:q | D5:q. E5:e D5:q C#5:q | D5:q E5:q F#5:q G5:q | A5:q. G5:e F#5:q A5:q | D5:h F#5:q
+  D5:q | B4:q D5:q B4:q G4:q | A4:h D5:q E5:q | F#5:q A5:q A4:q A5:q | G5:q F#5:q E5:q D5:q | F#5:w | E5:h F#5:q G5:q | A5:q.
+  G5:e F#5:q A5:q | D5:h F#5:q D5:q | B4:q D5:q B4:q G4:q | A4:h D5:q E5:q | F#5:q A5:q G5:q F#5:q | G5:q A4:q C#5:q E5:q
+  | D5:q. E5:e D5:q C#5:q | D5:h.
+left: r:q | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e
+  D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e
+  D3:e G2:e D3:e B2:e D3:e | A2:e E3:e C#3:e E3:e E3:e B3:e G#3:e B3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e
+  A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e
+  | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e
+  C#3:e E3:e | D3:e A3:e F#3:e A3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e
+  D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e
+  A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | A2:e E3:e
+  C#3:e E3:e E3:e B3:e G#3:e B3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e
+  | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e
+  A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e A2:e
+  E3:e C#3:e E3:e | D3+F#3+A3:h.
+reps: 3
+days: 2

@@ -346,6 +346,25 @@ export function staffStrip(staff: ReturnType<typeof renderStaff>) {
   };
 }
 
+/** Natural width (in the staff's own units) past which the sheet view scrolls sideways instead of shrinking. */
+const LONG_SHEET = 2000;
+
+/** A long sheet in the sheet view: kept at its natural size in a sideways-scrolling box that follows the music. */
+export function longSheet(staff: ReturnType<typeof renderStaff>, wrap: HTMLElement) {
+  if (staff.width <= LONG_SHEET) return undefined;
+  wrap.classList.add('long');
+  staff.svg.style.width = `${staff.width}px`;
+  let last = NaN;
+  return {
+    follow(at: number) {
+      const x = staff.xOf(at) * (staff.svg.getBoundingClientRect().width / staff.width || 1);
+      if (Math.abs(x - last) < 0.5) return;
+      last = x;
+      wrap.scrollLeft = Math.max(0, x - wrap.clientWidth / 3);
+    },
+  };
+}
+
 // ---------------------------------------------------------------- sequence
 
 export function clefFor(ex: Exercise, hand?: Hand): Clef {
@@ -566,6 +585,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   let falling: FallingView | undefined;
   let staff: ReturnType<typeof renderStaff> | undefined;
   let strip: ReturnType<typeof staffStrip> | undefined;
+  let long: ReturnType<typeof longSheet> | undefined;
   let kb: KeyboardView | undefined;
   let sheetHandles: ReturnType<typeof sheetRange> | undefined;
   let offHeld = () => {};
@@ -608,7 +628,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     falling?.destroy();
     offHeld();
     stage.replaceChildren();
-    falling = undefined; staff = undefined; kb = undefined; strip = undefined; sheetHandles = undefined;
+    falling = undefined; staff = undefined; kb = undefined; strip = undefined; long = undefined; sheetHandles = undefined;
     const sheet = () => renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key, chords: chordsOn && chordable });
     const t = target;
     if (view === 'falling' && !echo) {
@@ -631,7 +651,9 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       kb.playable();
       offHeld = showHeld(kb);
-      stage.append(practising && slider ? slider.el : '', h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg), kb.el);
+      const wrap = h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg);
+      long = longSheet(staff, wrap);
+      stage.append(practising && slider ? slider.el : '', wrap, kb.el);
       showHands(-1);
     }
     if (practising && ranged && staff) sheetHandles = sheetRange(staff, ex.bars, ex.meter.quarters, pickupOffset(ex), () => span, onSpan);
@@ -718,7 +740,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   // where the take starts.
   function idle() {
     falling?.draw({ beat: -1, held: midi.held, noteState: () => 'coming', flashes: [], now: performance.now(), banner: practising ? spanText(span) : 'Press Listen or Play' });
-    const s = strip;
+    const s = strip ?? long;
     if (s) requestAnimationFrame(() => s.follow(target.offset + pickupOffset(target.ex)));
   }
   function retarget() {
@@ -838,7 +860,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         beat: pos.beat, count: pos.phase === 'count-in' && !session.paused ? pos.count : undefined, held: midi.held, noteState, flashes, now, pedalDown: midi.pedalDown,
         banner: session.paused ? 'Paused' : pos.phase === 'waiting' ? 'Get ready' : undefined,
       });
-      strip?.follow(Math.max(0, pos.beat) + t.offset);
+      (strip ?? long)?.follow(Math.max(0, pos.beat) + t.offset);
       if (kb) {
         kb.clear('target');
         kb.clearLabels();

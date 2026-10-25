@@ -1,0 +1,26 @@
+id: song-garryowen
+title: Garryowen
+skills:
+- songs
+steps:
+- explain: |
+    **Garryowen** · Irish jig, 1700s
+
+    Named after a part of Limerick. Later the marching tune of the US 7th Cavalry.
+  staff:
+    notes: A5:s G#5:s  |  F#5:e E5:e D5:e C#5:e B4:e A4:e
+    key: A
+  sound: A5:s G#5:s  |  F#5:e E5:e D5:e C#5:e B4:e A4:e  |  C#5:e D5:e C#5:e C#5:e A5:e G#5:e  |  F#5:e E5:e D5:e C#5:e B4:e
+    A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-garryowen-rh
+- exercise: song-garryowen-lh
+- exercise: song-garryowen
+- exercise: song-garryowen-arranged
+- exercise: song-garryowen-performance
+recap: 'Garryowen: tune, left hand, together. Come back to it any time; songs are for fun.'

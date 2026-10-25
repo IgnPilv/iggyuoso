@@ -1,0 +1,25 @@
+id: song-jenny-lind
+title: Jenny Lind Polka
+skills:
+- songs
+steps:
+- explain: |
+    **Jenny Lind Polka** · Polka, 1840s
+
+    Named after the Swedish singer Jenny Lind, the "Swedish Nightingale", the biggest star of her day.
+  staff:
+    notes: A4:e G4:e  |  F#4:q A4:q G4:q B4:q
+    key: D
+  sound: A4:e G4:e  |  F#4:q A4:q G4:q B4:q  |  A4:q F#5:q F#5:e E5:e F#5:q  |  G4:q E5:q E5:e D#5:e E5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-jenny-lind-rh
+- exercise: song-jenny-lind-lh
+- exercise: song-jenny-lind
+- exercise: song-jenny-lind-arranged
+- exercise: song-jenny-lind-performance
+recap: 'Jenny Lind Polka: tune, left hand, together. Come back to it any time; songs are for fun.'

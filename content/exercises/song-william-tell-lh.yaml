@@ -1,0 +1,17 @@
+id: song-william-tell-lh
+title: 'William Tell Overture: the finale: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | C3:w | C3:w | C3:w | G2:w | C3:w | C3:w | G2:w | C3:w | A2:w | A2:w | A2:w | A2:w | A2:w | A2:w | A2:h D3:h |
+  G2:w | G2:w | G2:w | C3:w | G2:w | G2:w | G2:w | C3:w | G2:w | C3:w | C3:w | C3:w | G2:w | C3:w | C3:w | G2:w | C3:w | C3:w
+  | E3:w | F2:w | C3:w | D3:h G2:h | C3:w | D3:h G2:h | C3:w | C3:w | C3:w | C3:w | C3:w | C3:w | G2:w | G2:w | C3:q G2:q
+  C3:q G2:q | C3:q G2:q C3:q G2:q | C3:w | C3:w | C3:w | C3:w | C3:h.
+reps: 2
+days: 1

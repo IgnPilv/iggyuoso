@@ -1,0 +1,20 @@
+id: song-good-old-summertime
+title: In the Good Old Summertime
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: h
+countIn: 1
+right: D5:q E5:q | D5:h B4:h | D5:q G5:h. | B5:w~ | B5:h A5:q G5:q | G5:h. A5:q | G5:h E5:h | D5:w~ | D5:q E5:q D5:q C5:q
+  | B4:h D5:h | G5:h A5:h | B5:h A5:q G5:q~ | G5:h. G5:q | E5:h A5:h | A5:q B5:h. | A5:w | A5:h D5:q C5:q | B4:h D5:h | G5:h
+  A5:h | B5:h A5:q G5:q~ | G5:h. G5:q | G5:h. A5:q | G5:h E5:h | D5:w~ | D5:q E5:q D5:q C5:q | B4:h D5:h | G5:h A5:h | B5:h
+  A5:q G5:q~ | G5:h D5:q D#5:q | E5:h G5:h | G5:h A5:h | G5:w | G5:h
+left: r:h | G2:w | G2:w | G2:w | G2:w | C3:w | C3:w | G2:w | D3:w | G2:w | G2:w | B2:w | E3:w | A2:w | A2:w | D3:w | D3:w
+  | G2:w | G2:w | G2:w | G2:w | C3:w | C3:w | G2:w | D3:w | G2:w | G2:w | B2:w | E3:w | A2:w | D3:w | G2:h C3:h | G2:h
+reps: 3
+days: 2

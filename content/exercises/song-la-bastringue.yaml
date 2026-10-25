@@ -1,0 +1,22 @@
+id: song-la-bastringue
+title: La Bastringue
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:e E5:e | F#5:q F#5:e F#5:e F#5:q G5:e F#5:e | E5:q C#5:q D5:q. D5:e | C#5:q D5:q E5:e F#5:e E5:e C#5:e | D5:q E5:q
+  F#5:q D5:q | F#5:q F#5:e F#5:e F#5:q G5:e F#5:e | E5:q C#5:q D5:q. D5:e | G5:q F#5:e3 G5:e3 F#5:e3 E5:q D5:q | B4:q C#5:q
+  D5:q A4:e3 B4:e3 C#5:e3 | D5:q F#5:e D5:e A5:e D5:e F#5:e D5:e | C5:q E5:e C#5:e G5:e C#5:e E5:e C#5:e | D5:q F#5:e D5:e
+  A5:e D5:e F#5:e A5:e | B5:e G5:e E5:e C#5:e D5:e C#5:e B4:e A4:e | D5:q F#5:e D5:e A5:e D5:e F#5:e D5:e | C5:q E5:e C#5:e
+  G5:e C#5:e E5:e C#5:e | A4:e D5:e F#5:e A5:e B5:e G5:e E5:e C#5:e | D5:e F#5:e E5:e C#5:e D5:h
+left: r:q | D3+F#3+A3:w | C#3+E3+A3:h D3+F#3+A3:h | C#3+E3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | C#3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:w
+  | C#3+E3+A3:h D3+F#3+A3:h | D3+F#3+A3:w | C3+E3+G3:w | A2+D3+F#3:w | B2+D3+G3:h A2+C#3+E3:h | A2+D3+F#3:w | C3+E3+G3:w |
+  A2+D3+F#3:h B2+D3+G3:h | A2+D3+F#3:h.
+reps: 3
+days: 2

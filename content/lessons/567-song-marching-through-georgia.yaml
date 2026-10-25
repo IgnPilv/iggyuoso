@@ -1,0 +1,24 @@
+id: song-marching-through-georgia
+title: Marching Through Georgia
+skills:
+- songs
+steps:
+- explain: |
+    **Marching Through Georgia** · Henry Clay Work, 1865
+
+    A Civil War song by Henry Clay Work, the writer of "My Grandfather's Clock".
+  staff:
+    notes: E5:e. D5:s C5:e D5:e  |  E5:e G4:e G4:e G4:e
+  sound: E5:e. D5:s C5:e D5:e  |  E5:e G4:e G4:e G4:e  |  A4:e C5:e C5:e D5:e  |  C5:h
+- explain: |
+    **Before you play.** Two beats in a bar, like a march.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 72
+- exercise: song-marching-through-georgia-rh
+- exercise: song-marching-through-georgia-lh
+- exercise: song-marching-through-georgia
+- exercise: song-marching-through-georgia-arranged
+- exercise: song-marching-through-georgia-performance
+recap: 'Marching Through Georgia: tune, left hand, together. Come back to it any time; songs are for fun.'

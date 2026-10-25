@@ -1,0 +1,26 @@
+id: song-beside-the-seaside
+title: I Do Like to Be Beside the Seaside
+skills:
+- songs
+steps:
+- explain: |
+    **I Do Like to Be Beside the Seaside** · John Glover-Kind, 1907
+
+    A music-hall song about a day at the English seaside, still played on the organ at Blackpool Tower.
+  staff:
+    notes: G5:q G#5:e  |  A5:q. G5:q E5:e
+  sound: G5:q G#5:e  |  A5:q. G5:q E5:e  |  D5:q C5:e B4:q C5:e  |  G5:q. G5:q.
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 6/8 · Tempo: 56
+- exercise: song-beside-the-seaside-tap
+- exercise: song-beside-the-seaside-by-ear
+- exercise: song-beside-the-seaside-rh
+- exercise: song-beside-the-seaside-lh
+- exercise: song-beside-the-seaside
+- exercise: song-beside-the-seaside-arranged
+- exercise: song-beside-the-seaside-performance
+recap: 'I Do Like to Be Beside the Seaside: tune, left hand, together. Come back to it any time; songs are for fun.'

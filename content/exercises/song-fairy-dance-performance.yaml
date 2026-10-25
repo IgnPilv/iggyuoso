@@ -1,0 +1,24 @@
+id: song-fairy-dance-performance
+title: 'The Fairy Dance: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:e E5:e | F#5:q F#5:e D5:e F#5:q F#5:e D5:e | F#5:q F#5:e D5:e C#5:e E5:e C#5:e A4:e | F#5:q F#5:e D5:e G5:e F#5:e
+  E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e | A5:q A5:e F#5:e B5:q B5:e A5:e | G5:e F#5:e G5:e E5:e A5:q A5:e
+  G5:e | F#5:q F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e | F#5:e E#5:e F#5:e D5:e F#5:e
+  E5:e F#5:e D5:e | F#5:e E#5:e F#5:e D5:e C#5:e E5:e C#5:e A4:e | F#5:e E#5:e F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e
+  B4:e C#5:e D5:e E5:e F#5:e G5:e | A5:e G#5:e A5:e F#5:e B5:e A#5:e B5:e A5:e | G5:e F#5:e G5:e E5:e A5:e G#5:e A5:e G5:e
+  | F#5:q F#5:e D5:e G5:e F#5:e E5:e D5:e | C#5:e A4:e B4:e C#5:e D5:e E5:e F#5:e G5:e
+left: r:q | D3:q A3:q D4:q A3:q | D3:q A3:q A2:q E3:q | D3:q A3:q G2:q D3:q | A2:q E3:q D3:q A3:q | D3:q A3:q B2:q F#3:q |
+  E3:q B3:q A2:q E3:q | D3:q A3:q G2:q D3:q | A2:q E3:q D3:q A3:q | D3:q A3:q D4:q A3:q | D3:q A3:q A2:q E3:q | D3:q A3:q
+  G2:q D3:q | A2:q E3:q D3:q A3:q | D3:q A3:q B2:q F#3:q | E3:q B3:q A2:q E3:q | D3:q A3:q G2:q D3:q | D3+F#3+A3:h.
+pedal: r:q | x:w | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:h x:h
+  | x:h x:h | x:h x:h | x:h x:h | x:h.
+reps: 2
+days: 2

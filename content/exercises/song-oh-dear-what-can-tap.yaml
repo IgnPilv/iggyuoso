@@ -1,0 +1,28 @@
+id: song-oh-dear-what-can-tap
+title: 'Oh Dear, What Can the Matter Be?: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 56
+meter: 6/8
+pickup: q
+countIn: 1
+rhythm: x:e x:e | x:q. x:q. | x:e x:e x:e x:e x:e x:e | x:q. x:q. | x:e x:e x:e x:e x:e x:e | x:q. x:q. | x:e x:e x:e x:e
+  x:e x:e | x:e x:e x:e x:e x:e x:e | x:h x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e
+  x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:h x:e x:e
+  | x:e x:s x:s x:s x:s x:e x:s x:s x:s x:s | x:e x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:s x:s x:s x:s x:e x:s x:s
+  x:s x:s | x:e x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:s x:s x:s x:s x:e x:s x:s x:s x:s | x:e x:s x:s x:s x:s x:s
+  x:s x:s x:s x:s x:s | x:e x:e x:e x:e x:e x:e | x:h x:e x:e | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:e
+  x:e x:e x:e x:e | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:e x:e x:e x:e x:e | x:s x:s x:s x:s x:s x:s x:s
+  x:s x:s x:s x:s x:s | x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:h x:e x:e | x:e x:e x:e x:e x:e x:e | x:s x:s
+  x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:e x:e x:e x:e x:e | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e
+  x:e x:e x:e x:e x:e | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:e x:e x:e x:e x:e | x:h x:e x:e | x:q x:e
+  x:q x:e | x:e x:e x:e x:e x:e x:e | x:q x:e x:q x:e | x:e x:e x:e x:e x:e x:e | x:q x:e x:q x:e | x:e x:e x:e x:e x:e x:e
+  | x:e x:e x:e x:e x:e x:e | x:h x:e x:e | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:s x:s x:s x:s x:s x:s x:s
+  x:s x:s x:s x:s x:s | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s
+  | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s x:s | x:e x:e x:e x:e x:e
+  x:e | x:h x:e x:e | x:e. x:s x:s x:s x:e. x:s x:s x:s | x:e. x:s x:s x:s x:e x:e x:e | x:e. x:s x:s x:s x:e. x:s x:s x:s
+  | x:e. x:s x:s x:s x:e. x:s x:s x:s | x:e. x:s x:s x:s x:e. x:s x:s x:s | x:e. x:s x:s x:s x:e x:e x:e | x:e x:e x:e x:e
+  x:e x:e | x:h
+reps: 2
+days: 1

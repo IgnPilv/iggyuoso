@@ -1,0 +1,24 @@
+id: song-william-tell
+title: 'William Tell Overture: the finale'
+skills:
+- songs
+steps:
+- explain: |
+    **William Tell Overture: the finale** · Gioachino Rossini, 1829
+
+    The galloping last part of Rossini's overture to his opera "William Tell", famous as the Lone Ranger's theme.
+  staff:
+    notes: G4:e G4:e  |  G4:q G4:e G4:e G4:q G4:q
+  sound: G4:e G4:e  |  G4:q G4:e G4:e G4:q G4:q  |  C5:q D5:q E5:q G4:e G4:e  |  G4:q G4:e G4:e C5:q E5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-william-tell-rh
+- exercise: song-william-tell-lh
+- exercise: song-william-tell
+- exercise: song-william-tell-arranged
+- exercise: song-william-tell-performance
+recap: 'William Tell Overture: the finale: tune, left hand, together. Come back to it any time; songs are for fun.'

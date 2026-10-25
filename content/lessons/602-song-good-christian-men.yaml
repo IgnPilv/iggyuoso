@@ -1,0 +1,26 @@
+id: song-good-christian-men
+title: Good Christian Men, Rejoice
+skills:
+- songs
+steps:
+- explain: |
+    **Good Christian Men, Rejoice** · German carol "In dulci jubilo", 1300s
+
+    One of the oldest carols in the Songbook, from medieval Germany, in a swinging 6/8.
+  staff:
+    notes: F4:e  |  F4:q F4:e A4:q Bb4:e
+    key: F
+  sound: F4:e  |  F4:q F4:e A4:q Bb4:e  |  C5:q D5:e C5:q C5:e  |  F4:q F4:e A4:q Bb4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. F major: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 6/8 · Tempo: 56
+- exercise: song-good-christian-men-by-ear
+- exercise: song-good-christian-men-rh
+- exercise: song-good-christian-men-lh
+- exercise: song-good-christian-men
+- exercise: song-good-christian-men-arranged
+- exercise: song-good-christian-men-performance
+recap: 'Good Christian Men, Rejoice: tune, left hand, together. Come back to it any time; songs are for fun.'

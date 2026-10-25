@@ -1,0 +1,24 @@
+id: song-simple-gifts-arranged
+title: Simple Gifts, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (bass, then chord).
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q G4:e G4:e B4:e A4:e B4:e C5:e | D5:q D5:e D5:e B4:q B4:e B4:e | A4:q A4:q A4:q A4:e B4:e | C5:e B4:e A4:e
+  G4:e F#4:q D4:e D4:e | G4:q G4:e G4:e B4:e A4:e B4:e C5:e | D5:q D5:e D5:e B4:q B4:e B4:e | A4:q A4:q B4:q B4:e A4:e | G4:q
+  G4:q G4:h | D5:h B4:q. A4:e | B4:e C5:e B4:e A4:e G4:h | B4:q B4:e C5:e D5:q C5:e B4:e | A4:q A4:q A4:q D4:e D4:e | G4:q
+  G4:q G4:q. A4:e | B4:e A4:e B4:e C5:e D5:q C5:e B4:e | A4:q A4:q B4:q B4:e A4:e | G4:q G4:q G4:q B4:e B4:e | A4:q A4:q B4:q
+  B4:e A4:e | G4:q G4:q G4:q
+left: r:q | G2:q D3+G3+B3:q E3:q G3+B3:q | B2:q D3+F#3+B3:q E3:q G3+B3:q | A2:q C3+E3+A3:q E3:q C3+E3+A3:q | A2:q C3+E3+A3:q
+  D3:q F#3+A3:q | G2:q D3+G3+B3:q E3:q G3+B3:q | B2:q D3+F#3+B3:q E3:q G3+B3:q | A2:q C3+E3+A3:q D3:q F#3+A3:q | C3:q E3+G3:q
+  G2:q B2+D3+G3:q | G2:q B2+D3+G3:q E3:q G3:q | G2:q B2+D3+G3:q E3:q G3:q | G2:q B2+D3+G3:q D3:q B2+D3+G3:q | A2:q C3+E3+A3:q
+  D3:q F#3+A3:q | G2:q D3+G3+B3:q C3:q E3+G3:q | B2+D3+G3:q A2+D3+F#3:q B2+D3+G3:q B2+D3+G3:q | A2:q C3+E3+A3:q D3:q F#3+A3:q
+  | D3+G3+B3:q C3+E3+G3:q B2+D3+G3:q B2+D3+G3:q | A2:q C3+E3+A3:q D3:q F#3+A3:q | D3+G3+B3:h.
+reps: 3
+days: 2

@@ -1,0 +1,25 @@
+id: song-i-belong-to-glasgow
+title: I Belong to Glasgow
+skills:
+- songs
+steps:
+- explain: |
+    **I Belong to Glasgow** · Will Fyffe, 1921
+
+    A music-hall song by the Scottish comedian Will Fyffe, sung by Glaswegians ever since.
+  staff:
+    notes: D5:q  |  G4:h A4:q
+    key: G
+  sound: D5:q  |  G4:h A4:q  |  B4:h C5:q  |  D5:q G5:h
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 3/4 · Tempo: 96
+- exercise: song-i-belong-to-glasgow-rh
+- exercise: song-i-belong-to-glasgow-lh
+- exercise: song-i-belong-to-glasgow
+- exercise: song-i-belong-to-glasgow-arranged
+- exercise: song-i-belong-to-glasgow-performance
+recap: 'I Belong to Glasgow: tune, left hand, together. Come back to it any time; songs are for fun.'

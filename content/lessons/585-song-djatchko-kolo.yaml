@@ -1,0 +1,27 @@
+id: song-djatchko-kolo
+title: Djačko Kolo
+skills:
+- songs
+steps:
+- explain: |
+    **Djačko Kolo** · Serbian circle dance
+
+    A kolo is a Serbian dance in a ring, everyone holding hands. "Djačko" means the students' kolo.
+  staff:
+    notes: A4:q A4:q A4:q B4:q  |  A4:q B4:q A4:h
+    key: D
+  sound: A4:q A4:q A4:q B4:q  |  A4:q B4:q A4:h  |  A4:q D5:q C#5:q B4:q  |  A4:h F#4:h
+- explain: |
+    **Before you play.** D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-djatchko-kolo-tap
+- exercise: song-djatchko-kolo-by-ear
+- exercise: song-djatchko-kolo-rh
+- exercise: song-djatchko-kolo-lh
+- exercise: song-djatchko-kolo
+- exercise: song-djatchko-kolo-arranged
+- exercise: song-djatchko-kolo-performance
+recap: 'Djačko Kolo: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,22 @@
+id: song-rocky-road-to-dublin
+title: The Rocky Road to Dublin
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Am
+tempo: 56
+tempoLadder: true
+meter: 9/8
+pickup: e
+countIn: 1
+right: A4:e | E5:e F5:e E5:e D5:e C5:e B4:e A4:q. | E4:q A4:e A4:q A4:e B4:e C5:e D5:e | E5:e F5:e E5:e D5:e C5:e B4:e A4:q
+  C5:e | B4:q A4:e G4:q A4:e B4:e C5:e D5:e | E5:e F5:e E5:e D5:e C5:e B4:e A4:q. | E4:q A4:e A4:q A4:e B4:e C5:e D5:e | E5:e
+  F#5:e G5:e F5:e G5:e A5:e G5:q E5:e | D5:q B4:e G4:q A4:e B4:e C5:e D5:e | E5:q A5:e A5:q F#5:e G5:q B5:e | E5:q A5:e A5:q
+  A4:e B4:e C5:e D5:e | E5:q A5:e A5:q F#5:e G5:q E5:e | D5:q B4:e G4:q A4:e B4:e C5:e D5:e | E5:q A5:e A5:q F#5:e G5:q B5:e
+  | E5:q A5:e A5:q A4:e B4:e C5:e D5:e | E5:e F#5:e G5:e F5:e G5:e A5:e G5:q E5:e | D5:q B4:e G4:q A4:e B4:e C5:e D5:e
+left: r:e | A2:q. G2:q. A2:q. | A2:q. A2:q. G2:q. | A2:q. G2:q. A2:q. | G2:w~ G2:e | A2:q. G2:q. A2:q. | A2:q. A2:q. G2:q.
+  | E3:q. B2:q. E3:q. | G2:w~ G2:e | A2:q. A2:q. G2:q. | A2:q. A2:q. G2:q. | A2:q. A2:q. G2:q. | G2:w~ G2:e | A2:q. A2:q.
+  G2:q. | A2:q. A2:q. G2:q. | E3:q. B2:q. E3:q. | G2:w
+reps: 3
+days: 2

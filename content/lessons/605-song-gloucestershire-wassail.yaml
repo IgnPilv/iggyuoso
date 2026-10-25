@@ -1,0 +1,25 @@
+id: song-gloucestershire-wassail
+title: Wassail Song
+skills:
+- songs
+steps:
+- explain: |
+    **Wassail Song** · English wassail, 1700s
+
+    Wassailers went from door to door at New Year, singing for a drink from the wassail bowl.
+  staff:
+    notes: D4:e  |  D4:q A4:e A4:q G4:e
+    key: Dm
+  sound: D4:e  |  D4:q A4:e A4:q G4:e  |  F4:q F4:e F4:q E4:e  |  D4:q E4:e F4:q G4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D minor: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 6/8 · Tempo: 56
+- exercise: song-gloucestershire-wassail-rh
+- exercise: song-gloucestershire-wassail-lh
+- exercise: song-gloucestershire-wassail
+- exercise: song-gloucestershire-wassail-arranged
+- exercise: song-gloucestershire-wassail-performance
+recap: 'Wassail Song: tune, left hand, together. Come back to it any time; songs are for fun.'

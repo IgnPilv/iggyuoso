@@ -1,0 +1,19 @@
+id: song-bonnie-dundee-lh
+title: 'Bonnie Dundee: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | C3+F3+A3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | C3+F3+A3:q C3+F3+A3:q C3+E3+Bb3:q | C3+F3+A3:h. | C3+F3+A3:h. | D3+G3+Bb3:h.
+  | C3+E3+Bb3:h. | C3+F3+A3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | C3+F3+A3:q C3+F3+A3:q C3+E3+Bb3:q | C3+F3+A3:h. | C3+E3+Bb3:h.
+  | C3+F3+A3:q C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+E3+Bb3:h. | C3+E3+Bb3:h. | C3+E3+Bb3:h.
+  | C3+E3+Bb3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+E3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | C3+E3+Bb3:h.
+  | C3+F3+A3:q C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h
+reps: 2
+days: 1

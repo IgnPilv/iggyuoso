@@ -1,0 +1,25 @@
+id: song-flowers-of-edinburgh-performance
+title: 'The Flowers of Edinburgh: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q G4:q B4:q G4:e B4:e | D5:q B4:q G5:q. E5:e | D5:q B4:q B4:e A4:e G4:e A4:e | B4:q G4:q E4:q D4:q | G4:q
+  G4:q B4:q G4:e B4:e | D5:q B4:q G5:q. E5:e | D5:q B4:q B4:e A4:e G4:e A4:e | B4:q G4:q G4:q F#5:q | G5:h F#5:q. E5:e | B4:q
+  E5:q E5:q E5:e F#5:e | G5:q G5:q F#5:e A5:e G5:e F#5:e | B4:q E5:q E5:h | D5:e B4:e G4:e B4:e D5:q D5:q | E5:e D5:e E5:e
+  F#5:e G5:q E5:q | D5:q B4:q B4:e A4:e G4:e A4:e | B4:q G4:q G4:q
+left: r:q | G2:e D3:e B2:e D3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e G2:e
+  D3:e B2:e D3:e | E3:e B3:e G3:e B3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e
+  C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | E3:e B3:e G3:e
+  B3:e B2:e F#3:e D#3:e F#3:e | E3:e B3:e G3:e B3:e B2:e F#3:e D#3:e F#3:e | E3:e B3:e G3:e B3:e B2:e F#3:e D#3:e F#3:e |
+  E3:e B3:e G3:e B3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e
+  G3:e | G2:e D3:e B2:e D3:e D3:e A3:e F#3:e A3:e | D3+G3+B3:h.
+pedal: r:q | x:h x:h | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:w
+  | x:w | x:h x:h | x:h.
+reps: 2
+days: 2

@@ -1,0 +1,23 @@
+id: song-blaydon-races
+title: Blaydon Races
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: A4:e | D5:q D5:e D5:q D5:e | D5:q D5:e D5:q D5:e | E5:q E5:e E5:q E5:e | F#5:q. D5:q. | G5:e G5:e G5:e G5:q G5:e |
+  F#5:q F#5:e F#5:q F#5:e | E5:q F#5:e E5:q D5:e | C#5:q. A4:q. | D5:q D5:e D5:q D5:e | D5:q D5:e D5:q D5:e | E5:q E5:e E5:q
+  E5:e | F#5:q. D5:q. | G5:e G5:e G5:e G5:q G5:e | F#5:q G5:e A5:q A5:e | A5:q G5:e F#5:q E5:e | D5:q E5:e F#5:q G5:e | A5:q.
+  A5:q F#5:e | D5:q. D5:q D5:e | E5:q E5:e E5:q E5:e | F#5:q. D5:q. | G5:q G5:e G5:q G5:e | F#5:q F#5:e F#5:q F#5:e | E5:q
+  F#5:e E5:q D5:e | C#5:q. A4:q. | D5:q D5:e D5:q D5:e | D5:q. D5:q D5:e | E5:q E5:e E5:q E5:e | F#5:q. D5:q. | G5:q G5:e
+  G5:q G5:e | F#5:q G5:e A5:q A5:e | A5:q G5:e F#5:q E5:e | D5:q. D5:q
+left: r:e | D3:h. | D3:h. | A2:h. | D3:q. D3:q. | G2:h. | D3:h. | E3:h. | A2:h. | D3:h. | D3:h. | A2:h. | D3:q. D3:q. | G2:h.
+  | D3:h. | A2:h. | D3:h. | D3:q. A2:q. | D3:q. G2:q. | E3:q. A2:q. | D3:q. D3:q. | G2:q. A2:q. | D3:h. | G2:q. E3:q. | A2:q.
+  A2:q. | D3:q. G2:q. | D3:q. G2:q. | E3:q. A2:q. | D3:q. D3:q. | G2:q. A2:q. | D3:q. B2:q. | E3:q. A2:q. | D3:h~ D3:e
+reps: 3
+days: 2

@@ -1,0 +1,20 @@
+id: song-hot-time-arranged
+title: A Hot Time in the Old Town, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (bass, then chord).
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: F#4:h F#4:h | F#4:h E4:q F#4:q | G4:q F#4:q E#4:q F#4:q | D4:w | A4:h A4:h | A4:h G#4:q A4:q | B4:q A4:q G#4:q A4:q
+  | F#4:q A3:q D4:q E4:q | F#4:h F#4:h | F#4:h E4:q F#4:q | G4:q F#4:q E#4:q F#4:q | D4:q D4:q C#4:q D4:q | F#4:q E4:h A3:q
+  | F#4:q E4:h A3:q | D4:h A3:h | B3:h D4:q r:q
+left: D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q
+  | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q
+  | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q
+  | E2:q G#2:q B2:q G#2:q | A1:q C#2+E2+A2:q E2:q C#2+E2+A2:q | D2:q F#2+A2:q A2:q F#2+A2:q | D2+G2+B2:h D2+F#2+A2:h
+reps: 3
+days: 2

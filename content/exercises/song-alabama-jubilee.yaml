@@ -1,0 +1,23 @@
+id: song-alabama-jubilee
+title: Alabama Jubilee
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: h.
+countIn: 1
+right: D5:q C#5:q D5:q | E5:q D5:q B4:q E5:q~ | E5:q D5:h B4:q | E5:q D5:q B4:q E5:q~ | E5:w | E5:q C#5:q A4:q E5:q~ | E5:q
+  C#5:h A4:q | E5:q C#5:q A4:q E5:q~ | E5:q D#5:q E5:q Fb5:q | F#5:q E#5:q F#5:q E5:q~ | E5:q D5:h E5:q | F#5:q E#5:q F#5:q
+  E5:q~ | E5:q D5:q E5:q F#5:q | G5:h E5:q G5:q | E5:q D5:q B4:q D5:q | G5:w~ | G5:q D5:q C#5:q D5:q | E5:q D5:q B4:q E5:q~
+  | E5:q D5:h B4:q | E5:q D5:q B4:q E5:q~ | E5:w | A4:q G#4:q A4:q B4:q | C5:q B4:q C5:q D5:q | E5:h E5:h | E5:q F#5:q G5:q
+  A5:q | B5:w | A5:w | G5:h E5:h | D5:h C5:q D5:q | E5:q G5:q E5:q G5:q | F#5:h D5:h | G5:w | G5:q
+left: r:h. | E3+G#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | C#3+E3+A3:w | C#3+E3+A3:w | C#3+E3+A3:w | C#3+E3+A3:w
+  | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | E3+G#3+B3:w
+  | E3+G#3+B3:w | E3+G#3+B3:w | E3+G#3+B3:w | C3+E3+A3:w | C3+E3+A3:w | C3+E3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D#3+F#3+B3:w
+  | E3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:q
+reps: 3
+days: 2

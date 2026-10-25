@@ -1,0 +1,26 @@
+id: song-bonnie-dundee
+title: Bonnie Dundee
+skills:
+- songs
+steps:
+- explain: |
+    **Bonnie Dundee** · Scottish tune, 1600s; words by Walter Scott, 1828
+
+    An old galloping tune, famous through Walter Scott's song about Viscount Dundee riding out of Edinburgh in 1689.
+  staff:
+    notes: A4:e Bb4:e  |  C5:q. D5:e C5:q
+    key: F
+  sound: A4:e Bb4:e  |  C5:q. D5:e C5:q  |  C5:q. D5:e C5:q  |  F5:q E5:q D5:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. F major: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 3/4 · Tempo: 96
+- exercise: song-bonnie-dundee-tap
+- exercise: song-bonnie-dundee-rh
+- exercise: song-bonnie-dundee-lh
+- exercise: song-bonnie-dundee
+- exercise: song-bonnie-dundee-arranged
+- exercise: song-bonnie-dundee-performance
+recap: 'Bonnie Dundee: tune, left hand, together. Come back to it any time; songs are for fun.'

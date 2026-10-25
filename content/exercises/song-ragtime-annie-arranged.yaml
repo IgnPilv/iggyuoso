@@ -1,0 +1,32 @@
+id: song-ragtime-annie-arranged
+title: Ragtime Annie, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: A4:e | D4:s F#4:s A4:s F#4:s B4:e A4:s F#4:s | D4:s F#4:s A4:s F#4:s B4:e A4:s F#4:s | D4:s F#4:s A4:s F#4:s B4:e A4:s
+  F#4:s | A4:s C#5:e A4:s C#5:e B4:e | A4:s B4:s C#5:s A4:s B4:s C#5:s B4:s A4:s | A4:s B4:s C#5:s A4:s B4:s C#5:s B4:s A4:s
+  | A4:s B4:s C#5:s D5:s E5:s G5:s F#5:s E5:s | D5:q. F#5:s G5:s | A5:e A5:s B5:s A5:s F#5:s D5:s B4:s | A4:e A4:e A4:e F#5:s
+  G5:s | A5:e A5:e G5:e F#5:e | B4:q. E5:s F#5:s | G5:s F#5:s E5:s F#5:s G5:s F#5:s E5:s D5:s | C#5:e A4:e C#5:e C#5:s A4:s
+  | B4:e B4:e A4:e G4:e | F#4:q. F#5:s G5:s | A5:e A5:s B5:s A5:s F#5:s D5:s B4:s | A4:e A4:e A4:e F#5:s G5:s | A5:e A5:e
+  G5:e F#5:e | B4:q. G5:s A5:s | B5:e B5:e B5:s A5:s F#5:s G5:s | A5:e A5:s B5:s A5:s F#5:s D5:s B4:s | A4:s B4:s C#5:s D5:s
+  E5:s G5:s F#5:s E5:s | D5:q. G4:s A4:s | B4:e B4:e B4:s G4:s A4:s B4:s | C#5:s B4:s C#5:s D5:s C#5:e D5:s E5:s | F#5:e F#5:e
+  F#5:s D5:s E5:s F#5:s | G5:s F#5:s G5:s A5:s G5:e G4:s A4:s | B4:e B4:e B4:s G4:s A4:s B4:s | C#5:s B4:s C#5:s D5:s C#5:e
+  D5:s E5:s | F#5:e F#5:e F#5:s D5:s E5:s F#5:s | G5:h
+left: r:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | C#3:e A3:e E3:e A3:e | C#3:e A3:e E3:e A3:e
+  | C#3:e A3:e E3:e A3:e | C#3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e
+  A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e | E3:e B3:e G3:e B3:e | C#3:e A3:e E3:e A3:e | B2+E3+G3:q C#3+E3+A3:q | D3+F#3+A3:e
+  D3+F#3+A3:e D3+F#3+A3:e C#3+E3+A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e
+  B3:e | D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e | C#3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e |
+  C3:e A3:e E3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e | E3:e B3:e G3:e B3:e | C3:e A3:e E3:e A3:e | D3:e A3:e
+  F#3:e A3:e | D3+G3+B3:q.
+pedal: r:e | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:e x:e x:e x:e
+  | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q.
+reps: 3
+days: 2

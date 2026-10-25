@@ -1,0 +1,23 @@
+id: song-drowsy-maggie-arranged
+title: Drowsy Maggie, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: Em
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: G4:e F#4:e | E4:q B4:e E4:e D5:e E4:e B4:e E4:e | E4:q B4:e E4:e A4:e F#4:e D4:e F#4:e | E4:q B4:e E4:e D5:e E4:e B4:e
+  E4:e | B4:e A4:e B4:e C#5:e D5:e B4:e A4:e F#4:e | E4:q B4:e E4:e D5:e E4:e B4:e E4:e | E4:q B4:e E4:e A4:e F#4:e D4:e F#4:e
+  | E4:q B4:e E4:e D5:e E4:e B4:e E4:e | B4:e A4:e B4:e C#5:e D5:e A4:e F#4:e A4:e | D5:q F#5:e D5:e C#5:q E5:e C5:e | D5:e
+  E5:e F#5:e G5:e A5:e F#5:e G5:e E5:e | D5:q F#5:e D5:e C#5:q E5:e C5:e | B4:e A4:e B4:e C#5:e D5:e A4:e F#4:e A4:e | D5:q
+  F#5:e D5:e C#5:q E5:e C5:e | D5:e E5:e F#5:e G5:e A5:e F#5:e G5:e E5:e | A5:e F#5:e G5:e E5:e F#5:e D5:e E5:e C#5:e | B4:e
+  A4:e B4:e C#5:e D5:e A4:e F#4:e D4:e
+left: r:q | E3+G3+B3:w | E3+G3+B3:h D3+F#3+A3:h | E3+G3+B3:w | E3+G3+B3:h D3+F#3+A3:h | E3+G3+B3:w | E3+G3+B3:h D3+F#3+A3:h
+  | E3+G3+B3:w | E3+G3+B3:h D3+F#3+A3:h | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:h C#3+E3+A3:h | B2+D3+G3:h
+  A2+D3+F#3:h | A2+D3+F#3:h A2+C#3+G3:h | A2+D3+F#3:h A2+C#3+G3:h | A2+D3+F#3:w | A2+D3+F#3:h.
+reps: 3
+days: 2

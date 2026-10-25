@@ -1,0 +1,25 @@
+id: song-lark-in-the-clear-air
+title: The Lark in the Clear Air
+skills:
+- songs
+steps:
+- explain: |
+    **The Lark in the Clear Air** · Irish air, words by Samuel Ferguson, 1800s
+
+    A gentle Irish love song: the singer will tell her his love when the lark sings in the clear air.
+  staff:
+    notes: A5:q F#5:q  |  D5:h. C#5:q C#5:q
+    key: D
+  sound: A5:q F#5:q  |  D5:h. C#5:q C#5:q  |  D5:q B4:q G4:q A4:h  |  A4:q B4:e C#5:e D5:q. E5:e F#5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 5/4 · Tempo: 88
+- exercise: song-lark-in-the-clear-air-rh
+- exercise: song-lark-in-the-clear-air-lh
+- exercise: song-lark-in-the-clear-air
+- exercise: song-lark-in-the-clear-air-arranged
+- exercise: song-lark-in-the-clear-air-performance
+recap: 'The Lark in the Clear Air: tune, left hand, together. Come back to it any time; songs are for fun.'

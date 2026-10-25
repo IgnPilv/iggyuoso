@@ -1,0 +1,24 @@
+id: song-rights-of-man-performance
+title: 'The Rights of Man: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 72
+meter: 4/4
+pickup: q
+countIn: 1
+right: G4:e A4:e | B4:e C5:e A4:e B4:e G4:e A4:e F#4:e G4:e | E4:e F#4:e G4:e A4:e B4:q E5:e F#5:e | G5:e F#5:e E5:e D5:e
+  E5:e D5:e B4:e D5:e | C5:e B4:e A4:e G4:e A4:q G4:e A4:e | B4:e C5:e A4:e B4:e G4:e A4:e F#4:e G4:e | E4:e F#4:e G4:e A4:e
+  B4:q E5:e F#5:e | G5:e F#5:e E5:e D5:e B4:e G5:e F#5:s G5:e. | E5:h E5:q G5:e A5:e | B5:e A#5:e B5:e G5:e E5:e F#5:e G5:e
+  A5:e | B5:e A#5:e B5:e G5:e E5:q F#5:e E5:e | D5:e C#5:e D5:e E5:e F#5:e E5:e F#5:e G5:e | A5:e F#5:e D5:e F#5:e A5:q G5:e
+  F#5:e | E5:e B4:e E5:e G5:e F#5:e D5:e F#5:e A5:e | G5:e F#5:e G5:e A5:e B5:q E5:e F#5:e | G5:e F#5:e E5:e D5:e B4:e G5:e
+  F#5:s G5:e. | E5:h E5:q
+left: r:q | E3:q B3:q E4:q B3:q | E3:q B3:q E4:q B3:q | E3:q B3:q G2:q D3:q | A2:q E3:q B2:q F#3:q | E3:q B3:q E4:q B3:q |
+  E3:q B3:q E4:q B3:q | A2:q E3:q B2:q F#3:q | E3:q B3:q E4:q B3:q | E3:q B3:q E4:q B3:q | E3:q B3:q E4:q B3:q | D3:q A3:q
+  D4:q A3:q | D3:q A3:q D4:q A3:q | E3:q B3:q D3:q A3:q | G2:q D3:q G3:q D3:q | A2:q E3:q B2:q F#3:q | E3+G3+B3:h.
+pedal: r:q | x:w | x:w | x:h x:h | x:h x:h | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:h x:h |
+  x:h.
+reps: 2
+days: 2

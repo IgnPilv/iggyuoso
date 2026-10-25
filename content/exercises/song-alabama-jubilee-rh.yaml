@@ -1,0 +1,19 @@
+id: song-alabama-jubilee-rh
+title: 'Alabama Jubilee: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: h.
+countIn: 1
+right: D5:q C#5:q D5:q | E5:q D5:q B4:q E5:q~ | E5:q D5:h B4:q | E5:q D5:q B4:q E5:q~ | E5:w | E5:q C#5:q A4:q E5:q~ | E5:q
+  C#5:h A4:q | E5:q C#5:q A4:q E5:q~ | E5:q D#5:q E5:q Fb5:q | F#5:q E#5:q F#5:q E5:q~ | E5:q D5:h E5:q | F#5:q E#5:q F#5:q
+  E5:q~ | E5:q D5:q E5:q F#5:q | G5:h E5:q G5:q | E5:q D5:q B4:q D5:q | G5:w~ | G5:q D5:q C#5:q D5:q | E5:q D5:q B4:q E5:q~
+  | E5:q D5:h B4:q | E5:q D5:q B4:q E5:q~ | E5:w | A4:q G#4:q A4:q B4:q | C5:q B4:q C5:q D5:q | E5:h E5:h | E5:q F#5:q G5:q
+  A5:q | B5:w | A5:w | G5:h E5:h | D5:h C5:q D5:q | E5:q G5:q E5:q G5:q | F#5:h D5:h | G5:w | G5:q
+reps: 2
+days: 1

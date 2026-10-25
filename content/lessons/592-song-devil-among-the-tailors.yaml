@@ -1,0 +1,26 @@
+id: song-devil-among-the-tailors
+title: The Devil Among the Tailors
+skills:
+- songs
+steps:
+- explain: |
+    **The Devil Among the Tailors** · English reel, 1800s
+
+    Named after a riot of London tailors at a theatre in 1805.
+  staff:
+    notes: E5:e G#5:e  |  A5:q E5:e G#5:e A5:q E5:e G#5:e
+    key: A
+  sound: E5:e G#5:e  |  A5:q E5:e G#5:e A5:q E5:e G#5:e  |  A5:q E5:e A5:e F#5:e E5:e D5:e C#5:e  |  D5:e F#5:e B4:e F#5:e
+    D5:e F#5:e B4:e F#5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-devil-among-the-tailors-rh
+- exercise: song-devil-among-the-tailors-lh
+- exercise: song-devil-among-the-tailors
+- exercise: song-devil-among-the-tailors-arranged
+- exercise: song-devil-among-the-tailors-performance
+recap: 'The Devil Among the Tailors: tune, left hand, together. Come back to it any time; songs are for fun.'

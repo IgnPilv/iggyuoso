@@ -1,0 +1,21 @@
+id: song-scots-wha-hae-arranged
+title: Scots Wha Hae, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: C4:q | C4:h C4:q | C4:h D4:q | C4:h D4:q | F4:h. | D4:h D4:q | D4:h C4:q | D4:h E4:q | F4:h G4:q | A4:h A4:q | G4:h
+  F4:q | F4:h G4:q | A4:h G4:q | F4:h D4:q | D4:h C4:q | C4:h.~ | C4:h. | A4:h A4:q | A4:h G4:q | A4:h Bb4:q | C5:h. | G4:h
+  G4:q | G4:h F4:q | G4:h A4:q | Bb4:h. | C5:h A4:q | G4:h F4:q | F4:h G4:q | A4:h. | F4:h D4:q | D4:h C4:q | C4:h.~ | C4:h
+left: r:q | C3+F3+A3:h. | C3+E3+Bb3:h. | C3+F3+A3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h.
+  | C3+F3+A3:h. | C#3+E3+A3:h. | D3+F3+A3:h. | C#3+E3+A3:h. | D3+F3+A3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | C3+E3+Bb3:h. | C3+F3+A3:h.
+  | C3+F3+A3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+E3+G3:h. | B2+D3+G3:h. | C3+E3+G3:h. | C3+E3+G3:h. | C3+F3+A3:h. | C#3+E3+A3:h.
+  | D3+F3+A3:q D3+F3+A3:q C#3+E3+A3:q | D3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | C3+F3+A3:h
+reps: 3
+days: 2

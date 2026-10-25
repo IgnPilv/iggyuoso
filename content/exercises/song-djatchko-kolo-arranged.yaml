@@ -1,0 +1,22 @@
+id: song-djatchko-kolo-arranged
+title: Djačko Kolo, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (bass, then chord).
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: A4:q A4:q A4:q B4:q | A4:q B4:q A4:h | A4:q D5:q C#5:q B4:q | A4:h F#4:h | A4:q A4:q A4:q B4:q | A4:q B4:q A4:h | A4:q
+  D5:q C#5:q B4:q | A4:h F#4:h | A4:q G4:q G4:q G4:q | A4:q F#4:q F#4:q F#4:q | A4:q G4:q G4:q G4:q | A4:q F#4:q F#4:q F#4:q
+  | D4:e E4:e F#4:q F#4:q E4:q | D4:e E4:e F#4:q F#4:q E4:q | D4:e E4:e F#4:q F#4:q E4:q | D4:h D4:h | D4:e E4:e F#4:q F#4:q
+  E4:q | D4:e E4:e F#4:q F#4:q E4:q | D4:e E4:e F#4:q F#4:q E4:q | D4:h D4:h
+left: D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q G2:q D3+G3+B3:q | D3:q F#3+A3:q A3:q F#3+A3:q
+  | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | D3:q F#3+A3:q G2:q D3+G3+B3:q | D3:q F#3+A3:q A3:q F#3+A3:q
+  | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | D3:q F#3+A3:q A3:q F#3+A3:q | A2:q C#3+E3+A3:q E3:q C#3+E3+A3:q | D3:q F#3+A3:q A3:q
+  F#3+A3:q | D3:q F#3+A3:q A2:q C#3+E3+A3:q | D3:q F#3+A3:q A2:q C#3+E3+A3:q | D3:q F#3+A3:q A2:q C#3+E3+A3:q | D3:q F#3+A3:q
+  A3:q F#3+A3:q | D3:q F#3+A3:q A2:q C#3+E3+A3:q | D3:q F#3+A3:q A2:q C#3+E3+A3:q | D3:q F#3+A3:q A2:q C#3+E3+A3:q | D3+F#3+A3:w
+reps: 3
+days: 2

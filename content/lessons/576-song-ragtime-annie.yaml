@@ -1,0 +1,26 @@
+id: song-ragtime-annie
+title: Ragtime Annie
+skills:
+- songs
+steps:
+- explain: |
+    **Ragtime Annie** · American fiddle tune, early 1900s
+
+    A Texas fiddle tune with a ragtime bounce.
+  staff:
+    notes: A4:e  |  D4:s F#4:s A4:s F#4:s B4:e A4:s F#4:s
+    key: D
+  sound: A4:e  |  D4:s F#4:s A4:s F#4:s B4:e A4:s F#4:s  |  D4:s F#4:s A4:s F#4:s B4:e A4:s F#4:s  |  D4:s F#4:s A4:s F#4:s
+    B4:e A4:s F#4:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-ragtime-annie-rh
+- exercise: song-ragtime-annie-lh
+- exercise: song-ragtime-annie
+- exercise: song-ragtime-annie-arranged
+- exercise: song-ragtime-annie-performance
+recap: 'Ragtime Annie: tune, left hand, together. Come back to it any time; songs are for fun.'

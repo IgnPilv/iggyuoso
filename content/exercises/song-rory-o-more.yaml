@@ -1,0 +1,20 @@
+id: song-rory-o-more
+title: Rory O'More
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: A
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: E5:e A4:e A4:e C#5:e A4:e A4:e | E5:e A4:e A4:e F#5:q. | E5:e D5:e C#5:e C#5:e B4:e A4:e | G#4:q B4:e B4:e C#5:e D5:e
+  | E5:e A4:e A4:e C#5:e A4:e A4:e | E5:e C#5:e E5:e F#5:e E5:e D5:e | C#5:e E5:e E5:e E5:e F#5:e G#5:e | A5:e E5:e C#5:e
+  A4:q. | A5:e G#5:e F#5:e F#5:q C#5:e | D5:e C#5:e B4:e A4:q G#4:e | F#4:e G#4:e A4:e A4:e B4:e C#5:e | C#5:e F#5:e E5:e
+  E5:e F#5:e G#5:e | A5:e G#5:e F#5:e F#5:q C#5:e | D5:e C#5:e B4:e A4:q G#4:e | F#4:e G#4:e A4:e A4:e B4:e C#5:e | C#5:e
+  F#5:e E5:e E5:q.
+left: A2:h. | A2:q. D3:q. | A2:h. | E3:h. | A2:h. | A2:q. D3:q. | E3:h. | A2:h. | F#2:h. | B2:q. F#2:q. | F#2:h. | E3:h. |
+  F#2:h. | B2:q. F#2:q. | F#2:h. | E3:h.
+reps: 3
+days: 2

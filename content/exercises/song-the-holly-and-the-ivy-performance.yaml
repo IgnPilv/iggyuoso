@@ -1,0 +1,18 @@
+id: song-the-holly-and-the-ivy-performance
+title: 'The Holly and the Ivy: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 96
+meter: 3/4
+countIn: 1
+right: F4:q D5:q E5:q | F5:q E5:q D5:q | A4:q D5:q E5:q | D5:h.~ | D5:h A5:q | A5:q F5:q D5:q | E5:h F5:q | E5:h.~ | E5:h
+  A5:q | A5:h F5:q | F5:q E5:q F5:q | G5:q G5:q G5:q | G5:h G5:q | F5:q E5:q D5:q | E5:h C5:q | D5:h.~ | D5:q r:h
+left: D3:q F#3+A3:q F#3+A3:q | D3:q F#3+A3:q F#3+A3:q | A2:q C#3+E3+A3:q C#3+E3+A3:q | D3:q F#3+A3:q F#3+A3:q | D3:q F#3+A3:q
+  F#3+A3:q | D3:q F#3+A3:q F#3+A3:q | E3:q G#3:q G#3:q | A2:q C#3+E3+A3:q C#3+E3+A3:q | A2:q C#3+E3+A3:q C#3+E3+A3:q | D3:q
+  F#3+A3:q F#3+A3:q | D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | G2:q D3+G3+Bb3:q D3+G3+Bb3:q | D3:q F#3+A3:q F#3+A3:q
+  | A2:q C#3+E3+A3:q C#3+E3+A3:q | D3:q F#3+A3:q F#3+A3:q | D3+F#3+A3:h.
+reps: 2
+days: 2

@@ -1,0 +1,26 @@
+id: song-rory-o-more
+title: Rory O'More
+skills:
+- songs
+steps:
+- explain: |
+    **Rory O'More** · Samuel Lover, 1837
+
+    A comic Irish song by Samuel Lover that became a favourite jig.
+  staff:
+    notes: E5:e A4:e A4:e C#5:e A4:e A4:e  |  E5:e A4:e A4:e F#5:q.
+    key: A
+  sound: E5:e A4:e A4:e C#5:e A4:e A4:e  |  E5:e A4:e A4:e F#5:q.  |  E5:e D5:e C#5:e C#5:e B4:e A4:e  |  G#4:q B4:e B4:e
+    C#5:e D5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-rory-o-more-rh
+- exercise: song-rory-o-more-lh
+- exercise: song-rory-o-more
+- exercise: song-rory-o-more-arranged
+- exercise: song-rory-o-more-performance
+recap: 'Rory O''More: tune, left hand, together. Come back to it any time; songs are for fun.'

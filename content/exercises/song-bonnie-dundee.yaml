@@ -1,0 +1,24 @@
+id: song-bonnie-dundee
+title: Bonnie Dundee
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: A4:e Bb4:e | C5:q. D5:e C5:q | C5:q. D5:e C5:q | F5:q E5:q D5:q | C5:h Bb4:q | A4:e C5:q. F4:q | A4:e C5:q. F4:q |
+  G4:q. A4:e G4:q | G4:q A4:q Bb4:q | C5:q. D5:e C5:q | C5:q. D5:e C5:q | F5:q E5:q D5:q | C5:h Bb4:q | A4:e C5:q. F4:q |
+  G4:e C5:q. C4:q | F4:q. G4:e F4:q | F4:h C4:q | F4:q. F4:e F4:q | F4:q Bb4:q A4:q | G4:q C4:q C4:q | C4:h C4:q | G4:q. G4:e
+  G4:q | G4:q A4:q Bb4:q | Bb4:q A4:q A4:q | A4:h F4:e G4:e | A4:q. G4:e A4:q | Bb4:q. A4:e Bb4:q | C5:q. Bb4:e C5:q | D5:q
+  C5:q Bb4:q | A4:e C5:q. F4:q | G4:e C5:q. C4:q | F4:q. G4:e F4:q | F4:h
+left: r:q | C3+F3+A3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | C3+F3+A3:q C3+F3+A3:q C3+E3+Bb3:q | C3+F3+A3:h. | C3+F3+A3:h. | D3+G3+Bb3:h.
+  | C3+E3+Bb3:h. | C3+F3+A3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | C3+F3+A3:q C3+F3+A3:q C3+E3+Bb3:q | C3+F3+A3:h. | C3+E3+Bb3:h.
+  | C3+F3+A3:q C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+E3+Bb3:h. | C3+E3+Bb3:h. | C3+E3+Bb3:h.
+  | C3+E3+Bb3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+E3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | C3+E3+Bb3:h.
+  | C3+F3+A3:q C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h
+reps: 3
+days: 2

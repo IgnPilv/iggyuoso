@@ -1,0 +1,26 @@
+id: song-rocky-road-to-dublin
+title: The Rocky Road to Dublin
+skills:
+- songs
+steps:
+- explain: |
+    **The Rocky Road to Dublin** · Irish slip jig, 1800s
+
+    A slip jig is in 9/8: three groups of three in every bar. The song tells of a young man's journey from Tuam to Dublin and on to England.
+  staff:
+    notes: A4:e  |  E5:e F5:e E5:e D5:e C5:e B4:e A4:q.
+    key: Am
+  sound: A4:e  |  E5:e F5:e E5:e D5:e C5:e B4:e A4:q.  |  E4:q A4:e A4:q A4:e B4:e C5:e D5:e  |  E5:e F5:e E5:e D5:e C5:e
+    B4:e A4:q C5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 9/8 · Tempo: 56
+- exercise: song-rocky-road-to-dublin-rh
+- exercise: song-rocky-road-to-dublin-lh
+- exercise: song-rocky-road-to-dublin
+- exercise: song-rocky-road-to-dublin-arranged
+- exercise: song-rocky-road-to-dublin-performance
+recap: 'The Rocky Road to Dublin: tune, left hand, together. Come back to it any time; songs are for fun.'

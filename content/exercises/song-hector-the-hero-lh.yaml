@@ -1,0 +1,22 @@
+id: song-hector-the-hero-lh
+title: 'Hector the Hero: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Bb
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: h
+countIn: 1
+left: r:h | Bb2+D3+F3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | Bb2+D3+F3:h. | Bb2+D3+G3:h. | Bb2+Eb3+G3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h. | D3+G3+Bb3:h. | D3+G3+Bb3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h.
+  | Eb3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:h. | D3+G3+Bb3:h. | D3+G3+Bb3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | Bb2+Eb3+G3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | A2+C3+F3:h. | Bb2+D3+F3:h. | Bb2+D3+F3:h.
+  | Bb2+Eb3+G3:h. | Bb2+Eb3+G3:h. | Bb2+D3+F3:h. | Bb2+D3+F3:h. | Bb2+D3+G3:h. | Bb2+D3+G3:h. | C3+Eb3+G3:h. | C3+F3+A3:h.
+  | D3+G3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | Eb3+G3+Bb3:h. | D3+F3+Bb3:h. | C3+F3+A3:h. | D3+F3+Bb3:h. | D3+F3+Bb3:q
+reps: 2
+days: 1

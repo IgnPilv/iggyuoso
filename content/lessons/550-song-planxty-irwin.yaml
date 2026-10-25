@@ -1,0 +1,25 @@
+id: song-planxty-irwin
+title: Planxty Irwin
+skills:
+- songs
+steps:
+- explain: |
+    **Planxty Irwin** · Turlough O'Carolan, about 1720
+
+    A planxty is a tune written in honour of a patron. The blind harper O'Carolan wrote this one for Colonel John Irwin.
+  staff:
+    notes: A4:q  |  D5:h C#5:q
+    key: D
+  sound: A4:q  |  D5:h C#5:q  |  B4:q C#5:q D5:q  |  A4:h G4:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 96
+- exercise: song-planxty-irwin-rh
+- exercise: song-planxty-irwin-lh
+- exercise: song-planxty-irwin
+- exercise: song-planxty-irwin-arranged
+- exercise: song-planxty-irwin-performance
+recap: 'Planxty Irwin: tune, left hand, together. Come back to it any time; songs are for fun.'

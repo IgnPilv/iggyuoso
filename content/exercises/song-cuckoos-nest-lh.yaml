@@ -1,0 +1,16 @@
+id: song-cuckoos-nest-lh
+title: 'The Cuckoo''s Nest: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D2+F2+A2:w | D2+F2+A2:q D2+F2+A2:q D2+F2+A2:q C2+E2+Bb2:q | C2+F2+A2:w | C2+E2+G2:q C2+E2+G2:q C2+E2+G2:q C#2+E2+A2:q
+  | D2+F2+A2:w | D2+F2+A2:q D2+F2+A2:q D2+F2+A2:q C2+E2+Bb2:q | C2+F2+A2:h C#2+E2+A2:h | D2+F2+A2:q D2+G2+Bb2:q D2+F2+A2:q
+  D2+F2+A2:q
+reps: 2
+days: 1

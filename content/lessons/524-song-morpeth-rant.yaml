@@ -1,0 +1,26 @@
+id: song-morpeth-rant
+title: The Morpeth Rant
+skills:
+- songs
+steps:
+- explain: |
+    **The Morpeth Rant** · Northumbrian dance tune, 1700s
+
+    A rant is a lively Northumbrian step dance. This one is played on the small pipes and the fiddle.
+  staff:
+    notes: A4:q  |  D5:q A4:e G4:e F#4:e D4:e F#4:e A4:e
+    key: D
+  sound: A4:q  |  D5:q A4:e G4:e F#4:e D4:e F#4:e A4:e  |  B4:e G4:e B4:e D5:e C#5:e A4:e C#5:e E5:e  |  F#5:q F#5:e D5:e
+    G5:e F#5:e E5:e D5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-morpeth-rant-rh
+- exercise: song-morpeth-rant-lh
+- exercise: song-morpeth-rant
+- exercise: song-morpeth-rant-arranged
+- exercise: song-morpeth-rant-performance
+recap: 'The Morpeth Rant: tune, left hand, together. Come back to it any time; songs are for fun.'

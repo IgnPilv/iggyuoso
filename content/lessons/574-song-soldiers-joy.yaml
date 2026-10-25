@@ -1,0 +1,26 @@
+id: song-soldiers-joy
+title: Soldier's Joy
+skills:
+- songs
+steps:
+- explain: |
+    **Soldier's Joy** · Fiddle tune, Scotland and America, 1700s
+
+    Played by fiddlers in Scotland, Ireland and all over America: one of the oldest tunes still at every square dance.
+  staff:
+    notes: F#4:e G4:e  |  A4:e F#4:e D4:e F#4:e A4:e F#4:e D4:e F#4:e
+    key: D
+  sound: F#4:e G4:e  |  A4:e F#4:e D4:e F#4:e A4:e F#4:e D4:e F#4:e  |  A4:q D5:q D5:q C#5:e B4:e  |  A4:e F#4:e D4:e F#4:e
+    A4:e F#4:e D4:e F#4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-soldiers-joy-rh
+- exercise: song-soldiers-joy-lh
+- exercise: song-soldiers-joy
+- exercise: song-soldiers-joy-arranged
+- exercise: song-soldiers-joy-performance
+recap: 'Soldier''s Joy: tune, left hand, together. Come back to it any time; songs are for fun.'

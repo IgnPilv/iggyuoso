@@ -1,0 +1,22 @@
+id: song-morpeth-rant-performance
+title: 'The Morpeth Rant: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: A4:q | D5:q A4:e G4:e F#4:e D4:e F#4:e A4:e | B4:e G4:e B4:e D5:e C#5:e A4:e C#5:e E5:e | F#5:q F#5:e D5:e G5:e F#5:e
+  E5:e D5:e | C#5:q E5:q E5:q A4:q | D5:q A4:e G4:e F#4:e D4:e F#4:e A4:e | B4:e G4:e B4:e D5:e C#5:e A4:e C#5:e E5:e | F#5:q
+  F#5:e D5:e G5:e F#5:e E5:e D5:e | A4:q D5:q D5:q F#5:e E5:e | D5:e F#5:e A5:e F#5:e D5:e F#5:e A5:e F#5:e | G5:e F#5:e E5:e
+  F#5:e G5:q E5:e F#5:e | G5:e F#5:e E5:e D5:e C#5:e D5:e E5:e G5:e | F#5:e E5:e F#5:e G5:e F#5:q. F#5:e | D5:e F#5:e A5:e
+  F#5:e D5:e F#5:e A5:e F#5:e | G5:e F#5:e E5:e F#5:e G5:q E5:e F#5:e | G5:e F#5:e E5:e D5:e C#5:e E5:e A5:e G5:e | F#5:q
+  D5:q D5:q
+left: r:q | D3+F#3+A3:w | D3+G3+B3:h C#3+E3+A3:h | D3+F#3+A3:h D3+G3+B3:h | E3+G3+B3:h C#3+E3+A3:h | D3+F#3+A3:w | D3+G3+B3:h
+  C#3+E3+A3:h | D3+F#3+B3:h C#3+E3+A3:h | D3+F#3+A3:w | D3+F#3+A3:w | E3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:h C#3+E3+A3:h |
+  D3+F#3+A3:w | E3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:h.
+reps: 2
+days: 2

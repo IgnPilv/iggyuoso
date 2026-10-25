@@ -1,0 +1,16 @@
+id: song-beside-the-seaside-tap
+title: 'I Do Like to Be Beside the Seaside: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 56
+meter: 6/8
+pickup: q.
+countIn: 1
+rhythm: x:q x:e | x:q. x:q x:e | x:q x:e x:q x:e | x:q. x:q. | x:q. x:q x:e | x:q. x:q x:e | x:q x:e x:q x:e | x:q. x:q. |
+  x:q. x:q x:e | x:q. x:q x:e | x:q x:e x:q x:e | x:q. x:q. | x:q. x:q x:e | x:q. x:q. | x:q. x:e x:e x:e | x:q. x:q. | x:q.
+  x:q x:e | x:q. x:q x:e | x:q x:e x:q x:e | x:q. x:q. | x:q. x:q x:e | x:q. x:q x:e | x:q x:e x:q x:e | x:q. x:q. | x:q.
+  x:q x:e | x:q x:e x:q x:e | x:q. x:q x:e | x:q x:e x:q x:e | x:q x:e x:q x:e | x:q. x:q. | x:q x:e x:q x:e | x:q. x:q. |
+  x:q.
+reps: 2
+days: 1

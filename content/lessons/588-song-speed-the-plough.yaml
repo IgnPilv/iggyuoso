@@ -1,0 +1,26 @@
+id: song-speed-the-plough
+title: Speed the Plough
+skills:
+- songs
+steps:
+- explain: |
+    **Speed the Plough** · English reel, John Moorehead, 1799
+
+    A reel named after a play of 1798, played by English barn dance bands ever since.
+  staff:
+    notes: E4:q  |  A4:e B4:e C#5:e D5:e E5:e F#5:e E5:e C#5:e
+    key: A
+  sound: E4:q  |  A4:e B4:e C#5:e D5:e E5:e F#5:e E5:e C#5:e  |  E5:e A5:e E5:e C#5:e E5:e F#5:e E5:e C#5:e  |  D5:e F#5:e
+    D5:e B4:e C#5:e E5:e C#5:e A4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-speed-the-plough-rh
+- exercise: song-speed-the-plough-lh
+- exercise: song-speed-the-plough
+- exercise: song-speed-the-plough-arranged
+- exercise: song-speed-the-plough-performance
+recap: 'Speed the Plough: tune, left hand, together. Come back to it any time; songs are for fun.'

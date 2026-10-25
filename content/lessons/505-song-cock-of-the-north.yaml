@@ -1,0 +1,25 @@
+id: song-cock-of-the-north
+title: Cock o' the North
+skills:
+- songs
+steps:
+- explain: |
+    **Cock o' the North** · Scottish pipe tune, 1800s
+
+    A jaunty 6/8 pipe tune named after the Duke of Gordon. In Scotland children sing silly words to it in the playground.
+  staff:
+    notes: E5:s D5:s  |  C#5:e D5:e C#5:e C#5:e B4:e A4:e
+    key: A
+  sound: E5:s D5:s  |  C#5:e D5:e C#5:e C#5:e B4:e A4:e  |  A4:e C#5:e E5:e F#5:q E5:e  |  C#5:e D5:e C#5:e C#5:e B4:e A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-cock-of-the-north-rh
+- exercise: song-cock-of-the-north-lh
+- exercise: song-cock-of-the-north
+- exercise: song-cock-of-the-north-arranged
+- exercise: song-cock-of-the-north-performance
+recap: 'Cock o'' the North: tune, left hand, together. Come back to it any time; songs are for fun.'

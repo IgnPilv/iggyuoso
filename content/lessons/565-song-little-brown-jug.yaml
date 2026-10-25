@@ -1,0 +1,27 @@
+id: song-little-brown-jug
+title: Little Brown Jug
+skills:
+- songs
+steps:
+- explain: |
+    **Little Brown Jug** · Joseph Winner, 1869
+
+    A song from 1869 that Glenn Miller's band turned into a swing hit seventy years later.
+  staff:
+    notes: A4:e G4:e  |  F#4:q A4:q A4:h
+    key: D
+  sound: A4:e G4:e  |  F#4:q A4:q A4:h  |  G4:q B4:q B4:h  |  C#5:e C#5:e C#5:q B4:q C#5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-little-brown-jug-tap
+- exercise: song-little-brown-jug-by-ear
+- exercise: song-little-brown-jug-rh
+- exercise: song-little-brown-jug-lh
+- exercise: song-little-brown-jug
+- exercise: song-little-brown-jug-arranged
+- exercise: song-little-brown-jug-performance
+recap: 'Little Brown Jug: tune, left hand, together. Come back to it any time; songs are for fun.'

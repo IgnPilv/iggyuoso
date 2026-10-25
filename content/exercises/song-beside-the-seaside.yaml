@@ -1,0 +1,21 @@
+id: song-beside-the-seaside
+title: I Do Like to Be Beside the Seaside
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: q.
+countIn: 1
+right: G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q C5:e | G5:q. G5:q. | G5:q. G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q
+  C5:e | A5:q. A5:q. | A5:q. A5:q A#5:e | B5:q. A5:q F5:e | E5:q D5:e C#5:q D5:e | A5:q. G5:q. | F5:q. E5:q D#5:e | E5:q.
+  D5:q. | E5:q. D5:e C#5:e D5:e | E5:q. D5:q. | B4:q. G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q C5:e | G5:q. G5:q. | G5:q.
+  G5:q G#5:e | A5:q. G5:q E5:e | D5:q C5:e B4:q C5:e | A5:q. A5:q. | A5:q. A5:q A#5:e | B5:q A#5:e B5:q A5:e | B5:q. A5:q
+  F5:e | A5:q G5:e A5:q G5:e | A5:q G5:e F5:q E5:e | D5:q. A5:q. | A5:q E5:e D5:q E5:e | C5:q. C5:q. | C5:q.
+left: r:q. | C3:h. | C3:h. | G2:h. | G2:h. | C3:h. | C3:h. | F2:h. | F2:h. | G2:h. | G2:h. | C3:h. | C3:h. | D3:h. | D3:h.
+  | G2:h. | G2:h. | C3:h. | C3:h. | G2:h. | G2:h. | C3:h. | C3:h. | F2:h. | F2:h. | F#2:h. | B2:h. | E3:h. | A2:h. | D3:h.
+  | G2:h. | C3:h. | C3:q.
+reps: 3
+days: 2

@@ -1,0 +1,16 @@
+id: song-good-old-summertime-lh
+title: 'In the Good Old Summertime: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: h
+countIn: 1
+left: r:h | G2:w | G2:w | G2:w | G2:w | C3:w | C3:w | G2:w | D3:w | G2:w | G2:w | B2:w | E3:w | A2:w | A2:w | D3:w | D3:w
+  | G2:w | G2:w | G2:w | G2:w | C3:w | C3:w | G2:w | D3:w | G2:w | G2:w | B2:w | E3:w | A2:w | D3:w | G2:h C3:h | G2:h
+reps: 2
+days: 1

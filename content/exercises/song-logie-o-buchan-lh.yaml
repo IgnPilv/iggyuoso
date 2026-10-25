@@ -1,0 +1,19 @@
+id: song-logie-o-buchan-lh
+title: 'Logie o'' Buchan: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h. | D3+F#3+A3:h. | C#3+E3+A3:h. | D3+F#3+A3:q D3+F#3+A3:q
+  D3+G3+B3:q | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h. | D3+F#3+A3:h. | C#3+E3+A3:h. | D3+F#3+A3:q
+  D3+F#3+A3:q D3+G3+B3:q | D3+F#3+A3:h. | D3+F#3+A3:h. | C#3+E3+A3:h. | D3+F#3+B3:h. | D3+F#3+A3:h. | D3+F#3+B3:h. | E3+G3+B3:h.
+  | C#3+F#3+A#3:h. | D3+F#3+B3:q D3+F#3+B3:q C#3+E3+A3:q | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h. | D3+F#3+A3:h.
+  | C#3+E3+A3:h. | D3+F#3+A3:q D3+F#3+A3:q D3+G3+B3:q | D3+F#3+A3:h
+reps: 2
+days: 1

@@ -1,0 +1,17 @@
+id: song-keel-row-rh
+title: 'The Keel Row: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: A
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: E5:e D5:e | C#5:q A4:e C#5:e D5:q B4:e D5:e | C#5:q A4:e C#5:e B4:e G#4:e E4:e D5:e | C#5:q A4:e C#5:e D5:q B4:e D5:e
+  | C#5:s A4:e. B4:s G#4:e. A4:q A4:e B4:e | C#5:s E5:e. E5:e A5:e F#5:q E5:e D5:e | C#5:q A4:e C#5:e B4:e G#4:e E4:e D5:e
+  | C#5:s E5:e. E5:e A5:e F#5:q E5:e D5:e | C#5:s A4:e. B4:s G#4:e. A4:q
+reps: 2
+days: 1

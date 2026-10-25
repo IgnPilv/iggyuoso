@@ -1,0 +1,19 @@
+id: song-ap-shenkin-rh
+title: 'Ap Shenkin: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: D5:s C5:s | B4:q B4:e B4:e G5:e F#5:e | E5:q E5:e E5:e F#5:e G5:e | D5:e E5:e D5:e D5:e C5:e B4:e | C5:e A4:e A4:e
+  A4:e D5:e C5:e | B4:e C5:e B4:e B4:e G5:e F#5:e | E5:e F#5:e E5:e E5:e F#5:e G5:e | D5:e E5:e D5:e C5:e B4:e A4:e | G4:q
+  B4:e G4:q G5:s A5:s | B5:q G5:e A5:q F#5:e | G5:e F#5:e G5:e D5:e C5:e B4:e | C5:e D5:e E5:e D5:e G5:e B4:e | B4:e A4:e
+  A4:e A4:q G5:s A5:s | B5:q G5:e A5:q F#5:e | G5:e F#5:e E5:e A5:e G5:e F#5:e | B5:e A5:e G5:e F#5:e G5:e E5:e | D5:e G5:e
+  F#5:e E5:e D5:e C5:e
+reps: 2
+days: 1

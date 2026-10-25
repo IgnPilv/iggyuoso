@@ -1,0 +1,27 @@
+id: song-hot-time
+title: A Hot Time in the Old Town
+skills:
+- songs
+steps:
+- explain: |
+    **A Hot Time in the Old Town** · Theodore Metz, 1896
+
+    A march song from the 1890s, a forerunner of ragtime.
+  staff:
+    notes: F#4:h F#4:h  |  F#4:h E4:q F#4:q
+    key: D
+  sound: F#4:h F#4:h  |  F#4:h E4:q F#4:q  |  G4:q F#4:q E#4:q F#4:q  |  D4:w
+- explain: |
+    **Before you play.** D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-hot-time-tap
+- exercise: song-hot-time-by-ear
+- exercise: song-hot-time-rh
+- exercise: song-hot-time-lh
+- exercise: song-hot-time
+- exercise: song-hot-time-arranged
+- exercise: song-hot-time-performance
+recap: 'A Hot Time in the Old Town: tune, left hand, together. Come back to it any time; songs are for fun.'

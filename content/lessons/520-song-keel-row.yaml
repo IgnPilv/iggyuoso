@@ -1,0 +1,26 @@
+id: song-keel-row
+title: The Keel Row
+skills:
+- songs
+steps:
+- explain: |
+    **The Keel Row** · Tyneside song, 1700s
+
+    A keel was a coal boat on the river Tyne. The tune hops along like a boat on the water.
+  staff:
+    notes: E5:e D5:e  |  C#5:q A4:e C#5:e D5:q B4:e D5:e
+    key: A
+  sound: E5:e D5:e  |  C#5:q A4:e C#5:e D5:q B4:e D5:e  |  C#5:q A4:e C#5:e B4:e G#4:e E4:e D5:e  |  C#5:q A4:e C#5:e D5:q
+    B4:e D5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 72
+- exercise: song-keel-row-rh
+- exercise: song-keel-row-lh
+- exercise: song-keel-row
+- exercise: song-keel-row-arranged
+- exercise: song-keel-row-performance
+recap: 'The Keel Row: tune, left hand, together. Come back to it any time; songs are for fun.'

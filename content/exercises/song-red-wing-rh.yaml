@@ -1,0 +1,19 @@
+id: song-red-wing-rh
+title: 'Red Wing: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: F
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: F5:e E5:e | D5:h Bb4:h | D5:q F5:q E5:q D5:q | C5:h A4:h~ | A4:q C5:q D5:q C5:q | C5:h G4:h~ | G4:q C5:q D5:q C5:q
+  | C5:h A4:h~ | A4:h F5:q E5:q | D5:h D5:h | D5:q F5:q E5:q D5:q | C5:h A4:h~ | A4:q C5:q D5:q C5:q | C5:h G4:h~ | G4:q Bb4:q
+  A4:q G4:q | F4:w~ | F4:h. C5:q | F4:q F4:q F4:q A4:q | C5:q C5:q C5:q F4:q | Bb4:q D5:q F5:q D5:q | C5:h. A4:q | Bb4:q G4:q
+  C4:q Bb4:q | A4:q F4:q C4:q A4:q | G4:q G4:q F5:q. F5:e | E5:q C5:q C5:h | F4:q F4:q F4:q A4:q | C5:q C5:q C5:q F4:q | Bb4:q
+  D5:q F5:q D5:q | C5:h. F4:q | Bb4:q G4:q C4:q Bb4:q | A4:q F4:q C4:q A4:q | G4:q D4:q E4:q C4:q | F4:h.
+reps: 2
+days: 1

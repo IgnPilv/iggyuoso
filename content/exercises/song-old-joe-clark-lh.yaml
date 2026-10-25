@@ -1,0 +1,16 @@
+id: song-old-joe-clark-lh
+title: 'Old Joe Clark: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: A
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | A2+C#3+E3:w | A2+C#3+E3:w | A2+C#3+E3:w | B2+D3+G3:w | A2+C#3+E3:w | A2+C#3+E3:w | A2+C#3+E3:h B2+D3+G3:h | A2+C#3+E3:w
+  | A2+C#3+E3:w | A2+C#3+E3:w | A2+C#3+E3:w | B2+D3+G3:w | A2+C#3+E3:w | A2+C#3+E3:w | A2+C#3+E3:h B2+D3+G3:h | A2+C#3+E3:h.
+reps: 2
+days: 1

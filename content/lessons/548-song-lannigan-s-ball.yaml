@@ -1,0 +1,25 @@
+id: song-lannigan-s-ball
+title: Lanigan's Ball
+skills:
+- songs
+steps:
+- explain: |
+    **Lanigan's Ball** · Irish jig and song, 1860s
+
+    A comic song about a party in Athy that ends in a fight. The tune is a jig.
+  staff:
+    notes: D4:e  |  E4:e F#4:e E4:e G4:q A4:e
+    key: Em
+  sound: D4:e  |  E4:e F#4:e E4:e G4:q A4:e  |  B4:q A4:e B4:e C#5:e D5:e  |  D4:e E4:e D4:e F#4:q G4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 56
+- exercise: song-lannigan-s-ball-rh
+- exercise: song-lannigan-s-ball-lh
+- exercise: song-lannigan-s-ball
+- exercise: song-lannigan-s-ball-arranged
+- exercise: song-lannigan-s-ball-performance
+recap: 'Lanigan''s Ball: tune, left hand, together. Come back to it any time; songs are for fun.'

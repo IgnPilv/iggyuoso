@@ -1,0 +1,20 @@
+id: song-scots-wha-hae
+title: Scots Wha Hae
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: C4:q | C4:h C4:q | C4:h D4:q | C4:h D4:q | F4:h. | D4:h D4:q | D4:h C4:q | D4:h E4:q | F4:h G4:q | A4:h A4:q | G4:h
+  F4:q | F4:h G4:q | A4:h G4:q | F4:h D4:q | D4:h C4:q | C4:h.~ | C4:h. | A4:h A4:q | A4:h G4:q | A4:h Bb4:q | C5:h. | G4:h
+  G4:q | G4:h F4:q | G4:h A4:q | Bb4:h. | C5:h A4:q | G4:h F4:q | F4:h G4:q | A4:h. | F4:h D4:q | D4:h C4:q | C4:h.~ | C4:h
+left: r:q | F2:h. | C3:h. | F2:h. | F2:h. | Bb2:h. | Bb2:h. | Bb2:h. | Bb2:h. | F2:h. | A2:h. | D3:h. | A2:h. | D3:h. | Bb2:h.
+  | F2:h. | C3:h. | F2:h. | F2:h. | F2:h. | F2:h. | C3:h. | G2:h. | C3:h. | C3:h. | F2:h. | A2:h. | D3:q D3:q A2:q | D3:h.
+  | Bb2:h. | Bb2:h. | F2:h. | F2:h
+reps: 3
+days: 2

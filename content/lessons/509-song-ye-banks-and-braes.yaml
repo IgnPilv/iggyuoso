@@ -1,0 +1,26 @@
+id: song-ye-banks-and-braes
+title: Ye Banks and Braes
+skills:
+- songs
+steps:
+- explain: |
+    **Ye Banks and Braes** · Scottish air; words by Robert Burns, 1791
+
+    A slow, sad song of the river Doon. One of the gentlest tunes in the Songbook: let it sing.
+  staff:
+    notes: A4:q  |  D5:h D5:q
+    key: D
+  sound: A4:q  |  D5:h D5:q  |  E5:q. D5:e E5:q  |  F#5:q A5:q F#5:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 96
+- exercise: song-ye-banks-and-braes-tap
+- exercise: song-ye-banks-and-braes-rh
+- exercise: song-ye-banks-and-braes-lh
+- exercise: song-ye-banks-and-braes
+- exercise: song-ye-banks-and-braes-arranged
+- exercise: song-ye-banks-and-braes-performance
+recap: 'Ye Banks and Braes: tune, left hand, together. Come back to it any time; songs are for fun.'

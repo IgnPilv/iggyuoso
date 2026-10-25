@@ -1,0 +1,14 @@
+id: song-boars-head-carol-lh
+title: 'The Boar''s Head Carol: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | C3:w | G2:h C3:h | F2:h D3:h | G2:h C3:h | C3:h G2:h | A2:h E3:h | F2:h D3:h | C3:h.
+reps: 2
+days: 1

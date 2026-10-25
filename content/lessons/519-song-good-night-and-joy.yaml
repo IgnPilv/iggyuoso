@@ -1,0 +1,25 @@
+id: song-good-night-and-joy
+title: Good Night and Joy Be wi' You
+skills:
+- songs
+steps:
+- explain: |
+    **Good Night and Joy Be wi' You** · Scottish parting song, 1700s
+
+    Before "Auld Lang Syne" took its place, this was the song Scots sang at the end of a night together.
+  staff:
+    notes: F#5:e E5:e  |  D5:q D5:q A4:q A4:e D5:e
+    key: D
+  sound: F#5:e E5:e  |  D5:q D5:q A4:q A4:e D5:e  |  B4:q B4:q B5:q B5:e A5:e  |  F#5:e A5:e B5:e A5:e F#5:e A5:e B5:e A5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-good-night-and-joy-rh
+- exercise: song-good-night-and-joy-lh
+- exercise: song-good-night-and-joy
+- exercise: song-good-night-and-joy-arranged
+- exercise: song-good-night-and-joy-performance
+recap: 'Good Night and Joy Be wi'' You: tune, left hand, together. Come back to it any time; songs are for fun.'

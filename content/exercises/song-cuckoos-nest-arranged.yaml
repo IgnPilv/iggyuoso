@@ -1,0 +1,20 @@
+id: song-cuckoos-nest-arranged
+title: The Cuckoo's Nest, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D4:q D4:e E4:e D4:e C4:e A3:e C4:e | D4:e C4:e D4:e E4:e F4:q F4:e A4:e | C5:q C5:e D5:e A4:q G4:e F4:e | E4:e C4:e
+  C4:e C4:e C4:q F4:e E4:e | D4:q D4:e E4:e D4:e C4:e A3:e C4:e | D4:e C4:e D4:e E4:e F4:q F4:e G4:e | A4:e Bb4:e C5:e A4:e
+  G4:e F4:e E4:e F4:e | E4:q D4:q D4:q r:q
+left: D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:q D3:q D3:q C3:q | F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | C3:q C3:q
+  C3:q A2:q | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:q D3:q D3:q C3:q | F2:e C3:e A2:e C3:e A2:e E3:e C#3:e E3:e | D3+F3+A3:q
+  D3+G3+Bb3:q D3+F3+A3:q D3+F3+A3:q
+pedal: x:w | x:q x:q x:q x:q | x:w | x:q x:q x:q x:q | x:w | x:q x:q x:q x:q | x:h x:h | x:q x:q x:q x:q
+reps: 3
+days: 2

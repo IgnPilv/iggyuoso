@@ -1,0 +1,26 @@
+id: song-old-joe-clark
+title: Old Joe Clark
+skills:
+- songs
+steps:
+- explain: |
+    **Old Joe Clark** · Appalachian fiddle tune, 1800s
+
+    A banjo and fiddle tune from Kentucky, in A mixolydian: A major with a G natural.
+  staff:
+    notes: E5:q  |  E5:q F#5:q G5:q F#5:q
+    key: A
+  sound: E5:q  |  E5:q F#5:q G5:q F#5:q  |  E5:q D5:q C#5:q A4:q  |  E5:q F#5:q G5:q F#5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-old-joe-clark-tap
+- exercise: song-old-joe-clark-rh
+- exercise: song-old-joe-clark-lh
+- exercise: song-old-joe-clark
+- exercise: song-old-joe-clark-arranged
+- exercise: song-old-joe-clark-performance
+recap: 'Old Joe Clark: tune, left hand, together. Come back to it any time; songs are for fun.'

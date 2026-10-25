@@ -1,0 +1,19 @@
+id: song-rufty-tufty
+title: Rufty Tufty
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: A4:q | D5:h D5:q E5:q | F#5:h E5:q F#5:q | G5:q G5:q F#5:q E5:q | D5:h. E5:e F#5:e | G5:q F#5:q E5:q D5:q | D5:q C5:q
+  B4:q B4:e C5:e | D5:q D5:q C5:q B4:q | A4:h G4:h | B4:q. C5:e D5:q D5:q | E5:q C5:q D5:h | B4:q. C5:e D5:q D5:q | E5:q C5:q
+  D5:q B4:e C5:e | D5:q D5:q C5:q B4:q | A4:h G4:h
+left: r:q | D3:h A2:h | D3:w | G2:h A2:h | D3:w | C3:w | G2:w | G2:w | D3:h G2:h | G2:w | C3:h D3:h | G2:w | G2:h D3:h | G2:w
+  | G2:h.
+reps: 3
+days: 2

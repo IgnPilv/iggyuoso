@@ -1,0 +1,16 @@
+id: song-marching-through-georgia-lh
+title: 'Marching Through Georgia: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: C3+E3+G3:h | C3+E3+G3:h | C3+F3+A3:q C3+F3+Ab3:q | C3+E3+G3:h | C3+E3+G3:h | C3+E3+A3:h | D3+F#3+A3:h | D3+G3+B3:h |
+  C3+E3+G3:h | C3+F3+A3:h | C3+E3+G3:q B2+D3+G3:q | C3+E3+G3:h | D3+F3+A3:h | D3+F3+A3:q D3+G3+B3:q | C3+E3+G3:h | C3+E3+G3:h
+  | C3+E3+G3:h | C3+E3+G3:h | C3+F3+A3:h | C3+E3+G3:h | C3+E3+G3:h | C3+E3+G3:h | D3+F3+A3:h | D3+G3+B3:h | C3+E3+G3:h | C3+F3+A3:h
+  | C3+E3+G3:q B2+D3+G3:q | C3+E3+G3:h | D3+F3+A3:h | D3+F3+A3:q D3+G3+B3:q | C3+E3+G3:h | C3+E3+G3:h
+reps: 2
+days: 1

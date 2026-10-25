@@ -1,0 +1,25 @@
+id: song-logie-o-buchan
+title: Logie o' Buchan
+skills:
+- songs
+steps:
+- explain: |
+    **Logie o' Buchan** · Scottish song, 1700s
+
+    A love song from Aberdeenshire in a gentle three.
+  staff:
+    notes: A4:e G4:e  |  F#4:q. G4:e A4:q
+    key: D
+  sound: A4:e G4:e  |  F#4:q. G4:e A4:q  |  A4:q F#5:q E5:q  |  D5:q B4:q B4:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 96
+- exercise: song-logie-o-buchan-rh
+- exercise: song-logie-o-buchan-lh
+- exercise: song-logie-o-buchan
+- exercise: song-logie-o-buchan-arranged
+- exercise: song-logie-o-buchan-performance
+recap: 'Logie o'' Buchan: tune, left hand, together. Come back to it any time; songs are for fun.'
