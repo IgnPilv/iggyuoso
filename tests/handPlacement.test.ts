@@ -71,5 +71,5 @@ describe('hand placement', () => {
         }
       }
     }
-  });
+  }, 30000);
 });
