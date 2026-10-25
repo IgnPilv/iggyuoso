@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- The social preview card (public/og-image.png, 1200×630), drawn by tools/seo/images.mjs. Colours are
+     the dark theme's tokens (src/styles/tokens.css). -->
+<html><head><meta charset="utf-8"><style>
+@font-face { font-family: SG; src: url(../../node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2); font-weight: 300 700; }
+@font-face { font-family: IN; src: url(../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2); font-weight: 100 900; }
+html, body { margin: 0; }
+body { width: 1200px; height: 630px; overflow: hidden; position: relative; background: #08070d; color: #f5f3fa; font-family: IN; }
+.glow { position: absolute; inset: 0; background:
+  radial-gradient(520px 380px at 10% 6%, rgba(255,61,139,.30), transparent 70%),
+  radial-gradient(560px 420px at 95% 0%, rgba(139,92,246,.34), transparent 70%),
+  radial-gradient(700px 300px at 60% 110%, rgba(56,189,248,.14), transparent 70%); }
+.brand { position: absolute; left: 80px; top: 70px; display: flex; align-items: center; gap: 20px; font-family: SG; font-weight: 650; font-size: 40px; letter-spacing: -0.02em; }
+.mark { width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(115deg,#ff6a3d,#ff3d8b 48%,#8b5cf6); display: grid; place-items: center; }
+h1 { position: absolute; left: 80px; top: 170px; margin: 0; font-family: SG; font-weight: 650; font-size: 72px; line-height: 1.04; letter-spacing: -0.035em; width: 820px; }
+.g { background: linear-gradient(115deg,#ff6a3d,#ff3d8b 48%,#8b5cf6); -webkit-background-clip: text; color: transparent; }
+p { position: absolute; left: 80px; top: 345px; margin: 0; width: 660px; font-size: 28px; line-height: 1.4; color: #c9c6d6; }
+.tag { position: absolute; left: 80px; top: 470px; display: flex; gap: 12px; }
+.tag span { border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 8px 18px; font-size: 21px; color: #f5f3fa; background: rgba(255,255,255,.05); }
+.kb { position: absolute; left: 0; right: 0; bottom: 0; height: 96px; display: flex; gap: 3px; padding: 0 3px; background: #121119; }
+.w { flex: 1; background: #ece9f3; border-radius: 0 0 6px 6px; position: relative; }
+.w.r { background: #4f8cff; } .w.l { background: #22d39a; }
+.b { position: absolute; top: 0; width: 22px; height: 58px; background: #1a1822; border-radius: 0 0 4px 4px; }
+.n { position: absolute; border-radius: 10px; }
+</style></head><body>
+<div class="glow"></div>
+<div class="brand"><div class="mark"><svg width="40" height="40" viewBox="0 0 16 16"><rect x="2" y="2" width="3" height="12" rx="1.5" fill="#fff"/><rect x="6.5" y="2" width="3" height="8" rx="1.5" fill="#fff"/><rect x="11" y="2" width="3" height="12" rx="1.5" fill="#fff"/></svg></div>iggyuoso</div>
+<h1>Learn piano in your browser. <span class="g">Easy as C D E.</span></h1>
+<p>A free piano trainer for your MIDI keyboard: short exercises, both hands scored.</p>
+<div class="tag"><span>Falling notes</span><span>Sheet music</span><span>Ear training</span><span>Theory</span></div>
+<div class="kb" id="kb"></div>
+<script>
+  // 36 white keys; a few lit by the right (blue) and left (green) hand, falling notes above the lit ones.
+  const kb = document.getElementById('kb');
+  const lit = { 27: 'l', 29: 'l', 31: 'r', 33: 'r', 35: 'r' };
+  const n = 36, w = (1200 - 6) / n;
+  for (let i = 0; i < n; i++) { const d = document.createElement('div'); d.className = 'w ' + (lit[i] || ''); kb.append(d); }
+  for (let i = 0; i < n - 1; i++) if (![2, 6].includes(i % 7)) {
+    const b = document.createElement('div'); b.className = 'b'; b.style.left = (3 + (i + 1) * w - 11) + 'px'; kb.append(b);
+  }
+  const fall = [[27, 'l', 0, 150], [29, 'l', 170, 90], [31, 'r', 0, 60], [31, 'r', 90, 110], [33, 'r', 30, 80], [35, 'r', 0, 40], [35, 'r', 140, 120], [33, 'r', 240, 70]];
+  for (const [k, hnd, bottom, h] of fall) {
+    const d = document.createElement('div'); d.className = 'n';
+    d.style.cssText = `left:${3 + k * w + 4}px;width:${w - 11}px;bottom:${96 + 6 + bottom}px;height:${h}px;` +
+      `background:${hnd === 'r' ? '#4f8cff' : '#22d39a'};opacity:${bottom > 150 ? .45 : .9}`;
+    document.body.append(d);
+  }
+</script>
+</body></html>

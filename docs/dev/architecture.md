@@ -46,13 +46,14 @@ tree) or a canvas (falling notes).
 ## How a page gets on screen
 
 1. `index.html` sets the theme (dark or light) before anything is drawn, so there is no flash, and
-   loads `src/main.ts`.
+   loads `src/main.ts`. It also carries what search engines and link previews read (title,
+   description, share card, structured data, a plain-HTML "About" section): see [seo.md](seo.md).
 2. `main.ts` calls `startShell` (`src/app/shell.ts`), which builds the header and listens for
    address changes.
 3. Addresses use the part after `#` (hash routing, e.g. `#/lesson/high-and-low`), so GitHub Pages needs
    no special setup. `resolveRoute` (`src/app/router.ts`, tested) turns the address into "this
    page of this module, with this argument". The piano keeps short addresses (`#/book`), other
-   modules use `#/<id>/<page>`.
+   modules use `#/<id>/<page>`. The shell also sets the tab's title (`src/app/title.ts`).
 4. A page is a **View**: a function that gets an empty element to fill and the argument from the
    address, and may return a cleanup function (stop sounds, timers, key listeners). When the
    address changes, the shell runs the old page's cleanup and draws the new page.
