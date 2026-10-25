@@ -78,6 +78,8 @@ export interface Settings {
   hands?: boolean;
   /** Chord names (C, Am, G7) over the sheet music; unset = on. */
   chords?: boolean;
+  /** Practice waits at each note or chord until its keys are pressed ("Wait for me"); unset = off. */
+  wait?: boolean;
 }
 
 /** Local calendar day (YYYY-MM-DD) of an ISO time. */

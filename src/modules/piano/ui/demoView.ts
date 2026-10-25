@@ -34,6 +34,7 @@ import { mountJam } from './jamView';
 import { mySongsView } from './mySongsView';
 import { noteRushView } from './noteRush';
 import { writeMidiFile } from '../music/midiFile';
+import { expectedNotes } from '../music/timeline';
 import { ModuleRecords } from '../../../core/storage';
 import type { Module } from '../../../core/module';
 import { MODULES } from '../../../app/modules';
@@ -597,6 +598,42 @@ function scenes(): Scene[] {
       dragHandle(() => box.querySelector('.range-handle.from'), sliderX(box, from), later, 3000);
       later(4600, () => press(box, 'Play'));
       return () => { timers.forEach(clearTimeout); cleanup(); };
+    },
+  });
+  /** Some notes of the exercise start together (a chord, or both hands at once). */
+  const expectedChords = (e: TimedExercise, size = 2) => {
+    const at = new Map<string, number>();
+    for (const n of expectedNotes(e)) at.set(n.beat.toFixed(3), (at.get(n.beat.toFixed(3)) ?? 0) + 1);
+    return Math.max(...at.values()) >= size;
+  };
+  // Wait for me: in practice the music stops at each note or chord until its keys are pressed.
+  const waitPiece = pick(isTimed, (e) => !!(e.right && e.left) && e.bars >= 3 && e.bars <= 8 && !e.pedal && !e.goal && expectedChords(e, 3), (e) => !!(e.right && e.left) && e.bars >= 2 && e.bars <= 4 && !e.pedal && !e.goal && expectedChords(e), (e) => !!(e.right && e.left) && e.bars <= 6 && !e.goal) ?? parseExercise(parse(SAMPLES.ladder)) as TimedExercise;
+  out.push({
+    title: 'Wait for me',
+    caption: 'In Practice, Options → Wait for me stops the music at each note or chord until its keys are pressed, like Synthesia\'s wait mode. The keys still to play are lit, the ones already pressed turn green, wrong keys flash red, and the line above says which are left ("Waiting for: E4 G4 · ✓ C3"). Nothing is timed or saved; each round says how many notes, how many wrong keys and how often the music had to wait. Here the pianist hits a wrong key, stops to think, and finds a chord one key at a time, first in falling notes, then on the sheet.',
+    run: (box, next, p) => {
+      resetDemoOptions();
+      const timers: number[] = [];
+      const later = (ms: number, f: () => void) => timers.push(window.setTimeout(f, ms));
+      let rounds = 0;
+      demo.onWait = (s) => p.playWait(s);
+      demo.onRunEnd = (mode) => {
+        if (mode !== 'play') return;
+        rounds++;
+        if (rounds === 1) {
+          later(1200, () => { press(box, 'Stop'); setView(box, 'classic'); });
+          later(2400, () => press(box, 'Play'));
+        } else later(2000, () => { press(box, 'Stop'); next(); });
+      };
+      const cleanup = mountExercise(box, waitPiece, DEMO_CALIBRATION, () => {});
+      setView(box, 'falling');
+      later(900, () => { const d = box.querySelector('details.drawer') as HTMLDetailsElement | null; if (d) d.open = true; });
+      later(2200, () => {
+        const el = [...box.querySelectorAll<HTMLLabelElement>('.drawer label')].find((l) => l.textContent?.includes('Wait for me'))?.querySelector('input');
+        if (el) { el.checked = true; el.dispatchEvent(new Event('change')); }
+      });
+      later(3400, () => { const d = box.querySelector('details.drawer') as HTMLDetailsElement | null; if (d) d.open = false; press(box, 'Play'); });
+      return () => { timers.forEach(clearTimeout); cleanup(); resetDemoOptions(); };
     },
   });
   out.push({
