@@ -34,7 +34,7 @@ const pill = () => (keysPill ??= h('a', { href: '#/settings', class: 'keys-pill'
 const showPill = () => {
   if (!keysPill) return;
   keysPill.hidden = !computerKeys.enabled;
-  keysPill.textContent = `⌨ A = C${4 + computerKeys.shift} · Z X octave`;
+  keysPill.replaceChildren('⌨', h('span', { class: 'keys-pill-text' }, ` A = C${4 + computerKeys.shift} · Z X octave`));
 };
 computerKeys.onChange(showPill);
 

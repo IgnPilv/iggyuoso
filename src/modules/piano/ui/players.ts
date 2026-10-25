@@ -990,8 +990,11 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         hasHands ? h('label', {}, handBox, ' Hands (beta)') : '',
         chordable && hasChords(ex) ? h('label', {}, chordBox, ' Chord names') : ''),
       canPractise ? h('p', { class: 'small drawer-note' }, ranged ? 'To loop some bars, switch to Practice and drag the ends of the bar slider (or the handles on the sheet).' : 'Practice plays it round and round, and saves nothing.') : ''));
-  drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
+  let quiet = false;
+  drawer.addEventListener('toggle', () => { if (quiet) quiet = false; else setExerciseOptions({ optionsOpen: drawer.open }); });
   closeOptions = () => { if (drawer.open && drawer.closest('.focus')) drawer.open = false; };
+  // A pop-over never opens by itself over the music: the remembered "open" is for the drawer outside lessons.
+  requestAnimationFrame(() => { if (drawer.open && drawer.closest('.focus')) { quiet = true; drawer.open = false; } });
   // A tap anywhere else shuts the pop-over too.
   const onOutside = (e: PointerEvent) => { if (!drawer.contains(e.target as Node)) closeOptions(); };
   document.addEventListener('pointerdown', onOutside);

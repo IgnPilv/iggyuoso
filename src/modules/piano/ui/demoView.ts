@@ -1027,6 +1027,8 @@ export const demoView: View = (root, arg) => {
     stage.append(box);
     const next = () => { if (scene) return; if (index === i && i + 1 < list.length) show(i + 1); else if (i + 1 >= list.length) finish(); };
     cleanup = s.run(box, next, pianist);
+    // The scene list is long: bring the scene being played into view.
+    if (caption.getBoundingClientRect().top > innerHeight * 0.4) caption.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const finish = () => {
@@ -1048,7 +1050,7 @@ export const demoView: View = (root, arg) => {
           if (!ex) return null;
           return h('button', { class: 'chip', onclick: () => {
             audio();
-            window.scrollTo(0, 0);
+            caption.scrollIntoView({ block: 'start' });
             show(-1, { title: exerciseTitle(ex), caption: ex.prompt ?? 'The pianist plays this exercise.', run: exerciseScene(ex, { listenFirst: false }) });
           } }, ex.title ?? `Exercise ${i + 1}`);
         })));

@@ -68,7 +68,7 @@ export const homeView: View = (root) => {
     h('div', { class: 'controls' },
       !store.calibration
         ? h('button', { onclick: () => go('/calibrate') }, 'Set up the keyboard')
-        : next ? h('button', { onclick: () => go(`/lesson/${next.id}`) }, `Continue: ${next.title}`) : null,
+        : next ? h('button', { onclick: () => go(`/lesson/${next.id}`) }, `${lessonStage(next) === 'new' ? 'Start' : 'Continue'}: ${next.title}`) : null,
       h('button', { class: 'secondary', onclick: () => go('/demo') }, 'Watch the demo'),
       h('span', { class: 'small' }, 'The demo needs no keyboard.')),
   ));
