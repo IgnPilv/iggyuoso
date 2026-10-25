@@ -1,0 +1,14 @@
+id: song-kumbaya-performance
+title: 'Kumbaya: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 76
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:h | G4:q A4:q G4:h | C4:q E4:q G4:h | G4:q F4:q E4:h | C4:q E4:q G4:h | G4:q A4:q G4:h | F4:q E4:q D4:q
+  D4:q | C4:w
+left: C3+G3:w | F2+C3:h C3+G3:h | C3+G3:w | G2+D3:h C3+G3:h | C3+G3:w | F2+C3:h C3+G3:h | F2+C3:h G2+D3:h | C3+G3:w
+reps: 2
+days: 2

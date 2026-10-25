@@ -1,0 +1,15 @@
+id: song-sakura-lh
+title: 'Sakura, Sakura: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Am
+tempo: 66
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: A2+C3+E3:w | A2+C3+E3:w | A2+C3+E3:w | A2+D3+F3:w | A2+C3+E3:w | B2+E3+G#3:w | C3+E3+A3:w | D3+F3+A3:w | C3+E3+A3:w
+  | B2+E3+G#3:w | C3+E3+A3:w | C3+E3+A3:w | D3+F3+A3:w | B2+E3+G#3:w
+reps: 2
+days: 1

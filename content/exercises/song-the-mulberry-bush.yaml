@@ -1,0 +1,15 @@
+id: song-the-mulberry-bush
+title: Here We Go Round the Mulberry Bush
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 58
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: C4:q C4:e C4:q E4:e | G4:q E4:e C4:q. | D4:q D4:e D4:q B3:e | G3:q. G3:q. | C4:q C4:e C4:q E4:e | G4:q E4:e C4:q. |
+  D4:q. G3:q. | C4:q. C4:q.
+left: C3:h. | C3:h. | G2:h. | G2:h. | C3:h. | C3:h. | G2:h. | C3:h.
+reps: 3
+days: 2

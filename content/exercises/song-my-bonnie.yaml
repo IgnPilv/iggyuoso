@@ -1,0 +1,17 @@
+id: song-my-bonnie
+title: My Bonnie Lies Over the Ocean
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: G3:q | E4:q. D4:e C4:q | D4:q C4:q A3:q | G3:q E3:h | r:h G3:q | E4:q. D4:e C4:q | C4:q B3:q C4:q | D4:h. | r:h G3:q
+  | E4:q. D4:e C4:q | D4:q C4:q A3:q | G3:q E3:h | r:h G3:q | A3:q D4:q C4:q | B3:q A3:q B3:q | C4:h
+left: r:q | C3:h. | F2:h. | C3:h. | C3:h. | C3:h. | G2:h. | G2:h. | G2:h. | C3:h. | F2:h. | C3:h. | C3:h. | D3:h. | G2:h.
+  | C3:h
+reps: 3
+days: 2

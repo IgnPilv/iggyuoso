@@ -1,0 +1,26 @@
+id: song-blue-danube
+title: The Blue Danube
+skills:
+- songs
+steps:
+- explain: |
+    **The Blue Danube** · Johann Strauss II, 1866
+
+    The most famous waltz of all, from Vienna. The "pa-pa, pa-pa" answers after each long note are horns and trumpets in the orchestra.
+  staff:
+    notes: D4:q D4:q F#4:q  |  A4:h.
+    key: D
+  sound: D4:q D4:q F#4:q  |  A4:h.  |  r:q A4:q A4:q  |  r:q F#4:q F#4:q
+- explain: |
+    **Before you play.** One strong beat per bar. The tune climbs the D chord, then the A7 chord (C♯ E B), then home.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 152
+- exercise: song-blue-danube-tap
+- exercise: song-blue-danube-rh
+- exercise: song-blue-danube-lh
+- exercise: song-blue-danube
+- exercise: song-blue-danube-arranged
+- exercise: song-blue-danube-performance
+recap: 'The Blue Danube: tune, left hand, together. Come back to it any time; songs are for fun.'

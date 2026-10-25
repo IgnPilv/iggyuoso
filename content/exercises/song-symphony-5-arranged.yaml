@@ -1,0 +1,17 @@
+id: song-symphony-5-arranged
+title: 'Symphony No. 5: the opening, fuller arrangement'
+kind: timed
+hand: together
+prompt: A fuller left hand (bass, then chord).
+display: staff
+key: Cm
+tempo: 108
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: r:e G4:e G4:e G4:e | Eb4:h | r:e F4:e F4:e F4:e | D4:h | r:e G4:e G4:e G4:e | Eb4:e Ab4:e Ab4:e Ab4:e | G4:e Eb5:e
+  Eb5:e Eb5:e | C5:h
+left: C3:q Eb3+G3:q | C3:q Eb3+G3:q | G2:q B2+D3+G3:q | G2:q B2+D3+G3:q | C3:q Eb3+G3:q | Ab2:q C3+Eb3+Ab3:q | C3:q Eb3+G3:q
+  | C3+Eb3+G3:h
+reps: 3
+days: 2

@@ -1,0 +1,14 @@
+id: song-sur-le-pont-rh
+title: 'Sur le pont d''Avignon: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 104
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C4:q C4:q | C4:e D4:e E4:q | E4:q E4:q | E4:e F4:e G4:q | F4:q E4:q | D4:e E4:e C4:q | D4:e E4:e C4:q | D4:e E4:e C4:q
+  | C4:q C4:q | C4:e D4:e E4:q | E4:q E4:q | E4:e F4:e G4:q | F4:q E4:q | D4:e E4:e C4:q | D4:q G3:q | C4:h
+reps: 2
+days: 1

@@ -1,0 +1,26 @@
+id: song-alouette
+title: Alouette
+skills:
+- songs
+steps:
+- explain: |
+    **Alouette** · French-Canadian song, 1800s
+
+    A French-Canadian song from the fur-trade boatmen. Each verse adds one more line, so it grows longer and longer.
+  staff:
+    notes: C5:q D5:e E5:e E5:q E5:q  |  D5:e C5:e D5:e E5:e C5:q G4:q
+  sound: C5:q D5:e E5:e E5:q E5:q  |  D5:e C5:e D5:e E5:e C5:q G4:q  |  C5:q D5:e E5:e E5:q E5:q  |  D5:e C5:e D5:e E5:e C5:h
+- explain: |
+    **Before you play.** Short and bouncy: the eighths go "lou-et" and "gen-til".
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 108
+- exercise: song-alouette-tap
+- exercise: song-alouette-by-ear
+- exercise: song-alouette-rh
+- exercise: song-alouette-lh
+- exercise: song-alouette
+- exercise: song-alouette-arranged
+- exercise: song-alouette-performance
+recap: 'Alouette: tune, left hand, together. Come back to it any time; songs are for fun.'

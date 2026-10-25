@@ -1,0 +1,14 @@
+id: song-alle-meine-entchen-rh
+title: 'Alle meine Entchen: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 100
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:e D4:e E4:e F4:e G4:q G4:q | A4:e A4:e A4:e A4:e G4:h | A4:e A4:e A4:e A4:e G4:h | F4:e F4:e F4:e F4:e E4:q E4:q
+  | D4:e D4:e D4:e D4:e C4:h
+reps: 2
+days: 1

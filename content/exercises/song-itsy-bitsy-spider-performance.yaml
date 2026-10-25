@@ -1,0 +1,22 @@
+id: song-itsy-bitsy-spider-performance
+title: 'The Itsy Bitsy Spider: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 58
+meter: 6/8
+pickup: e
+countIn: 1
+right: G3:e | C4:q C4:e C4:q D4:e | E4:q. E4:q E4:e | D4:q C4:e D4:q E4:e | C4:q. r:q E4:e | E4:q. F4:q G4:e | G4:q. r:q G4:e
+  | F4:q E4:e F4:q G4:e | E4:q. r:q C4:e | C4:q. D4:q E4:e | E4:q. r:q E4:e | D4:q C4:e D4:q E4:e | C4:q. r:q G3:e | G3:q
+  G3:e C4:q C4:e | C4:q D4:e E4:q E4:e | D4:q C4:e D4:q E4:e | C4:q. r:q
+left: r:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e
+  C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e
+  E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e
+  G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e
+  | C3+E3+G3:h~ C3+E3+G3:e
+pedal: r:e | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h
+  x:e
+reps: 2
+days: 2

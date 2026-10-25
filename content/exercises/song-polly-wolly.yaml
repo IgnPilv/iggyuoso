@@ -1,0 +1,17 @@
+id: song-polly-wolly
+title: Polly Wolly Doodle
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 116
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C4:e C4:e C4:e C4:e | C4:q F4:q | A4:e A4:e A4:e A4:e | A4:q F4:q | G4:e G4:e G4:e G4:e | G4:q E4:q | F4:e F4:e F4:e
+  A4:e | C5:q. r:e | A4:e A4:e A4:e A4:e | A4:q F4:q | G4:e G4:e G4:e G4:e | G4:q E4:q | F4:e F4:e F4:e F4:e | G4:e F4:e E4:e
+  G4:e | F4:h
+left: F2:h | F2:h | F2:h | F2:h | C3:h | C3:h | F2:h | F2:h | F2:h | F2:h | C3:h | C3:h | F2:h | C3:h | F2:h
+reps: 3
+days: 2

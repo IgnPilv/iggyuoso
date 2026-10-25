@@ -1,0 +1,16 @@
+id: song-oh-where-has-my-dog
+title: Oh Where, Oh Where Has My Little Dog Gone?
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 120
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: F4:q. G4:e F4:q | E4:q D4:q C4:q | D4:q G4:q G4:q | E4:q C4:q C4:q | F4:q. G4:e F4:q | E4:q D4:q C4:q | D4:q G4:q E4:q
+  | F4:h.
+left: F2:h. | C3:h. | C3:h. | F2:h. | F2:h. | C3:h. | C3:h. | F2:h.
+reps: 3
+days: 2

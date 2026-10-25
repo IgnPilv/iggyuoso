@@ -14,6 +14,21 @@ export type Strand = (typeof STRANDS)[number];
 export const BRANCHES = ['technique', 'reading', 'rhythm', 'theory', 'ear', 'repertoire', 'creativity', 'milestones', 'songs'] as const;
 export type BranchId = (typeof BRANCHES)[number];
 
+/** Songbook groups (`genre:` on a song), in the order the Songbook shows them, with their names. */
+export const GENRES = {
+  nursery: "Children's songs",
+  folk: 'Folk songs',
+  shanties: 'Sea shanties',
+  carols: 'Carols and holidays',
+  hymns: 'Hymns and spirituals',
+  anthems: 'Anthems and marches',
+  dances: 'Dances and fiddle tunes',
+  classical: 'Classical',
+  ragtime: 'Ragtime and early jazz',
+  requests: 'By request',
+} as const;
+export type Genre = keyof typeof GENRES;
+
 export const NODE_TYPES = ['lesson', 'drill', 'piece', 'checkpoint', 'side-quest', 'song'] as const;
 export type NodeType = (typeof NODE_TYPES)[number];
 
@@ -35,6 +50,8 @@ export interface TreeNode {
   about?: string;
   /** Songs taught in steps: the song this node is a step of (the node that plays the whole song). */
   song?: string;
+  /** Songs: the Songbook group the song is shown in. */
+  genre?: Genre;
 }
 
 export interface TreeBranch {
@@ -190,9 +207,11 @@ function parseNode(raw: Raw, branch: BranchId): TreeNode {
   const lesson = raw.lesson === undefined ? undefined : String(raw.lesson);
   if (!planned && !lesson) throw new FieldError('a node that is not planned needs a "lesson"');
   const strand: Strand | 'all' = branch === 'milestones' ? 'all' : branch;
+  if (raw.genre !== undefined && (branch !== 'songs' || !(String(raw.genre) in GENRES))) throw new FieldError(`"genre" is for songs, one of ${Object.keys(GENRES).join(', ')}`);
   return {
     id, type, branch, strand, stage, title: text(raw, 'title', 'node'), lesson, requires: list(raw.requires, '"requires"'), planned,
     ...(raw.about !== undefined ? { about: String(raw.about) } : {}),
     ...(raw.song !== undefined ? { song: String(raw.song) } : {}),
+    ...(raw.genre !== undefined ? { genre: String(raw.genre) as Genre } : {}),
   };
 }

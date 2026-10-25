@@ -1,0 +1,15 @@
+id: song-fur-elise-song-lh
+title: 'Für Elise: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Am
+tempo: 60
+tempoLadder: true
+meter: 3/8
+pickup: s s
+countIn: 1
+left: r:e | r:q. | A2+C3+E3:q. | B2+E3+G#3:q. | C3+E3+A3:q. | r:q. | C3+E3+A3:q. | B2+E3+G#3:q. | C3+E3+A3:q
+reps: 2
+days: 1

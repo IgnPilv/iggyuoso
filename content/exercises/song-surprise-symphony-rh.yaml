@@ -1,0 +1,14 @@
+id: song-surprise-symphony-rh
+title: 'Surprise Symphony: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 84
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C4:e C4:e E4:e E4:e | G4:e G4:e E4:q | F4:e F4:e D4:e D4:e | B3:e B3:e G3:q | C4:e C4:e E4:e E4:e | G4:e G4:e E4:q
+  | F4:e F4:e D4:e D4:e | B3:e B3:e G3:q
+reps: 2
+days: 1

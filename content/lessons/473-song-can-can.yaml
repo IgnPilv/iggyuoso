@@ -1,0 +1,26 @@
+id: song-can-can
+title: Can-Can
+skills:
+- songs
+steps:
+- explain: |
+    **Can-Can** · Jacques Offenbach, "Orpheus in the Underworld", 1858
+
+    Offenbach wrote this galop for a party of gods in the underworld. Paris dancers made it famous with high kicks, and it has been "the can-can" ever since.
+  staff:
+    notes: C5:q D5:e F5:e  |  E5:e D5:e G5:q
+  sound: C5:q D5:e F5:e  |  E5:e D5:e G5:q  |  G5:q G5:e A5:e  |  E5:e F5:e D5:q
+- explain: |
+    **Before you play.** Fast and bright. Bar 6 leaps up an octave to high C: prepare the hand on the C before it.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 112
+- exercise: song-can-can-tap
+- exercise: song-can-can-by-ear
+- exercise: song-can-can-rh
+- exercise: song-can-can-lh
+- exercise: song-can-can
+- exercise: song-can-can-arranged
+- exercise: song-can-can-performance
+recap: 'Can-Can: tune, left hand, together. Come back to it any time; songs are for fun.'

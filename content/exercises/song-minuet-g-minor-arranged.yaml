@@ -1,0 +1,21 @@
+id: song-minuet-g-minor-arranged
+title: Minuet in G minor, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (rolling arpeggios). Change the pedal with each chord.
+display: staff
+key: Gm
+tempo: 100
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: D5:q G4:e A4:e Bb4:e C5:e | D5:q G4:q G4:q | Eb5:q C5:e D5:e Eb5:e F5:e | G5:q G4:q G4:q | C5:q D5:e C5:e Bb4:e A4:e
+  | Bb4:q C5:e Bb4:e A4:e G4:e | F#4:q G4:e A4:e Bb4:e G4:e | A4:h. | D5:q G4:e A4:e Bb4:e C5:e | D5:q G4:q G4:q | Eb5:q C5:e
+  D5:e Eb5:e F5:e | G5:q G4:q G4:q | C5:q D5:e C5:e Bb4:e A4:e | Bb4:q C5:e Bb4:e A4:e G4:e | A4:q Bb4:e A4:e G4:e F#4:e |
+  G4:h.
+left: G2:q D3:q G3:q | G2:q D3:q G3:q | C3:q G3:q C4:q | G2:q D3:q G3:q | F2:q C3:q F3:q | G2:q D3:q G3:q | D3:q A3:q D4:q
+  | D3:q A3:q D4:q | G2:q D3:q G3:q | G2:q D3:q G3:q | C3:q G3:q C4:q | G2:q D3:q G3:q | F2:q C3:q F3:q | G2:q D3:q G3:q |
+  D3:q A3:q D4:q | D3+G3+Bb3:h.
+pedal: x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
+reps: 3
+days: 2

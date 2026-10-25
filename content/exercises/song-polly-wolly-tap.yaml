@@ -1,0 +1,12 @@
+id: song-polly-wolly-tap
+title: 'Polly Wolly Doodle: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 116
+meter: 2/4
+countIn: 1
+rhythm: x:e x:e x:e x:e | x:q x:q | x:e x:e x:e x:e | x:q x:q | x:e x:e x:e x:e | x:q x:q | x:e x:e x:e x:e | x:q. r:e | x:e
+  x:e x:e x:e | x:q x:q | x:e x:e x:e x:e | x:q x:q | x:e x:e x:e x:e | x:e x:e x:e x:e | x:h
+reps: 2
+days: 1

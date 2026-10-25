@@ -1,0 +1,17 @@
+id: song-minuet-g-minor-rh
+title: 'Minuet in G minor: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Gm
+tempo: 100
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: D5:q G4:e A4:e Bb4:e C5:e | D5:q G4:q G4:q | Eb5:q C5:e D5:e Eb5:e F5:e | G5:q G4:q G4:q | C5:q D5:e C5:e Bb4:e A4:e
+  | Bb4:q C5:e Bb4:e A4:e G4:e | F#4:q G4:e A4:e Bb4:e G4:e | A4:h. | D5:q G4:e A4:e Bb4:e C5:e | D5:q G4:q G4:q | Eb5:q C5:e
+  D5:e Eb5:e F5:e | G5:q G4:q G4:q | C5:q D5:e C5:e Bb4:e A4:e | Bb4:q C5:e Bb4:e A4:e G4:e | A4:q Bb4:e A4:e G4:e F#4:e |
+  G4:h.
+reps: 2
+days: 1

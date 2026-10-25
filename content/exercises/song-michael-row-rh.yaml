@@ -1,0 +1,14 @@
+id: song-michael-row-rh
+title: 'Michael, Row the Boat Ashore: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 92
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q E4:q G4:q. E4:e | G4:q A4:q G4:h | E4:q G4:q A4:q. G4:e | G4:w | E4:q G4:q G4:q. E4:e | F4:q E4:q D4:h | C4:q
+  D4:q E4:q. D4:e | C4:w
+reps: 2
+days: 1

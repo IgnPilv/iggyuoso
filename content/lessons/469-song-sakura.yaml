@@ -1,0 +1,27 @@
+id: song-sakura
+title: Sakura, Sakura
+skills:
+- songs
+steps:
+- explain: |
+    **Sakura, Sakura** · Japanese folk song, 1800s
+
+    "Cherry blossoms": a Japanese song on a five-note scale (A B C E F) that sounds like the koto, the Japanese zither.
+  staff:
+    notes: A4:q A4:q B4:h  |  A4:q A4:q B4:h
+    key: Am
+  sound: A4:q A4:q B4:h  |  A4:q A4:q B4:h  |  A4:q B4:q C5:q B4:q  |  A4:q B4:e A4:e F4:h
+- explain: |
+    **Before you play.** Only five different notes. It ends on E, not A: it floats rather than closes.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 4/4 · Tempo: 66
+- exercise: song-sakura-tap
+- exercise: song-sakura-by-ear
+- exercise: song-sakura-rh
+- exercise: song-sakura-lh
+- exercise: song-sakura
+- exercise: song-sakura-arranged
+- exercise: song-sakura-performance
+recap: 'Sakura, Sakura: tune, left hand, together. Come back to it any time; songs are for fun.'

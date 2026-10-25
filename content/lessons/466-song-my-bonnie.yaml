@@ -1,0 +1,26 @@
+id: song-my-bonnie
+title: My Bonnie Lies Over the Ocean
+skills:
+- songs
+steps:
+- explain: |
+    **My Bonnie Lies Over the Ocean** · Scottish song, 1880s
+
+    Sung by Scottish students in the 1880s; some say "Bonnie" was Bonnie Prince Charlie, who fled over the sea in 1746.
+  staff:
+    notes: G3:q  |  E4:q. D4:e C4:q
+  sound: G3:q  |  E4:q. D4:e C4:q  |  D4:q C4:q A3:q  |  G3:q E3:h
+- explain: |
+    **Before you play.** The tune swoops down a sixth in bar 1 ("Bon-nie lies"): let the hand float, not stretch.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 3/4 · Tempo: 104
+- exercise: song-my-bonnie-tap
+- exercise: song-my-bonnie-by-ear
+- exercise: song-my-bonnie-rh
+- exercise: song-my-bonnie-lh
+- exercise: song-my-bonnie
+- exercise: song-my-bonnie-arranged
+- exercise: song-my-bonnie-performance
+recap: 'My Bonnie Lies Over the Ocean: tune, left hand, together. Come back to it any time; songs are for fun.'

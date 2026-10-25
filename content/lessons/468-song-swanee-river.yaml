@@ -1,0 +1,26 @@
+id: song-swanee-river
+title: Old Folks at Home (Swanee River)
+skills:
+- songs
+steps:
+- explain: |
+    **Old Folks at Home (Swanee River)** · Stephen Foster, 1851
+
+    Foster never saw the Suwannee River in Florida; he picked the name off a map because it sang well.
+  staff:
+    notes: E4:q. D4:e C4:e E4:e D4:e C4:e  |  C5:h A4:q C5:q
+  sound: E4:q. D4:e C4:e E4:e D4:e C4:e  |  C5:h A4:q C5:q  |  G4:h E4:q C4:q  |  D4:h. r:q
+- explain: |
+    **Before you play.** Bar 2 leaps up to high C: the hand moves during the eighths of bar 1.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 76
+- exercise: song-swanee-river-tap
+- exercise: song-swanee-river-by-ear
+- exercise: song-swanee-river-rh
+- exercise: song-swanee-river-lh
+- exercise: song-swanee-river
+- exercise: song-swanee-river-arranged
+- exercise: song-swanee-river-performance
+recap: 'Old Folks at Home (Swanee River): tune, left hand, together. Come back to it any time; songs are for fun.'

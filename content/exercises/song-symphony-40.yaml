@@ -1,0 +1,18 @@
+id: song-symphony-40
+title: Symphony No. 40
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Gm
+tempo: 116
+tempoLadder: true
+meter: 4/4
+pickup: e e
+countIn: 1
+right: Eb5:e D5:e | D5:q Eb5:e D5:e D5:q Eb5:e D5:e | D5:q Bb5:q r:q Bb5:e A5:e | G5:q G5:e F5:e Eb5:q Eb5:e D5:e | C5:q C5:q
+  r:q D5:e C5:e | C5:q D5:e C5:e C5:q D5:e C5:e | C5:q A5:q r:q A5:e G5:e | F#5:q F#5:e Eb5:e D5:q D5:e C5:e | Bb4:q Bb4:q
+  r:q
+left: r:q | D3+G3+Bb3:w | D3+G3+Bb3:w | C3+Eb3+G3:w | A2+D3+F#3:w | A2+D3+F#3:w | A2+D3+F#3:w | A2+D3+F#3:w | Bb2+D3+G3:h.
+reps: 3
+days: 2

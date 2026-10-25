@@ -1,0 +1,26 @@
+id: song-kumbaya
+title: Kumbaya
+skills:
+- songs
+steps:
+- explain: |
+    **Kumbaya** · Spiritual, Gullah people of South Carolina and Georgia, 1920s
+
+    "Come by here": a prayer song first written down in the 1920s from Gullah singers in the American South, and sung round campfires all over the world since.
+  staff:
+    notes: C4:q E4:q G4:h  |  G4:q A4:q G4:h
+  sound: C4:q E4:q G4:h  |  G4:q A4:q G4:h  |  C4:q E4:q G4:h  |  G4:q F4:q E4:h
+- explain: |
+    **Before you play.** Slow and calm. Every bar starts with a long-ish note: keep the hand loose.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 76
+- exercise: song-kumbaya-tap
+- exercise: song-kumbaya-by-ear
+- exercise: song-kumbaya-rh
+- exercise: song-kumbaya-lh
+- exercise: song-kumbaya
+- exercise: song-kumbaya-arranged
+- exercise: song-kumbaya-performance
+recap: 'Kumbaya: tune, left hand, together. Come back to it any time; songs are for fun.'

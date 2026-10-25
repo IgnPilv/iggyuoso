@@ -1,0 +1,13 @@
+id: song-pop-goes-the-weasel-lh
+title: 'Pop! Goes the Weasel: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: C3:h. | C3:h. | G2:h. | C3:h. | C3:h. | C3:h. | F2:q. G2:q. | C3:h.
+reps: 2
+days: 1

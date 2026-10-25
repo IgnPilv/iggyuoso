@@ -1,0 +1,26 @@
+id: song-skip-to-my-lou
+title: Skip to My Lou
+skills:
+- songs
+steps:
+- explain: |
+    **Skip to My Lou** · Play-party song, America, 1840s
+
+    Pioneer families in America danced to this at "play parties", where fiddles were frowned on, so everyone sang instead.
+  staff:
+    notes: E4:q C4:q C4:q E4:q  |  G4:h G4:h
+  sound: E4:q C4:q C4:q E4:q  |  G4:h G4:h  |  D4:q B3:q B3:q D4:q  |  F4:h F4:h
+- explain: |
+    **Before you play.** The tune hops between C and G chords; the left hand moves to G in bars 3 and 7.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 104
+- exercise: song-skip-to-my-lou-tap
+- exercise: song-skip-to-my-lou-by-ear
+- exercise: song-skip-to-my-lou-rh
+- exercise: song-skip-to-my-lou-lh
+- exercise: song-skip-to-my-lou
+- exercise: song-skip-to-my-lou-arranged
+- exercise: song-skip-to-my-lou-performance
+recap: 'Skip to My Lou: tune, left hand, together. Come back to it any time; songs are for fun.'

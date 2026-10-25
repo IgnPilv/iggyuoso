@@ -1,0 +1,17 @@
+id: song-long-long-ago
+title: Long, Long Ago
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C4:q C4:q D4:q E4:q | E4:h D4:h | E4:q E4:q F4:q G4:q | G4:h. r:q | A4:q G4:q F4:q E4:q | E4:h D4:h | C4:q E4:q D4:q
+  C4:q | D4:h. r:q | C4:q C4:q D4:q E4:q | E4:h D4:h | E4:q E4:q F4:q G4:q | G4:h. r:q | A4:q G4:q F4:q E4:q | E4:h D4:h |
+  C4:q E4:q D4:q D4:q | C4:h. r:q
+left: C3:w | G2:w | C3:w | C3:w | F2:h C3:h | G2:w | C3:h G2:h | G2:w | C3:w | G2:w | C3:w | C3:w | F2:h C3:h | G2:w | C3:h
+  G2:h | C3:w
+reps: 3
+days: 2

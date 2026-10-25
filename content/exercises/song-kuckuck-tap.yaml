@@ -1,0 +1,12 @@
+id: song-kuckuck-tap
+title: 'Kuckuck, Kuckuck, ruft''s aus dem Wald: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 108
+meter: 3/4
+countIn: 1
+rhythm: x:h x:q | x:h x:q | x:q x:q x:q | x:h. | x:h x:q | x:h x:q | x:q x:q x:q | x:h. | x:h x:q | x:h x:q | x:q x:q x:q
+  | x:h.
+reps: 2
+days: 1

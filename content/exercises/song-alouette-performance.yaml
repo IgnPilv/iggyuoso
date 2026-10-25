@@ -1,0 +1,13 @@
+id: song-alouette-performance
+title: 'Alouette: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 108
+meter: 4/4
+countIn: 1
+right: C5:q D5:e E5:e E5:q E5:q | D5:e C5:e D5:e E5:e C5:q G4:q | C5:q D5:e E5:e E5:q E5:q | D5:e C5:e D5:e E5:e C5:h
+left: C3+G3:w | G2+D3:h C3+G3:h | C3+G3:w | G2+D3:h C3+G3:h
+reps: 2
+days: 2

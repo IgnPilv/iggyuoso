@@ -1,0 +1,15 @@
+id: song-oh-where-has-my-dog-performance
+title: 'Oh Where, Oh Where Has My Little Dog Gone?: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: F
+tempo: 120
+meter: 3/4
+countIn: 1
+right: F4:q. G4:e F4:q | E4:q D4:q C4:q | D4:q G4:q G4:q | E4:q C4:q C4:q | F4:q. G4:e F4:q | E4:q D4:q C4:q | D4:q G4:q E4:q
+  | F4:h.
+left: C3+F3+A3:h. | C3+E3+G3:h. | C3+E3+G3:h. | C3+F3+A3:h. | C3+F3+A3:h. | C3+E3+G3:h. | C3+E3+G3:h. | C3+F3+A3:h.
+reps: 2
+days: 2

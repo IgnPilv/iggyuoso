@@ -93,6 +93,11 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   `docs/mastery-curriculum.md`.
 - Most lessons are **generated** by `tools/content/build.py` (see `content/README.md`). Change
   generated lessons in the scripts, and commit hand edits before running `rebuild.sh`.
+- **Songs are public domain** (traditional, or the composer died 70+ years ago and it was published
+  before 1930), always in **our own arrangement**: never copied from a published, YouTube or online
+  arrangement, never from a downloaded MIDI. A copyrighted title ships only when Ignas names it
+  himself (group "By request"). The catalogue is `tools/content/catalogue.py` + `cat_*.py`
+  (format in `docs/dev/content.md`).
 
 ## Decision log
 - 2026-10-23: Repo `IgnPilv/iggyuoso`, public (free GitHub Pages for https/Web MIDI).
@@ -957,3 +962,17 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   saved, like a paused take), since taps can't keep time like keys. Ear questions now ignore keys
   pressed before Start (they used to answer the first question unheard). Demo scene "Tap the keys
   on the screen" (the pianist taps, with a fingertip shown).
+- 2026-10-25: Songbook ×10, batch 1 (Ignas: "for songs increase the amount tenfold, simplypiano has a great
+  collection... whatever is legal"). Rule written under "Content": public domain only, our own
+  arrangements. Song nodes carry `genre` (Children's songs, Folk songs, Sea shanties, Carols and
+  holidays, Hymns and spirituals, Anthems and marches, Dances and fiddle tunes, Classical, Ragtime and
+  early jazz, By request), required on every song; the Songbook page has a chip per group and a search
+  box (title and source, accents ignored), shelves still by milestone. New song catalogue
+  (`tools/content/catalogue.py`, tunes in `cat_*.py` in a short form with carried durations, nearest
+  octaves and the key's accidentals): each tune is one lesson with the rhythm (to stage 5), a by-ear
+  echo (to stage 4), the tune, the left hand, both hands, a fuller left hand (pedal from stage 6) and a
+  performance; songs open after the milestone before their stage and ask for their key study. Checks:
+  bar lengths, no key in both hands (left hand, else tune, moved an octave), and a report of tunes that
+  fit their chords badly. Batch 1 adds 38 songs (76 entries in all). Ignas's "Sea Shanty 2" (RuneScape,
+  copyrighted) waits for his MIDI file: its notes can't be written from memory reliably. Demo scene
+  "The Songbook".

@@ -1,0 +1,17 @@
+id: song-morning-mood
+title: Morning Mood
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: E
+tempo: 46
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: B4:e G#4:e F#4:e E4:e F#4:e G#4:e | B4:e G#4:e F#4:e E4:e F#4:e G#4:e | F#4:e G#4:e B4:e G#4:e B4:e C#5:e | G#4:e C#5:e
+  B4:e G#4:e F#4:e E4:e | B4:e G#4:e F#4:e E4:e F#4:e G#4:e | B4:e G#4:e F#4:e E4:e F#4:e G#4:e | F#4:e G#4:e B4:e G#4:e B4:e
+  C#5:e | G#4:e C#5:e B4:e G#4:e F#4:e E4:e | E4:h.
+left: E3:h. | E3:h. | E3:h. | B2:q. E3:q. | E3:h. | E3:h. | E3:h. | B2:q. E3:q. | E3:h.
+reps: 3
+days: 2

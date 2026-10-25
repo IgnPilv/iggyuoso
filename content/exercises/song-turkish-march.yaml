@@ -1,0 +1,17 @@
+id: song-turkish-march
+title: Turkish March
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Am
+tempo: 96
+tempoLadder: true
+meter: 2/4
+pickup: s s s s
+countIn: 1
+right: B4:s A4:s G#4:s A4:s | C5:e r:e D5:s C5:s B4:s C5:s | E5:e r:e F5:s E5:s D#5:s E5:s | B5:s A5:s G#5:s A5:s B5:s A5:s
+  G#5:s A5:s | C6:q A5:e C6:e | B5:e A5:e G#5:e A5:e | E5:e F5:e D5:q | C5:q B4:q | A4:q
+left: r:q | A2+C3+E3:h | A2+C3+E3:h | A2+C3+E3:h | A2+C3+E3:h | B2+E3+G#3:h | D3+F3+A3:h | C3+E3+A3:q B2+E3+G#3:q | C3+E3+A3:q
+reps: 3
+days: 2

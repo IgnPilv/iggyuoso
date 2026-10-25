@@ -1,0 +1,19 @@
+id: song-minuet-g-minor
+title: Minuet in G minor
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Gm
+tempo: 100
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: D5:q G4:e A4:e Bb4:e C5:e | D5:q G4:q G4:q | Eb5:q C5:e D5:e Eb5:e F5:e | G5:q G4:q G4:q | C5:q D5:e C5:e Bb4:e A4:e
+  | Bb4:q C5:e Bb4:e A4:e G4:e | F#4:q G4:e A4:e Bb4:e G4:e | A4:h. | D5:q G4:e A4:e Bb4:e C5:e | D5:q G4:q G4:q | Eb5:q C5:e
+  D5:e Eb5:e F5:e | G5:q G4:q G4:q | C5:q D5:e C5:e Bb4:e A4:e | Bb4:q C5:e Bb4:e A4:e G4:e | A4:q Bb4:e A4:e G4:e F#4:e |
+  G4:h.
+left: D3+G3+Bb3:h. | D3+G3+Bb3:h. | C3+Eb3+G3:h. | Bb2+D3+G3:h. | A2+C3+F3:h. | Bb2+D3+G3:h. | A2+D3+F#3:h. | A2+D3+F#3:h.
+  | Bb2+D3+G3:h. | Bb2+D3+G3:h. | C3+Eb3+G3:h. | Bb2+D3+G3:h. | A2+C3+F3:h. | Bb2+D3+G3:h. | A2+D3+F#3:h. | Bb2+D3+G3:h.
+reps: 3
+days: 2

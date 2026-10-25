@@ -1,0 +1,20 @@
+id: song-jesu-joy-arranged
+title: Jesu, Joy of Man's Desiring, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:e3 A4:e3 B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3 | G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3 | D5:e3
+  E5:e3 D5:e3 C5:e3 B4:e3 A4:e3 B4:e3 G4:e3 F#4:e3 | G4:e3 A4:e3 D4:e3 F#4:e3 A4:e3 C5:e3 B4:e3 A4:e3 B4:e3 | G4:e3 A4:e3
+  B4:e3 D5:e3 C5:e3 C5:e3 E5:e3 D5:e3 D5:e3 | G5:e3 F#5:e3 G5:e3 D5:e3 B4:e3 G4:e3 A4:e3 B4:e3 C5:e3 | D5:e3 E5:e3 D5:e3 C5:e3
+  B4:e3 A4:e3 B4:e3 G4:e3 F#4:e3 | G4:h.
+left: G2:e D3:e B2:e D3:e G2:q | G2:e D3:e B2:e D3:e G2:q | C3:q. D3:q. | D3:q. G2:q. | G2:e D3:e B2:e D3:e G2:q | G2:e D3:e
+  B2:e D3:e G2:q | C3:q. D3:q. | D3+G3+B3:h.
+pedal: x:h. | x:h. | x:q. x:q. | x:q. x:q. | x:h. | x:h. | x:q. x:q. | x:h.
+reps: 3
+days: 2

@@ -1,0 +1,12 @@
+id: song-scarborough-fair-tap
+title: 'Scarborough Fair: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 92
+meter: 3/4
+countIn: 1
+rhythm: x:h x:q | x:h x:q | x:q. x:e x:q | x:h. | r:q x:q x:q | x:h x:q | x:q x:q x:q | x:h. | r:q r:q x:q | x:h x:q | x:h
+  x:q | x:q x:q x:q | x:q x:h | x:h x:q | x:h x:q | x:q x:q x:q | x:h.
+reps: 2
+days: 1

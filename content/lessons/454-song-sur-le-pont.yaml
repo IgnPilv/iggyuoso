@@ -1,0 +1,26 @@
+id: song-sur-le-pont
+title: Sur le pont d'Avignon
+skills:
+- songs
+steps:
+- explain: |
+    **Sur le pont d'Avignon** · French song, 1500s
+
+    Children have danced in a ring to this since the 1500s. The bridge in Avignon (Pont Saint-Bénézet) is real, and only four of its arches are still standing.
+  staff:
+    notes: C4:q C4:q  |  C4:e D4:e E4:q
+  sound: C4:q C4:q  |  C4:e D4:e E4:q  |  E4:q E4:q  |  E4:e F4:e G4:q
+- explain: |
+    **Before you play.** Two beats a bar, quick and light. The eighth notes come in pairs: "pont d'A-".
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 104
+- exercise: song-sur-le-pont-tap
+- exercise: song-sur-le-pont-by-ear
+- exercise: song-sur-le-pont-rh
+- exercise: song-sur-le-pont-lh
+- exercise: song-sur-le-pont
+- exercise: song-sur-le-pont-arranged
+- exercise: song-sur-le-pont-performance
+recap: 'Sur le pont d''Avignon: tune, left hand, together. Come back to it any time; songs are for fun.'
