@@ -26,6 +26,7 @@ import { sketchbookView } from './sketchbookView';
 import { chordFinderView } from './chordFinderView';
 import { toDevice } from '../calibration';
 import { mountPulse } from './pulseView';
+import { mountJam } from './jamView';
 import { mySongsView } from './mySongsView';
 import { noteRushView } from './noteRush';
 import { writeMidiFile } from '../music/midiFile';
@@ -904,6 +905,51 @@ function scenes(): Scene[] {
       const cleanup = noteRushView(box);
       const timers = [window.setTimeout(() => press(box, 'Start'), 1200), window.setTimeout(next, 22000)];
       return () => { timers.forEach(clearTimeout); demo.onAsk = undefined; cleanup?.(); };
+    },
+  });
+  out.push({
+    title: 'Jam room',
+    caption: 'Play along with a band (#/jam, linked from the Sketchbook). Pick the chords (pop I V vi IV, the 50s, 12-bar blues, the Canon, a minor loop, a Dorian vamp), a key, a groove (ballad, pop, swing) and a tempo: drums, bass and chords loop them while you make up a tune. The chart shows the chord playing now, the keys light it brightly and the rest of the scale that fits softly, and every note you play is counted as a chord note, in the scale, in the key or outside, with a tip on how to make it sound more like a tune. Nothing is saved. Here the pianist improvises over the pop chords in G, lands on the chord on most bar lines and slips outside once.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (m: number) => m + DEMO_CALIBRATION.offset;
+      const cleanup = mountJam(box, DEMO_CALIBRATION, {
+        onStart: ({ t0, beatMs, plan }) => {
+          // A made-up tune: on beat 1 a chord note, then steps through the pentatonic; one slip.
+          const scale = [...plan.scale].sort((a, b) => a - b);
+          const near = (pc: number, ref: number) => ref - 6 + ((pc - (ref - 6)) % 12 + 12) % 12;
+          const bars = 8;
+          let last = 71;
+          const rhythm = [[0, 1], [1, 0.5], [1.5, 0.5], [2, 1], [3, 0.5], [3.5, 0.5]];
+          for (let bar = 0; bar < bars; bar++) {
+            const c = plan.chords[bar % plan.chords.length];
+            rhythm.forEach(([beat, len], i) => {
+              let m: number;
+              if (i === 0) m = near([...c.pcs][bar % 3], last);
+              else {
+                const pcs = scale.map((pc) => near(pc, last)).sort((a, b) => a - b);
+                const j = pcs.findIndex((x) => x >= last);
+                m = pcs[Math.max(0, Math.min(pcs.length - 1, j + ((bar + i) % 3 === 0 ? -1 : 1)))] ?? last;
+              }
+              if (bar === 5 && i === 2) m += 1; // the slip
+              m = Math.max(62, Math.min(81, m));
+              last = m;
+              p.playNote(dev(m), t0 + (bar * 4 + beat) * beatMs - performance.now(), len * beatMs * 0.85);
+            });
+            if (bar % 2 === 0) p.playNote(dev(43 + ((c.notes[0] - 43) % 12 + 12) % 12), t0 + bar * 4 * beatMs - performance.now(), beatMs * 3.5);
+          }
+          timers.push(window.setTimeout(() => press(box, 'Stop'), t0 + bars * 4 * beatMs + 200 - performance.now()));
+          timers.push(window.setTimeout(next, t0 + bars * 4 * beatMs + 5000 - performance.now()));
+        },
+      });
+      const set = (label: string, value: string) => {
+        const el = box.querySelector<HTMLSelectElement | HTMLInputElement>(`[aria-label="${label}"]`);
+        if (el) { el.value = value; el.dispatchEvent(new Event('change')); }
+      };
+      timers.push(window.setTimeout(() => set('key', 'G'), 700));
+      timers.push(window.setTimeout(() => set('tempo', '100'), 1100));
+      timers.push(window.setTimeout(() => press(box, 'Start'), 1800));
+      return () => { timers.forEach(clearTimeout); cleanup(); };
     },
   });
   out.push({
