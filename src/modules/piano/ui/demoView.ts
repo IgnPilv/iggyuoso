@@ -23,6 +23,8 @@ import { currentTheme, previewTheme } from '../../../core/theme';
 import { explainBlock, playground } from './theory';
 import { calibrateView, keyMap, lessonView, testerView } from './views';
 import { sketchbookView } from './sketchbookView';
+import { chordFinderView } from './chordFinderView';
+import { toDevice } from '../calibration';
 import { mySongsView } from './mySongsView';
 import { writeMidiFile } from '../music/midiFile';
 import { ModuleRecords } from '../../../core/storage';
@@ -915,6 +917,22 @@ function scenes(): Scene[] {
       const cleanup = sketchbookView(box);
       timers.push(window.setTimeout(() => press(box, 'Record'), 1200));
       return () => { timers.forEach(clearTimeout); demo.onRecord = undefined; cleanup?.(); };
+    },
+  });
+  out.push({
+    title: 'Chord finder',
+    caption: 'Hold down any keys and the Chord finder (#/chords, linked from the Book and the Sketchbook) says what they make: the chord in words, its notes spelled from the root (C E G B♭, never A♯), which position it is in and what each key is to the root, written on the grand staff. Two notes are named as an interval. Buttons play the same chord in its other positions and the chords one change away (minor, seventh, sus). Without a keyboard, keys can be tapped on the picture. Here the pianist plays C major in all three positions, A minor, G7 and Csus4, then taps C7.',
+    run: (box, next, p) => {
+      const timers: number[] = [];
+      const dev = (keys: number[]) => keys.map((k) => toDevice(DEMO_CALIBRATION, k));
+      const chords = [[60, 64, 67], [64, 67, 72], [55, 60, 64], [57, 60, 64], [55, 59, 62, 65], [60, 65, 67]];
+      chords.forEach((c, i) => p.playChord(dev(c), 800 + i * 2300, 1900));
+      p.playChord(dev([60, 64, 67]), 800 + chords.length * 2300, 4200);
+      const cleanup = chordFinderView(box);
+      timers.push(window.setTimeout(() => press(box, 'C7'), 800 + chords.length * 2300 + 1500));
+      timers.push(window.setTimeout(() => press(box, 'Let go of tapped keys'), 800 + chords.length * 2300 + 5200));
+      timers.push(window.setTimeout(next, 800 + chords.length * 2300 + 6500));
+      return () => { timers.forEach(clearTimeout); cleanup?.(); };
     },
   });
   out.push({

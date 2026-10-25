@@ -780,3 +780,13 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   `content/README.md` no longer lists units and describes Practice mode instead of loop boxes, the
   curriculum's engine wish list is marked done, the beta proposal is marked historical. Rule: a PR
   that changes how something works updates its `docs/dev/` page.
+- 2026-10-25: Hourly idea 2, **Chord finder** (preview, waiting for Ignas's go / no-go). `#/chords`, linked
+  from the Book and the Sketchbook: hold down any keys (or tap them on the picture, where a tapped key
+  stays down until tapped again) and the page says what they make: the chord in words and as a symbol
+  (triads, sus, sixths, sevenths, half-diminished, diminished seventh; the bass decides between two
+  readings), what kind of chord it is, its notes spelled from the root (C E G B♭, F♯ A♯ C♯; G♭ aug
+  rather than a double sharp), its position (root position, first, second, third inversion) and what each
+  key is to the root, on the grand staff. Two notes are named as an interval, one as a note. Buttons
+  play the chord in each position and the chords one change away (minor / major, 7, maj7, sus4, m7,
+  dim); the last 8 chords found are chips to play again. Nothing is saved. `music/chordFinder.ts`
+  (tested), `ui/chordFinderView.ts`. Demo scene "Chord finder".
