@@ -50,7 +50,8 @@ gorgeous design.
 - More modules on the same site and account (ideas so far: a math tutor, a painting course). The
   "Sums" module is only a sample that shows how one fits, to be replaced by a real one.
 - Ideas tried quickly: from 2026-10-25 an hourly run builds one new idea at a time on a preview
-  branch with its own preview address, and Ignas says go (merge) or no-go (close).
+  branch with its own preview address (`docs/previews.md`, log in `docs/ideas.md`), and Ignas says
+  go (merge) or no-go (close).
 - Earlier wishes still open: mini games on the same timing loop, more statistics over time (timing
   per note), more songs (public domain by default; copyrighted titles only when Ignas asks for one
   by name, written as our own arrangement).

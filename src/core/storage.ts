@@ -1,3 +1,4 @@
+import { PREVIEW, prefixedBackend, previewPrefix, seedPreview } from './preview';
 import { PREFIX, tracked } from './sync/tracker';
 
 export { PREFIX };
@@ -18,7 +19,7 @@ export interface Backend {
   remove?(key: string): void;
 }
 
-export const localBackend: Backend = {
+const browserStorage: Required<Backend> = {
   get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* storage full or blocked */ } },
   keys: () => {
@@ -26,6 +27,10 @@ export const localBackend: Backend = {
   },
   remove: (k) => { try { localStorage.removeItem(k); } catch { /* blocked */ } },
 };
+
+/** The device's storage; a preview build keeps its own copy (src/core/preview.ts). */
+export const localBackend: Backend = PREVIEW ? prefixedBackend(browserStorage, previewPrefix(PREVIEW)) : browserStorage;
+if (PREVIEW) seedPreview(browserStorage, localBackend as Required<Backend>);
 
 export function memoryBackend(): Backend {
   const m = new Map<string, string>();

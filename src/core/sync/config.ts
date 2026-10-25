@@ -1,3 +1,5 @@
+import { PREVIEW } from '../preview';
+
 // Where the account server is. Empty until the backend project exists: the app then runs as a
 // guest only and says accounts are coming. Set at build time from the repository secrets (or
 // variables) SUPABASE_URL and SUPABASE_ANON_KEY (see .github/workflows/pages.yml and
@@ -12,4 +14,5 @@ export const SYNC_CONFIG = {
   anonKey: env(import.meta.env.VITE_SUPABASE_ANON_KEY),
 };
 
-export const syncConfigured = () => !!(SYNC_CONFIG.url && SYNC_CONFIG.anonKey);
+// A preview build (src/core/preview.ts) is guest only, so trying an idea never touches the account.
+export const syncConfigured = () => !PREVIEW && !!(SYNC_CONFIG.url && SYNC_CONFIG.anonKey);

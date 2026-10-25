@@ -80,6 +80,12 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   the pianist needs a new move) in the same PR. `#/demo` shows the open module's demo
   (`Module.demo`); a new module brings its own. The demo never saves progress or calibration.
 
+## Previews and ideas
+- An open pull request labelled `preview` is deployed to
+  `https://ignpilv.github.io/iggyuoso/preview/pr-<n>/` next to main (guest only, its own copy of
+  saved data). How: `docs/previews.md`. Ideas built for Ignas to try wait there for his go / no-go;
+  log every idea and its verdict in `docs/ideas.md`.
+
 ## Content
 - A **growing mastery tree**, no years: seven branches (technique, reading, rhythm, theory, ear,
   pieces, creativity) over nine stages, a trunk of milestones, and songs that open after them.
@@ -757,6 +763,15 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   not reached yet show on the step bar (they were invisible on the dark lesson page). Home says
   "Start: <lesson>" for a lesson never played ("Continue" once started). The demo scrolls to the
   scene being played (the scene list is long), also from "Watch any exercise".
+- 2026-10-25: Previews (Ignas: "every hour you come up with something, make an environment where I
+  can test it and I say go or no to go into main"). Every open pull request labelled `preview` is
+  built into the same Pages deployment at `preview/pr-<n>/` (`tools/previews.sh`, run by
+  `pages.yml` on pushes to main and, through `preview-trigger.yml` and `workflow_run`, whenever such
+  a pull request changes; only main may deploy). Same-repo branches only. A preview is guest only
+  (no account server) and stores its data under `iggyuoso-preview-pr-<n>.`, copied once from the
+  main site's records (not the account) when first opened (`src/core/preview.ts`); a corner tag
+  says "Preview" and links back. Ideas wait there, unmerged, for Ignas's go (merge) or no-go
+  (close); several can be live at once. Log: `docs/ideas.md`. How-to: `docs/previews.md`.
 - 2026-10-25: Docs brought up to date and developer docs added (Ignas: "is the vision updated and
   docs up to date? can we add docs explaining how it's programmed and how it works"). New
   `docs/vision.md` (current vision) and `docs/README.md` (index, linked from README and here);

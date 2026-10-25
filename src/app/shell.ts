@@ -4,6 +4,7 @@ import { themeSetting } from '../core/appearance';
 import { h, type View } from '../core/dom';
 import type { Module, NavItem } from '../core/module';
 import { applyTheme, setThemeChoice, THEME_CHOICE_EVENT, themeChoice, type ThemeChoice } from '../core/theme';
+import { PREVIEW } from '../core/preview';
 import { MODULES, openModule, saveOpenModule } from './modules';
 import { resolveRoute, type ShellRoute } from './router';
 
@@ -125,6 +126,11 @@ export function startShell(app: HTMLElement) {
   const shared = SHARED_NAV.map(navLink);
   const main = h('main');
   app.append(h('header', {}, h('a', { href: '#/', class: 'brand', 'aria-label': 'iggyuoso' }, brandMark, h('span', { class: 'brand-word' }, 'iggyuoso')), switchSlot, tagline, nav), main);
+  // A preview build (docs/previews.md) says so in a corner tag, which leads back to the main site.
+  if (PREVIEW) {
+    app.append(h('a', { class: 'preview-tag', href: '../../', title: 'This is a test version with its own copy of your progress. Open the main site.' },
+      `Preview · ${PREVIEW}`));
+  }
 
   let current: Module | undefined;
   let moduleLinks: HTMLAnchorElement[] = [];

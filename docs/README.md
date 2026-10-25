@@ -32,5 +32,5 @@ plain words, then names the files.
 - [mastery-curriculum.md](mastery-curriculum.md): the curriculum design; research in
   [research/](research/).
 - [beta-curriculum-proposal.md](beta-curriculum-proposal.md): the first proposal (historical).
-- Previews of hourly ideas and the ideas log: `previews.md` and `ideas.md` in this folder, once
-  the preview work lands.
+- [previews.md](previews.md): a test copy of the site for every pull request labelled `preview`,
+  and how the hourly ideas run works; [ideas.md](ideas.md): the ideas log (go / no-go).

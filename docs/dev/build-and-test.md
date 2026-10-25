@@ -45,6 +45,10 @@ Two GitHub Actions workflows in `.github/workflows/`:
   `SUPABASE_URL` / `SUPABASE_ANON_KEY`, and publish `dist/` to GitHub Pages at
   https://ignpilv.github.io/iggyuoso/.
 
+Pull requests labelled `preview` are also built into the same deployment, each at
+`preview/pr-<n>/`, as a guest-only copy with its own saved data (`tools/previews.sh`,
+`preview-trigger.yml`, `src/core/preview.ts`; details in [docs/previews.md](../previews.md)).
+
 The build uses a relative base (`vite.config.ts`) and hash addresses, so the same files work on
 GitHub Pages under `/iggyuoso/` and locally. Fonts are bundled from npm; piano samples are in
 `public/piano/`.
