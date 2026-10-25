@@ -1,5 +1,9 @@
 # iggyuoso beta curriculum: proposal (draft 1, 2026-10-23)
 
+> **Historical.** This was the first proposal, kept for the record. Units, years and "hands apart
+> first" have since been replaced by the growing mastery tree with both hands from stage 1; see
+> `docs/mastery-curriculum.md` and `docs/vision.md`.
+
 Two things to agree on before I write many files: the **lesson order** and the **data format**.
 
 ## 1. Approach

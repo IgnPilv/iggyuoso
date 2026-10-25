@@ -2,7 +2,8 @@
 
 A learning site whose first module is a browser piano tutor for adult beginners with a MIDI
 keyboard: short exercises that each train one skill, scored per hand. More modules (a math tutor,
-a painting course) can join it on the same account (`docs/modules.md`). See `CLAUDE.md` for the full brief.
+a painting course) can join it on the same account (`docs/modules.md`). The vision is in
+`docs/vision.md`, the brief and every decision in `CLAUDE.md`.
 
 Live: https://ignpilv.github.io/iggyuoso/ (Chrome or Edge; Web MIDI needs https).
 No keyboard? Open https://ignpilv.github.io/iggyuoso/#/demo to watch the app play itself, or switch
@@ -10,12 +11,20 @@ on Settings → Computer keyboard to play with A S D F G H J K L ; ' (white keys
 keys) and Z / X (octave).
 Every new feature must also appear in the demo (see CLAUDE.md).
 
+## Docs
+
+**[docs/README.md](docs/README.md)** lists every document, including the developer docs in
+`docs/dev/`: how the app is built (shell, core, modules), the content and its generator, MIDI
+input and timing, scoring, drawing, saved progress and sync, building and testing, and step-by-step
+recipes for adding a lesson, a song, a module or a demo scene.
+
 ## Develop
 
 ```
 npm install
 npm run dev      # local server
 npm test         # vitest: scoring engine, calibration, MIDI decoding, content validation
+npm run typecheck
 npm run build    # type-check and build to dist/
 ```
 
@@ -29,6 +38,8 @@ How modules work and how to add one: `docs/modules.md`.
 
 ```
 content/                     the piano's lessons, tree and Book (YAML/Markdown, format in content/README.md)
+tools/content/               Python scripts that generate most lessons and the tree
+docs/                        vision, developer docs (docs/dev/), design, modules, accounts
 src/main.ts                  starts the shell
 src/app/                     shell: header with module switcher, router, shared pages, module list
 src/core/                    shared by every module: Module interface, storage, account + sync,

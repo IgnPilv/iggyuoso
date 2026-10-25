@@ -13,6 +13,16 @@ The curriculum teaches from scratch, like a first-year music-school pupil: music
 go hand in hand, following the order of standard music-school piano textbooks (our own wording,
 never copied pages). Start small, adapt as we go.
 
+The current vision (modules, the mastery tree, the Book, songs in steps, practice mode, hourly
+ideas) is written out in `docs/vision.md`; keep it current when the direction changes.
+
+## Docs
+- `docs/README.md` is the index of every document. Developer docs (how the app is programmed and
+  how it works, written for a non-expert owner) are in `docs/dev/`: architecture, content and the
+  generator, input and timing, scoring, drawing, progress and sync, build and test, how-to recipes.
+- **Keep them current**: a PR that changes how something works (a new exercise kind, a scoring
+  number, a saved record, a new folder or page) updates the matching `docs/dev/` page in the same PR.
+
 ## Owner and workflow
 - Owner: Ignas (GitHub `IgnPilv`). No git installed locally; **every change goes through Claude
   sessions** on this repo, as branches and pull requests he reviews.
@@ -747,3 +757,11 @@ never copied pages). Start small, adapt as we go.
   not reached yet show on the step bar (they were invisible on the dark lesson page). Home says
   "Start: <lesson>" for a lesson never played ("Continue" once started). The demo scrolls to the
   scene being played (the scene list is long), also from "Watch any exercise".
+- 2026-10-25: Docs brought up to date and developer docs added (Ignas: "is the vision updated and
+  docs up to date? can we add docs explaining how it's programmed and how it works"). New
+  `docs/vision.md` (current vision) and `docs/README.md` (index, linked from README and here);
+  `docs/dev/` explains the app for a non-expert owner: architecture, content and generator, input
+  and timing, scoring, drawing, progress and sync, build and test, how-to recipes. Stale bits fixed:
+  `content/README.md` no longer lists units and describes Practice mode instead of loop boxes, the
+  curriculum's engine wish list is marked done, the beta proposal is marked historical. Rule: a PR
+  that changes how something works updates its `docs/dev/` page.
