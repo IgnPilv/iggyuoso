@@ -26,7 +26,7 @@ export const sketchStore = (): Store => (demo.active ? demoProgress().store : st
 export function sketchStaff(s: Pick<Sketch, 'right' | 'left' | 'tempo' | 'meter' | 'key' | 'title' | 'id'>): Element | '' {
   const ex = sketchExercise({ ...s, created: '', updated: '', grid: 0.5, notes: [], bars: 0 });
   if (!ex) return '';
-  return h('div', { class: 'staff-wrap' }, renderStaff(staffParts(ex, false), { barQuarters: ex.meter.quarters, key: ex.key }).svg);
+  return h('div', { class: 'staff-wrap' }, renderStaff(staffParts(ex, false), { barQuarters: ex.meter.quarters, key: ex.key, chords: true }).svg);
 }
 
 const when = (iso: string) => new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
