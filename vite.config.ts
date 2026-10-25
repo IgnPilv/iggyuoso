@@ -36,11 +36,29 @@ function seo(): Plugin {
   };
 }
 
+// Lessons and exercises are written in YAML, which is slow to read in the browser (over a second
+// for all of them). Imported with `?data`, a YAML file is read at build time and reaches the app as
+// a JSON object (docs/dev/architecture.md).
+function yamlData(): Plugin {
+  return {
+    name: 'iggyuoso-yaml-data',
+    async load(id) {
+      const [path, query] = id.split('?');
+      if (query !== 'data' || !path.endsWith('.yaml')) return null;
+      const { readFile } = await import('node:fs/promises');
+      const { parse } = await import('yaml');
+      this.addWatchFile(path);
+      const value = parse(await readFile(path, 'utf8'));
+      return `export default JSON.parse(${JSON.stringify(JSON.stringify(value))});`;
+    },
+  };
+}
+
 // Relative base so the same build works on GitHub Pages (/iggyuoso/) and locally.
 // Routing is hash-based, so no server rewrites are needed.
 export default defineConfig({
   base: './',
-  plugins: [seo()],
+  plugins: [seo(), yamlData()],
   test: {
     include: ['tests/**/*.test.ts'],
     // The content tests load every lesson and song, which takes a few seconds on a busy machine.

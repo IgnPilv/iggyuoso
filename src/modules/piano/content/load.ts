@@ -45,7 +45,8 @@ function fileBase(path: string): string {
   return path.split('/').pop()!.replace(/\.ya?ml$/, '');
 }
 
-export function loadContent(files: Record<string, string>): LoadResult {
+/** `files`: each lesson or exercise file by path, as YAML text or already read. */
+export function loadContent(files: Record<string, string | object>): LoadResult {
   const errors: string[] = [];
   const lessons = new Map<string, Lesson>();
   const exercises = new Map<string, Exercise>();
@@ -55,7 +56,7 @@ export function loadContent(files: Record<string, string>): LoadResult {
     const where = path.slice(path.indexOf('content/'));
     let raw: Raw;
     try {
-      raw = parseYaml(text) as Raw;
+      raw = (typeof text === 'string' ? parseYaml(text) : text) as Raw;
       if (!raw || typeof raw !== 'object') throw new FieldError('file is empty or not a mapping');
     } catch (e) {
       errors.push(`${where}: ${(e as Error).message}`);
