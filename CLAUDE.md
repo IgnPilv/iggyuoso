@@ -705,3 +705,15 @@ never copied pages). Start small, adapt as we go.
   by-step exercises follow the same setting. Not shown for taps, echoes, a reading drill's keys while it is
   played, or step-by-step reading from the sheet (the hand would give the key away). Demo scene "Hands on
   the keys (beta)".
+- 2026-10-25: Chord names on the sheet (Ignas: "on sheets if its a chord add a note on top"; read as a
+  lead-sheet chord symbol over the staff). Wherever notes sound together as a chord, its name (C, Am, G7,
+  F♯m, Bdim, Fmaj7...) is written over the upper staff, in the sheet view, the sheet strip over the falling
+  notes, Sketchbook ideas and My songs. Named by `chordSymbols` (`src/modules/piano/music/chordNames.ts`,
+  tested) from both hands together: any inversion is named by its root (no slash chords), the root keeps
+  its written spelling, held notes and a lone bass struck just before (bass then chord) count, a melody
+  note on top makes no new chord (6, sus and aug only from one hand's own chord), and a name is written
+  only where the chord changes (notes that all belong to the chord before stay that chord, so a boogie bass
+  under E B♭ reads C7). The labels rise over high notes and their fingers. Options → Chord names
+  (`settings.chords`, unset = on, remembered like Fingers; shown only when the exercise has chords). Not on
+  taps, nor on drills with a `goal` (reading tests), where they would give the chords away. Theory pictures
+  and quiz staves have none. Demo scene "Chord names" (the easy Canon's chords over the bass).

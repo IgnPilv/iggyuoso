@@ -5,6 +5,7 @@ import { generate } from '../engine/generate';
 import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
 import { computerKeys, typing } from '../midi/computerKeys';
+import { chordSymbols } from '../music/chordNames';
 import { chordFingers } from '../music/fingering';
 import { HandPlan } from '../music/handPlacement';
 import { isTieEnd, pitchToMidi, type Hand, type NoteToken } from '../music/notes';
@@ -498,12 +499,15 @@ export function staffParts(ex: TimedExercise, fingers = true): StaffPart[] {
   return [part(hand, (ex.right ?? ex.left)!, clefFor(ex, hand))];
 }
 
+/** Whether any notes of the exercise make a chord that can be named over the sheet. */
+const hasChords = (ex: TimedExercise) => chordSymbols(staffParts(ex, false)).length > 0;
+
 const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 
 // Exercise options (tempo, click, guide notes, the Options drawer) carry over: what the player
 // picked last is where the next exercise starts. The demo keeps its own, never saved.
 let demoOptions: Partial<Settings> = {};
-type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen' | 'fingers' | 'hands'>;
+type ExerciseOptions = Pick<Settings, 'metronome' | 'guide' | 'tempo' | 'countIn' | 'optionsOpen' | 'fingers' | 'hands' | 'chords'>;
 export const exerciseOptions = (): ExerciseOptions => (demo.active ? { ...store.settings, ...demoOptions } : store.settings);
 export function setExerciseOptions(o: Partial<ExerciseOptions>) {
   if (demo.active) demoOptions = { ...demoOptions, ...o };
@@ -540,6 +544,10 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   // Hands over the keys (Options → Hands, beta; on unless switched off). Not for taps or echoes,
   // whose notes are placeholders.
   let handsOn = settings.hands !== false;
+  // Chord names over the sheet (Options → Chord names; on unless switched off). Not over taps'
+  // placeholders, nor in reading tests, where they would give the left hand's chords away.
+  let chordsOn = settings.chords !== false;
+  const chordable = !ex.tap && !ex.goal;
   const plan = ex.tap || echo ? undefined : new HandPlan(expected.map((e, i) => ({ key: devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: e.finger })));
   const hasHands = !!plan?.hands.length;
   /** Drill tests of reading keep the keys dark while playing, so the hands stay off then too. */
@@ -559,14 +567,14 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
           hands: handsOn && hasHands ? plan : undefined, handNumbers: fingersOn });
       // The sheet music rides along above the lane (not for tap exercises: their notes are placeholders).
       if (!ex.tap) {
-        staff = renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
+        staff = renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key, chords: chordsOn && chordable });
         strip = staffStrip(staff);
       }
       stage.append(strip?.el ?? '', falling.el);
       offHeld = () => {};
       idle();
     } else {
-      staff = renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key });
+      staff = renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key, chords: chordsOn && chordable });
       kb = new KeyboardView(lo, hi, { middleC: cal.middleC, cal, labels: 'c' });
       offHeld = showHeld(kb);
       stage.append(h('div', { class: 'staff-wrap', hidden: echo && !revealed }, staff.svg), kb.el);
@@ -617,6 +625,12 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
   handBox.addEventListener('change', () => {
     handsOn = handBox.checked;
     setExerciseOptions({ hands: handsOn });
+    buildView(view);
+  });
+  const chordBox = h('input', { type: 'checkbox', checked: chordsOn });
+  chordBox.addEventListener('change', () => {
+    chordsOn = chordBox.checked;
+    setExerciseOptions({ chords: chordsOn });
     buildView(view);
   });
   metro.addEventListener('change', () => setExerciseOptions({ metronome: metro.checked }));
@@ -752,7 +766,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       staff?.clear('current');
       listenBtn.disabled = playBtn.disabled = false;
       toggle.disable(false);
-      fingerBox.disabled = handBox.disabled = false;
+      fingerBox.disabled = handBox.disabled = chordBox.disabled = false;
       handsHidden = false;
       stopBtn.disabled = pauseBtn.disabled = true;
       pauseBtn.textContent = 'Pause';
@@ -849,7 +863,7 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
 
     listenBtn.disabled = playBtn.disabled = true;
     toggle.disable(true);
-    fingerBox.disabled = handBox.disabled = true;
+    fingerBox.disabled = handBox.disabled = chordBox.disabled = true;
     handsHidden = !!ex.goal && mode === 'play';
     stopBtn.disabled = pauseBtn.disabled = false;
     setRunning(true);
@@ -892,7 +906,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
         h('label', {}, metro, ' Click'),
         h('label', {}, guide, ' Guide notes'),
         ex.tap ? '' : h('label', {}, fingerBox, ' Fingers'),
-        hasHands ? h('label', {}, handBox, ' Hands (beta)') : ''),
+        hasHands ? h('label', {}, handBox, ' Hands (beta)') : '',
+        chordable && hasChords(ex) ? h('label', {}, chordBox, ' Chord names') : ''),
       loopControls));
   drawer.addEventListener('toggle', () => setExerciseOptions({ optionsOpen: drawer.open }));
   closeOptions = () => { if (drawer.open && drawer.closest('.focus')) drawer.open = false; };

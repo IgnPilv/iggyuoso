@@ -76,6 +76,8 @@ export interface Settings {
   fingers?: boolean;
   /** Hands drawn over the keys, showing where each finger rests (beta); unset = on. */
   hands?: boolean;
+  /** Chord names (C, Am, G7) over the sheet music; unset = on. */
+  chords?: boolean;
 }
 
 /** Local calendar day (YYYY-MM-DD) of an ISO time. */

@@ -1,3 +1,4 @@
+import { chordSymbols } from '../music/chordNames';
 import { diatonicStep, type Letter, type Pitch } from '../music/notes';
 import { keySignature } from '../music/theory';
 import type { PedalSpan } from '../music/timeline';
@@ -58,7 +59,8 @@ const ACCIDENTAL = { 1: '♯', [-1]: '♭', 0: '♮' } as const;
  * only where the note differs from the signature or from an earlier note on that line in the bar.
  */
 /** `time`: a time signature drawn after the clef and key; `beatW`: width of a quarter beat (pictures only). */
-export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; dynamics?: DynamicSpan[]; key?: string; time?: [number, number]; beatW?: number } = {}) {
+/** `chords`: chord names (C, Am, G7) over the music where the notes sounding together make a chord. */
+export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; dynamics?: DynamicSpan[]; key?: string; time?: [number, number]; beatW?: number; chords?: boolean } = {}) {
   const beatW = opts.beatW ?? BEAT_W;
   const timed = parts.some((p) => p.notes.some((n) => n.beats !== undefined));
   const length = Math.max(
@@ -77,6 +79,9 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
   const height = Math.max(pedalY + (opts.pedal?.length ? 22 : 2), dyn ? dynY + 10 : 0);
   const svg = s('svg', { viewBox: `0 0 ${width} ${height}`, class: 'staff', role: 'img', 'aria-label': 'music staff' });
   const els = new Map<string, SVGGElement>();
+  // The highest point drawn for each note of the upper staff (by its beat), so chord names clear it.
+  const ceiling = new Map<number, number>();
+  const beatKey = (at: number) => Math.round(at * 1000);
 
   parts.forEach((part, pi) => {
     // Fingers sit over the upper staff and under the lower one (and under a lone bass staff).
@@ -114,6 +119,9 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
       const value = n.value ?? n.beats;
       const dotted = n.dotted ?? (n.beats !== undefined && [0.375, 0.75, 1.5, 3, 6].includes(n.beats));
       if (!n.pitches.length && !n.spacer) g.append(rest(x, top, value ?? 1));
+      let high = n.pitches.length ? Math.min(...n.pitches.map((p) => y(diatonicStep(p)))) - 8 : top;
+      if (n.pitches.length && value !== undefined && value < 4 && Math.max(...n.pitches.map(diatonicStep)) < bStep + 4) high -= 34;
+      if (n.triplet) high = Math.min(high, top - 26);
       if (n.pitches.length && (n.finger !== undefined || n.label)) {
         const ys = n.pitches.map((p) => y(diatonicStep(p)));
         // Clear of the stem: up when the notes sit low on the staff (as drawn below).
@@ -126,6 +134,7 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
           // A chord's numbers stack with the highest note's on top, growing away from the staff.
           const stack = [...(n.fingers ?? [n.finger])].reverse();
           stack.forEach((f, i) => g.append(s('text', { x, y: fy + (fingersBelow ? i : i - stack.length + 1) * FINGER_LINE, class: 'finger' }, String(f))));
+          if (!fingersBelow) high = Math.min(high, fy - (stack.length - 1) * FINGER_LINE - 10);
         }
         if (n.label) g.append(s('text', { x, y: Math.max(bottom + 18, Math.max(...ys) + 20) + (n.finger !== undefined && fingersBelow ? 16 + ((n.fingers?.length ?? 1) - 1) * FINGER_LINE : 0), class: 'note-label' }, n.label));
       }
@@ -170,6 +179,7 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
       } else tripletPos = 0;
       svg.append(g);
       els.set(n.key, g);
+      if (pi === 0 && timed) ceiling.set(beatKey(pos), high);
       pos += timed ? (n.beats ?? 1) : 1;
       barPos += n.beats ?? 0;
       if (timed && opts.barQuarters && Math.abs(barPos - opts.barQuarters) < 1e-6) {
@@ -210,6 +220,19 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
       g.append(s('path', { d: `M${wide} ${dynY - 5} L${narrow} ${dynY} L${wide} ${dynY + 5}`, class: 'dyn-line' }));
     }
     svg.append(g);
+  }
+
+  // Chord names on a line over the upper staff, lifted over high notes and their fingers.
+  if (timed && opts.chords) {
+    const g = s('g', { class: 'chord-names' });
+    let lowest = 0;
+    for (const c of chordSymbols(parts)) {
+      const cy = Math.min(staffTop(0) - 22, (ceiling.get(beatKey(c.at)) ?? Infinity) - 6);
+      lowest = Math.min(lowest, cy - 14);
+      g.append(s('text', { x: left + c.at * beatW + 14, y: cy, class: 'chord-name' }, c.name));
+    }
+    svg.append(g);
+    if (lowest < 0) svg.setAttribute('viewBox', `0 ${lowest} ${width} ${height - lowest}`);
   }
 
   return {

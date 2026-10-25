@@ -992,6 +992,7 @@ ol.path-nodes li.ahead a { opacity: 0.6; }
 .playground-name { font-family: var(--font-mono); font-size: 1.4rem; color: var(--ink); margin: 0; min-height: 1.6em; }
 .staff .finger, .staff .note-label { font-family: var(--font-mono); font-size: 11px; text-anchor: middle; fill: var(--muted); }
 .staff .note-label { fill: var(--staff-ink); font-weight: 600; }
+.staff .chord-name { font-family: var(--font-display); font-size: 15px; text-anchor: middle; font-weight: 700; fill: var(--accent); }
 .why[hidden], .check [hidden] { display: none; }
 
 /* ---------------------------------------------------------------- theory screens (design)
