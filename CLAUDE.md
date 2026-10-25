@@ -733,6 +733,12 @@ never copied pages). Start small, adapt as we go.
   reloads (not in the demo). `sliceMap` (`engine/practice.ts`) maps a slice's notes back onto the whole
   sheet; `sliceBars` now cuts the pedal line too. Demo scene "Practice mode"; "Tempo ladder and loops" uses
   the new button.
+- 2026-10-25: Chord names on the falling notes too (Ignas: "can we do an indication on the falling ones as
+  well... C E G falling but it also indicates c major"). The same chords as the sheet (`chordSymbols`) ride
+  down in a pill beside the notes that strike them (left of the group, right of it at the lane's edge) and
+  land with them on the hit line, in words for triads (`chordWords`: C major, F♯ minor; G7, Bdim stay as
+  written). Same Options → Chord names switch and the same exceptions (taps, reading tests). Practice mode
+  names the chords of the bars being practised. Demo scene "Chord names" now plays in falling notes.
 - 2026-10-25: UX review fixes (Ignas: "test and review ux"). Phone header: with the computer keyboard on,
   the pill shows only ⌨ under 560 px and links are tighter under 440 px, so Settings and the theme
   button no longer fall off the edge. In lesson panels the Options pop-over never opens by itself

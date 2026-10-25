@@ -53,6 +53,12 @@ function readChord(pitches: Pitch[], mixed = false): { name: string; pcs: Set<nu
   return undefined;
 }
 
+/** A chord name said in words where that reads better (C major, A minor); others stay as written (G7, Bdim). */
+export function chordWords(name: string): string {
+  const m = /^([A-G][♯♭]?)(m?)$/.exec(name);
+  return m ? `${m[1]} ${m[2] ? 'minor' : 'major'}` : name;
+}
+
 export interface SymbolNote {
   pitches: Pitch[];
   /** Quarter beats. */

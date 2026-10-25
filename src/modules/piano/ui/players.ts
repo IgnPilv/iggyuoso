@@ -5,7 +5,7 @@ import { generate } from '../engine/generate';
 import { applyGoal } from '../scoring/goal';
 import { midi } from '../midi/input';
 import { computerKeys, typing } from '../midi/computerKeys';
-import { chordSymbols } from '../music/chordNames';
+import { chordSymbols, chordWords } from '../music/chordNames';
 import { chordFingers } from '../music/fingering';
 import { HandPlan } from '../music/handPlacement';
 import { isTieEnd, pitchToMidi, type Hand, type NoteToken } from '../music/notes';
@@ -593,7 +593,8 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
       falling = new FallingView(lo, hi, cal,
         t.expected.map((e, i) => ({ device: t.devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: fingersOn ? e.finger : undefined })),
         { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(t.ex), pulse: ex.meter.pulse, pedal: expectedPedal(t.ex), dynamics: expectedDynamics(t.ex),
-          hands: handsOn && t.plan?.hands.length ? t.plan : undefined, handNumbers: fingersOn, firstBar: t.from });
+          hands: handsOn && t.plan?.hands.length ? t.plan : undefined, handNumbers: fingersOn, firstBar: t.from,
+          chords: chordsOn && chordable ? chordSymbols(staffParts(t.ex, false)).map((c) => ({ beat: c.at + pickupOffset(t.ex), name: chordWords(c.name) })) : undefined });
       // The sheet music rides along above the lane (not for tap exercises: their notes are placeholders).
       if (!ex.tap) {
         staff = sheet();
