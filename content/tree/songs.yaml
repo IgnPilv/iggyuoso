@@ -405,3 +405,4 @@ nodes:
   - { id: song-wiltshire-six-hand-reel, stage: 4, lesson: song-wiltshire-six-hand-reel, title: "The Wiltshire Six-Hand Reel", requires: [y1-exit], about: "English country dance, 1800s", genre: dances }
   - { id: song-pleasures-of-the-town, stage: 7, lesson: song-pleasures-of-the-town, title: "The Pleasures of the Town", requires: [y2-exit, ks-a], about: "English country dance, 1700s", genre: dances }
   - { id: song-road-to-dundee, stage: 5, lesson: song-road-to-dundee, title: "The Road to Dundee", requires: [y2-checkpoint-a, ks-g], about: "Scottish song, 1800s", genre: folk }
+  - { id: song-sea-shanty-2, stage: 5, lesson: song-sea-shanty-2, title: "Sea Shanty 2", requires: [y2-checkpoint-a], about: "Ian Taylor, for the game RuneScape, 2004 · by request", genre: requests }

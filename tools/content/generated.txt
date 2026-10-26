@@ -3107,6 +3107,12 @@ content/exercises/song-scots-wha-hae-lh.yaml
 content/exercises/song-scots-wha-hae-performance.yaml
 content/exercises/song-scots-wha-hae-rh.yaml
 content/exercises/song-scots-wha-hae.yaml
+content/exercises/song-sea-shanty-2-arranged.yaml
+content/exercises/song-sea-shanty-2-lh.yaml
+content/exercises/song-sea-shanty-2-performance.yaml
+content/exercises/song-sea-shanty-2-rh.yaml
+content/exercises/song-sea-shanty-2-tap.yaml
+content/exercises/song-sea-shanty-2.yaml
 content/exercises/song-shandon-bells-arranged.yaml
 content/exercises/song-shandon-bells-lh.yaml
 content/exercises/song-shandon-bells-performance.yaml
@@ -4307,3 +4313,4 @@ content/lessons/785-song-ballydesmond-polka.yaml
 content/lessons/786-song-wiltshire-six-hand-reel.yaml
 content/lessons/787-song-pleasures-of-the-town.yaml
 content/lessons/788-song-road-to-dundee.yaml
+content/lessons/789-song-sea-shanty-2.yaml

@@ -1,0 +1,20 @@
+id: song-sea-shanty-2-tap
+title: 'Sea Shanty 2: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 100
+meter: 2/2
+countIn: 1
+rhythm: x:q x:e x:e x:q. x:e | x:e x:e x:e x:e x:h | x:q x:e x:e x:q x:q | x:q x:q x:h | x:q x:e x:e x:h | x:e x:e x:e x:e
+  x:h | x:e x:e x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:h | x:e x:e x:q x:q x:e x:e | x:q x:q x:h | x:e x:e x:e x:e x:q
+  x:q | x:h r:h | x:e x:e x:q x:q x:e x:e | x:q x:q x:h | x:e x:e x:e x:e x:q x:q | x:h r:h | x:e x:e x:q x:q x:e x:e | x:q
+  x:q x:h | x:q x:e x:e x:q x:q | x:h r:h | x:e x:e x:q x:q x:e x:e | x:q x:q x:h | x:e x:e x:e x:e x:q x:q | x:h r:h | r:q
+  x:q x:q x:q | x:e x:e x:e x:e x:q. x:e | x:q x:q x:e x:e x:q | x:h r:h | x:e x:e x:e x:e x:s x:s x:s x:s r:q | r:s x:s x:s
+  x:s r:q x:s x:s x:s x:s r:q | x:e x:e x:e x:e x:e x:e x:e x:e | x:e r:e x:q x:h | x:e r:e x:e x:e x:q x:q | x:e r:e x:e
+  x:e x:q x:q | x:e r:e x:e x:e x:q x:q | x:e x:e x:q x:h | x:e r:e x:e x:e x:q x:q | x:e r:e x:e x:e x:q x:q | x:e r:e x:e
+  x:e x:q x:q | x:q x:h r:q | x:e x:e x:q x:q x:e x:e | x:q x:q x:h | x:e x:e x:e x:e x:q x:q | x:h r:h | x:e x:e x:q x:q
+  x:e x:e | x:q x:q x:h | x:e x:e x:e x:e x:q x:q | x:h r:h | x:e x:e x:q x:q x:e x:e | x:q x:q x:h | x:q x:e x:e x:q x:q
+  | x:h r:h | x:e x:e x:q x:q x:e x:e | x:q x:q x:h | x:e x:e x:e x:e x:q x:q | x:h r:h
+reps: 2
+days: 1

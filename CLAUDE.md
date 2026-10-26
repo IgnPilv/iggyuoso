@@ -1046,3 +1046,10 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   and about 50 more from the Nottingham database (Aiken Drum, Believe Me If All Those Endearing Young
   Charms, The Road to Dundee, Someone's in the Kitchen with Dinah, The Maid Behind the Bar, Drops of
   Brandy in 9/8, St. Anne's Reel...). Nothing new on screen, so the demo is unchanged.
+- 2026-10-26: "Sea Shanty 2" (Ian Taylor, RuneScape, 2004) added to Songs at Ignas's request, **overriding the
+  public-domain rule for this title too** (group By request). Written down from the MIDI file he sent (never
+  committed) in a new `tools/content/cat_requests.py`, as a one-lesson catalogue song (tap, tune, left hand,
+  together, fuller arrangement, performance), stage 5: A major, 2/2, half note = 100 (the file's 200 a quarter),
+  56 bars: the main tune, the call over E, the flute tune of the middle (an octave down) and the accordion's
+  (with G natural), then the main tune again. Staccato quarters written as quarters; chords and both left hands
+  (root and fifth; bass then chord) are ours. Songbook: 382 songs. No new screen, so the demo is unchanged.

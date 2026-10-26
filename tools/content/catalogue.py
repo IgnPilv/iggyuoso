@@ -255,7 +255,7 @@ def add_genres(nodes):
 
 TREE_EDITS = [add_genres]
 
-import cat_nursery, cat_folk, cat_shanties, cat_classical, cat_carols, cat_dances, cat_trad  # noqa: E402  (the tunes)
+import cat_nursery, cat_folk, cat_shanties, cat_classical, cat_carols, cat_dances, cat_trad, cat_requests  # noqa: E402  (the tunes)
 
 def run(base):
     write_catalogue()

@@ -1,0 +1,19 @@
+id: song-sea-shanty-2-lh
+title: 'Sea Shanty 2: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (root and fifth): find each chord change before it comes.'
+display: staff
+key: A
+tempo: 100
+tempoLadder: true
+meter: 2/2
+countIn: 1
+left: A2+E3:w | E3+B3:w | D3+A3:h A2+E3:h | E3+B3:w | A2+E3:w | A2+E3:h D3+A3:h | D3+A3:h B2+F#3:h | E3+B3:h A2+E3:h | A2+E3:w
+  | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | E3+B3:w | E3+B3:w | E3+B3:w | E3+B3:w | A2+E3:w
+  | E3+B3:h A2+E3:h | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | G2+D3:w | A2+E3:w | A2+E3:h D3+A3:h | D3+A3:h A2+E3:h | A2+E3:h
+  E3+B3:h | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | E3+B3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w |
+  A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | E3+B3:w | E3+B3:w | E3+B3:w | E3+B3:w | A2+E3:w | E3+B3:h A2+E3:h
+  | A2+E3:w | A2+E3:w
+reps: 2
+days: 1

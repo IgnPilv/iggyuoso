@@ -1,0 +1,32 @@
+id: song-sea-shanty-2
+title: Sea Shanty 2
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: A
+tempo: 100
+tempoLadder: true
+meter: 2/2
+countIn: 1
+right: A5:q E5:e D5:e C#5:q. C#5:e | D5:e E5:e F#5:e G#5:e E5:h | F#5:q E5:e D5:e C#5:q C#5:q | B4:q C#5:q D5:h | A5:q E5:e
+  D5:e C#5:h | C#5:e D5:e E5:e F#5:e D5:h | F#5:e E5:e D5:e C#5:e B4:e C#5:e D5:e F#5:e | E5:e D5:e C#5:e B4:e A4:h | C#5:e
+  B4:e C#5:q C#5:q C#5:e B4:e | C#5:q B4:q C#5:h | A4:e B4:e C#5:e D5:e C#5:q B4:q | C#5:h r:h | C#5:e B4:e C#5:q C#5:q D5:e
+  C#5:e | B4:q A4:q C#5:h | C#5:e B4:e C#5:e D5:e C#5:q A4:q | C#5:h r:h | E5:e D5:e E5:q E5:q E5:e D5:e | E5:q F#5:q E5:h
+  | G#5:q G#5:e F#5:e E5:q D5:q | E5:h r:h | C#5:e B4:e C#5:q C#5:q B4:e C#5:e | D5:q B4:q C#5:h | C#5:e B4:e C#5:e D5:e C#5:q
+  A4:q | A4:h r:h | r:q A5:q C#5:q A4:q | C#5:e D5:e C#5:e D5:e C#5:q. C#5:e | D5:q E5:q G5:e F#5:e G5:q | E5:h r:h | C#5:e
+  D5:e E5:e G5:e F#5:s E5:s D5:s C#5:s r:q | r:s F#5:s E5:s D5:s r:q E5:s C#5:s B4:s A4:s r:q | A4:e B4:e C#5:e D5:e E5:e
+  D5:e C#5:e B4:e | C#5:e r:e G4:q A4:h | A4:e r:e E4:e F#4:e G4:q E4:q | A4:e r:e E4:e F#4:e G4:q E4:q | A4:e r:e E4:e F#4:e
+  G4:q A4:q | B4:e A4:e B4:q E4:h | A4:e r:e E4:e F#4:e G4:q E4:q | A4:e r:e E4:e F#4:e G4:q E4:q | A4:e r:e E4:e F#4:e G4:q
+  A4:q | B4:q A4:h r:q | C#5:e B4:e C#5:q C#5:q C#5:e B4:e | C#5:q B4:q C#5:h | A4:e B4:e C#5:e D5:e C#5:q B4:q | C#5:h r:h
+  | C#5:e B4:e C#5:q C#5:q D5:e C#5:e | B4:q A4:q C#5:h | C#5:e B4:e C#5:e D5:e C#5:q A4:q | C#5:h r:h | E5:e D5:e E5:q E5:q
+  E5:e D5:e | E5:q F#5:q E5:h | G#5:q G#5:e F#5:e E5:q D5:q | E5:h r:h | C#5:e B4:e C#5:q C#5:q B4:e C#5:e | D5:q B4:q C#5:h
+  | C#5:e B4:e C#5:e D5:e C#5:q A4:q | A4:h r:h
+left: A2+E3:w | E3+B3:w | D3+A3:h A2+E3:h | E3+B3:w | A2+E3:w | A2+E3:h D3+A3:h | D3+A3:h B2+F#3:h | E3+B3:h A2+E3:h | A2+E3:w
+  | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | E3+B3:w | E3+B3:w | E3+B3:w | E3+B3:w | A2+E3:w
+  | E3+B3:h A2+E3:h | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | G2+D3:w | A2+E3:w | A2+E3:h D3+A3:h | D3+A3:h A2+E3:h | A2+E3:h
+  E3+B3:h | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | E3+B3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w |
+  A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | A2+E3:w | E3+B3:w | E3+B3:w | E3+B3:w | E3+B3:w | A2+E3:w | E3+B3:h A2+E3:h
+  | A2+E3:w | A2+E3:w
+reps: 3
+days: 2
