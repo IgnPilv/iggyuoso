@@ -1053,3 +1053,9 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   56 bars: the main tune, the call over E, the flute tune of the middle (an octave down) and the accordion's
   (with G natural), then the main tune again. Staccato quarters written as quarters; chords and both left hands
   (root and fifth; bass then chord) are ours. Songbook: 382 songs. No new screen, so the demo is unchanged.
+- 2026-10-26: The repository's purpose (Ignas: "its open source, but gits main goal is just to host the statics
+  via the .io site"). The README says so: the code is open source, the repo builds and hosts the live site, and
+  it is not a self-hosting kit. A short "Running your own copy" note says a fork runs guest only until it adds
+  its **own** Supabase project's URL and anon / publishable key as secrets `SUPABASE_URL` / `SUPABASE_ANON_KEY`
+  (never the service_role key), and can set a repository variable `SITE_URL` (read by `vite.config.ts`, passed
+  by `pages.yml`; unset = ours) for its canonical link, share cards and sitemap. No full self-hosting guide.

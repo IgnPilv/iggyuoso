@@ -11,6 +11,22 @@ on Settings → Computer keyboard to play with A S D F G H J K L ; ' (white keys
 keys) and Z / X (octave).
 Every new feature must also appear in the demo (see CLAUDE.md).
 
+## About this repository
+
+The code is open source, but this repository's job is to build and host the live site above on
+GitHub Pages. It is not packaged as a kit for hosting your own copy, and there is no support for
+that.
+
+### Running your own copy
+
+If you fork it anyway: turn on GitHub Pages with source **GitHub Actions**, and every push to
+`main` deploys your fork. Without anything else it runs as **guest only** (progress stays in the
+browser, the Profile says accounts are coming). For accounts, make **your own** Supabase project
+(run `docs/supabase.sql`, set its Site URL and Redirect URLs to your site) and add its Project URL
+and **anon / publishable** key as repository secrets `SUPABASE_URL` and `SUPABASE_ANON_KEY`. Never
+use the `service_role` / secret key. Set a repository variable `SITE_URL` to your site's address so
+share cards and the sitemap point to you. Details: `docs/accounts.md`.
+
 ## Docs
 
 **[docs/README.md](docs/README.md)** lists every document, including the developer docs in
