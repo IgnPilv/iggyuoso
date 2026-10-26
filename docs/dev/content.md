@@ -157,6 +157,9 @@ traditional or its composer died more than 70 years ago (and it was published be
 **Licensing rule.** Catalogue songs are public domain: traditional, or by a composer who died more
 than 70 years ago and published before 1930. Every arrangement is our own; nothing is copied from a
 published or online arrangement or a downloaded MIDI file. Copyrighted songs are added only when
-Ignas names the title himself (group `requests`).
+Ignas names the title himself (group `requests`). A one-lesson song of that kind goes in
+`cat_requests.py` (Sea Shanty 2), a song taught in several steps gets its own script (`wim.py`,
+`chfl.py`). When Ignas sends a MIDI file for one, the file is only read to write the tune down in the
+script; it is never committed.
 
 Hand-written files (the early lessons, the Book) are left alone by the build.

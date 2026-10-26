@@ -1,0 +1,26 @@
+id: song-sea-shanty-2
+title: Sea Shanty 2
+skills:
+- songs
+steps:
+- explain: |
+    **Sea Shanty 2** · Ian Taylor, for the game RuneScape, 2004 · by request
+
+    The jaunty sailors' tune from RuneScape that became an internet favourite. This is our own arrangement: the main tune, a call over the E chord, the flute and accordion tunes from the middle (with a G natural, the sound of a sea shanty), and the main tune again, over a left hand that rocks like a ship.
+  staff:
+    notes: A5:q E5:e D5:e C#5:q. C#5:e  |  D5:e E5:e F#5:e G#5:e E5:h
+    key: A
+  sound: A5:q E5:e D5:e C#5:q. C#5:e  |  D5:e E5:e F#5:e G#5:e E5:h  |  F#5:q E5:e D5:e C#5:q C#5:q  |  B4:q C#5:q D5:h
+- explain: |
+    **Before you play.** Two beats in a bar: count the half notes, not the quarters. A major: remember F♯, C♯ and G♯, except in the middle tunes, where every G is natural. Keep the short notes light and bouncy.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 2/2 · Tempo: 100
+- exercise: song-sea-shanty-2-tap
+- exercise: song-sea-shanty-2-rh
+- exercise: song-sea-shanty-2-lh
+- exercise: song-sea-shanty-2
+- exercise: song-sea-shanty-2-arranged
+- exercise: song-sea-shanty-2-performance
+recap: 'Sea Shanty 2: tune, left hand, together. Come back to it any time; songs are for fun.'
