@@ -1,0 +1,20 @@
+id: song-geese-in-the-bog
+title: The Geese in the Bog
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: A4:e D5:e D5:e F#5:e D5:e B4:e | A4:e F#4:e A4:e A4:e F#4:e A4:e | A4:e D5:e D5:e F#5:e D5:e B4:e | A4:e F#4:e A4:e
+  B4:q A4:e | A4:e D5:e D5:e F#5:e D5:e B4:e | A4:e F#4:e A4:e D4:e F#4:e A4:e | G5:e F#5:e E5:e F#5:e D5:e B4:e | A4:e F#4:e
+  A4:e B4:e D5:e B4:e | A4:e F#4:e E4:e D4:e F#4:e E4:e | D4:e F#4:e A4:e B4:e D5:e B4:e | A4:e F#4:e D4:e D4:e F#4:e A4:e
+  | B4:e G4:e A4:e B4:e D5:e B4:e | A4:e F#4:e E4:e D4:e F#4:e E4:e | D4:e F#4:e A4:e B4:e G5:e F#5:e | G5:e F#5:e E5:e F#5:e
+  D5:e B4:e | A4:e F#4:e A4:e B4:e D5:e B4:e | A4:e F#4:e A4:e B4:q D5:e
+left: D3:h. | D3:h. | D3:h. | D3:q. G2:q. | D3:h. | D3:h. | D3:h. | D3:q. G2:q. | D3:h. | D3:q. G2:q. | D3:h. | G2:h. | D3:h.
+  | D3:h. | D3:h. | D3:q. G2:q. | D3:h.
+reps: 3
+days: 2

@@ -1,0 +1,23 @@
+id: song-chief-oneills-favourite
+title: Chief O'Neill's Favourite
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 2/2
+pickup: q
+countIn: 1
+right: D5:e E5:e | F#5:e E5:e F#5:e G5:e A5:e F#5:e G5:e E5:e | F#5:e D5:e E5:e D5:e D5:e C#5:e A4:e G4:e | F#4:e E4:e F#4:e
+  D4:e F#4:e G4:e A4:e B4:e | C#5:e A4:e D5:e C#5:e A4:q D5:e E5:e | F#5:e E5:e F#5:e G5:e A5:e F#5:e G5:e E5:e | F#5:e D5:e
+  E5:e D5:e D5:e C#5:e A4:e G4:e | F#4:e E4:e F#4:e D4:e G4:e B4:e A4:e G4:e | F#4:q D4:q D4:q D4:e E4:e | F#4:e E4:e F#4:e
+  D4:e F#4:e G4:e A4:e B4:e | C#5:e A4:e D5:e B4:e C#5:e A4:e G4:e B4:e | A4:e D5:e D5:e E5:e F#5:e D5:e E5:e D5:e | C#5:e
+  A4:e D5:e C#5:e A4:q D5:e E5:e | F#5:e E5:e F#5:e G5:e A5:e F#5:e G5:e E5:e | F#5:e D5:e E5:e D5:e D5:e C#5:e A4:e G4:e
+  | F#4:e E4:e F#4:e D4:e G4:e B4:e A4:e G4:e | F#4:q D4:q D4:q
+left: r:q | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:h C#3+E3+A3:h |
+  D3+F#3+A3:w | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:h C#3+E3+A3:h
+  | D3+F#3+A3:h.
+reps: 3
+days: 2

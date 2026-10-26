@@ -1,0 +1,16 @@
+id: song-eileen-aroon-lh
+title: 'Eileen Aroon: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | D3+G3+B3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h.
+  | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h
+reps: 2
+days: 1

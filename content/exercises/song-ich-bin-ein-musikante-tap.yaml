@@ -1,0 +1,15 @@
+id: song-ich-bin-ein-musikante-tap
+title: 'Ich bin ein Musikante: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 72
+meter: 2/4
+pickup: e
+countIn: 1
+rhythm: x:e | x:e x:e x:e x:e | x:q x:e x:e | x:e x:e x:e x:e | x:q r:e x:e | x:e x:e x:e x:e | x:q x:e x:e | x:e x:e x:e
+  x:e | x:q r:e x:e | x:q x:q | x:q x:e x:e | x:e x:e x:q | x:q x:e r:e | x:q x:q | x:q x:e r:e | x:q x:q | x:q x:e x:e |
+  x:e. x:s x:e x:e | x:e. x:s x:e x:e | x:e. x:s x:e x:e | x:q r:e x:e | x:e. x:s x:e x:e | x:e. x:s x:e x:e | x:e. x:s x:e
+  x:e | x:q r:e
+reps: 2
+days: 1

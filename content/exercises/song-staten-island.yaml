@@ -1,0 +1,22 @@
+id: song-staten-island
+title: Staten Island
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: q
+countIn: 1
+right: A4:e G4:e | F#4:s D4:s F#4:s G4:s A4:e B4:s C#5:s | D5:s E5:s F#5:s D5:s A4:e B4:s C#5:s | D5:e G4:s B4:s A4:e F#4:s
+  A4:s | G4:e E4:e E4:e A4:s G4:s | F#4:s D4:s F#4:s G4:s A4:e B4:s C#5:s | D5:s E5:s F#5:s D5:s A4:e B4:s C#5:s | D5:e D5:e
+  E5:s F#5:s G5:s E5:s | F#5:e D5:e D5:e F#5:s G5:s | A5:e F#5:s A5:s G5:e E5:s G5:s | F#5:e D5:s F#5:s E5:e A4:e | D5:s C#5:s
+  D5:s F#5:s E5:s D5:s E5:s G5:s | F#5:s D5:s F#5:s A5:s E5:e F#5:s G5:s | A5:e F#5:s A5:s G5:e E5:s G5:s | F#5:e D5:s F#5:s
+  E5:e A4:e | D5:e D5:e E5:s F#5:s G5:s E5:s | F#5:e D5:e D5:e r:e
+left: r:q | D3+F#3+A3:h | D3+F#3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | D3+F#3+A3:h | D3+F#3+A3:q C#3+E3+A3:q |
+  D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q C#3+E3+A3:q | C#3+E3+A3:h |
+  D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q
+reps: 3
+days: 2

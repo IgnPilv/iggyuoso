@@ -1,0 +1,26 @@
+id: song-jefferson-and-liberty
+title: Jefferson and Liberty
+skills:
+- songs
+steps:
+- explain: |
+    **Jefferson and Liberty** · Irish jig "The Gobby O"; American song, 1801
+
+    An old Irish jig in A minor that became Thomas Jefferson's election song in 1800.
+  staff:
+    notes: A4:s B4:s  |  C5:q A4:e A4:e G#4:e A4:e
+    key: Am
+  sound: A4:s B4:s  |  C5:q A4:e A4:e G#4:e A4:e  |  E4:q A4:e A4:e B4:e C5:e  |  B4:q G4:e G4:e B4:e C5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 6/8 · Tempo: 56
+- exercise: song-jefferson-and-liberty-tap
+- exercise: song-jefferson-and-liberty-rh
+- exercise: song-jefferson-and-liberty-lh
+- exercise: song-jefferson-and-liberty
+- exercise: song-jefferson-and-liberty-arranged
+- exercise: song-jefferson-and-liberty-performance
+recap: 'Jefferson and Liberty: tune, left hand, together. Come back to it any time; songs are for fun.'

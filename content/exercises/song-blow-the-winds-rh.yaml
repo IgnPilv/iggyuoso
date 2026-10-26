@@ -1,0 +1,17 @@
+id: song-blow-the-winds-rh
+title: 'Blow the Winds, I-Ho: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: C5:q | A4:q D5:q D5:q C5:q | E5:q D5:q D5:q A4:q | C5:q D5:q A4:q F4:q | G4:h. F4:e G4:e | A4:q D5:q D5:q C5:e C5:e
+  | E5:q D5:q D5:q A4:q | C5:q A4:q G4:q E4:q | C5:h. Bb4:e G4:e | F4:q D4:q D4:q E4:q | G4:q A4:q Bb4:q G4:q | F4:q D4:q
+  D4:q E4:q | G4:h r:q r:q | A4:q D5:q D5:q C5:q | E5:q D5:q D5:q Bb4:q | C5:q A4:q G4:q E4:q | D4:h.
+reps: 2
+days: 1

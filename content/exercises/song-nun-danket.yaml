@@ -1,0 +1,19 @@
+id: song-nun-danket
+title: Now Thank We All Our God
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:q | D5:q D5:q E5:q E5:q | D5:h. B4:q | C5:q B4:q A4:q B4:q | A4:h G4:q D5:q | D5:q D5:q E5:q E5:q | D5:h. B4:q |
+  C5:q B4:q A4:q B4:q | A4:h G4:q A4:q | A4:q A4:q B4:q B4:q | A4:h. A4:q | B4:q D5:q D5:q C#5:q | D5:h. D5:q | E5:q D5:q
+  C5:q B4:q | C5:h. B4:q | A4:q B4:q A4:q A4:q | G4:h.
+left: r:q | G2:h C3:h | G2:w | G2:w | D3:h G2:h | G2:h C3:h | G2:w | G2:w | D3:w | D3:h G2:h | D3:w | G2:w | G2:w | G2:w |
+  C3:w | D3:w | G2:h.
+reps: 3
+days: 2

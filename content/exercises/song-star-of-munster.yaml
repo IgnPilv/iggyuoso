@@ -1,0 +1,22 @@
+id: song-star-of-munster
+title: The Star of Munster
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 60
+tempoLadder: true
+meter: 2/2
+pickup: q
+countIn: 1
+right: E5:e D5:e | C5:q A4:e C5:e B4:q G4:e B4:e | A4:e G4:e E4:e F#4:e G4:e E4:e D4:e F4:e | E4:e A4:e A4:e B4:e C5:e B4:e
+  C5:e D5:e | E5:e A5:e A5:e F#5:e G5:e F5:e E5:e D5:e | C5:q A4:e C5:e B4:q G4:e B4:e | A4:e G4:e E4:e F#4:e G4:e E4:e D4:e
+  F4:e | E4:e A4:e A4:e B4:e C5:e D5:e E5:e D5:e | C5:e A4:e B4:e G#4:e A4:q r:q | E5:e A5:e A5:e B5:e A5:e G5:e E5:e G5:e
+  | A5:e G5:e B5:e G5:e A5:e G5:e E5:e F#5:e | G5:e F#5:e G5:e A5:e G5:e F5:e E5:e F5:e | G5:e E5:e A5:e F#5:e G5:e F5:e E5:e
+  D5:e | E5:e A5:e A5:e B5:e A5:e G5:e E5:e G5:e | A5:e G5:e B5:e G5:e A5:e G5:e E5:e F#5:e | G5:q G5:e E5:e A5:q A5:e G5:e
+  | B5:q B5:e A5:e G5:e F5:e E5:e D5:e
+left: r:q | C3+F3+A3:h B2+D3+G3:h | C3+E3+G3:w | C3+E3+A3:w | C3+E3+A3:h C3+E3+G3:h | C3+F3+A3:h B2+D3+G3:h | C3+E3+G3:w |
+  C3+E3+A3:w | C3+F3+A3:w | C3+E3+A3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+G3:w | C3+E3+A3:w | C3+E3+G3:w | C3+E3+G3:h C3+F3+A3:h
+  | C3+E3+G3:h.
+reps: 3
+days: 2

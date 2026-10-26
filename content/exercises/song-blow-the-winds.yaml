@@ -1,0 +1,20 @@
+id: song-blow-the-winds
+title: Blow the Winds, I-Ho
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Dm
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: C5:q | A4:q D5:q D5:q C5:q | E5:q D5:q D5:q A4:q | C5:q D5:q A4:q F4:q | G4:h. F4:e G4:e | A4:q D5:q D5:q C5:e C5:e
+  | E5:q D5:q D5:q A4:q | C5:q A4:q G4:q E4:q | C5:h. Bb4:e G4:e | F4:q D4:q D4:q E4:q | G4:q A4:q Bb4:q G4:q | F4:q D4:q
+  D4:q E4:q | G4:h r:q r:q | A4:q D5:q D5:q C5:q | E5:q D5:q D5:q Bb4:q | C5:q A4:q G4:q E4:q | D4:h.
+left: r:q | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w | D3+G3+Bb3:w | D3+F3+A3:w | D3+F3+A3:w | C3+F3+A3:h C#3+E3+A3:h | C3+E3+G3:w
+  | D3+F3+A3:w | C#3+E3+A3:h D3+G3+Bb3:h | D3+F3+A3:w | D3+G3+Bb3:w | D3+F3+A3:w | D3+G3+Bb3:w | C3+F3+A3:h C#3+E3+A3:h |
+  D3+F3+A3:h.
+reps: 3
+days: 2

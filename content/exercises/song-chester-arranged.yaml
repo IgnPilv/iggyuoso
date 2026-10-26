@@ -1,0 +1,18 @@
+id: song-chester-arranged
+title: Chester, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: D5:h E5:q F#5:q | G5:h E5:h | E5:q G5:q F#5:q E5:q | D5:w | D5:h D5:q D5:q | D5:q E5:q D5:e C5:e B4:q | C5:q B4:q A4:q
+  G4:q | A4:w | D5:h E5:q E5:q | D5:h E5:q F#5:q | G5:q D5:q E5:q F#5:q | G5:w | G5:q. F#5:e E5:q D5:q | E5:e D5:e C5:e B4:e
+  A4:q D5:q | G4:q C5:q B4:q A4:q | G4:w
+left: D3+F#3+A3:w | C3+E3+G3:w | C3+E3+G3:w | B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w | A2+D3+F#3:w | B2+D3+G3:h
+  C3+E3+G3:h | A2+D3+F#3:w | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:w | B2+D3+G3:w | A2+D3+F#3:w | C3+E3+G3:h B2+D3+G3:h | B2+D3+G3:w
+reps: 3
+days: 2

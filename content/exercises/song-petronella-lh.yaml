@@ -2,7 +2,7 @@ id: song-petronella-lh
 title: 'Petronella: left hand'
 kind: timed
 hand: left
-prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
 display: staff
 key: D
 tempo: 88
@@ -10,7 +10,8 @@ tempoLadder: true
 meter: 4/4
 pickup: q
 countIn: 1
-left: r:q | D3:h A2:h | D3:w | G2:h E3:h | A2:w | D3:h A2:h | D3:w | G2:h A2:h | D3:w | D3:w | E3:w | A2:w | D3:h A2:h | D3:w
-  | E3:w | A2:w | D3:h.
+left: r:q | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w | D3+G3+B3:h E3+G#3+B3:h | C#3+E3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w
+  | D3+G3+B3:h C#3+E3+A3:h | D3+F#3+A3:w | D3+F#3+A3:w | E3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w
+  | E3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:h.
 reps: 2
 days: 1

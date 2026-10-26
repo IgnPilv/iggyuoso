@@ -1,0 +1,16 @@
+id: song-molly-malone-lh
+title: 'Molly Malone: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+left: r:q | G2:h. | G2:h. | D3:h. | D3:h. | G2:h. | G2:h. | D3:h. | D3:h. | G2:h. | G2:h. | D3:h. | D3:h. | G2:h. | B2:h.
+  | D3:h. | G2:h
+reps: 2
+days: 1

@@ -1,0 +1,17 @@
+id: song-muss-i-denn-lh
+title: 'Muss i denn: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+left: r:e | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:h | C3+E3+Bb3:h | C3+F3+A3:h | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h
+  | C3+F3+A3:h | C3+E3+Bb3:h | C3+F3+A3:h | C3+E3+Bb3:h | C3+F3+A3:h | D3+F3+Bb3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h
+  | C3+F3+A3:h | C3+E3+Bb3:h | C3+F3+A3:q.
+reps: 2
+days: 1

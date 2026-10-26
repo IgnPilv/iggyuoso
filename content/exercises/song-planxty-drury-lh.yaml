@@ -1,0 +1,16 @@
+id: song-planxty-drury-lh
+title: 'Planxty Drury: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: G2:h. | D3:h. | A2:h. | A2:h. | D3:h. | A2:h. | D3:h. | A2:h. | D3:h. | A2:h. | A2:h. | D3:h. | D3:h. | A2:h. | A2:h.
+  | D3:h. | A2:h. | A2:h. | A2:h. | D3:h. | D3:h. | A2:h. | D3:h. | D3:h. | D3:h. | G2:h. | A2:h. | D3:h. | G2:h. | A2:h.
+  | D3:h. | D3:h. | G2:h. | A2:h. | D3:h. | D3:h.
+reps: 2
+days: 1

@@ -1,0 +1,26 @@
+id: song-aennchen-von-tharau
+title: Ännchen von Tharau
+skills:
+- songs
+steps:
+- explain: |
+    **Ännchen von Tharau** · Friedrich Silcher, 1827; words by Simon Dach, 1637
+
+    A wedding song for Anna of Tharau, a village near Königsberg, written by a poet friend of the bride.
+  staff:
+    notes: G4:q. A4:e G4:q  |  G4:q C5:q C5:q
+  sound: G4:q. A4:e G4:q  |  G4:q C5:q C5:q  |  D5:q. E5:e D5:q  |  C5:h r:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 3/4 · Tempo: 96
+- exercise: song-aennchen-von-tharau-tap
+- exercise: song-aennchen-von-tharau-by-ear
+- exercise: song-aennchen-von-tharau-rh
+- exercise: song-aennchen-von-tharau-lh
+- exercise: song-aennchen-von-tharau
+- exercise: song-aennchen-von-tharau-arranged
+- exercise: song-aennchen-von-tharau-performance
+recap: 'Ännchen von Tharau: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,22 @@
+id: song-jefferson-and-liberty-performance
+title: 'Jefferson and Liberty: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Am
+tempo: 56
+meter: 6/8
+pickup: e
+countIn: 1
+right: A4:s B4:s | C5:q A4:e A4:e G#4:e A4:e | E4:q A4:e A4:e B4:e C5:e | B4:q G4:e G4:e B4:e C5:e | D5:e B4:e G4:e G4:e A4:e
+  B4:e | C5:q A4:e A4:e G#4:e A4:e | E4:q A4:e A4:q E5:e | E5:e D5:e C5:e B4:e A4:e B4:e | E4:q A4:e A4:q C5:e | A4:q B4:e
+  C5:q D5:e | E5:q F5:e G5:q. | E5:q F5:e G5:q E5:e | D5:e B4:e G4:e G4:q E4:e | A4:q B4:e C5:q D5:e | E5:e F5:e G5:e A5:q.
+  | E5:e D5:e C5:e B4:e A4:e B4:e | E4:q A4:e A4:q
+left: r:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E3:e C3:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e
+  G2:e D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E3:e C3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | A2:e
+  E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E3:e C3:e | C3:e G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e
+  | G2:e D3:e B2:e G2:e D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E3:e C3:e | E3:e B3:e G#3:e E3:e B3:e
+  G#3:e | A2+C3+E3:h~ A2+C3+E3:e
+reps: 2
+days: 2

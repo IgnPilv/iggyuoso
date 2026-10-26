@@ -1,0 +1,26 @@
+id: song-be-thou-my-vision
+title: Be Thou My Vision (Slane)
+skills:
+- songs
+steps:
+- explain: |
+    **Be Thou My Vision (Slane)** · Irish folk tune "Slane"; hymn words translated in 1905
+
+    Named after the hill of Slane, where Saint Patrick is said to have lit an Easter fire. The tune carries several hymns.
+  staff:
+    notes: D4:q D4:q E4:e D4:e  |  B3:q A3:q A3:e B3:e
+    key: D
+  sound: D4:q D4:q E4:e D4:e  |  B3:q A3:q A3:e B3:e  |  D4:q D4:q E4:q  |  F#4:h A4:e F#4:e
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 96
+- exercise: song-be-thou-my-vision-tap
+- exercise: song-be-thou-my-vision-rh
+- exercise: song-be-thou-my-vision-lh
+- exercise: song-be-thou-my-vision
+- exercise: song-be-thou-my-vision-arranged
+- exercise: song-be-thou-my-vision-performance
+recap: 'Be Thou My Vision (Slane): tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,16 @@
+id: song-maikaefer-flieg-performance
+title: 'Maikäfer, flieg: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 2/4
+countIn: 1
+right: D5:q C5:e A4:e | G4:q r:e D5:e | D5:e D5:e C5:e A4:e | G4:q r:e B4:e | B4:e B4:e B4:e B4:e | A4:e D5:e D5:e D5:e |
+  D5:e D5:e C5:e A4:e | G4:e G4:e G4:e r:e
+left: D3:q F#3+A3:q | G2:q D3+G3+B3:q | D3:q F#3+A3:q | G2:q D3+G3+B3:q | G2:q D3+G3+B3:q | D3:q F#3+A3:q | D3:q F#3+A3:q
+  | D3+G3+B3:h
+reps: 2
+days: 2

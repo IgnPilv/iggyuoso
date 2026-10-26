@@ -1,0 +1,22 @@
+id: song-rakes-of-mallow-rh
+title: 'The Rakes of Mallow: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: G4:e B4:e G4:e B4:e | G4:e B4:e C5:s B4:s A4:s G4:s | F#4:e A4:e F#4:e A4:e | F#4:e A4:e D5:s C5:s B4:s A4:s | G4:e
+  B4:e G4:e B4:e | G4:e B4:e D5:e B4:e | C5:s B4:s A4:s G4:s F#4:s G4:s A4:s C5:s | B4:e G4:e G4:e r:e | G4:s B4:s B4:s B4:s
+  G4:s B4:s B4:s B4:s | G4:s B4:s B4:s B4:s C5:s B4:s A4:s G4:s | F#4:s A4:s A4:s A4:s F#4:s A4:s A4:s A4:s | F#4:s A4:s A4:s
+  A4:s D5:s C5:s B4:s A4:s | G4:s B4:s B4:s B4:s G4:s B4:s B4:s B4:s | G4:s B4:s B4:s B4:s D5:e B4:e | C5:s B4:s A4:s G4:s
+  F#4:s G4:s A4:s C5:s | B4:e G4:e G4:e r:e | G5:e F#5:s E5:s D5:e C5:e | B4:e C5:e D5:e B4:e | G5:e F#5:s E5:s D5:e C5:e
+  | B4:e E5:e A4:e r:e | G5:e F#5:s E5:s D5:e C5:e | B4:e C5:e D5:e B4:e | C5:s B4:s A4:s G4:s F#4:s G4:s A4:s C5:s | B4:e
+  G4:e G4:e r:e | G5:e F#5:s E5:s D5:s E5:s D5:s C5:s | B4:s A4:s B4:s C5:s D5:s C5:s B4:s C5:s | G5:e F#5:s E5:s D5:s E5:s
+  D5:s C5:s | B4:s A4:s B4:s E5:s A4:e B4:s D5:s | G5:e F#5:s E5:s D5:s E5:s D5:s C5:s | B4:s A4:s B4:s C5:s D5:s C5:s B4:s
+  D5:s | C5:s B4:s A4:s G4:s F#4:s G4:s A4:s C5:s | B4:e G4:e G4:e r:e
+reps: 2
+days: 1

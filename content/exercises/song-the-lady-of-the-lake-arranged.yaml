@@ -2,7 +2,7 @@ id: song-the-lady-of-the-lake-arranged
 title: The Lady of the Lake, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+prompt: A fuller left hand (held chords).
 display: staff
 key: G
 tempo: 88
@@ -16,12 +16,8 @@ right: B3:e A3:e | G3:e B3:e D4:e G4:e B4:e A4:e G4:e B4:e | D5:e B4:e G4:e A4:e
   D5:e G5:q G5:e B4:e | C5:e B4:e A4:q A5:q. G5:e | F#5:q F#5:e G5:e F#5:e E5:e D5:e F#5:e | E5:e D5:e C#5:e E5:e D5:q B4:e
   C5:e | D5:e C5:e B4:e D5:e G5:q G5:e B4:e | C5:e B4:e A4:q A5:q. G5:e | F#5:e E5:e D5:e B4:e C5:e A4:e F#4:e D4:e | G4:q
   B4:q G4:q
-left: r:q | D2:e B2:e G2:e B2:e D2:e B2:e G2:e B2:e | D2:e B2:e G2:e B2:e D2:e B2:e G2:e B2:e | C2:e G2:e E2:e G2:e C2:e G2:e
-  E2:e G2:e | A1:e F#2:e D2:e F#2:e A1:e F#2:e D2:e F#2:e | B1:e G2:e D2:e G2:e B1:e G2:e D2:e G2:e | B1:e G2:e D2:e G2:e
-  B1:e G2:e D2:e G2:e | C2:e G2:e E2:e G2:e C2:e G2:e E2:e G2:e | A1:e F#2:e D2:e F#2:e B1:e G2:e D2:e G2:e | B1:e G2:e D2:e
-  G2:e B1:e G2:e D2:e G2:e | C2:e G2:e E2:e G2:e C#2:e A2:e E2:e A2:e | D2:e A2:e F#2:e A2:e D2:e A2:e F#2:e A2:e | C#2:e
-  A2:e E2:e A2:e D2:e A2:e F#2:e A2:e | D2:e B2:e G2:e B2:e D2:e B2:e G2:e B2:e | C2:e G2:e E2:e G2:e C#2:e A2:e E2:e A2:e
-  | D2:e A2:e F#2:e A2:e D2:e A2:e F#2:e A2:e | D2+G2+B2:h.
-pedal: r:q | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h.
+left: r:q | D2+G2+B2:w | D2+G2+B2:w | C2+E2+G2:w | A1+D2+F#2:w | B1+D2+G2:w | B1+D2+G2:w | C2+E2+G2:w | A1+D2+F#2:h B1+D2+G2:h
+  | B1+D2+G2:w | C2+E2+G2:h C#2+E2+A2:h | D2+F#2+A2:w | C#2+E2+A2:h D2+F#2+A2:h | D2+G2+B2:w | C2+E2+G2:h C#2+E2+A2:h | D2+F#2+A2:w
+  | D2+G2+B2:h.
 reps: 3
 days: 2

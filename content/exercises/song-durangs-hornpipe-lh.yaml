@@ -1,0 +1,16 @@
+id: song-durangs-hornpipe-lh
+title: 'Durang''s Hornpipe: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+left: r:e | D2+F#2+A2:h | D2+F#2+B2:h | D2+F#2+A2:h | C#2+E2+A2:h | D2+F#2+A2:h | D2+F#2+B2:h | D2+F#2+A2:q E2+G2+B2:q | D2+F#2+A2:h
+  | D2+F#2+A2:h | D2+G2+B2:h | C#2+E2+A2:h | C#2+E2+A2:h | C#2+E2+A2:h | C#2+E2+A2:h | C#2+E2+A2:h | D2+F#2+A2:q.
+reps: 2
+days: 1

@@ -1,0 +1,25 @@
+id: song-star-of-munster
+title: The Star of Munster
+skills:
+- songs
+steps:
+- explain: |
+    **The Star of Munster** · Irish reel, 1800s
+
+    A reel from Munster, the south of Ireland, much played by fiddlers.
+  staff:
+    notes: E5:e D5:e  |  C5:q A4:e C5:e B4:q G4:e B4:e
+  sound: E5:e D5:e  |  C5:q A4:e C5:e B4:q G4:e B4:e  |  A4:e G4:e E4:e F#4:e G4:e E4:e D4:e F4:e  |  E4:e A4:e A4:e B4:e
+    C5:e B4:e C5:e D5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/2 · Tempo: 60
+- exercise: song-star-of-munster-rh
+- exercise: song-star-of-munster-lh
+- exercise: song-star-of-munster
+- exercise: song-star-of-munster-arranged
+- exercise: song-star-of-munster-performance
+recap: 'The Star of Munster: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,26 @@
+id: song-chief-oneills-favourite
+title: Chief O'Neill's Favourite
+skills:
+- songs
+steps:
+- explain: |
+    **Chief O'Neill's Favourite** · Irish hornpipe, 1800s
+
+    Named after Francis O'Neill, the Chicago police chief who collected these tunes from Irish musicians in the city.
+  staff:
+    notes: D5:e E5:e  |  F#5:e E5:e F#5:e G5:e A5:e F#5:e G5:e E5:e
+    key: D
+  sound: D5:e E5:e  |  F#5:e E5:e F#5:e G5:e A5:e F#5:e G5:e E5:e  |  F#5:e D5:e E5:e D5:e D5:e C#5:e A4:e G4:e  |  F#4:e
+    E4:e F#4:e D4:e F#4:e G4:e A4:e B4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-chief-oneills-favourite-rh
+- exercise: song-chief-oneills-favourite-lh
+- exercise: song-chief-oneills-favourite
+- exercise: song-chief-oneills-favourite-arranged
+- exercise: song-chief-oneills-favourite-performance
+recap: 'Chief O''Neill''s Favourite: tune, left hand, together. Come back to it any time; songs are for fun.'

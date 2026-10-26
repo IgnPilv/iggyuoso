@@ -2,7 +2,7 @@ id: song-the-lady-of-the-lake-lh
 title: 'The Lady of the Lake: left hand'
 kind: timed
 hand: left
-prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
 display: staff
 key: G
 tempo: 88
@@ -10,8 +10,7 @@ tempoLadder: true
 meter: 4/4
 pickup: q
 countIn: 1
-left: r:q | D2+G2+B2:w | D2+G2+B2:w | C2+E2+G2:w | A1+D2+F#2:w | B1+D2+G2:w | B1+D2+G2:w | C2+E2+G2:w | A1+D2+F#2:h B1+D2+G2:h
-  | B1+D2+G2:w | C2+E2+G2:h C#2+E2+A2:h | D2+F#2+A2:w | C#2+E2+A2:h D2+F#2+A2:h | D2+G2+B2:w | C2+E2+G2:h C#2+E2+A2:h | D2+F#2+A2:w
-  | D2+G2+B2:h.
+left: r:q | G2:w | G2:w | C3:w | D3:w | G2:w | G2:w | C3:w | D3:h G2:h | G2:w | C3:h A2:h | D3:w | A2:h D3:h | G2:w | C3:h
+  A2:h | D3:w | G2:h.
 reps: 2
 days: 1

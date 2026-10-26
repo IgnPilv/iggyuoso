@@ -1,0 +1,20 @@
+id: song-mo-li-hua-arranged
+title: Mo Li Hua (Jasmine Flower), fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: B4:e B4:s D5:s E5:e G5:s E5:s | D5:h | B4:e B4:s A4:s B4:s D5:s B4:s A4:s | G4:h | E4:e G4:q A4:e | B4:e E5:e D5:e
+  B4:e | A4:e A4:e B4:s D5:s B4:s A4:s | G4:h | B4:s A4:s G4:e A4:q | A4:e. B4:s D5:e B4:s D5:s | E5:e D5:s B4:s A4:s B4:s
+  A4:s G4:s | D5:e E4:q G4:e | A4:e. B4:s A4:s G4:s E4:e | D4:h
+left: D3+G3+B3:q C3+E3+G3:q | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e | C3:e G3:e E3:e G3:e | B2:e
+  G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e | B2:e G3:e D3:e G3:e | B2+D3+G3:q A2+D3+F#3:q | A2:e F#3:e D3:e F#3:e | B2:e G3:e
+  E3:e G3:e | C3:e G3:e E3:e G3:e | C3:e A3:e E3:e A3:e | B2+D3+G3:h
+pedal: x:q x:q | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h
+reps: 3
+days: 2

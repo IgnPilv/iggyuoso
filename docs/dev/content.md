@@ -120,7 +120,7 @@ so that no key is played by both hands at once, and prints any tune whose notes 
 less than 60% of the time on chord changes, as a check on the transcription.
 
 **Imported traditional tunes.** `cat_trad.py` is written by `tools/content/import_abc.py`, not by hand.
-It reads tunes in ABC (a plain-text format for folk tunes) from the Nottingham Music Database, a free
+It reads tunes in ABC (a plain-text format for folk tunes), mostly from the Nottingham Music Database, a free
 collection of about a thousand traditional dance tunes and songs with chord names, and takes only the
 tunes listed in `trad_list.py` (which also holds the title, source line and story each one shows). From
 each it keeps the melody, played once through (repeats and first endings left out), and the chord names;
@@ -133,6 +133,21 @@ carols and hymns early. It needs the music21 library and the ABC files, so it is
     python3 tools/content/import_abc.py <folder with the database's .abc files>
 
 then `rebuild.sh` as usual. The files are at github.com/jukedeck/nottingham-dataset (`ABC_cleaned`).
+
+A tune in `trad_list.py` can also name another `collection`: one of the public-domain collections that
+come with music21 in its `corpus` folder, so nothing else needs downloading. `essenFolksong` (German and
+other European folk songs, hymns and children's songs), `oneills1850` (O'Neill's Music of Ireland,
+1903: Irish airs, jigs, reels, Carolan's harp tunes), `ryansMammoth` (Ryan's Mammoth Collection, Boston
+1883: American hornpipes and reels) and `miscFolk` (American fife tunes, Northumbrian songs). These have
+no chord names, so the importer **chooses the chords itself** (`harmonise`): for each bar it tries the
+key's main chords (I, IV, V, V7, vi, ii, iii in major; i, iv, V, V7, VI, III, VII in minor), scores how
+much of the bar's melody, weighted by length and by notes on the beat, belongs to each, with a small
+preference for the common ones and for keeping the chord of the bar before, and splits the bar in two
+when two chords clearly fit better than one. The last bar is always the home chord. On the Nottingham
+tunes, which have their own chords, it agrees with the written chord on about 70% of bars, and the rest
+are usually another chord that fits. A tune written low (some collections write songs from G3) is moved up
+an octave. When a tune is known in a well-known version, check the collection's version is that one: a
+folk collection can hold a regional variant.
 The collection also has modern tunes by living composers: only add a tune to `trad_list.py` when it is
 traditional or its composer died more than 70 years ago (and it was published before 1930).
 

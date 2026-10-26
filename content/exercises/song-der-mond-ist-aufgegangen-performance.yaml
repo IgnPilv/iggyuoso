@@ -1,0 +1,17 @@
+id: song-der-mond-ist-aufgegangen-performance
+title: 'Der Mond ist aufgegangen: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: G4:q | A4:q G4:q C5:q B4:q | A4:h G4:q B4:q | B4:q B4:q E5:q D5:q | C5:h B4:q B4:q | B4:q B4:q C5:q B4:q | A4:h r:q
+  G4:q | A4:q G4:q C5:q B4:q | A4:h G4:q B4:q | B4:q B4:q E5:q D5:q | C5:h B4:q B4:q | B4:q B4:q C5:q B4:q | A4:q A4:q G4:q
+left: r:q | D3+G3+B3:w | D3+F#3+A3:h D3+G3+B3:h | D3+G3+B3:w | C3+E3+G3:h B2+D3+G3:h | B2+D3+G3:w | A2+D3+F#3:h B2+D3+G3:h
+  | B2+D3+G3:w | A2+D3+F#3:h B2+D3+G3:h | B2+D3+G3:w | C3+E3+G3:h B2+D3+G3:h | B2+D3+G3:w | B2+D3+G3:h.
+reps: 2
+days: 2

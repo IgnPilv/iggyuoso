@@ -1,0 +1,20 @@
+id: song-ein-feste-burg-arranged
+title: A Mighty Fortress Is Our God, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: C5:q | C5:q C5:q G4:q B4:q | C5:e B4:e A4:q G4:q C5:q | B4:q A4:q G4:q A4:q | F4:e E4:e D4:q C4:q C5:q | C5:q C5:q
+  G4:q B4:q | C5:e B4:e A4:q G4:q C5:q | B4:q A4:q G4:q A4:q | F4:e E4:e D4:q C4:q C4:q | G4:q A4:q G4:q F#4:q | G4:h. C4:q
+  | G4:h A4:q B4:q | C5:h. B4:q | C5:q B4:q A4:h | G4:h. A4:q | A4:q G4:q A4:q F4:q | E4:h. C5:q | B4:q A4:q G4:q A4:q | F4:e
+  E4:e D4:q C4:q
+left: r:q | C3+E3+G3:h B2+D3+G3:h | A2+C3+F3:h C3+E3+G3:h | B2+D3+G3:w | B2+D3+G3:h C3+E3+G3:h | C3+E3+G3:h B2+D3+G3:h | A2+C3+F3:h
+  C3+E3+G3:h | B2+D3+G3:w | B2+D3+G3:h C3+E3+G3:h | C3+E3+G3:w | C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:w | C3+F3+A3:w | C3+E3+G3:w
+  | C3+F3+A3:w | C3+E3+G3:w | B2+D3+G3:w | C3+E3+G3:h.
+reps: 3
+days: 2

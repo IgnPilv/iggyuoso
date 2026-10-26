@@ -1,0 +1,19 @@
+id: song-ich-hatt-einen-kameraden-arranged
+title: Ich hatt' einen Kameraden, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q B4:e B4:e B4:q A4:q | G4:h D4:q G4:e A4:e | B4:q D5:q D5:q C5:q | B4:h r:q G4:e A4:e | B4:q B4:q B4:q A4:q
+  | B4:q. C5:e D5:q C5:e B4:e | A4:q A4:q A4:q A4:e G4:e | A4:q. B4:e C5:q D5:q | B4:q B4:q A4:q A4:q | G4:h A4:h | B4:q D5:q
+  A4:q A4:e B4:e | G4:h r:q
+left: r:q | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+F#3+A3:w
+  | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:h.
+reps: 3
+days: 2

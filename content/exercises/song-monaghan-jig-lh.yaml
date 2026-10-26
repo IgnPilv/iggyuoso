@@ -1,0 +1,15 @@
+id: song-monaghan-jig-lh
+title: 'The Monaghan Jig: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: Em
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: E3:q. B2:q. | E3:h. | E3:q. B2:q. | D3:h. | E3:q. B2:q. | E3:h. | E3:h. | D3:h. | E3:h. | E3:h. | E3:h. | D3:h. | E3:h.
+  | E3:h. | E3:h. | D3:h. | E3:h. | E3:h. | E3:h. | D3:h. | E3:h. | E3:h. | E3:h. | E3:h.
+reps: 2
+days: 1

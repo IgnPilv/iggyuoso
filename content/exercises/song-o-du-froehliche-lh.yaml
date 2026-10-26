@@ -1,0 +1,15 @@
+id: song-o-du-froehliche-lh
+title: 'O du fröhliche: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: F2:h Bb2:h | F2:w | F2:h Bb2:h | F2:w | F2:w | Bb2:w | C3:h Bb2:h | C3:w | C3:w | C3:w | F2:w | F2:w | F2:w | Bb2:h
+  C3:h | F2:h C3:h | F2:w
+reps: 2
+days: 1

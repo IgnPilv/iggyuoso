@@ -1,0 +1,26 @@
+id: song-ich-bin-ein-musikante
+title: Ich bin ein Musikante
+skills:
+- songs
+steps:
+- explain: |
+    **Ich bin ein Musikante** · German children's game song, 1800s
+
+    "I am a musician and I come from Swabia": each verse mimes another instrument, the fiddle, the trumpet, the drum.
+  staff:
+    notes: D4:e  |  G4:e G4:e B4:e B4:e
+    key: G
+  sound: D4:e  |  G4:e G4:e B4:e B4:e  |  D5:q B4:e B4:e  |  C5:e C5:e A4:e A4:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 2/4 · Tempo: 72
+- exercise: song-ich-bin-ein-musikante-tap
+- exercise: song-ich-bin-ein-musikante-rh
+- exercise: song-ich-bin-ein-musikante-lh
+- exercise: song-ich-bin-ein-musikante
+- exercise: song-ich-bin-ein-musikante-arranged
+- exercise: song-ich-bin-ein-musikante-performance
+recap: 'Ich bin ein Musikante: tune, left hand, together. Come back to it any time; songs are for fun.'

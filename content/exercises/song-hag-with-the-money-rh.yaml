@@ -1,0 +1,18 @@
+id: song-hag-with-the-money-rh
+title: 'The Hag with the Money: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: A4:e D5:e D5:e A4:e C#5:e A4:e | G4:e E4:e F#4:e G4:q E4:e | D4:e D5:e D5:e A4:s B4:s C#5:e A4:e | G4:e E4:e F#4:e
+  G4:e E4:e D4:e | A4:e D5:e B4:e C#5:q A4:e | G4:e E4:e F#4:e G4:q E4:e | D4:e F#4:e A4:e C#5:e B4:e A4:e | B4:e G4:e E4:e
+  G4:e E4:e D4:e | A4:e D5:e C#5:e D5:q E5:e | F#5:e E5:e C#5:e D5:q C#5:e | A4:e D5:e C#5:e D5:q E5:e | F#5:e D5:e F#5:e
+  E5:e C#5:e A4:e | A4:e D5:e C#5:e D5:q E5:e | F#5:s G5:s A5:e F#5:e E5:e C#5:e A4:e | A4:e G4:e E4:e C#5:e B4:e A4:e | B4:e
+  G4:e E4:e G4:e E4:e D4:e
+reps: 2
+days: 1

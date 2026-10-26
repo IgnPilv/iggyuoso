@@ -1,0 +1,26 @@
+id: song-salamanca
+title: The Salamanca
+skills:
+- songs
+steps:
+- explain: |
+    **The Salamanca** · Irish reel, 1800s
+
+    Named after the Battle of Salamanca in Spain, 1812, where Irish soldiers fought.
+  staff:
+    notes: D5:e B4:e  |  A4:e. D4:s F#4:e3 E4:e3 D4:e3 A4:e. D4:s F#4:e3 E4:e3 D4:e3
+    key: D
+  sound: D5:e B4:e  |  A4:e. D4:s F#4:e3 E4:e3 D4:e3 A4:e. D4:s F#4:e3 E4:e3 D4:e3  |  A4:e D5:e C#5:e D5:e F#5:e D5:e C#5:e
+    D5:e  |  B4:e. E4:s G4:e3 F#4:e3 E4:e3 B4:e. E4:s G4:e3 F#4:e3 E4:e3
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-salamanca-rh
+- exercise: song-salamanca-lh
+- exercise: song-salamanca
+- exercise: song-salamanca-arranged
+- exercise: song-salamanca-performance
+recap: 'The Salamanca: tune, left hand, together. Come back to it any time; songs are for fun.'

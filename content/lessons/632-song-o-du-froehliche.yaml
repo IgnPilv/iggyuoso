@@ -1,0 +1,27 @@
+id: song-o-du-froehliche
+title: O du fröhliche
+skills:
+- songs
+steps:
+- explain: |
+    **O du fröhliche** · Sicilian hymn "O sanctissima", 1790s; German words by Johannes Falk, 1816
+
+    Falk, who took in orphans after the Napoleonic wars, wrote these Christmas words for them to an old Sicilian sailors' hymn.
+  staff:
+    notes: C5:h D5:h  |  C5:q. Bb4:e A4:q Bb4:q
+    key: F
+  sound: C5:h D5:h  |  C5:q. Bb4:e A4:q Bb4:q  |  C5:h D5:h  |  C5:q. Bb4:e A4:q Bb4:q
+- explain: |
+    **Before you play.** F major: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 4/4 · Tempo: 88
+- exercise: song-o-du-froehliche-tap
+- exercise: song-o-du-froehliche-by-ear
+- exercise: song-o-du-froehliche-rh
+- exercise: song-o-du-froehliche-lh
+- exercise: song-o-du-froehliche
+- exercise: song-o-du-froehliche-arranged
+- exercise: song-o-du-froehliche-performance
+recap: 'O du fröhliche: tune, left hand, together. Come back to it any time; songs are for fun.'

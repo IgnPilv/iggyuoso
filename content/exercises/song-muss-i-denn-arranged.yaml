@@ -1,0 +1,25 @@
+id: song-muss-i-denn-arranged
+title: Muss i denn, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+key: F
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: F4:s G4:s | A4:e A4:s C5:s Bb4:e Bb4:s D5:s | C5:e C5:s Bb4:s A4:q | C5:e C5:s Bb4:s A4:e A4:s C5:s | Bb4:e Bb4:e G4:e
+  C5:e | A4:q r:e F4:s G4:s | A4:e A4:s C5:s Bb4:e Bb4:s D5:s | C5:e C5:s Bb4:s A4:q | C5:e C5:s Bb4:s A4:e A4:s C5:s | Bb4:e
+  Bb4:e G4:e C5:e | A4:q r:e F4:s A4:s | G4:e. A4:s Bb4:e G4:e | A4:e. Bb4:s C5:e C5:s C5:s | D5:e D5:e F5:e E5:s D5:s | C5:q
+  r:e F4:s A4:s | C5:e C5:s D5:s C5:e C5:s F5:s | C5:e C5:s Bb4:s A4:q | C5:e C5:s Bb4:s A4:e A4:s C5:s | Bb4:e Bb4:e G4:e
+  C5:e | A4:q r:e
+left: r:e | C3+F3+A3:q D3+F3+Bb3:q | C3:e A3:e F3:e A3:e | C3:e A3:e F3:e A3:e | C3:e Bb3:e E3:e Bb3:e | C3:e A3:e F3:e A3:e
+  | C3+F3+A3:q D3+F3+Bb3:q | C3:e A3:e F3:e A3:e | C3:e A3:e F3:e A3:e | C3:e Bb3:e E3:e Bb3:e | C3:e A3:e F3:e A3:e | C3:e
+  Bb3:e E3:e Bb3:e | C3:e A3:e F3:e A3:e | D3:e Bb3:e F3:e Bb3:e | C3:e A3:e F3:e A3:e | C3:e A3:e F3:e A3:e | C3:e A3:e F3:e
+  A3:e | C3:e A3:e F3:e A3:e | C3:e Bb3:e E3:e Bb3:e | C3+F3+A3:q.
+pedal: r:e | x:q x:q | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h |
+  x:h | x:q.
+reps: 3
+days: 2

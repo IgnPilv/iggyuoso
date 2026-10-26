@@ -1,0 +1,25 @@
+id: song-das-wandern
+title: Das Wandern ist des Müllers Lust
+skills:
+- songs
+steps:
+- explain: |
+    **Das Wandern ist des Müllers Lust** · Carl Friedrich Zöllner, 1844; words by Wilhelm Müller, 1821
+
+    "Wandering is the miller's joy": a young miller sets off on the road. Schubert set the same poem in his song cycle "Die schöne Müllerin"; this is the tune Germans sing on hikes.
+  staff:
+    notes: F4:e  |  Bb4:e. F4:s D4:e Eb4:e
+    key: Bb
+  sound: F4:e  |  Bb4:e. F4:s D4:e Eb4:e  |  F4:e. G4:s F4:e Bb4:e  |  D5:e. C5:s Bb4:e C5:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. B♭ major: remember B♭, E♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: B♭ major · Time: 2/4 · Tempo: 72
+- exercise: song-das-wandern-rh
+- exercise: song-das-wandern-lh
+- exercise: song-das-wandern
+- exercise: song-das-wandern-arranged
+- exercise: song-das-wandern-performance
+recap: 'Das Wandern ist des Müllers Lust: tune, left hand, together. Come back to it any time; songs are for fun.'

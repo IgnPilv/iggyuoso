@@ -1,0 +1,26 @@
+id: song-boys-of-bluehill
+title: The Boys of Bluehill
+skills:
+- songs
+steps:
+- explain: |
+    **The Boys of Bluehill** · Irish hornpipe, 1800s
+
+    A hornpipe, played with a lilt: the first note of each pair a little longer.
+  staff:
+    notes: F#4:s A4:s  |  B4:s A4:s F#4:s A4:s D4:e F#4:s A4:s
+    key: D
+  sound: F#4:s A4:s  |  B4:s A4:s F#4:s A4:s D4:e F#4:s A4:s  |  B4:s A4:s B4:s D5:s E5:e D5:s E5:s  |  F#5:s A5:s A5:s F#5:s
+    E5:s G5:s F#5:s E5:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-boys-of-bluehill-rh
+- exercise: song-boys-of-bluehill-lh
+- exercise: song-boys-of-bluehill
+- exercise: song-boys-of-bluehill-arranged
+- exercise: song-boys-of-bluehill-performance
+recap: 'The Boys of Bluehill: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,25 @@
+id: song-banish-misfortune
+title: Banish Misfortune
+skills:
+- songs
+steps:
+- explain: |
+    **Banish Misfortune** · Irish jig, 1800s
+
+    A jig in the Mixolydian mode (D major with a C natural), played to chase bad luck away.
+  staff:
+    notes: A4:s G4:s  |  F#4:q D4:e D4:e E4:e D4:e
+    key: D
+  sound: A4:s G4:s  |  F#4:q D4:e D4:e E4:e D4:e  |  D4:e E4:e F#4:e G4:e F#4:e G4:e  |  A4:q. C#5:e A4:e G4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-banish-misfortune-rh
+- exercise: song-banish-misfortune-lh
+- exercise: song-banish-misfortune
+- exercise: song-banish-misfortune-arranged
+- exercise: song-banish-misfortune-performance
+recap: 'Banish Misfortune: tune, left hand, together. Come back to it any time; songs are for fun.'

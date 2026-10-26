@@ -1,0 +1,26 @@
+id: song-killarney-performance
+title: 'Killarney: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 4/4
+countIn: 1
+right: D5:q. B4:e A4:q G4:e3 E4:e3 D4:e3 | G4:q G4:q G4:q. r:e | D5:q. C5:e B4:q A4:e3 B4:e3 D5:e3 | E5:q A4:q A4:q. r:e |
+  D5:q. B4:e A4:q G4:e3 E4:e3 D4:e3 | G4:q G4:q G4:q. r:e | B4:q. C5:e D5:q G4:e C5:e | B4:q A4:q G4:q. r:e | G4:q G4:q A4:q
+  E4:q | G4:q G4:q B4:e D5:q. | B4:q B4:e C5:e D5:e B4:e A4:e G4:e | G4:e E4:e E4:e G4:e A4:q. r:e | G4:e A4:q B4:e3 C5:e3
+  D5:e3 F#4:q E4:e~ | E4:e D4:h G4:q. | E4:e D4:q E4:e F#4:e G4:q G4:e~ | G4:e A4:q. r:e C5:q. | C5:e B4:q A4:q D5:e B4:e
+  A4:e | G4:e E4:h E4:q. | Eb4:e D4:q. E4:e G4:q G4:e3 B4:s3~ | B4:s3 D5:e3 E5:h G4:q. | A4:e B4:e B4:e A4:h G4:e~ | G4:q
+  r:e r:h r:e
+left: D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e
+  B2:e D3:e | A2:e E3:e C3:e E3:e A2:e E3:e C3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e
+  D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e
+  A2:e E3:e C3:e E3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3:e G3:e E3:e
+  G3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e
+  B2:e D3:e G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e |
+  C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e
+  | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3+G3+B3:w
+reps: 2
+days: 2

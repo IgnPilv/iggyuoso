@@ -1,0 +1,19 @@
+id: song-nun-danket-performance
+title: 'Now Thank We All Our God: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:q | D5:q D5:q E5:q E5:q | D5:h. B4:q | C5:q B4:q A4:q B4:q | A4:h G4:q D5:q | D5:q D5:q E5:q E5:q | D5:h. B4:q |
+  C5:q B4:q A4:q B4:q | A4:h G4:q A4:q | A4:q A4:q B4:q B4:q | A4:h. A4:q | B4:q D5:q D5:q C#5:q | D5:h. D5:q | E5:q D5:q
+  C5:q B4:q | C5:h. B4:q | A4:q B4:q A4:q A4:q | G4:h.
+left: r:q | D3+G3+B3:h C3+E3+G3:h | B2+D3+G3:w | B2+D3+G3:w | A2+D3+F#3:h B2+D3+G3:h | B2+D3+G3:h C3+E3+G3:h | B2+D3+G3:w
+  | B2+D3+G3:w | A2+D3+F#3:w | A2+D3+F#3:h B2+D3+G3:h | A2+D3+F#3:w | B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:w |
+  A2+D3+F#3:w | B2+D3+G3:h.
+reps: 2
+days: 2

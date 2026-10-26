@@ -1,0 +1,18 @@
+id: song-lobe-den-herren
+title: Praise to the Lord, the Almighty
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:q G4:q D5:q | B4:q A4:q G4:q | F#4:q E4:q D4:q | E4:q F#4:q G4:q | A4:h. | G4:h r:q | G4:q G4:q D5:q | B4:q A4:q
+  G4:q | F#4:q E4:q D4:q | E4:q F#4:q G4:q | A4:h. | G4:h r:q | D5:q D5:q D5:q | E5:h. | B4:q C5:q D5:q | D5:q C5:q B4:q |
+  A4:h. | D4:q E4:q F#4:q | G4:q A4:q B4:q | A4:h. | G4:h r:q
+left: G2:h. | G2:h. | D3:h. | C3:h. | D3:h. | G2:h. | G2:h. | G2:h. | D3:h. | C3:h. | D3:h. | G2:h. | G2:h. | C3:h. | G2:h.
+  | G2:h. | D3:h. | D3:h. | G2:h. | D3:h. | G2:h.
+reps: 3
+days: 2

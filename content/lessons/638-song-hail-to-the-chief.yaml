@@ -1,0 +1,26 @@
+id: song-hail-to-the-chief
+title: Hail to the Chief
+skills:
+- songs
+steps:
+- explain: |
+    **Hail to the Chief** · James Sanderson, about 1812
+
+    Written for a play of Walter Scott's "The Lady of the Lake", it is now played when the President of the United States arrives.
+  staff:
+    notes: A4:q B4:e. C#5:s D5:q C#5:e. B4:s  |  A4:e. B4:s A4:e. F#4:s E4:q D4:q
+    key: D
+  sound: A4:q B4:e. C#5:s D5:q C#5:e. B4:s  |  A4:e. B4:s A4:e. F#4:s E4:q D4:q  |  A4:q D5:e. E5:s F#5:q E5:e. D5:s  |  E5:e.
+    D5:s E5:e. F#5:s E5:q r:q
+- explain: |
+    **Before you play.** D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-hail-to-the-chief-rh
+- exercise: song-hail-to-the-chief-lh
+- exercise: song-hail-to-the-chief
+- exercise: song-hail-to-the-chief-arranged
+- exercise: song-hail-to-the-chief-performance
+recap: 'Hail to the Chief: tune, left hand, together. Come back to it any time; songs are for fun.'

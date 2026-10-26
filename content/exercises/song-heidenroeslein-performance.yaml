@@ -1,0 +1,19 @@
+id: song-heidenroeslein-performance
+title: 'Heidenröslein: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: F
+tempo: 72
+meter: 2/4
+countIn: 1
+right: F4:e F4:e F4:e F4:e | A4:s G4:s F4:e F4:q | C5:e C5:e A4:e F4:e | Bb4:q A4:e r:e | F4:e F4:e F4:e F4:e | A4:s G4:s
+  F4:e F4:q | A4:e A4:e A4:e A4:e | C5:s Bb4:s A4:e A4:q | C5:e C5:e A4:e F4:e | Bb4:q A4:e r:e | C5:e A4:e C5:e A4:e | F5:e
+  C5:e C5:q | D5:e C5:e Bb4:e A4:e | G4:q F4:e r:e
+left: F2:e C3:e A2:e C3:e | F2:e C3:e A2:e C3:e | F2:e C3:e A2:e C3:e | Bb2:q F2:q | F2:e C3:e A2:e C3:e | F2:e C3:e A2:e
+  C3:e | F2:e C3:e A2:e C3:e | F2:e C3:e A2:e C3:e | F2:e C3:e A2:e C3:e | Bb2:q F2:q | F2:e C3:e A2:e C3:e | F2:e C3:e A2:e
+  C3:e | Bb2:e F3:e D3:e F3:e | C3+F3+A3:h
+pedal: x:h | x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h
+reps: 2
+days: 2

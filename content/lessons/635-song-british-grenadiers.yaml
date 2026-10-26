@@ -1,0 +1,25 @@
+id: song-british-grenadiers
+title: The British Grenadiers
+skills:
+- songs
+steps:
+- explain: |
+    **The British Grenadiers** · English march, 1700s
+
+    The march of the grenadier regiments, played at the Trooping the Colour in London every year.
+  staff:
+    notes: A4:q  |  D5:e C#5:e D5:e E5:e
+    key: D
+  sound: A4:q  |  D5:e C#5:e D5:e E5:e  |  F#5:q E5:e F#5:e  |  G5:e F#5:e E5:e D5:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-british-grenadiers-rh
+- exercise: song-british-grenadiers-lh
+- exercise: song-british-grenadiers
+- exercise: song-british-grenadiers-arranged
+- exercise: song-british-grenadiers-performance
+recap: 'The British Grenadiers: tune, left hand, together. Come back to it any time; songs are for fun.'

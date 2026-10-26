@@ -1,0 +1,26 @@
+id: song-bonapartes-retreat
+title: Bonaparte's Retreat
+skills:
+- songs
+steps:
+- explain: |
+    **Bonaparte's Retreat** · Irish air, 1800s
+
+    A slow march in E minor about Napoleon's retreat, played by pipers who had hoped he would free Ireland.
+  staff:
+    notes: B3:q  |  B3:e. E4:s E4:e. F#4:s G4:e. F#4:s E4:e. D4:s
+    key: Em
+  sound: B3:q  |  B3:e. E4:s E4:e. F#4:s G4:e. F#4:s E4:e. D4:s  |  E4:e. F#4:s A4:e. B4:s D5:e. C#5:s D5:e. E5:s  |  F#5:e.
+    D5:s E5:e. C#5:s D5:e. B4:s C5:e. A4:s
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 2/2 · Tempo: 60
+- exercise: song-bonapartes-retreat-rh
+- exercise: song-bonapartes-retreat-lh
+- exercise: song-bonapartes-retreat
+- exercise: song-bonapartes-retreat-arranged
+- exercise: song-bonapartes-retreat-performance
+recap: 'Bonaparte''s Retreat: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -8,7 +8,13 @@
 # What it keeps from a source: the melody (each part played once through, repeats and first
 # endings left out) and the chord names over it. The left hands are ours, made by the catalogue.
 #
-#   python3 import_abc.py <folder with the .abc files>
+#   python3 import_abc.py <folder with the Nottingham .abc files>
+#
+# Tunes from other collections name them with `collection=` in trad_list.py: the music21 library
+# ships several public-domain ones (`essenFolksong`, German and other European folk songs from the
+# Essen collection; `oneills1850`, O'Neill's Music of Ireland, 1903; `ryansMammoth`, Ryan's Mammoth
+# Collection, 1883; `miscFolk`, American fife tunes and Northumbrian songs), read from its corpus
+# folder. Those have no chord names, so the importer chooses them (`harmonise`).
 import os, re, sys
 from fractions import Fraction as F
 import music21 as m21
@@ -23,7 +29,7 @@ def tunes_in(folder):
     for f in sorted(os.listdir(folder)):
         if not f.endswith('.abc'): continue
         for chunk in re.split(r'\n\s*\n', open(os.path.join(folder, f), encoding='latin-1').read()):
-            t = re.search(r'^T:\s*(.+)$', chunk, re.M)
+            t = re.search(r'^T:[ \t]*(.+)$', chunk, re.M)
             if t and re.search(r'^X:', chunk, re.M): out.setdefault(t.group(1).strip(), chunk)
     return out
 
@@ -66,7 +72,7 @@ def split_value(d):
     assert d == 0, d
     return out
 
-def convert(abc, where):
+def convert(abc, where, harmonise_missing=False):
     s = m21.converter.parse(once_through(abc), format='abc')
     part = s.parts[0] if hasattr(s, 'parts') and s.parts else s
     ts = part.recurse().getElementsByClass('TimeSignature')[0]
@@ -93,13 +99,15 @@ def convert(abc, where):
             events[-1][1] += d
             continue
         events.append([off, d, p])
-    assert chords, f'no chords I can read: {figs[:5]}'
+    assert chords or harmonise_missing, f'no chords I can read: {figs[:5]}'
     # Bars: the upbeat, then whole bars from it.
     end = events[-1][0] + events[-1][1]
     starts = [F(0)] + ([pk] if pk else [])
     t = pk if pk else q
     while t < end: starts.append(t); t += q
     starts = sorted(set(x for x in starts if x < end))
+    if not chords:
+        chords = harmonise(events, starts, end, pk, key_of(abc)[0], meter)
     bars = [[] for _ in starts]
     for off, d, p in events:
         while d > 0:
@@ -140,6 +148,64 @@ def convert(abc, where):
         if n > 1 and len(set(slots)) == 1: slots = slots[:1]
         cbars.append(' '.join(slots))
     return dict(meter=meter, pickup=pk, melody=' | '.join(' '.join(b) for b in bars), chords=' | '.join(cbars))
+
+# ---------------------------------------------------------------- chords for tunes written without them
+
+def diatonic(key):
+    """The chords a simple harmonisation picks from: (symbol, pitch classes, how much it is preferred)."""
+    minor = key.endswith('m')
+    tonic = key[:-1] if minor else key
+    sc = (m21.scale.HarmonicMinorScale if minor else m21.scale.MajorScale)(tonic.replace('b', '-'))
+    ps = sc.getPitches(tonic.replace('b', '-') + '4')[:7]
+    name = lambda p: p.name.replace('-', 'b')
+    pcs = lambda *ds: frozenset(ps[d % 7].pitchClass for d in ds)
+    if minor:
+        nat3 = m21.pitch.Pitch(ps[2].nameWithOctave); nat7 = ps[6].transpose(-1)
+        out = [(name(ps[0]) + 'm', pcs(0, 2, 4), 0.3), (name(ps[3]) + 'm', pcs(3, 5, 0), 0.15), (name(ps[4]), pcs(4, 6, 1), 0.2),
+               (name(ps[4]) + '7', pcs(4, 6, 1, 3), 0.1), (name(ps[5]), pcs(5, 0, 2), 0.05),
+               (name(nat3), frozenset({nat3.pitchClass, ps[4].pitchClass, nat7.pitchClass}), 0.0),
+               (name(nat7), frozenset({nat7.pitchClass, ps[1].pitchClass, ps[3].pitchClass}), 0.0)]
+    else:
+        out = [(name(ps[0]), pcs(0, 2, 4), 0.3), (name(ps[3]), pcs(3, 5, 0), 0.15), (name(ps[4]), pcs(4, 6, 1), 0.2),
+               (name(ps[4]) + '7', pcs(4, 6, 1, 3), 0.1), (name(ps[5]) + 'm', pcs(5, 0, 2), 0.05),
+               (name(ps[1]) + 'm', pcs(1, 3, 5), 0.0), (name(ps[2]) + 'm', pcs(2, 4, 6), -0.1)]
+    return out
+
+def harmonise(events, starts, end, pk, key, meter):
+    """One chord a bar, or two when the tune clearly moves between two, from the key's main chords."""
+    from lib import meter_quarters
+    q = F(meter_quarters(meter)).limit_denominator(8)
+    beat = F(3, 2) if meter in ('6/8', '9/8', '12/8') else F(1)
+    ch = diatonic(key)
+    notes = [(o, o + d, m21.pitch.Pitch(p.replace('b', '-') if len(p) > 2 else p).pitchClass) for o, d, p in events if p != 'r']
+    def score(c, a, b, prev):
+        sym, pcs, prior = c
+        tot = F(0)
+        for s0, e0, pc in notes:
+            ov = min(e0, b) - max(s0, a)
+            if ov <= 0: continue
+            w = ov * (F(3, 2) if (s0 >= a and (s0 - (pk or 0)) % beat == 0) else 1)
+            tot += w if pc in pcs else -w * F(3, 5)
+        return float(tot) / float(b - a) + prior + (0.1 if sym == prev else 0)
+    out, prev = [], None
+    bars = [(s0, (starts[i + 1] if i + 1 < len(starts) else end)) for i, s0 in enumerate(starts)]
+    for i, (a, b) in enumerate(bars):
+        last = i == len(bars) - 1
+        if last:
+            out.append((a, ch[0][0])); prev = ch[0][0]; continue
+        best1 = max(ch, key=lambda c: score(c, a, b, prev))
+        s1 = score(best1, a, b, prev)
+        mid = a + (b - a) / 2
+        two = None
+        if (mid - a) % beat == 0 and b - a == q:
+            x = max(ch, key=lambda c: score(c, a, mid, prev))
+            y = max(ch, key=lambda c: score(c, mid, b, x[0]))
+            if x[0] != y[0] and (score(x, a, mid, prev) + score(y, mid, b, x[0])) / 2 > s1 + 0.35: two = (x, y)
+        if two:
+            out += [(a, two[0][0]), (mid, two[1][0])]; prev = two[1][0]
+        else:
+            out.append((a, best1[0])); prev = best1[0]
+    return out
 
 def fmt_pickup(pk):
     return ' '.join(split_value(pk)) if pk else None
@@ -188,18 +254,32 @@ def tempo_for(meter, melody):
     if meter == '2/2': return 60
     return 72 if has_fast else 88
 
+CORPUS = os.path.join(os.path.dirname(m21.__file__), 'corpus')
+
+def raise_low(melody):
+    """Moves a tune written low (some collections write songs from G3) up an octave, so that it sits
+    over the left hand."""
+    notes = [int(o) * 12 + 'C D EF G A B'.index(l) for l, o in re.findall(r'\b([A-G])[#b]?(\d)', melody)]
+    if sorted(notes)[len(notes) // 2] >= 4 * 12 + 2: return melody
+    return re.sub(r'\b([A-G][#b]?)(\d)', lambda m: m.group(1) + str(int(m.group(2)) + 1), melody)
+
 def main(folder):
-    src = tunes_in(folder)
+    srcs = {'nmd': tunes_in(folder)}
+    def source(t):
+        c = t.get('collection', 'nmd')
+        if c not in srcs: srcs[c] = tunes_in(os.path.join(CORPUS, c))
+        return srcs[c][t['source']]
     out = ['# Traditional and old public-domain tunes, written by import_abc.py from trad_list.py: do not edit by hand.',
            '# Melodies and chord names from the Nottingham Music Database (traditional dance tunes and songs);',
            '# the left hands are ours.', 'from catalogue import tune', '']
     done = []
     for t in trad_list.TUNES:
-        abc = src[t['source']]
+        abc = source(t)
         try:
-            c = convert(abc, t['id'])
+            c = convert(abc, t['id'], harmonise_missing=t.get('collection', 'nmd') != 'nmd')
         except Exception as e:
             print('skipped', t['id'], repr(e)); continue
+        c['melody'] = raise_low(c['melody'])
         key, mode = key_of(abc)
         key = t.get('key', key)
         done.append((t, c, key))

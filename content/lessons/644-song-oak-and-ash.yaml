@@ -1,0 +1,25 @@
+id: song-oak-and-ash
+title: The Oak and the Ash
+skills:
+- songs
+steps:
+- explain: |
+    **The Oak and the Ash** · English ballad, 1600s
+
+    A north-country girl in London longs for home, where "the oak and the ash and the bonny ivy tree" all grow.
+  staff:
+    notes: D4:q  |  G4:q G4:e A4:e Bb4:q A4:e G4:e
+    key: Gm
+  sound: D4:q  |  G4:q G4:e A4:e Bb4:q A4:e G4:e  |  A4:q A4:e Bb4:e C5:q Bb4:e A4:e  |  G4:q G4:e A4:e Bb4:q A4:e G4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G minor: remember B♭, E♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G minor · Time: 4/4 · Tempo: 72
+- exercise: song-oak-and-ash-rh
+- exercise: song-oak-and-ash-lh
+- exercise: song-oak-and-ash
+- exercise: song-oak-and-ash-arranged
+- exercise: song-oak-and-ash-performance
+recap: 'The Oak and the Ash: tune, left hand, together. Come back to it any time; songs are for fun.'

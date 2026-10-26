@@ -1,0 +1,24 @@
+id: song-jungfernkranz
+title: Bridesmaids' Chorus
+skills:
+- songs
+steps:
+- explain: |
+    **Bridesmaids' Chorus** · Carl Maria von Weber, "Der Freischütz", 1821
+
+    "Wir winden dir den Jungfernkranz": the bridesmaids weave a wreath for the bride in Weber's opera. It was whistled all over Europe.
+  staff:
+    notes: G4:e  |  C5:s B4:s C5:s D5:s E5:e G4:e
+  sound: G4:e  |  C5:s B4:s C5:s D5:s E5:e G4:e  |  C5:s B4:s C5:s D5:s E5:e r:s E5:s  |  D5:e. E5:s D5:s C5:s B4:s A4:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 72
+- exercise: song-jungfernkranz-rh
+- exercise: song-jungfernkranz-lh
+- exercise: song-jungfernkranz
+- exercise: song-jungfernkranz-arranged
+- exercise: song-jungfernkranz-performance
+recap: 'Bridesmaids'' Chorus: tune, left hand, together. Come back to it any time; songs are for fun.'

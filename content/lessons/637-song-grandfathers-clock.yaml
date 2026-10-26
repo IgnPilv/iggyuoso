@@ -1,0 +1,25 @@
+id: song-grandfathers-clock
+title: My Grandfather's Clock
+skills:
+- songs
+steps:
+- explain: |
+    **My Grandfather's Clock** · Henry Clay Work, 1876
+
+    The clock "stopped short, never to go again, when the old man died". The song is why tall clocks are called grandfather clocks.
+  staff:
+    notes: A4:e  |  D5:e C#5:s D5:s E5:e D5:s E5:s
+    key: D
+  sound: A4:e  |  D5:e C#5:s D5:s E5:e D5:s E5:s  |  F#5:e G5:s F#5:s B4:e E5:s E5:s  |  D5:e D5:e C#5:e B4:s C#5:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-grandfathers-clock-rh
+- exercise: song-grandfathers-clock-lh
+- exercise: song-grandfathers-clock
+- exercise: song-grandfathers-clock-arranged
+- exercise: song-grandfathers-clock-performance
+recap: 'My Grandfather''s Clock: tune, left hand, together. Come back to it any time; songs are for fun.'

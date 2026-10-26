@@ -1,0 +1,26 @@
+id: song-kiss-the-maid
+title: Kiss the Maid Behind the Barrel
+skills:
+- songs
+steps:
+- explain: |
+    **Kiss the Maid Behind the Barrel** · Irish reel, 1800s
+
+    A reel with a cheeky name, from the barmaid behind the beer barrel.
+  staff:
+    notes: D4:e G4:e G4:e C5:e A4:e G4:e G4:e F#4:e  |  D4:e G4:e G4:e B4:e C5:e A4:e G4:e F#4:e
+    key: G
+  sound: D4:e G4:e G4:e C5:e A4:e G4:e G4:e F#4:e  |  D4:e G4:e G4:e B4:e C5:e A4:e G4:e F#4:e  |  D4:e G4:e G4:e C5:e A4:e
+    G4:e A4:e C#5:e  |  D5:e E5:e F5:e D5:e C5:e A4:e F#4:e A4:e
+- explain: |
+    **Before you play.** G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 2/2 · Tempo: 60
+- exercise: song-kiss-the-maid-rh
+- exercise: song-kiss-the-maid-lh
+- exercise: song-kiss-the-maid
+- exercise: song-kiss-the-maid-arranged
+- exercise: song-kiss-the-maid-performance
+recap: 'Kiss the Maid Behind the Barrel: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -14,8 +14,9 @@ right: G4:e A4:e | B4:h D5:q | A4:h B4:q | G4:h F#4:q | E4:h D4:q | E4:h. | A4:h
   | A4:h B4:q | G4:h F#4:q | E4:h D4:q | E4:h. | G4:h A4:q | G4:h.~ | G4:q A4:q B4:q | C5:h B4:q | C5:h D5:q | E5:h.~ | E5:q
   B4:q C5:q | D5:h B4:q | A4:h G4:q | A4:h.~ | A4:q G4:q A4:q | B4:h D5:q | A4:h B4:q | G4:h F#4:q | E4:h D4:q | E4:h. | G4:h
   A4:q | G4:h.~ | G4:h
-left: r:q | G2:h. | D3:h. | G2:h. | G2:h. | C3:h. | A2:h. | D3:h. | D3:h. | G2:h. | D3:h. | G2:h. | G2:h. | C3:h. | C3:h.
-  | G2:h. | G2:h. | A2:h. | A2:h. | D3:h. | D3:h. | G2:h. | A2:h. | D3:h. | D3:h. | G2:h. | D3:h. | E3:h. | E3:h. | C3:h.
-  | C3:h. | G2:h. | G2:h
+left: r:q | D3+G3+B3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h. | C3+E3+G3:h. | C#3+E3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h.
+  | D3+G3+B3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h. | C3+E3+G3:h. | C3+Eb3+G3:h. | B2+D3+G3:h. | B2+D3+G3:h. | C3+E3+A3:h.
+  | C3+E3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | C#3+E3+A3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+F#3+A3:h.
+  | E3+G3+B3:h. | E3+G3+B3:h. | C3+E3+G3:h. | C3+Eb3+G3:h. | B2+D3+G3:h. | B2+D3+G3:h
 reps: 3
 days: 2

@@ -1,0 +1,28 @@
+id: song-pipe-on-the-hob-performance
+title: 'The Pipe on the Hob: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Am
+tempo: 56
+meter: 6/8
+pickup: e
+countIn: 1
+right: B4:e | C5:q. E5:e D5:e C5:e | E5:e D5:e C5:e B4:e A4:e G4:e | A4:e B4:e A4:e G5:e r:e E5:e | E5:e A5:e A5:e G5:e E5:e
+  D5:e | C5:q. E5:e D5:e C5:e | E5:e D5:e C5:e D5:e E5:e G5:e | A5:e G5:e E5:e D5:e B4:e E5:e | A4:e B4:e A4:e A4:q F5:e |
+  G5:q. G5:e E5:e A5:e | A5:e G5:e E5:e E5:e D5:e B4:e | A4:e B4:e A4:e G5:e r:e E5:e | A5:e B5:e A5:e G5:e E5:e F#5:e | G5:q.
+  G5:e E5:e A5:e | A5:e G5:e E5:e E5:e F#5:e G5:e | A5:e G5:e E5:e D5:e B4:e E5:e | A4:e B4:e A4:e A4:q B4:e | C5:q C5:e D5:q
+  D5:e | E5:e C5:e A4:e A4:e G4:e E4:e | C5:q C5:e D5:q D5:e | E5:e C5:e A4:e A4:q B4:e | C5:q C5:e D5:q D5:e | E5:q E5:e
+  G#5:e A5:e B5:e | A5:e G5:e E5:e D5:e B4:e E5:e | A4:e B4:e A4:e A4:q
+left: r:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e
+  A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E3:e C3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | A2:e E3:e C3:e E3:e B3:e G#3:e | D3:e
+  A3:e F3:e D3:e A3:e F3:e | C3:e G3:e E3:e C3:e G3:e E3:e | A2:e E3:e C3:e E3:e B3:e G#3:e | A2:e E3:e C3:e A2:e E3:e C3:e
+  | A2:e E3:e C3:e A2:e E3:e C3:e | C3:e G3:e E3:e C3:e G3:e E3:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e E3:e B3:e
+  G#3:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e D3:e A3:e F3:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e D3:e
+  A3:e F3:e | A2:e E3:e C3:e A2:e E3:e C3:e | A2:e E3:e C3:e D3:e A3:e F3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | A2:e E3:e
+  C3:e E3:e B3:e G#3:e | A2+C3+E3:h~ A2+C3+E3:e
+pedal: r:e | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:h. | x:h. | x:q.
+  x:q. | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:h x:e
+reps: 2
+days: 2

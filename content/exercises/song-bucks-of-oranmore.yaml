@@ -1,0 +1,32 @@
+id: song-bucks-of-oranmore
+title: The Bucks of Oranmore
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 2/2
+pickup: q
+countIn: 1
+right: D5:e B4:e | A4:q F#4:e A4:e A4:q D5:e B4:e | A4:e3 B4:e3 A4:e3 F#4:e A4:e B4:e E4:e E4:e r:e | A4:q F#4:e A4:e A4:q
+  B4:e D5:e | E5:e3 F#5:e3 G5:e3 F#5:e D5:e E5:e C#5:e D5:e B4:e | A4:q F#4:e A4:e A4:q D5:e B4:e | A4:e3 B4:e3 A4:e3 F#4:e
+  A4:e B4:e E4:e E4:e F#4:e | D4:e E4:e F#4:e G4:e A4:e F#4:e A4:e B4:e | D5:e E5:e F#5:e D5:e E5:e C#5:e D5:e B4:e | A4:e
+  D4:e F#4:e3 E4:e3 D4:e3 A4:q D5:e B4:e | A4:e D4:e F#4:e A4:e B4:e E4:e E4:e r:e | A4:e D4:e F#4:e3 E4:e3 D4:e3 A4:q B4:e
+  D5:e | E5:e3 F#5:e3 G5:e3 F#5:e D5:e E5:e C#5:e D5:e B4:e | A4:e D4:e F#4:e3 E4:e3 D4:e3 A4:q D5:e B4:e | A4:e D4:e F#4:e3
+  E4:e3 D4:e3 B4:e E4:e E4:e r:e | D4:e E4:e F#4:e G4:e A4:e F#4:e A4:e B4:e | D5:e E5:e F#5:e D5:e E5:e F#5:e G5:e E5:e |
+  A5:e3 B5:e3 A5:e3 F#5:e D5:e E5:e D5:e D5:e F#5:e | A5:e3 B5:e3 A5:e3 F#5:e D5:e E5:e B4:e B4:e r:e | A5:e3 B5:e3 A5:e3
+  F#5:e D5:e E5:e D5:e D5:e F#5:e | E5:e3 F#5:e3 G5:e3 F#5:e D5:e E5:e B4:e B4:e r:e | A5:e3 B5:e3 A5:e3 F#5:e D5:e E5:e D5:e
+  D5:e F#5:e | A5:e3 B5:e3 A5:e3 F#5:e D5:e E5:e B4:e B4:e r:e | A5:e3 B5:e3 A5:e3 F#5:e D5:e E5:e D5:e D5:e F#5:e | G5:e3
+  F#5:e3 E5:e3 F#5:e D5:e E5:e B4:e B4:e D5:e | F#5:e3 G5:e3 F#5:e3 D5:e F#5:e E5:e3 F#5:e3 E5:e3 D5:e E5:e | F#5:e3 G5:e3
+  F#5:e3 D5:e F#5:e E5:e B4:e B4:e r:e | F#5:e3 G5:e3 F#5:e3 D5:e F#5:e E5:e3 F#5:e3 E5:e3 D5:e F#5:e | E5:e3 F#5:e3 G5:e3
+  F#5:e D5:e E5:e B4:e B4:e D5:e | F#5:e3 G5:e3 F#5:e3 D5:e F#5:e E5:e3 F#5:e3 E5:e3 D5:e E5:e | F#5:e3 G5:e3 F#5:e3 D5:e
+  F#5:e E5:e B4:e B4:e r:e | F#5:e A5:e A5:e F#5:e B5:e F#5:e A5:e F#5:e | E5:e3 F#5:e3 G5:e3 F#5:e D5:e E5:e C#5:e D5:e B4:e
+left: r:q | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h | D3+F#3+A3:w
+  | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h
+  | D3+F#3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h |
+  D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h | D3+F#3+A3:w | D3+F#3+B3:w | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h | D3+F#3+A3:w |
+  D3+F#3+B3:w | D3+F#3+A3:w | D3+F#3+A3:h E3+G3+B3:h | D3+F#3+A3:w | D3+F#3+A3:h.
+reps: 3
+days: 2

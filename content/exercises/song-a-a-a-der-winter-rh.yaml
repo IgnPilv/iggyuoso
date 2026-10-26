@@ -1,0 +1,15 @@
+id: song-a-a-a-der-winter-rh
+title: 'A, a, a, der Winter, der ist da: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: B4:q C5:q | D5:q r:e C5:e | B4:e B4:e A4:e A4:e | G4:q r:q | D5:e D5:e C5:e C5:e | B4:e B4:e A4:e A4:e | D5:e D5:e
+  C5:e C5:e | B4:e B4:e A4:e A4:e | B4:q C5:q | D5:q r:e C5:e | B4:e B4:e A4:e A4:e | G4:q r:q
+reps: 2
+days: 1

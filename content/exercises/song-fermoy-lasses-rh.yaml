@@ -1,0 +1,20 @@
+id: song-fermoy-lasses-rh
+title: 'The Fermoy Lasses: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 2/2
+pickup: q
+countIn: 1
+right: B4:e A4:e | G4:e E4:e E4:e3 D4:e3 E4:e3 B4:e E4:e E4:e3 D4:e3 E4:e3 | G4:e E4:e E4:e3 D4:e3 E4:e3 B4:e C5:e B4:e A4:e
+  | G4:e E4:e E4:e3 D4:e3 E4:e3 B4:e E4:e E4:e3 D4:e3 E4:e3 | A4:e F#4:e D4:e F#4:e A4:e C5:e B4:e A4:e | G4:q G4:e F#4:e
+  G4:e G4:e D5:e G4:e | A4:e F#4:e D4:e F#4:e A4:q B4:e A4:e | G4:e3 A4:e3 G4:e3 B4:e G4:e D5:e G4:e B4:e G4:e | G4:e3 A4:e3
+  G4:e3 B4:e D5:e E5:e F#5:e G5:q | G4:e3 A4:e3 G4:e3 B4:e G4:e D5:e G4:e B4:e G4:e | A4:e F#4:e D4:e F#4:e A4:e C5:e B4:e
+  A4:e | G4:e3 A4:e3 G4:e3 B4:e G4:e D5:e G4:e B4:e G4:e | G4:e3 A4:e3 G4:e3 B4:e D5:e E5:e F#5:e G5:q | A5:e F#5:e G5:e E5:e
+  D5:e E5:e D5:e B4:e | A4:e F#4:e D4:e F#4:e A4:e C5:e B4:e A4:e
+reps: 2
+days: 1

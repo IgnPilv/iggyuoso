@@ -1,0 +1,25 @@
+id: song-white-cockade
+title: The White Cockade
+skills:
+- songs
+steps:
+- explain: |
+    **The White Cockade** · Scottish march and reel, 1700s
+
+    The white ribbon rose was the badge of Bonnie Prince Charlie's followers. The tune went on to be a favourite American fife march.
+  staff:
+    notes: G4:s A4:s  |  B4:e B4:e B4:e A4:s G4:s
+    key: G
+  sound: G4:s A4:s  |  B4:e B4:e B4:e A4:s G4:s  |  B4:e B4:e B4:e G5:e  |  D5:e B4:e B4:e A4:s G4:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 2/4 · Tempo: 72
+- exercise: song-white-cockade-rh
+- exercise: song-white-cockade-lh
+- exercise: song-white-cockade
+- exercise: song-white-cockade-arranged
+- exercise: song-white-cockade-performance
+recap: 'The White Cockade: tune, left hand, together. Come back to it any time; songs are for fun.'

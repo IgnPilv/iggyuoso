@@ -1,0 +1,15 @@
+id: song-finnegans-wake-lh
+title: 'Finnegan''s Wake: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 2/2
+countIn: 1
+left: D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | C3+E3+G3:w |
+  B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:w | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:w | B2+D3+G3:w
+reps: 2
+days: 1

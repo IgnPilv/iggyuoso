@@ -1,0 +1,13 @@
+id: song-o-tannenbaum-tap
+title: 'O Tannenbaum: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 80
+meter: 3/4
+pickup: q
+countIn: 1
+rhythm: x:q | x:e. x:s x:q x:q | x:e. x:s x:q. x:e | x:e x:e x:q x:q | x:q x:q r:e x:e | x:e x:e x:q. x:e | x:e. x:s x:q.
+  x:e | x:e x:e x:q. x:e | x:e. x:s x:q x:q | x:e. x:s x:q x:q | x:e. x:s x:q. x:e | x:e x:e x:q x:q | x:q x:q
+reps: 2
+days: 1

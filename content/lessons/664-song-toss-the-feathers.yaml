@@ -1,0 +1,26 @@
+id: song-toss-the-feathers
+title: Toss the Feathers
+skills:
+- songs
+steps:
+- explain: |
+    **Toss the Feathers** · Irish reel, 1800s
+
+    A reel on a low D drone, with the bounce of the pipes in it.
+  staff:
+    notes: D4:q A4:e D4:e E4:e D4:e A4:e. D4:s  |  D4:q A4:e G4:e E4:e G4:e G4:e. E4:s
+    key: D
+  sound: D4:q A4:e D4:e E4:e D4:e A4:e. D4:s  |  D4:q A4:e G4:e E4:e G4:e G4:e. E4:s  |  D4:q A4:e D4:e E4:e D4:e E4:e G4:e  |  A4:e
+    D5:e D5:e B4:e C#5:e A4:e G4:e E4:e
+- explain: |
+    **Before you play.** D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-toss-the-feathers-rh
+- exercise: song-toss-the-feathers-lh
+- exercise: song-toss-the-feathers
+- exercise: song-toss-the-feathers-arranged
+- exercise: song-toss-the-feathers-performance
+recap: 'Toss the Feathers: tune, left hand, together. Come back to it any time; songs are for fun.'

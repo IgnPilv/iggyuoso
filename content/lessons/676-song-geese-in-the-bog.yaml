@@ -1,0 +1,26 @@
+id: song-geese-in-the-bog
+title: The Geese in the Bog
+skills:
+- songs
+steps:
+- explain: |
+    **The Geese in the Bog** · Irish jig, 1800s
+
+    A cheerful jig, often the first one a session plays.
+  staff:
+    notes: A4:e D5:e D5:e F#5:e D5:e B4:e  |  A4:e F#4:e A4:e A4:e F#4:e A4:e
+    key: D
+  sound: A4:e D5:e D5:e F#5:e D5:e B4:e  |  A4:e F#4:e A4:e A4:e F#4:e A4:e  |  A4:e D5:e D5:e F#5:e D5:e B4:e  |  A4:e F#4:e
+    A4:e B4:q A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-geese-in-the-bog-rh
+- exercise: song-geese-in-the-bog-lh
+- exercise: song-geese-in-the-bog
+- exercise: song-geese-in-the-bog-arranged
+- exercise: song-geese-in-the-bog-performance
+recap: 'The Geese in the Bog: tune, left hand, together. Come back to it any time; songs are for fun.'

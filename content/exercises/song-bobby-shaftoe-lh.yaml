@@ -1,0 +1,15 @@
+id: song-bobby-shaftoe-lh
+title: 'Bobby Shaftoe: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Bb
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: Eb3+G3+Bb3:h | D3+F3+Bb3:h | D3+F3+Bb3:h | C3+F3+A3:h | Bb2+Eb3+G3:h | Bb2+D3+F3:h | A2+C3+F3:h | Bb2+D3+F3:h | Bb2+D3+F3:h
+  | Bb2+D3+F3:h | A2+C3+F3:h | A2+C3+F3:h | Bb2+D3+F3:h | Bb2+D3+F3:h | A2+C3+F3:h | Bb2+D3+F3:h
+reps: 2
+days: 1

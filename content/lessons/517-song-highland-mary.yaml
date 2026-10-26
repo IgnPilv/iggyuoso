@@ -18,6 +18,7 @@ steps:
   callout: |
     Key: G major · Time: 4/4 · Tempo: 88
 - exercise: song-highland-mary-tap
+- exercise: song-highland-mary-by-ear
 - exercise: song-highland-mary-rh
 - exercise: song-highland-mary-lh
 - exercise: song-highland-mary

@@ -2,7 +2,7 @@ id: song-flowers-of-edinburgh-arranged
 title: The Flowers of Edinburgh, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 key: G
 tempo: 88
@@ -20,7 +20,5 @@ left: r:q | G2:e D3:e B2:e D3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e C3:e 
   B3:e B2:e F#3:e D#3:e F#3:e | E3:e B3:e G3:e B3:e B2:e F#3:e D#3:e F#3:e | E3:e B3:e G3:e B3:e B2:e F#3:e D#3:e F#3:e |
   E3:e B3:e G3:e B3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e
   G3:e | G2:e D3:e B2:e D3:e D3:e A3:e F#3:e A3:e | D3+G3+B3:h.
-pedal: r:q | x:h x:h | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:w
-  | x:w | x:h x:h | x:h.
 reps: 3
 days: 2

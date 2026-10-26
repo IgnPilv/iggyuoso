@@ -1,0 +1,26 @@
+id: song-portsmouth
+title: Portsmouth
+skills:
+- songs
+steps:
+- explain: |
+    **Portsmouth** · English hornpipe, 1700s
+
+    A navy hornpipe from the English port. Mike Oldfield made a hit record of it in 1976.
+  staff:
+    notes: E5:e  |  A4:s C#5:s B4:s C#5:s A4:s F#4:s F#4:s E4:s
+    key: A
+  sound: E5:e  |  A4:s C#5:s B4:s C#5:s A4:s F#4:s F#4:s E4:s  |  A4:s C#5:s E5:s A5:s F#5:e F#5:s G#5:s  |  A5:s G#5:s F#5:s
+    E5:s F#5:s E5:s C#5:s A4:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 2/4 · Tempo: 72
+- exercise: song-portsmouth-rh
+- exercise: song-portsmouth-lh
+- exercise: song-portsmouth
+- exercise: song-portsmouth-arranged
+- exercise: song-portsmouth-performance
+recap: 'Portsmouth: tune, left hand, together. Come back to it any time; songs are for fun.'

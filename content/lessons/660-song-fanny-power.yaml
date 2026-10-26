@@ -1,0 +1,26 @@
+id: song-fanny-power
+title: Fanny Power
+skills:
+- songs
+steps:
+- explain: |
+    **Fanny Power** · Turlough O'Carolan, early 1700s
+
+    A "planxty", Carolan's word for a tune in honour of a patron, here the daughter of a family that housed him.
+  staff:
+    notes: A4:q E4:e A4:e B4:e C#5:e  |  C#5:e A4:e F#4:e E4:e F#4:e E4:e
+    key: A
+  sound: A4:q E4:e A4:e B4:e C#5:e  |  C#5:e A4:e F#4:e E4:e F#4:e E4:e  |  A4:e D5:e C#5:e B4:e A4:e C#5:e  |  D5:e E5:e
+    B4:e B4:q A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-fanny-power-rh
+- exercise: song-fanny-power-lh
+- exercise: song-fanny-power
+- exercise: song-fanny-power-arranged
+- exercise: song-fanny-power-performance
+recap: 'Fanny Power: tune, left hand, together. Come back to it any time; songs are for fun.'

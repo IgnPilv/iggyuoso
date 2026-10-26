@@ -14,9 +14,10 @@ steps:
 - explain: |
     **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
 
-    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
   callout: |
     Key: D major · Time: 3/4 · Tempo: 96
+- exercise: song-planxty-irwin-tap
 - exercise: song-planxty-irwin-rh
 - exercise: song-planxty-irwin-lh
 - exercise: song-planxty-irwin

@@ -1,0 +1,22 @@
+id: song-ships-are-sailing-arranged
+title: The Ships Are Sailing, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (rolling arpeggios). Change the pedal with each chord.
+display: staff
+key: Em
+tempo: 60
+tempoLadder: true
+meter: 2/2
+countIn: 1
+right: B4:e E5:e E5:e D5:e B4:e C#5:e D5:e B4:e | A4:e D4:e F#4:e3 E4:e3 D4:e3 A4:e D4:e F#4:e3 E4:e3 D4:e3 | E4:e D#4:e E4:e
+  F#4:e G4:e F#4:e G4:e A4:e | B4:e E5:e E5:e F#5:e G5:e F#5:e E5:e D5:e | B4:e E5:e E5:e D#5:e E5:q E5:e F#5:e | G5:e F#5:e
+  G5:e A5:e B5:e G5:e E5:e G5:e | F#5:e E5:e F#5:e G5:e A5:e F#5:e D5:e F#5:e | G5:e F#5:e G5:e A5:e B5:e G5:e E5:e G5:e |
+  F#5:e E5:e D#5:e F#5:e E5:q E5:e F#5:e | G5:e F#5:e G5:e A5:e B5:e G5:e E5:e G5:e | F#5:e E5:e F#5:e G5:e A5:e F#5:e D5:e
+  F#5:e | G5:q G5:e E5:e F#5:q F#5:e D5:e | E5:e D#5:e E5:e F#5:e G5:e F#5:e E5:e D5:e
+left: E2:q B2:q E3:q B2:q | D2:q A2:q D3:q A2:q | E2:q B2:q E3:q B2:q | E2:q B2:q E3:q B2:q | E2:q B2:q E3:q B2:q | E2:q B2:q
+  E3:q B2:q | D2:q A2:q D3:q A2:q | E2:q B2:q E3:q B2:q | B1:q F#2:q E2:q B2:q | E2:q B2:q E3:q B2:q | D2:q A2:q D3:q A2:q
+  | E2:q B2:q D2:q A2:q | E2+G2+B2:w
+pedal: x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:h x:h | x:w
+reps: 3
+days: 2

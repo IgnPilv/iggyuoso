@@ -1,0 +1,15 @@
+id: song-chester-lh
+title: 'Chester: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: D3:w | C3:w | C3:w | G2:w | G2:w | G2:w | G2:w | D3:w | G2:h C3:h | D3:w | G2:h D3:h | G2:w | G2:w | D3:w | C3:h G2:h
+  | G2:w
+reps: 2
+days: 1

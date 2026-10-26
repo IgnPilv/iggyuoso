@@ -1,0 +1,25 @@
+id: song-flogging-reel
+title: The Flogging Reel
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 2/2
+pickup: q
+countIn: 1
+right: D5:e C5:e | B4:e G4:e G4:e3 F#4:e3 G4:e3 B4:e G4:e D5:e G4:e | B4:e G4:e G4:e3 F#4:e3 G4:e3 B4:e D5:e G5:e D5:e | B4:e
+  G4:e G4:e3 F#4:e3 G4:e3 B4:e D5:e C5:e B4:e | A4:e G4:e F#4:e G4:e A4:e B4:e C5:e B4:e | G5:e F#5:e G5:e D5:e B4:e G4:e
+  B4:e D5:e | G5:e F#5:e G5:e E5:e F#5:e G5:e A5:e F#5:e | G5:e F#5:e G5:e D5:e B4:e C5:e D5:e B4:e | A4:e G4:e F#4:e G4:e
+  A4:e B4:e C5:e A4:e | G5:e F#5:e G5:e E5:e B4:e G4:e B4:e D5:e | G5:e F#5:e G5:e E5:e F#5:e G5:e A5:e F#5:e | B5:e G5:e
+  A5:e F#5:e G5:e E5:e D5:e B4:e | A4:e G4:e F#4:e G4:e A4:e B4:e C5:e A4:e | B4:e D5:e G5:e D5:e B4:e3 C5:e3 D5:e3 G5:e D5:e
+  | B4:e D5:e G5:e D5:e B4:e G4:e G4:e B4:e | A4:e C5:e F5:e D5:e A4:e3 B4:e3 C5:e3 F#5:e C5:e | A4:e C5:e F5:e C5:e A4:e
+  F4:e F#4:e C5:e | B4:e D5:e G5:e D5:e B4:e3 C5:e3 D5:e3 G5:e D5:e | B4:e D5:e E5:e F#5:e G5:e F#5:e G5:e A5:e | B5:e G5:e
+  A5:e F#5:e G5:e E5:e D5:e B4:e | A4:e G4:e F#4:e G4:e A4:e B4:e C5:e A4:e
+left: r:q | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w | C3+E3+G3:h A2+D3+F#3:h | B2+D3+G3:w | A2+D3+F#3:w
+  | B2+D3+G3:w | C3+E3+G3:h A2+D3+F#3:h | B2+D3+G3:w | A2+D3+F#3:w | B2+D3+G3:w | B2+D3+G3:w | A2+D3+F#3:w | A2+D3+F#3:w |
+  B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:h.
+reps: 3
+days: 2

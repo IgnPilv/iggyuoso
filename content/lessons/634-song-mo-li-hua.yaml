@@ -1,0 +1,25 @@
+id: song-mo-li-hua
+title: Mo Li Hua (Jasmine Flower)
+skills:
+- songs
+steps:
+- explain: |
+    **Mo Li Hua (Jasmine Flower)** · Chinese folk song, 1700s (a version from the Essen collection)
+
+    A five-note tune about a jasmine flower, so loved that Puccini put it into his opera "Turandot". Sung in many versions across China.
+  staff:
+    notes: B4:e B4:s D5:s E5:e G5:s E5:s  |  D5:h
+    key: G
+  sound: B4:e B4:s D5:s E5:e G5:s E5:s  |  D5:h  |  B4:e B4:s A4:s B4:s D5:s B4:s A4:s  |  G4:h
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 2/4 · Tempo: 72
+- exercise: song-mo-li-hua-rh
+- exercise: song-mo-li-hua-lh
+- exercise: song-mo-li-hua
+- exercise: song-mo-li-hua-arranged
+- exercise: song-mo-li-hua-performance
+recap: 'Mo Li Hua (Jasmine Flower): tune, left hand, together. Come back to it any time; songs are for fun.'

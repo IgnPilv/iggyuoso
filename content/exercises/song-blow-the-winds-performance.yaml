@@ -1,0 +1,20 @@
+id: song-blow-the-winds-performance
+title: 'Blow the Winds, I-Ho: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Dm
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: C5:q | A4:q D5:q D5:q C5:q | E5:q D5:q D5:q A4:q | C5:q D5:q A4:q F4:q | G4:h. F4:e G4:e | A4:q D5:q D5:q C5:e C5:e
+  | E5:q D5:q D5:q A4:q | C5:q A4:q G4:q E4:q | C5:h. Bb4:e G4:e | F4:q D4:q D4:q E4:q | G4:q A4:q Bb4:q G4:q | F4:q D4:q
+  D4:q E4:q | G4:h r:q r:q | A4:q D5:q D5:q C5:q | E5:q D5:q D5:q Bb4:q | C5:q A4:q G4:q E4:q | D4:h.
+left: r:q | D3:q F3+A3:q A3:q F3+A3:q | D3:q F3+A3:q A3:q F3+A3:q | D3:q F3+A3:q A3:q F3+A3:q | G2:q D3+G3+Bb3:q D3:q D3+G3+Bb3:q
+  | D3:q F3+A3:q A3:q F3+A3:q | D3:q F3+A3:q A3:q F3+A3:q | F2:q C3+F3+A3:q A2:q C#3+E3+A3:q | C3:q E3+G3:q G3:q E3+G3:q |
+  D3:q F3+A3:q A3:q F3+A3:q | A2:q C#3+E3+A3:q G2:q D3+G3+Bb3:q | D3:q F3+A3:q A3:q F3+A3:q | G2:q D3+G3+Bb3:q D3:q D3+G3+Bb3:q
+  | D3:q F3+A3:q A3:q F3+A3:q | G2:q D3+G3+Bb3:q D3:q D3+G3+Bb3:q | F2:q C3+F3+A3:q A2:q C#3+E3+A3:q | D3+F3+A3:h.
+reps: 2
+days: 2

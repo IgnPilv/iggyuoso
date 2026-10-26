@@ -1,0 +1,19 @@
+id: song-aennchen-von-tharau-arranged
+title: Ännchen von Tharau, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:q. A4:e G4:q | G4:q C5:q C5:q | D5:q. E5:e D5:q | C5:h r:q | B4:q B4:q B4:q | D5:q. C5:e B4:q | A4:q. B4:e A4:q
+  | G4:h r:q | G4:q. A4:e G4:q | G4:q C5:q C5:q | D5:q. E5:e D5:q | C5:h r:q | B4:q B4:q B4:q | D5:q. C5:e B4:q | A4:q. B4:e
+  A4:q | G4:h r:q | G4:q. G4:e A4:q | B4:q G4:q A4:q | B4:q B4:q C5:q | D5:h r:q | C5:q D5:q E5:q | F5:q. E5:e D5:q | C5:q
+  D5:q B4:q | C5:h r:q
+left: C3+E3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | B2+D3+G3:h. | A2+C3+F3:h. | C3+E3+G3:h. | C3+E3+G3:h.
+  | C3+E3+G3:h. | B2+D3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | B2+D3+G3:h. | A2+C3+F3:h. | C3+E3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h.
+  | B2+D3+G3:h. | B2+D3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | B2+D3+G3:h. | C3+E3+G3:h.
+reps: 3
+days: 2

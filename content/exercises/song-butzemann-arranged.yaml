@@ -1,0 +1,21 @@
+id: song-butzemann-arranged
+title: Es tanzt ein Bi-Ba-Butzemann, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords).
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: D4:e | G4:q B4:q | D5:q G5:q | E5:e. E5:s E5:e E5:e | D5:e C5:e B4:e A4:e | G4:e B4:e D5:e D4:e | G4:q B4:q | D5:q
+  G5:q | E5:e. E5:s E5:e E5:e | D5:e C5:e B4:e A4:e | G4:q r:e B4:e | A4:e B4:e C5:e A4:e | B4:e C5:e D5:e B4:e | A4:e B4:e
+  C5:e A4:e | B4:e C5:e D5:e D4:e | G4:q B4:q | D5:q G5:q | E5:e. E5:s E5:e E5:e | D5:e C5:e B4:e A4:e | G4:q r:e
+left: r:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e |
+  G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | D3:e A3:e
+  F#3:e A3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e
+  | C3:e G3:e E3:e G3:e | G2:e D3:e B2:e D3:e | D3+G3+B3:q.
+reps: 3
+days: 2

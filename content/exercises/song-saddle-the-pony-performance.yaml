@@ -1,0 +1,25 @@
+id: song-saddle-the-pony-performance
+title: 'Saddle the Pony: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: A
+tempo: 56
+meter: 6/8
+pickup: e
+countIn: 1
+right: A4:s B4:s | C#5:e A4:e A4:e E5:e A4:e A4:e | C#5:e B4:e C#5:e E5:e A4:e A4:e | C#5:e A4:e A4:e E5:e A4:e A4:e | D5:e
+  B4:e G#4:e B4:e C#5:e D5:e | C#5:e A4:e A4:e E5:e A4:e A4:e | C#5:e B4:e C#5:e E5:e F#5:e G#5:e | A5:e G#5:e F#5:e G#5:e
+  F#5:e E5:e | D5:e B4:e G#4:e B4:e C#5:e D5:e | E5:s A5:h~ A5:s F#5:e | G#5:e E5:e E5:e F#5:e D5:e D5:e | G#5:e E5:e E5:e
+  E5:s A5:q~ A5:s~ | A5:q F#5:e G#5:e F#5:e E5:e | D5:e B4:e G#4:e B4:e C#5:e D5:e | E5:s A5:h~ A5:s F#5:e | G#5:e E5:e E5:e
+  F#5:e D5:e D5:e | G#5:e E5:e E5:e D5:e E5:e F#5:e | G#5:e F#5:e E5:e D5:e B4:e G#4:e | B4:e C#5:e D5:e r:q
+left: r:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | E3:e B3:e
+  G#3:e E3:e B3:e G#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e E3:e B3:e G#3:e
+  | E3:e B3:e G#3:e E3:e B3:e G#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | E3:e B3:e G#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e
+  A2:e E3:e C#3:e | D3:e A3:e F#3:e E3:e B3:e G#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e |
+  E3:e B3:e G#3:e D3:e A3:e F#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | E3:e B3:e G#3:e E3:e B3:e G#3:e | A2+C#3+E3:h~ A2+C#3+E3:e
+pedal: r:e | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:h. | x:h.
+  | x:q. x:q. | x:h. | x:h. | x:h x:e
+reps: 2
+days: 2

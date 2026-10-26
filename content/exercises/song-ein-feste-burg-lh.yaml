@@ -1,0 +1,15 @@
+id: song-ein-feste-burg-lh
+title: 'A Mighty Fortress Is Our God: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | C3:h G2:h | F2:h C3:h | G2:w | G2:h C3:h | C3:h G2:h | F2:h C3:h | G2:w | G2:h C3:h | C3:w | C3:w | G2:w | C3:w
+  | F2:w | C3:w | F2:w | C3:w | G2:w | C3:h.
+reps: 2
+days: 1

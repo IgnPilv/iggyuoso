@@ -1,0 +1,25 @@
+id: song-pipe-on-the-hob
+title: The Pipe on the Hob
+skills:
+- songs
+steps:
+- explain: |
+    **The Pipe on the Hob** · Irish jig, 1800s
+
+    The pipe is a clay tobacco pipe, left warming on the hob by the fire.
+  staff:
+    notes: B4:e  |  C5:q. E5:e D5:e C5:e
+    key: Am
+  sound: B4:e  |  C5:q. E5:e D5:e C5:e  |  E5:e D5:e C5:e B4:e A4:e G4:e  |  A4:e B4:e A4:e G5:e r:e E5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 6/8 · Tempo: 56
+- exercise: song-pipe-on-the-hob-rh
+- exercise: song-pipe-on-the-hob-lh
+- exercise: song-pipe-on-the-hob
+- exercise: song-pipe-on-the-hob-arranged
+- exercise: song-pipe-on-the-hob-performance
+recap: 'The Pipe on the Hob: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,19 @@
+id: song-saddle-the-pony-rh
+title: 'Saddle the Pony: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: A
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: A4:s B4:s | C#5:e A4:e A4:e E5:e A4:e A4:e | C#5:e B4:e C#5:e E5:e A4:e A4:e | C#5:e A4:e A4:e E5:e A4:e A4:e | D5:e
+  B4:e G#4:e B4:e C#5:e D5:e | C#5:e A4:e A4:e E5:e A4:e A4:e | C#5:e B4:e C#5:e E5:e F#5:e G#5:e | A5:e G#5:e F#5:e G#5:e
+  F#5:e E5:e | D5:e B4:e G#4:e B4:e C#5:e D5:e | E5:s A5:h~ A5:s F#5:e | G#5:e E5:e E5:e F#5:e D5:e D5:e | G#5:e E5:e E5:e
+  E5:s A5:q~ A5:s~ | A5:q F#5:e G#5:e F#5:e E5:e | D5:e B4:e G#4:e B4:e C#5:e D5:e | E5:s A5:h~ A5:s F#5:e | G#5:e E5:e E5:e
+  F#5:e D5:e D5:e | G#5:e E5:e E5:e D5:e E5:e F#5:e | G#5:e F#5:e E5:e D5:e B4:e G#4:e | B4:e C#5:e D5:e r:q
+reps: 2
+days: 1

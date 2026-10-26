@@ -1,0 +1,17 @@
+id: song-eileen-aroon-rh
+title: 'Eileen Aroon: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: D
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: D5:e B4:e | A4:q B4:q D5:e B4:e | D5:q E5:q F#5:q | F#4:q A4:q E5:e D5:e | B4:h D5:e B4:e | A4:q B4:q D5:e B4:e | D5:q
+  E5:q F#5:q | F#4:q A4:q B4:e D5:e | D5:h D5:e F#5:e | G5:e G5:e F#5:q F#5:e E5:e | F#5:e A5:e A5:q F#5:e E5:e | D5:e D5:e
+  E5:q D5:e B4:e | A4:h F#5:q | A5:q F#5:e E5:e D5:e B4:e | D5:e E5:e F#5:h | F#4:q A4:q B4:e D5:e | D5:h
+reps: 2
+days: 1

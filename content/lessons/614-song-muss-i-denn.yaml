@@ -1,0 +1,25 @@
+id: song-muss-i-denn
+title: Muss i denn
+skills:
+- songs
+steps:
+- explain: |
+    **Muss i denn** · Swabian folk song, arranged by Friedrich Silcher, 1827
+
+    A young man must leave his town and his sweetheart, and promises to come back. A cheerful tune for a sad goodbye.
+  staff:
+    notes: F4:s G4:s  |  A4:e A4:s C5:s Bb4:e Bb4:s D5:s
+    key: F
+  sound: F4:s G4:s  |  A4:e A4:s C5:s Bb4:e Bb4:s D5:s  |  C5:e C5:s Bb4:s A4:q  |  C5:e C5:s Bb4:s A4:e A4:s C5:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. F major: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 2/4 · Tempo: 72
+- exercise: song-muss-i-denn-rh
+- exercise: song-muss-i-denn-lh
+- exercise: song-muss-i-denn
+- exercise: song-muss-i-denn-arranged
+- exercise: song-muss-i-denn-performance
+recap: 'Muss i denn: tune, left hand, together. Come back to it any time; songs are for fun.'

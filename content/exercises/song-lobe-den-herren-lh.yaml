@@ -1,0 +1,15 @@
+id: song-lobe-den-herren-lh
+title: 'Praise to the Lord, the Almighty: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: G2:h. | G2:h. | D3:h. | C3:h. | D3:h. | G2:h. | G2:h. | G2:h. | D3:h. | C3:h. | D3:h. | G2:h. | G2:h. | C3:h. | G2:h.
+  | G2:h. | D3:h. | D3:h. | G2:h. | D3:h. | G2:h.
+reps: 2
+days: 1

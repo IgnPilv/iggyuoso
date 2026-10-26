@@ -1,0 +1,21 @@
+id: song-ich-bin-ein-musikante
+title: Ich bin ein Musikante
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: D4:e | G4:e G4:e B4:e B4:e | D5:q B4:e B4:e | C5:e C5:e A4:e A4:e | G4:q r:e D4:e | G4:e G4:e B4:e B4:e | D5:q B4:e
+  B4:e | C5:e C5:e A4:e A4:e | G4:q r:e B4:e | C5:q A4:q | B4:q G4:e B4:e | C5:e C5:e A4:q | B4:q G4:e r:e | C5:q A4:q | B4:q
+  G4:e r:e | C5:q A4:q | B4:q G4:e D4:e | G4:e. G4:s G4:e B4:e | D5:e. D5:s D5:e B4:e | C5:e. C5:s C5:e A4:e | G4:q r:e D4:e
+  | G4:e. G4:s G4:e B4:e | D5:e. D5:s D5:e B4:e | C5:e. C5:s C5:e A4:e | G4:q r:e
+left: r:e | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+F#3+A3:h
+  | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+G3+B3:h | D3+G3+B3:h
+  | D3+F#3+A3:h | D3+G3+B3:h | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:q.
+reps: 3
+days: 2

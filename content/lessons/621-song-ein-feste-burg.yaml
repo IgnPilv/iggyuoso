@@ -1,0 +1,26 @@
+id: song-ein-feste-burg
+title: A Mighty Fortress Is Our God
+skills:
+- songs
+steps:
+- explain: |
+    **A Mighty Fortress Is Our God** · Martin Luther, about 1529
+
+    "Ein feste Burg": Luther's own hymn, the song of the Reformation. Bach wrote a cantata on it and Mendelssohn put it in a symphony.
+  staff:
+    notes: C5:q  |  C5:q C5:q G4:q B4:q
+  sound: C5:q  |  C5:q C5:q G4:q B4:q  |  C5:e B4:e A4:q G4:q C5:q  |  B4:q A4:q G4:q A4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-ein-feste-burg-tap
+- exercise: song-ein-feste-burg-by-ear
+- exercise: song-ein-feste-burg-rh
+- exercise: song-ein-feste-burg-lh
+- exercise: song-ein-feste-burg
+- exercise: song-ein-feste-burg-arranged
+- exercise: song-ein-feste-burg-performance
+recap: 'A Mighty Fortress Is Our God: tune, left hand, together. Come back to it any time; songs are for fun.'

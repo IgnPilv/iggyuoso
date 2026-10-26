@@ -1,0 +1,20 @@
+id: song-ships-are-sailing
+title: The Ships Are Sailing
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Em
+tempo: 60
+tempoLadder: true
+meter: 2/2
+countIn: 1
+right: B4:e E5:e E5:e D5:e B4:e C#5:e D5:e B4:e | A4:e D4:e F#4:e3 E4:e3 D4:e3 A4:e D4:e F#4:e3 E4:e3 D4:e3 | E4:e D#4:e E4:e
+  F#4:e G4:e F#4:e G4:e A4:e | B4:e E5:e E5:e F#5:e G5:e F#5:e E5:e D5:e | B4:e E5:e E5:e D#5:e E5:q E5:e F#5:e | G5:e F#5:e
+  G5:e A5:e B5:e G5:e E5:e G5:e | F#5:e E5:e F#5:e G5:e A5:e F#5:e D5:e F#5:e | G5:e F#5:e G5:e A5:e B5:e G5:e E5:e G5:e |
+  F#5:e E5:e D#5:e F#5:e E5:q E5:e F#5:e | G5:e F#5:e G5:e A5:e B5:e G5:e E5:e G5:e | F#5:e E5:e F#5:e G5:e A5:e F#5:e D5:e
+  F#5:e | G5:q G5:e E5:e F#5:q F#5:e D5:e | E5:e D#5:e E5:e F#5:e G5:e F#5:e E5:e D5:e
+left: E3+G3+B3:w | D3+F#3+A3:w | E3+G3+B3:w | E3+G3+B3:w | E3+G3+B3:w | E3+G3+B3:w | D3+F#3+A3:w | E3+G3+B3:w | D#3+F#3+B3:h
+  E3+G3+B3:h | E3+G3+B3:w | D3+F#3+A3:w | E3+G3+B3:h D3+F#3+A3:h | E3+G3+B3:w
+reps: 3
+days: 2

@@ -1,0 +1,21 @@
+id: song-hulls-victory
+title: Hull's Victory
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: C5:e | F5:s C5:s F5:s A5:s F5:s C5:s F5:s G5:s | A5:s G5:s F5:s E5:s F5:e A4:s Bb4:s | C5:e C5:s D5:s C5:e C5:s Bb4:s
+  | A4:s Bb4:s G4:s A4:s F4:e C5:e | F5:s C5:s F5:s A5:s F5:s C5:s F5:s A5:s | G5:e G5:e G5:e A5:s G5:s | F5:s E5:s D5:s C5:s
+  B4:s C5:s D5:s Bb4:s | C5:e C5:e C5:e C5:e | F5:s E5:s F5:s G5:s A5:s G5:s F5:s E5:s | D5:e Bb4:e Bb4:e E5:s F5:s | G5:s
+  F#5:s G5:s A5:s Bb5:s A5:s G5:s F5:s | E5:e C5:e C5:e D5:s E5:s | F5:s C5:s F5:s A5:s F5:s C5:s F5:s A5:s | G5:s C5:s G5:s
+  Bb5:s G5:s C5:s G5:s Bb5:s | A5:s G5:s F5:s A5:s G5:s F5:s E5:s G5:s | F5:e F5:e F5:e
+left: r:e | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+E3+G3:h | Bb2+D3+F3:h | A2+C3+F3:h | A2+C3+F3:h
+  | Bb2+D3+F3:h | C3+E3+G3:h | C3+E3+G3:h | C3+F3+A3:h | C3+E3+Bb3:h | C3+F3+A3:q C3+E3+G3:q | C3+F3+A3:q.
+reps: 3
+days: 2

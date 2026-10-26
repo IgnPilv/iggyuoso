@@ -1,0 +1,24 @@
+id: song-oak-and-ash-arranged
+title: The Oak and the Ash, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+key: Gm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q G4:e A4:e Bb4:q A4:e G4:e | A4:q A4:e Bb4:e C5:q Bb4:e A4:e | G4:q G4:e A4:e Bb4:q A4:e G4:e | F#4:q D5:e.
+  C#5:s D5:q D5:e Eb5:e | F5:q D5:e C5:e Bb4:q A4:e Bb4:e | C5:q A4:e G4:e F4:q G4:e A4:e | Bb4:q A4:e G4:e F#4:e G4:e A4:e
+  A4:e | G4:q D5:e. C#5:s D5:q D5:e Eb5:e | F5:q D5:e C5:e Bb4:q A4:e Bb4:e | C5:e Bb4:e A4:e G4:e F4:q G4:e A4:e | Bb4:q
+  A4:e G4:e F#4:e G4:e A4:e A4:e | G4:q G4:e F#4:e G4:q
+left: r:q | G2:e D3:e Bb2:e D3:e G2:e D3:e Bb2:e D3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e Bb2:e D3:e G2:e
+  D3:e Bb2:e D3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | Bb2:e F3:e D3:e F3:e Bb2:e F3:e D3:e F3:e | F2:e C3:e A2:e
+  C3:e F2:e C3:e A2:e C3:e | G2:e D3:e Bb2:e D3:e D3:e A3:e F#3:e A3:e | G2:e D3:e Bb2:e D3:e G2:e D3:e Bb2:e D3:e | Bb2:e
+  F3:e D3:e F3:e Bb2:e F3:e D3:e F3:e | F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | G2:e D3:e Bb2:e D3:e D3:e A3:e F#3:e A3:e
+  | D3+G3+Bb3:h.
+pedal: r:q | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:h x:h | x:h.
+reps: 3
+days: 2

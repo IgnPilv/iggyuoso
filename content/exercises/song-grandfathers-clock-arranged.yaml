@@ -1,0 +1,27 @@
+id: song-grandfathers-clock-arranged
+title: My Grandfather's Clock, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: A4:e | D5:e C#5:s D5:s E5:e D5:s E5:s | F#5:e G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s | D5:s E5:s F#5:s
+  G5:s A5:e A4:s A4:s | D5:e C#5:s D5:s E5:e D5:s E5:s | F#5:s F#5:s G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s
+  | D5:q r:e D5:s F#5:s | A5:s G5:s F#5:s E5:s D5:e D5:e | E5:s D5:s C#5:s B4:s A4:e D5:s F#5:s | A5:e F#5:e D5:e C#5:s D5:s
+  | E5:q r:e A4:s A4:s | D5:e r:e E5:e r:e | F#5:s F#5:s G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s | D5:q r:e
+  A4:s A4:s | D5:e A4:s A4:s B4:e A4:e | F#4:e A4:e F#4:e A4:e | D5:s D5:s A4:s A4:s B4:e A4:e | F#4:e A4:e F#4:e A4:e | D5:e
+  r:e E5:e r:e | F#5:s F#5:s G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s | D5:q r:e
+left: r:e | D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q E3+G3+B3:q | D3+F#3+A3:q C#3+E3+A3:q | D3:e A3:e F#3:e A3:e | D3+F#3+A3:q
+  C#3+E3+A3:q | D3+F#3+A3:q E3+G3+B3:q | D3+F#3+A3:q C#3+E3+A3:q | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e
+  F#3:e A3:e | D3:e A3:e F#3:e A3:e | C#3:e A3:e E3:e A3:e | D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q E3+G3+B3:q | D3+F#3+A3:q
+  C#3+E3+A3:q | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e
+  A3:e | D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q E3+G3+B3:q | D3+F#3+A3:q C#3+E3+A3:q | D3+F#3+A3:q.
+pedal: r:e | x:q x:q | x:q x:q | x:q x:q | x:h | x:q x:q | x:q x:q | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:q
+  x:q | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:q x:q | x:q x:q | x:q.
+reps: 3
+days: 2

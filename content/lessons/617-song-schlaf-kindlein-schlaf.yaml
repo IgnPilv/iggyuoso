@@ -1,0 +1,27 @@
+id: song-schlaf-kindlein-schlaf
+title: Schlaf, Kindlein, schlaf
+skills:
+- songs
+steps:
+- explain: |
+    **Schlaf, Kindlein, schlaf** · German lullaby, 1700s
+
+    "Sleep, little one, sleep: your father minds the sheep". In English it is "Sleep, baby, sleep".
+  staff:
+    notes: A4:q G4:e G4:e  |  F4:q r:e F4:s A4:s
+    key: F
+  sound: A4:q G4:e G4:e  |  F4:q r:e F4:s A4:s  |  C5:e C5:e Bb4:e Bb4:e  |  A4:q r:e A4:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. F major: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 2/4 · Tempo: 72
+- exercise: song-schlaf-kindlein-schlaf-tap
+- exercise: song-schlaf-kindlein-schlaf-by-ear
+- exercise: song-schlaf-kindlein-schlaf-rh
+- exercise: song-schlaf-kindlein-schlaf-lh
+- exercise: song-schlaf-kindlein-schlaf
+- exercise: song-schlaf-kindlein-schlaf-arranged
+- exercise: song-schlaf-kindlein-schlaf-performance
+recap: 'Schlaf, Kindlein, schlaf: tune, left hand, together. Come back to it any time; songs are for fun.'

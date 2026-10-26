@@ -1,0 +1,17 @@
+id: song-ricketts-hornpipe-lh
+title: 'Rickett''s Hornpipe: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+left: r:e | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:q C#3+E3+A3:q |
+  D3+F#3+A3:h | D3+F#3+A3:h | E3+G3+B3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:q C#3+E3+A3:q
+  | D3+F#3+A3:q.
+reps: 2
+days: 1

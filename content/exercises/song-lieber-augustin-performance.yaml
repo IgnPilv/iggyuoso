@@ -1,0 +1,19 @@
+id: song-lieber-augustin-performance
+title: 'O du lieber Augustin: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 96
+meter: 3/4
+countIn: 1
+right: D5:q. E5:e D5:e C5:e | B4:q G4:q G4:q | A4:q D4:q D4:q | B4:q G4:q G4:q | D5:q. E5:e D5:e C5:e | B4:q G4:q G4:q | A4:q
+  D4:q D4:q | G4:q r:h | A4:q D4:q D4:q | B4:q G4:q G4:q | A4:q D4:q D4:q | B4:q G4:q G4:q | D5:q. E5:e D5:e C5:e | B4:q G4:q
+  G4:q | A4:q D4:q D4:q | G4:q r:h
+left: D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | G2:q D3+G3+B3:q
+  D3+G3+B3:q | G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q |
+  G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3+G3+B3:q | G2:q D3+G3+B3:q
+  D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | D3+G3+B3:h.
+reps: 2
+days: 2

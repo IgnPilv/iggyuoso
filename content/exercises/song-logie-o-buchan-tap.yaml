@@ -1,0 +1,15 @@
+id: song-logie-o-buchan-tap
+title: 'Logie o'' Buchan: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 96
+meter: 3/4
+pickup: q
+countIn: 1
+rhythm: x:e x:e | x:q. x:e x:q | x:q x:q x:q | x:q x:q x:q | x:h x:e x:e | x:q. x:e x:q | x:q x:q x:q | x:q x:q x:q | x:h
+  x:e x:e | x:q. x:e x:q | x:q x:q x:q | x:q x:q x:q | x:h x:e x:e | x:q. x:e x:q | x:q x:q x:q | x:q x:q x:q | x:h x:e x:e
+  | x:q. x:e x:q | x:q x:q x:q | x:q x:q x:q | x:h x:e x:e | x:q. x:e x:q | x:q x:q x:q | x:q x:e x:e x:e x:e | x:h x:e x:e
+  | x:q. x:e x:q | x:q x:q x:q | x:q x:q x:q | x:h x:e x:e | x:q. x:e x:q | x:q x:q x:q | x:q x:q x:q | x:h
+reps: 2
+days: 1
