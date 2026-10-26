@@ -1,6 +1,7 @@
 # Documents
 
-Start with **[vision.md](vision.md)** (what iggyuoso is and where it is going) and the repository's
+Start with **[vision.md](vision.md)** (what iggyuoso is and where it is going), then
+**[roadmaps.md](roadmaps.md)** (three proposed directions for what comes next, for Ignas to pick) and the repository's
 `CLAUDE.md` (the brief and every decision so far).
 
 ## How the app works (developer docs)

@@ -1059,3 +1059,12 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   its **own** Supabase project's URL and anon / publishable key as secrets `SUPABASE_URL` / `SUPABASE_ANON_KEY`
   (never the service_role key), and can set a repository variable `SITE_URL` (read by `vite.config.ts`, passed
   by `pages.yml`; unset = ours) for its canonical link, share cards and sitemap. No full self-hosting guide.
+- 2026-10-26: Three improvement roadmaps proposed (Ignas: "come up with 3 more plans, roadmaps for
+  improvement"), in `docs/roadmaps.md`, none built yet: **A** easy to start and come back to
+  (first-run path, a home led by one button, the tree on a phone, weekly goal, session summary,
+  hearing your first try against your latest, milestone moments); **B** hear yourself like a
+  teacher (per-note timing kept over weeks, bar heatmaps, release / legato / balance / pedal
+  scoring, weak-spot drills in Today's practice); **C** from a project to a product (Google
+  sign-in, installable offline app, lighter start, private usage counts, privacy page, paid extras
+  through a merchant of record with server-gated songs, a real second module, a second language).
+  Suggested order A1, C1, B1. Ignas picks.
