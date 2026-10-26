@@ -42,7 +42,8 @@ Two GitHub Actions workflows in `.github/workflows/`:
   `npm run build`. A pull request is only merged when this is green.
 - `pages.yml`: on every push to `main` (or by hand: Actions → Deploy to GitHub Pages → Run
   workflow): test, build with the account server's address and key from the repository secrets
-  `SUPABASE_URL` / `SUPABASE_ANON_KEY`, and publish `dist/` to GitHub Pages at
+  `SUPABASE_URL` / `SUPABASE_ANON_KEY` (without them the build is guest only) and the optional
+  repository variable `SITE_URL`, and publish `dist/` to GitHub Pages at
   https://ignpilv.github.io/iggyuoso/.
 
 Pull requests labelled `preview` are also built into the same deployment, each at

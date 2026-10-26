@@ -34,7 +34,8 @@ the drawn page, but most link previews (WhatsApp, Slack, Facebook, X) and some s
 where the address goes (canonical, share tags, picture, structured data) and the build fills it in.
 The build also writes `robots.txt` (which pages crawlers may visit, and where the sitemap is) and
 `sitemap.xml` (the list of pages; just the home page, since the rest are `#` addresses). When the
-site gets its own domain, change that one line.
+site gets its own domain, change that one line. A fork can leave it and set a repository variable
+`SITE_URL` instead, which `pages.yml` passes to the build.
 
 Note: crawlers read `robots.txt` only at the very root of a host (`https://ignpilv.github.io/robots.txt`),
 so on GitHub Pages ours (under `/iggyuoso/`) is not read yet. Nothing is blocked either way, and the

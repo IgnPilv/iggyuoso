@@ -41,6 +41,8 @@ jobs:
           # set: the app then runs as a guest only.
           VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL || vars.SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY || vars.SUPABASE_ANON_KEY }}
+          # The site's public address (vite.config.ts), for a copy hosted elsewhere. Unset = ours.
+          SITE_URL: ${{ vars.SITE_URL }}
       - name: Build previews
         env:
           GH_TOKEN: ${{ github.token }}
