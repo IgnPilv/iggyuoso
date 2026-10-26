@@ -1,0 +1,26 @@
+id: song-liverpool-hornpipe
+title: The Liverpool Hornpipe
+skills:
+- songs
+steps:
+- explain: |
+    **The Liverpool Hornpipe** · English and Irish hornpipe, 1800s
+
+    A sailors' hornpipe from the great port, played on both sides of the Irish Sea.
+  staff:
+    notes: A4:e G4:e  |  F#4:e D4:e F#4:e A4:e D5:e F#5:e A5:e F#5:e
+    key: D
+  sound: A4:e G4:e  |  F#4:e D4:e F#4:e A4:e D5:e F#5:e A5:e F#5:e  |  G5:e F#5:e E5:e C#5:e D5:e C#5:e B4:e A4:e  |  G4:q
+    B4:e G4:e F#4:q A4:e F#4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-liverpool-hornpipe-rh
+- exercise: song-liverpool-hornpipe-lh
+- exercise: song-liverpool-hornpipe
+- exercise: song-liverpool-hornpipe-arranged
+- exercise: song-liverpool-hornpipe-performance
+recap: 'The Liverpool Hornpipe: tune, left hand, together. Come back to it any time; songs are for fun.'

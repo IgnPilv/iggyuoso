@@ -1,0 +1,15 @@
+id: song-horch-was-kommt-rh
+title: 'Horch, was kommt von draußen rein: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C4:e D4:e E4:e F4:e | G4:e A4:e G4:q | F4:e D4:e B4:e. A4:s | G4:e E4:e C5:q | C4:e D4:e E4:e F4:e | G4:e A4:e G4:q
+  | F4:e D4:e B4:e D5:e | C5:q r:q | A4:e F4:e C5:e B4:s A4:s | G4:e E4:e G4:q | F4:e D4:e B4:e. A4:s | G4:e E4:e C5:q | A4:e
+  F4:e C5:e B4:s A4:s | G4:e E4:e G4:q | F4:e D4:e B4:e D5:e | C5:q r:q
+reps: 2
+days: 1

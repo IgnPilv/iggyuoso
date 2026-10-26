@@ -1,0 +1,20 @@
+id: song-boys-of-bluehill-rh
+title: 'The Boys of Bluehill: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: F#4:s A4:s | B4:s A4:s F#4:s A4:s D4:e F#4:s A4:s | B4:s A4:s B4:s D5:s E5:e D5:s E5:s | F#5:s A5:s A5:s F#5:s E5:s
+  G5:s F#5:s E5:s | D5:s F#5:s E5:s D5:s B4:e D5:s B4:s | B4:s A4:s F#4:s A4:s D4:e F#4:s A4:s | B4:s A4:s B4:s D5:s E5:e
+  D5:s E5:s | F#5:s A5:s A5:s F#5:s E5:s G5:s F#5:s E5:s | D5:e D5:s D5:s D5:e F#5:s G5:s | A5:s F#5:s D5:s F#5:s A5:e G5:s
+  F#5:s | G5:s F#5:s G5:s A5:s B5:e A5:s G5:s | F#5:s A5:s A5:s F#5:s E5:s G5:s F#5:s E5:s | D5:s F#5:s E5:s D5:s B4:e D5:s
+  B4:s | B4:s A4:s F#4:s A4:s D4:e F#4:s A4:s | B4:s A4:s B4:s D5:s E5:e D5:s E5:s | F#5:s A5:s A5:s F#5:s E5:s G5:s F#5:s
+  E5:s | D5:e D5:s D5:s D5:e
+reps: 2
+days: 1

@@ -2,7 +2,7 @@ id: song-princess-royal-arranged
 title: The Princess Royal, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 key: G
 tempo: 88
@@ -28,8 +28,5 @@ left: r:q | G2:q D3:q G2:q G2:q | G2:q D3:q G2:q G2:q | C3:e G3:e E3:e G3:e C3:e
   F#3:e A3:e | E3:e B3:e G3:e B3:e E3:e B3:e G3:e B3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e
   G3:e E3:e G3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e A2:e E3:e C3:e E3:e | A2:e E3:e C3:e E3:e
   D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e G2:e D3:e B2:e D3:e | D3+G3+B3:h.
-pedal: r:q | x:q x:q x:q x:q | x:q x:q x:q x:q | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:h x:h | x:h x:h
-  | x:w | x:h x:h | x:h x:h | x:w | x:w | x:h x:h | x:w | x:w | x:h x:h | x:h x:h | x:h x:h | x:w | x:w | x:w | x:w | x:h
-  x:h | x:h x:h | x:h x:h | x:h x:h | x:h.
 reps: 3
 days: 2

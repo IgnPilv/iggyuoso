@@ -1,0 +1,18 @@
+id: song-aennchen-von-tharau
+title: Ännchen von Tharau
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:q. A4:e G4:q | G4:q C5:q C5:q | D5:q. E5:e D5:q | C5:h r:q | B4:q B4:q B4:q | D5:q. C5:e B4:q | A4:q. B4:e A4:q
+  | G4:h r:q | G4:q. A4:e G4:q | G4:q C5:q C5:q | D5:q. E5:e D5:q | C5:h r:q | B4:q B4:q B4:q | D5:q. C5:e B4:q | A4:q. B4:e
+  A4:q | G4:h r:q | G4:q. G4:e A4:q | B4:q G4:q A4:q | B4:q B4:q C5:q | D5:h r:q | C5:q D5:q E5:q | F5:q. E5:e D5:q | C5:q
+  D5:q B4:q | C5:h r:q
+left: C3:h. | C3:h. | G2:h. | C3:h. | G2:h. | G2:h. | F2:h. | C3:h. | C3:h. | C3:h. | G2:h. | C3:h. | G2:h. | G2:h. | F2:h.
+  | C3:h. | C3:h. | G2:h. | G2:h. | G2:h. | C3:h. | G2:h. | G2:h. | C3:h.
+reps: 3
+days: 2

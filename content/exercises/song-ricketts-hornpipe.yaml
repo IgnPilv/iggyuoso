@@ -1,0 +1,23 @@
+id: song-ricketts-hornpipe
+title: Rickett's Hornpipe
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: A4:s3 B4:s3 C#5:s3 | D5:s C#5:s D5:s A4:s F#4:s A4:s D5:s F#5:s | E5:s D5:s C#5:s B4:s A4:e G5:e | F#5:s G5:s A5:s
+  F#5:s G5:s F#5:s E5:s D5:s | E5:s D5:s C#5:s B4:s A4:s G5:s F#5:s E5:s | D5:s C#5:s D5:s A4:s F#4:s A4:s D5:s F#5:s | E5:s
+  D5:s C#5:s B4:s A4:e G5:e | F#5:s A5:s F#5:s D5:s E5:s G5:s E5:s C#5:s | D5:e D5:e D5:e F#5:s G5:s | A5:s F#5:s A5:s F#5:s
+  D5:e G5:s A5:s | B5:s G5:s B5:s G5:s E5:e F#5:s G5:s | A5:s F#5:s B5:s A5:s G5:s F#5:s E5:s D5:s | E5:s D5:s C#5:s B4:s
+  A4:s G5:s F#5:s E5:s | D5:s C#5:s D5:s A4:s F#4:s A4:s D5:s F#5:s | E5:s D5:s C#5:s B4:s A4:e G5:e | F#5:s A5:s F#5:s D5:s
+  E5:s G5:s E5:s C#5:s | D5:e D5:e D5:e
+left: r:e | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:q C#3+E3+A3:q |
+  D3+F#3+A3:h | D3+F#3+A3:h | E3+G3+B3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:q C#3+E3+A3:q
+  | D3+F#3+A3:q.
+reps: 3
+days: 2

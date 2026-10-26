@@ -1,0 +1,26 @@
+id: song-kitty-of-coleraine
+title: Kitty of Coleraine
+skills:
+- songs
+steps:
+- explain: |
+    **Kitty of Coleraine** · Irish song, about 1810
+
+    Kitty drops her pitcher of buttermilk, and the young man who comforts her steals a kiss.
+  staff:
+    notes: A4:s G4:s  |  F#4:e A4:e D5:e D5:e F#5:e A5:e
+    key: D
+  sound: A4:s G4:s  |  F#4:e A4:e D5:e D5:e F#5:e A5:e  |  E5:e G5:s F#5:s E5:s D5:s C#5:e E5:e A4:e  |  D5:e F#5:e A5:e D5:e
+    G5:e B5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-kitty-of-coleraine-rh
+- exercise: song-kitty-of-coleraine-lh
+- exercise: song-kitty-of-coleraine
+- exercise: song-kitty-of-coleraine-arranged
+- exercise: song-kitty-of-coleraine-performance
+recap: 'Kitty of Coleraine: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,26 @@
+id: song-daisy-bell
+title: Daisy Bell
+skills:
+- songs
+steps:
+- explain: |
+    **Daisy Bell** · Harry Dacre, 1892
+
+    "A bicycle built for two". In 1961 it became the first song sung by a computer, which is why the computer HAL sings it in the film "2001".
+  staff:
+    notes: F#5:e G5:e  |  A5:h.
+    key: D
+  sound: F#5:e G5:e  |  A5:h.  |  F#5:h.  |  D5:h.
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 96
+- exercise: song-daisy-bell-by-ear
+- exercise: song-daisy-bell-rh
+- exercise: song-daisy-bell-lh
+- exercise: song-daisy-bell
+- exercise: song-daisy-bell-arranged
+- exercise: song-daisy-bell-performance
+recap: 'Daisy Bell: tune, left hand, together. Come back to it any time; songs are for fun.'

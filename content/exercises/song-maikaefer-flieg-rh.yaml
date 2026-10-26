@@ -1,0 +1,15 @@
+id: song-maikaefer-flieg-rh
+title: 'Maikäfer, flieg: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: D5:q C5:e A4:e | G4:q r:e D5:e | D5:e D5:e C5:e A4:e | G4:q r:e B4:e | B4:e B4:e B4:e B4:e | A4:e D5:e D5:e D5:e |
+  D5:e D5:e C5:e A4:e | G4:e G4:e G4:e r:e
+reps: 2
+days: 1

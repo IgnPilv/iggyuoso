@@ -1,0 +1,26 @@
+id: song-ships-are-sailing
+title: The Ships Are Sailing
+skills:
+- songs
+steps:
+- explain: |
+    **The Ships Are Sailing** · Irish reel, 1800s
+
+    A reel in E minor, one of the most played in Irish sessions.
+  staff:
+    notes: B4:e E5:e E5:e D5:e B4:e C#5:e D5:e B4:e  |  A4:e D4:e F#4:e3 E4:e3 D4:e3 A4:e D4:e F#4:e3 E4:e3 D4:e3
+    key: Em
+  sound: B4:e E5:e E5:e D5:e B4:e C#5:e D5:e B4:e  |  A4:e D4:e F#4:e3 E4:e3 D4:e3 A4:e D4:e F#4:e3 E4:e3 D4:e3  |  E4:e D#4:e
+    E4:e F#4:e G4:e F#4:e G4:e A4:e  |  B4:e E5:e E5:e F#5:e G5:e F#5:e E5:e D5:e
+- explain: |
+    **Before you play.** E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 2/2 · Tempo: 60
+- exercise: song-ships-are-sailing-rh
+- exercise: song-ships-are-sailing-lh
+- exercise: song-ships-are-sailing
+- exercise: song-ships-are-sailing-arranged
+- exercise: song-ships-are-sailing-performance
+recap: 'The Ships Are Sailing: tune, left hand, together. Come back to it any time; songs are for fun.'

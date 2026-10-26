@@ -1,0 +1,26 @@
+id: song-monaghan-jig
+title: The Monaghan Jig
+skills:
+- songs
+steps:
+- explain: |
+    **The Monaghan Jig** · Irish jig, 1800s
+
+    A jig in E minor from County Monaghan, with three parts.
+  staff:
+    notes: B4:e G4:e E4:e F#4:q E4:e  |  B4:e G4:e E4:e F#4:e G4:e A4:e
+    key: Em
+  sound: B4:e G4:e E4:e F#4:q E4:e  |  B4:e G4:e E4:e F#4:e G4:e A4:e  |  B4:e G4:e E4:e F#4:q E4:e  |  A4:e F#4:e D4:e F#4:e
+    G4:e A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 56
+- exercise: song-monaghan-jig-rh
+- exercise: song-monaghan-jig-lh
+- exercise: song-monaghan-jig
+- exercise: song-monaghan-jig-arranged
+- exercise: song-monaghan-jig-performance
+recap: 'The Monaghan Jig: tune, left hand, together. Come back to it any time; songs are for fun.'

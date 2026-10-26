@@ -1,0 +1,15 @@
+id: song-vom-himmel-hoch-rh
+title: 'Vom Himmel hoch: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: e
+countIn: 1
+right: C5:e | B4:q A4:q B4:q G4:q | A4:q B4:q C5:q r:e C5:e | C5:q G4:q G4:q E4:q | G4:q F4:q E4:q r:e E4:e | A4:q A4:q G4:q
+  B4:q | C5:q A4:q G4:q r:e C5:e | B4:q A4:q G4:q G4:q | F4:e E4:e D4:q C4:q r:e
+reps: 2
+days: 1

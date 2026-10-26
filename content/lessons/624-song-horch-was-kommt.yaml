@@ -1,0 +1,24 @@
+id: song-horch-was-kommt
+title: Horch, was kommt von draußen rein
+skills:
+- songs
+steps:
+- explain: |
+    **Horch, was kommt von draußen rein** · German folk song, 1800s
+
+    "Hark, who's coming in? Hollahi, hollaho!": a girl hopes it is her sweetheart, and it isn't.
+  staff:
+    notes: C4:e D4:e E4:e F4:e  |  G4:e A4:e G4:q
+  sound: C4:e D4:e E4:e F4:e  |  G4:e A4:e G4:q  |  F4:e D4:e B4:e. A4:s  |  G4:e E4:e C5:q
+- explain: |
+    **Before you play.** Two beats in a bar, like a march.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 2/4 · Tempo: 72
+- exercise: song-horch-was-kommt-rh
+- exercise: song-horch-was-kommt-lh
+- exercise: song-horch-was-kommt
+- exercise: song-horch-was-kommt-arranged
+- exercise: song-horch-was-kommt-performance
+recap: 'Horch, was kommt von draußen rein: tune, left hand, together. Come back to it any time; songs are for fun.'

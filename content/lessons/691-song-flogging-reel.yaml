@@ -1,0 +1,26 @@
+id: song-flogging-reel
+title: The Flogging Reel
+skills:
+- songs
+steps:
+- explain: |
+    **The Flogging Reel** · Irish reel, 1800s
+
+    A driving reel: "flogging" here means playing it hard and fast.
+  staff:
+    notes: D5:e C5:e  |  B4:e G4:e G4:e3 F#4:e3 G4:e3 B4:e G4:e D5:e G4:e
+    key: G
+  sound: D5:e C5:e  |  B4:e G4:e G4:e3 F#4:e3 G4:e3 B4:e G4:e D5:e G4:e  |  B4:e G4:e G4:e3 F#4:e3 G4:e3 B4:e D5:e G5:e D5:e  |  B4:e
+    G4:e G4:e3 F#4:e3 G4:e3 B4:e D5:e C5:e B4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 2/2 · Tempo: 60
+- exercise: song-flogging-reel-rh
+- exercise: song-flogging-reel-lh
+- exercise: song-flogging-reel
+- exercise: song-flogging-reel-arranged
+- exercise: song-flogging-reel-performance
+recap: 'The Flogging Reel: tune, left hand, together. Come back to it any time; songs are for fun.'

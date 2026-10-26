@@ -1,0 +1,26 @@
+id: song-hulls-victory
+title: Hull's Victory
+skills:
+- songs
+steps:
+- explain: |
+    **Hull's Victory** · American hornpipe, 1812
+
+    Celebrates Captain Isaac Hull, whose ship "Old Ironsides" won a famous sea fight in 1812.
+  staff:
+    notes: C5:e  |  F5:s C5:s F5:s A5:s F5:s C5:s F5:s G5:s
+    key: F
+  sound: C5:e  |  F5:s C5:s F5:s A5:s F5:s C5:s F5:s G5:s  |  A5:s G5:s F5:s E5:s F5:e A4:s Bb4:s  |  C5:e C5:s D5:s C5:e
+    C5:s Bb4:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. F major: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 2/4 · Tempo: 72
+- exercise: song-hulls-victory-rh
+- exercise: song-hulls-victory-lh
+- exercise: song-hulls-victory
+- exercise: song-hulls-victory-arranged
+- exercise: song-hulls-victory-performance
+recap: 'Hull''s Victory: tune, left hand, together. Come back to it any time; songs are for fun.'

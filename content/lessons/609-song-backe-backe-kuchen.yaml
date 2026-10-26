@@ -1,0 +1,26 @@
+id: song-backe-backe-kuchen
+title: Backe, backe Kuchen
+skills:
+- songs
+steps:
+- explain: |
+    **Backe, backe Kuchen** · German children's rhyme, 1800s
+
+    "Bake, bake a cake, the baker has called": the German pat-a-cake, clapped with a small child on your lap.
+  staff:
+    notes: C5:e C5:e D5:e D5:e  |  C5:q A4:e A4:e
+    key: F
+  sound: C5:e C5:e D5:e D5:e  |  C5:q A4:e A4:e  |  C5:e C5:e D5:e D5:e  |  C5:q A4:e r:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. F major: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 2/4 · Tempo: 72
+- exercise: song-backe-backe-kuchen-tap
+- exercise: song-backe-backe-kuchen-rh
+- exercise: song-backe-backe-kuchen-lh
+- exercise: song-backe-backe-kuchen
+- exercise: song-backe-backe-kuchen-arranged
+- exercise: song-backe-backe-kuchen-performance
+recap: 'Backe, backe Kuchen: tune, left hand, together. Come back to it any time; songs are for fun.'

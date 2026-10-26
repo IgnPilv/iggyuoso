@@ -1,0 +1,25 @@
+id: song-heidenroeslein
+title: Heidenröslein
+skills:
+- songs
+steps:
+- explain: |
+    **Heidenröslein** · Heinrich Werner, 1829; words by Goethe, 1771
+
+    "A boy saw a little rose on the heath": Goethe's poem in the setting that became a folk song (Schubert wrote another).
+  staff:
+    notes: F4:e F4:e F4:e F4:e  |  A4:s G4:s F4:e F4:q
+    key: F
+  sound: F4:e F4:e F4:e F4:e  |  A4:s G4:s F4:e F4:q  |  C5:e C5:e A4:e F4:e  |  Bb4:q A4:e r:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. F major: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 2/4 · Tempo: 72
+- exercise: song-heidenroeslein-rh
+- exercise: song-heidenroeslein-lh
+- exercise: song-heidenroeslein
+- exercise: song-heidenroeslein-arranged
+- exercise: song-heidenroeslein-performance
+recap: 'Heidenröslein: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,30 @@
+id: song-rakes-of-mallow-arranged
+title: The Rakes of Mallow, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: G4:e B4:e G4:e B4:e | G4:e B4:e C5:s B4:s A4:s G4:s | F#4:e A4:e F#4:e A4:e | F#4:e A4:e D5:s C5:s B4:s A4:s | G4:e
+  B4:e G4:e B4:e | G4:e B4:e D5:e B4:e | C5:s B4:s A4:s G4:s F#4:s G4:s A4:s C5:s | B4:e G4:e G4:e r:e | G4:s B4:s B4:s B4:s
+  G4:s B4:s B4:s B4:s | G4:s B4:s B4:s B4:s C5:s B4:s A4:s G4:s | F#4:s A4:s A4:s A4:s F#4:s A4:s A4:s A4:s | F#4:s A4:s A4:s
+  A4:s D5:s C5:s B4:s A4:s | G4:s B4:s B4:s B4:s G4:s B4:s B4:s B4:s | G4:s B4:s B4:s B4:s D5:e B4:e | C5:s B4:s A4:s G4:s
+  F#4:s G4:s A4:s C5:s | B4:e G4:e G4:e r:e | G5:e F#5:s E5:s D5:e C5:e | B4:e C5:e D5:e B4:e | G5:e F#5:s E5:s D5:e C5:e
+  | B4:e E5:e A4:e r:e | G5:e F#5:s E5:s D5:e C5:e | B4:e C5:e D5:e B4:e | C5:s B4:s A4:s G4:s F#4:s G4:s A4:s C5:s | B4:e
+  G4:e G4:e r:e | G5:e F#5:s E5:s D5:s E5:s D5:s C5:s | B4:s A4:s B4:s C5:s D5:s C5:s B4:s C5:s | G5:e F#5:s E5:s D5:s E5:s
+  D5:s C5:s | B4:s A4:s B4:s E5:s A4:e B4:s D5:s | G5:e F#5:s E5:s D5:s E5:s D5:s C5:s | B4:s A4:s B4:s C5:s D5:s C5:s B4:s
+  D5:s | C5:s B4:s A4:s G4:s F#4:s G4:s A4:s C5:s | B4:e G4:e G4:e r:e
+left: D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e | D3:e
+  B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e
+  A3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e | D3:e
+  B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | E3+G3+B3:q D3+F#3+A3:q | C3+E3+G3:q A2+D3+F#3:q | B2:e G3:e
+  D3:e G3:e | A2:e F#3:e D3:e F#3:e | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e
+  | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e | B2+D3+G3:h
+pedal: x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q
+  x:q | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h
+reps: 3
+days: 2

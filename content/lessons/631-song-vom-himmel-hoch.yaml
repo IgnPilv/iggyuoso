@@ -1,0 +1,26 @@
+id: song-vom-himmel-hoch
+title: Vom Himmel hoch
+skills:
+- songs
+steps:
+- explain: |
+    **Vom Himmel hoch** · Martin Luther, 1539
+
+    "From heaven above to earth I come": a Christmas hymn Luther wrote for his own children. Bach used it in his Christmas Oratorio.
+  staff:
+    notes: C5:e  |  B4:q A4:q B4:q G4:q
+  sound: C5:e  |  B4:q A4:q B4:q G4:q  |  A4:q B4:q C5:q r:e C5:e  |  C5:q G4:q G4:q E4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-vom-himmel-hoch-tap
+- exercise: song-vom-himmel-hoch-by-ear
+- exercise: song-vom-himmel-hoch-rh
+- exercise: song-vom-himmel-hoch-lh
+- exercise: song-vom-himmel-hoch
+- exercise: song-vom-himmel-hoch-arranged
+- exercise: song-vom-himmel-hoch-performance
+recap: 'Vom Himmel hoch: tune, left hand, together. Come back to it any time; songs are for fun.'

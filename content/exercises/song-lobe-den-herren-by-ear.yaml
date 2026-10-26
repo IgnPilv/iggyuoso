@@ -1,0 +1,15 @@
+id: song-lobe-den-herren-by-ear
+title: 'Praise to the Lord, the Almighty: by ear'
+kind: ear
+prompt: Play the start of the tune back from hearing it. Lit keys help the first time.
+questions: 4
+reps: 2
+days: 1
+items:
+- type: melody
+  notes: G4 G4 D5 B4 A4
+  plays: 3
+  lit: true
+- type: melody
+  notes: G4 G4 D5 B4
+  plays: 3

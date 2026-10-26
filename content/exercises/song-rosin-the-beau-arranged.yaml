@@ -2,7 +2,7 @@ id: song-rosin-the-beau-arranged
 title: Rosin the Beau, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 key: G
 tempo: 56
@@ -19,7 +19,5 @@ left: r:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e C3:e G3:e E3:e | G2:e
   D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e
   | E3:e B3:e G3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e C3:e G3:e E3:e | G2:e D3:e B2:e D3:e A3:e
   F#3:e | D3+G3+B3:h~ D3+G3+B3:e
-pedal: r:e | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:q. x:q. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. |
-  x:h. | x:q. x:q. | x:q. x:q. | x:h x:e
 reps: 3
 days: 2

@@ -12,9 +12,12 @@ right: B4:h B4:q A4:e B4:e | D5:q B4:q B4:e A4:e G4:q | B4:h D5:q. B4:e | A4:e B
   | D5:q B4:q B4:e A4:e G4:q | A4:e B4:e A4:e G4:e E4:q D4:e3 E4:e3 F#4:e3 | G4:w | G5:h G5:e A5:e G5:e E5:e | D5:q B4:q B4:e
   A4:e G4:q | G5:h G5:e F#5:e G5:e A5:e | B5:e E5:q F#5:e E5:q F#5:q | G5:e A5:e B5:e A5:e G5:q E5:q | D5:q. A4:e B4:e A4:e
   G4:q | A4:e B4:e A4:e G4:e E4:q D4:e3 E4:e3 F#4:e3 | G4:w
-left: G2:q D3:q G3:q D3:q | G2:q D3:q G3:q D3:q | E3:q B3:q E4:q B3:q | A2:q E3:q D3:q A3:q | G2:q D3:q G3:q D3:q | G2:q D3:q
-  G3:q D3:q | C3:q G3:q D3:q A3:q | G2:q D3:q G3:q D3:q | G2:q D3:q G3:q D3:q | G2:q D3:q G3:q D3:q | E3:q B3:q E4:q B3:q
-  | A2:q E3:q D3:q A3:q | G2:q D3:q E3:q B3:q | D3:q A3:q G2:q D3:q | C3:q G3:q D3:q A3:q | D3+G3+B3:w
+left: G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | E3:e B3:e G3:e B3:e E3:e B3:e G3:e
+  B3:e | A2:e E3:e C3:e E3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e
+  B2:e D3:e | C3:e G3:e E3:e G3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e
+  D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | E3:e B3:e G3:e B3:e E3:e B3:e G3:e B3:e | A2:e E3:e C3:e E3:e
+  D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e E3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e G2:e D3:e B2:e D3:e | C3:e G3:e E3:e
+  G3:e D3:e A3:e F#3:e A3:e | D3+G3+B3:w
 pedal: x:w | x:w | x:w | x:h x:h | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:h x:h | x:h x:h | x:h x:h | x:h x:h | x:w
 reps: 2
 days: 2

@@ -1,0 +1,24 @@
+id: song-geese-in-the-bog-performance
+title: 'The Geese in the Bog: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 56
+meter: 6/8
+countIn: 1
+right: A4:e D5:e D5:e F#5:e D5:e B4:e | A4:e F#4:e A4:e A4:e F#4:e A4:e | A4:e D5:e D5:e F#5:e D5:e B4:e | A4:e F#4:e A4:e
+  B4:q A4:e | A4:e D5:e D5:e F#5:e D5:e B4:e | A4:e F#4:e A4:e D4:e F#4:e A4:e | G5:e F#5:e E5:e F#5:e D5:e B4:e | A4:e F#4:e
+  A4:e B4:e D5:e B4:e | A4:e F#4:e E4:e D4:e F#4:e E4:e | D4:e F#4:e A4:e B4:e D5:e B4:e | A4:e F#4:e D4:e D4:e F#4:e A4:e
+  | B4:e G4:e A4:e B4:e D5:e B4:e | A4:e F#4:e E4:e D4:e F#4:e E4:e | D4:e F#4:e A4:e B4:e G5:e F#5:e | G5:e F#5:e E5:e F#5:e
+  D5:e B4:e | A4:e F#4:e A4:e B4:e D5:e B4:e | A4:e F#4:e A4:e B4:q D5:e
+left: D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e
+  G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e
+  A3:e F#3:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e
+  F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e
+  D3:e A3:e F#3:e | D3:e A3:e F#3:e G2:e D3:e B2:e | D3+F#3+A3:h.
+pedal: x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:q. x:q. | x:h. | x:h. | x:h. | x:h. | x:h.
+  | x:q. x:q. | x:h.
+reps: 2
+days: 2

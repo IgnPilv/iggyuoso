@@ -1,0 +1,15 @@
+id: song-ships-are-sailing-lh
+title: 'The Ships Are Sailing: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Em
+tempo: 60
+tempoLadder: true
+meter: 2/2
+countIn: 1
+left: E3+G3+B3:w | D3+F#3+A3:w | E3+G3+B3:w | E3+G3+B3:w | E3+G3+B3:w | E3+G3+B3:w | D3+F#3+A3:w | E3+G3+B3:w | D#3+F#3+B3:h
+  E3+G3+B3:h | E3+G3+B3:w | D3+F#3+A3:w | E3+G3+B3:h D3+F#3+A3:h | E3+G3+B3:w
+reps: 2
+days: 1

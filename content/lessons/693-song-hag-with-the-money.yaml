@@ -1,0 +1,26 @@
+id: song-hag-with-the-money
+title: The Hag with the Money
+skills:
+- songs
+steps:
+- explain: |
+    **The Hag with the Money** · Irish jig, 1800s
+
+    A young man courts an old woman for her money, and the tune laughs at him.
+  staff:
+    notes: A4:e D5:e D5:e A4:e C#5:e A4:e  |  G4:e E4:e F#4:e G4:q E4:e
+    key: D
+  sound: A4:e D5:e D5:e A4:e C#5:e A4:e  |  G4:e E4:e F#4:e G4:q E4:e  |  D4:e D5:e D5:e A4:s B4:s C#5:e A4:e  |  G4:e E4:e
+    F#4:e G4:e E4:e D4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-hag-with-the-money-rh
+- exercise: song-hag-with-the-money-lh
+- exercise: song-hag-with-the-money
+- exercise: song-hag-with-the-money-arranged
+- exercise: song-hag-with-the-money-performance
+recap: 'The Hag with the Money: tune, left hand, together. Come back to it any time; songs are for fun.'

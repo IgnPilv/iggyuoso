@@ -1,0 +1,15 @@
+id: song-toss-the-feathers-lh
+title: 'Toss the Feathers: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 60
+tempoLadder: true
+meter: 2/2
+countIn: 1
+left: D3+F#3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:h C#3+E3+A3:h | C#3+E3+A3:h D3+F#3+A3:h
+  | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w | C#3+E3+A3:w | C#3+E3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w | D3+F#3+A3:w
+reps: 2
+days: 1

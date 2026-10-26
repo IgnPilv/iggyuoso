@@ -1,0 +1,25 @@
+id: song-paddy-whack
+title: Paddy Whack
+skills:
+- songs
+steps:
+- explain: |
+    **Paddy Whack** · Irish jig, 1700s
+
+    An old jig played on both sides of the Atlantic.
+  staff:
+    notes: E4:e  |  A4:e C#5:e E5:e A5:e G#5:e A5:e
+    key: A
+  sound: E4:e  |  A4:e C#5:e E5:e A5:e G#5:e A5:e  |  F#5:e E5:e D5:e C#5:e D5:e B4:e  |  A4:e C#5:e E5:e F#5:e G#5:e A5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-paddy-whack-rh
+- exercise: song-paddy-whack-lh
+- exercise: song-paddy-whack
+- exercise: song-paddy-whack-arranged
+- exercise: song-paddy-whack-performance
+recap: 'Paddy Whack: tune, left hand, together. Come back to it any time; songs are for fun.'

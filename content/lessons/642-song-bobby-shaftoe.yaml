@@ -1,0 +1,26 @@
+id: song-bobby-shaftoe
+title: Bobby Shaftoe
+skills:
+- songs
+steps:
+- explain: |
+    **Bobby Shaftoe** · Northumbrian song, 1700s
+
+    "Bobby Shaftoe's gone to sea, silver buckles on his knee": about a real Bobby Shafto, a Member of Parliament from County Durham.
+  staff:
+    notes: Bb4:e Bb4:e Bb4:e Eb5:e  |  D5:e F5:e D5:e Bb4:e
+    key: Bb
+  sound: Bb4:e Bb4:e Bb4:e Eb5:e  |  D5:e F5:e D5:e Bb4:e  |  F4:e F4:e F4:e Bb4:e  |  A4:e C5:e A4:e F4:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. B♭ major: remember B♭, E♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: B♭ major · Time: 2/4 · Tempo: 88
+- exercise: song-bobby-shaftoe-tap
+- exercise: song-bobby-shaftoe-rh
+- exercise: song-bobby-shaftoe-lh
+- exercise: song-bobby-shaftoe
+- exercise: song-bobby-shaftoe-arranged
+- exercise: song-bobby-shaftoe-performance
+recap: 'Bobby Shaftoe: tune, left hand, together. Come back to it any time; songs are for fun.'

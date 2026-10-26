@@ -1,0 +1,25 @@
+id: song-rakes-of-clonmel
+title: The Rakes of Clonmel
+skills:
+- songs
+steps:
+- explain: |
+    **The Rakes of Clonmel** · Irish jig, 1800s
+
+    A jig in A minor about the young men of Clonmel in County Tipperary.
+  staff:
+    notes: A4:s B4:s  |  C5:e B4:e A4:e G4:e E4:e D4:e
+    key: Am
+  sound: A4:s B4:s  |  C5:e B4:e A4:e G4:e E4:e D4:e  |  E4:e A4:e A4:e A4:q B4:e  |  C5:e B4:e A4:e E5:e D5:e C5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 6/8 · Tempo: 56
+- exercise: song-rakes-of-clonmel-rh
+- exercise: song-rakes-of-clonmel-lh
+- exercise: song-rakes-of-clonmel
+- exercise: song-rakes-of-clonmel-arranged
+- exercise: song-rakes-of-clonmel-performance
+recap: 'The Rakes of Clonmel: tune, left hand, together. Come back to it any time; songs are for fun.'

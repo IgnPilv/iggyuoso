@@ -1,0 +1,25 @@
+id: song-templehouse
+title: The Templehouse
+skills:
+- songs
+steps:
+- explain: |
+    **The Templehouse** · Irish jig, 1800s
+
+    A jig from County Sligo, named after Templehouse, an old estate by a lake.
+  staff:
+    notes: E4:e F#4:e E4:e G4:q A4:e  |  B4:q F#4:e G4:q E4:e
+    key: Em
+  sound: E4:e F#4:e E4:e G4:q A4:e  |  B4:q F#4:e G4:q E4:e  |  D4:e E4:e D4:e F#4:q D4:e  |  A4:q D4:e F#4:q D4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 56
+- exercise: song-templehouse-rh
+- exercise: song-templehouse-lh
+- exercise: song-templehouse
+- exercise: song-templehouse-arranged
+- exercise: song-templehouse-performance
+recap: 'The Templehouse: tune, left hand, together. Come back to it any time; songs are for fun.'

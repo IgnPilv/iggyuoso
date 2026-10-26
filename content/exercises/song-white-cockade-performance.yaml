@@ -1,0 +1,21 @@
+id: song-white-cockade-performance
+title: 'The White Cockade: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 72
+meter: 2/4
+pickup: e
+countIn: 1
+right: G4:s A4:s | B4:e B4:e B4:e A4:s G4:s | B4:e B4:e B4:e G5:e | D5:e B4:e B4:e A4:s G4:s | F#4:e A4:e A4:e G4:s A4:s |
+  B4:e B4:e B4:e A4:s G4:s | B4:e D5:e G5:e A5:e | B5:e G5:e E5:s F#5:s G5:s E5:s | D5:e B4:e B4:e B4:s C5:s | D5:e B4:e G5:e
+  B4:e | D5:e B4:e B4:e B4:s C5:s | D5:e B4:e G5:e F#5:s G5:s | A5:e A4:e A4:e G4:s A4:s | B4:e B4:e B4:e A4:s G4:s | B4:e
+  D5:e G5:e A5:e | B5:e G5:e E5:s F#5:s G5:s E5:s | D5:e F#5:e G5:e
+left: r:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e |
+  D3:e B3:e G3:e B3:e | E3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | D3:e B3:e
+  G3:e B3:e | D3:e A3:e F#3:e A3:e | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | E3:e B3:e G3:e B3:e | D3+G3+B3:q.
+pedal: r:e | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q.
+reps: 2
+days: 2

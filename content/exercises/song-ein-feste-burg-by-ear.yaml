@@ -1,0 +1,15 @@
+id: song-ein-feste-burg-by-ear
+title: 'A Mighty Fortress Is Our God: by ear'
+kind: ear
+prompt: Play the start of the tune back from hearing it. Lit keys help the first time.
+questions: 4
+reps: 2
+days: 1
+items:
+- type: melody
+  notes: C5 C5 C5 G4 B4
+  plays: 3
+  lit: true
+- type: melody
+  notes: C5 C5 C5 G4
+  plays: 3

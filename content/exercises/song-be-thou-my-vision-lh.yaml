@@ -1,0 +1,17 @@
+id: song-be-thou-my-vision-lh
+title: 'Be Thou My Vision (Slane): left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+left: D2+F#2+A2:h. | D2+G2+B2:q C#2+E2+A2:q C#2+E2+A2:q | D2+F#2+A2:q D2+F#2+B2:q C#2+E2+A2:q | D2+F#2+A2:h. | C#2+E2+A2:q
+  C#2+E2+A2:q B1+E2+G2:q | C#2+E2+A2:q D2+F#2+A2:q D2+F#2+A2:q | D2+G2+B2:q D2+F#2+A2:q D2+F#2+A2:q | C#2+E2+A2:q C#2+E2+A2:q
+  D2+F#2+A2:q | D2+G2+B2:h. | D2+F#2+A2:h. | C#2+E2+A2:q D2+F#2+B2:q C#2+F#2+A2:q | D2+G2+B2:q D2+G2+B2:q C#2+E2+A2:q | D2+F#2+A2:q
+  D2+F#2+A2:q C#2+E2+A2:q | D2+F#2+B2:q D2+F#2+B2:q D2+F#2+A2:q | D2+G2+B2:h. | D2+F#2+A2:h.
+reps: 2
+days: 1

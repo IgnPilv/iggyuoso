@@ -1,0 +1,20 @@
+id: song-lieber-augustin-arranged
+title: O du lieber Augustin, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (bass, chord, chord).
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: D5:q. E5:e D5:e C5:e | B4:q G4:q G4:q | A4:q D4:q D4:q | B4:q G4:q G4:q | D5:q. E5:e D5:e C5:e | B4:q G4:q G4:q | A4:q
+  D4:q D4:q | G4:q r:h | A4:q D4:q D4:q | B4:q G4:q G4:q | A4:q D4:q D4:q | B4:q G4:q G4:q | D5:q. E5:e D5:e C5:e | B4:q G4:q
+  G4:q | A4:q D4:q D4:q | G4:q r:h
+left: D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | G2:q D3+G3+B3:q
+  D3+G3+B3:q | G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q |
+  G2:q D3+G3+B3:q D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | G2:q D3+G3+B3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3+G3+B3:q | G2:q D3+G3+B3:q
+  D3+G3+B3:q | D3:q F#3+A3:q F#3+A3:q | D3+G3+B3:h.
+reps: 3
+days: 2

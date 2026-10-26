@@ -1,0 +1,14 @@
+id: song-a-a-a-der-winter-lh
+title: 'A, a, a, der Winter, der ist da: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: G2:q C3:q | D3:h | G2:q D3:q | G2:h | D3:h | G2:q D3:q | D3:h | G2:q D3:q | G2:q C3:q | D3:h | G2:q D3:q | G2:h
+reps: 2
+days: 1

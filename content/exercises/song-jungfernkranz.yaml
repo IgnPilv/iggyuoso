@@ -1,0 +1,19 @@
+id: song-jungfernkranz
+title: Bridesmaids' Chorus
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: G4:e | C5:s B4:s C5:s D5:s E5:e G4:e | C5:s B4:s C5:s D5:s E5:e r:s E5:s | D5:e. E5:s D5:s C5:s B4:s A4:s | G4:s F4:s
+  E4:q G4:e | C5:s B4:s C5:s D5:s E5:e G4:e | C5:s B4:s C5:s D5:s E5:e r:s E5:s | D5:e. E5:s D5:s C5:s B4:s A4:s | G4:e B4:s
+  A4:s G4:e r:e | C5:q E5:q | G5:q E5:q | D5:s C5:s B4:s C5:s D5:e E5:e | C5:h | D5:s G4:s G4:e D5:s G4:s G4:e | C5:s D5:s
+  E5:q. | G5:e F5:s E5:s D5:s C5:s B4:s A4:s | G4:s F4:s E4:q
+left: r:e | C3+E3+G3:h | C3+E3+G3:h | B2+D3+G3:h | C3+E3+G3:h | C3+E3+G3:h | C3+E3+G3:h | B2+D3+G3:h | B2+D3+G3:h | C3+E3+G3:h
+  | C3+E3+G3:h | B2+D3+G3:h | C3+E3+G3:h | B2+D3+G3:h | C3+E3+G3:h | B2+D3+G3:h | C3+E3+G3:q.
+reps: 3
+days: 2

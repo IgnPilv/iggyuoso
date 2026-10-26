@@ -1,0 +1,17 @@
+id: song-maikaefer-flieg-arranged
+title: Maikäfer, flieg, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (bass, then chord).
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: D5:q C5:e A4:e | G4:q r:e D5:e | D5:e D5:e C5:e A4:e | G4:q r:e B4:e | B4:e B4:e B4:e B4:e | A4:e D5:e D5:e D5:e |
+  D5:e D5:e C5:e A4:e | G4:e G4:e G4:e r:e
+left: D3:q F#3+A3:q | G2:q D3+G3+B3:q | D3:q F#3+A3:q | G2:q D3+G3+B3:q | G2:q D3+G3+B3:q | D3:q F#3+A3:q | D3:q F#3+A3:q
+  | D3+G3+B3:h
+reps: 3
+days: 2

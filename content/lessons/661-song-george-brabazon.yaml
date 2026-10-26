@@ -1,0 +1,25 @@
+id: song-george-brabazon
+title: George Brabazon
+skills:
+- songs
+steps:
+- explain: |
+    **George Brabazon** · Turlough O'Carolan, early 1700s
+
+    Another of Carolan's thank-you tunes, for a County Mayo squire.
+  staff:
+    notes: G5:e E5:e  |  D5:q G4:q C5:e B4:e A4:e G4:e
+    key: G
+  sound: G5:e E5:e  |  D5:q G4:q C5:e B4:e A4:e G4:e  |  D5:q G4:q C5:e B4:e A4:e G4:e  |  E5:q A4:q A4:e B4:e C5:e D5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-george-brabazon-rh
+- exercise: song-george-brabazon-lh
+- exercise: song-george-brabazon
+- exercise: song-george-brabazon-arranged
+- exercise: song-george-brabazon-performance
+recap: 'George Brabazon: tune, left hand, together. Come back to it any time; songs are for fun.'

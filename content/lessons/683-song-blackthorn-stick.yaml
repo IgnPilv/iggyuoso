@@ -1,0 +1,25 @@
+id: song-blackthorn-stick
+title: The Blackthorn Stick
+skills:
+- songs
+steps:
+- explain: |
+    **The Blackthorn Stick** · Irish jig, 1800s
+
+    A blackthorn stick was a walking stick and, at fairs, a weapon. A jig in D minor here.
+  staff:
+    notes: F4:s G4:s  |  A4:e. D4:s D4:e D4:e C5:e E4:e
+    key: Dm
+  sound: F4:s G4:s  |  A4:e. D4:s D4:e D4:e C5:e E4:e  |  E4:e D4:e D4:e D4:q D5:s E5:s  |  F5:e. E5:s D5:e E5:e D5:e C5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D minor: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 6/8 · Tempo: 56
+- exercise: song-blackthorn-stick-rh
+- exercise: song-blackthorn-stick-lh
+- exercise: song-blackthorn-stick
+- exercise: song-blackthorn-stick-arranged
+- exercise: song-blackthorn-stick-performance
+recap: 'The Blackthorn Stick: tune, left hand, together. Come back to it any time; songs are for fun.'

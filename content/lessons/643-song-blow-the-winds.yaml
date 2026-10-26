@@ -1,0 +1,27 @@
+id: song-blow-the-winds
+title: Blow the Winds, I-Ho
+skills:
+- songs
+steps:
+- explain: |
+    **Blow the Winds, I-Ho** · Northumbrian ballad, collected 1882
+
+    A shepherd and a lady, and a trick that wins the day: an old ballad in D minor with a sighing "I-ho" chorus.
+  staff:
+    notes: C5:q  |  A4:q D5:q D5:q C5:q
+    key: Dm
+  sound: C5:q  |  A4:q D5:q D5:q C5:q  |  E5:q D5:q D5:q A4:q  |  C5:q D5:q A4:q F4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D minor: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 4/4 · Tempo: 88
+- exercise: song-blow-the-winds-tap
+- exercise: song-blow-the-winds-by-ear
+- exercise: song-blow-the-winds-rh
+- exercise: song-blow-the-winds-lh
+- exercise: song-blow-the-winds
+- exercise: song-blow-the-winds-arranged
+- exercise: song-blow-the-winds-performance
+recap: 'Blow the Winds, I-Ho: tune, left hand, together. Come back to it any time; songs are for fun.'

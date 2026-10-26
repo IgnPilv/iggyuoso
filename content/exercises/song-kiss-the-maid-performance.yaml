@@ -1,0 +1,28 @@
+id: song-kiss-the-maid-performance
+title: 'Kiss the Maid Behind the Barrel: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 60
+meter: 2/2
+countIn: 1
+right: D4:e G4:e G4:e C5:e A4:e G4:e G4:e F#4:e | D4:e G4:e G4:e B4:e C5:e A4:e G4:e F#4:e | D4:e G4:e G4:e C5:e A4:e G4:e
+  A4:e C#5:e | D5:e E5:e F5:e D5:e C5:e A4:e F#4:e A4:e | D5:e G5:e G5:e3 F#5:e3 G5:e3 A5:e G5:e G5:e3 F#5:e3 G5:e3 | D5:e
+  G5:e G5:e3 F#5:e3 G5:e3 A5:e G5:e F#5:e E5:e | D5:e F5:e F#5:e3 E5:e3 F#5:e3 A5:e F#5:e F#5:e3 E5:e3 F#5:e3 | D5:e E5:e
+  F5:e D5:e C5:e A4:e F#4:e A4:e | D5:e G5:e G5:e3 F#5:e3 G5:e3 A5:e G5:e G5:e3 F#5:e3 G5:e3 | D5:e G5:e G5:e3 F#5:e3 G5:e3
+  A5:e G5:e F#5:e G5:e | A5:e F#5:e G5:e E5:e F5:e D5:e E5:e C5:e | D5:e F5:e E5:e G5:e F#5:e D5:e C5:e A4:e | G4:q D5:e G4:e
+  B4:e G4:e D5:e G4:e | G4:q D5:e G4:e C5:e A4:e F#4:e A4:e | G4:q D5:e G4:e A4:e G4:e A4:e C#5:e | D5:e E5:e F5:e D5:e C5:e
+  A4:e F#4:e A4:e | G4:q D5:e G4:e B4:e G4:e D5:e G4:e | G4:q D5:e G4:e C5:e A4:e F#4:e A4:e | G4:q G4:e B4:e A4:q A4:e C#5:e
+  | D5:e E5:e F5:e D5:e C5:e A4:e F#4:e A4:e | B4:q B4:e G4:e A4:q A4:e C5:e | B4:e A4:e B4:e C5:e D5:e E5:e D5:e C5:e | B4:q
+  B4:e G4:e A4:q A4:e C#5:e | D5:e E5:e F5:e D5:e C5:e A4:e F#4:e A4:e
+left: G2:q D3:q G3:q D3:q | G2:q D3:q G3:q D3:q | G2:q D3:q G3:q D3:q | D3:q A3:q D4:q A3:q | G2:q D3:q G3:q D3:q | G2:q D3:q
+  G3:q D3:q | D3:q A3:q D4:q A3:q | D3:q A3:q D4:q A3:q | G2:q D3:q G3:q D3:q | G2:q D3:q G3:q D3:q | C3:q G3:q C4:q G3:q
+  | D3:q A3:q D4:q A3:q | G2:q D3:q G3:q D3:q | G2:q D3:q D3:q A3:q | G2:q D3:q G3:q D3:q | D3:q A3:q D4:q A3:q | G2:q D3:q
+  G3:q D3:q | G2:q D3:q D3:q A3:q | G2:q D3:q D3:q A3:q | D3:q A3:q D4:q A3:q | G2:q D3:q D3:q A3:q | G2:q D3:q G3:q D3:q
+  | G2:q D3:q D3:q A3:q | D3+G3+B3:w
+pedal: x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:h x:h |
+  x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:w
+reps: 2
+days: 2

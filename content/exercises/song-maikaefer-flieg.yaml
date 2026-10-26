@@ -1,0 +1,16 @@
+id: song-maikaefer-flieg
+title: Maikäfer, flieg
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: D5:q C5:e A4:e | G4:q r:e D5:e | D5:e D5:e C5:e A4:e | G4:q r:e B4:e | B4:e B4:e B4:e B4:e | A4:e D5:e D5:e D5:e |
+  D5:e D5:e C5:e A4:e | G4:e G4:e G4:e r:e
+left: D3+F#3+A3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+F#3+A3:h | D3+G3+B3:h
+reps: 3
+days: 2

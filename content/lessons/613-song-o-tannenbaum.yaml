@@ -1,0 +1,26 @@
+id: song-o-tannenbaum
+title: O Tannenbaum
+skills:
+- songs
+steps:
+- explain: |
+    **O Tannenbaum** · German folk tune; words by Ernst Anschütz, 1824
+
+    "O Christmas tree, how faithful are your leaves": the fir stays green in summer and in winter snow.
+  staff:
+    notes: D4:q  |  G4:e. G4:s G4:q A4:q
+    key: G
+  sound: D4:q  |  G4:e. G4:s G4:q A4:q  |  B4:e. B4:s B4:q. G4:e  |  A4:e B4:e C5:q F#4:q
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 3/4 · Tempo: 80
+- exercise: song-o-tannenbaum-tap
+- exercise: song-o-tannenbaum-rh
+- exercise: song-o-tannenbaum-lh
+- exercise: song-o-tannenbaum
+- exercise: song-o-tannenbaum-arranged
+- exercise: song-o-tannenbaum-performance
+recap: 'O Tannenbaum: tune, left hand, together. Come back to it any time; songs are for fun.'

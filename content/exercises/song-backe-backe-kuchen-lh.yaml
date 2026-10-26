@@ -1,0 +1,15 @@
+id: song-backe-backe-kuchen-lh
+title: 'Backe, backe Kuchen: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: F
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:q
+  D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h
+reps: 2
+days: 1

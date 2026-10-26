@@ -1,0 +1,25 @@
+id: song-portsmouth-arranged
+title: Portsmouth, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (an Alberti bass). Change the pedal with each chord.
+display: staff
+key: A
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: E5:e | A4:s C#5:s B4:s C#5:s A4:s F#4:s F#4:s E4:s | A4:s C#5:s E5:s A5:s F#5:e F#5:s G#5:s | A5:s G#5:s F#5:s E5:s
+  F#5:s E5:s C#5:s A4:s | B4:s C#5:s B4:s A4:s F#4:e E4:e | A4:s C#5:s B4:s C#5:s A4:s F#4:s E4:s F#4:s | A4:s C#5:s E5:s
+  A5:s F#5:e F#5:s G#5:s | A5:s G#5:s F#5:s E5:s F#5:s E5:s C#5:s A4:s | B4:e A4:e A4:e C#5:s D5:s | E5:s A5:s G#5:s A5:s
+  F#5:s E5:s C#5:s E5:s | F#5:s A5:s G#5:s A5:s F#5:e F#5:s G#5:s | A5:s G#5:s F#5:s E5:s F#5:s E5:s C#5:s A4:s | B4:s C#5:s
+  B4:s A4:s F#4:e E4:e | A4:s C#5:s B4:s C#5:s A4:s F#4:s E4:s F#4:s | A4:s C#5:s E5:s A5:s F#5:e F#5:s G#5:s | A5:s G#5:s
+  F#5:s E5:s F#5:s E5:s C#5:s A4:s | B4:e A4:e A4:e
+left: r:e | A2:e E3:e C#3:e E3:e | A2+C#3+E3:q A2+D3+F#3:q | A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e
+  E3:e | A2+C#3+E3:q A2+D3+F#3:q | A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e | A2:e F#3:e D3:e F#3:e
+  | A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e | A2+C#3+E3:q A2+D3+F#3:q | A2:e E3:e C#3:e E3:e |
+  A2+C#3+E3:q.
+pedal: r:e | x:h | x:q x:q | x:h | x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:q.
+reps: 3
+days: 2

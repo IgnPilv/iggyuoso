@@ -1,0 +1,25 @@
+id: song-blind-mary
+title: Blind Mary
+skills:
+- songs
+steps:
+- explain: |
+    **Blind Mary** · Turlough O'Carolan, early 1700s
+
+    Carolan, the blind Irish harper, wrote this gentle tune for another blind musician.
+  staff:
+    notes: A4:e  |  D5:q D5:e. C#5:s
+    key: D
+  sound: A4:e  |  D5:q D5:e. C#5:s  |  B4:q A4:e F#4:s G4:s  |  A4:e. B4:s A4:e F#4:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-blind-mary-rh
+- exercise: song-blind-mary-lh
+- exercise: song-blind-mary
+- exercise: song-blind-mary-arranged
+- exercise: song-blind-mary-performance
+recap: 'Blind Mary: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,18 @@
+id: song-bobby-shaftoe
+title: Bobby Shaftoe
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Bb
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: Bb4:e Bb4:e Bb4:e Eb5:e | D5:e F5:e D5:e Bb4:e | F4:e F4:e F4:e Bb4:e | A4:e C5:e A4:e F4:e | Bb4:e A4:e Bb4:e Eb5:e
+  | D5:e F5:e D5:e Bb4:e | C5:e Eb5:e C5:e A4:e | Bb4:q Bb4:q | D5:e F5:e D5:e Bb4:e | D5:e F5:e D5:q | C5:e Eb5:e C5:e A4:e
+  | C5:e Eb5:e C5:q | D5:e F5:e D5:e Bb4:e | D5:e F5:e D5:q | C5:e Eb5:e C5:e A4:e | Bb4:q Bb4:q
+left: Eb3+G3+Bb3:h | D3+F3+Bb3:h | D3+F3+Bb3:h | C3+F3+A3:h | Bb2+Eb3+G3:h | Bb2+D3+F3:h | A2+C3+F3:h | Bb2+D3+F3:h | Bb2+D3+F3:h
+  | Bb2+D3+F3:h | A2+C3+F3:h | A2+C3+F3:h | Bb2+D3+F3:h | Bb2+D3+F3:h | A2+C3+F3:h | Bb2+D3+F3:h
+reps: 3
+days: 2

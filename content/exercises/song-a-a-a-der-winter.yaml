@@ -1,0 +1,16 @@
+id: song-a-a-a-der-winter
+title: A, a, a, der Winter, der ist da
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: B4:q C5:q | D5:q r:e C5:e | B4:e B4:e A4:e A4:e | G4:q r:q | D5:e D5:e C5:e C5:e | B4:e B4:e A4:e A4:e | D5:e D5:e
+  C5:e C5:e | B4:e B4:e A4:e A4:e | B4:q C5:q | D5:q r:e C5:e | B4:e B4:e A4:e A4:e | G4:q r:q
+left: G2:q C3:q | D3:h | G2:q D3:q | G2:h | D3:h | G2:q D3:q | D3:h | G2:q D3:q | G2:q C3:q | D3:h | G2:q D3:q | G2:h
+reps: 3
+days: 2

@@ -1,0 +1,22 @@
+id: song-ich-bin-ein-musikante-performance
+title: 'Ich bin ein Musikante: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 72
+meter: 2/4
+pickup: e
+countIn: 1
+right: D4:e | G4:e G4:e B4:e B4:e | D5:q B4:e B4:e | C5:e C5:e A4:e A4:e | G4:q r:e D4:e | G4:e G4:e B4:e B4:e | D5:q B4:e
+  B4:e | C5:e C5:e A4:e A4:e | G4:q r:e B4:e | C5:q A4:q | B4:q G4:e B4:e | C5:e C5:e A4:q | B4:q G4:e r:e | C5:q A4:q | B4:q
+  G4:e r:e | C5:q A4:q | B4:q G4:e D4:e | G4:e. G4:s G4:e B4:e | D5:e. D5:s D5:e B4:e | C5:e. C5:s C5:e A4:e | G4:q r:e D4:e
+  | G4:e. G4:s G4:e B4:e | D5:e. D5:s D5:e B4:e | C5:e. C5:s C5:e A4:e | G4:q r:e
+left: r:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e |
+  G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | D3:e A3:e
+  F#3:e A3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e
+  | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e | G2:e D3:e
+  B2:e D3:e | D3:e A3:e F#3:e A3:e | D3+G3+B3:q.
+reps: 2
+days: 2

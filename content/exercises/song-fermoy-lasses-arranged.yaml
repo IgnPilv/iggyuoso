@@ -1,0 +1,22 @@
+id: song-fermoy-lasses-arranged
+title: The Fermoy Lasses, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 2/2
+pickup: q
+countIn: 1
+right: B4:e A4:e | G4:e E4:e E4:e3 D4:e3 E4:e3 B4:e E4:e E4:e3 D4:e3 E4:e3 | G4:e E4:e E4:e3 D4:e3 E4:e3 B4:e C5:e B4:e A4:e
+  | G4:e E4:e E4:e3 D4:e3 E4:e3 B4:e E4:e E4:e3 D4:e3 E4:e3 | A4:e F#4:e D4:e F#4:e A4:e C5:e B4:e A4:e | G4:q G4:e F#4:e
+  G4:e G4:e D5:e G4:e | A4:e F#4:e D4:e F#4:e A4:q B4:e A4:e | G4:e3 A4:e3 G4:e3 B4:e G4:e D5:e G4:e B4:e G4:e | G4:e3 A4:e3
+  G4:e3 B4:e D5:e E5:e F#5:e G5:q | G4:e3 A4:e3 G4:e3 B4:e G4:e D5:e G4:e B4:e G4:e | A4:e F#4:e D4:e F#4:e A4:e C5:e B4:e
+  A4:e | G4:e3 A4:e3 G4:e3 B4:e G4:e D5:e G4:e B4:e G4:e | G4:e3 A4:e3 G4:e3 B4:e D5:e E5:e F#5:e G5:q | A5:e F#5:e G5:e E5:e
+  D5:e E5:e D5:e B4:e | A4:e F#4:e D4:e F#4:e A4:e C5:e B4:e A4:e
+left: r:q | E3+G3+B3:w | E3+G3+B3:w | E3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w
+  | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:h.
+reps: 3
+days: 2

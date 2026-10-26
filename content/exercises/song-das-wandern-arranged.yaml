@@ -1,0 +1,20 @@
+id: song-das-wandern-arranged
+title: Das Wandern ist des Müllers Lust, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (rolling arpeggios). Change the pedal with each chord.
+display: staff
+key: Bb
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: F4:e | Bb4:e. F4:s D4:e Eb4:e | F4:e. G4:s F4:e Bb4:e | D5:e. C5:s Bb4:e C5:e | D5:e. Eb5:s D5:e Bb4:e | D5:q C5:q
+  | Bb4:q r:e F4:e | C5:e C5:e D5:s C5:s B4:s C5:s | A4:e C5:e F4:e F4:e | C5:e C5:e D5:s C5:s B4:s C5:s | A4:e C5:e F4:e
+  F4:e | G4:e A4:e Bb4:e C5:e | D5:e. C5:s Bb4:e D5:e | F5:q A4:q | Bb4:q r:e
+left: r:e | Bb2:q F3:q | Bb2:q F3:q | Bb2:q F3:q | Bb2:q F3:q | Bb2:q F2:q | Bb2:q F3:q | F2:q C3:q | F2:q C3:q | F2:q C3:q
+  | F2:q C3:q | Eb3:q Bb3:q | Bb2:q F3:q | F2:q C3:q | Bb2+D3+F3:q.
+pedal: r:e | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q.
+reps: 3
+days: 2

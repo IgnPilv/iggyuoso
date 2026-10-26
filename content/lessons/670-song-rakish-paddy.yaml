@@ -1,0 +1,26 @@
+id: song-rakish-paddy
+title: Rakish Paddy
+skills:
+- songs
+steps:
+- explain: |
+    **Rakish Paddy** · Irish reel, 1700s
+
+    One of the oldest reels still played, with an old-fashioned C natural in D major.
+  staff:
+    notes: C#5:e B4:e C#5:e D5:e C#5:e B4:e A4:e B4:e  |  C#5:e A4:e G4:e F#4:e E4:e F#4:e G4:e C#5:e
+    key: D
+  sound: C#5:e B4:e C#5:e D5:e C#5:e B4:e A4:e B4:e  |  C#5:e A4:e G4:e F#4:e E4:e F#4:e G4:e C#5:e  |  A4:e D5:e D5:e C#5:e
+    D5:e E5:e F#5:e E5:e  |  D5:e C#5:e A4:e G4:e F#4:e G4:e A4:e B4:e
+- explain: |
+    **Before you play.** D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-rakish-paddy-rh
+- exercise: song-rakish-paddy-lh
+- exercise: song-rakish-paddy
+- exercise: song-rakish-paddy-arranged
+- exercise: song-rakish-paddy-performance
+recap: 'Rakish Paddy: tune, left hand, together. Come back to it any time; songs are for fun.'

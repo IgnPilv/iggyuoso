@@ -1,0 +1,15 @@
+id: song-mo-li-hua-lh
+title: 'Mo Li Hua (Jasmine Flower): left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: D3+G3+B3:q C3+E3+G3:q | B2+D3+G3:h | B2+D3+G3:h | B2+D3+G3:h | C3+E3+G3:h | B2+D3+G3:h | A2+D3+F#3:h | B2+D3+G3:h |
+  B2+D3+G3:q A2+D3+F#3:q | A2+D3+F#3:h | B2+E3+G3:h | C3+E3+G3:h | C3+E3+A3:h | B2+D3+G3:h
+reps: 2
+days: 1

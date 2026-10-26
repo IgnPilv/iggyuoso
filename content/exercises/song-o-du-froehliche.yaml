@@ -1,0 +1,18 @@
+id: song-o-du-froehliche
+title: O du fröhliche
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: C5:h D5:h | C5:q. Bb4:e A4:q Bb4:q | C5:h D5:h | C5:q. Bb4:e A4:q Bb4:q | C5:h C5:h | D5:h E5:q F5:q | E5:h D5:h |
+  E5:h r:h | G4:q. A4:e G4:q A4:q | Bb4:q. C5:e Bb4:h | A4:q. Bb4:e A4:q Bb4:q | C5:q. D5:e C5:h | F5:q E5:q D5:q C5:q | F5:q
+  D5:q C5:q Bb4:q | A4:h G4:h | F4:h r:h
+left: F2:h Bb2:h | F2:w | F2:h Bb2:h | F2:w | F2:w | Bb2:w | C3:h Bb2:h | C3:w | C3:w | C3:w | F2:w | F2:w | F2:w | Bb2:h
+  C3:h | F2:h C3:h | F2:w
+reps: 3
+days: 2

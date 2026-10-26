@@ -1,0 +1,26 @@
+id: song-bucks-of-oranmore
+title: The Bucks of Oranmore
+skills:
+- songs
+steps:
+- explain: |
+    **The Bucks of Oranmore** · Irish reel, 1800s
+
+    A long, showy reel from County Galway, a test piece for fiddlers.
+  staff:
+    notes: D5:e B4:e  |  A4:q F#4:e A4:e A4:q D5:e B4:e
+    key: D
+  sound: D5:e B4:e  |  A4:q F#4:e A4:e A4:q D5:e B4:e  |  A4:e3 B4:e3 A4:e3 F#4:e A4:e B4:e E4:e E4:e r:e  |  A4:q F#4:e A4:e
+    A4:q B4:e D5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-bucks-of-oranmore-rh
+- exercise: song-bucks-of-oranmore-lh
+- exercise: song-bucks-of-oranmore
+- exercise: song-bucks-of-oranmore-arranged
+- exercise: song-bucks-of-oranmore-performance
+recap: 'The Bucks of Oranmore: tune, left hand, together. Come back to it any time; songs are for fun.'

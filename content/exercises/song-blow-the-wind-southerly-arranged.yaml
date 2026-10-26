@@ -2,7 +2,7 @@ id: song-blow-the-wind-southerly-arranged
 title: Blow the Wind Southerly, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 key: D
 tempo: 96
@@ -20,7 +20,5 @@ left: r:q | D3:e A3:e F#3:e A3:e D3:q | D3:e A3:e F#3:e A3:e D3:q | G2:e D3:e B2
   A2:e E3:e C#3:e E3:e A2:q | E3:e B3:e G#3:e B3:e E3:q | A2:e E3:e C#3:e E3:e A2:q | G2:e D3:e B2:e D3:e G2:q | D3:e A3:e
   F#3:e A3:e D3:q | A2:e E3:e C#3:e E3:e A2:q | D3:e A3:e F#3:e A3:e D3:q | D3:e A3:e F#3:e A3:e D3:q | E3:e B3:e G3:e B3:e
   E3:q | A2:e E3:e C#3:e E3:e A2:q | D3+F#3+A3:h
-pedal: r:q | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q x:q x:q | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
-  | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h
 reps: 3
 days: 2

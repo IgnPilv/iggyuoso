@@ -1,0 +1,16 @@
+id: song-oak-and-ash-lh
+title: 'The Oak and the Ash: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Gm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | D3+G3+Bb3:w | D3+F#3+A3:w | D3+G3+Bb3:w | D3+F#3+A3:w | D3+F3+Bb3:w | C3+F3+A3:w | D3+G3+Bb3:h D3+F#3+A3:h | D3+G3+Bb3:w
+  | D3+F3+Bb3:w | C3+F3+A3:w | D3+G3+Bb3:h D3+F#3+A3:h | D3+G3+Bb3:h.
+reps: 2
+days: 1

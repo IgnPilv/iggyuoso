@@ -1,0 +1,21 @@
+id: song-green-fields-of-america
+title: The Green Fields of America
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 2/2
+countIn: 1
+right: C5:q E5:e C5:e B4:q D5:e B4:e | A4:e G4:e A4:e B4:e A4:e G4:e E4:e F#4:e | G4:e A4:e G4:e E4:e D4:e E4:e G4:e B4:e
+  | A4:e G4:e A4:e B4:e A4:e G4:e E4:e G4:e | C5:q E5:e C5:e B4:q D5:e B4:e | A4:e G4:e A4:e B4:e A4:e G4:e E4:e F#4:e | G4:e
+  A4:e G4:e E4:e D4:e E4:e G4:e A4:e | B4:e G4:e A4:e F#4:e G4:q r:q | G4:e A4:e B4:e C5:e D5:q E5:e F#5:e | G5:e A5:e G5:e
+  E5:e D5:e B4:e G4:e B4:e | C5:q E5:e C5:e B4:q D5:e B4:e | A4:e G4:e A4:e B4:e A4:e G4:e E4:q | G5:e F#5:e G5:e D5:e E5:e
+  F#5:e G5:e E5:e | D5:e C5:e B4:e G4:e A4:e G4:e E4:e F#4:e | G4:e A4:e G4:e E4:e D4:e E4:e G4:e A4:e | B4:e G4:e A4:e F#4:e
+  G4:q r:q
+left: C3+E3+G3:h B2+D3+G3:h | A2+D3+F#3:w | B2+D3+G3:w | C3+E3+A3:w | C3+E3+G3:h B2+D3+G3:h | A2+D3+F#3:w | B2+D3+G3:w | B2+D3+G3:w
+  | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:h B2+D3+G3:h | C3+E3+A3:w | C3+E3+G3:w | B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w
+reps: 3
+days: 2

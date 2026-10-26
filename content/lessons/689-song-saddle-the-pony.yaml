@@ -1,0 +1,25 @@
+id: song-saddle-the-pony
+title: Saddle the Pony
+skills:
+- songs
+steps:
+- explain: |
+    **Saddle the Pony** · Irish jig, 1800s
+
+    A trotting jig in A major.
+  staff:
+    notes: A4:s B4:s  |  C#5:e A4:e A4:e E5:e A4:e A4:e
+    key: A
+  sound: A4:s B4:s  |  C#5:e A4:e A4:e E5:e A4:e A4:e  |  C#5:e B4:e C#5:e E5:e A4:e A4:e  |  C#5:e A4:e A4:e E5:e A4:e A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-saddle-the-pony-rh
+- exercise: song-saddle-the-pony-lh
+- exercise: song-saddle-the-pony
+- exercise: song-saddle-the-pony-arranged
+- exercise: song-saddle-the-pony-performance
+recap: 'Saddle the Pony: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,20 @@
+id: song-grandfathers-clock-rh
+title: 'My Grandfather''s Clock: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: A4:e | D5:e C#5:s D5:s E5:e D5:s E5:s | F#5:e G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s | D5:s E5:s F#5:s
+  G5:s A5:e A4:s A4:s | D5:e C#5:s D5:s E5:e D5:s E5:s | F#5:s F#5:s G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s
+  | D5:q r:e D5:s F#5:s | A5:s G5:s F#5:s E5:s D5:e D5:e | E5:s D5:s C#5:s B4:s A4:e D5:s F#5:s | A5:e F#5:e D5:e C#5:s D5:s
+  | E5:q r:e A4:s A4:s | D5:e r:e E5:e r:e | F#5:s F#5:s G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s | D5:q r:e
+  A4:s A4:s | D5:e A4:s A4:s B4:e A4:e | F#4:e A4:e F#4:e A4:e | D5:s D5:s A4:s A4:s B4:e A4:e | F#4:e A4:e F#4:e A4:e | D5:e
+  r:e E5:e r:e | F#5:s F#5:s G5:s F#5:s B4:e E5:s E5:s | D5:e D5:e C#5:e B4:s C#5:s | D5:q r:e
+reps: 2
+days: 1

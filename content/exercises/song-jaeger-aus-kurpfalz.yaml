@@ -1,0 +1,19 @@
+id: song-jaeger-aus-kurpfalz
+title: Ein Jäger aus Kurpfalz
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: D4:e | G4:e B4:e B4:e B4:e | B4:q. D5:e | D5:e C5:e C5:e B4:e | B4:e A4:e A4:e G4:e | F#4:e A4:e A4:e A4:e | A4:q.
+  D5:e | B4:e B4:e A4:e A4:e | G4:q r:e D5:e | D5:q. C5:e | B4:q. D5:e | G5:e D5:e D5:e B4:e | B4:e A4:e A4:e G4:e | F#4:e
+  A4:e A4:e A4:e | A4:q. D5:e | B4:e B4:e A4:e A4:e | G4:q r:e
+left: r:e | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+F#3+A3:h | D3+G3+B3:q D3+F#3+A3:q | D3+G3+B3:h
+  | D3+F#3+A3:h | D3+G3+B3:h | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+F#3+A3:h | D3+G3+B3:q D3+F#3+A3:q | D3+G3+B3:q.
+reps: 3
+days: 2

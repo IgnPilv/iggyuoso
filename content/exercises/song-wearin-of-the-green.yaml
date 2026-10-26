@@ -1,0 +1,22 @@
+id: song-wearin-of-the-green
+title: The Wearin' o' the Green
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: G4:s A4:s | B4:e B4:e B4:e B4:e | B4:e D5:e D5:e. B4:s | B4:e A4:e A4:e A4:e | A4:q. D5:e | E5:e C5:e G5:e. F#5:s |
+  E5:e D5:e B4:e G4:e | A4:e G4:e G4:e G4:e | G4:q. G5:s F#5:s | E5:e E5:e D5:e B4:e | D5:e D5:e G4:e. A4:s | B4:e A4:e B4:e
+  C5:e | B4:q G5:e. F#5:s | E5:e E5:e D5:e B4:e | D5:e D5:e G4:e. B4:s | A4:e G4:e F#4:e E4:e | D4:q. G4:s A4:s | B4:e B4:e
+  B4:e B4:e | B4:e D5:e D5:e B4:e | B4:e A4:e A4:e A4:e | A4:q. D5:e | E5:e C5:e G5:e. F#5:s | E5:e D5:e B4:e G4:e | A4:e
+  G4:e G4:e G4:e | G4:q.
+left: r:e | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+F#3+A3:h | C3+E3+G3:h | B2+D3+G3:h | B2+D3+G3:h | B2+D3+G3:h | C3+E3+G3:q
+  B2+D3+G3:q | B2+D3+G3:h | B2+D3+G3:h | B2+D3+G3:h | C3+E3+G3:q B2+D3+G3:q | B2+D3+G3:h | A2+D3+F#3:h | B2+D3+G3:h | B2+D3+G3:h
+  | B2+D3+G3:h | A2+D3+F#3:h | A2+D3+F#3:h | C3+E3+G3:h | B2+D3+G3:h | B2+D3+G3:h | B2+D3+G3:q.
+reps: 3
+days: 2

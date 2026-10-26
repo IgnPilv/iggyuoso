@@ -1,0 +1,20 @@
+id: song-scatter-the-mud
+title: Scatter the Mud
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: D5:e | E5:e A4:e A4:e B4:q C5:s B4:s | A4:e E5:e A4:e A4:e A4:e B4:e | D5:e E5:e A4:e A4:e B4:q | C5:s B4:s A4:e B4:e
+  G4:e G4:e G4:e | B4:e D5:e E5:e A4:e A4:e B4:e~ | B4:e C5:s B4:s A4:e E5:e A4:e A4:e | A4:e B4:e D5:e E5:e D5:e C5:e | B4:e
+  C5:e A4:e B4:e G4:e G4:e | G4:q D5:e G5:e F5:e G5:e | E5:e F5:e G5:e F5:e A5:e G5:e | F5:e E5:e D5:e G5:e F5:e G5:e | E5:e
+  F5:e G5:e A5:e F5:e D5:e | D5:q D5:e G5:e F5:e G5:e | E5:e F5:e G5:e F5:e A5:e G5:e | F5:e E5:e D5:e E5:e D5:e C5:e | B4:e
+  C5:e A4:e B4:e G4:e G4:e | G4:q r:q.
+left: r:e | A2:q. G2:q. | A2:h. | G2:h. | G2:h. | G2:h. | A2:h. | A2:h. | G2:h. | G2:h. | G2:h. | G2:h. | C3:q. D3:q. | G2:h.
+  | G2:h. | C3:h. | G2:h. | C3:h~ C3:e
+reps: 3
+days: 2

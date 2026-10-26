@@ -1,0 +1,12 @@
+id: song-chester-tap
+title: 'Chester: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 88
+meter: 4/4
+countIn: 1
+rhythm: x:h x:q x:q | x:h x:h | x:q x:q x:q x:q | x:w | x:h x:q x:q | x:q x:q x:e x:e x:q | x:q x:q x:q x:q | x:w | x:h x:q
+  x:q | x:h x:q x:q | x:q x:q x:q x:q | x:w | x:q. x:e x:q x:q | x:e x:e x:e x:e x:q x:q | x:q x:q x:q x:q | x:w
+reps: 2
+days: 1

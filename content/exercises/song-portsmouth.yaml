@@ -1,0 +1,23 @@
+id: song-portsmouth
+title: Portsmouth
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: A
+tempo: 72
+tempoLadder: true
+meter: 2/4
+pickup: e
+countIn: 1
+right: E5:e | A4:s C#5:s B4:s C#5:s A4:s F#4:s F#4:s E4:s | A4:s C#5:s E5:s A5:s F#5:e F#5:s G#5:s | A5:s G#5:s F#5:s E5:s
+  F#5:s E5:s C#5:s A4:s | B4:s C#5:s B4:s A4:s F#4:e E4:e | A4:s C#5:s B4:s C#5:s A4:s F#4:s E4:s F#4:s | A4:s C#5:s E5:s
+  A5:s F#5:e F#5:s G#5:s | A5:s G#5:s F#5:s E5:s F#5:s E5:s C#5:s A4:s | B4:e A4:e A4:e C#5:s D5:s | E5:s A5:s G#5:s A5:s
+  F#5:s E5:s C#5:s E5:s | F#5:s A5:s G#5:s A5:s F#5:e F#5:s G#5:s | A5:s G#5:s F#5:s E5:s F#5:s E5:s C#5:s A4:s | B4:s C#5:s
+  B4:s A4:s F#4:e E4:e | A4:s C#5:s B4:s C#5:s A4:s F#4:s E4:s F#4:s | A4:s C#5:s E5:s A5:s F#5:e F#5:s G#5:s | A5:s G#5:s
+  F#5:s E5:s F#5:s E5:s C#5:s A4:s | B4:e A4:e A4:e
+left: r:e | A2+C#3+E3:h | A2+C#3+E3:q A2+D3+F#3:q | A2+C#3+E3:h | A2+C#3+E3:h | A2+C#3+E3:h | A2+C#3+E3:q A2+D3+F#3:q | A2+C#3+E3:h
+  | A2+C#3+E3:h | A2+C#3+E3:h | A2+D3+F#3:h | A2+C#3+E3:h | A2+C#3+E3:h | A2+C#3+E3:h | A2+C#3+E3:q A2+D3+F#3:q | A2+C#3+E3:h
+  | A2+C#3+E3:q.
+reps: 3
+days: 2

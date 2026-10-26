@@ -1,0 +1,26 @@
+id: song-staten-island
+title: Staten Island
+skills:
+- songs
+steps:
+- explain: |
+    **Staten Island** · American hornpipe, 1800s
+
+    A New York hornpipe, used for contra dances in New England.
+  staff:
+    notes: A4:e G4:e  |  F#4:s D4:s F#4:s G4:s A4:e B4:s C#5:s
+    key: D
+  sound: A4:e G4:e  |  F#4:s D4:s F#4:s G4:s A4:e B4:s C#5:s  |  D5:s E5:s F#5:s D5:s A4:e B4:s C#5:s  |  D5:e G4:s B4:s A4:e
+    F#4:s A4:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-staten-island-rh
+- exercise: song-staten-island-lh
+- exercise: song-staten-island
+- exercise: song-staten-island-arranged
+- exercise: song-staten-island-performance
+recap: 'Staten Island: tune, left hand, together. Come back to it any time; songs are for fun.'

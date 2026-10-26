@@ -2,7 +2,7 @@ id: song-logie-o-buchan-arranged
 title: Logie o' Buchan, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 key: D
 tempo: 96
@@ -22,8 +22,5 @@ left: r:q | D3:e A3:e F#3:e A3:e D3:q | D3:e A3:e F#3:e A3:e D3:q | G2:e D3:e B2
   | B2:e F#3:e D3:e F#3:e B2:q | D3:e A3:e F#3:e A3:e D3:q | B2:e F#3:e D3:e F#3:e B2:q | E3:e B3:e G3:e B3:e E3:q | F#2:e
   C#3:e A#2:e C#3:e F#2:q | B2:q B2:q A2:q | D3:e A3:e F#3:e A3:e D3:q | D3:e A3:e F#3:e A3:e D3:q | G2:e D3:e B2:e D3:e G2:q
   | G2:e D3:e B2:e D3:e G2:q | D3:e A3:e F#3:e A3:e D3:q | A2:e E3:e C#3:e E3:e A2:q | D3:q D3:q G2:q | D3+F#3+A3:h
-pedal: r:q | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q x:q x:q | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q
-  x:q x:q | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q x:q x:q | x:h. | x:h. | x:h. | x:h. | x:h. | x:h.
-  | x:q x:q x:q | x:h
 reps: 3
 days: 2

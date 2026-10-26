@@ -1025,3 +1025,15 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   browser took over a second at every start (2.0 → 1.25 s to the Songbook on a test machine). The
   tree and the Book stay text. Tests still load the YAML text. Nothing a player sees changes, so no
   demo scene.
+- 2026-10-26: Songbook batch 4: 95 more public-domain tunes (296 songs). `import_abc.py` also reads the
+  collections that ship with music21 (`collection=` in `trad_list.py`): Essen (German songs, hymns and
+  carols: Der Mond ist aufgegangen, Die Gedanken sind frei, Ein feste Burg, Nun danket, O Tannenbaum,
+  Der Lindenbaum, Weber's Bridesmaids' Chorus, Mo Li Hua...), O'Neill's Music of Ireland (Molly
+  Malone, Killarney, Carolan's harp tunes, about 35 jigs, reels and hornpipes), Ryan's Mammoth
+  Collection (American hornpipes) and music21's folk set (Grandfather's Clock, Hail to the Chief,
+  Chester, British Grenadiers...), plus Daisy Bell and Slane from the Nottingham database. Those
+  collections have no chords, so the importer chooses them (`harmonise`: the key's main chords scored
+  bar by bar against the melody, about 70% agreement with the Nottingham tunes' own chords); tunes
+  written low move up an octave. Songs already known in a famous version were checked against it,
+  and regional variants that differ were left out. Adding tunes re-ranks stages, so some batch 3
+  songs moved a stage. Nothing new on screen, so the demo is unchanged.

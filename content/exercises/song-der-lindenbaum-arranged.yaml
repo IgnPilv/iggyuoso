@@ -1,0 +1,22 @@
+id: song-der-lindenbaum-arranged
+title: Der Lindenbaum, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (bass, chord, chord).
+display: staff
+key: F
+tempo: 80
+tempoLadder: true
+meter: 3/4
+pickup: e
+countIn: 1
+right: C5:e | C5:q. A4:e A4:e A4:e | A4:q F4:q r:e F4:e | G4:q. A4:e Bb4:e G4:e | A4:h r:e C5:e | C5:q. A4:e A4:e A4:e | A4:q
+  F4:q r:e F4:e | G4:q. A4:e C5:e Bb4:e | G4:e F4:h r:e | F4:e G4:q. G4:e G4:e | G4:e A4:e. Bb4:s C5:q r:e | C5:e D5:q. C5:e
+  A4:e | F4:e G4:h r:e | G4:e G4:q. G4:e G4:e | G4:e A4:e. Bb4:s C5:q r:e | C5:e F5:q C5:e A4:e Bb4:e | G4:e C5:h r:e | C5:e
+  F5:q C5:e A4:e Bb4:e | G4:e F4:h r:e
+left: r:e | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+Bb3:q E3+Bb3:q | F2:q C3+F3+A3:q C3+F3+A3:q
+  | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+Bb3:q E3+Bb3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q
+  E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q E3+G3:q | C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q
+  C3+F3+A3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3:q E3+G3:q E3+G3:q | F2:q C3+F3+A3:q C3+F3+A3:q | C3+F3+A3:h~ C3+F3+A3:e
+reps: 3
+days: 2

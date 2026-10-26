@@ -1,0 +1,20 @@
+id: song-oak-and-ash
+title: The Oak and the Ash
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Gm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q G4:e A4:e Bb4:q A4:e G4:e | A4:q A4:e Bb4:e C5:q Bb4:e A4:e | G4:q G4:e A4:e Bb4:q A4:e G4:e | F#4:q D5:e.
+  C#5:s D5:q D5:e Eb5:e | F5:q D5:e C5:e Bb4:q A4:e Bb4:e | C5:q A4:e G4:e F4:q G4:e A4:e | Bb4:q A4:e G4:e F#4:e G4:e A4:e
+  A4:e | G4:q D5:e. C#5:s D5:q D5:e Eb5:e | F5:q D5:e C5:e Bb4:q A4:e Bb4:e | C5:e Bb4:e A4:e G4:e F4:q G4:e A4:e | Bb4:q
+  A4:e G4:e F#4:e G4:e A4:e A4:e | G4:q G4:e F#4:e G4:q
+left: r:q | D3+G3+Bb3:w | D3+F#3+A3:w | D3+G3+Bb3:w | D3+F#3+A3:w | D3+F3+Bb3:w | C3+F3+A3:w | D3+G3+Bb3:h D3+F#3+A3:h | D3+G3+Bb3:w
+  | D3+F3+Bb3:w | C3+F3+A3:w | D3+G3+Bb3:h D3+F#3+A3:h | D3+G3+Bb3:h.
+reps: 3
+days: 2

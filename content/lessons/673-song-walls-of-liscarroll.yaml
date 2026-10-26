@@ -1,0 +1,25 @@
+id: song-walls-of-liscarroll
+title: The Walls of Liscarroll
+skills:
+- songs
+steps:
+- explain: |
+    **The Walls of Liscarroll** · Irish jig, 1800s
+
+    Named after a ruined castle in County Cork.
+  staff:
+    notes: A4:e  |  D5:e. C#5:s A4:e A4:e. G4:s E4:e
+    key: D
+  sound: A4:e  |  D5:e. C#5:s A4:e A4:e. G4:s E4:e  |  G4:e. E4:s E4:e D4:q E4:e  |  G4:e. E4:s E4:e C5:e. E4:s E4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-walls-of-liscarroll-rh
+- exercise: song-walls-of-liscarroll-lh
+- exercise: song-walls-of-liscarroll
+- exercise: song-walls-of-liscarroll-arranged
+- exercise: song-walls-of-liscarroll-performance
+recap: 'The Walls of Liscarroll: tune, left hand, together. Come back to it any time; songs are for fun.'

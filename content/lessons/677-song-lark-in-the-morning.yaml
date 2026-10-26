@@ -1,0 +1,25 @@
+id: song-lark-in-the-morning
+title: The Lark in the Morning
+skills:
+- songs
+steps:
+- explain: |
+    **The Lark in the Morning** · Irish jig, 1800s
+
+    A jig in four parts that rises like the lark at sunrise.
+  staff:
+    notes: B3:e  |  E4:q C5:e B4:e G4:e E4:e
+    key: Em
+  sound: B3:e  |  E4:q C5:e B4:e G4:e E4:e  |  D4:q D5:e A4:e F#4:e D4:e  |  E4:q C5:e B4:e A4:e G4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 56
+- exercise: song-lark-in-the-morning-rh
+- exercise: song-lark-in-the-morning-lh
+- exercise: song-lark-in-the-morning
+- exercise: song-lark-in-the-morning-arranged
+- exercise: song-lark-in-the-morning-performance
+recap: 'The Lark in the Morning: tune, left hand, together. Come back to it any time; songs are for fun.'

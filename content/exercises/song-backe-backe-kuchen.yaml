@@ -1,0 +1,18 @@
+id: song-backe-backe-kuchen
+title: Backe, backe Kuchen
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: F
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: C5:e C5:e D5:e D5:e | C5:q A4:e A4:e | C5:e C5:e D5:e D5:e | C5:q A4:e r:e | C5:e C5:e D5:e D5:e | C5:e C5:e A4:e A4:e
+  | C5:e C5:e D5:e D5:e | C5:e C5:e A4:e A4:e | C5:s C5:s C5:e A4:q | C5:s C5:s C5:e A4:q | C5:e C5:e A4:q | C5:e C5:e D5:e
+  D5:e | C5:e C5:e A4:q | F5:q C5:e A4:e | G4:e F4:e F4:q
+left: C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:q
+  D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:q D3+F3+Bb3:q | C3+F3+A3:h | C3+F3+A3:h | C3+F3+A3:h
+reps: 3
+days: 2

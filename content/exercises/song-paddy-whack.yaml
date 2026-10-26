@@ -1,0 +1,21 @@
+id: song-paddy-whack
+title: Paddy Whack
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: A
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: E4:e | A4:e C#5:e E5:e A5:e G#5:e A5:e | F#5:e E5:e D5:e C#5:e D5:e B4:e | A4:e C#5:e E5:e F#5:e G#5:e A5:e | G#5:e
+  E5:e E5:e E5:e F#5:e G#5:e | A5:e B5:e A5:e A5:e E5:e C#5:e | D5:e F#5:e A5:e E5:e C#5:e A4:e | A4:e C#5:e E5:e F#5:e D5:e
+  B4:e | B4:e A4:e A4:e A4:q C#5:s D5:s | E5:e C#5:e C#5:e F#5:e D5:e D5:e | E5:e C#5:e A4:e B4:q A4:e | A4:e C#5:e E5:e F#5:e
+  G#5:e A5:e | G#5:e E5:e E5:e E5:e F#5:e G#5:e | A5:e B5:e A5:e A5:e E5:e C#5:e | D5:e F#5:e A5:e E5:e C#5:e A4:e | A4:e
+  C#5:e E5:e F#5:e D5:e B4:e | B4:e A4:e A4:e A4:q
+left: r:e | A2:h. | B2:h. | A2:h. | E3:h. | A2:h. | D3:q. A2:q. | A2:q. B2:q. | A2:h. | A2:q. D3:q. | A2:q. E3:q. | A2:h.
+  | E3:h. | A2:h. | D3:q. A2:q. | A2:q. B2:q. | A2:h~ A2:e
+reps: 3
+days: 2

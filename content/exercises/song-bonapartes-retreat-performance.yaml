@@ -1,0 +1,36 @@
+id: song-bonapartes-retreat-performance
+title: 'Bonaparte''s Retreat: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Em
+tempo: 60
+meter: 2/2
+pickup: q
+countIn: 1
+right: B3:q | B3:e. E4:s E4:e. F#4:s G4:e. F#4:s E4:e. D4:s | E4:e. F#4:s A4:e. B4:s D5:e. C#5:s D5:e. E5:s | F#5:e. D5:s
+  E5:e. C#5:s D5:e. B4:s C5:e. A4:s | B4:e. G4:s A4:e. F#4:s G4:e. E4:s F4:e. D4:s | B3:e. E4:s E4:e. F#4:s G4:e. F#4:s E4:e.
+  D4:s | E4:e. F#4:s A4:e. B4:s D5:e. C#5:s D5:e. E5:s | F#5:e. E5:s D5:e. B4:s A4:e. F#4:s D4:e. F#4:s | E4:q E4:e. F#4:s
+  E4:q B4:e. C#5:s | D5:e. C#5:s D5:e. E5:s D5:q B4:e3 C5:e3 D5:e3 | E5:e. D#5:s E5:e. F#5:s E5:q B4:e. C#5:s | D5:e. C#5:s
+  D5:e. E5:s D5:q B4:e. C5:s | B4:e. G4:s A4:e. F#4:s G4:e. E4:s E4:q | D5:e. C#5:s D5:e. E5:s D5:q B4:e3 C5:e3 D5:e3 | E5:e.
+  D#5:s E5:e. F#5:s E5:q E5:e. F#5:s | G5:e. F#5:s E5:e. G5:s F#5:e. E5:s D#5:e. F#5:s | E5:q E5:e. F#5:s E5:q B4:e. C#5:s
+  | G5:e F#5:e G5:e. A5:s G5:e. F#5:s E5:e. G5:s | F#5:e E5:e F#5:e. G5:s F#5:e. E5:s D5:e. F#5:s | D5:e. C#5:s D5:e. E5:s
+  D5:q A4:e. C5:s | B4:e. A4:s G4:e. F#5:s G4:e. E4:s F4:e. D4:s | B3:e. E4:s E4:e. F#4:s G4:e. F#4:s E4:e. D4:s | E4:e. F#4:s
+  A4:e. B4:s D5:e. C#5:s D5:e. E5:s | F#5:e. D5:s E5:e. C#5:s D5:e. B4:s C5:e. A4:s | B4:e. G4:s A4:e. F#4:s G4:e. E4:s F4:e.
+  D4:s | B3:e. E4:s E4:e. F#4:s G4:e. F#4:s E4:e. D4:s | E4:e. F#4:s A4:e. B4:s D5:e. C#5:s D5:e. E5:s | F#5:e. E5:s D5:e.
+  B4:s A4:e. F#4:s D4:e. F#4:s | E4:q E4:e. F#4:s E4:q
+left: r:q | E2:e B2:e G2:e B2:e E2:e B2:e G2:e B2:e | C2:e A2:e E2:e A2:e B1:e G2:e D2:e G2:e | C2:e A2:e E2:e A2:e C2:e A2:e
+  E2:e A2:e | B1:e A2:e D#2:e A2:e B1:e G2:e E2:e G2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e | C2:e A2:e E2:e A2:e B1:e
+  G2:e D2:e G2:e | A1:e F#2:e D2:e F#2:e A1:e F#2:e D2:e F#2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e | B1:e G2:e D2:e
+  G2:e B1:e G2:e D2:e G2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e | B1:e G2:e D2:e G2:e B1:e G2:e D2:e G2:e | B1:e G2:e
+  E2:e G2:e B1:e G2:e E2:e G2:e | B1:e G2:e D2:e G2:e B1:e G2:e D2:e G2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e | B1:e
+  G2:e E2:e G2:e B1:e F#2:e D#2:e F#2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e
+  | A1:e F#2:e D2:e F#2:e A1:e F#2:e D2:e F#2:e | A1:e F#2:e D2:e F#2:e A1:e F#2:e D2:e F#2:e | B1:e G2:e E2:e G2:e B1:e G2:e
+  E2:e G2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e | C2:e A2:e E2:e A2:e B1:e G2:e D2:e G2:e | C2:e A2:e E2:e A2:e C2:e
+  A2:e E2:e A2:e | B1:e A2:e D#2:e A2:e B1:e G2:e E2:e G2:e | B1:e G2:e E2:e G2:e B1:e G2:e E2:e G2:e | C2:e A2:e E2:e A2:e
+  B1:e G2:e D2:e G2:e | A1:e F#2:e D2:e F#2:e A1:e F#2:e D2:e F#2:e | B1+E2+G2:h.
+pedal: r:q | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w
+  | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h x:h | x:w | x:h.
+reps: 2
+days: 2

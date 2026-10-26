@@ -1,0 +1,14 @@
+id: song-rosin-the-beau-tap
+title: 'Rosin the Beau: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 56
+meter: 6/8
+pickup: e
+countIn: 1
+rhythm: x:e | x:q x:e x:e x:e x:e | x:q. x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:q. x:q x:e | x:q x:e x:e x:e x:e | x:q.
+  x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:q. x:q x:e | x:e x:e x:e x:e x:e x:e | x:q x:e x:q x:e | x:e x:e x:e x:e x:e x:e
+  | x:q. x:q x:e | x:q x:e x:e x:e x:e | x:q. x:e x:e x:e | x:e x:e x:e x:e x:e x:e | x:q. x:q
+reps: 2
+days: 1

@@ -1,0 +1,26 @@
+id: song-devils-dream
+title: The Devil's Dream
+skills:
+- songs
+steps:
+- explain: |
+    **The Devil's Dream** · Fiddle reel, 1800s
+
+    A whirling reel in sixteenths, played fast at American square dances and in Scotland.
+  staff:
+    notes: E5:e  |  A5:s G#5:s A5:s E5:s A5:s G#5:s A5:s E5:s
+    key: A
+  sound: E5:e  |  A5:s G#5:s A5:s E5:s A5:s G#5:s A5:s E5:s  |  A5:s G#5:s A5:s E5:s F#5:s E5:s D5:s C#5:s  |  D5:s F#5:s
+    B4:s F#5:s D5:s F#5:s B4:s F#5:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 2/4 · Tempo: 72
+- exercise: song-devils-dream-rh
+- exercise: song-devils-dream-lh
+- exercise: song-devils-dream
+- exercise: song-devils-dream-arranged
+- exercise: song-devils-dream-performance
+recap: 'The Devil''s Dream: tune, left hand, together. Come back to it any time; songs are for fun.'

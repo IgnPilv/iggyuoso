@@ -1,0 +1,25 @@
+id: song-planxty-drury
+title: Planxty Drury
+skills:
+- songs
+steps:
+- explain: |
+    **Planxty Drury** · Turlough O'Carolan, early 1700s
+
+    A lively Carolan tune in 6/8 for the Drury family.
+  staff:
+    notes: D5:e. E5:s D5:e D5:e C#5:e B4:e  |  A4:q G4:e F#4:q G4:e
+    key: D
+  sound: D5:e. E5:s D5:e D5:e C#5:e B4:e  |  A4:q G4:e F#4:q G4:e  |  E4:q E5:e E5:e F#5:e D5:e  |  C#5:q B4:e A4:e A4:q
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-planxty-drury-rh
+- exercise: song-planxty-drury-lh
+- exercise: song-planxty-drury
+- exercise: song-planxty-drury-arranged
+- exercise: song-planxty-drury-performance
+recap: 'Planxty Drury: tune, left hand, together. Come back to it any time; songs are for fun.'

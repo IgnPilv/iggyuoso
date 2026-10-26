@@ -17,6 +17,7 @@ steps:
     The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
   callout: |
     Key: G major · Time: 3/4 · Tempo: 96
+- exercise: song-i-belong-to-glasgow-by-ear
 - exercise: song-i-belong-to-glasgow-rh
 - exercise: song-i-belong-to-glasgow-lh
 - exercise: song-i-belong-to-glasgow

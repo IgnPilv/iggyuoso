@@ -1,0 +1,26 @@
+id: song-wind-that-shakes-the-barley
+title: The Wind That Shakes the Barley
+skills:
+- songs
+steps:
+- explain: |
+    **The Wind That Shakes the Barley** · Irish reel, 1800s
+
+    A reel that shares its name with a song about the 1798 rising.
+  staff:
+    notes: B4:e  |  A4:q A4:e B4:e A4:e F#4:e E4:e D4:e
+    key: D
+  sound: B4:e  |  A4:q A4:e B4:e A4:e F#4:e E4:e D4:e  |  B4:q B4:e A4:e B4:e C#5:e D5:e B4:e  |  A4:q A4:e B4:e A4:e F#4:e
+    E4:e D4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/2 · Tempo: 60
+- exercise: song-wind-that-shakes-the-barley-rh
+- exercise: song-wind-that-shakes-the-barley-lh
+- exercise: song-wind-that-shakes-the-barley
+- exercise: song-wind-that-shakes-the-barley-arranged
+- exercise: song-wind-that-shakes-the-barley-performance
+recap: 'The Wind That Shakes the Barley: tune, left hand, together. Come back to it any time; songs are for fun.'

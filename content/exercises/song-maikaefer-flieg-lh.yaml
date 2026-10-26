@@ -1,0 +1,14 @@
+id: song-maikaefer-flieg-lh
+title: 'Maikäfer, flieg: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 2/4
+countIn: 1
+left: D3+F#3+A3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+G3+B3:h | D3+G3+B3:h | D3+F#3+A3:h | D3+F#3+A3:h | D3+G3+B3:h
+reps: 2
+days: 1

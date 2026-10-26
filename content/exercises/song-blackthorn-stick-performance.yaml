@@ -1,0 +1,29 @@
+id: song-blackthorn-stick-performance
+title: 'The Blackthorn Stick: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Dm
+tempo: 56
+meter: 6/8
+pickup: e
+countIn: 1
+right: F4:s G4:s | A4:e. D4:s D4:e D4:e C5:e E4:e | E4:e D4:e D4:e D4:q D5:s E5:s | F5:e. E5:s D5:e E5:e D5:e C5:e | A4:e
+  Bb4:e C#5:e D5:q D5:s D5:s | E5:e. D5:s C5:e D5:e C5:e A4:e | G4:e F4:e E4:e F4:q G4:s G4:s | A4:e. D4:s D4:e D4:e C5:e
+  E4:e | E4:e D4:e D4:e D4:q A4:s3 B4:s3 C#5:s3 | D5:e. E5:s D5:e D5:e C5:e A4:e | G4:e F4:e E4:e F4:q G4:s G4:s | G4:e. E4:s
+  C4:e C4:e E4:e F4:e | G4:e. A4:s G4:e E4:q A4:s3 B4:s3 C#5:s3 | D5:e. E5:s D5:e D5:e C5:e A4:e | G4:e F4:e E4:e F4:q G4:s
+  G4:s | A4:e. D4:s D4:e D4:e C5:e E4:e | E4:e D4:e D4:e D4:q A4:s3 B4:s3 C#5:s3 | D5:q E5:e F5:e E5:e D5:e | E5:e D5:e C#5:e
+  D5:q A4:s B4:s | C5:e. D5:s C5:e C5:e Bb4:e A4:e | G4:e. E4:s C4:e C4:q A4:s3 B4:s3 C#5:s3 | D5:q E5:e F5:e E5:e D5:e |
+  E5:e D5:e C#5:e D5:q A4:s B4:s | C5:e Bb4:e A4:e G4:e F4:e G4:e | A4:s F4:e. D4:e D4:q
+left: r:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e
+  D3:e A3:e F3:e | C3:e G3:e E3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e
+  F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | C3:e G3:e E3:e C3:e G3:e E3:e | A2:e
+  E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e
+  | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | F2:e C3:e A2:e F2:e C3:e
+  A2:e | C3:e G3:e E3:e C3:e G3:e E3:e | D3:e A3:e F3:e D3:e A3:e F3:e | D3:e A3:e F3:e D3:e A3:e F3:e | G2:e D3:e Bb2:e G2:e
+  D3:e Bb2:e | D3+F3+A3:h~ D3+F3+A3:e
+pedal: r:e | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. |
+  x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h x:e
+reps: 2
+days: 2
