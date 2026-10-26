@@ -1,0 +1,26 @@
+id: song-dinah
+title: Someone's in the Kitchen with Dinah
+skills:
+- songs
+steps:
+- explain: |
+    **Someone's in the Kitchen with Dinah** · American song, 1890s
+
+    The cheerful last part of "I've Been Working on the Railroad", with its "fee fi fiddly-i-o".
+  staff:
+    notes: E5:q  |  A5:q A5:q A5:e B5:e A5:e F#5:e
+    key: A
+  sound: E5:q  |  A5:q A5:q A5:e B5:e A5:e F#5:e  |  E5:q C#5:h E5:q  |  A5:q A5:q A5:e B5:e A5:e E5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-dinah-tap
+- exercise: song-dinah-rh
+- exercise: song-dinah-lh
+- exercise: song-dinah
+- exercise: song-dinah-arranged
+- exercise: song-dinah-performance
+recap: 'Someone''s in the Kitchen with Dinah: tune, left hand, together. Come back to it any time; songs are for fun.'

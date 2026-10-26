@@ -13,7 +13,6 @@ right: B4:q. B4:e B4:q A4:q | B4:q D5:q E5:q D5:q | G5:e G5:e G5:e G5:e G5:q. E5
   | B4:q D5:q E5:q D5:q | G5:e G5:e G5:e G5:e G5:q. D5:e | E5:q F#5:q G5:h | G5:q. F#5:e G5:q A5:q | G5:q F#5:q E5:q D5:q
   | G5:q. F#5:e G5:q A5:q | G5:q F#5:q E5:h | G5:q. F#5:e G5:q A5:q | G5:q F#5:q E5:q D5:q | E5:e E5:e E5:e E5:e E5:q D5:q
   | E5:q F#5:q G5:h
-left: D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:w | C3+E3+G3:w |
-  B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:w | B2+D3+G3:w | B2+D3+G3:w | C3+E3+G3:w | B2+D3+G3:w
+left: G2:w | G2:w | G2:w | G2:h D3:h | G2:w | G2:w | G2:w | C3:w | G2:w | G2:w | G2:w | C3:w | G2:w | G2:w | C3:w | G2:w
 reps: 3
 days: 2

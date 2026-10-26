@@ -1,0 +1,25 @@
+id: song-boatie-rows
+title: The Boatie Rows
+skills:
+- songs
+steps:
+- explain: |
+    **The Boatie Rows** · Scottish fishing song, 1700s
+
+    A fisherman's wife sings as the boat rows home with the catch.
+  staff:
+    notes: D4:e  |  F#4:s A4:e. A4:e D4:e
+    key: Em
+  sound: D4:e  |  F#4:s A4:e. A4:e D4:e  |  G4:e B4:e B4:e D5:e  |  A4:s F#4:e. F#4:e D4:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 2/4 · Tempo: 72
+- exercise: song-boatie-rows-rh
+- exercise: song-boatie-rows-lh
+- exercise: song-boatie-rows
+- exercise: song-boatie-rows-arranged
+- exercise: song-boatie-rows-performance
+recap: 'The Boatie Rows: tune, left hand, together. Come back to it any time; songs are for fun.'

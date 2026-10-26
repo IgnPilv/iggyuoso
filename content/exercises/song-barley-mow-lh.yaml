@@ -1,0 +1,16 @@
+id: song-barley-mow-lh
+title: 'The Barley Mow: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: G2:q. D3:q. | G2:h. | C3:h. | A2:q. D3:q. | G2:q. D3:q. | G2:h. | C3:q. D3:q. | G2:h. | G2:q. C3:q. | G2:h. | G2:q.
+  C3:q. | G2:q. D3:q. | G2:q. C3:q. | G2:h. | A2:h. | D3:h. | G2:q. D3:q. | G2:h. | C3:h. | A2:q. D3:q. | G2:q. D3:q. | G2:h.
+  | C3:q. D3:q. | G2:h.
+reps: 2
+days: 1

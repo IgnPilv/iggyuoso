@@ -1,0 +1,18 @@
+id: song-ca-the-yowes
+title: Ca' the Yowes
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Bm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:e F#4:e B4:q A4:e F#4:e A4:q | F#4:e E4:e D4:e D5:e C#5:e D5:e E5:q | F#5:e B4:e B4:e B4:e A4:e D5:e F#4:q | E4:q
+  F#4:e A4:e B4:q B4:e E4:e | A4:e F#4:e B4:e A4:e F#4:e F#4:e A4:q | F#4:e E4:e D4:e D5:e C#5:e D5:e E5:q | F#5:s F#5:s B4:e
+  B4:e B4:e A4:e D5:e F#4:q | E4:e E4:e F#4:e A4:e B4:q B4:e r:e
+left: E3+G3+B3:h D3+F#3+A3:h | D3+F#3+B3:h C#3+F#3+A#3:h | D3+F#3+B3:w | E3+G3+B3:w | D3+F#3+A3:w | D3+F#3+B3:h C#3+F#3+A#3:h
+  | D3+F#3+B3:w | D3+F#3+B3:w
+reps: 3
+days: 2

@@ -1,0 +1,21 @@
+id: song-dumbarton-drums
+title: Dumbarton's Drums
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Dm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: F4:e G4:e | A4:q. C5:e A4:e C5:e G4:e A4:e | F4:q C5:q C5:q Bb4:e A4:e | G4:e F4:e G4:e A4:e Bb4:e A4:e G4:e F4:e |
+  D4:q D5:h C5:e D5:e | F5:q. G5:e A5:e G5:e F5:e D5:e | C5:e A4:e C5:e D5:e F5:q. F4:e | G4:e A4:e F5:e D5:e C5:e A4:e G4:e.
+  F4:s | D4:q D5:q D5:q C5:e D5:e | F5:q. G5:e F5:e G5:e A5:e G5:e | F5:q A5:q A5:q G5:e F5:e | G5:e F5:e G5:e A5:e Bb5:e
+  A5:e G5:e F5:e | D5:q G5:e A5:e G5:q F5:e D5:e | C5:e D5:e F5:e G5:e A5:e G5:e F5:e D5:e | C5:e A4:e C5:e D5:e F5:q. G5:e
+  | A5:e G5:e F5:e D5:e C5:e A4:e G4:e F4:e | D4:q D5:h
+left: r:q | D3+F3+A3:w | C3+F3+A3:w | C#3+E3+A3:w | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w
+  | D3+F3+A3:w | C#3+E3+A3:w | D3+G3+Bb3:w | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:w | D3+F3+A3:h.
+reps: 3
+days: 2

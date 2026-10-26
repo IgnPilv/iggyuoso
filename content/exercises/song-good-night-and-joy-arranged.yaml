@@ -2,7 +2,7 @@ id: song-good-night-and-joy-arranged
 title: Good Night and Joy Be wi' You, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 key: D
 tempo: 88
@@ -21,6 +21,5 @@ left: r:q | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e
   B3:e G3:e B3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e
   | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e
   A3:e | E3:e B3:e G3:e B3:e E3:e B3:e G3:e B3:e | B2+D3+F#3:h.
-pedal: r:q | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:w | x:w | x:h.
 reps: 3
 days: 2

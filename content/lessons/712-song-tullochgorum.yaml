@@ -1,0 +1,25 @@
+id: song-tullochgorum
+title: Tullochgorum
+skills:
+- songs
+steps:
+- explain: |
+    **Tullochgorum** · Scottish strathspey, 1700s
+
+    Robert Burns called the song to this strathspey "the best Scotch song Scotland ever saw".
+  staff:
+    notes: D5:s E5:s F#5:s G5:s A5:e D5:e  |  G5:e C5:e E5:q
+    key: Em
+  sound: D5:s E5:s F#5:s G5:s A5:e D5:e  |  G5:e C5:e E5:q  |  F#5:e D5:e A5:e D5:e  |  F#5:e G5:e A5:e D6:e
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 2/4 · Tempo: 72
+- exercise: song-tullochgorum-rh
+- exercise: song-tullochgorum-lh
+- exercise: song-tullochgorum
+- exercise: song-tullochgorum-arranged
+- exercise: song-tullochgorum-performance
+recap: 'Tullochgorum: tune, left hand, together. Come back to it any time; songs are for fun.'

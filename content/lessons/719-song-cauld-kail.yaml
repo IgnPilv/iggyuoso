@@ -1,0 +1,25 @@
+id: song-cauld-kail
+title: Cauld Kail in Aberdeen
+skills:
+- songs
+steps:
+- explain: |
+    **Cauld Kail in Aberdeen** · Scottish tune, 1700s
+
+    Cold cabbage soup in Aberdeen: a dance tune with a dotted, Scottish snap in its rhythm.
+  staff:
+    notes: D4:e  |  F#4:e. A4:s D5:e. B4:s
+    key: D
+  sound: D4:e  |  F#4:e. A4:s D5:e. B4:s  |  A4:e. F#4:s E4:e. D4:s  |  F#4:e A4:e B4:s C#5:s D5:s B4:s
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-cauld-kail-rh
+- exercise: song-cauld-kail-lh
+- exercise: song-cauld-kail
+- exercise: song-cauld-kail-arranged
+- exercise: song-cauld-kail-performance
+recap: 'Cauld Kail in Aberdeen: tune, left hand, together. Come back to it any time; songs are for fun.'

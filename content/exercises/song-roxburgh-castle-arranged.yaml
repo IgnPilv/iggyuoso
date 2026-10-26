@@ -1,0 +1,25 @@
+id: song-roxburgh-castle-arranged
+title: Roxburgh Castle, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (rolling arpeggios). Change the pedal with each chord.
+display: staff
+key: A
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: C#5:e B4:e | A4:e G#4:e A4:e C#5:e E5:e C#5:e A4:e C#5:e | D5:e C#5:e D5:e F#5:e E5:e C#5:e A4:e C#5:e | D5:q F#5:e3
+  E5:e3 D5:e3 C#5:q A5:q | B4:q B4:e C#5:e B4:e D5:e C#5:e B4:e | A4:e G#4:e A4:e C#5:e E5:e C#5:e A4:e C#5:e | D5:e C#5:e
+  D5:e F#5:e E5:e C#5:e A4:e3 C#5:e3 E5:e3 | A5:e G#5:e A5:e F#5:e E5:e D5:e C#5:e B4:e | C#5:q A4:q A4:q E5:q | A5:e E5:e
+  C#5:e E5:e F#5:e E5:e C#5:e E5:e | A5:e E5:e C#5:e E5:e F#5:e E5:e C#5:e E5:e | D5:q B5:q C#5:q A5:q | B4:q B4:e C#5:e B4:e
+  D5:e C#5:e B4:e | A4:e G#4:e A4:e C#5:e E5:e C#5:e A4:e C#5:e | D5:e C#5:e D5:e F#5:e E5:e C#5:e A4:e3 C#5:e3 E5:e3 | A5:e
+  G#5:e A5:e F#5:e E5:e D5:e C#5:e B4:e | C#5:q A4:q A4:q
+left: r:q | A2:q E3:q A3:q E3:q | D3:q A3:q A2:q E3:q | D3:q A3:q A2:q E3:q | B2:q F#3:q E3:q B3:q | A2:q E3:q A3:q E3:q |
+  D3:q A3:q A2:q E3:q | A2:q E3:q E3:q B3:q | A2:q E3:q A3:q E3:q | A2:q E3:q A3:q E3:q | A2:q E3:q A3:q E3:q | D3:q A3:q
+  A2:q E3:q | B2:q F#3:q E3:q B3:q | A2:q E3:q A3:q E3:q | D3:q A3:q A2:q E3:q | A2:q E3:q E3:q B3:q | A2+C#3+E3:h.
+pedal: r:q | x:w | x:h x:h | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:w | x:w | x:w | x:h x:h | x:h x:h | x:w | x:h
+  x:h | x:h x:h | x:h.
+reps: 3
+days: 2

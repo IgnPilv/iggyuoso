@@ -1,0 +1,25 @@
+id: song-pleasures-of-the-town
+title: The Pleasures of the Town
+skills:
+- songs
+steps:
+- explain: |
+    **The Pleasures of the Town** · English country dance, 1700s
+
+    A country dance from the 18th-century dancing books.
+  staff:
+    notes: C#5:e D5:e  |  E5:q C#5:e B4:e A4:q A4:q
+    key: A
+  sound: C#5:e D5:e  |  E5:q C#5:e B4:e A4:q A4:q  |  B4:q C#5:e B4:e A4:q E4:q  |  F#4:e E4:e F#4:e G#4:e A4:q B4:e C#5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-pleasures-of-the-town-rh
+- exercise: song-pleasures-of-the-town-lh
+- exercise: song-pleasures-of-the-town
+- exercise: song-pleasures-of-the-town-arranged
+- exercise: song-pleasures-of-the-town-performance
+recap: 'The Pleasures of the Town: tune, left hand, together. Come back to it any time; songs are for fun.'

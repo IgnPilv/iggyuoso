@@ -1,0 +1,18 @@
+id: song-tullochgorum
+title: Tullochgorum
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Em
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: D5:s E5:s F#5:s G5:s A5:e D5:e | G5:e C5:e E5:q | F#5:e D5:e A5:e D5:e | F#5:e G5:e A5:e D6:e | F#5:e D5:e A5:e D5:e
+  | G5:e C5:e E5:q | D5:e D6:e A5:e G5:e | F#5:q E5:e F#5:e | D5:e D6:e A5:e B5:e | C6:e C5:e E5:q | D5:e D6:e A5:e B5:e |
+  C6:e D6:e E6:e D6:e | C6:e B5:e A5:e C6:e | E5:e C5:e E5:q | D5:e D6:e A5:e G5:e | F#5:q E5:e F#5:e
+left: D3+F#3+A3:h | C3+E3+G3:h | A2+D3+F#3:h | A2+D3+F#3:h | A2+D3+F#3:h | C3+E3+G3:h | A2+D3+F#3:h | B2+D#3+F#3:h | B2+D3+G3:q
+  B2+D#3+F#3:q | C3+E3+A3:h | B2+D3+G3:q B2+D#3+F#3:q | C3+E3+A3:h | C3+E3+A3:h | C3+E3+A3:h | D3+F#3+A3:h | E3+G3+B3:h
+reps: 3
+days: 2

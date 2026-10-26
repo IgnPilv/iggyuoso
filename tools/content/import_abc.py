@@ -13,8 +13,10 @@
 # Tunes from other collections name them with `collection=` in trad_list.py: the music21 library
 # ships several public-domain ones (`essenFolksong`, German and other European folk songs from the
 # Essen collection; `oneills1850`, O'Neill's Music of Ireland, 1903; `ryansMammoth`, Ryan's Mammoth
-# Collection, 1883; `miscFolk`, American fife tunes and Northumbrian songs), read from its corpus
-# folder. Those have no chord names, so the importer chooses them (`harmonise`).
+# Collection, 1883; `miscFolk`, American fife tunes and Northumbrian songs; `airdsAirs`, Aird's
+# Selection of Scotch, English, Irish and Foreign Airs, 1782-1803), read from its corpus folder. Those
+# have no chord names, so the importer chooses them (`harmonise`). A collection ending in `.xml` or `.mxl` is one
+# MusicXML piece of the corpus (`part=` picks the part with the tune); its chord symbols are kept.
 import os, re, sys
 from fractions import Fraction as F
 import music21 as m21
@@ -72,9 +74,11 @@ def split_value(d):
     assert d == 0, d
     return out
 
-def convert(abc, where, harmonise_missing=False):
-    s = m21.converter.parse(once_through(abc), format='abc')
-    part = s.parts[0] if hasattr(s, 'parts') and s.parts else s
+def convert(abc, where, harmonise_missing=False, part=0):
+    """`abc` is a tune's ABC text, or a score music21 has read (from MusicXML); `part` picks the
+    score's part with the tune."""
+    s = m21.converter.parse(once_through(abc), format='abc') if isinstance(abc, str) else abc
+    part = s.parts[part] if hasattr(s, 'parts') and s.parts else s
     ts = part.recurse().getElementsByClass('TimeSignature')[0]
     meter = ts.ratioString
     q = F(ts.barDuration.quarterLength)
@@ -213,6 +217,10 @@ def fmt_pickup(pk):
 KEYS = {'maj': '', 'ion': '', 'm': 'm', 'min': 'm', 'aeo': 'm', 'dor': 'm', 'phr': 'm', 'mix': '', 'lyd': ''}
 
 def key_of(abc):
+    if not isinstance(abc, str):
+        k = abc.recurse().getElementsByClass('KeySignature')[0]
+        k = k if isinstance(k, m21.key.Key) else k.asKey('major')
+        return k.tonic.name.replace('-', 'b') + ('m' if k.mode == 'minor' else ''), k.mode[:3]
     k = re.search(r'^K:[ \t]*([A-G][b#]?)[ \t]*([A-Za-z]*)', abc, re.M)
     tonic, mode = k.group(1), k.group(2).lower()[:3]
     return tonic + KEYS.get(mode, ''), mode
@@ -263,10 +271,24 @@ def raise_low(melody):
     if sorted(notes)[len(notes) // 2] >= 4 * 12 + 2: return melody
     return re.sub(r'\b([A-G][#b]?)(\d)', lambda m: m.group(1) + str(int(m.group(2)) + 1), melody)
 
+def rest_to_upbeat(c, meter):
+    """A tune whose first bar opens with rests (common in MusicXML) starts with an upbeat instead."""
+    bars = c['melody'].split(' | ')
+    first = bars[0].split()
+    lead = [t for t in first[:next(i for i, t in enumerate(first) if not t.startswith('r:'))]] if any(not t.startswith('r:') for t in first) else first
+    if c['pickup'] or not lead or len(lead) == len(first): return
+    value = dict((v, k) for k, v in VALUES)
+    bar = F(int(meter.split('/')[0]) * 4, int(meter.split('/')[1]))
+    c['pickup'] = bar - sum(value[t.split(':')[1]] for t in lead)
+    bars[0] = ' '.join(first[len(lead):])
+    c['melody'] = ' | '.join(bars)
+    c['chords'] = ' | '.join(['-'] + c['chords'].split(' | ')[1:])
+
 def main(folder):
     srcs = {'nmd': tunes_in(folder)}
     def source(t):
         c = t.get('collection', 'nmd')
+        if c.endswith(('.xml', '.mxl')): return m21.corpus.parse(c)   # one piece in MusicXML, by its corpus path
         if c not in srcs: srcs[c] = tunes_in(os.path.join(CORPUS, c))
         return srcs[c][t['source']]
     out = ['# Traditional and old public-domain tunes, written by import_abc.py from trad_list.py: do not edit by hand.',
@@ -276,10 +298,11 @@ def main(folder):
     for t in trad_list.TUNES:
         abc = source(t)
         try:
-            c = convert(abc, t['id'], harmonise_missing=t.get('collection', 'nmd') != 'nmd')
+            c = convert(abc, t['id'], harmonise_missing=t.get('collection', 'nmd') != 'nmd', part=t.get('part', 0))
         except Exception as e:
             print('skipped', t['id'], repr(e)); continue
         c['melody'] = raise_low(c['melody'])
+        rest_to_upbeat(c, c['meter'])
         key, mode = key_of(abc)
         key = t.get('key', key)
         done.append((t, c, key))

@@ -1,0 +1,25 @@
+id: song-johnny-cope
+title: Hey, Johnnie Cope
+skills:
+- songs
+steps:
+- explain: |
+    **Hey, Johnnie Cope** · Scottish song, 1745
+
+    Mocks General Cope, beaten by Bonnie Prince Charlie's army at Prestonpans in 1745 before he was even awake.
+  staff:
+    notes: E4:q  |  A4:h A4:e B4:e C5:e D5:e
+    key: Am
+  sound: E4:q  |  A4:h A4:e B4:e C5:e D5:e  |  E5:q A4:q A4:q G4:e E4:e  |  G4:h G4:e A4:e B4:e C5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 4/4 · Tempo: 88
+- exercise: song-johnny-cope-rh
+- exercise: song-johnny-cope-lh
+- exercise: song-johnny-cope
+- exercise: song-johnny-cope-arranged
+- exercise: song-johnny-cope-performance
+recap: 'Hey, Johnnie Cope: tune, left hand, together. Come back to it any time; songs are for fun.'

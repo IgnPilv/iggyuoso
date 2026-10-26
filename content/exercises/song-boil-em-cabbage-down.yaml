@@ -1,0 +1,19 @@
+id: song-boil-em-cabbage-down
+title: Boil 'Em Cabbage Down
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: A4:e A4:s A4:s A4:e A4:e | B4:e B4:s B4:s B4:e B4:e | A4:e A4:s A4:s A4:e F#4:e | E4:h | A4:e A4:s A4:s A4:e A4:e |
+  B4:e B4:s B4:s B4:e B4:e | A4:e C#5:s C#5:s E5:e C#5:e | D5:q. A4:e | D5:e D5:s D5:s F#5:e A4:e | D5:q. A4:e | D5:e D5:s
+  D5:s C#5:e B4:e | A4:q. A4:e | D5:e D5:s D5:s D5:e D5:e | B4:e B4:s B4:s B4:e B4:e | A4:e C#5:s C#5:s E5:e C#5:e | D5:q.
+  r:e
+left: D3+F#3+A3:h | D3+G3+B3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | D3+G3+B3:h | C#3+E3+A3:h | D3+F#3+A3:h | D3+F#3+A3:h
+  | D3+F#3+A3:h | D3+F#3+A3:h | C#3+E3+A3:h | D3+F#3+A3:h | D3+G3+B3:h | C#3+E3+A3:h | D3+F#3+A3:h
+reps: 3
+days: 2

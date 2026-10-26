@@ -2,7 +2,7 @@ id: song-scatter-the-mud-arranged
 title: Scatter the Mud, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 tempo: 56
 tempoLadder: true
@@ -19,7 +19,5 @@ left: r:e | A2:e E3:e C3:e G2:e D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e | G2:e
   B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e
   G3:e E3:e D3:e A3:e F3:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e
   | G2:e D3:e B2:e G2:e D3:e B2:e | C3+E3+G3:h~ C3+E3+G3:e
-pedal: r:e | x:q. x:q. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:h.
-  | x:h. | x:h x:e
 reps: 3
 days: 2

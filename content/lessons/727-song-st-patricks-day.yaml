@@ -1,0 +1,25 @@
+id: song-st-patricks-day
+title: St. Patrick's Day
+skills:
+- songs
+steps:
+- explain: |
+    **St. Patrick's Day** · Irish jig, 1700s
+
+    A set dance played on the 17th of March. Irish regiments marched to it for two hundred years.
+  staff:
+    notes: D4:e  |  G4:e A4:e G4:e G4:e B4:e D5:e
+    key: G
+  sound: D4:e  |  G4:e A4:e G4:e G4:e B4:e D5:e  |  G5:e F#5:e E5:e D5:e B4:e G4:e  |  A4:e G4:e A4:e B4:e G4:e D4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 6/8 · Tempo: 56
+- exercise: song-st-patricks-day-rh
+- exercise: song-st-patricks-day-lh
+- exercise: song-st-patricks-day
+- exercise: song-st-patricks-day-arranged
+- exercise: song-st-patricks-day-performance
+recap: 'St. Patrick''s Day: tune, left hand, together. Come back to it any time; songs are for fun.'

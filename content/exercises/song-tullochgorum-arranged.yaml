@@ -1,0 +1,19 @@
+id: song-tullochgorum-arranged
+title: Tullochgorum, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (rolling arpeggios). Change the pedal with each chord.
+display: staff
+key: Em
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: D5:s E5:s F#5:s G5:s A5:e D5:e | G5:e C5:e E5:q | F#5:e D5:e A5:e D5:e | F#5:e G5:e A5:e D6:e | F#5:e D5:e A5:e D5:e
+  | G5:e C5:e E5:q | D5:e D6:e A5:e G5:e | F#5:q E5:e F#5:e | D5:e D6:e A5:e B5:e | C6:e C5:e E5:q | D5:e D6:e A5:e B5:e |
+  C6:e D6:e E6:e D6:e | C6:e B5:e A5:e C6:e | E5:e C5:e E5:q | D5:e D6:e A5:e G5:e | F#5:q E5:e F#5:e
+left: D3:q A3:q | C3:q G3:q | D3:q A3:q | D3:q A3:q | D3:q A3:q | C3:q G3:q | D3:q A3:q | B2:q F#3:q | G2:q B2:q | A2:q E3:q
+  | G2:q B2:q | A2:q E3:q | A2:q E3:q | A2:q E3:q | D3:q A3:q | E3+G3+B3:h
+pedal: x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h
+reps: 3
+days: 2

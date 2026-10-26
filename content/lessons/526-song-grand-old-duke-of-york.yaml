@@ -18,6 +18,7 @@ steps:
   callout: |
     Key: D major · Time: 4/4 · Tempo: 88
 - exercise: song-grand-old-duke-of-york-tap
+- exercise: song-grand-old-duke-of-york-by-ear
 - exercise: song-grand-old-duke-of-york-rh
 - exercise: song-grand-old-duke-of-york-lh
 - exercise: song-grand-old-duke-of-york

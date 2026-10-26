@@ -1,0 +1,19 @@
+id: song-auld-robin-gray
+title: Auld Robin Gray
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Em
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: B4:e. D5:s | E5:e. G5:s E5:e D5:e B4:q A4:e. G4:s | D5:q A4:e. B4:s A4:q B4:e. D5:s | E5:e. G5:s E5:e D5:e B4:q A4:e
+  G4:e | A4:q B4:q G5:q. A5:e | B5:e A5:e G5:e E5:e G5:e E5:e D5:e B4:e | D5:e. B4:s A4:e G4:e A4:q B4:e. D5:s | E5:e. G5:s
+  E5:e D5:e B4:q G5:e. A5:s | B5:q B4:e. C5:s B4:q
+left: r:q | E3+G3+B3:w | D3+F#3+A3:h D#3+F#3+B3:h | E3+G3+B3:w | D#3+F#3+B3:h E3+G3+B3:h | E3+G3+B3:w | D#3+F#3+B3:w | E3+G3+B3:w
+  | E3+G3+B3:h.
+reps: 3
+days: 2

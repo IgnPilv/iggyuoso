@@ -1,0 +1,25 @@
+id: song-yellow-haired-laddie
+title: The Yellow-Haired Laddie
+skills:
+- songs
+steps:
+- explain: |
+    **The Yellow-Haired Laddie** · Scottish air, 1700s
+
+    A gentle shepherd's song in 3/4, much used by the poet Allan Ramsay.
+  staff:
+    notes: D4:e. E4:s  |  F#4:q A4:q B4:e C#5:e
+    key: D
+  sound: D4:e. E4:s  |  F#4:q A4:q B4:e C#5:e  |  D5:q. E5:e F#5:q  |  A4:q B4:e A4:e G4:e F#4:e
+- explain: |
+    **Before you play.** Three beats in a bar: feel the first one a little stronger. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 3/4 · Tempo: 80
+- exercise: song-yellow-haired-laddie-rh
+- exercise: song-yellow-haired-laddie-lh
+- exercise: song-yellow-haired-laddie
+- exercise: song-yellow-haired-laddie-arranged
+- exercise: song-yellow-haired-laddie-performance
+recap: 'The Yellow-Haired Laddie: tune, left hand, together. Come back to it any time; songs are for fun.'

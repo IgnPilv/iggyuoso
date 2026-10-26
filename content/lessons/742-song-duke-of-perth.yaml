@@ -1,0 +1,26 @@
+id: song-duke-of-perth
+title: The Duke of Perth
+skills:
+- songs
+steps:
+- explain: |
+    **The Duke of Perth** · Scottish reel, 1700s
+
+    A Scottish country dance named after a Jacobite leader of 1745.
+  staff:
+    notes: D5:e B4:e  |  G4:e A4:e B4:e C5:e D5:q B4:q
+    key: G
+  sound: D5:e B4:e  |  G4:e A4:e B4:e C5:e D5:q B4:q  |  G5:q B4:q D5:q B4:q  |  G5:q B4:q D5:q B4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-duke-of-perth-tap
+- exercise: song-duke-of-perth-rh
+- exercise: song-duke-of-perth-lh
+- exercise: song-duke-of-perth
+- exercise: song-duke-of-perth-arranged
+- exercise: song-duke-of-perth-performance
+recap: 'The Duke of Perth: tune, left hand, together. Come back to it any time; songs are for fun.'

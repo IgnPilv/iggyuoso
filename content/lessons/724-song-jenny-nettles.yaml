@@ -1,0 +1,25 @@
+id: song-jenny-nettles
+title: Jenny Nettles
+skills:
+- songs
+steps:
+- explain: |
+    **Jenny Nettles** · Scottish tune, 1700s
+
+    A reel in A Dorian, named after a Fife woman in an old story.
+  staff:
+    notes: B4:e  |  C5:q B4:q A4:q A5:q
+    key: Am
+  sound: B4:e  |  C5:q B4:q A4:q A5:q  |  E5:e F#5:e G5:e E5:e D5:e B4:e G4:e B4:e  |  C5:q B4:q A4:q A5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 4/4 · Tempo: 72
+- exercise: song-jenny-nettles-rh
+- exercise: song-jenny-nettles-lh
+- exercise: song-jenny-nettles
+- exercise: song-jenny-nettles-arranged
+- exercise: song-jenny-nettles-performance
+recap: 'Jenny Nettles: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,23 @@
+id: song-boys-of-wexford-performance
+title: 'The Boys of Wexford: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: D4:q | G4:q. A4:e G4:e F#4:e E4:e D4:e | D5:q. E5:e D5:q C5:q | B4:q G4:q B4:e A4:e G4:e F#4:e | E4:h. F#4:q | G4:q.
+  A4:e G4:e F#4:e E4:e D4:e | D5:q. E5:e D5:q C5:q | B4:q A4:q G4:e A4:e B4:e C5:e | D5:h. D5:q | E5:q B4:q G5:q. E5:e | D5:q.
+  C5:e B4:q G4:q | C5:q B4:q A4:q G4:q | E4:h r:q E4:e F#4:e | G4:q. A4:e G4:e F#4:e E4:e D4:e | D5:q. E5:e D5:q C5:q | B4:q
+  G4:q B4:e A4:e G4:e F#4:e | G4:h r:q
+left: r:q | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e
+  D3:e B2:e D3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | D3:e A3:e F#3:e A3:e
+  D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | E3:e B3:e G3:e
+  B3:e E3:e B3:e G3:e B3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3:e G3:e
+  E3:e G3:e C3:e G3:e E3:e G3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e
+  D3:e B2:e D3:e G2:e D3:e B2:e D3:e | D3+G3+B3:h.
+reps: 2
+days: 2

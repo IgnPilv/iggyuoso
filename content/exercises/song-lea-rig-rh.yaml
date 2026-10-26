@@ -1,0 +1,19 @@
+id: song-lea-rig-rh
+title: 'The Lea Rig: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: B4:e A4:e | G4:e B4:e D4:q D4:q E4:e F#4:e | G4:q. A4:e G4:q B4:q | A4:q. B4:e C5:e B4:e A4:e G4:e | C5:q E4:q E4:q
+  B4:e A4:e | G4:e B4:e D4:q D4:q E4:e F#4:e | G4:q. A4:e G4:q B4:e D5:e | E5:e D5:e E5:e F#5:e G5:e E5:e D5:e C5:e | B4:q
+  G4:q G4:q D5:q | E5:e D5:e E5:e F#5:e G5:q. B4:e | C5:e B4:e C5:e D5:e E5:q. G4:e | A4:e G4:e A4:e B4:e C5:e B4:e A4:e G4:e
+  | C5:q E4:q E4:q B4:e A4:e | G4:e B4:e D4:q D4:q E4:e F#4:e | G4:q. A4:e G4:q B4:e D5:e | E5:e D5:e E5:e F#5:e G5:e E5:e
+  D5:e C5:e | B4:q G4:q G4:q
+reps: 2
+days: 1

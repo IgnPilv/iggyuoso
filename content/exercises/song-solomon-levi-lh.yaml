@@ -1,0 +1,15 @@
+id: song-solomon-levi-lh
+title: 'Solomon Levi: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: q.
+countIn: 1
+left: r:q. | C3:h. | C3:h. | F2:h. | F2:h. | G2:h. | G2:h. | G2:h. | C3:h. | E3:h. | A2:h. | E3:h. | A2:h. | D3:h. | G2:h.
+  | D3:h. | G2:h. | C3:h. | C3:h. | F2:h. | F2:h. | G2:h. | G2:h. | G2:h. | C3:q.
+reps: 2
+days: 1

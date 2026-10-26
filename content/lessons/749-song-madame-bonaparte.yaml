@@ -1,0 +1,26 @@
+id: song-madame-bonaparte
+title: Madame Bonaparte
+skills:
+- songs
+steps:
+- explain: |
+    **Madame Bonaparte** · Irish set dance, 1800s
+
+    An Irish set dance named after Napoleon's wife.
+  staff:
+    notes: D5:e C5:e  |  B4:q B4:e A4:e B4:e D5:e B4:e G4:e
+    key: G
+  sound: D5:e C5:e  |  B4:q B4:e A4:e B4:e D5:e B4:e G4:e  |  C5:q C5:e B4:e C5:e E5:e C5:e A4:e  |  G4:e B4:e D5:e F#5:e
+    G5:e F#5:e G5:e E5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-madame-bonaparte-rh
+- exercise: song-madame-bonaparte-lh
+- exercise: song-madame-bonaparte
+- exercise: song-madame-bonaparte-arranged
+- exercise: song-madame-bonaparte-performance
+recap: 'Madame Bonaparte: tune, left hand, together. Come back to it any time; songs are for fun.'

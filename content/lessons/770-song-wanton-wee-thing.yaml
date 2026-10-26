@@ -1,0 +1,25 @@
+id: song-wanton-wee-thing
+title: My Wife's a Wanton Wee Thing
+skills:
+- songs
+steps:
+- explain: |
+    **My Wife's a Wanton Wee Thing** · Scottish jig, 1700s
+
+    A jig from an old comic song about a lively little wife.
+  staff:
+    notes: F#5:s E5:s  |  D5:q A4:e B4:e D5:e A4:e
+    key: D
+  sound: F#5:s E5:s  |  D5:q A4:e B4:e D5:e A4:e  |  D5:q. A4:q B4:e  |  C5:e D5:e C#5:e C#5:e G4:e E4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-wanton-wee-thing-rh
+- exercise: song-wanton-wee-thing-lh
+- exercise: song-wanton-wee-thing
+- exercise: song-wanton-wee-thing-arranged
+- exercise: song-wanton-wee-thing-performance
+recap: 'My Wife''s a Wanton Wee Thing: tune, left hand, together. Come back to it any time; songs are for fun.'

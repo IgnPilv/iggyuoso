@@ -1,0 +1,25 @@
+id: song-sandy-river-belles
+title: Sandy River Belles
+skills:
+- songs
+steps:
+- explain: |
+    **Sandy River Belles** · American fiddle tune, 1800s
+
+    An old-time tune from the Appalachian mountains.
+  staff:
+    notes: E4:q  |  A3:e B3:e D4:e E4:e F#4:h
+    key: D
+  sound: E4:q  |  A3:e B3:e D4:e E4:e F#4:h  |  E4:q D4:q B4:q A4:q  |  A3:e B3:e D4:e E4:e F#4:h
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-sandy-river-belles-rh
+- exercise: song-sandy-river-belles-lh
+- exercise: song-sandy-river-belles
+- exercise: song-sandy-river-belles-arranged
+- exercise: song-sandy-river-belles-performance
+recap: 'Sandy River Belles: tune, left hand, together. Come back to it any time; songs are for fun.'

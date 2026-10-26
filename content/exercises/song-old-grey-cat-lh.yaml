@@ -1,0 +1,17 @@
+id: song-old-grey-cat-lh
+title: 'The Old Grey Cat: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Em
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | E3+G3+B3:w | E3+G3+B3:w | D3+F#3+A3:w | D3+F#3+A3:w | E3+G3+B3:w | E3+G3+B3:w | E3+G3+B3:h D#3+F#3+B3:h | E3+G3+B3:w
+  | E3+G3+B3:w | E3+G3+B3:w | D3+F#3+A3:w | D3+F#3+A3:w | E3+G3+B3:h D3+F#3+A3:h | E3+G3+B3:h D#3+F#3+B3:h | C3+E3+A3:h B2+D#3+A3:h
+  | B2+E3+G3:h.
+reps: 2
+days: 1

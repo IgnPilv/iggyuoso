@@ -15,9 +15,10 @@ steps:
 - explain: |
     **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
 
-    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
   callout: |
     Key: A minor · Time: 9/8 · Tempo: 56
+- exercise: song-rocky-road-to-dublin-tap
 - exercise: song-rocky-road-to-dublin-rh
 - exercise: song-rocky-road-to-dublin-lh
 - exercise: song-rocky-road-to-dublin

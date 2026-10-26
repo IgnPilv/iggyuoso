@@ -1,0 +1,25 @@
+id: song-billy-in-the-lowground
+title: Billy in the Lowground
+skills:
+- songs
+steps:
+- explain: |
+    **Billy in the Lowground** · American fiddle tune, 1800s
+
+    An old-time tune in C, unusual for fiddlers, who mostly play in G, D and A.
+  staff:
+    notes: G3:e A3:e C4:e D4:e E4:e G4:e A4:e B4:e  |  C5:e B4:e C5:e D5:e C5:e A4:e G4:e C5:e
+  sound: G3:e A3:e C4:e D4:e E4:e G4:e A4:e B4:e  |  C5:e B4:e C5:e D5:e C5:e A4:e G4:e C5:e  |  A4:e B4:e A4:e G4:e E4:e
+    G4:e A4:e B4:e  |  C5:e3 B4:e3 A4:e3 G4:e E4:e D4:e C4:e C4:e A3:e
+- explain: |
+    **Before you play.** Hum it first. Keep the left hand quieter than the tune.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-billy-in-the-lowground-rh
+- exercise: song-billy-in-the-lowground-lh
+- exercise: song-billy-in-the-lowground
+- exercise: song-billy-in-the-lowground-arranged
+- exercise: song-billy-in-the-lowground-performance
+recap: 'Billy in the Lowground: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,36 @@
+id: song-la-marseillaise-performance
+title: 'La Marseillaise: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 72
+meter: 4/4
+pickup: q
+countIn: 1
+right: A4:s A4:s A4:e | D5:q D5:q E5:q E5:q | A5:q F#5:q r:e D5:e D5:e C#5:e | B4:q G5:h E5:e C#5:e | D5:q D5:e. D5:s D5:q
+  D5:e. E5:s | F#5:q F#5:e. F#5:s F#5:q G5:e F#5:e | F#5:e E5:e F#5:q r:q E5:e F#5:e | G5:q G5:e. G5:s G5:q A5:e. G5:s | F#5:q
+  F#5:e. F#5:s F#5:q A5:e A5:e | A5:q F#5:e D5:e A5:q F#5:e D5:e | A4:q A4:e. A4:s A4:q A4:e. A4:s | E5:h G5:q E5:e C#5:e
+  | D5:q D5:q C#5:h | B4:q B4:e. B4:s D5:q C#5:e D5:e | E5:q E5:e. E5:s E5:q r:e E5:e | F5:q. F#5:e E5:e F#5:e G5:e F#5:e
+  | E5:q E5:e. E5:s E5:q F5:e E5:e | D5:q D5:q D5:q E5:e D5:e | D5:e C#5:e C#5:h r:e A5:e | A5:h A5:e E5:e F5:e D5:e | E5:q
+  E5:e. E5:s E5:q r:e A5:e | A5:h A5:e E5:e F5:e D5:e | E5:q E5:e. E5:s E5:q r:e A4:e | D5:q D5:e. D5:s D5:q D5:q | F#5:w
+  | G5:h A5:q B5:q | E5:q E5:e. E5:s E5:q r:e B5:e | A5:h A5:e F#5:e F#5:e E5:e | D5:h r:q A4:q | D5:h. D5:q | F#5:w | G5:h
+  A5:q B5:q | E5:h. r:e B5:e | A5:h A5:e F#5:e G5:e E5:e | D5:q D5:e. D5:s D5:q
+left: r:q | D3:e A3:e F#3:e A3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | E3:e B3:e G3:e B3:e E3:e
+  B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e
+  A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e
+  A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e
+  E3:e | D3:e A3:e F#3:e A3:e A2:e E3:e C#3:e E3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | A2:e E3:e C#3:e E3:e A2:e E3:e
+  C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e
+  D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e
+  C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e
+  | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e
+  B2:e D3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e
+  D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e
+  B2:e D3:e G2:e D3:e B2:e D3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e |
+  D3+F#3+A3:h.
+pedal: r:q | x:h x:h | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:w |
+  x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h.
+reps: 2
+days: 2

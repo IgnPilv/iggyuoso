@@ -1,0 +1,25 @@
+id: song-jockey-to-the-fair
+title: Jockey to the Fair
+skills:
+- songs
+steps:
+- explain: |
+    **Jockey to the Fair** · English morris tune, 1700s
+
+    A morris dance tune about Jockey and Jenny going to the fair on a May morning.
+  staff:
+    notes: D4:e  |  G4:q A4:e B4:q C5:e
+    key: G
+  sound: D4:e  |  G4:q A4:e B4:q C5:e  |  D5:q G5:e D5:q C5:e  |  B4:e D5:e G4:e G4:e F#4:e G4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 6/8 · Tempo: 56
+- exercise: song-jockey-to-the-fair-rh
+- exercise: song-jockey-to-the-fair-lh
+- exercise: song-jockey-to-the-fair
+- exercise: song-jockey-to-the-fair-arranged
+- exercise: song-jockey-to-the-fair-performance
+recap: 'Jockey to the Fair: tune, left hand, together. Come back to it any time; songs are for fun.'

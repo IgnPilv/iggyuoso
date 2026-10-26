@@ -1,0 +1,27 @@
+id: song-rogues-march
+title: The Rogue's March
+skills:
+- songs
+steps:
+- explain: |
+    **The Rogue's March** · English military tune, 1700s
+
+    Played by the drums and fifes when a soldier was drummed out of the army in disgrace.
+  staff:
+    notes: B4:q B4:e B4:e C5:e D5:e  |  E5:q E5:e E5:q.
+    key: G
+  sound: B4:q B4:e B4:e C5:e D5:e  |  E5:q E5:e E5:q.  |  D5:q D5:q. E5:e  |  D5:q C5:e B4:q A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. G major: remember F♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 6/8 · Tempo: 56
+- exercise: song-rogues-march-tap
+- exercise: song-rogues-march-by-ear
+- exercise: song-rogues-march-rh
+- exercise: song-rogues-march-lh
+- exercise: song-rogues-march
+- exercise: song-rogues-march-arranged
+- exercise: song-rogues-march-performance
+recap: 'The Rogue''s March: tune, left hand, together. Come back to it any time; songs are for fun.'

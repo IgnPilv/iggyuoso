@@ -1,0 +1,25 @@
+id: song-tripping-upstairs
+title: Tripping Upstairs
+skills:
+- songs
+steps:
+- explain: |
+    **Tripping Upstairs** · Irish jig, 1800s
+
+    A light, easy jig, a favourite for beginners on the tin whistle.
+  staff:
+    notes: A4:e  |  F#4:e A4:e A4:e G4:e B4:e B4:e
+    key: D
+  sound: A4:e  |  F#4:e A4:e A4:e G4:e B4:e B4:e  |  F#4:e A4:e D5:e F#5:e E5:e D5:e  |  C#5:e B4:e C#5:e A4:e B4:e C#5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-tripping-upstairs-rh
+- exercise: song-tripping-upstairs-lh
+- exercise: song-tripping-upstairs
+- exercise: song-tripping-upstairs-arranged
+- exercise: song-tripping-upstairs-performance
+recap: 'Tripping Upstairs: tune, left hand, together. Come back to it any time; songs are for fun.'

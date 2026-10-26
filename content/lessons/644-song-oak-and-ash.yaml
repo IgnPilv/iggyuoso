@@ -14,9 +14,10 @@ steps:
 - explain: |
     **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G minor: remember B♭, E♭.
 
-    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
   callout: |
     Key: G minor · Time: 4/4 · Tempo: 72
+- exercise: song-oak-and-ash-tap
 - exercise: song-oak-and-ash-rh
 - exercise: song-oak-and-ash-lh
 - exercise: song-oak-and-ash

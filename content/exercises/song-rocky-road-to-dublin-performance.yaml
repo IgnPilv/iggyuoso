@@ -20,8 +20,5 @@ left: r:e | A2:e E3:e C3:e G2:e D3:e B2:e A2:e E3:e C3:e | A2:e E3:e C3:e A2:e E
   B2:e G2:e D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e G2:e D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e G2:e D3:e B2:e | A2:e
   E3:e C3:e A2:e E3:e C3:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e G2:e D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e G2:e
   D3:e B2:e | A2:e E3:e C3:e A2:e E3:e C3:e G2:e D3:e B2:e | E3:e B3:e G3:e B2:e F#3:e D3:e E3:e B3:e G3:e | D3+G3+B3:w
-pedal: r:e | x:q. x:q. x:q. | x:q. x:q. x:q. | x:q. x:q. x:q. | x:w x:e | x:q. x:q. x:q. | x:q. x:q. x:q. | x:q. x:q. x:q.
-  | x:w x:e | x:q. x:q. x:q. | x:q. x:q. x:q. | x:q. x:q. x:q. | x:w x:e | x:q. x:q. x:q. | x:q. x:q. x:q. | x:q. x:q. x:q.
-  | x:w
 reps: 2
 days: 2

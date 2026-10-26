@@ -1,0 +1,25 @@
+id: song-campbells-are-coming-arranged
+title: The Campbells Are Coming, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: G4:e | B4:q E5:e D5:e B4:e G4:e | A4:e. B4:s A4:e A4:q G4:e | B4:q E5:e D5:e B4:e G4:e | D5:e. B4:s B4:e B4:q A4:e
+  | B4:q E5:e D5:e B4:e G4:e | A4:e. B4:s A4:e G5:q A5:e | G5:e. E5:s G5:e D5:e B4:e G4:e | B4:e. C5:s B4:e B4:q G4:e | G5:q
+  G5:e G5:e A5:e B5:e | D5:e. E5:s D5:e D5:e B4:e G4:e | G5:q G5:e G5:e A5:e B5:e | G5:e. E5:s E5:e E5:q D5:e | D5:e E5:e
+  F#5:e G5:e F#5:e E5:e | D5:e E5:e F#5:e G5:e. A5:s B5:e | G5:e. E5:s G5:e D5:e B4:e G4:e | B4:e. C5:s B4:e B4:q
+left: r:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e
+  G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e
+  B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e
+  G3:e E3:e C3:e G3:e E3:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | G2:e D3:e B2:e G2:e D3:e B2:e
+  | D3+G3+B3:h~ D3+G3+B3:e
+pedal: r:e | x:h. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. |
+  x:h x:e
+reps: 3
+days: 2

@@ -1,0 +1,25 @@
+id: song-teviot-bridge
+title: Teviot Bridge
+skills:
+- songs
+steps:
+- explain: |
+    **Teviot Bridge** · Scottish jig, 1800s
+
+    Named after a bridge over the river Teviot in the Scottish Borders.
+  staff:
+    notes: F#5:e  |  E5:e C#5:e A4:e E4:q A4:e
+    key: A
+  sound: F#5:e  |  E5:e C#5:e A4:e E4:q A4:e  |  F#4:q A4:e E4:q A4:e  |  E4:e F#4:e E4:e E4:q C#5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-teviot-bridge-rh
+- exercise: song-teviot-bridge-lh
+- exercise: song-teviot-bridge
+- exercise: song-teviot-bridge-arranged
+- exercise: song-teviot-bridge-performance
+recap: 'Teviot Bridge: tune, left hand, together. Come back to it any time; songs are for fun.'

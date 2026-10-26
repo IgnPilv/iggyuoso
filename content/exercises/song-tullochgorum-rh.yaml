@@ -1,0 +1,16 @@
+id: song-tullochgorum-rh
+title: 'Tullochgorum: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Em
+tempo: 72
+tempoLadder: true
+meter: 2/4
+countIn: 1
+right: D5:s E5:s F#5:s G5:s A5:e D5:e | G5:e C5:e E5:q | F#5:e D5:e A5:e D5:e | F#5:e G5:e A5:e D6:e | F#5:e D5:e A5:e D5:e
+  | G5:e C5:e E5:q | D5:e D6:e A5:e G5:e | F#5:q E5:e F#5:e | D5:e D6:e A5:e B5:e | C6:e C5:e E5:q | D5:e D6:e A5:e B5:e |
+  C6:e D6:e E6:e D6:e | C6:e B5:e A5:e C6:e | E5:e C5:e E5:q | D5:e D6:e A5:e G5:e | F#5:q E5:e F#5:e
+reps: 2
+days: 1

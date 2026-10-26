@@ -1,0 +1,22 @@
+id: song-old-grey-cat-performance
+title: 'The Old Grey Cat: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Em
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: B4:q | E5:q E5:q E4:q E4:e F#4:e | G4:e F#4:e G4:e A4:e B4:e A4:e B4:e C#5:e | D5:q D5:q D4:q D4:e E4:e | F#4:e A4:e
+  D5:e B4:e A4:e F#4:e E4:e D4:e | E5:q E5:q E4:q E4:e F#4:e | G4:e F#4:e G4:e A4:e B4:e A4:e B4:e C#5:e | D5:e C5:e B4:e
+  A4:e B4:e A4:e G4:e F#4:e | E4:h E4:q B4:q | B4:q E5:q E5:q. D5:e | B4:e D5:e E5:e F#5:e G5:e F#5:e E5:e D5:e | A4:q D5:q
+  D5:q. B4:e | A4:e B4:e D5:e E5:e F#5:e E5:e D5:e F#5:e | E5:q B4:q G5:q B4:q | A5:q B4:q B5:q. A5:e | G5:e F#5:e E5:e D5:e
+  B4:e G5:e F#5:e G5:e | E5:h E5:q
+left: r:q | E2:q B2:q E3:q B2:q | E2:q B2:q E3:q B2:q | D2:q A2:q D3:q A2:q | D2:q A2:q D3:q A2:q | E2:q B2:q E3:q B2:q |
+  E2:q B2:q E3:q B2:q | E2:q B2:q B1:q F#2:q | E2:q B2:q E3:q B2:q | E2:q B2:q E3:q B2:q | E2:q B2:q E3:q B2:q | D2:q A2:q
+  D3:q A2:q | D2:q A2:q D3:q A2:q | E2:q B2:q D2:q A2:q | E2:q B2:q B1:q F#2:q | A1:q E2:q B1:q F#2:q | E2+G2+B2:h.
+pedal: r:q | x:w | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:w | x:w | x:w | x:h x:h | x:h x:h | x:h x:h | x:h.
+reps: 2
+days: 2

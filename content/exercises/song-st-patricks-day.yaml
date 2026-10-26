@@ -1,0 +1,22 @@
+id: song-st-patricks-day
+title: St. Patrick's Day
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: D4:e | G4:e A4:e G4:e G4:e B4:e D5:e | G5:e F#5:e E5:e D5:e B4:e G4:e | A4:e G4:e A4:e B4:e G4:e D4:e | E4:e F#4:e
+  E4:e E4:q D4:e | G4:e A4:e G4:e G4:e B4:e D5:e | G5:e F#5:e E5:e D5:e B4:e G4:e | A4:e G4:e A4:e B4:e G4:e D4:e | E4:q F#4:e
+  G4:q B4:e | D5:e E5:e F#5:e G5:e A5:e G5:e | F#5:e E5:e D5:e E5:e D5:e B4:e | D5:e E5:e F#5:e G5:e A5:e G5:e | F#5:e E5:e
+  D5:e E5:q B4:e | D5:e E5:e F#5:e G5:e A5:e G5:e | F#5:e E5:e D5:e G5:e F#5:e E5:e | D5:e B4:e G4:e G4:e B4:e D5:e | G5:e
+  F#5:e E5:e D5:e B4:e G4:e | A4:e G4:e A4:e B4:e G4:e D4:e | E4:e F#4:e E4:e E4:q D4:e | G4:e A4:e G4:e G4:e B4:e D5:e |
+  G5:e F#5:e E5:e D5:e B4:e G4:e | A4:e G4:e A4:e B4:e G4:e D4:e | E4:q F#4:e G4:q
+left: r:e | G2:h. | G2:h. | G2:h. | C3:h. | G2:h. | G2:h. | G2:h. | E3:h. | G2:h. | G2:h. | G2:h. | D3:q. E3:q. | G2:h. |
+  D3:q. C3:q. | G2:h. | G2:h. | G2:h. | C3:h. | G2:h. | G2:h. | G2:h. | G2:h~ G2:e
+reps: 3
+days: 2

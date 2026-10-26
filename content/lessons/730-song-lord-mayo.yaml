@@ -1,0 +1,26 @@
+id: song-lord-mayo
+title: Lord Mayo
+skills:
+- songs
+steps:
+- explain: |
+    **Lord Mayo** · Irish air, 1600s
+
+    Written by the harper David Murphy to win back the favour of his patron, Lord Mayo. A slow air in G Dorian.
+  staff:
+    notes: G4:e F4:e  |  D4:e. G4:s G4:s A4:s C5:e D5:q C5:e A4:e
+    key: Gm
+  sound: G4:e F4:e  |  D4:e. G4:s G4:s A4:s C5:e D5:q C5:e A4:e  |  D5:q G4:e. A4:s G4:e F4:e D4:q  |  D4:e. G4:s G4:s A4:s
+    C5:e D5:q F5:e D5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G minor: remember B♭, E♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G minor · Time: 4/4 · Tempo: 72
+- exercise: song-lord-mayo-rh
+- exercise: song-lord-mayo-lh
+- exercise: song-lord-mayo
+- exercise: song-lord-mayo-arranged
+- exercise: song-lord-mayo-performance
+recap: 'Lord Mayo: tune, left hand, together. Come back to it any time; songs are for fun.'

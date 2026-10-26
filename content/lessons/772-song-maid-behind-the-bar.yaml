@@ -1,0 +1,26 @@
+id: song-maid-behind-the-bar
+title: The Maid Behind the Bar
+skills:
+- songs
+steps:
+- explain: |
+    **The Maid Behind the Bar** · Irish reel, 1800s
+
+    One of the most played reels in Ireland, often the first one a session strikes up.
+  staff:
+    notes: F#4:q A4:e B4:e A4:e F#4:e E4:e D4:e  |  F#4:e A4:e A4:e B4:e A4:e B4:e D5:e E5:e
+    key: D
+  sound: F#4:q A4:e B4:e A4:e F#4:e E4:e D4:e  |  F#4:e A4:e A4:e B4:e A4:e B4:e D5:e E5:e  |  F#5:e B4:e B4:e A4:e B4:e C#5:e
+    D5:e E5:e  |  F#5:e B4:e B4:e A4:e B4:e C#5:e D5:e A4:e
+- explain: |
+    **Before you play.** D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-maid-behind-the-bar-rh
+- exercise: song-maid-behind-the-bar-lh
+- exercise: song-maid-behind-the-bar
+- exercise: song-maid-behind-the-bar-arranged
+- exercise: song-maid-behind-the-bar-performance
+recap: 'The Maid Behind the Bar: tune, left hand, together. Come back to it any time; songs are for fun.'

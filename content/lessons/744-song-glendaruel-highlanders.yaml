@@ -1,0 +1,26 @@
+id: song-glendaruel-highlanders
+title: The Glendaruel Highlanders
+skills:
+- songs
+steps:
+- explain: |
+    **The Glendaruel Highlanders** · Scottish pipe march, 1860s
+
+    A 6/8 pipe march named after a glen in Argyll.
+  staff:
+    notes: E5:s C#5:s  |  A4:e. A4:s A4:s A4:s A4:e B4:e C#5:e
+    key: A
+  sound: E5:s C#5:s  |  A4:e. A4:s A4:s A4:s A4:e B4:e C#5:e  |  E5:e C#5:e E5:e F#5:q E5:e  |  C#5:e B4:e A4:e F#5:e A5:e
+    F#5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-glendaruel-highlanders-rh
+- exercise: song-glendaruel-highlanders-lh
+- exercise: song-glendaruel-highlanders
+- exercise: song-glendaruel-highlanders-arranged
+- exercise: song-glendaruel-highlanders-performance
+recap: 'The Glendaruel Highlanders: tune, left hand, together. Come back to it any time; songs are for fun.'

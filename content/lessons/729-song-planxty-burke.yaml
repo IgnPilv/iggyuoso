@@ -1,0 +1,26 @@
+id: song-planxty-burke
+title: Planxty Burke
+skills:
+- songs
+steps:
+- explain: |
+    **Planxty Burke** · Turlough O'Carolan, early 1700s
+
+    One of Carolan's best-known tunes, in G minor, for the Burke family.
+  staff:
+    notes: G4:e G4:s A4:s Bb4:s C5:s D5:q C5:e  |  Bb4:e C5:e D5:e C5:e A4:e F4:e
+    key: Gm
+  sound: G4:e G4:s A4:s Bb4:s C5:s D5:q C5:e  |  Bb4:e C5:e D5:e C5:e A4:e F4:e  |  F4:e G4:e F4:e C5:e A4:e F4:e  |  F4:e
+    G4:e F4:e F5:e A4:e F4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. G minor: remember B♭, E♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G minor · Time: 6/8 · Tempo: 56
+- exercise: song-planxty-burke-rh
+- exercise: song-planxty-burke-lh
+- exercise: song-planxty-burke
+- exercise: song-planxty-burke-arranged
+- exercise: song-planxty-burke-performance
+recap: 'Planxty Burke: tune, left hand, together. Come back to it any time; songs are for fun.'

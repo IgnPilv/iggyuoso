@@ -1,0 +1,26 @@
+id: song-st-annes-reel
+title: St. Anne's Reel
+skills:
+- songs
+steps:
+- explain: |
+    **St. Anne's Reel** · French-Canadian reel, 1800s
+
+    A Quebec fiddle tune that spread to every session in North America and Ireland.
+  staff:
+    notes: D5:e E5:e  |  F#5:e E5:e D5:e C#5:e E5:e D5:e C#5:e B4:e
+    key: D
+  sound: D5:e E5:e  |  F#5:e E5:e D5:e C#5:e E5:e D5:e C#5:e B4:e  |  A4:q F#4:e A4:e D4:e F#4:e A4:e D4:e  |  B4:e G4:e D4:e
+    G4:e B4:e D4:e G4:e B4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-st-annes-reel-rh
+- exercise: song-st-annes-reel-lh
+- exercise: song-st-annes-reel
+- exercise: song-st-annes-reel-arranged
+- exercise: song-st-annes-reel-performance
+recap: 'St. Anne''s Reel: tune, left hand, together. Come back to it any time; songs are for fun.'

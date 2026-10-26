@@ -1,0 +1,26 @@
+id: song-hunt-the-squirrel
+title: Hunt the Squirrel
+skills:
+- songs
+steps:
+- explain: |
+    **Hunt the Squirrel** · English country dance, 1709
+
+    Printed by John Playford's publishers in 1709, and still danced in English country dance halls.
+  staff:
+    notes: C#5:s B4:s  |  A4:e E5:e E5:e E5:q F#5:e
+    key: A
+  sound: C#5:s B4:s  |  A4:e E5:e E5:e E5:q F#5:e  |  E5:q. C#5:q.  |  A4:e B4:e C#5:e B4:q A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 6/8 · Tempo: 56
+- exercise: song-hunt-the-squirrel-tap
+- exercise: song-hunt-the-squirrel-rh
+- exercise: song-hunt-the-squirrel-lh
+- exercise: song-hunt-the-squirrel
+- exercise: song-hunt-the-squirrel-arranged
+- exercise: song-hunt-the-squirrel-performance
+recap: 'Hunt the Squirrel: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,31 @@
+id: song-over-the-water-to-charlie-performance
+title: 'Over the Water to Charlie: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 56
+meter: 6/8
+countIn: 1
+right: A4:q A4:e A4:e. B4:s G4:e | F#4:e G4:e E4:e D4:e. F#4:s G4:e | A4:e. B4:s A4:e A4:e F#4:e A4:e | B4:q. D5:q. | D4:q
+  D4:e D4:e E4:e F#4:e | G4:e A4:e F#4:e E4:q D4:e | D5:e C#5:e B4:e A4:e F#4:e A4:e | B4:q. D5:q. | D5:q E5:e F#5:e G5:e
+  F#5:e | E5:e F#5:e D5:e E5:e C#5:e A4:e | D5:q E5:e F#5:e G5:e F#5:e | E5:q. A4:q. | D5:q E5:e F#5:e G5:e F#5:e | E5:e F#5:e
+  D5:e E5:e C#5:e A4:e | B4:s C#5:s D5:e B4:e A4:e F#4:e A4:e | B4:q. D5:q. | A4:e F#4:e D4:e A4:e F#4:e D4:e | B4:e G4:e
+  E4:e B4:e G4:e E4:e | A4:e F#4:e D4:e E4:e F#4:e A4:e | B4:q. D5:q. | A4:e F#4:e D4:e D5:e A4:e F#4:e | G4:e A4:e F#4:e
+  E4:q D4:e | F#5:e E5:e D5:e A4:e F#4:e A4:e | B4:q. D5:q. | D5:e F#5:e D5:e D5:e F#5:e D5:e | E5:e C#5:e A4:e A5:e C#5:e
+  A4:e | D5:e F#5:e D5:e D5:e F#5:e D5:e | E5:q. A4:q. | D5:e F#5:e D5:e A5:e F#5:e D5:e | C#5:s D5:s E5:e C#5:e E5:e C#5:e
+  A4:e | B4:s C#5:s D5:e B4:e A4:e F#4:e A4:e | B4:q. D5:q.
+left: A2:e E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e D3:e B2:e
+  G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e
+  D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e
+  F#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | G2:e D3:e
+  B2:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | E3:e B3:e G3:e E3:e B3:e G3:e |
+  D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e A2:e
+  E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | A2:e E3:e
+  C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e | A2:e E3:e C#3:e A2:e E3:e C#3:e | D3:e A3:e F#3:e D3:e A3:e F#3:e
+  | A2:e E3:e C#3:e A2:e E3:e C#3:e | G2:e D3:e B2:e D3:e A3:e F#3:e | D3+F#3+A3:h.
+pedal: x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h.
+  | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:h. | x:q. x:q. | x:h.
+reps: 2
+days: 2

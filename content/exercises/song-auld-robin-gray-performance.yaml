@@ -1,0 +1,19 @@
+id: song-auld-robin-gray-performance
+title: 'Auld Robin Gray: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: Em
+tempo: 72
+meter: 4/4
+pickup: q
+countIn: 1
+right: B4:e. D5:s | E5:e. G5:s E5:e D5:e B4:q A4:e. G4:s | D5:q A4:e. B4:s A4:q B4:e. D5:s | E5:e. G5:s E5:e D5:e B4:q A4:e
+  G4:e | A4:q B4:q G5:q. A5:e | B5:e A5:e G5:e E5:e G5:e E5:e D5:e B4:e | D5:e. B4:s A4:e G4:e A4:q B4:e. D5:s | E5:e. G5:s
+  E5:e D5:e B4:q G5:e. A5:s | B5:q B4:e. C5:s B4:q
+left: r:q | E3:q B3:q E4:q B3:q | D3:q A3:q B2:q F#3:q | E3:q B3:q E4:q B3:q | B2:q F#3:q E3:q B3:q | E3:q B3:q E4:q B3:q
+  | B2:q F#3:q B3:q F#3:q | E3:q B3:q E4:q B3:q | E3+G3+B3:h.
+pedal: r:q | x:w | x:h x:h | x:w | x:h x:h | x:w | x:w | x:w | x:h.
+reps: 2
+days: 2

@@ -1,0 +1,25 @@
+id: song-dainty-davie
+title: Dainty Davie
+skills:
+- songs
+steps:
+- explain: |
+    **Dainty Davie** · Scottish tune, 1600s; words by Robert Burns
+
+    Named after a preacher who hid from soldiers in a bed with a farmer's daughter, and later married her.
+  staff:
+    notes: G5:q  |  D5:q. C5:e B4:q A4:e B4:e
+    key: G
+  sound: G5:q  |  D5:q. C5:e B4:q A4:e B4:e  |  A4:e G4:e F#4:e E4:e G4:h  |  G4:q D5:q B4:e C5:e D5:e B4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-dainty-davie-rh
+- exercise: song-dainty-davie-lh
+- exercise: song-dainty-davie
+- exercise: song-dainty-davie-arranged
+- exercise: song-dainty-davie-performance
+recap: 'Dainty Davie: tune, left hand, together. Come back to it any time; songs are for fun.'

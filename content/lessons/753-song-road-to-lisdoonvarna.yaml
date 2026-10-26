@@ -1,0 +1,26 @@
+id: song-road-to-lisdoonvarna
+title: The Road to Lisdoonvarna
+skills:
+- songs
+steps:
+- explain: |
+    **The Road to Lisdoonvarna** · Irish slide, 1800s
+
+    A slide in E minor named after a spa town in County Clare, famous for its matchmaking festival.
+  staff:
+    notes: E4:q B4:e B4:q A4:e  |  B4:q C#5:e D5:q.
+    key: Em
+  sound: E4:q B4:e B4:q A4:e  |  B4:q C#5:e D5:q.  |  F#4:q A4:e A4:e B4:e A4:e  |  D4:q E4:e F#4:e E4:e D4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. E minor: remember F♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 6/8 · Tempo: 56
+- exercise: song-road-to-lisdoonvarna-tap
+- exercise: song-road-to-lisdoonvarna-rh
+- exercise: song-road-to-lisdoonvarna-lh
+- exercise: song-road-to-lisdoonvarna
+- exercise: song-road-to-lisdoonvarna-arranged
+- exercise: song-road-to-lisdoonvarna-performance
+recap: 'The Road to Lisdoonvarna: tune, left hand, together. Come back to it any time; songs are for fun.'

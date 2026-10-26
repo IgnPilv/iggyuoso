@@ -1,0 +1,26 @@
+id: song-dumbarton-drums
+title: Dumbarton's Drums
+skills:
+- songs
+steps:
+- explain: |
+    **Dumbarton's Drums** · Scottish song, 1600s
+
+    The drums of the Earl of Dumbarton's regiment, the oldest in the British army, and a soldier's sweetheart who loves them.
+  staff:
+    notes: F4:e G4:e  |  A4:q. C5:e A4:e C5:e G4:e A4:e
+    key: Dm
+  sound: F4:e G4:e  |  A4:q. C5:e A4:e C5:e G4:e A4:e  |  F4:q C5:q C5:q Bb4:e A4:e  |  G4:e F4:e G4:e A4:e Bb4:e A4:e G4:e
+    F4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D minor: remember B♭.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D minor · Time: 4/4 · Tempo: 72
+- exercise: song-dumbarton-drums-rh
+- exercise: song-dumbarton-drums-lh
+- exercise: song-dumbarton-drums
+- exercise: song-dumbarton-drums-arranged
+- exercise: song-dumbarton-drums-performance
+recap: 'Dumbarton''s Drums: tune, left hand, together. Come back to it any time; songs are for fun.'

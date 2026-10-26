@@ -1,0 +1,16 @@
+id: song-over-the-water-to-charlie-lh
+title: 'Over the Water to Charlie: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: D
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: A2:h. | D3:h. | D3:h. | G2:h. | D3:h. | A2:h. | D3:h. | G2:h. | D3:h. | A2:h. | D3:h. | A2:h. | D3:h. | A2:h. | G2:q.
+  D3:q. | G2:h. | D3:h. | E3:h. | D3:h. | G2:h. | D3:h. | A2:h. | D3:h. | G2:h. | D3:h. | A2:h. | D3:h. | A2:h. | D3:h. |
+  A2:h. | G2:q. D3:q. | D3:h.
+reps: 2
+days: 1

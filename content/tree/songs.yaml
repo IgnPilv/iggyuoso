@@ -119,14 +119,14 @@ nodes:
   - { id: song-star-spangled-banner, stage: 5, lesson: song-star-spangled-banner, title: "The Star-Spangled Banner", requires: [y2-checkpoint-a], about: "United States anthem, tune \"To Anacreon in Heaven\" by John Stafford Smith, 1770s", genre: anthems }
   - { id: song-irish-washerwoman, stage: 7, lesson: song-irish-washerwoman, title: "The Irish Washerwoman", requires: [y2-exit, ks-g], about: "Irish jig, 1700s", genre: dances }
   - { id: song-swallowtail-jig, stage: 7, lesson: song-swallowtail-jig, title: "Swallowtail Jig", requires: [y2-exit, ks-e-minor], about: "Irish jig, 1800s", genre: dances }
-  - { id: song-scotland-the-brave, stage: 6, lesson: song-scotland-the-brave, title: "Scotland the Brave", requires: [y2-checkpoint-b, ks-g], about: "Scottish pipe tune, about 1900", genre: folk }
+  - { id: song-scotland-the-brave, stage: 5, lesson: song-scotland-the-brave, title: "Scotland the Brave", requires: [y2-checkpoint-a, ks-g], about: "Scottish pipe tune, about 1900", genre: folk }
   - { id: song-barren-rocks-of-aden, stage: 5, lesson: song-barren-rocks-of-aden, title: "The Barren Rocks of Aden", requires: [y2-checkpoint-a], about: "Scottish pipe march, James Mauchline, 1840s", genre: folk }
   - { id: song-cock-of-the-north, stage: 6, lesson: song-cock-of-the-north, title: "Cock o' the North", requires: [y2-checkpoint-b, ks-a], about: "Scottish pipe tune, 1800s", genre: folk }
   - { id: song-atholl-highlanders, stage: 8, lesson: song-atholl-highlanders, title: "The Atholl Highlanders", requires: [m7-flat-keys, ks-a], about: "Scottish jig, 1800s", genre: dances }
   - { id: song-bonnie-dundee, stage: 5, lesson: song-bonnie-dundee, title: "Bonnie Dundee", requires: [y2-checkpoint-a, ks-f], about: "Scottish tune, 1600s; words by Walter Scott, 1828", genre: folk }
   - { id: song-scots-wha-hae, stage: 3, lesson: song-scots-wha-hae, title: "Scots Wha Hae", requires: [y1-checkpoint-b], about: "Old Scottish air \"Hey Tuttie Tatie\"; words by Robert Burns, 1793", genre: folk }
   - { id: song-ye-banks-and-braes, stage: 5, lesson: song-ye-banks-and-braes, title: "Ye Banks and Braes", requires: [y2-checkpoint-a], about: "Scottish air; words by Robert Burns, 1791", genre: folk }
-  - { id: song-kelvingrove, stage: 4, lesson: song-kelvingrove, title: "Kelvingrove", requires: [y1-exit], about: "Scottish song, Glasgow, 1820s", genre: folk }
+  - { id: song-kelvingrove, stage: 3, lesson: song-kelvingrove, title: "Kelvingrove", requires: [y1-checkpoint-b], about: "Scottish song, Glasgow, 1820s", genre: folk }
   - { id: song-hundred-pipers, stage: 7, lesson: song-hundred-pipers, title: "Wi' a Hundred Pipers", requires: [y2-exit, ks-a], about: "Scottish song, Lady Nairne, 1840s", genre: folk }
   - { id: song-hector-the-hero, stage: 6, lesson: song-hector-the-hero, title: "Hector the Hero", requires: [y2-checkpoint-b, ks-b-flat], about: "Scottish lament, James Scott Skinner, 1903", genre: folk }
   - { id: song-dashing-white-sergeant, stage: 7, lesson: song-dashing-white-sergeant, title: "The Dashing White Sergeant", requires: [y2-exit, ks-d], about: "Henry Bishop, 1826", genre: dances }
@@ -135,20 +135,20 @@ nodes:
   - { id: song-logie-o-buchan, stage: 5, lesson: song-logie-o-buchan, title: "Logie o' Buchan", requires: [y2-checkpoint-a], about: "Scottish song, 1700s", genre: folk }
   - { id: song-highland-mary, stage: 4, lesson: song-highland-mary, title: "Highland Mary", requires: [y1-exit], about: "Scottish air; words by Robert Burns, 1792", genre: folk }
   - { id: song-i-belong-to-glasgow, stage: 4, lesson: song-i-belong-to-glasgow, title: "I Belong to Glasgow", requires: [y1-exit], about: "Will Fyffe, 1921", genre: folk }
-  - { id: song-good-night-and-joy, stage: 6, lesson: song-good-night-and-joy, title: "Good Night and Joy Be wi' You", requires: [y2-checkpoint-b, ks-d], about: "Scottish parting song, 1700s", genre: folk }
+  - { id: song-good-night-and-joy, stage: 5, lesson: song-good-night-and-joy, title: "Good Night and Joy Be wi' You", requires: [y2-checkpoint-a], about: "Scottish parting song, 1700s", genre: folk }
   - { id: song-keel-row, stage: 8, lesson: song-keel-row, title: "The Keel Row", requires: [m7-flat-keys, ks-a], about: "Tyneside song, 1700s", genre: folk }
   - { id: song-blaydon-races, stage: 5, lesson: song-blaydon-races, title: "Blaydon Races", requires: [y2-checkpoint-a], about: "Geordie Ridley, 1862", genre: folk }
   - { id: song-blow-the-wind-southerly, stage: 5, lesson: song-blow-the-wind-southerly, title: "Blow the Wind Southerly", requires: [y2-checkpoint-a], about: "Northumbrian song, 1800s", genre: shanties }
   - { id: song-waters-of-tyne, stage: 5, lesson: song-waters-of-tyne, title: "The Waters of Tyne", requires: [y2-checkpoint-a], about: "Northumbrian song, 1700s", genre: folk }
   - { id: song-morpeth-rant, stage: 7, lesson: song-morpeth-rant, title: "The Morpeth Rant", requires: [y2-exit, ks-d], about: "Northumbrian dance tune, 1700s", genre: dances }
-  - { id: song-john-peel, stage: 5, lesson: song-john-peel, title: "John Peel", requires: [y2-checkpoint-a], about: "Cumbrian song, 1820s", genre: folk }
-  - { id: song-grand-old-duke-of-york, stage: 5, lesson: song-grand-old-duke-of-york, title: "The Grand Old Duke of York", requires: [y2-checkpoint-a], about: "English nursery rhyme, 1700s", genre: nursery }
+  - { id: song-john-peel, stage: 4, lesson: song-john-peel, title: "John Peel", requires: [y1-exit], about: "Cumbrian song, 1820s", genre: folk }
+  - { id: song-grand-old-duke-of-york, stage: 4, lesson: song-grand-old-duke-of-york, title: "The Grand Old Duke of York", requires: [y1-exit], about: "English nursery rhyme, 1700s", genre: nursery }
   - { id: song-polly-put-the-kettle-on, stage: 5, lesson: song-polly-put-the-kettle-on, title: "Polly Put the Kettle On", requires: [y2-checkpoint-a], about: "English nursery rhyme, 1790s", genre: nursery }
   - { id: song-oh-dear-what-can, stage: 5, lesson: song-oh-dear-what-can, title: "Oh Dear, What Can the Matter Be?", requires: [y2-checkpoint-a, ks-g], about: "English song, 1790s", genre: nursery }
   - { id: song-sir-roger-de-coverley, stage: 6, lesson: song-sir-roger-de-coverley, title: "Sir Roger de Coverley", requires: [y2-checkpoint-b, ks-g], about: "English country dance, 1600s", genre: dances }
   - { id: song-nonesuch, stage: 3, lesson: song-nonesuch, title: "Nonesuch", requires: [y1-checkpoint-b], about: "English country dance, Playford, 1651", genre: dances }
-  - { id: song-staines-morris, stage: 5, lesson: song-staines-morris, title: "Staines Morris", requires: [y2-checkpoint-a, ks-d-minor], about: "English morris tune, 1600s", genre: dances }
-  - { id: song-rufty-tufty, stage: 4, lesson: song-rufty-tufty, title: "Rufty Tufty", requires: [y1-exit], about: "English country dance, Playford, 1651", genre: dances }
+  - { id: song-staines-morris, stage: 4, lesson: song-staines-morris, title: "Staines Morris", requires: [y1-exit], about: "English morris tune, 1600s", genre: dances }
+  - { id: song-rufty-tufty, stage: 3, lesson: song-rufty-tufty, title: "Rufty Tufty", requires: [y1-checkpoint-b], about: "English country dance, Playford, 1651", genre: dances }
   - { id: song-princess-royal, stage: 5, lesson: song-princess-royal, title: "The Princess Royal", requires: [y2-checkpoint-a, ks-g], about: "Turlough O'Carolan, about 1730", genre: dances }
   - { id: song-beside-the-seaside, stage: 4, lesson: song-beside-the-seaside, title: "I Do Like to Be Beside the Seaside", requires: [y1-exit], about: "John Glover-Kind, 1907", genre: folk }
   - { id: song-tipperary, stage: 4, lesson: song-tipperary, title: "It's a Long Way to Tipperary", requires: [y1-exit], about: "Jack Judge and Harry Williams, 1912", genre: folk }
@@ -157,9 +157,9 @@ nodes:
   - { id: song-green-grow-the-rushes, stage: 8, lesson: song-green-grow-the-rushes, title: "Green Grow the Rushes", requires: [m7-flat-keys, ks-g], about: "Scottish song; words by Robert Burns, 1784", genre: folk }
   - { id: song-the-minstrel-boy, stage: 4, lesson: song-the-minstrel-boy, title: "The Minstrel Boy", requires: [y1-exit], about: "Irish air \"The Moreen\"; words by Thomas Moore, 1813", genre: folk }
   - { id: song-meeting-of-the-waters, stage: 5, lesson: song-meeting-of-the-waters, title: "The Meeting of the Waters", requires: [y2-checkpoint-a], about: "Irish air; words by Thomas Moore, 1807", genre: folk }
-  - { id: song-lark-in-the-clear-air, stage: 5, lesson: song-lark-in-the-clear-air, title: "The Lark in the Clear Air", requires: [y2-checkpoint-a], about: "Irish air, words by Samuel Ferguson, 1800s", genre: folk }
+  - { id: song-lark-in-the-clear-air, stage: 4, lesson: song-lark-in-the-clear-air, title: "The Lark in the Clear Air", requires: [y1-exit], about: "Irish air, words by Samuel Ferguson, 1800s", genre: folk }
   - { id: song-sally-gardens, stage: 7, lesson: song-sally-gardens, title: "The Sally Gardens", requires: [y2-exit, ks-g], about: "Irish reel, 1800s", genre: dances }
-  - { id: song-rocky-road-to-dublin, stage: 6, lesson: song-rocky-road-to-dublin, title: "The Rocky Road to Dublin", requires: [y2-checkpoint-b], about: "Irish slip jig, 1800s", genre: dances }
+  - { id: song-rocky-road-to-dublin, stage: 5, lesson: song-rocky-road-to-dublin, title: "The Rocky Road to Dublin", requires: [y2-checkpoint-a], about: "Irish slip jig, 1800s", genre: dances }
   - { id: song-garryowen, stage: 7, lesson: song-garryowen, title: "Garryowen", requires: [y2-exit, ks-a], about: "Irish jig, 1700s", genre: dances }
   - { id: song-drowsy-maggie, stage: 7, lesson: song-drowsy-maggie, title: "Drowsy Maggie", requires: [y2-exit, ks-e-minor], about: "Irish reel, 1800s", genre: dances }
   - { id: song-king-of-the-fairies, stage: 7, lesson: song-king-of-the-fairies, title: "The King of the Fairies", requires: [y2-exit, ks-e-minor], about: "Irish set dance, 1800s", genre: dances }
@@ -167,7 +167,7 @@ nodes:
   - { id: song-lannigan-s-ball, stage: 6, lesson: song-lannigan-s-ball, title: "Lanigan's Ball", requires: [y2-checkpoint-b, ks-e-minor], about: "Irish jig and song, 1860s", genre: dances }
   - { id: song-rakes-of-kildare, stage: 6, lesson: song-rakes-of-kildare, title: "The Rakes of Kildare", requires: [y2-checkpoint-b], about: "Irish jig, 1700s", genre: dances }
   - { id: song-planxty-irwin, stage: 5, lesson: song-planxty-irwin, title: "Planxty Irwin", requires: [y2-checkpoint-a], about: "Turlough O'Carolan, about 1720", genre: folk }
-  - { id: song-carolan-s-concerto, stage: 8, lesson: song-carolan-s-concerto, title: "O'Carolan's Concerto", requires: [m7-flat-keys, ks-d], about: "Turlough O'Carolan, about 1720", genre: folk }
+  - { id: song-carolan-s-concerto, stage: 9, lesson: song-carolan-s-concerto, title: "O'Carolan's Concerto", requires: [m8-arpeggios, ks-d], about: "Turlough O'Carolan, about 1720", genre: folk }
   - { id: song-off-she-goes, stage: 7, lesson: song-off-she-goes, title: "Off She Goes", requires: [y2-exit, ks-d], about: "Irish jig, about 1800", genre: dances }
   - { id: song-rights-of-man, stage: 7, lesson: song-rights-of-man, title: "The Rights of Man", requires: [y2-exit, ks-g], about: "Irish hornpipe, 1790s", genre: dances }
   - { id: song-kid-on-the-mountain, stage: 9, lesson: song-kid-on-the-mountain, title: "The Kid on the Mountain", requires: [m8-arpeggios, ks-e-minor], about: "Irish slip jig, 1800s", genre: dances }
@@ -175,10 +175,10 @@ nodes:
   - { id: song-ap-shenkin, stage: 7, lesson: song-ap-shenkin, title: "Ap Shenkin", requires: [y2-exit, ks-g], about: "Welsh dance tune, 1700s", genre: dances }
   - { id: song-blaenwern, stage: 4, lesson: song-blaenwern, title: "Blaenwern", requires: [y1-exit], about: "Hymn tune by William Penfro Rowlands, 1905", genre: hymns }
   - { id: song-turkey-in-the-straw, stage: 6, lesson: song-turkey-in-the-straw, title: "Turkey in the Straw", requires: [y2-checkpoint-b, ks-g], about: "American fiddle tune, 1820s", genre: folk }
-  - { id: song-old-joe-clark, stage: 5, lesson: song-old-joe-clark, title: "Old Joe Clark", requires: [y2-checkpoint-a], about: "Appalachian fiddle tune, 1800s", genre: folk }
+  - { id: song-old-joe-clark, stage: 4, lesson: song-old-joe-clark, title: "Old Joe Clark", requires: [y1-exit], about: "Appalachian fiddle tune, 1800s", genre: folk }
   - { id: song-cripple-creek, stage: 6, lesson: song-cripple-creek, title: "Cripple Creek", requires: [y2-checkpoint-b, ks-a], about: "Appalachian fiddle tune, 1800s", genre: folk }
   - { id: song-arkansas-traveler, stage: 6, lesson: song-arkansas-traveler, title: "Arkansas Traveler", requires: [y2-checkpoint-b, ks-a], about: "American fiddle tune, 1840s", genre: folk }
-  - { id: song-buffalo-gals, stage: 5, lesson: song-buffalo-gals, title: "Buffalo Gals", requires: [y2-checkpoint-a, ks-g], about: "American minstrel song, 1844", genre: folk }
+  - { id: song-buffalo-gals, stage: 4, lesson: song-buffalo-gals, title: "Buffalo Gals", requires: [y1-exit], about: "American minstrel song, 1844", genre: folk }
   - { id: song-golden-slippers, stage: 4, lesson: song-golden-slippers, title: "Oh, Dem Golden Slippers", requires: [y1-exit], about: "James Bland, 1879", genre: folk }
   - { id: song-coming-round-the-mountain, stage: 4, lesson: song-coming-round-the-mountain, title: "She'll Be Coming Round the Mountain", requires: [y1-exit], about: "American folk song, 1890s", genre: folk }
   - { id: song-little-brown-jug, stage: 4, lesson: song-little-brown-jug, title: "Little Brown Jug", requires: [y1-exit], about: "Joseph Winner, 1869", genre: folk }
@@ -198,7 +198,7 @@ nodes:
   - { id: song-waiting-for-the-federals, stage: 6, lesson: song-waiting-for-the-federals, title: "Waiting for the Federals", requires: [y2-checkpoint-b, ks-g], about: "American fiddle tune, 1860s", genre: dances }
   - { id: song-rosin-the-beau, stage: 5, lesson: song-rosin-the-beau, title: "Rosin the Beau", requires: [y2-checkpoint-a, ks-g], about: "American and Irish song, 1830s", genre: folk }
   - { id: song-simple-gifts, stage: 4, lesson: song-simple-gifts, title: "Simple Gifts", requires: [y1-exit], about: "Shaker song, Joseph Brackett, 1848", genre: hymns }
-  - { id: song-la-bastringue, stage: 6, lesson: song-la-bastringue, title: "La Bastringue", requires: [y2-checkpoint-b, ks-d], about: "French-Canadian dance tune, 1800s", genre: dances }
+  - { id: song-la-bastringue, stage: 5, lesson: song-la-bastringue, title: "La Bastringue", requires: [y2-checkpoint-a], about: "French-Canadian dance tune, 1800s", genre: dances }
   - { id: song-swedish-masquerade, stage: 5, lesson: song-swedish-masquerade, title: "Swedish Masquerade", requires: [y2-checkpoint-a, ks-g], about: "Swedish folk dance, 1800s", genre: dances }
   - { id: song-jenny-lind, stage: 5, lesson: song-jenny-lind, title: "Jenny Lind Polka", requires: [y2-checkpoint-a], about: "Polka, 1840s", genre: dances }
   - { id: song-djatchko-kolo, stage: 4, lesson: song-djatchko-kolo, title: "Djačko Kolo", requires: [y1-exit], about: "Serbian circle dance", genre: dances }
@@ -213,17 +213,17 @@ nodes:
   - { id: song-teetotallers-reel, stage: 7, lesson: song-teetotallers-reel, title: "The Teetotaller's Reel", requires: [y2-exit, ks-g], about: "Irish reel, 1800s", genre: dances }
   - { id: song-merry-blacksmith, stage: 8, lesson: song-merry-blacksmith, title: "The Merry Blacksmith", requires: [m7-flat-keys, ks-d], about: "Irish reel, 1800s", genre: dances }
   - { id: song-miss-mcleods-reel, stage: 7, lesson: song-miss-mcleods-reel, title: "Miss McLeod's Reel", requires: [y2-exit, ks-g], about: "Scottish reel, 1800s", genre: dances }
-  - { id: song-cuckoos-nest, stage: 6, lesson: song-cuckoos-nest, title: "The Cuckoo's Nest", requires: [y2-checkpoint-b, ks-d-minor], about: "English hornpipe, 1700s", genre: dances }
+  - { id: song-cuckoos-nest, stage: 5, lesson: song-cuckoos-nest, title: "The Cuckoo's Nest", requires: [y2-checkpoint-a, ks-d-minor], about: "English hornpipe, 1700s", genre: dances }
   - { id: song-the-lady-of-the-lake, stage: 8, lesson: song-the-lady-of-the-lake, title: "The Lady of the Lake", requires: [m7-flat-keys, ks-g], about: "Contra dance tune, 1800s", genre: dances }
   - { id: song-leaving-of-liverpool, stage: 6, lesson: song-leaving-of-liverpool, title: "The Leaving of Liverpool", requires: [y2-checkpoint-b, ks-d], about: "Sea shanty, 1880s", genre: shanties }
-  - { id: song-god-rest-you-merry, stage: 4, lesson: song-god-rest-you-merry, title: "God Rest You Merry, Gentlemen", requires: [y1-exit], about: "English carol, 1700s", genre: carols }
+  - { id: song-god-rest-you-merry, stage: 3, lesson: song-god-rest-you-merry, title: "God Rest You Merry, Gentlemen", requires: [y1-checkpoint-b], about: "English carol, 1700s", genre: carols }
   - { id: song-the-holly-and-the-ivy, stage: 4, lesson: song-the-holly-and-the-ivy, title: "The Holly and the Ivy", requires: [y1-exit], about: "English carol, 1700s", genre: carols }
   - { id: song-good-christian-men, stage: 4, lesson: song-good-christian-men, title: "Good Christian Men, Rejoice", requires: [y1-exit], about: "German carol \"In dulci jubilo\", 1300s", genre: carols }
   - { id: song-boars-head-carol, stage: 3, lesson: song-boars-head-carol, title: "The Boar's Head Carol", requires: [y1-checkpoint-b], about: "English carol, 1500s", genre: carols }
   - { id: song-sussex-carol, stage: 3, lesson: song-sussex-carol, title: "The Sussex Carol", requires: [y1-checkpoint-b], about: "English carol, Sussex, 1600s", genre: carols }
-  - { id: song-gloucestershire-wassail, stage: 5, lesson: song-gloucestershire-wassail, title: "Wassail Song", requires: [y2-checkpoint-a, ks-d-minor], about: "English wassail, 1700s", genre: carols }
+  - { id: song-gloucestershire-wassail, stage: 4, lesson: song-gloucestershire-wassail, title: "Wassail Song", requires: [y1-exit], about: "English wassail, 1700s", genre: carols }
   - { id: song-william-tell, stage: 6, lesson: song-william-tell, title: "William Tell Overture: the finale", requires: [y2-checkpoint-b], about: "Gioachino Rossini, 1829", genre: classical }
-  - { id: song-huntsmens-chorus, stage: 4, lesson: song-huntsmens-chorus, title: "Huntsmen's Chorus", requires: [y1-exit], about: "Carl Maria von Weber, \"Der Freischütz\", 1821", genre: classical }
+  - { id: song-huntsmens-chorus, stage: 3, lesson: song-huntsmens-chorus, title: "Huntsmen's Chorus", requires: [y1-checkpoint-b], about: "Carl Maria von Weber, \"Der Freischütz\", 1821", genre: classical }
   - { id: song-water-music-jig, stage: 8, lesson: song-water-music-jig, title: "Jig from the Water Music", requires: [m7-flat-keys, ks-g], about: "George Frideric Handel, 1717", genre: classical }
   - { id: song-backe-backe-kuchen, stage: 5, lesson: song-backe-backe-kuchen, title: "Backe, backe Kuchen", requires: [y2-checkpoint-a, ks-f], about: "German children's rhyme, 1800s", genre: nursery }
   - { id: song-das-wandern, stage: 8, lesson: song-das-wandern, title: "Das Wandern ist des Müllers Lust", requires: [m7-flat-keys, ks-b-flat], about: "Carl Friedrich Zöllner, 1844; words by Wilhelm Müller, 1821", genre: folk }
@@ -239,10 +239,10 @@ nodes:
   - { id: song-nun-danket, stage: 3, lesson: song-nun-danket, title: "Now Thank We All Our God", requires: [y1-checkpoint-b], about: "Johann Crüger, 1647; words by Martin Rinkart, 1636", genre: hymns }
   - { id: song-ein-feste-burg, stage: 3, lesson: song-ein-feste-burg, title: "A Mighty Fortress Is Our God", requires: [y1-checkpoint-b], about: "Martin Luther, about 1529", genre: hymns }
   - { id: song-der-lindenbaum, stage: 4, lesson: song-der-lindenbaum, title: "Der Lindenbaum", requires: [y1-exit], about: "Franz Schubert, 1827, in the folk version by Friedrich Silcher, 1846", genre: classical }
-  - { id: song-die-gedanken-sind-frei, stage: 5, lesson: song-die-gedanken-sind-frei, title: "Die Gedanken sind frei", requires: [y2-checkpoint-a], about: "German folk song, about 1800", genre: folk }
+  - { id: song-die-gedanken-sind-frei, stage: 4, lesson: song-die-gedanken-sind-frei, title: "Die Gedanken sind frei", requires: [y1-exit], about: "German folk song, about 1800", genre: folk }
   - { id: song-horch-was-kommt, stage: 6, lesson: song-horch-was-kommt, title: "Horch, was kommt von draußen rein", requires: [y2-checkpoint-b], about: "German folk song, 1800s", genre: folk }
   - { id: song-heidenroeslein, stage: 6, lesson: song-heidenroeslein, title: "Heidenröslein", requires: [y2-checkpoint-b, ks-f], about: "Heinrich Werner, 1829; words by Goethe, 1771", genre: folk }
-  - { id: song-jaeger-aus-kurpfalz, stage: 6, lesson: song-jaeger-aus-kurpfalz, title: "Ein Jäger aus Kurpfalz", requires: [y2-checkpoint-b, ks-g], about: "German hunting song, 1700s", genre: folk }
+  - { id: song-jaeger-aus-kurpfalz, stage: 5, lesson: song-jaeger-aus-kurpfalz, title: "Ein Jäger aus Kurpfalz", requires: [y2-checkpoint-a, ks-g], about: "German hunting song, 1700s", genre: folk }
   - { id: song-in-lauterbach, stage: 7, lesson: song-in-lauterbach, title: "In Lauterbach hab' ich mein Strumpf verlor'n", requires: [y2-exit, ks-g], about: "Swabian folk song, 1800s", genre: folk }
   - { id: song-maikaefer-flieg, stage: 4, lesson: song-maikaefer-flieg, title: "Maikäfer, flieg", requires: [y1-exit], about: "German children's song, words from the 1600s", genre: nursery }
   - { id: song-jungfernkranz, stage: 9, lesson: song-jungfernkranz, title: "Bridesmaids' Chorus", requires: [m8-arpeggios], about: "Carl Maria von Weber, \"Der Freischütz\", 1821", genre: classical }
@@ -260,22 +260,22 @@ nodes:
   - { id: song-white-cockade, stage: 9, lesson: song-white-cockade, title: "The White Cockade", requires: [m8-arpeggios, ks-g], about: "Scottish march and reel, 1700s", genre: dances }
   - { id: song-bobby-shaftoe, stage: 5, lesson: song-bobby-shaftoe, title: "Bobby Shaftoe", requires: [y2-checkpoint-a], about: "Northumbrian song, 1700s", genre: nursery }
   - { id: song-blow-the-winds, stage: 4, lesson: song-blow-the-winds, title: "Blow the Winds, I-Ho", requires: [y1-exit], about: "Northumbrian ballad, collected 1882", genre: folk }
-  - { id: song-oak-and-ash, stage: 6, lesson: song-oak-and-ash, title: "The Oak and the Ash", requires: [y2-checkpoint-b], about: "English ballad, 1600s", genre: folk }
-  - { id: song-finnegans-wake, stage: 4, lesson: song-finnegans-wake, title: "Finnegan's Wake", requires: [y1-exit], about: "Irish-American music-hall song, 1850s", genre: folk }
+  - { id: song-oak-and-ash, stage: 5, lesson: song-oak-and-ash, title: "The Oak and the Ash", requires: [y2-checkpoint-a], about: "English ballad, 1600s", genre: folk }
+  - { id: song-finnegans-wake, stage: 3, lesson: song-finnegans-wake, title: "Finnegan's Wake", requires: [y1-checkpoint-b], about: "Irish-American music-hall song, 1850s", genre: folk }
   - { id: song-buy-broom-buzzems, stage: 5, lesson: song-buy-broom-buzzems, title: "Buy Broom Buzzems", requires: [y2-checkpoint-a, ks-g], about: "Northumbrian song, 1800s", genre: folk }
   - { id: song-daisy-bell, stage: 4, lesson: song-daisy-bell, title: "Daisy Bell", requires: [y1-exit], about: "Harry Dacre, 1892", genre: folk }
   - { id: song-be-thou-my-vision, stage: 5, lesson: song-be-thou-my-vision, title: "Be Thou My Vision (Slane)", requires: [y2-checkpoint-a], about: "Irish folk tune \"Slane\"; hymn words translated in 1905", genre: hymns }
   - { id: song-swiss-boy, stage: 6, lesson: song-swiss-boy, title: "The Swiss Boy", requires: [y2-checkpoint-b, ks-d], about: "Swiss air, 1820s", genre: folk }
   - { id: song-gilderoy, stage: 6, lesson: song-gilderoy, title: "Gilderoy", requires: [y2-checkpoint-b], about: "Scottish ballad air, 1600s", genre: folk }
   - { id: song-heights-of-alma, stage: 7, lesson: song-heights-of-alma, title: "The Heights of Alma", requires: [y2-exit, ks-a], about: "Scottish pipe march, 1854", genre: anthems }
-  - { id: song-la-russe, stage: 5, lesson: song-la-russe, title: "La Russe", requires: [y2-checkpoint-a, ks-g], about: "English country dance, 1800s", genre: dances }
+  - { id: song-la-russe, stage: 4, lesson: song-la-russe, title: "La Russe", requires: [y1-exit], about: "English country dance, 1800s", genre: dances }
   - { id: song-molly-malone, stage: 3, lesson: song-molly-malone, title: "Molly Malone", requires: [y1-checkpoint-b], about: "James Yorkston, 1883", genre: folk }
   - { id: song-killarney, stage: 5, lesson: song-killarney, title: "Killarney", requires: [y2-checkpoint-a, ks-g], about: "Michael William Balfe, 1862", genre: folk }
   - { id: song-eileen-aroon, stage: 5, lesson: song-eileen-aroon, title: "Eileen Aroon", requires: [y2-checkpoint-a], about: "Irish air, 1600s", genre: folk }
   - { id: song-kitty-of-coleraine, stage: 9, lesson: song-kitty-of-coleraine, title: "Kitty of Coleraine", requires: [m8-arpeggios, ks-d], about: "Irish song, about 1810", genre: folk }
   - { id: song-bonapartes-retreat, stage: 9, lesson: song-bonapartes-retreat, title: "Bonaparte's Retreat", requires: [m8-arpeggios, ks-e-minor], about: "Irish air, 1800s", genre: folk }
   - { id: song-blind-mary, stage: 9, lesson: song-blind-mary, title: "Blind Mary", requires: [m8-arpeggios, ks-d], about: "Turlough O'Carolan, early 1700s", genre: folk }
-  - { id: song-carolans-farewell, stage: 5, lesson: song-carolans-farewell, title: "Carolan's Farewell to Music", requires: [y2-checkpoint-a], about: "Turlough O'Carolan, 1738", genre: folk }
+  - { id: song-carolans-farewell, stage: 4, lesson: song-carolans-farewell, title: "Carolan's Farewell to Music", requires: [y1-exit], about: "Turlough O'Carolan, 1738", genre: folk }
   - { id: song-fanny-power, stage: 8, lesson: song-fanny-power, title: "Fanny Power", requires: [m7-flat-keys, ks-a], about: "Turlough O'Carolan, early 1700s", genre: dances }
   - { id: song-george-brabazon, stage: 7, lesson: song-george-brabazon, title: "George Brabazon", requires: [y2-exit, ks-g], about: "Turlough O'Carolan, early 1700s", genre: dances }
   - { id: song-planxty-drury, stage: 9, lesson: song-planxty-drury, title: "Planxty Drury", requires: [m8-arpeggios, ks-d], about: "Turlough O'Carolan, early 1700s", genre: dances }
@@ -287,7 +287,7 @@ nodes:
   - { id: song-chief-oneills-favourite, stage: 7, lesson: song-chief-oneills-favourite, title: "Chief O'Neill's Favourite", requires: [y2-exit, ks-d], about: "Irish hornpipe, 1800s", genre: dances }
   - { id: song-old-grey-goose, stage: 9, lesson: song-old-grey-goose, title: "The Old Grey Goose", requires: [m8-arpeggios, ks-e-minor], about: "Irish jig, 1700s", genre: dances }
   - { id: song-rakish-paddy, stage: 8, lesson: song-rakish-paddy, title: "Rakish Paddy", requires: [m7-flat-keys, ks-d], about: "Irish reel, 1700s", genre: dances }
-  - { id: song-scatter-the-mud, stage: 6, lesson: song-scatter-the-mud, title: "Scatter the Mud", requires: [y2-checkpoint-b], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-scatter-the-mud, stage: 5, lesson: song-scatter-the-mud, title: "Scatter the Mud", requires: [y2-checkpoint-a], about: "Irish jig, 1800s", genre: dances }
   - { id: song-pipe-on-the-hob, stage: 6, lesson: song-pipe-on-the-hob, title: "The Pipe on the Hob", requires: [y2-checkpoint-b], about: "Irish jig, 1800s", genre: dances }
   - { id: song-walls-of-liscarroll, stage: 9, lesson: song-walls-of-liscarroll, title: "The Walls of Liscarroll", requires: [m8-arpeggios, ks-d], about: "Irish jig, 1800s", genre: dances }
   - { id: song-cliffs-of-moher, stage: 8, lesson: song-cliffs-of-moher, title: "The Cliffs of Moher", requires: [m7-flat-keys, ks-g], about: "Irish jig, 1800s", genre: dances }
@@ -297,7 +297,7 @@ nodes:
   - { id: song-little-stack-of-barley, stage: 7, lesson: song-little-stack-of-barley, title: "The Little Stack of Barley", requires: [y2-exit, ks-g], about: "Irish hornpipe, 1800s", genre: dances }
   - { id: song-monaghan-jig, stage: 8, lesson: song-monaghan-jig, title: "The Monaghan Jig", requires: [m7-flat-keys, ks-e-minor], about: "Irish jig, 1800s", genre: dances }
   - { id: song-star-of-munster, stage: 6, lesson: song-star-of-munster, title: "The Star of Munster", requires: [y2-checkpoint-b], about: "Irish reel, 1800s", genre: dances }
-  - { id: song-boys-of-the-town, stage: 7, lesson: song-boys-of-the-town, title: "The Boys of the Town", requires: [y2-exit, ks-g], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-boys-of-the-town, stage: 8, lesson: song-boys-of-the-town, title: "The Boys of the Town", requires: [m7-flat-keys, ks-g], about: "Irish jig, 1800s", genre: dances }
   - { id: song-bucks-of-oranmore, stage: 9, lesson: song-bucks-of-oranmore, title: "The Bucks of Oranmore", requires: [m8-arpeggios, ks-d], about: "Irish reel, 1800s", genre: dances }
   - { id: song-blackthorn-stick, stage: 9, lesson: song-blackthorn-stick, title: "The Blackthorn Stick", requires: [m8-arpeggios, ks-d-minor], about: "Irish jig, 1800s", genre: dances }
   - { id: song-green-fields-of-america, stage: 7, lesson: song-green-fields-of-america, title: "The Green Fields of America", requires: [y2-exit, ks-g], about: "Irish reel, 1800s", genre: dances }
@@ -321,3 +321,87 @@ nodes:
   - { id: song-portsmouth, stage: 9, lesson: song-portsmouth, title: "Portsmouth", requires: [m8-arpeggios, ks-a], about: "English hornpipe, 1700s", genre: dances }
   - { id: song-paddy-whack, stage: 8, lesson: song-paddy-whack, title: "Paddy Whack", requires: [m7-flat-keys, ks-a], about: "Irish jig, 1700s", genre: dances }
   - { id: song-jefferson-and-liberty, stage: 5, lesson: song-jefferson-and-liberty, title: "Jefferson and Liberty", requires: [y2-checkpoint-a], about: "Irish jig \"The Gobby O\"; American song, 1801", genre: dances }
+  - { id: song-campbells-are-coming, stage: 7, lesson: song-campbells-are-coming, title: "The Campbells Are Coming", requires: [y2-exit, ks-g], about: "Scottish tune, 1700s", genre: folk }
+  - { id: song-highland-laddie, stage: 6, lesson: song-highland-laddie, title: "Highland Laddie", requires: [y2-checkpoint-b, ks-g], about: "Scottish march, 1700s", genre: anthems }
+  - { id: song-johnny-cope, stage: 6, lesson: song-johnny-cope, title: "Hey, Johnnie Cope", requires: [y2-checkpoint-b], about: "Scottish song, 1745", genre: folk }
+  - { id: song-duncan-gray, stage: 9, lesson: song-duncan-gray, title: "Duncan Gray", requires: [m8-arpeggios, ks-g], about: "Scottish song tune, 1700s; words by Robert Burns", genre: folk }
+  - { id: song-over-the-water-to-charlie, stage: 8, lesson: song-over-the-water-to-charlie, title: "Over the Water to Charlie", requires: [m7-flat-keys, ks-d], about: "Jacobite song, 1700s", genre: folk }
+  - { id: song-auld-robin-gray, stage: 8, lesson: song-auld-robin-gray, title: "Auld Robin Gray", requires: [m7-flat-keys, ks-e-minor], about: "Scottish song, 1772", genre: folk }
+  - { id: song-reel-of-tulloch, stage: 9, lesson: song-reel-of-tulloch, title: "The Reel of Tulloch", requires: [m8-arpeggios, ks-a], about: "Scottish reel, 1700s", genre: dances }
+  - { id: song-tullochgorum, stage: 8, lesson: song-tullochgorum, title: "Tullochgorum", requires: [m7-flat-keys, ks-e-minor], about: "Scottish strathspey, 1700s", genre: dances }
+  - { id: song-lassie-yet, stage: 9, lesson: song-lassie-yet, title: "My Love She's But a Lassie Yet", requires: [m8-arpeggios, ks-d], about: "Scottish tune, 1700s; words by Robert Burns", genre: dances }
+  - { id: song-dumbarton-drums, stage: 6, lesson: song-dumbarton-drums, title: "Dumbarton's Drums", requires: [y2-checkpoint-b, ks-d-minor], about: "Scottish song, 1600s", genre: folk }
+  - { id: song-jockey-to-the-fair, stage: 6, lesson: song-jockey-to-the-fair, title: "Jockey to the Fair", requires: [y2-checkpoint-b, ks-g], about: "English morris tune, 1700s", genre: dances }
+  - { id: song-marys-dream, stage: 7, lesson: song-marys-dream, title: "Mary's Dream", requires: [y2-exit, ks-g], about: "Scottish song, John Lowe, 1770s", genre: folk }
+  - { id: song-yellow-haired-laddie, stage: 7, lesson: song-yellow-haired-laddie, title: "The Yellow-Haired Laddie", requires: [y2-exit, ks-d], about: "Scottish air, 1700s", genre: folk }
+  - { id: song-bannocks-o-barley, stage: 5, lesson: song-bannocks-o-barley, title: "Bannocks o' Barley", requires: [y2-checkpoint-a, ks-g], about: "Scottish song, 1700s", genre: folk }
+  - { id: song-cauld-kail, stage: 9, lesson: song-cauld-kail, title: "Cauld Kail in Aberdeen", requires: [m8-arpeggios, ks-d], about: "Scottish tune, 1700s", genre: dances }
+  - { id: song-dainty-davie, stage: 6, lesson: song-dainty-davie, title: "Dainty Davie", requires: [y2-checkpoint-b, ks-g], about: "Scottish tune, 1600s; words by Robert Burns", genre: folk }
+  - { id: song-boatie-rows, stage: 8, lesson: song-boatie-rows, title: "The Boatie Rows", requires: [m7-flat-keys, ks-e-minor], about: "Scottish fishing song, 1700s", genre: folk }
+  - { id: song-oer-the-moor, stage: 7, lesson: song-oer-the-moor, title: "O'er the Moor Amang the Heather", requires: [y2-exit, ks-d], about: "Scottish song, 1700s", genre: folk }
+  - { id: song-ca-the-yowes, stage: 7, lesson: song-ca-the-yowes, title: "Ca' the Yowes", requires: [y2-exit, ks-b-minor], about: "Scottish song, 1700s; words by Robert Burns", genre: folk }
+  - { id: song-jenny-nettles, stage: 6, lesson: song-jenny-nettles, title: "Jenny Nettles", requires: [y2-checkpoint-b], about: "Scottish tune, 1700s", genre: dances }
+  - { id: song-la-marseillaise, stage: 6, lesson: song-la-marseillaise, title: "La Marseillaise", requires: [y2-checkpoint-b, ks-d], about: "Claude-Joseph Rouget de Lisle, 1792", genre: anthems }
+  - { id: song-washingtons-march, stage: 9, lesson: song-washingtons-march, title: "General Washington's March", requires: [m8-arpeggios, ks-g], about: "American march, 1780s", genre: anthems }
+  - { id: song-st-patricks-day, stage: 7, lesson: song-st-patricks-day, title: "St. Patrick's Day", requires: [y2-exit, ks-g], about: "Irish jig, 1700s", genre: dances }
+  - { id: song-planxty-maguire, stage: 9, lesson: song-planxty-maguire, title: "Planxty Maguire", requires: [m8-arpeggios, ks-g], about: "Turlough O'Carolan, early 1700s", genre: dances }
+  - { id: song-planxty-burke, stage: 8, lesson: song-planxty-burke, title: "Planxty Burke", requires: [m7-flat-keys, ks-g-minor], about: "Turlough O'Carolan, early 1700s", genre: dances }
+  - { id: song-lord-mayo, stage: 9, lesson: song-lord-mayo, title: "Lord Mayo", requires: [m8-arpeggios, ks-g-minor], about: "Irish air, 1600s", genre: folk }
+  - { id: song-boys-of-wexford, stage: 5, lesson: song-boys-of-wexford, title: "The Boys of Wexford", requires: [y2-checkpoint-a, ks-g], about: "Irish air; words by Robert Dwyer Joyce, 1870s", genre: folk }
+  - { id: song-jeanie, stage: 5, lesson: song-jeanie, title: "Jeanie with the Light Brown Hair", requires: [y2-checkpoint-a, ks-f], about: "Stephen Foster, 1854", genre: folk }
+  - { id: song-aiken-drum, stage: 5, lesson: song-aiken-drum, title: "Aiken Drum", requires: [y2-checkpoint-a], about: "Scottish children's song, 1700s", genre: nursery }
+  - { id: song-endearing-young-charms, stage: 4, lesson: song-endearing-young-charms, title: "Believe Me, If All Those Endearing Young Charms", requires: [y1-exit], about: "Irish air; words by Thomas Moore, 1808", genre: folk }
+  - { id: song-angeline-the-baker, stage: 4, lesson: song-angeline-the-baker, title: "Angeline the Baker", requires: [y1-exit], about: "American fiddle tune, from Stephen Foster's \"Angelina Baker\", 1850", genre: dances }
+  - { id: song-billy-in-the-lowground, stage: 8, lesson: song-billy-in-the-lowground, title: "Billy in the Lowground", requires: [m7-flat-keys], about: "American fiddle tune, 1800s", genre: dances }
+  - { id: song-boil-em-cabbage-down, stage: 8, lesson: song-boil-em-cabbage-down, title: "Boil 'Em Cabbage Down", requires: [m7-flat-keys, ks-d], about: "American fiddle tune, 1800s", genre: dances }
+  - { id: song-brian-boru, stage: 4, lesson: song-brian-boru, title: "Brian Boru's March", requires: [y1-exit], about: "Irish march, 1700s", genre: anthems }
+  - { id: song-buttered-peas, stage: 6, lesson: song-buttered-peas, title: "Buttered Peas", requires: [y2-checkpoint-b, ks-g], about: "English and Scottish reel, 1700s", genre: dances }
+  - { id: song-corn-rigs, stage: 5, lesson: song-corn-rigs, title: "Corn Rigs", requires: [y2-checkpoint-a], about: "Scottish song, 1600s; words by Robert Burns, 1782", genre: folk }
+  - { id: song-drops-of-brandy, stage: 5, lesson: song-drops-of-brandy, title: "Drops of Brandy", requires: [y2-checkpoint-a, ks-g], about: "Scottish and Irish slip jig, 1700s", genre: dances }
+  - { id: song-duke-of-perth, stage: 5, lesson: song-duke-of-perth, title: "The Duke of Perth", requires: [y2-checkpoint-a, ks-g], about: "Scottish reel, 1700s", genre: dances }
+  - { id: song-flop-eared-mule, stage: 5, lesson: song-flop-eared-mule, title: "Flop-Eared Mule", requires: [y2-checkpoint-a, ks-g], about: "American fiddle tune, 1800s", genre: dances }
+  - { id: song-glendaruel-highlanders, stage: 7, lesson: song-glendaruel-highlanders, title: "The Glendaruel Highlanders", requires: [y2-exit, ks-a], about: "Scottish pipe march, 1860s", genre: anthems }
+  - { id: song-hunt-the-squirrel, stage: 5, lesson: song-hunt-the-squirrel, title: "Hunt the Squirrel", requires: [y2-checkpoint-a], about: "English country dance, 1709", genre: dances }
+  - { id: song-lamplighters-hornpipe, stage: 6, lesson: song-lamplighters-hornpipe, title: "The Lamplighter's Hornpipe", requires: [y2-checkpoint-b, ks-a], about: "English hornpipe, 1800s", genre: dances }
+  - { id: song-larry-ogaff, stage: 6, lesson: song-larry-ogaff, title: "Larry O'Gaff", requires: [y2-checkpoint-b, ks-g], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-liberty, stage: 5, lesson: song-liberty, title: "Liberty", requires: [y2-checkpoint-a], about: "American fiddle tune, 1800s", genre: dances }
+  - { id: song-madame-bonaparte, stage: 6, lesson: song-madame-bonaparte, title: "Madame Bonaparte", requires: [y2-checkpoint-b, ks-g], about: "Irish set dance, 1800s", genre: dances }
+  - { id: song-paddy-carey, stage: 4, lesson: song-paddy-carey, title: "Paddy Carey", requires: [y1-exit], about: "Irish jig, 1790s", genre: dances }
+  - { id: song-prince-charlies-welcome, stage: 7, lesson: song-prince-charlies-welcome, title: "Prince Charlie's Welcome to Skye", requires: [y2-exit, ks-g], about: "Scottish pipe air, 1700s", genre: folk }
+  - { id: song-quakers-wife, stage: 6, lesson: song-quakers-wife, title: "Merrily Danced the Quaker's Wife", requires: [y2-checkpoint-b, ks-d], about: "Scottish jig, 1700s", genre: dances }
+  - { id: song-road-to-lisdoonvarna, stage: 5, lesson: song-road-to-lisdoonvarna, title: "The Road to Lisdoonvarna", requires: [y2-checkpoint-a], about: "Irish slide, 1800s", genre: dances }
+  - { id: song-rodneys-glory, stage: 6, lesson: song-rodneys-glory, title: "Rodney's Glory", requires: [y2-checkpoint-b], about: "Irish set dance, 1780s", genre: dances }
+  - { id: song-rose-tree, stage: 6, lesson: song-rose-tree, title: "The Rose Tree", requires: [y2-checkpoint-b, ks-d], about: "Irish and Scottish air, 1700s", genre: folk }
+  - { id: song-roxburgh-castle, stage: 8, lesson: song-roxburgh-castle, title: "Roxburgh Castle", requires: [m7-flat-keys, ks-a], about: "Scottish hornpipe, 1800s", genre: dances }
+  - { id: song-st-annes-reel, stage: 8, lesson: song-st-annes-reel, title: "St. Anne's Reel", requires: [m7-flat-keys, ks-d], about: "French-Canadian reel, 1800s", genre: dances }
+  - { id: song-sandy-river-belles, stage: 7, lesson: song-sandy-river-belles, title: "Sandy River Belles", requires: [y2-exit, ks-d], about: "American fiddle tune, 1800s", genre: dances }
+  - { id: song-shandon-bells, stage: 7, lesson: song-shandon-bells, title: "The Shandon Bells", requires: [y2-exit, ks-d], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-sprig-of-shillelagh, stage: 6, lesson: song-sprig-of-shillelagh, title: "The Sprig of Shillelagh", requires: [y2-checkpoint-b, ks-g], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-sweets-of-may, stage: 5, lesson: song-sweets-of-may, title: "The Sweets of May", requires: [y2-checkpoint-a, ks-g], about: "Irish set dance, 1800s", genre: dances }
+  - { id: song-barley-mow, stage: 6, lesson: song-barley-mow, title: "The Barley Mow", requires: [y2-checkpoint-b, ks-g], about: "English drinking song, 1700s", genre: folk }
+  - { id: song-the-blackbird, stage: 7, lesson: song-the-blackbird, title: "The Blackbird", requires: [y2-exit, ks-g], about: "Irish set dance, 1700s", genre: dances }
+  - { id: song-connaughtmans-rambles, stage: 7, lesson: song-connaughtmans-rambles, title: "The Connaughtman's Rambles", requires: [y2-exit, ks-d], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-dinah, stage: 5, lesson: song-dinah, title: "Someone's in the Kitchen with Dinah", requires: [y2-checkpoint-a], about: "American song, 1890s", genre: nursery }
+  - { id: song-nut-brown-maiden, stage: 3, lesson: song-nut-brown-maiden, title: "Ho Ro My Nut-Brown Maiden", requires: [y1-checkpoint-b], about: "Scottish Gaelic song, 1800s", genre: folk }
+  - { id: song-gadie-rins, stage: 6, lesson: song-gadie-rins, title: "Gin I Were Where the Gadie Rins", requires: [y2-checkpoint-b, ks-d], about: "Scottish song, 1800s", genre: folk }
+  - { id: song-laird-o-cockpen, stage: 6, lesson: song-laird-o-cockpen, title: "The Laird o' Cockpen", requires: [y2-checkpoint-b], about: "Scottish tune; words by Lady Nairne, 1820s", genre: folk }
+  - { id: song-lea-rig, stage: 6, lesson: song-lea-rig, title: "The Lea Rig", requires: [y2-checkpoint-b, ks-g], about: "Scottish song, 1600s; words by Robert Burns, 1792", genre: folk }
+  - { id: song-wanton-wee-thing, stage: 8, lesson: song-wanton-wee-thing, title: "My Wife's a Wanton Wee Thing", requires: [m7-flat-keys, ks-d], about: "Scottish jig, 1700s", genre: dances }
+  - { id: song-solomon-levi, stage: 4, lesson: song-solomon-levi, title: "Solomon Levi", requires: [y1-exit], about: "American college song, 1870s", genre: folk }
+  - { id: song-maid-behind-the-bar, stage: 8, lesson: song-maid-behind-the-bar, title: "The Maid Behind the Bar", requires: [m7-flat-keys, ks-d], about: "Irish reel, 1800s", genre: dances }
+  - { id: song-piper-o-dundee, stage: 3, lesson: song-piper-o-dundee, title: "The Piper o' Dundee", requires: [y1-checkpoint-b], about: "Jacobite song, 1700s", genre: folk }
+  - { id: song-rogues-march, stage: 4, lesson: song-rogues-march, title: "The Rogue's March", requires: [y1-exit], about: "English military tune, 1700s", genre: anthems }
+  - { id: song-tripping-upstairs, stage: 6, lesson: song-tripping-upstairs, title: "Tripping Upstairs", requires: [y2-checkpoint-b, ks-d], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-humours-of-donnybrook, stage: 7, lesson: song-humours-of-donnybrook, title: "The Humours of Donnybrook", requires: [y2-exit, ks-g], about: "Irish jig, 1800s", genre: dances }
+  - { id: song-wellingtons-advance, stage: 6, lesson: song-wellingtons-advance, title: "Wellington's Advance", requires: [y2-checkpoint-b], about: "Scottish pipe march, 1800s", genre: anthems }
+  - { id: song-old-grey-cat, stage: 7, lesson: song-old-grey-cat, title: "The Old Grey Cat", requires: [y2-exit, ks-e-minor], about: "Irish reel, 1800s", genre: dances }
+  - { id: song-kiss-me-quick, stage: 6, lesson: song-kiss-me-quick, title: "Kiss Me Quick, My Mither's Coming", requires: [y2-checkpoint-b, ks-d], about: "Scottish tune, 1800s", genre: dances }
+  - { id: song-geordies-byre, stage: 6, lesson: song-geordies-byre, title: "The Muckin' o' Geordie's Byre", requires: [y2-checkpoint-b, ks-d], about: "Scottish bothy song, 1800s", genre: folk }
+  - { id: song-cumberland-reel, stage: 6, lesson: song-cumberland-reel, title: "The Cumberland Reel", requires: [y2-checkpoint-b, ks-d], about: "English country dance, 1700s", genre: dances }
+  - { id: song-east-neuk-of-fife, stage: 6, lesson: song-east-neuk-of-fife, title: "The East Neuk of Fife", requires: [y2-checkpoint-b, ks-g], about: "Scottish reel, 1700s", genre: dances }
+  - { id: song-teviot-bridge, stage: 8, lesson: song-teviot-bridge, title: "Teviot Bridge", requires: [m7-flat-keys, ks-a], about: "Scottish jig, 1800s", genre: dances }
+  - { id: song-hexham-races, stage: 5, lesson: song-hexham-races, title: "Hexham Races", requires: [y2-checkpoint-a, ks-g], about: "Northumbrian jig, 1800s", genre: dances }
+  - { id: song-ballydesmond-polka, stage: 8, lesson: song-ballydesmond-polka, title: "The Ballydesmond Polka", requires: [m7-flat-keys, ks-g], about: "Irish polka, 1800s", genre: dances }
+  - { id: song-wiltshire-six-hand-reel, stage: 4, lesson: song-wiltshire-six-hand-reel, title: "The Wiltshire Six-Hand Reel", requires: [y1-exit], about: "English country dance, 1800s", genre: dances }
+  - { id: song-pleasures-of-the-town, stage: 7, lesson: song-pleasures-of-the-town, title: "The Pleasures of the Town", requires: [y2-exit, ks-a], about: "English country dance, 1700s", genre: dances }
+  - { id: song-road-to-dundee, stage: 5, lesson: song-road-to-dundee, title: "The Road to Dundee", requires: [y2-checkpoint-a, ks-g], about: "Scottish song, 1800s", genre: folk }

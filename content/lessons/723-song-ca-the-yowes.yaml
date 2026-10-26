@@ -1,0 +1,26 @@
+id: song-ca-the-yowes
+title: Ca' the Yowes
+skills:
+- songs
+steps:
+- explain: |
+    **Ca' the Yowes** · Scottish song, 1700s; words by Robert Burns
+
+    "Call the ewes to the knowes": a shepherd calls the sheep to the hillocks, in B minor.
+  staff:
+    notes: E4:e F#4:e B4:q A4:e F#4:e A4:q  |  F#4:e E4:e D4:e D5:e C#5:e D5:e E5:q
+    key: Bm
+  sound: E4:e F#4:e B4:q A4:e F#4:e A4:q  |  F#4:e E4:e D4:e D5:e C#5:e D5:e E5:q  |  F#5:e B4:e B4:e B4:e A4:e D5:e F#4:q  |  E4:q
+    F#4:e A4:e B4:q B4:e E4:e
+- explain: |
+    **Before you play.** B minor: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: B minor · Time: 4/4 · Tempo: 72
+- exercise: song-ca-the-yowes-rh
+- exercise: song-ca-the-yowes-lh
+- exercise: song-ca-the-yowes
+- exercise: song-ca-the-yowes-arranged
+- exercise: song-ca-the-yowes-performance
+recap: 'Ca'' the Yowes: tune, left hand, together. Come back to it any time; songs are for fun.'

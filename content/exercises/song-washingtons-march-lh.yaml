@@ -1,0 +1,16 @@
+id: song-washingtons-march-lh
+title: 'General Washington''s March: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | D3+G3+B3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:w | C3+E3+G3:w | B2+D3+G3:w | A2+D3+F#3:w | B2+D3+G3:w | B2+D3+G3:w
+  | B2+D3+G3:w | B2+D3+G3:w | B2+D3+G3:w | B2+E3+G3:w | B2+E3+G3:w | B2+D3+G3:w | A2+D3+F#3:w | B2+D3+G3:w | B2+D3+G3:h.
+reps: 2
+days: 1

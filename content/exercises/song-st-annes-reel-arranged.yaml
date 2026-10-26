@@ -1,0 +1,23 @@
+id: song-st-annes-reel-arranged
+title: St. Anne's Reel, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (held chords).
+display: staff
+key: D
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:e E5:e | F#5:e E5:e D5:e C#5:e E5:e D5:e C#5:e B4:e | A4:q F#4:e A4:e D4:e F#4:e A4:e D4:e | B4:e G4:e D4:e G4:e
+  B4:e D4:e G4:e B4:e | A4:q D4:e F#4:e A4:e F#4:e A4:e D5:e | F#5:e E5:e D5:e C#5:e E5:e D5:e C#5:e B4:e | A4:q F#4:e A4:e
+  D4:e F#4:e A4:e D4:e | B4:e G4:e B4:e D5:e C#5:e A4:e C#5:e E5:e | D5:e E5:e F#5:e E5:e D5:q A5:e G5:e | F#5:e D5:e F#5:e
+  A5:e F#5:e D5:e F#5:e A5:e | A5:e G5:q F#5:e G5:q. F#5:e | E5:e C#5:e E5:e G5:e E5:e C#5:e E5:e G5:e | B5:e A5:q G#5:e A5:q.
+  G5:e | F#5:e D5:e F#5:e A5:e F#5:e D5:e F#5:e A5:e | A5:e G5:q F#5:e G5:q. F#5:e | E5:e C#5:e E5:e G5:e E5:e C#5:e E5:e
+  G5:e | F#5:e D5:e E5:e C#5:e D5:q
+left: r:q | D3+F#3+A3:h D3+G3+B3:h | D3+F#3+A3:w | D3+G3+B3:w | D3+F#3+A3:w | D3+F#3+A3:h D3+G3+B3:h | D3+F#3+A3:w | D3+G3+B3:h
+  C#3+E3+A3:h | D3+F#3+A3:w | D3+F#3+A3:w | E3+G3+B3:w | C#3+E3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w | E3+G3+B3:w
+  | C#3+E3+A3:w | D3+F#3+A3:h.
+reps: 3
+days: 2

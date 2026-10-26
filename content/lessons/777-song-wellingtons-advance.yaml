@@ -1,0 +1,25 @@
+id: song-wellingtons-advance
+title: Wellington's Advance
+skills:
+- songs
+steps:
+- explain: |
+    **Wellington's Advance** · Scottish pipe march, 1800s
+
+    A 6/8 march for the Duke of Wellington's army.
+  staff:
+    notes: E4:e  |  E4:e A4:e A4:e A4:e G#4:e A4:e
+    key: Am
+  sound: E4:e  |  E4:e A4:e A4:e A4:e G#4:e A4:e  |  C5:e B4:e A4:e C5:q D5:e  |  E5:e F5:e E5:e E5:e F#5:e G5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 6/8 · Tempo: 56
+- exercise: song-wellingtons-advance-rh
+- exercise: song-wellingtons-advance-lh
+- exercise: song-wellingtons-advance
+- exercise: song-wellingtons-advance-arranged
+- exercise: song-wellingtons-advance-performance
+recap: 'Wellington''s Advance: tune, left hand, together. Come back to it any time; songs are for fun.'

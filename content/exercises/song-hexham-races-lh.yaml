@@ -1,0 +1,16 @@
+id: song-hexham-races-lh
+title: 'Hexham Races: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+left: r:e | G2:h. | D3:h. | G2:h. | A2:q. D3:q. | G2:h. | D3:q. C3:q. | G2:q. D3:q. | G2:h. | G2:h. | D3:h. | G2:h. | A2:q.
+  D3:q. | G2:h. | D3:q. C3:q. | G2:q. D3:q. | G2:h~ G2:e
+reps: 2
+days: 1
