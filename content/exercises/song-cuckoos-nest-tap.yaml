@@ -1,0 +1,12 @@
+id: song-cuckoos-nest-tap
+title: 'The Cuckoo''s Nest: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 88
+meter: 4/4
+countIn: 1
+rhythm: x:q x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:q x:e x:e | x:q x:e x:e x:q x:e x:e | x:e x:e x:e x:e x:q x:e x:e
+  | x:q x:e x:e x:e x:e x:e x:e | x:e x:e x:e x:e x:q x:e x:e | x:e x:e x:e x:e x:e x:e x:e x:e | x:q x:q x:q r:q
+reps: 2
+days: 1

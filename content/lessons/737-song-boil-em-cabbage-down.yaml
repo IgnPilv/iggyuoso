@@ -1,0 +1,25 @@
+id: song-boil-em-cabbage-down
+title: Boil 'Em Cabbage Down
+skills:
+- songs
+steps:
+- explain: |
+    **Boil 'Em Cabbage Down** · American fiddle tune, 1800s
+
+    Often the very first tune a young fiddler or banjo player learns.
+  staff:
+    notes: A4:e A4:s A4:s A4:e A4:e  |  B4:e B4:s B4:s B4:e B4:e
+    key: D
+  sound: A4:e A4:s A4:s A4:e A4:e  |  B4:e B4:s B4:s B4:e B4:e  |  A4:e A4:s A4:s A4:e F#4:e  |  E4:h
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 2/4 · Tempo: 72
+- exercise: song-boil-em-cabbage-down-rh
+- exercise: song-boil-em-cabbage-down-lh
+- exercise: song-boil-em-cabbage-down
+- exercise: song-boil-em-cabbage-down-arranged
+- exercise: song-boil-em-cabbage-down-performance
+recap: 'Boil ''Em Cabbage Down: tune, left hand, together. Come back to it any time; songs are for fun.'

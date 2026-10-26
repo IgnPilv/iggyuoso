@@ -1,0 +1,23 @@
+id: song-billy-in-the-lowground-performance
+title: 'Billy in the Lowground: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+tempo: 88
+meter: 4/4
+countIn: 1
+right: G3:e A3:e C4:e D4:e E4:e G4:e A4:e B4:e | C5:e B4:e C5:e D5:e C5:e A4:e G4:e C5:e | A4:e B4:e A4:e G4:e E4:e G4:e A4:e
+  B4:e | C5:e3 B4:e3 A4:e3 G4:e E4:e D4:e C4:e C4:e A3:e | G3:e A3:e C4:e D4:e E4:e G4:e A4:e B4:e | C5:e B4:e C5:e D5:e C5:e
+  A4:e G4:e C5:e | A4:e B4:e A4:e G4:e E4:e G4:e A4:e B4:e | C5:e3 B4:e3 A4:e3 G4:e E4:e D4:q C4:q | E5:e G5:q E5:e G5:q G5:q
+  | G5:e A5:e G5:e E5:e D5:e B4:e G4:q | E5:e A5:q G5:e A5:q A5:q | A5:e B5:e A5:e G5:e E5:e D5:e C5:e D5:e | E5:e G5:q E5:e
+  G5:q G5:q | G5:e A5:e G5:e E5:e D5:e B4:e G4:q | A4:e B4:e A4:e G4:e E4:e G4:e A4:e B4:e | C5:e3 B4:e3 A4:e3 G4:e E4:e D4:q
+  C4:q
+left: C3:q G3:q C4:q G3:q | C3:q G3:q C4:q G3:q | A2:q E3:q A3:q E3:q | A2:q E3:q A3:q E3:q | C3:q G3:q C4:q G3:q | C3:q G3:q
+  C4:q G3:q | A2:q E3:q A3:q E3:q | A2:q A2:q G2:q C3:q | C3:q G3:q C4:q G3:q | C3:q G3:q G2:q D3:q | A2:q E3:q A3:q E3:q
+  | A2:q E3:q A3:q E3:q | C3:q G3:q C4:q G3:q | C3:q G3:q G2:q D3:q | A2:q E3:q A3:q E3:q | A2+C3+E3:q A2+C3+E3:q B2+D3+G3:q
+  C3+E3+G3:q
+pedal: x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:q x:q x:q x:q | x:w | x:h x:h | x:w | x:w | x:w | x:h x:h | x:w | x:q x:q
+  x:q x:q
+reps: 2
+days: 2

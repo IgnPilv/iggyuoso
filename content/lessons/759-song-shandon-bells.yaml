@@ -1,0 +1,25 @@
+id: song-shandon-bells
+title: The Shandon Bells
+skills:
+- songs
+steps:
+- explain: |
+    **The Shandon Bells** · Irish jig, 1800s
+
+    Named after the bells of St Anne's church, Shandon, in Cork city.
+  staff:
+    notes: B4:e  |  A4:e F#4:e D4:e D4:e F#4:e A4:e
+    key: D
+  sound: B4:e  |  A4:e F#4:e D4:e D4:e F#4:e A4:e  |  D5:e E5:e D5:e C#5:e B4:e A4:e  |  B4:e G4:e E4:e E4:e G4:e A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-shandon-bells-rh
+- exercise: song-shandon-bells-lh
+- exercise: song-shandon-bells
+- exercise: song-shandon-bells-arranged
+- exercise: song-shandon-bells-performance
+recap: 'The Shandon Bells: tune, left hand, together. Come back to it any time; songs are for fun.'

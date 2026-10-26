@@ -1,0 +1,25 @@
+id: song-over-the-water-to-charlie
+title: Over the Water to Charlie
+skills:
+- songs
+steps:
+- explain: |
+    **Over the Water to Charlie** · Jacobite song, 1700s
+
+    A toast to Bonnie Prince Charlie "over the water" in France, drunk over a glass of water by his secret supporters.
+  staff:
+    notes: A4:q A4:e A4:e. B4:s G4:e  |  F#4:e G4:e E4:e D4:e. F#4:s G4:e
+    key: D
+  sound: A4:q A4:e A4:e. B4:s G4:e  |  F#4:e G4:e E4:e D4:e. F#4:s G4:e  |  A4:e. B4:s A4:e A4:e F#4:e A4:e  |  B4:q. D5:q.
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-over-the-water-to-charlie-rh
+- exercise: song-over-the-water-to-charlie-lh
+- exercise: song-over-the-water-to-charlie
+- exercise: song-over-the-water-to-charlie-arranged
+- exercise: song-over-the-water-to-charlie-performance
+recap: 'Over the Water to Charlie: tune, left hand, together. Come back to it any time; songs are for fun.'

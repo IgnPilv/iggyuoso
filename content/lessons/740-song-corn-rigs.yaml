@@ -1,0 +1,27 @@
+id: song-corn-rigs
+title: Corn Rigs
+skills:
+- songs
+steps:
+- explain: |
+    **Corn Rigs** · Scottish song, 1600s; words by Robert Burns, 1782
+
+    "Corn rigs and barley rigs": Burns's song of a summer night among the fields of corn.
+  staff:
+    notes: A4:q  |  D5:e C#5:e D5:e E5:e F#5:q E5:e D5:e
+    key: D
+  sound: A4:q  |  D5:e C#5:e D5:e E5:e F#5:q E5:e D5:e  |  C#5:e B4:e C#5:e D5:e E5:e C#5:e A4:q  |  D5:e C#5:e D5:e E5:e
+    F#5:e G5:e E5:e F#5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-corn-rigs-tap
+- exercise: song-corn-rigs-rh
+- exercise: song-corn-rigs-lh
+- exercise: song-corn-rigs
+- exercise: song-corn-rigs-arranged
+- exercise: song-corn-rigs-performance
+recap: 'Corn Rigs: tune, left hand, together. Come back to it any time; songs are for fun.'

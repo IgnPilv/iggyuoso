@@ -1,0 +1,15 @@
+id: song-laird-o-cockpen-lh
+title: 'The Laird o'' Cockpen: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+left: r:e | C3:h. | C3:h. | C3:h. | F2:h. | C3:h. | C3:h. | C3:q. G2:q. | A2:h. | A2:h. | A2:h. | A2:h. | D3:q. E3:q. | A2:h.
+  | A2:h. | D3:q. E3:q. | A2:h~ A2:e
+reps: 2
+days: 1

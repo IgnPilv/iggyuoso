@@ -1,0 +1,20 @@
+id: song-lord-mayo
+title: Lord Mayo
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Gm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: G4:e F4:e | D4:e. G4:s G4:s A4:s C5:e D5:q C5:e A4:e | D5:q G4:e. A4:s G4:e F4:e D4:q | D4:e. G4:s G4:s A4:s C5:e D5:q
+  F5:e D5:e | D5:e. C5:s A4:e. G4:s G4:q D5:q | F5:e D5:e F5:e G5:e A5:q G5:e F5:e | D5:e. C5:s D5:s E5:s F5:e F4:e. G4:s
+  F4:e D4:e | F5:e D5:e F5:e G5:e A5:q G5:e F5:e | D5:q G5:e A5:e G5:q A5:e G5:e | F5:e D5:e F5:e G5:e A5:q G5:e F5:e | D5:e.
+  C5:s D5:s E5:s F5:e F4:e. G4:s F4:e D4:e | D4:e. G4:s C5:e A4:e G4:e F4:e F5:e D5:e | D5:e. C5:s A4:e. G4:s G4:q
+left: r:q | D3+F#3+A3:w | D3+G3+Bb3:w | D3+G3+Bb3:w | D3+G3+Bb3:w | C3+F3+A3:w | D3+F3+Bb3:w | C3+F3+A3:w | D3+G3+Bb3:w |
+  C3+F3+A3:w | D3+F3+Bb3:w | D3+F#3+A3:h D3+F3+Bb3:h | D3+G3+Bb3:h.
+reps: 3
+days: 2

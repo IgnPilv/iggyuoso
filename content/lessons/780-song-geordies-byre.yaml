@@ -1,0 +1,25 @@
+id: song-geordies-byre
+title: The Muckin' o' Geordie's Byre
+skills:
+- songs
+steps:
+- explain: |
+    **The Muckin' o' Geordie's Byre** · Scottish bothy song, 1800s
+
+    A farm song about cleaning out Geordie's cowshed.
+  staff:
+    notes: A4:e  |  A4:e B4:e A4:e A4:e F#4:e A4:e
+    key: D
+  sound: A4:e  |  A4:e B4:e A4:e A4:e F#4:e A4:e  |  D5:q E5:e F#5:q A5:e  |  G5:q E5:e F#5:q D5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-geordies-byre-rh
+- exercise: song-geordies-byre-lh
+- exercise: song-geordies-byre
+- exercise: song-geordies-byre-arranged
+- exercise: song-geordies-byre-performance
+recap: 'The Muckin'' o'' Geordie''s Byre: tune, left hand, together. Come back to it any time; songs are for fun.'

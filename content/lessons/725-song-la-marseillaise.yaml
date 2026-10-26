@@ -1,0 +1,25 @@
+id: song-la-marseillaise
+title: La Marseillaise
+skills:
+- songs
+steps:
+- explain: |
+    **La Marseillaise** · Claude-Joseph Rouget de Lisle, 1792
+
+    Written in one night in Strasbourg as a war song, sung by volunteers from Marseille as they marched into Paris, and France's anthem since 1795.
+  staff:
+    notes: A4:s A4:s A4:e  |  D5:q D5:q E5:q E5:q
+    key: D
+  sound: A4:s A4:s A4:e  |  D5:q D5:q E5:q E5:q  |  A5:q F#5:q r:e D5:e D5:e C#5:e  |  B4:q G5:h E5:e C#5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 72
+- exercise: song-la-marseillaise-rh
+- exercise: song-la-marseillaise-lh
+- exercise: song-la-marseillaise
+- exercise: song-la-marseillaise-arranged
+- exercise: song-la-marseillaise-performance
+recap: 'La Marseillaise: tune, left hand, together. Come back to it any time; songs are for fun.'

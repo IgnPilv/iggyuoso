@@ -1,0 +1,19 @@
+id: song-ca-the-yowes-arranged
+title: Ca' the Yowes, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (rolling arpeggios). Change the pedal with each chord.
+display: staff
+key: Bm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+countIn: 1
+right: E4:e F#4:e B4:q A4:e F#4:e A4:q | F#4:e E4:e D4:e D5:e C#5:e D5:e E5:q | F#5:e B4:e B4:e B4:e A4:e D5:e F#4:q | E4:q
+  F#4:e A4:e B4:q B4:e E4:e | A4:e F#4:e B4:e A4:e F#4:e F#4:e A4:q | F#4:e E4:e D4:e D5:e C#5:e D5:e E5:q | F#5:s F#5:s B4:e
+  B4:e B4:e A4:e D5:e F#4:q | E4:e E4:e F#4:e A4:e B4:q B4:e r:e
+left: E3:q B3:q D3:q A3:q | B2:q F#3:q F#2:q C#3:q | B2:q F#3:q B3:q F#3:q | E3:q B3:q E4:q B3:q | D3:q A3:q D4:q A3:q | B2:q
+  F#3:q F#2:q C#3:q | B2:q F#3:q B3:q F#3:q | B2+D3+F#3:w
+pedal: x:h x:h | x:h x:h | x:w | x:w | x:w | x:h x:h | x:w | x:w
+reps: 3
+days: 2

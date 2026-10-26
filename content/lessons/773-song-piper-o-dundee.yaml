@@ -1,0 +1,27 @@
+id: song-piper-o-dundee
+title: The Piper o' Dundee
+skills:
+- songs
+steps:
+- explain: |
+    **The Piper o' Dundee** · Jacobite song, 1700s
+
+    A piper plays the tunes that call the clans to Bonnie Prince Charlie.
+  staff:
+    notes: E4:q  |  A4:q. B4:e C5:q. A4:e
+    key: Am
+  sound: E4:q  |  A4:q. B4:e C5:q. A4:e  |  E4:h E4:q. F#4:e  |  G4:q. A4:e B4:q. C5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 4/4 · Tempo: 88
+- exercise: song-piper-o-dundee-tap
+- exercise: song-piper-o-dundee-by-ear
+- exercise: song-piper-o-dundee-rh
+- exercise: song-piper-o-dundee-lh
+- exercise: song-piper-o-dundee
+- exercise: song-piper-o-dundee-arranged
+- exercise: song-piper-o-dundee-performance
+recap: 'The Piper o'' Dundee: tune, left hand, together. Come back to it any time; songs are for fun.'

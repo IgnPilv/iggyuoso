@@ -1,0 +1,27 @@
+id: song-brian-boru
+title: Brian Boru's March
+skills:
+- songs
+steps:
+- explain: |
+    **Brian Boru's March** · Irish march, 1700s
+
+    Named after Brian Boru, High King of Ireland, who died at the Battle of Clontarf in 1014. A march in A minor and 6/8.
+  staff:
+    notes: E5:e  |  C5:e B4:e A4:e A4:e E5:e D5:e
+    key: Am
+  sound: E5:e  |  C5:e B4:e A4:e A4:e E5:e D5:e  |  C5:e B4:e A4:e A4:q D5:e  |  B4:e A4:e G4:e G4:e D5:e C5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A minor · Time: 6/8 · Tempo: 56
+- exercise: song-brian-boru-tap
+- exercise: song-brian-boru-by-ear
+- exercise: song-brian-boru-rh
+- exercise: song-brian-boru-lh
+- exercise: song-brian-boru
+- exercise: song-brian-boru-arranged
+- exercise: song-brian-boru-performance
+recap: 'Brian Boru''s March: tune, left hand, together. Come back to it any time; songs are for fun.'

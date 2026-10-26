@@ -1,0 +1,25 @@
+id: song-duncan-gray
+title: Duncan Gray
+skills:
+- songs
+steps:
+- explain: |
+    **Duncan Gray** · Scottish song tune, 1700s; words by Robert Burns
+
+    Duncan woos Maggie, Maggie scorns him, and in the end it is the other way round.
+  staff:
+    notes: D4:e G4:e F#4:e G4:e  |  A4:e B4:e F#4:q
+    key: G
+  sound: D4:e G4:e F#4:e G4:e  |  A4:e B4:e F#4:q  |  G4:q A4:e. C5:s  |  B4:e G4:e G4:q
+- explain: |
+    **Before you play.** Two beats in a bar, like a march. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 2/4 · Tempo: 72
+- exercise: song-duncan-gray-rh
+- exercise: song-duncan-gray-lh
+- exercise: song-duncan-gray
+- exercise: song-duncan-gray-arranged
+- exercise: song-duncan-gray-performance
+recap: 'Duncan Gray: tune, left hand, together. Come back to it any time; songs are for fun.'

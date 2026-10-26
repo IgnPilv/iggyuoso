@@ -19,6 +19,7 @@ steps:
   callout: |
     Key: D minor · Time: 4/4 · Tempo: 88
 - exercise: song-staines-morris-tap
+- exercise: song-staines-morris-by-ear
 - exercise: song-staines-morris-rh
 - exercise: song-staines-morris-lh
 - exercise: song-staines-morris

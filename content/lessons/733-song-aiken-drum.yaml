@@ -1,0 +1,26 @@
+id: song-aiken-drum
+title: Aiken Drum
+skills:
+- songs
+steps:
+- explain: |
+    **Aiken Drum** · Scottish children's song, 1700s
+
+    "There was a man lived in the moon, and his name was Aiken Drum": his hat was made of cream cheese. Children add new verses.
+  staff:
+    notes: A4:e B4:e  |  C#5:q C#5:q D5:e C#5:e B4:e A4:e
+    key: A
+  sound: A4:e B4:e  |  C#5:q C#5:q D5:e C#5:e B4:e A4:e  |  F#4:h A4:q. F#4:e  |  E4:q. F#4:e A4:q E4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-aiken-drum-tap
+- exercise: song-aiken-drum-rh
+- exercise: song-aiken-drum-lh
+- exercise: song-aiken-drum
+- exercise: song-aiken-drum-arranged
+- exercise: song-aiken-drum-performance
+recap: 'Aiken Drum: tune, left hand, together. Come back to it any time; songs are for fun.'

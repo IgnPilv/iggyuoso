@@ -1,0 +1,16 @@
+id: song-hunt-the-squirrel-lh
+title: 'Hunt the Squirrel: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: A
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+left: r:e | A2:h. | A2:h. | A2:q. D3:q. | A2:q. E3:q. | A2:h. | A2:h. | D3:q. E3:q. | A2:h. | D3:h. | D3:h. | B2:h. | F#2:h.
+  | A2:h. | C#3:h. | F#2:q. E3:q. | A2:h~ A2:e
+reps: 2
+days: 1

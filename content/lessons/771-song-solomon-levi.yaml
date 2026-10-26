@@ -1,0 +1,25 @@
+id: song-solomon-levi
+title: Solomon Levi
+skills:
+- songs
+steps:
+- explain: |
+    **Solomon Levi** · American college song, 1870s
+
+    A shop-keeper's song from a minstrel show, adopted by American college glee clubs.
+  staff:
+    notes: E4:q F4:e  |  G4:q G4:e G4:q G4:e
+  sound: E4:q F4:e  |  G4:q G4:e G4:q G4:e  |  G4:q G4:e G4:q G4:e  |  A4:q A4:e A4:q A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 6/8 · Tempo: 56
+- exercise: song-solomon-levi-by-ear
+- exercise: song-solomon-levi-rh
+- exercise: song-solomon-levi-lh
+- exercise: song-solomon-levi
+- exercise: song-solomon-levi-arranged
+- exercise: song-solomon-levi-performance
+recap: 'Solomon Levi: tune, left hand, together. Come back to it any time; songs are for fun.'

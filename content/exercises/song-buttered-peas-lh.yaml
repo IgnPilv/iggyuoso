@@ -1,0 +1,16 @@
+id: song-buttered-peas-lh
+title: 'Buttered Peas: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: G
+tempo: 60
+tempoLadder: true
+meter: 2/2
+pickup: q
+countIn: 1
+left: r:q | D3+G3+B3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | C3+E3+G3:w | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:w
+  | B2+D3+G3:w | C3+E3+A3:w | D3+F#3+A3:w | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:w | C3+E3+G3:w | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:h.
+reps: 2
+days: 1

@@ -1,0 +1,23 @@
+id: song-endearing-young-charms
+title: Believe Me, If All Those Endearing Young Charms
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 96
+tempoLadder: true
+meter: 3/4
+pickup: q
+countIn: 1
+right: B4:e A4:e | G4:q. A4:e G4:q | G4:q B4:q D5:q | C5:q E5:q G5:q | G5:h F#5:e E5:e | D5:q. C5:e B4:q | A4:q G4:q A4:q
+  | B4:q D5:q B4:q | A4:h B4:e A4:e | G4:q. A4:e G4:q | G4:q B4:q D5:q | C5:q E5:q G5:q | G5:h F#5:e E5:e | D5:q G5:q B4:q
+  | A4:q. G4:e A4:q | G4:h.~ | G4:q D5:q C5:q | B4:q D5:q G5:q | G5:h D5:q | E5:q C5:q G5:q | G5:h F#5:e E5:e | D5:q. C5:e
+  B4:q | A4:q G4:q A4:q | B4:q D5:q B4:q | A4:h B4:e A4:e | G4:q. A4:e G4:q | G4:q B4:q D5:q | C5:q E5:q G5:q | G5:h F#5:e
+  E5:e | D5:q G5:q B4:q | A4:q. G4:e A4:q | G4:h.~ | G4:h
+left: r:q | D3+G3+B3:h. | D3+G3+B3:h. | C3+E3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h. | A2+D3+F#3:h.
+  | B2+D3+G3:h. | B2+D3+G3:h. | C3+E3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h.
+  | B2+D3+G3:h. | C3+E3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h. | B2+D3+G3:h.
+  | C3+E3+G3:h. | C3+E3+G3:h. | B2+D3+G3:h. | A2+D3+F#3:h. | B2+D3+G3:h. | B2+D3+G3:h
+reps: 3
+days: 2

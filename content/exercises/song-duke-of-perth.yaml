@@ -1,0 +1,21 @@
+id: song-duke-of-perth
+title: The Duke of Perth
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: D5:e B4:e | G4:e A4:e B4:e C5:e D5:q B4:q | G5:q B4:q D5:q B4:q | G5:q B4:q D5:q B4:q | A5:q A4:q A4:q B4:e A4:e |
+  G4:e A4:e B4:e C5:e D5:q B4:q | G5:q B4:q D5:q B4:q | C5:q A4:q D5:q. C5:e | B4:q G4:q G4:q F#5:q | G5:q. A5:e G5:q E5:q
+  | A5:q. B5:e A5:q F#5:q | G5:q. A5:e G5:q E5:q | B5:q E5:q E5:q F#5:q | G5:q. A5:e G5:q E5:q | A5:q. B5:e A5:q F#5:q | G5:q
+  D5:q E5:q D5:e C5:e | B4:q G4:q G4:q
+left: r:q | D3+G3+B3:w | D3+G3+B3:w | D3+G3+B3:h E3+G3+B3:h | C3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:w | D3+G3+B3:h E3+G#3+B3:h
+  | C3+E3+A3:h D3+F#3+A3:h | D3+G3+B3:w | E3+G3+B3:w | C3+E3+A3:w | B2+E3+G3:w | B2+E3+G3:h B2+D#3+A3:h | B2+E3+G3:w | C3+E3+A3:w
+  | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:h.
+reps: 3
+days: 2

@@ -1,0 +1,19 @@
+id: song-bannocks-o-barley-arranged
+title: Bannocks o' Barley, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords).
+display: staff
+key: G
+tempo: 80
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:q G4:q B4:q | A4:q A4:e C5:e B4:e A4:e | G4:q G4:e A4:e B4:e C5:e | D5:q F#5:q G5:q | G5:q D5:q B4:q | A4:q F#5:e
+  G5:e A5:e F#5:e | G5:q D5:q A4:q | G5:q. A5:e G5:e A5:s B5:s | E5:q G5:e E5:e D5:e B4:e | D5:q A4:e C5:e B4:e A4:e | G4:q
+  G4:e A4:e B4:e D5:e | D5:q F#5:q G5:q
+left: G2:e D3:e B2:e D3:e G2:q | D3:e A3:e F#3:e A3:e D3:q | G2:e D3:e B2:e D3:e G2:q | G2:e D3:e B2:e D3:e G2:q | G2:e D3:e
+  B2:e D3:e G2:q | D3:e A3:e F#3:e A3:e D3:q | D3:e A3:e F#3:e A3:e D3:q | G2:e D3:e B2:e D3:e G2:q | E3:e B3:e G3:e B3:e
+  E3:q | D3:e A3:e F#3:e A3:e D3:q | G2:e D3:e B2:e D3:e G2:q | D3+G3+B3:h.
+reps: 3
+days: 2

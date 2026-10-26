@@ -1,0 +1,21 @@
+id: song-rogues-march-arranged
+title: The Rogue's March, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords).
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: B4:q B4:e B4:e C5:e D5:e | E5:q E5:e E5:q. | D5:q D5:q. E5:e | D5:q C5:e B4:q A4:e | B4:q B4:e B4:e C5:e D5:e | E5:q
+  E5:e E5:q. | D5:e E5:e F#5:e G5:e D5:e B4:e | A4:q. G4:q. | G5:q. F#5:q. | E5:q. D5:e E5:e F#5:e | G5:q. F#5:q. | E5:q.
+  D5:q C5:e | B4:q B4:e B4:e C5:e D5:e | E5:q E5:e E5:q. | D5:e E5:e F#5:e G5:e D5:e B4:e | A4:q. G4:q.
+left: G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e D3:e
+  A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e | D3:e A3:e F#3:e
+  G2:e D3:e B2:e | G2:e D3:e B2:e D3:e A3:e F#3:e | C3:e G3:e E3:e D3:e A3:e F#3:e | G2:e D3:e B2:e D3:e A3:e F#3:e | C3:e
+  G3:e E3:e D3:e A3:e F#3:e | G2:e D3:e B2:e G2:e D3:e B2:e | C3:e G3:e E3:e C3:e G3:e E3:e | G2:e D3:e B2:e G2:e D3:e B2:e
+  | D3+F#3+A3:q. D3+G3+B3:q.
+reps: 3
+days: 2

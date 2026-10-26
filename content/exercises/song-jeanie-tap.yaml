@@ -1,0 +1,15 @@
+id: song-jeanie-tap
+title: 'Jeanie with the Light Brown Hair: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 88
+meter: 4/4
+pickup: h
+countIn: 1
+rhythm: x:h | x:h. x:q | x:q x:q x:q x:q | x:h x:q x:q | x:w | x:h x:q x:q | x:h x:h | x:q. x:e x:q x:q | x:h. x:q | x:h.
+  x:q | x:q x:q x:q x:q | x:h x:q x:q | x:w | x:q x:q x:q x:q | x:q x:q x:q x:q | x:h x:q x:q | x:h r:h | x:q x:q x:q x:q
+  | x:h x:q x:q | x:q x:q x:q x:q | x:w | x:q x:q x:q x:q | x:h x:q x:q | x:h x:q. x:e | x:h. x:q | x:h. x:q | x:q x:q x:q
+  x:q | x:h x:q x:q | x:w | x:q x:q x:q. x:e | x:q x:q x:q. x:e | x:h x:q x:q | x:h. x:q | x:h x:q x:q | x:h r:h
+reps: 2
+days: 1

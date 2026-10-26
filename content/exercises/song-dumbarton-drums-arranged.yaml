@@ -1,0 +1,26 @@
+id: song-dumbarton-drums-arranged
+title: Dumbarton's Drums, fuller arrangement
+kind: timed
+hand: together
+prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+display: staff
+key: Dm
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: F4:e G4:e | A4:q. C5:e A4:e C5:e G4:e A4:e | F4:q C5:q C5:q Bb4:e A4:e | G4:e F4:e G4:e A4:e Bb4:e A4:e G4:e F4:e |
+  D4:q D5:h C5:e D5:e | F5:q. G5:e A5:e G5:e F5:e D5:e | C5:e A4:e C5:e D5:e F5:q. F4:e | G4:e A4:e F5:e D5:e C5:e A4:e G4:e.
+  F4:s | D4:q D5:q D5:q C5:e D5:e | F5:q. G5:e F5:e G5:e A5:e G5:e | F5:q A5:q A5:q G5:e F5:e | G5:e F5:e G5:e A5:e Bb5:e
+  A5:e G5:e F5:e | D5:q G5:e A5:e G5:q F5:e D5:e | C5:e D5:e F5:e G5:e A5:e G5:e F5:e D5:e | C5:e A4:e C5:e D5:e F5:q. G5:e
+  | A5:e G5:e F5:e D5:e C5:e A4:e G4:e F4:e | D4:q D5:h
+left: r:q | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | A2:e E3:e C#3:e E3:e A2:e
+  E3:e C#3:e E3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:e A3:e F3:e A3:e
+  D3:e A3:e F3:e A3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:e A3:e F3:e
+  A3:e D3:e A3:e F3:e A3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | G2:e D3:e
+  Bb2:e D3:e G2:e D3:e Bb2:e D3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:e A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3:e
+  A3:e F3:e A3:e D3:e A3:e F3:e A3:e | D3+F3+A3:h.
+pedal: r:q | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:w | x:h.
+reps: 3
+days: 2

@@ -13,7 +13,7 @@ countIn: 1
 right: A4:q | D5:h D5:q E5:q | F#5:h E5:q F#5:q | G5:q G5:q F#5:q E5:q | D5:h. E5:e F#5:e | G5:q F#5:q E5:q D5:q | D5:q C5:q
   B4:q B4:e C5:e | D5:q D5:q C5:q B4:q | A4:h G4:h | B4:q. C5:e D5:q D5:q | E5:q C5:q D5:h | B4:q. C5:e D5:q D5:q | E5:q C5:q
   D5:q B4:e C5:e | D5:q D5:q C5:q B4:q | A4:h G4:h
-left: r:q | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w | D3+G3+B3:h C#3+E3+A3:h | D3+F#3+A3:w | C3+E3+G3:w | B2+D3+G3:w | B2+D3+G3:w
-  | A2+D3+F#3:h B2+D3+G3:h | B2+D3+G3:w | C3+E3+G3:h A2+D3+F#3:h | B2+D3+G3:w | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:w | B2+D3+G3:h.
+left: r:q | D3:h A2:h | D3:w | G2:h A2:h | D3:w | C3:w | G2:w | G2:w | D3:h G2:h | G2:w | C3:h D3:h | G2:w | G2:h D3:h | G2:w
+  | G2:h.
 reps: 3
 days: 2

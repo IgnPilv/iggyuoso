@@ -1,0 +1,26 @@
+id: song-hexham-races
+title: Hexham Races
+skills:
+- songs
+steps:
+- explain: |
+    **Hexham Races** · Northumbrian jig, 1800s
+
+    A jig for the races at Hexham, a market town in Northumberland.
+  staff:
+    notes: D5:s B4:s  |  G4:e B4:e D5:e G5:e D5:e B4:e
+    key: G
+  sound: D5:s B4:s  |  G4:e B4:e D5:e G5:e D5:e B4:e  |  D5:e E5:e D5:e D5:q B4:e  |  G4:e B4:e D5:e G5:e D5:e B4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 6/8 · Tempo: 56
+- exercise: song-hexham-races-tap
+- exercise: song-hexham-races-rh
+- exercise: song-hexham-races-lh
+- exercise: song-hexham-races
+- exercise: song-hexham-races-arranged
+- exercise: song-hexham-races-performance
+recap: 'Hexham Races: tune, left hand, together. Come back to it any time; songs are for fun.'

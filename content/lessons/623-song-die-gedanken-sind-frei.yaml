@@ -17,6 +17,7 @@ steps:
   callout: |
     Key: C major · Time: 3/4 · Tempo: 96
 - exercise: song-die-gedanken-sind-frei-tap
+- exercise: song-die-gedanken-sind-frei-by-ear
 - exercise: song-die-gedanken-sind-frei-rh
 - exercise: song-die-gedanken-sind-frei-lh
 - exercise: song-die-gedanken-sind-frei

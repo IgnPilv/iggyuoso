@@ -2,7 +2,7 @@ id: song-huntsmens-chorus-lh
 title: 'Huntsmen''s Chorus: left hand'
 kind: timed
 hand: left
-prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
 display: staff
 key: G
 tempo: 88
@@ -10,8 +10,7 @@ tempoLadder: true
 meter: 4/4
 pickup: q
 countIn: 1
-left: r:q | D3+G3+B3:w | D3+G3+B3:h E3+G3+B3:h | D3+F#3+A3:w | D3+G3+B3:h D3+F#3+A3:h | D3+G3+B3:w | D3+G3+B3:h C3+E3+G3:h
-  | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:w | B2+D3+G3:h B2+D#3+F#3:h | B2+E3+G3:w | C3+E3+A3:w | D3+F#3+A3:w | D3+G3+B3:w | D3+G3+B3:h
-  C3+E3+G3:h | B2+D3+G3:h A2+D3+F#3:h | B2+D3+G3:h.
+left: r:q | G2:w | G2:h E3:h | D3:w | G2:h D3:h | G2:w | G2:h C3:h | G2:h D3:h | G2:w | G2:h B2:h | E3:w | A2:w | D3:w | G2:w
+  | G2:h C3:h | G2:h D3:h | G2:h.
 reps: 2
 days: 1

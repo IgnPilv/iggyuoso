@@ -14,9 +14,10 @@ steps:
 - explain: |
     **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
 
-    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
   callout: |
     Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-good-night-and-joy-tap
 - exercise: song-good-night-and-joy-rh
 - exercise: song-good-night-and-joy-lh
 - exercise: song-good-night-and-joy

@@ -1,0 +1,26 @@
+id: song-roxburgh-castle
+title: Roxburgh Castle
+skills:
+- songs
+steps:
+- explain: |
+    **Roxburgh Castle** · Scottish hornpipe, 1800s
+
+    Named after the ruined royal castle in the Scottish Borders.
+  staff:
+    notes: C#5:e B4:e  |  A4:e G#4:e A4:e C#5:e E5:e C#5:e A4:e C#5:e
+    key: A
+  sound: C#5:e B4:e  |  A4:e G#4:e A4:e C#5:e E5:e C#5:e A4:e C#5:e  |  D5:e C#5:e D5:e F#5:e E5:e C#5:e A4:e C#5:e  |  D5:q
+    F#5:e3 E5:e3 D5:e3 C#5:q A5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. A major: remember F♯, C♯, G♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: A major · Time: 4/4 · Tempo: 88
+- exercise: song-roxburgh-castle-rh
+- exercise: song-roxburgh-castle-lh
+- exercise: song-roxburgh-castle
+- exercise: song-roxburgh-castle-arranged
+- exercise: song-roxburgh-castle-performance
+recap: 'Roxburgh Castle: tune, left hand, together. Come back to it any time; songs are for fun.'

@@ -1,0 +1,15 @@
+id: song-planxty-burke-lh
+title: 'Planxty Burke: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: Gm
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: G2:h. | G2:q. F2:q. | F2:h. | F2:h. | G2:h. | G2:h. | F2:h. | Bb2:h. | G2:h. | Bb2:q. C3:q. | Bb2:q. C3:q. | Bb2:q.
+  D3:q. | G2:h. | G2:h. | F2:h. | Bb2:h. | C3:h. | Bb2:q. D3:q. | G2:h. | Bb2:h. | G2:h. | Bb2:q. D3:q. | G2:h. | G2:h.
+reps: 2
+days: 1

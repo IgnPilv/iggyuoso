@@ -1,0 +1,27 @@
+id: song-angeline-the-baker
+title: Angeline the Baker
+skills:
+- songs
+steps:
+- explain: |
+    **Angeline the Baker** · American fiddle tune, from Stephen Foster's "Angelina Baker", 1850
+
+    Fiddlers turned Foster's song into a dance tune, and it became a favourite of old-time and bluegrass players.
+  staff:
+    notes: D5:e B4:e  |  A4:q B4:q D5:q. A4:e
+    key: D
+  sound: D5:e B4:e  |  A4:q B4:q D5:q. A4:e  |  B4:q D5:h D5:e B4:e  |  A4:q B4:q D5:e B4:e A4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-angeline-the-baker-tap
+- exercise: song-angeline-the-baker-by-ear
+- exercise: song-angeline-the-baker-rh
+- exercise: song-angeline-the-baker-lh
+- exercise: song-angeline-the-baker
+- exercise: song-angeline-the-baker-arranged
+- exercise: song-angeline-the-baker-performance
+recap: 'Angeline the Baker: tune, left hand, together. Come back to it any time; songs are for fun.'

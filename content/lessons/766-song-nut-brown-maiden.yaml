@@ -1,0 +1,26 @@
+id: song-nut-brown-maiden
+title: Ho Ro My Nut-Brown Maiden
+skills:
+- songs
+steps:
+- explain: |
+    **Ho Ro My Nut-Brown Maiden** · Scottish Gaelic song, 1800s
+
+    A Highland love song, sung in Gaelic and English.
+  staff:
+    notes: G4:q  |  C5:q. B4:e A4:q G4:q
+  sound: G4:q  |  C5:q. B4:e A4:q G4:q  |  C5:h G4:q G4:q  |  C5:q. D5:e F5:q E5:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 88
+- exercise: song-nut-brown-maiden-tap
+- exercise: song-nut-brown-maiden-by-ear
+- exercise: song-nut-brown-maiden-rh
+- exercise: song-nut-brown-maiden-lh
+- exercise: song-nut-brown-maiden
+- exercise: song-nut-brown-maiden-arranged
+- exercise: song-nut-brown-maiden-performance
+recap: 'Ho Ro My Nut-Brown Maiden: tune, left hand, together. Come back to it any time; songs are for fun.'

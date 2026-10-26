@@ -1,0 +1,15 @@
+id: song-nut-brown-maiden-lh
+title: 'Ho Ro My Nut-Brown Maiden: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | C3:h G2:h | C3:h G2:h | C3:w | D3:w | C3:w | C3:h F2:h | G2:w | C3:w | C3:w | C3:w | C3:w | D3:h G2:h | C3:w |
+  C3:h A2:h | D3:h G2:h | C3:h.
+reps: 2
+days: 1

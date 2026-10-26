@@ -1,0 +1,25 @@
+id: song-rodneys-glory
+title: Rodney's Glory
+skills:
+- songs
+steps:
+- explain: |
+    **Rodney's Glory** · Irish set dance, 1780s
+
+    Celebrates Admiral Rodney's sea victory of 1782.
+  staff:
+    notes: E5:e D5:e  |  C5:q B4:e C5:e A4:q A4:e C5:e
+  sound: E5:e D5:e  |  C5:q B4:e C5:e A4:q A4:e C5:e  |  B4:e. C5:s B4:e A4:e G4:q C5:e D5:e  |  E5:q E5:e D5:e C5:e D5:e
+    E5:e F#5:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 4/4 · Tempo: 72
+- exercise: song-rodneys-glory-rh
+- exercise: song-rodneys-glory-lh
+- exercise: song-rodneys-glory
+- exercise: song-rodneys-glory-arranged
+- exercise: song-rodneys-glory-performance
+recap: 'Rodney''s Glory: tune, left hand, together. Come back to it any time; songs are for fun.'

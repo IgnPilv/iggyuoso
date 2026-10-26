@@ -18,6 +18,7 @@ steps:
   callout: |
     Key: A major · Time: 4/4 · Tempo: 88
 - exercise: song-old-joe-clark-tap
+- exercise: song-old-joe-clark-by-ear
 - exercise: song-old-joe-clark-rh
 - exercise: song-old-joe-clark-lh
 - exercise: song-old-joe-clark

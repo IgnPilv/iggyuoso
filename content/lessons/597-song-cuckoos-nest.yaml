@@ -15,9 +15,10 @@ steps:
 - explain: |
     **Before you play.** D minor: remember B♭.
 
-    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
   callout: |
     Key: D minor · Time: 4/4 · Tempo: 88
+- exercise: song-cuckoos-nest-tap
 - exercise: song-cuckoos-nest-rh
 - exercise: song-cuckoos-nest-lh
 - exercise: song-cuckoos-nest

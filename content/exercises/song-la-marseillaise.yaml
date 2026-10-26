@@ -1,0 +1,26 @@
+id: song-la-marseillaise
+title: La Marseillaise
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: D
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: A4:s A4:s A4:e | D5:q D5:q E5:q E5:q | A5:q F#5:q r:e D5:e D5:e C#5:e | B4:q G5:h E5:e C#5:e | D5:q D5:e. D5:s D5:q
+  D5:e. E5:s | F#5:q F#5:e. F#5:s F#5:q G5:e F#5:e | F#5:e E5:e F#5:q r:q E5:e F#5:e | G5:q G5:e. G5:s G5:q A5:e. G5:s | F#5:q
+  F#5:e. F#5:s F#5:q A5:e A5:e | A5:q F#5:e D5:e A5:q F#5:e D5:e | A4:q A4:e. A4:s A4:q A4:e. A4:s | E5:h G5:q E5:e C#5:e
+  | D5:q D5:q C#5:h | B4:q B4:e. B4:s D5:q C#5:e D5:e | E5:q E5:e. E5:s E5:q r:e E5:e | F5:q. F#5:e E5:e F#5:e G5:e F#5:e
+  | E5:q E5:e. E5:s E5:q F5:e E5:e | D5:q D5:q D5:q E5:e D5:e | D5:e C#5:e C#5:h r:e A5:e | A5:h A5:e E5:e F5:e D5:e | E5:q
+  E5:e. E5:s E5:q r:e A5:e | A5:h A5:e E5:e F5:e D5:e | E5:q E5:e. E5:s E5:q r:e A4:e | D5:q D5:e. D5:s D5:q D5:q | F#5:w
+  | G5:h A5:q B5:q | E5:q E5:e. E5:s E5:q r:e B5:e | A5:h A5:e F#5:e F#5:e E5:e | D5:h r:q A4:q | D5:h. D5:q | F#5:w | G5:h
+  A5:q B5:q | E5:h. r:e B5:e | A5:h A5:e F#5:e G5:e E5:e | D5:q D5:e. D5:s D5:q
+left: r:q | D3+F#3+A3:h C#3+E3+A3:h | D3+F#3+A3:w | E3+G3+B3:w | D3+F#3+A3:w | D3+F#3+A3:w | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:w
+  | D3+F#3+A3:w | D3+F#3+A3:w | C#3+E3+A3:w | D3+F#3+A3:h C#3+E3+A3:h | B2+D3+G3:w | A2+C#3+E3:w | A2+D3+F#3:w | A2+C#3+E3:w
+  | A2+D3+F#3:w | A2+C#3+E3:w | A2+D3+F#3:w | A2+C#3+E3:w | A2+D3+F#3:w | A2+C#3+E3:w | A2+D3+F#3:w | A2+D3+F#3:w | B2+D3+G3:w
+  | A2+C#3+E3:w | A2+D3+F#3:w | A2+D3+F#3:w | A2+D3+F#3:w | A2+D3+F#3:w | B2+D3+G3:w | A2+C#3+E3:w | A2+C#3+E3:w | A2+D3+F#3:h.
+reps: 3
+days: 2

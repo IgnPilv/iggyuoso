@@ -1,0 +1,24 @@
+id: song-duncan-gray-performance
+title: 'Duncan Gray: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: G
+tempo: 72
+meter: 2/4
+countIn: 1
+right: D4:e G4:e F#4:e G4:e | A4:e B4:e F#4:q | G4:q A4:e. C5:s | B4:e G4:e G4:q | B4:e D5:e D5:e C5:s B4:s | C5:e C5:e C5:q
+  | B4:e C5:s B4:s A4:e G4:e | F#4:e E4:e D4:q | D5:e E5:s D5:s C5:e D5:s C5:s | B4:e C5:s B4:s A4:s C5:s B4:s A4:s | G4:q
+  A4:e. C5:s | B4:e G4:e G4:q | D4:e G4:e C5:s B4:s A4:s G4:s | A4:s B4:s C5:s A4:s F#4:q | G4:s A4:s B4:s G4:s A4:s B4:s
+  C5:s A4:s | B4:e G4:e G4:q | B4:e D5:e D5:e G5:e | C5:e E5:e E5:e G5:e | B4:e D5:e D5:e C5:s B4:s | C5:s B4:s A4:s G4:s
+  F#4:e E4:s D4:s | E5:e G5:e D5:e G5:e | B4:e G5:e A5:s C6:s B5:s A5:s | G4:q A4:s B4:s C5:s A4:s | B4:e G4:e G4:q
+left: D3:e B3:e G3:e B3:e | D3:e A3:e F#3:e A3:e | D3+G3+B3:q D3+F#3+A3:q | D3:e B3:e G3:e B3:e | D3:e B3:e G3:e B3:e | C3:e
+  G3:e E3:e G3:e | B2:e G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e | A2:e F#3:e D3:e F#3:e | B2+D3+G3:q A2+D3+F#3:q | B2+D3+G3:q
+  A2+D3+F#3:q | B2:e G3:e D3:e G3:e | B2:e G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e | B2+D3+G3:q A2+D3+F#3:q | B2:e G3:e D3:e
+  G3:e | B2:e G3:e D3:e G3:e | C3:e G3:e E3:e G3:e | B2:e G3:e D3:e G3:e | A2:e F#3:e D3:e F#3:e | C3+E3+G3:q B2+D3+G3:q |
+  B2+D3+G3:q A2+D3+F#3:q | B2+D3+G3:q A2+D3+F#3:q | B2+D3+G3:h
+pedal: x:h | x:h | x:q x:q | x:h | x:h | x:h | x:h | x:h | x:h | x:q x:q | x:q x:q | x:h | x:h | x:h | x:q x:q | x:h | x:h
+  | x:h | x:h | x:h | x:q x:q | x:q x:q | x:q x:q | x:h
+reps: 2
+days: 2

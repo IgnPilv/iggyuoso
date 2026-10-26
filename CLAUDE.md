@@ -1037,3 +1037,12 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   written low move up an octave. Songs already known in a famous version were checked against it,
   and regional variants that differ were left out. Adding tunes re-ranks stages, so some batch 3
   songs moved a stage. Nothing new on screen, so the demo is unchanged.
+- 2026-10-26: Songbook batch 5: 84 more public-domain tunes, **381 songs** (the tenfold target, from 38).
+  Scottish songs and marches from Aird's Selection of Airs (1782–1803: Johnnie Cope, The Campbells Are
+  Coming, Tullochgorum, Auld Robin Gray...) including La Marseillaise and General Washington's March;
+  Carolan's Planxty Maguire and Planxty Burke, St. Patrick's Day, The Boys of Wexford; Foster's Jeanie
+  with the Light Brown Hair (a MusicXML lead sheet with its own chords: `import_abc.py` now also reads
+  one MusicXML piece of the music21 corpus as a `collection`, and turns opening rests into an upbeat);
+  and about 50 more from the Nottingham database (Aiken Drum, Believe Me If All Those Endearing Young
+  Charms, The Road to Dundee, Someone's in the Kitchen with Dinah, The Maid Behind the Bar, Drops of
+  Brandy in 9/8, St. Anne's Reel...). Nothing new on screen, so the demo is unchanged.

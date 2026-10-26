@@ -1,0 +1,18 @@
+id: song-bannocks-o-barley
+title: Bannocks o' Barley
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 80
+tempoLadder: true
+meter: 3/4
+countIn: 1
+right: G4:q G4:q B4:q | A4:q A4:e C5:e B4:e A4:e | G4:q G4:e A4:e B4:e C5:e | D5:q F#5:q G5:q | G5:q D5:q B4:q | A4:q F#5:e
+  G5:e A5:e F#5:e | G5:q D5:q A4:q | G5:q. A5:e G5:e A5:s B5:s | E5:q G5:e E5:e D5:e B4:e | D5:q A4:e C5:e B4:e A4:e | G4:q
+  G4:e A4:e B4:e D5:e | D5:q F#5:q G5:q
+left: D3+G3+B3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h. | D3+G3+B3:h. | D3+F#3+A3:h. | D3+F#3+A3:h. | D3+G3+B3:h. | E3+G3+B3:h.
+  | D3+F#3+A3:h. | D3+G3+B3:h. | D3+G3+B3:h.
+reps: 3
+days: 2

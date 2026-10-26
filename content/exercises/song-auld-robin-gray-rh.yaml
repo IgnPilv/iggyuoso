@@ -1,0 +1,17 @@
+id: song-auld-robin-gray-rh
+title: 'Auld Robin Gray: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Em
+tempo: 72
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+right: B4:e. D5:s | E5:e. G5:s E5:e D5:e B4:q A4:e. G4:s | D5:q A4:e. B4:s A4:q B4:e. D5:s | E5:e. G5:s E5:e D5:e B4:q A4:e
+  G4:e | A4:q B4:q G5:q. A5:e | B5:e A5:e G5:e E5:e G5:e E5:e D5:e B4:e | D5:e. B4:s A4:e G4:e A4:q B4:e. D5:s | E5:e. G5:s
+  E5:e D5:e B4:q G5:e. A5:s | B5:q B4:e. C5:s B4:q
+reps: 2
+days: 1

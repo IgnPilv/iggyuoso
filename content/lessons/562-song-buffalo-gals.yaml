@@ -18,6 +18,7 @@ steps:
   callout: |
     Key: G major · Time: 4/4 · Tempo: 88
 - exercise: song-buffalo-gals-tap
+- exercise: song-buffalo-gals-by-ear
 - exercise: song-buffalo-gals-rh
 - exercise: song-buffalo-gals-lh
 - exercise: song-buffalo-gals

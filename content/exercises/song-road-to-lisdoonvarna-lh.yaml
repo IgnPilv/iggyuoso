@@ -1,0 +1,15 @@
+id: song-road-to-lisdoonvarna-lh
+title: 'The Road to Lisdoonvarna: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: Em
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+left: E3:h. | E3:h. | D3:h. | B2:h. | E3:h. | G2:h. | A2:q. B2:q. | E3:h. | E3:h. | G2:h. | A2:h. | B2:h. | E3:h. | G2:h.
+  | A2:q. B2:q. | E3:h.
+reps: 2
+days: 1

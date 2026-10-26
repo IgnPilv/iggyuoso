@@ -1,0 +1,21 @@
+id: song-jockey-to-the-fair
+title: Jockey to the Fair
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: D4:e | G4:q A4:e B4:q C5:e | D5:q G5:e D5:q C5:e | B4:e D5:e G4:e G4:e F#4:e G4:e | A4:s B4:s C5:e B4:e A4:q D5:e |
+  D5:e C#5:e D5:e E5:e F#5:e G5:e | F#5:e A5:e F#5:e E5:q G5:e | F#5:e E5:e D5:e A4:e D5:e C#5:e | D5:q. D5:q D5:e | A5:e
+  F#5:e D5:e A5:e F#5:e D5:e | C5:q C5:e B4:q C5:e | D5:e G5:e D5:e D5:e G5:e D5:e | C5:q C5:e B4:q B4:e | E5:q F#5:e G5:q
+  F#5:e | E5:q F#5:e B4:q E5:e | E5:e D#5:e E5:e B4:q A4:e | G4:q F#4:e E4:q F#4:e | G4:q G4:e G4:q B4:e | D5:q. G5:q. | D5:e
+  B4:e G4:e A4:q B4:e | E4:q F#4:e G4:q A4:e | B4:q G5:e B4:e C5:e A4:e | G4:h~ G4:e
+left: r:e | G2:h. | G2:h. | G2:h. | D3:h. | G2:h. | D3:q. C3:q. | D3:h. | G2:h. | D3:h. | C3:q. G2:q. | G2:h. | C3:q. G2:q.
+  | C3:h. | E3:h. | E3:h. | C3:h. | G2:h. | G2:h. | G2:q. D3:q. | C3:h. | G2:h. | G2:h~ G2:e
+reps: 3
+days: 2

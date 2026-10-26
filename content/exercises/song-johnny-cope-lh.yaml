@@ -1,0 +1,18 @@
+id: song-johnny-cope-lh
+title: 'Hey, Johnnie Cope: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+key: Am
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | A2+C3+E3:w | A2+C3+E3:w | B2+D3+G3:w | B2+D3+G3:w | C3+E3+A3:w | C3+E3+A3:w | C3+E3+G3:w | C3+E3+A3:w | C3+E3+G3:w
+  | C3+E3+G3:w | B2+D3+G3:w | B2+E3+G#3:w | C3+E3+A3:w | B2+D3+G3:w | C3+E3+G3:w | C3+E3+A3:w | C3+E3+A3:w | C3+E3+A3:w |
+  B2+D3+G3:w | B2+D3+G3:w | C3+E3+A3:w | C3+E3+A3:w | B2+D3+G3:w | C3+E3+A3:w | C3+E3+A3:w | C3+E3+A3:w | B2+D3+G3:w | B2+E3+G#3:w
+  | C3+E3+A3:w | B2+D3+G3:w | C3+E3+G3:w | C3+E3+A3:h.
+reps: 2
+days: 1

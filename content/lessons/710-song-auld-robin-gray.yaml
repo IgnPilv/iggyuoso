@@ -1,0 +1,26 @@
+id: song-auld-robin-gray
+title: Auld Robin Gray
+skills:
+- songs
+steps:
+- explain: |
+    **Auld Robin Gray** · Scottish song, 1772
+
+    A young woman marries old Robin Gray because her love has gone to sea. Lady Anne Lindsay wrote the words at 21.
+  staff:
+    notes: B4:e. D5:s  |  E5:e. G5:s E5:e D5:e B4:q A4:e. G4:s
+    key: Em
+  sound: B4:e. D5:s  |  E5:e. G5:s E5:e D5:e B4:q A4:e. G4:s  |  D5:q A4:e. B4:s A4:q B4:e. D5:s  |  E5:e. G5:s E5:e D5:e
+    B4:q A4:e G4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 4/4 · Tempo: 72
+- exercise: song-auld-robin-gray-rh
+- exercise: song-auld-robin-gray-lh
+- exercise: song-auld-robin-gray
+- exercise: song-auld-robin-gray-arranged
+- exercise: song-auld-robin-gray-performance
+recap: 'Auld Robin Gray: tune, left hand, together. Come back to it any time; songs are for fun.'

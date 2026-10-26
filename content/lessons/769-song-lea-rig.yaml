@@ -1,0 +1,25 @@
+id: song-lea-rig
+title: The Lea Rig
+skills:
+- songs
+steps:
+- explain: |
+    **The Lea Rig** · Scottish song, 1600s; words by Robert Burns, 1792
+
+    Meeting a sweetheart on the grass at the edge of a field when the evening star appears.
+  staff:
+    notes: B4:e A4:e  |  G4:e B4:e D4:q D4:q E4:e F#4:e
+    key: G
+  sound: B4:e A4:e  |  G4:e B4:e D4:q D4:q E4:e F#4:e  |  G4:q. A4:e G4:q B4:q  |  A4:q. B4:e C5:e B4:e A4:e G4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. G major: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: G major · Time: 4/4 · Tempo: 88
+- exercise: song-lea-rig-rh
+- exercise: song-lea-rig-lh
+- exercise: song-lea-rig
+- exercise: song-lea-rig-arranged
+- exercise: song-lea-rig-performance
+recap: 'The Lea Rig: tune, left hand, together. Come back to it any time; songs are for fun.'

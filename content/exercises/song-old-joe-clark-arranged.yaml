@@ -2,7 +2,7 @@ id: song-old-joe-clark-arranged
 title: Old Joe Clark, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords).
+prompt: A fuller left hand (bass, then chord).
 display: staff
 key: A
 tempo: 88
@@ -13,11 +13,9 @@ countIn: 1
 right: E5:q | E5:q F#5:q G5:q F#5:q | E5:q D5:q C#5:q A4:q | E5:q F#5:q G5:q F#5:q | E5:w | E5:q F#5:q G5:q F#5:q | E5:q D5:q
   C#5:h | A4:e B4:e C#5:e A4:e B4:q G4:q | A4:h. E4:q | A4:q A4:e B4:e C#5:q A4:q | E5:q D5:q C#5:h | A4:q A4:e B4:e C#5:q
   A4:q | B4:h E4:h | A4:q A4:e B4:e C#5:q A4:q | E5:q D5:q C#5:h | A4:e B4:e C#5:e A4:e B4:q G4:q | A4:h.
-left: r:q | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e A2:e
-  E3:e C#3:e E3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e
-  E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e G2:e D3:e B2:e D3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e
-  E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e
-  E3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e A2:e E3:e
-  C#3:e E3:e | A2:e E3:e C#3:e E3:e G2:e D3:e B2:e D3:e | A2+C#3+E3:h.
+left: r:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q E3:q C#3+E3:q | G2:q B2+D3+G3:q D3:q
+  B2+D3+G3:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q G2:q B2+D3+G3:q | A2:q C#3+E3:q E3:q
+  C#3+E3:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q E3:q C#3+E3:q | G2:q B2+D3+G3:q D3:q
+  B2+D3+G3:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q E3:q C#3+E3:q | A2:q C#3+E3:q G2:q B2+D3+G3:q | A2+C#3+E3:h.
 reps: 3
 days: 2

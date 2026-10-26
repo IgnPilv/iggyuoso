@@ -18,6 +18,7 @@ steps:
   callout: |
     Key: A major · Time: 4/4 · Tempo: 88
 - exercise: song-john-peel-tap
+- exercise: song-john-peel-by-ear
 - exercise: song-john-peel-rh
 - exercise: song-john-peel-lh
 - exercise: song-john-peel

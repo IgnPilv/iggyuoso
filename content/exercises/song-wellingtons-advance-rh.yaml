@@ -1,0 +1,19 @@
+id: song-wellingtons-advance-rh
+title: 'Wellington''s Advance: the tune'
+kind: timed
+hand: right
+prompt: The tune alone, right hand. Sing it in your head as you play.
+display: staff
+key: Am
+tempo: 56
+tempoLadder: true
+meter: 6/8
+pickup: e
+countIn: 1
+right: E4:e | E4:e A4:e A4:e A4:e G#4:e A4:e | C5:e B4:e A4:e C5:q D5:e | E5:e F5:e E5:e E5:e F#5:e G5:e | D5:e B4:e G4:e
+  G4:e F#4:e G4:e | E4:e A4:e A4:e A4:e G#4:e A4:e | C5:e B4:e A4:e C5:q D5:e | E5:e F5:e E5:e D5:e C5:e B4:e | C5:e A4:e
+  A4:e A4:q E5:s3 F#5:s3 G5:s3 | A5:e E5:e E5:e A5:e E5:e E5:e | A5:e E5:e D5:e C5:e B4:e A4:e | B4:e A4:e B4:e G5:e F#5:e
+  E5:e | D5:e B4:e G4:e G4:e F#4:e G4:e | E5:e A5:e A5:e A5:e G#5:e A5:e | E5:e G5:e G5:e G5:e F#5:e G5:e | E5:e F5:e E5:e
+  D5:e C5:e B4:e | C5:e A4:e A4:e A4:q
+reps: 2
+days: 1

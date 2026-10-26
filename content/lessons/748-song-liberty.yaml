@@ -1,0 +1,26 @@
+id: song-liberty
+title: Liberty
+skills:
+- songs
+steps:
+- explain: |
+    **Liberty** · American fiddle tune, 1800s
+
+    An old-time reel in D played at square dances.
+  staff:
+    notes: D4:q. E4:e D4:q D5:q  |  A4:q F#4:q A4:q D5:q
+    key: D
+  sound: D4:q. E4:e D4:q D5:q  |  A4:q F#4:q A4:q D5:q  |  D4:q. E4:e D4:q D5:q  |  A4:q F#4:q G4:e F#4:e E4:e D4:e
+- explain: |
+    **Before you play.** D major: remember F♯, C♯.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 4/4 · Tempo: 88
+- exercise: song-liberty-tap
+- exercise: song-liberty-rh
+- exercise: song-liberty-lh
+- exercise: song-liberty
+- exercise: song-liberty-arranged
+- exercise: song-liberty-performance
+recap: 'Liberty: tune, left hand, together. Come back to it any time; songs are for fun.'

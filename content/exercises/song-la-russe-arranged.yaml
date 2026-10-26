@@ -2,7 +2,7 @@ id: song-la-russe-arranged
 title: La Russe, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords).
+prompt: A fuller left hand (bass, then chord).
 display: staff
 key: G
 tempo: 88
@@ -14,11 +14,9 @@ right: B4:e A4:e | G4:q B4:e B4:e B4:q D5:e D5:e | D5:q G5:q G5:q F#5:e G5:e | A
   C#5:e B4:e A4:e | G4:q B4:e B4:e B4:q D5:e D5:e | D5:q G5:q G5:q F#5:e G5:e | E5:q D5:q D5:q F#4:e G4:e | A4:q G4:q G4:q
   A4:q | A4:q D5:q D5:q C#5:e B4:e | A4:q A5:q A5:q G5:e F#5:e | G5:q F#5:q G5:q E5:q | F#5:e G5:e A5:e G5:e F#5:q D5:q |
   A4:q D5:q D5:q C#5:e B4:e | A4:q A5:q A5:q G5:e F#5:e | G5:q F#5:q G5:q E5:q | D5:h.
-left: r:q | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | C3:e G3:e E3:e G3:e C3:e G3:e
-  E3:e G3:e | A2:e E3:e C3:e E3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | G2:e D3:e B2:e D3:e G2:e
-  D3:e B2:e D3:e | C3:e G3:e E3:e G3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | D3:e A3:e F#3:e A3:e
-  D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e
-  F#3:e A3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e
-  | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3+F#3+A3:h.
+left: r:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | C3:q E3+G3:q G3:q E3+G3:q | A2:q C3+E3+A3:q
+  D3:q F#3+A3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | G2:q D3+G3+B3:q D3:q D3+G3+B3:q | C3:q E3+G3:q D3:q F#3:q | G2:q B2+D3+G3:q
+  D3:q B2+D3+G3:q | D3:q F#3:q A3:q F#3:q | D3:q F#3:q A3:q F#3:q | A2:q C#3+G3:q E3:q C#3+G3:q | D3:q F#3:q A2:q C#3+G3:q
+  | D3:q F#3:q A3:q F#3:q | D3:q F#3:q A3:q F#3:q | A2:q C#3+G3:q E3:q C#3+G3:q | A2+D3+F#3:h.
 reps: 3
 days: 2

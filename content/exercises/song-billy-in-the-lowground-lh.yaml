@@ -1,0 +1,15 @@
+id: song-billy-in-the-lowground-lh
+title: 'Billy in the Lowground: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (held chords): find each chord change before it comes.'
+display: staff
+tempo: 88
+tempoLadder: true
+meter: 4/4
+countIn: 1
+left: C2+E2+G2:w | C2+E2+G2:w | C2+E2+A2:w | C2+E2+A2:w | C2+E2+G2:w | C2+E2+G2:w | C2+E2+A2:w | C2+E2+A2:q C2+E2+A2:q B1+D2+G2:q
+  C2+E2+G2:q | C2+E2+G2:w | C2+E2+G2:h B1+D2+G2:h | C2+E2+A2:w | C2+E2+A2:w | C2+E2+G2:w | C2+E2+G2:h B1+D2+G2:h | C2+E2+A2:w
+  | C2+E2+A2:q C2+E2+A2:q B1+D2+G2:q C2+E2+G2:q
+reps: 2
+days: 1

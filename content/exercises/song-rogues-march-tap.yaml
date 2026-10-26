@@ -1,0 +1,13 @@
+id: song-rogues-march-tap
+title: 'The Rogue''s March: tap the rhythm'
+kind: tap
+prompt: 'First the rhythm alone, on any key: tap the tune while you hum it.'
+display: staff
+tempo: 56
+meter: 6/8
+countIn: 1
+rhythm: x:q x:e x:e x:e x:e | x:q x:e x:q. | x:q x:q. x:e | x:q x:e x:q x:e | x:q x:e x:e x:e x:e | x:q x:e x:q. | x:e x:e
+  x:e x:e x:e x:e | x:q. x:q. | x:q. x:q. | x:q. x:e x:e x:e | x:q. x:q. | x:q. x:q x:e | x:q x:e x:e x:e x:e | x:q x:e x:q.
+  | x:e x:e x:e x:e x:e x:e | x:q. x:q.
+reps: 2
+days: 1

@@ -1,0 +1,15 @@
+id: song-piper-o-dundee-lh
+title: 'The Piper o'' Dundee: left hand'
+kind: timed
+hand: left
+prompt: 'The left hand alone (one bass note): find each chord change before it comes.'
+display: staff
+key: Am
+tempo: 88
+tempoLadder: true
+meter: 4/4
+pickup: q
+countIn: 1
+left: r:q | A2:w | A2:w | G2:w | G2:w | A2:w | A2:w | E3:w | A2:w | C3:w | G2:w | C3:w | G2:w | C3:w | G2:w | E3:w | A2:h.
+reps: 2
+days: 1

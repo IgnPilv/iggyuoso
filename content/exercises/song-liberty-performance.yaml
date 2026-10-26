@@ -1,0 +1,22 @@
+id: song-liberty-performance
+title: 'Liberty: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: D
+tempo: 88
+meter: 4/4
+countIn: 1
+right: D4:q. E4:e D4:q D5:q | A4:q F#4:q A4:q D5:q | D4:q. E4:e D4:q D5:q | A4:q F#4:q G4:e F#4:e E4:e D4:e | D4:q. E4:e D4:q
+  D5:q | A4:q F#4:q A4:q D5:q | E5:q D5:q E5:e G5:e F#5:e E5:e | D5:q D5:q D5:h | F#5:q D5:q D5:q E5:e F#5:e | G5:q F#5:q
+  E5:q D5:q | C#5:q A4:q E5:q C#5:q | C#5:q A4:q E5:q G5:q | F#5:q D5:q D5:q E5:e F#5:e | G5:q F#5:q E5:q D5:q | C#5:q D5:q
+  E5:e G5:e F#5:e E5:e | D5:e D5:e D5:q D5:h
+left: D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e D3:e A3:e
+  F#3:e A3:e | D3:e A3:e F#3:e A3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e F#3:e A3:e
+  D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | D3:e A3:e
+  F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e | E3:e B3:e G3:e B3:e E3:e B3:e G3:e B3:e | A2:e
+  E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | G2:e D3:e B2:e D3:e G2:e D3:e B2:e D3:e
+  | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3+F#3+A3:w
+reps: 2
+days: 2

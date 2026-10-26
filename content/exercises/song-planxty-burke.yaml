@@ -1,0 +1,22 @@
+id: song-planxty-burke
+title: Planxty Burke
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: Gm
+tempo: 56
+tempoLadder: true
+meter: 6/8
+countIn: 1
+right: G4:e G4:s A4:s Bb4:s C5:s D5:q C5:e | Bb4:e C5:e D5:e C5:e A4:e F4:e | F4:e G4:e F4:e C5:e A4:e F4:e | F4:e G4:e F4:e
+  F5:e A4:e F4:e | G4:e G4:s A4:s Bb4:s C5:s D5:e Bb4:e G4:e | G4:e A4:e G4:e D5:e Bb4:e G4:e | F5:q F5:e F5:e G5:e A5:e |
+  F5:q. D5:q F5:s G5:s | A5:e G5:e F5:e G5:e F5:e E5:e | F5:e E5:e D5:e C5:e D5:e Eb5:e | F5:e E5:e D5:e G5:e F5:e Eb5:e |
+  F5:e E5:e D5:e C5:e A4:e F#4:e | G4:e G4:s A4:s Bb4:s C5:s D5:e Bb4:e G4:e | G4:e A4:e G4:e D5:e Bb4:e G4:e | F5:q F5:e
+  F5:e G5:e A5:e | F5:q. D5:q Eb5:e | F5:e G5:e E5:e F5:e G5:e Eb5:e | F5:e E5:e D5:e C5:e A4:e F#4:e | G5:q G5:e G5:e A5:e
+  G5:e | F5:e D5:e E5:e F5:q Eb5:e | F#5:s G5:s A5:e F5:e G5:e D5:e E5:e | F5:e E5:e D5:e C5:e A4:e F#4:e | G5:q D5:e E5:s
+  F5:s G5:e D5:e | Bb4:q. G4:q r:e
+left: G2:h. | G2:q. F2:q. | F2:h. | F2:h. | G2:h. | G2:h. | F2:h. | Bb2:h. | G2:h. | Bb2:q. C3:q. | Bb2:q. C3:q. | Bb2:q.
+  D3:q. | G2:h. | G2:h. | F2:h. | Bb2:h. | C3:h. | Bb2:q. D3:q. | G2:h. | Bb2:h. | G2:h. | Bb2:q. D3:q. | G2:h. | G2:h.
+reps: 3
+days: 2

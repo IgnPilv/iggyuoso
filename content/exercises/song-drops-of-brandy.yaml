@@ -1,0 +1,19 @@
+id: song-drops-of-brandy
+title: Drops of Brandy
+kind: timed
+hand: together
+prompt: Both hands. Start slow; the tempo ladder brings you up to speed.
+display: staff
+key: G
+tempo: 56
+tempoLadder: true
+meter: 9/8
+pickup: e
+countIn: 1
+right: B4:s C5:s | D5:q C5:e B4:e G4:e B4:e B4:e G4:e B4:e | D5:q C5:e B4:e G4:e B4:e C5:e B4:e A4:e | D5:q C5:e B4:e G4:e
+  B4:e B4:e G4:e B4:e | C5:e B4:e C5:e A4:q B4:e C5:e B4:e A4:e | G4:e B4:e D5:e G5:e D5:e B4:e G5:e D5:e B4:e | G4:e B4:e
+  D5:e G5:e D5:e B4:e C5:e B4:e A4:e | G4:e B4:e D5:e G5:e D5:e B4:e G5:e D5:e B4:e | C5:e B4:e C5:e A4:q B4:e C5:e B4:e A4:e
+left: r:e | G2:w~ G2:e | G2:q. G2:q. D3:q. | G2:w~ G2:e | C3:q. C3:q. D3:q. | G2:w~ G2:e | G2:q. G2:q. D3:q. | G2:w~ G2:e
+  | C3:q C3:q C3:q D3:q
+reps: 3
+days: 2

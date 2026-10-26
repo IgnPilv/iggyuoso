@@ -1,0 +1,25 @@
+id: song-quakers-wife
+title: Merrily Danced the Quaker's Wife
+skills:
+- songs
+steps:
+- explain: |
+    **Merrily Danced the Quaker's Wife** · Scottish jig, 1700s
+
+    A jig whose old song says even the Quaker's wife danced, and the Quaker too.
+  staff:
+    notes: A4:e  |  D5:e E5:e F#5:e A4:q F#5:e
+    key: D
+  sound: A4:e  |  D5:e E5:e F#5:e A4:q F#5:e  |  G5:q F#5:e E5:q A4:e  |  D5:e E5:e F#5:e A4:q A4:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar. D major: remember F♯, C♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: D major · Time: 6/8 · Tempo: 56
+- exercise: song-quakers-wife-rh
+- exercise: song-quakers-wife-lh
+- exercise: song-quakers-wife
+- exercise: song-quakers-wife-arranged
+- exercise: song-quakers-wife-performance
+recap: 'Merrily Danced the Quaker''s Wife: tune, left hand, together. Come back to it any time; songs are for fun.'

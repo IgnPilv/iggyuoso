@@ -1,0 +1,27 @@
+id: song-lamplighters-hornpipe-performance
+title: 'The Lamplighter''s Hornpipe: performance'
+kind: timed
+hand: together
+prompt: Full tempo, start to end, as if someone is listening.
+display: staff
+key: A
+tempo: 88
+meter: 4/4
+pickup: q
+countIn: 1
+right: C#5:e D5:e | E5:e C#5:e C#5:e C#5:e E5:e A5:e G#5:e F#5:e | E5:e A4:e A4:e E5:e E5:e A5:e G#5:e F#5:e | F#5:e E5:e
+  C#5:e E5:e F#5:e E5:e D5:e C#5:e | D5:e E5:e D5:e C#5:e B4:q C#5:e D5:e | E5:e C#5:e C#5:e C#5:e E5:e A5:e G#5:e F#5:e |
+  E5:e A4:e A4:e E5:e E5:e A5:e G#5:e F#5:e | E5:e A5:e G#5:e F#5:e E5:e D5:e C#5:e B4:e | B4:e A4:e G#4:e B4:e A4:q C#5:e
+  D5:e | E5:e D5:e C#5:e D5:e E5:q F#5:e E5:e | D5:e C#5:e B4:e C#5:e D5:q. D5:e | C#5:e E5:e A4:e C#5:e D5:e C#5:e B4:e A4:e
+  | G#4:e A4:e B4:e C#5:e B4:q C#5:e D5:e | E5:e D5:e C#5:e D5:e E5:q F#5:e E5:e | D5:e C#5:e B4:e C#5:e D5:q. D5:e | C#5:e
+  A5:e A4:e C#5:e B4:e A4:e G#4:e B4:e | A4:e C#5:e B4:e G#4:e A4:q
+left: r:q | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e F#2:e
+  C#3:e A2:e C#3:e | B2:e F#3:e D3:e F#3:e E3:e B3:e G#3:e B3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e
+  E3:e A2:e E3:e C#3:e E3:e | A2:e E3:e C#3:e E3:e B2:e F#3:e D3:e F#3:e | E3:e B3:e G#3:e B3:e A2:e E3:e C#3:e E3:e | A2:e
+  E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | B2:e F#3:e D3:e F#3:e E3:e B3:e G#3:e B3:e | A2:e E3:e C#3:e E3:e F#2:e C#3:e A2:e
+  C#3:e | B2:e F#3:e D3:e F#3:e E3:e B3:e G#3:e B3:e | A2:e E3:e C#3:e E3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e B2:e
+  F#3:e D3:e F#3:e | A2:e E3:e C#3:e E3:e E3:e B3:e G#3:e B3:e | A2+C#3+E3:h.
+pedal: r:q | x:w | x:w | x:h x:h | x:h x:h | x:w | x:w | x:h x:h | x:h x:h | x:w | x:h x:h | x:h x:h | x:h x:h | x:h x:h |
+  x:h x:h | x:h x:h | x:h.
+reps: 2
+days: 2

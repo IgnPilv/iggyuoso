@@ -1,0 +1,26 @@
+id: song-jeanie
+title: Jeanie with the Light Brown Hair
+skills:
+- songs
+steps:
+- explain: |
+    **Jeanie with the Light Brown Hair** · Stephen Foster, 1854
+
+    Foster wrote it for his wife Jane while they lived apart; one of the gentlest American songs.
+  staff:
+    notes: D5:h  |  C5:h. A4:q
+    key: F
+  sound: D5:h  |  C5:h. A4:q  |  Bb4:q A4:q G4:q F4:q  |  A4:h C4:q D4:q
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. F major: remember B♭.
+
+    The steps: the rhythm, the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: F major · Time: 4/4 · Tempo: 88
+- exercise: song-jeanie-tap
+- exercise: song-jeanie-rh
+- exercise: song-jeanie-lh
+- exercise: song-jeanie
+- exercise: song-jeanie-arranged
+- exercise: song-jeanie-performance
+recap: 'Jeanie with the Light Brown Hair: tune, left hand, together. Come back to it any time; songs are for fun.'

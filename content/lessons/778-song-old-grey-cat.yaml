@@ -1,0 +1,25 @@
+id: song-old-grey-cat
+title: The Old Grey Cat
+skills:
+- songs
+steps:
+- explain: |
+    **The Old Grey Cat** · Irish reel, 1800s
+
+    A reel in E minor that prowls up and down.
+  staff:
+    notes: B4:q  |  E5:q E5:q E4:q E4:e F#4:e
+    key: Em
+  sound: B4:q  |  E5:q E5:q E4:q E4:e F#4:e  |  G4:e F#4:e G4:e A4:e B4:e A4:e B4:e C#5:e  |  D5:q D5:q D4:q D4:e E4:e
+- explain: |
+    **Before you play.** It starts on an upbeat: the first note comes before the first full bar. E minor: remember F♯.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: E minor · Time: 4/4 · Tempo: 88
+- exercise: song-old-grey-cat-rh
+- exercise: song-old-grey-cat-lh
+- exercise: song-old-grey-cat
+- exercise: song-old-grey-cat-arranged
+- exercise: song-old-grey-cat-performance
+recap: 'The Old Grey Cat: tune, left hand, together. Come back to it any time; songs are for fun.'

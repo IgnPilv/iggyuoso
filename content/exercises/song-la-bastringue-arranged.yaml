@@ -2,7 +2,7 @@ id: song-la-bastringue-arranged
 title: La Bastringue, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords). Change the pedal with each chord.
+prompt: A fuller left hand (broken chords).
 display: staff
 key: D
 tempo: 88
@@ -21,7 +21,5 @@ left: r:q | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | A2:e E3:e C#3:e E3:e D3:
   F#3:e A3:e D3:e A3:e F#3:e A3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e G3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e |
   G2:e D3:e B2:e D3:e A2:e E3:e C#3:e E3:e | D3:e A3:e F#3:e A3:e D3:e A3:e F#3:e A3:e | C3:e G3:e E3:e G3:e C3:e G3:e E3:e
   G3:e | D3:e A3:e F#3:e A3:e G2:e D3:e B2:e D3:e | D3+F#3+A3:h.
-pedal: r:q | x:w | x:h x:h | x:w | x:w | x:w | x:h x:h | x:w | x:h x:h | x:w | x:w | x:w | x:h x:h | x:w | x:w | x:h x:h |
-  x:h.
 reps: 3
 days: 2

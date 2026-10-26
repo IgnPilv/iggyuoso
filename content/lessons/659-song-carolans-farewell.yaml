@@ -18,6 +18,7 @@ steps:
   callout: |
     Key: A minor · Time: 4/4 · Tempo: 88
 - exercise: song-carolans-farewell-tap
+- exercise: song-carolans-farewell-by-ear
 - exercise: song-carolans-farewell-rh
 - exercise: song-carolans-farewell-lh
 - exercise: song-carolans-farewell

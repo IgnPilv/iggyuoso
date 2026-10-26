@@ -17,6 +17,7 @@ steps:
     The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
   callout: |
     Key: D minor · Time: 6/8 · Tempo: 56
+- exercise: song-gloucestershire-wassail-by-ear
 - exercise: song-gloucestershire-wassail-rh
 - exercise: song-gloucestershire-wassail-lh
 - exercise: song-gloucestershire-wassail

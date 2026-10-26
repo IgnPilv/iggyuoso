@@ -2,7 +2,7 @@ id: song-staines-morris-arranged
 title: Staines Morris, fuller arrangement
 kind: timed
 hand: together
-prompt: A fuller left hand (broken chords).
+prompt: A fuller left hand (bass, then chord).
 display: staff
 key: Dm
 tempo: 88
@@ -12,9 +12,8 @@ countIn: 1
 right: A4:q D5:q B4:q C#5:q | D5:q C5:e Bb4:e A4:q. Bb4:e | C5:e D5:e C5:e Bb4:e A4:q G4:e F4:e | E4:e D4:e E4:e F4:e D4:h
   | F4:e G4:e A4:e Bb4:e A4:q G4:e F4:e | E4:e D4:e E4:e F4:e D4:h | F4:q F4:q C4:q C4:q | D4:e E4:e F4:e G4:e A4:q. Bb4:e
   | C5:e D5:e C5:e Bb4:e A4:q G4:e F4:e | E4:e D4:e E4:e F4:e D4:h
-left: D3:e A3:e F3:e A3:e A2:e E3:e C#3:e E3:e | G2:e D3:e Bb2:e D3:e D3:e A3:e F3:e A3:e | D3:e A3:e F3:e A3:e G2:e D3:e
-  Bb2:e D3:e | A2:e E3:e C#3:e E3:e D3:e A3:e F3:e A3:e | F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | C3:e G3:e E3:e G3:e D3:e
-  A3:e F3:e A3:e | F2:e C3:e A2:e C3:e F2:e C3:e A2:e C3:e | Bb2:e F3:e D3:e F3:e F2:e C3:e A2:e C3:e | D3:e A3:e F3:e A3:e
-  G2:e D3:e Bb2:e D3:e | A2+C#3+G3:h A2+D3+F3:h
+left: D3:q F3+A3:q A2:q C#3+E3+A3:q | G2:q D3+G3+Bb3:q D3:q F3+A3:q | D3:q F3+A3:q G2:q D3+G3+Bb3:q | A2:q C#3+E3+A3:q D3:q
+  F3+A3:q | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | C3:q E3+G3:q D3:q F3+A3:q | F2:q C3+F3+A3:q C3:q C3+F3+A3:q | Bb2:q D3+F3+Bb3:q
+  F2:q C3+F3+A3:q | D3:q F3+A3:q G2:q D3+G3+Bb3:q | C#3+E3+A3:h D3+F3+A3:h
 reps: 3
 days: 2

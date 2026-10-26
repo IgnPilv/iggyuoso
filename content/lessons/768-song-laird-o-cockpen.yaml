@@ -1,0 +1,24 @@
+id: song-laird-o-cockpen
+title: The Laird o' Cockpen
+skills:
+- songs
+steps:
+- explain: |
+    **The Laird o' Cockpen** · Scottish tune; words by Lady Nairne, 1820s
+
+    A proud laird rides off to propose, and is turned down.
+  staff:
+    notes: G4:e  |  E4:e G4:e G4:e A4:e G4:e G4:e
+  sound: G4:e  |  E4:e G4:e G4:e A4:e G4:e G4:e  |  C5:e G4:e G4:e A4:e G4:e G4:e  |  E4:e G4:e G4:e G4:e E5:e D5:e
+- explain: |
+    **Before you play.** Two big beats in a bar, each a dotted quarter split in three. It starts on an upbeat: the first note comes before the first full bar.
+
+    The steps: the tune, the left hand, then both together, a fuller left hand, and a performance.
+  callout: |
+    Key: C major · Time: 6/8 · Tempo: 56
+- exercise: song-laird-o-cockpen-rh
+- exercise: song-laird-o-cockpen-lh
+- exercise: song-laird-o-cockpen
+- exercise: song-laird-o-cockpen-arranged
+- exercise: song-laird-o-cockpen-performance
+recap: 'The Laird o'' Cockpen: tune, left hand, together. Come back to it any time; songs are for fun.'
