@@ -3,7 +3,7 @@
 A learning site whose first module is a browser piano tutor for adult beginners with a MIDI
 keyboard: short exercises that each train one skill, scored per hand. More modules (a math tutor,
 a painting course) can join it on the same account (`docs/modules.md`). The vision is in
-`docs/vision.md`, the brief and every decision in `CLAUDE.md`.
+`docs/vision.md`, the proposed roadmaps in `docs/roadmaps.md`, the brief and every decision in `CLAUDE.md`.
 
 Live: https://ignpilv.github.io/iggyuoso/ (Chrome or Edge; Web MIDI needs https).
 No keyboard? Open https://ignpilv.github.io/iggyuoso/#/demo to watch the app play itself, or switch
