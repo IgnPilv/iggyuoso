@@ -1,5 +1,6 @@
 import { keyWindow, toDevice, toWritten } from '../calibration';
 import { midi } from '../midi/input';
+import { brokenChord } from '../music/chordNames';
 import { allReadings, findChord, inversions, keysOf, neighbours, parseChordName, pitchName, plainPitch, QUALITIES, ROOTS, specKeys, specName, suggestChords, type ChordSpec, type Found } from '../music/chordFinder';
 import type { NoteToken, Pitch } from '../music/notes';
 import { h, type View } from '../../../core/dom';
@@ -16,7 +17,8 @@ import { roomEyebrow } from './practiceRoom';
 // on the picture; a tapped key stays down until tapped again. It also works the other way: type a
 // chord name (c#m7, bb maj7, f sharp minor) or pick a root and a kind, and the chord is built on the
 // keys. Keys that go by several names (A♭ or G♯, C6 or Am7) show the main one and the others, with
-// the keys each belongs to. Nothing is saved.
+// the keys each belongs to. A chord played one note at a time (an arpeggio) is named too, from the
+// notes heard in the last moment (`brokenChord`). Nothing is saved.
 
 const RECENT = 8;
 
@@ -36,6 +38,10 @@ export const chordFinderView: View = (root) => {
   let choice: string | undefined;
   /** The constructor's root and kind, as last picked or typed. */
   let picked: ChordSpec | undefined;
+  /** Keys struck lately (written MIDI numbers), for a chord played one note at a time. */
+  const heard: { midi: number; at: number }[] = [];
+  let fade: number | undefined;
+  const brokenNote = h('p', { class: 'small chord-broken' });
 
   const big = h('p', { class: 'chord-big', 'aria-live': 'polite' });
   const symbol = h('span', { class: 'chord-symbol' });
@@ -98,7 +104,13 @@ export const chordFinderView: View = (root) => {
     h('button', { class: 'secondary chip-button', onclick: () => take(keys), title: keys.map((k) => midiLabel(k)).join(' ') }, label);
 
   const draw = () => {
-    const keys = keysDown();
+    const down = keysDown();
+    // Fewer than three different notes held, but a chord's notes heard one after another: that chord.
+    const broken = new Set(down.map((k) => k % 12)).size < 3 ? brokenChord(heard, performance.now()) : undefined;
+    const keys = broken ? [...new Set(broken)].sort((a, b) => a - b) : down;
+    brokenNote.textContent = broken ? 'Heard one note at a time: a broken chord (arpeggio).' : '';
+    clearTimeout(fade);
+    if (broken) fade = window.setTimeout(draw, 2600);
     const readings = allReadings(keys);
     const f = (readings.find((r) => r.name === choice) ?? readings[0] ?? findChord(keys)) as Found;
     const alts = readings.filter((r) => r !== f);
@@ -154,21 +166,27 @@ export const chordFinderView: View = (root) => {
   kb.el.classList.add('tappable');
   hear.onclick = () => sound(keysDown());
   clear.onclick = () => take([]);
-  const offNote = midi.onNote(draw);
+  const offNote = midi.onNote((e) => {
+    if (e.type === 'on') {
+      heard.push({ midi: toWritten(cal, e.note), at: performance.now() });
+      if (heard.length > 32) heard.shift();
+    }
+    draw();
+  });
   draw();
 
   root.append(h('section', { class: 'card chord-finder' },
     roomEyebrow('chords'),
     h('h1', {}, 'Chord finder'),
-    h('p', { class: 'small' }, 'Hold down any keys and see what chord they make, in any position. No keyboard at hand? Tap keys on the picture: a tapped key stays down until you tap it again. Or build one: type its name (no ♯ or ♭ needed: c#m7, bb maj7, f sharp minor) or pick a root and a kind.'),
+    h('p', { class: 'small' }, 'Hold down any keys and see what chord they make, in any position, or play its notes one after another. No keyboard at hand? Tap keys on the picture: a tapped key stays down until you tap it again. Or build one: type its name (no ♯ or ♭ needed: c#m7, bb maj7, f sharp minor) or pick a root and a kind.'),
     h('div', { class: 'chord-build' }, typed, suggestions, rootPicks, kindPicks),
-    h('div', { class: 'chord-panel' }, h('div', {}, big, others, about, facts), staffBox),
+    h('div', { class: 'chord-panel' }, h('div', {}, big, brokenNote, others, about, facts), staffBox),
     h('div', { class: 'stage' }, kb.el),
     h('div', { class: 'controls' }, hear, clear),
     tries,
     recentBox,
   ));
-  return () => { offNote(); offHeld(); clearTimeout(settle); };
+  return () => { offNote(); offHeld(); clearTimeout(settle); clearTimeout(fade); };
 };
 
 const midiLabel = (k: number) => `${pitchName(plainPitch(k))}${Math.floor(k / 12) - 1}`;

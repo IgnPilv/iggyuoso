@@ -517,7 +517,9 @@ export function staffParts(ex: TimedExercise, fingers = true): StaffPart[] {
 }
 
 /** Whether any notes of the exercise make a chord that can be named over the sheet. */
-const hasChords = (ex: TimedExercise) => chordSymbols(staffParts(ex, false)).length > 0;
+const hasChords = (ex: TimedExercise) => chordSymbols(staffParts(ex, false), chordSpans(ex)).length > 0;
+/** Where the exercise's bars fall, so broken chords in the left hand are named by the bar. */
+export const chordSpans = (ex: TimedExercise) => ({ barQuarters: ex.meter.quarters, offset: pickupOffset(ex), pulse: ex.meter.pulse, left: !ex.right });
 
 const TEMPO_STEPS = [50, 60, 70, 80, 90, 100];
 
@@ -629,14 +631,14 @@ function timedPlayer(root: HTMLElement, ex: TimedExercise, cal: Calibration, onD
     offHeld();
     stage.replaceChildren();
     falling = undefined; staff = undefined; kb = undefined; strip = undefined; long = undefined; sheetHandles = undefined;
-    const sheet = () => renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key, chords: chordsOn && chordable });
+    const sheet = () => renderStaff(staffParts(ex, fingersOn), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pedal: expectedPedal(ex), dynamics: expectedDynamics(ex), key: ex.key, chords: chordsOn && chordable, pulse: ex.meter.pulse });
     const t = target;
     if (view === 'falling' && !echo) {
       falling = new FallingView(lo, hi, cal,
         t.expected.map((e, i) => ({ device: t.devices[i], beat: e.beat, beats: e.beats, hand: e.hand, finger: fingersOn ? e.finger : undefined })),
         { lookahead: Math.max(4, ex.meter.quarters), barQuarters: ex.meter.quarters, totalBeats: totalBeats(t.ex), pulse: ex.meter.pulse, pedal: expectedPedal(t.ex), dynamics: expectedDynamics(t.ex),
           hands: handsOn && t.plan?.hands.length ? t.plan : undefined, handNumbers: fingersOn, firstBar: t.from,
-          chords: chordsOn && chordable ? chordSymbols(staffParts(t.ex, false)).map((c) => ({ beat: c.at + pickupOffset(t.ex), name: chordWords(c.name) })) : undefined });
+          chords: chordsOn && chordable ? chordSymbols(staffParts(t.ex, false), chordSpans(t.ex)).map((c) => ({ beat: c.at + pickupOffset(t.ex), name: chordWords(c.name) })) : undefined });
       // The sheet music rides along above the lane (not for tap exercises: their notes are placeholders).
       if (!ex.tap) {
         staff = sheet();

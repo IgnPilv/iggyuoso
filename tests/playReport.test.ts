@@ -108,6 +108,16 @@ describe('hands, key and chords', () => {
     expect(r.dynamics).toEqual({ from: 'mp', to: 'mf', right: 80, left: 60 });
   });
 
+  it('names chords a left hand plays one note at a time', () => {
+    const arps = [[48, 55, 64, 55], [53, 60, 69, 60], [55, 62, 71, 62], [48, 55, 64, 55]];
+    const notes: PlayedNote[] = [];
+    arps.forEach((c, bar) => c.forEach((m, b) => {
+      const on = 1000 + bar * 2000 + b * 500;
+      notes.push({ midi: m, on, off: on + 450, velocity: 60 }, { midi: [72, 72, 74, 72][bar], on, off: on + 450, velocity: 80 });
+    }));
+    expect(playReport(notes)!.chords.map((c) => c.name)).toEqual(['C', 'F', 'G', 'C']);
+  });
+
   it('writes Roman numerals', () => {
     expect(numeral('Am', 'C')).toBe('vi');
     expect(numeral('G7', 'C')).toBe('V7');

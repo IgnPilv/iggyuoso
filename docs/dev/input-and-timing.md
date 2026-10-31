@@ -232,7 +232,8 @@ velocity):
   a little per note; the lowest note of the first and last events counts extra); the runner-up is
   named when it is within 0.05.
 - `chordsHeard` writes the two hands as lines on the grid (a note lasts to its release or its hand's
-  next note) and names the chords with the sheet's own `chordSymbols`, with a Roman numeral in the
+  next note) and names the chords with the sheet's own `chordSymbols` (a left hand's broken chords
+  read over four beats from the first note, since free playing has no bar lines), with a Roman numeral in the
   key found (`numeral`; lower case for minor and diminished).
 - Loudness from velocities (10th and 90th percentile as pp to ff, and each hand's middle level),
   only when velocities vary; `reportTips` gives up to three tips (stops, tempo drift, a note held back
