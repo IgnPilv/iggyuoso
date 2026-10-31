@@ -60,7 +60,7 @@ const ACCIDENTAL = { 1: '♯', [-1]: '♭', 0: '♮' } as const;
  */
 /** `time`: a time signature drawn after the clef and key; `beatW`: width of a quarter beat (pictures only). */
 /** `chords`: chord names (C, Am, G7) over the music where the notes sounding together make a chord. */
-export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; dynamics?: DynamicSpan[]; key?: string; time?: [number, number]; beatW?: number; chords?: boolean } = {}) {
+export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; startQuarter?: number; pedal?: PedalSpan[]; dynamics?: DynamicSpan[]; key?: string; time?: [number, number]; beatW?: number; chords?: boolean; pulse?: number } = {}) {
   const beatW = opts.beatW ?? BEAT_W;
   const timed = parts.some((p) => p.notes.some((n) => n.beats !== undefined));
   const length = Math.max(
@@ -226,7 +226,9 @@ export function renderStaff(parts: StaffPart[], opts: { barQuarters?: number; st
   if (timed && opts.chords) {
     const g = s('g', { class: 'chord-names' });
     let lowest = 0;
-    for (const c of chordSymbols(parts)) {
+    // With bars known, broken chords (arpeggios, oom-pah) in the left hand are named by the bar.
+    const spans = opts.barQuarters ? { barQuarters: opts.barQuarters, offset: opts.startQuarter, pulse: opts.pulse, left: parts.length === 1 && parts[0].clef === 'bass' } : undefined;
+    for (const c of chordSymbols(parts, spans)) {
       const cy = Math.min(staffTop(0) - 22, (ceiling.get(beatKey(c.at)) ?? Infinity) - 6);
       lowest = Math.min(lowest, cy - 14);
       g.append(s('text', { x: left + c.at * beatW + 14, y: cy, class: 'chord-name' }, c.name));

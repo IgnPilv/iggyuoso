@@ -51,6 +51,17 @@ These are worked out in `music/` (tested) and only drawn by `ui/`:
 - **Chord names** (`music/chordNames.ts`): `chordSymbols` names chords from both hands together
   (C, Am, G7, F♯m...), by root, and writes a name only where the chord changes. The sheet writes
   them over the staff; falling notes use words for triads ("C major", `chordWords`).
+  **Broken chords**: given where the bars fall (`SpanOptions`: bar length, the upbeat's offset, the
+  beat's length; callers use `chordSpans(ex)` in `ui/players.ts`), it also gathers the left hand's
+  notes struck one by one over a bar and names the chord they make at the bar's first note
+  (arpeggios, Alberti, bass then chord). A bar of an even number of beats is also read in halves:
+  the halves win when one is a chord and neither is the whole bar's chord (a change mid-bar, or a
+  lead-in), and always when they share no note (B F♯ then G D is Bm to G, not Gmaj7). A stretch
+  counts only when all its notes belong to one chord, so a melody or a stepping bass is never named;
+  a lone right hand is never read this way. Where a hand strikes a full chord at once in that
+  stretch, the beat-by-beat names stand. Live, `brokenChord` names the chord of the last notes
+  heard (within 2.5 s, gaps under 1.2 s); the Chord finder uses it when fewer than three notes are
+  held, and the Play report reads its left hand over four beats from the first note.
 
 Each has an Options switch (Fingers, Hands, Chord names), saved in `settings`, and each is hidden
 where it would give an answer away (reading tests, taps).

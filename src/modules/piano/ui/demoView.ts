@@ -536,6 +536,9 @@ function scenes(): Scene[] {
   // Chord names over the sheet: the easy Canon's chords, both hands.
   const chorded = allExercises().find((e) => e.id === 'song-canon-easy-chords-both');
   if (chorded && isTimed(chorded)) out.push({ title: 'Chord names', caption: 'Where notes sound together as a chord, its name sits over the staff, as on a lead sheet: C, G, Am, Em, F. In falling notes it also rides down beside the chord in words (C major, A minor) and lands with it, while the sheet strip above names it as a symbol. The app works it out from the notes of both hands (any inversion, with the bass, a held note or a melody note on top), and writes it again only where the chord changes. Options → Chord names switches them off and on; reading tests leave them out.', run: exerciseScene(chorded, { view: 'falling' }) });
+  // Broken chords: a left hand rolling through each chord one note at a time is named by the bar.
+  const rolling = allExercises().find((e) => e.id === 'song-chfl-verse2');
+  if (rolling && isTimed(rolling)) out.push({ title: 'Broken chords', caption: 'A left hand does not have to strike a chord at once for it to be named. Here it rolls through each chord one note at a time (root, fifth, tenth and back, in Can\'t Help Falling in Love), and the app gathers the notes of each bar, or half a bar when the chord changes in the middle, and names the chord at its first note: D, F♯m, Bm, G. Bass then chord (oom-pah) and Alberti basses are read the same way; a melody or a bass walking by step is never mistaken for a chord.', run: exerciseScene(rolling, { view: 'falling' }) });
   const rhythms = parseExercise(parse(SAMPLES.rhythms));
   out.push({ title: 'Upbeats, ties and triplets', caption: 'Note strings can start on an upbeat, tie notes across a bar line, and mix dotted notes, triplets and sixteenths. On the staff a tie is an arc, and the tied note is held, not played again.', run: exerciseScene(rhythms, { view: 'classic' }) });
   out.push({ title: 'Six-eight', caption: 'In 6/8 the click and the tempo count dotted quarters, two to a bar, as musicians count it.', run: exerciseScene(parseExercise(parse(SAMPLES.sixEight)), { view: 'falling' }) });
@@ -1081,7 +1084,7 @@ function scenes(): Scene[] {
   });
   out.push({
     title: 'Chord finder',
-    caption: 'Hold down any keys and the Chord finder (#/chords, linked from the Book and the Sketchbook) says what they make: the chord in words, its notes spelled from the root (C E G B♭, never A♯), which position it is in and what each key is to the root, written on the grand staff. Two notes are named as an interval. Buttons play the same chord in its other positions and the chords one change away (minor, seventh, sus). Without a keyboard, keys can be tapped on the picture. Keys that go by more than one name (A♭ or G♯, C6 or Am7) show the main name with the others as buttons, and the keys the chord belongs to with its Roman numeral there (C major (I), G major (IV)...). It also works the other way round: type a chord name without any ♯ or ♭ sign (c#m7, bb maj7, f sharp minor) or pick a root and a kind, and the chord is built on the keys. Here the pianist plays C major in all three positions, A minor, G7 and Csus4 and taps C7, then types "f sharp minor" and "ab", and switches A♭ to its other name, G♯.',
+    caption: 'Hold down any keys and the Chord finder (#/chords, linked from the Book and the Sketchbook) says what they make: the chord in words, its notes spelled from the root (C E G B♭, never A♯), which position it is in and what each key is to the root, written on the grand staff. Two notes are named as an interval. Buttons play the same chord in its other positions and the chords one change away (minor, seventh, sus). Without a keyboard, keys can be tapped on the picture. Keys that go by more than one name (A♭ or G♯, C6 or Am7) show the main name with the others as buttons, and the keys the chord belongs to with its Roman numeral there (C major (I), G major (IV)...). It also works the other way round: type a chord name without any ♯ or ♭ sign (c#m7, bb maj7, f sharp minor) or pick a root and a kind, and the chord is built on the keys. Here the pianist plays C major in all three positions, A minor, G7 and Csus4 and taps C7, then types "f sharp minor" and "ab", and switches A♭ to its other name, G♯. Last it plays D, A, D, F♯ one note at a time: a broken chord is named from the notes just heard (D major).',
     run: (box, next, p) => {
       const timers: number[] = [];
       const dev = (keys: number[]) => keys.map((k) => toDevice(DEMO_CALIBRATION, k));
@@ -1103,7 +1106,10 @@ function scenes(): Scene[] {
       timers.push(window.setTimeout(() => type('f sharp minor'), end));
       timers.push(window.setTimeout(() => type('ab'), end + 3000));
       timers.push(window.setTimeout(() => press(box, 'G♯'), end + 5500));
-      timers.push(window.setTimeout(next, end + 8500));
+      // A chord played one note at a time is named too: D, A, F♯ make D major.
+      timers.push(window.setTimeout(() => press(box, 'Let go of tapped keys'), end + 8000));
+      [50, 57, 62, 66].forEach((k, i) => p.playNote(dev([k])[0], end + 8600 + i * 450, 400));
+      timers.push(window.setTimeout(next, end + 12500));
       return () => { timers.forEach(clearTimeout); cleanup?.(); };
     },
   });

@@ -281,7 +281,9 @@ export function chordsHeard(notes: PlayedNote[], evs: ReportEvent[], unitMs: num
     });
     return { notes: line };
   }).filter((p) => p.notes.length);
-  return chordSymbols(parts).map((c) => ({ name: c.name, numeral: numeral(c.name, key) }));
+  // Bars are not known from free playing: read the left hand's broken chords over four beats from
+  // the first note (in halves where the chord changes mid-way).
+  return chordSymbols(parts, { barQuarters: 4 }).map((c) => ({ name: c.name, numeral: numeral(c.name, key) }));
 }
 
 // ---------------------------------------------------------------- dynamics

@@ -1068,3 +1068,17 @@ ideas) is written out in `docs/vision.md`; keep it current when the direction ch
   sign-in, installable offline app, lighter start, private usage counts, privacy page, paid extras
   through a merchant of record with server-gated songs, a real second module, a second language).
   Suggested order A1, C1, B1. Ignas picks.
+- 2026-10-31: Broken chords are named (Ignas: "sometimes chords play on left hand in arpeggio like in final
+  lesson of falling in love... chord recognition should also work"; "perhaps do it at bar level? and if it's
+  root note chord root note chord, also do it"). `chordSymbols` takes where bars fall (`SpanOptions`; callers
+  use `chordSpans(ex)`): the lowest line's notes struck one by one over a bar (arpeggios, Alberti, bass then
+  chord) are put together and the chord is written at the bar's first note. Bars of an even number of beats
+  are also read in halves, which win when one half is a chord and neither is the whole bar's chord, and
+  always when the halves share no note. Only a stretch whose notes all belong to one chord counts (melodies
+  and stepping basses stay unnamed), a lone right hand is never read this way, and where a hand strikes a
+  full chord at once the beat-by-beat names stand (moved to the bass note when they agree). Can't Help
+  Falling in Love's rolling left hand now names every bar (D, F♯m, Bm, G...), as the bass-and-chord version
+  does. Live: `brokenChord` names the chord of the last notes heard (2.5 s, gaps under 1.2 s), used by the
+  Chord finder when fewer than three notes are held; the Play report reads its left hand over four beats.
+  Jam room and Duet name no chords from playing, so they are unchanged. Demo: new scene "Broken chords"; the
+  Chord finder scene ends with an arpeggio.

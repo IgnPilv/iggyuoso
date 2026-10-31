@@ -1,3 +1,4 @@
+import { pickupOffset } from '../music/timeline';
 import type { Calibration } from '../calibration';
 import { demo } from '../demo/demo';
 import { readSong, partRange, writeSong, type PartHand, type SongDraft, type SongSettings } from '../music/importSong';
@@ -37,7 +38,7 @@ function preview(s: SongSettings & { title: string }, bars = 4): Element | '' {
   const cut = (x?: string) => x?.split('|').slice(0, bars).join('|');
   const ex = songExercise({ ...s, id: 'preview', created: '', updated: '', right: cut(w.right), left: cut(w.left), bars: Math.min(bars, w.bars) }, w.right && w.left ? 'together' : w.right ? 'right' : 'left');
   if (!ex) return h('p', { class: 'small' }, 'No part is played by a hand yet.');
-  return h('div', { class: 'staff-wrap' }, renderStaff(staffParts(ex, false), { barQuarters: ex.meter.quarters, key: ex.key, chords: true }).svg);
+  return h('div', { class: 'staff-wrap' }, renderStaff(staffParts(ex, false), { barQuarters: ex.meter.quarters, startQuarter: pickupOffset(ex), pulse: ex.meter.pulse, key: ex.key, chords: true }).svg);
 }
 
 /** Who plays each part: a select per part. `onChange` gets the new hands. */

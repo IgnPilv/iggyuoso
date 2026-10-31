@@ -76,7 +76,7 @@ export interface SymbolNote {
  * chord does not hide it). A name is written only where the chord changes, as on a lead sheet:
  * notes that all belong to the chord before (C7's E G B♭ after a C) are still that chord.
  */
-export function chordSymbols(parts: { notes: SymbolNote[] }[]): { at: number; name: string }[] {
+export function chordSymbols(parts: { notes: SymbolNote[] }[], bars?: SpanOptions): { at: number; name: string }[] {
   const notes = parts.map((part) => {
     let at = 0;
     return part.notes.map((n, i) => {
@@ -124,5 +124,101 @@ export function chordSymbols(parts: { notes: SymbolNote[] }[]): { at: number; na
     last = chord.pcs;
     if (chord.name !== out[out.length - 1]?.name) out.push({ at, name: chord.name });
   }
-  return out;
+  return bars && (notes.length > 1 || bars.left) ? withSpans(out, notes, bars) : out;
+}
+
+/** Where bars fall, for reading broken chords: a bar's length in quarter beats, and how far into its bar the first note is. */
+export interface SpanOptions {
+  barQuarters: number;
+  /** Quarter beats from the start of the first bar to the first note (an upbeat's padding). */
+  offset?: number;
+  /** Quarter beats a beat lasts (1.5 in 6/8): a bar of an even number of beats is also read in halves. */
+  pulse?: number;
+  /** The only line is a left hand (with two lines the lower one is read). A lone right hand is a melody: never read as broken chords. */
+  left?: boolean;
+}
+
+interface Placed { at: number; end: number; pitches: Pitch[]; held: boolean }
+
+/**
+ * Broken chords: the lowest line's notes struck one by one over a bar (an arpeggio, or a bass note
+ * then its chord, oom-pah) are put together and named as one chord at the bar's first note. A bar of
+ * an even number of beats is also read in halves, which win when a half is a chord and neither half
+ * is the whole bar's chord (a chord change mid-bar, or a lead-in to the next bar), and always when
+ * the halves share no note. Only a stretch whose notes are all notes of one chord counts,
+ * so a melody or a stepping bass gives no name. Where a line strikes a full chord at once in that
+ * stretch, the chords read beat by beat stand (only moved to its first note when they name the same chord).
+ */
+function withSpans(out: { at: number; name: string }[], lines: Placed[][], o: SpanOptions): { at: number; name: string }[] {
+  const eps = 1e-6;
+  const low = lines[lines.length - 1] ?? [];
+  const struckIn = (a: number, b: number) => low.filter((n) => n.pitches.length && !n.held && n.at >= a - eps && n.at < b - eps);
+  const end = Math.max(0, ...lines.flat().map((n) => n.end));
+  const pulse = o.pulse ?? 1;
+  const beats = Math.round(o.barQuarters / pulse);
+  const halves = beats >= 2 && beats % 2 === 0;
+  /** A chord from the line's notes over this stretch: struck one by one (two or more onsets), all of one chord. */
+  const read = (a: number, b: number) => {
+    const ns = struckIn(a, b);
+    if (new Set(ns.map((n) => n.at)).size < 2) return undefined;
+    const chord = readChord(ns.flatMap((n) => n.pitches), true);
+    return chord ? { at: ns[0].at, name: chord.name } : undefined;
+  };
+  const found: { from: number; to: number; at: number; name: string }[] = [];
+  for (let from = -(o.offset ?? 0); from < end - eps; from += o.barQuarters) {
+    const to = from + o.barQuarters;
+    const mid = from + (beats / 2) * pulse;
+    const h1 = halves ? read(from, mid) : undefined;
+    const h2 = halves ? read(mid, to) : undefined;
+    // Halves with no note in common are two chords, never one: B F♯ then G D is B minor going to G,
+    // not Gmaj7.
+    const pcsIn = (a: number, b: number) => new Set(struckIn(a, b).flatMap((n) => n.pitches).map((p) => pc(pitchToMidi(p))));
+    const apart = halves && ((x, y) => x.size > 0 && y.size > 0 && ![...x].some((p) => y.has(p)))(pcsIn(from, mid), pcsIn(mid, to));
+    const whole = apart ? undefined : read(from, to);
+    // The whole bar, unless a half is a chord and neither half is the whole bar's chord (then the
+    // whole's extra notes lead on to the next chord: A C♯ E, then E G♯ is A, not Amaj7).
+    if (whole && (!(h1 || h2) || h1?.name === whole.name || h2?.name === whole.name)) found.push({ from, to, ...whole });
+    else for (const [h, a, b] of [[h1, from, mid], [h2, mid, to]] as const) if (h) found.push({ from: a, to: b, ...h });
+  }
+  let res = [...out];
+  for (const f of found) {
+    const inside = res.filter((c) => c.at >= f.from - eps && c.at < f.to - eps);
+    const blocky = lines.some((line) => {
+      const byAt = new Map<number, Set<number>>();
+      for (const n of line) if (n.pitches.length && !n.held && n.at >= f.from - eps && n.at < f.to - eps) {
+        const s = byAt.get(n.at) ?? new Set<number>();
+        for (const p of n.pitches) s.add(pc(pitchToMidi(p)));
+        byAt.set(n.at, s);
+      }
+      return [...byAt.values()].some((s) => s.size >= 3);
+    });
+    // A full chord struck at once in this stretch: the beat-by-beat reading stands, only moved to
+    // the first bass note when it names the same chord (oom-pah: bass, then chord).
+    if (blocky && (!inside.length || inside.some((c) => c.name !== f.name))) continue;
+    res = [...res.filter((c) => !inside.includes(c)), { at: f.at, name: f.name }];
+  }
+  res.sort((a, b) => a.at - b.at);
+  return res.filter((c, i) => c.name !== res[i - 1]?.name);
+}
+
+/**
+ * The chord a hand has just broken up (live playing): the notes heard last, going back while they
+ * still make one chord, within `windowMs` of now and with no gap of more than `gapMs`. Undefined
+ * until three different notes of a chord have been heard. Returns the keys, newest last.
+ */
+export function brokenChord(heard: { midi: number; at: number }[], now: number, windowMs = 2500, gapMs = 1200): number[] | undefined {
+  const pitch = (m: number): Pitch => ({ letter: 'CCDDEFFGGAAB'[pc(m)] as Pitch['letter'], accidental: [1, 3, 6, 8, 10].includes(pc(m)) ? 1 : 0, octave: Math.floor(m / 12) - 1 });
+  let best: number[] | undefined;
+  let next = now;
+  const taken: number[] = [];
+  for (let i = heard.length - 1; i >= 0; i--) {
+    const n = heard[i];
+    if (now - n.at > windowMs || next - n.at > gapMs) break;
+    next = n.at;
+    taken.unshift(n.midi);
+    if (new Set(taken.map(pc)).size < 3) continue;
+    if (readChord(taken.map(pitch))) best = [...taken];
+    else if (best) break;
+  }
+  return best;
 }
